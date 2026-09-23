@@ -50,6 +50,14 @@ def username() -> str:
     raise SystemExit("Could not determine the Kaggle username (is KAGGLE_API_TOKEN set?)")
 
 
+def publish(folder: str, message: str, mode: str) -> None:
+    """New version of an existing dataset, or create it on the first push."""
+    out = kaggle("datasets", "version", "-p", folder, "-m", message, "-r", mode, check=False)
+    if "being created" not in out and "successfully" not in out.lower():
+        out = kaggle("datasets", "create", "-p", folder, "-r", mode)
+    print("\n".join(ln for ln in out.splitlines() if "%|" not in ln)[-600:])
+
+
 def push_code(args: argparse.Namespace) -> None:
     user = username()
     with tempfile.TemporaryDirectory() as tmp:
@@ -64,12 +72,7 @@ def push_code(args: argparse.Namespace) -> None:
             shutil.copy(text, tmpd / "quran-uthmani.json")
         meta = {"title": "qaari-eval code", "id": f"{user}/{CODE_SLUG}", "licenses": [{"name": "other"}]}
         (tmpd / "dataset-metadata.json").write_text(json.dumps(meta))
-        exists = "403" not in kaggle("datasets", "status", f"{user}/{CODE_SLUG}", check=False) and \
-            "404" not in kaggle("datasets", "status", f"{user}/{CODE_SLUG}", check=False)
-        if exists:
-            print(kaggle("datasets", "version", "-p", tmp, "-m", args.message, "-r", "tar"))
-        else:
-            print(kaggle("datasets", "create", "-p", tmp, "-r", "tar"))
+        publish(tmp, args.message, "tar")
 
 
 def push_deps(args: argparse.Namespace) -> None:
@@ -87,11 +90,7 @@ def push_deps(args: argparse.Namespace) -> None:
     src = Path(args.dir)
     meta = {"title": "qaari-eval deps", "id": f"{user}/{DEPS_SLUG}", "licenses": [{"name": "other"}]}
     (src / "dataset-metadata.json").write_text(json.dumps(meta))
-    status = kaggle("datasets", "status", f"{user}/{DEPS_SLUG}", check=False)
-    if "ready" in status or "pending" in status:
-        print(kaggle("datasets", "version", "-p", str(src), "-m", "update", "-r", "zip"))
-    else:
-        print(kaggle("datasets", "create", "-p", str(src), "-r", "zip"))
+    publish(str(src), args.message, "zip")
 
 
 def kernel_slug(tag: str, k: int) -> str:
@@ -149,6 +148,7 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--message", default="update")
     p = sub.add_parser("push-deps")
     p.add_argument("dir", help="directory with wheels/ and hf_hub/")
+    p.add_argument("--message", default="update")
     p = sub.add_parser("launch")
     p.add_argument("--tag", required=True)
     p.add_argument("--reciters", nargs="+", required=True)

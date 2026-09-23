@@ -67,9 +67,16 @@ def online(host="pypi.org", port=443, timeout=5.0):
 ONLINE = online()
 log(f"internet: {'on' if ONLINE else 'OFF (kernel internet disabled; using the attached qaari-eval-deps bundle)'}")
 wheels = find("wheels/praat_parselmouth*.whl")
-if wheels:  # bundled wheels: deterministic and works offline
-    sh(f"{sys.executable} -m pip install -q --no-index --find-links {Path(wheels[0]).parent} {CFG['pip']} "
-       "hyperpyyaml ruamel.yaml")
+if wheels:  # bundled wheels: deterministic and works offline; one package at a time so a single
+    # resolver conflict cannot block the rest
+    wdir = Path(wheels[0]).parent
+    for pkg in ["ruamel.yaml.clib", "ruamel.yaml", "hyperpyyaml", "bottleneck", "sentencepiece", *CFG["pip"].split()]:
+        sh(f"{sys.executable} -m pip install -q --no-index --find-links {wdir} {pkg}")
+    check = subprocess.run([sys.executable, "-c", "import parselmouth, faiss, nara_wpe, soxr, speechbrain"],
+                           capture_output=True, text=True)
+    if check.returncode != 0:
+        raise SystemExit(f"dependency import check failed:\n{check.stderr[-1500:]}")
+    log("dependencies import cleanly")
 elif ONLINE:
     sh(f"{sys.executable} -m pip install -q {CFG['pip']}")
 else:

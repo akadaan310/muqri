@@ -76,9 +76,26 @@ def test_matches_the_julia_reference_exactly() -> None:
     got = analyse_clip(raw, rec["ref_ph"], vocab, blank, ph["first"], ph["width"], blocks, sif)
     want = json.loads(REFERENCE.read_text())["units"]
     assert len(got) == len(want)
-    for p, j in zip(got, want):
+
+    from app.analysis import FRAME_S  # noqa: PLC0415
+
+    suppressed = 0
+    for i, (p, j) in enumerate(zip(got, want)):
+        # the raw numerics must be identical — these are the validated quantities
         assert p.symbol == j["symbol"]
         assert list(p.frames) == j["frames"]
         assert p.best_competitor == j["identity"]["best_competitor"]
         assert abs(p.gop - j["identity"]["gop"]) < 1e-6
-        assert abs((p.duration_counts or 0) - (j["duration_counts"] or 0)) < 1e-6
+        assert abs(p.duration_s - j["duration_s"]) < 1e-6
+
+        # The serving path adds two measurement guards Julia (the research reference) does not: the
+        # last unit of a clip absorbs trailing silence, and any count beyond every tajweed
+        # requirement is a measurement failure rather than a very long madd. Both suppress a value —
+        # they never change one — so where Python reports a count it must match Julia exactly.
+        if p.duration_counts is None:
+            suppressed += 1
+            assert i == len(got) - 1 or (j["duration_counts"] or 0) > 12.0, (
+                f"unit {i} suppressed for no reason (julia={j['duration_counts']})")
+        else:
+            assert abs(p.duration_counts - (j["duration_counts"] or 0)) < 1e-6
+    assert suppressed <= 3, f"{suppressed} units suppressed; the guards should be rare"

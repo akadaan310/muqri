@@ -108,6 +108,11 @@ class Unit:
     sifat: dict[str, dict] = field(default_factory=dict)  # type: ignore[type-arg]
 
 
+def _plausible(counts: float, cap: float) -> float | None:
+    """A count beyond any tajweed requirement is a measurement failure, not a reading."""
+    return round(counts, 2) if 0 < counts <= cap else None
+
+
 def _kind(sym: str) -> str:
     if sym in SHORT_V:
         return "harakah"
@@ -147,6 +152,17 @@ def analyse_clip(lp_full: npt.NDArray[np.floating], phonemes: str, vocab: dict[s
         end = onset(i + 1) if i < nu - 1 else last[units[i][2]] + 1
         return (end - onset(i)) * FRAME_S
 
+    # The LAST unit of a clip runs to the end of the audio, so it absorbs whatever trailing silence
+    # or breath follows. That is where madd 'arid li-s-sukun sits, and it read 37 counts before this
+    # guard. Its duration is not measurable from a clip boundary, so it is reported as unknown rather
+    # than as a wild number a verdict might act on.
+    unreliable_tail = nu - 1
+    # No tajweed duration exceeds six counts (madd lazim is the longest), so a measured value far
+    # beyond that is not a very long madd — it is a measurement failure, almost always segmentation
+    # slop at an ayah edge stretching the last madd before the stop. Measured: madd 'arid read 37
+    # counts. Report it as unknown rather than letting a verdict act on it.
+    MAX_PLAUSIBLE_COUNTS = 12.0
+
     # One count = a VOWELLED LETTER: the consonant contact plus its vowel, so the span runs from this
     # unit's onset to the onset two units later, not one. Matching sukoon_timing.jl exactly matters —
     # spanning only the consonant gave a haraka of 0.08 s against Julia's 0.28 s and inflated every
@@ -185,7 +201,8 @@ def analyse_clip(lp_full: npt.NDArray[np.floating], phonemes: str, vocab: dict[s
         u = Unit(index=i, symbol=sym, kind=_kind(sym), run_length=n, char_span=(a, b),
                  frames=(first[a], last[b]), onset_s=round((onset(i) - 1) * FRAME_S, 3),
                  duration_s=round(dur(i), 3),
-                 duration_counts=round(dur(i) / haraka, 2) if haraka else None,
+                 duration_counts=_plausible(dur(i) / haraka, MAX_PLAUSIBLE_COUNTS)
+                 if haraka and i != unreliable_tail else None,
                  gop=round(float(gop), 3), best_competitor=best,
                  competitor_llr=None if lr is None else round(lr, 3),
                  confirmed=(lr is None or lr < 0))

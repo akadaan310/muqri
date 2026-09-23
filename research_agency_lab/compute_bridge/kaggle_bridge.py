@@ -29,6 +29,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 CODE_SLUG = "qaari-eval-code"
+DEPS_SLUG = "qaari-eval-deps"  # wheels + model snapshots, for kernels without internet
 QURAN_MD = [f"husseinzahaki/quran-md-ayahs-wav-part{i}" for i in (1, 2, 3)]
 PIP = "praat-parselmouth faiss-cpu nara_wpe soxr speechbrain"
 WORKER = ROOT / "research_agency_lab" / "compute_bridge" / "kaggle_worker.py"
@@ -71,6 +72,28 @@ def push_code(args: argparse.Namespace) -> None:
             print(kaggle("datasets", "create", "-p", tmp, "-r", "tar"))
 
 
+def push_deps(args: argparse.Namespace) -> None:
+    """Upload a directory holding ``wheels/`` and ``hf_hub/`` as the private deps dataset.
+
+    Build it with (Kaggle's Python is 3.12):
+        pip download --no-deps --only-binary=:all: --python-version 3.12 --implementation cp \
+            --platform manylinux2014_x86_64 --platform manylinux_2_28_x86_64 -d DIR/wheels \
+            praat-parselmouth faiss-cpu soxr sentencepiece bottleneck ruamel.yaml.clib
+        pip download --no-deps --only-binary=:all: -d DIR/wheels speechbrain hyperpyyaml ruamel.yaml
+        pip wheel --no-deps -w DIR/wheels nara_wpe
+        cp -r ~/.cache/huggingface/hub/models--X/{refs,snapshots} DIR/hf_hub/models--X/  (use cp -L)
+    """
+    user = username()
+    src = Path(args.dir)
+    meta = {"title": "qaari-eval deps", "id": f"{user}/{DEPS_SLUG}", "licenses": [{"name": "other"}]}
+    (src / "dataset-metadata.json").write_text(json.dumps(meta))
+    status = kaggle("datasets", "status", f"{user}/{DEPS_SLUG}", check=False)
+    if "ready" in status or "pending" in status:
+        print(kaggle("datasets", "version", "-p", str(src), "-m", "update", "-r", "zip"))
+    else:
+        print(kaggle("datasets", "create", "-p", str(src), "-r", "zip"))
+
+
 def kernel_slug(tag: str, k: int) -> str:
     return f"qaari-{tag}-{k}"
 
@@ -89,7 +112,8 @@ def launch(args: argparse.Namespace) -> None:
                 "id": f"{user}/{kernel_slug(args.tag, k)}", "title": kernel_slug(args.tag, k),
                 "code_file": "worker.py", "language": "python", "kernel_type": "script",
                 "is_private": True, "enable_gpu": args.gpu, "enable_internet": True,
-                "dataset_sources": [f"{user}/{CODE_SLUG}", *QURAN_MD], "competition_sources": [], "kernel_sources": [],
+                "dataset_sources": [f"{user}/{CODE_SLUG}", f"{user}/{DEPS_SLUG}", *QURAN_MD],
+                "competition_sources": [], "kernel_sources": [],
             }
             (Path(tmp) / "kernel-metadata.json").write_text(json.dumps(meta, indent=1))
             print(kaggle("kernels", "push", "-p", tmp).strip())
@@ -123,6 +147,8 @@ def main(argv: list[str] | None = None) -> int:
     sub = ap.add_subparsers(dest="cmd", required=True)
     p = sub.add_parser("push-code")
     p.add_argument("--message", default="update")
+    p = sub.add_parser("push-deps")
+    p.add_argument("dir", help="directory with wheels/ and hf_hub/")
     p = sub.add_parser("launch")
     p.add_argument("--tag", required=True)
     p.add_argument("--reciters", nargs="+", required=True)
@@ -138,7 +164,8 @@ def main(argv: list[str] | None = None) -> int:
         p.add_argument("--tag", required=True)
         p.add_argument("--kernels", type=int, default=5)
     args = ap.parse_args(argv)
-    {"push-code": push_code, "launch": launch, "status": status, "collect": collect}[args.cmd](args)
+    commands = {"push-code": push_code, "push-deps": push_deps, "launch": launch, "status": status, "collect": collect}
+    commands[args.cmd](args)
     return 0
 
 

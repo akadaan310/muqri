@@ -42,10 +42,18 @@ Done means all of the following:
   - The code is uploaded as the private dataset `razanashrafalnajjar/qaari-eval-code`.
   - Kernels read Quran-MD WAVs locally (`husseinzahaki/quran-md-ayahs-wav-part1..3`: all 6236 ayahs × 30 reciters).
   - Mapping in `benchmarks/roster.py:QURAN_MD`.
-- **Not yet verified:**
-  - Smoke kernels `qaari-smoke-0` and `qaari-smoke2-0` were both still RUNNING at handoff.
-  - smoke-0 was probably slowed by recursive globs over the 190k-file input mount; that is fixed in smoke2.
-  - Check them first.
+- **Kaggle smoke tests.** Both finished; logs are in `benchmarks/results/kaggle/smoke*/`.
+  - **Root cause:** the kernels have **no internet**. `enable_internet` is ignored until the Kaggle account is phone-verified, so pip and apt both failed.
+  - **Glob fix confirmed:** after the fixed-depth change, code was found in 0.0 min instead of 5.2 min.
+  - **Worker bugs, now fixed:**
+    - The Octave reserve (1.5 h) exceeded the 1 h smoke session, so the processes were stopped at once. The reserve is now at most ¼ of the session.
+    - The worker waited 190 min on apt retries. apt now times out after 15 min and is skipped entirely when offline.
+- **Offline bundle.** Uploaded as the private dataset `razanashrafalnajjar/qaari-eval-deps`, and the worker now installs from it whether or not the kernel has internet:
+  - `wheels/`: parselmouth, faiss-cpu, soxr, speechbrain, nara_wpe and their deps, built for Kaggle's Python 3.12.
+  - `hf_hub/`: the wav2vec2 and ECAPA model snapshots.
+  - The rebuild recipe is in the `kaggle_bridge.py push-deps` docstring.
+- **Smoke3** (`qaari-smoke3-0`) was launched with the offline bundle and was running at this update. Check it first.
+- **Octave on Kaggle** needs apt, and so needs internet. Until the account is phone-verified, run `octave_bridge.py` on the VM over the collected rows. It reads audio from the EveryAyah cache, or from `--local-root` if you download Quran-MD parts with `kaggle datasets download`.
 
 ## 4. Files
 - **VM repo:** `/home/azureuser/github-director/repos/muqri`. Run `git fetch && git checkout claude/qaari-eval-engine-btwkjt && git pull`.
@@ -69,10 +77,11 @@ Done means all of the following:
 - **Secrets.** Never write tokens into the repo.
 
 ## 6. Next steps
-1. **Check the smoke kernels.** Run `kaggle kernels status|logs|output razanashrafalnajjar/qaari-smoke2-0`, then `collect --tag smoke2 --kernels 1`.
-   - Confirm the rows contain `metrics.core_ms` and `key`, and that an `octave_*.jsonl` file was produced.
-   - If the kernel failed, fix it, run `push-code`, and relaunch the smoke test.
-2. **Full Husary run.** Run `python research_agency_lab/compute_bridge/kaggle_bridge.py launch --tag husary-all --reciters Husary_128kbps Husary_Muallim_128kbps --verses all --modes studio --kernels 5 --procs 4 --octave`.
+1. **Check smoke3.** Run `collect --tag smoke3 --kernels 1` and read `benchmarks/results/kaggle/smoke3/k0_qaari-smoke3-0.log`.
+   - Confirm the rows contain `metrics.core_ms` and `key`.
+   - If it failed, fix it, run `push-code`, and relaunch.
+   - Optionally ask the user to phone-verify Kaggle, which gives internet and makes the in-kernel Octave pass possible.
+2. **Full Husary run.** Run `python research_agency_lab/compute_bridge/kaggle_bridge.py launch --tag husary-all --reciters Husary_128kbps Husary_Muallim_128kbps --verses all --modes studio --kernels 5 --procs 4`. Add `--octave` only if the kernels have internet.
    - About 12.5k rows; each kernel stops cleanly at 11.5 h.
    - Collect with `collect --tag husary-all --kernels 5`.
 3. **Peers and imams.**

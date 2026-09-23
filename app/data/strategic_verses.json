@@ -1,0 +1,1317 @@
+{
+ "per_key": 6,
+ "verses": [
+  {
+   "surah": 1,
+   "ayah": 1,
+   "words": 4,
+   "covers": [
+    "hams",
+    "hamzat_wasl",
+    "madd_arid_lissukun",
+    "madd_tabii",
+    "rakhawah",
+    "safir",
+    "tafkheem:raa",
+    "takreer",
+    "tarqeeq:lam_allah"
+   ]
+  },
+  {
+   "surah": 1,
+   "ayah": 2,
+   "words": 4,
+   "covers": [
+    "hamzat_wasl",
+    "izhar_shafawi",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_tabii",
+    "tafkheem:raa",
+    "tarqeeq:lam_allah",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 1,
+   "ayah": 3,
+   "words": 2,
+   "covers": [
+    "hams",
+    "hamzat_wasl",
+    "madd_arid_lissukun",
+    "madd_tabii",
+    "rakhawah",
+    "tafkheem:raa",
+    "takreer"
+   ]
+  },
+  {
+   "surah": 1,
+   "ayah": 4,
+   "words": 3,
+   "covers": [
+    "hamzat_wasl",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_tabii",
+    "rakhawah"
+   ]
+  },
+  {
+   "surah": 1,
+   "ayah": 5,
+   "words": 4,
+   "covers": [
+    "hams",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_tabii",
+    "rakhawah",
+    "safir",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 1,
+   "ayah": 6,
+   "words": 3,
+   "covers": [
+    "hams",
+    "hamzat_wasl",
+    "itbaq",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_tabii",
+    "rakhawah",
+    "safir",
+    "tafkheem",
+    "tafkheem:raa",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 1,
+   "ayah": 7,
+   "words": 9,
+   "covers": [
+    "hamzat_wasl",
+    "itbaq",
+    "izhar_halqi",
+    "izhar_shafawi",
+    "izhar_shafawi:before_waw_faa",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_lazim:kalimi",
+    "madd_tabii",
+    "rakhawah",
+    "safir",
+    "tafkheem",
+    "tafkheem:raa",
+    "tarqeeq:raa",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 2,
+   "ayah": 33,
+   "words": 22,
+   "covers": [
+    "ghunnah",
+    "hams",
+    "hamzat_wasl",
+    "idgham_mithlayn:kamil",
+    "ikhfa:light",
+    "ikhfa_shafawi",
+    "iqlab",
+    "izhar_shafawi",
+    "izhar_shafawi:before_waw_faa",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_munfasil",
+    "madd_muttasil",
+    "madd_tabii",
+    "qalqalah:sughra",
+    "rakhawah",
+    "safir",
+    "shiddah",
+    "tafkheem",
+    "tafkheem:raa",
+    "takreer",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 2,
+   "ayah": 245,
+   "words": 16,
+   "covers": [
+    "ghunnah",
+    "hamzat_wasl",
+    "idgham_ghunnah:naqis",
+    "ikhfa:light",
+    "istitaalah",
+    "itbaq",
+    "izhar_halqi",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_silah_kubra",
+    "madd_silah_sughra",
+    "madd_tabii",
+    "qalqalah:sughra",
+    "rakhawah",
+    "safir",
+    "sakt",
+    "tafkheem",
+    "tafkheem:lam_allah",
+    "tafkheem:raa",
+    "takreer",
+    "tarqeeq:raa",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 4,
+   "ayah": 54,
+   "words": 18,
+   "covers": [
+    "ghunnah",
+    "hams",
+    "hamzat_wasl",
+    "idgham_shafawi",
+    "ikhfa:light",
+    "istitaalah",
+    "izhar_halqi",
+    "izhar_shafawi",
+    "jahr",
+    "madd_badal",
+    "madd_iwad",
+    "madd_munfasil",
+    "madd_silah_sughra",
+    "madd_tabii",
+    "qalqalah:sughra",
+    "rakhawah",
+    "safir",
+    "shiddah",
+    "tafkheem",
+    "tafkheem:lam_allah",
+    "tafkheem:raa",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 5,
+   "ayah": 28,
+   "words": 16,
+   "covers": [
+    "ghunnah",
+    "hamzat_wasl",
+    "idgham_ghunnah:naqis",
+    "idgham_mutajanisayn:naqis",
+    "iqlab",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_munfasil",
+    "madd_tabii",
+    "qalqalah:sughra",
+    "rakhawah",
+    "safir",
+    "tafkheem",
+    "tafkheem:lam_allah",
+    "tafkheem:raa",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 6,
+   "ayah": 66,
+   "words": 9,
+   "covers": [
+    "hams",
+    "hamzat_wasl",
+    "idgham_mithlayn:kamil",
+    "ikhfa_shafawi",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_silah_sughra",
+    "rakhawah",
+    "safir",
+    "tafkheem",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 7,
+   "ayah": 69,
+   "words": 27,
+   "covers": [
+    "hams",
+    "hamzat_wasl",
+    "idgham_ghunnah:kamil",
+    "idgham_ghunnah:naqis",
+    "idgham_no_ghunnah",
+    "ikhfa:light",
+    "iqlab",
+    "itbaq",
+    "izhar_shafawi",
+    "izhar_shafawi:before_waw_faa",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_badal",
+    "madd_munfasil",
+    "madd_muttasil",
+    "madd_tabii",
+    "qalqalah:kubra",
+    "qalqalah:sughra",
+    "rakhawah",
+    "safir",
+    "sakt",
+    "shiddah",
+    "tafkheem",
+    "tafkheem:lam_allah",
+    "tafkheem:raa",
+    "takreer",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 7,
+   "ayah": 71,
+   "words": 25,
+   "covers": [
+    "ghunnah",
+    "hams",
+    "hamzat_wasl",
+    "idgham_ghunnah:naqis",
+    "idgham_no_ghunnah",
+    "idgham_shafawi",
+    "ikhfa:light",
+    "itbaq",
+    "izhar_halqi",
+    "izhar_shafawi",
+    "izhar_shafawi:before_waw_faa",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_badal",
+    "madd_munfasil",
+    "madd_muttasil",
+    "madd_tabii",
+    "qalqalah:sughra",
+    "rakhawah",
+    "safir",
+    "tafkheem",
+    "tafkheem:lam_allah",
+    "tafkheem:raa",
+    "takreer",
+    "tarqeeq:raa",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 8,
+   "ayah": 28,
+   "words": 10,
+   "covers": [
+    "ghunnah",
+    "hams",
+    "hamzat_wasl",
+    "idgham_ghunnah:naqis",
+    "ikhfa:light",
+    "izhar_halqi",
+    "izhar_shafawi:before_waw_faa",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_munfasil",
+    "madd_silah_kubra",
+    "madd_tabii",
+    "qalqalah:sughra",
+    "rakhawah",
+    "shiddah",
+    "tafkheem:lam_allah",
+    "tafkheem:raa",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 10,
+   "ayah": 51,
+   "words": 11,
+   "covers": [
+    "ghunnah",
+    "hams",
+    "ikhfa:light",
+    "ikhfa_shafawi",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_badal",
+    "madd_lazim:kalimi",
+    "madd_silah_kubra",
+    "madd_silah_sughra",
+    "madd_tabii",
+    "qalqalah:sughra",
+    "rakhawah",
+    "safir",
+    "tafkheem",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 10,
+   "ayah": 57,
+   "words": 14,
+   "covers": [
+    "ghunnah",
+    "hams",
+    "hamzat_wasl",
+    "idgham_ghunnah:kamil",
+    "idgham_ghunnah:naqis",
+    "idgham_no_ghunnah",
+    "idgham_shafawi",
+    "itbaq",
+    "izhar_shafawi:before_waw_faa",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_muttasil",
+    "madd_tabii",
+    "qalqalah:sughra",
+    "rakhawah",
+    "safir",
+    "shiddah",
+    "tafashhi",
+    "tafkheem",
+    "tafkheem:raa",
+    "takreer",
+    "tarqeeq:raa",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 10,
+   "ayah": 89,
+   "words": 11,
+   "covers": [
+    "ghunnah",
+    "hams",
+    "hamzat_wasl",
+    "idgham_mutajanisayn:kamil",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_lazim:kalimi",
+    "madd_tabii",
+    "qalqalah:sughra",
+    "rakhawah",
+    "safir",
+    "tafkheem",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 12,
+   "ayah": 80,
+   "words": 37,
+   "covers": [
+    "ghunnah",
+    "hams",
+    "hamzat_wasl",
+    "idgham_ghunnah:kamil",
+    "idgham_mutajanisayn:naqis",
+    "idgham_shafawi",
+    "ikhfa:heavy",
+    "itbaq",
+    "izhar_halqi",
+    "izhar_shafawi",
+    "izhar_shafawi:before_waw_faa",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_munfasil",
+    "madd_tabii",
+    "qalqalah:sughra",
+    "rakhawah",
+    "safir",
+    "tafkheem",
+    "tafkheem:lam_allah",
+    "tafkheem:raa",
+    "takreer",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 17,
+   "ayah": 96,
+   "words": 11,
+   "covers": [
+    "ghunnah",
+    "hamzat_wasl",
+    "iqlab",
+    "izhar_shafawi",
+    "jahr",
+    "madd_iwad",
+    "madd_silah_sughra",
+    "madd_tabii",
+    "rakhawah",
+    "safir",
+    "tafashhi",
+    "tafkheem",
+    "tafkheem:raa",
+    "tarqeeq:lam_allah",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 19,
+   "ayah": 1,
+   "words": 5,
+   "covers": [
+    "ikhfa:heavy",
+    "madd_lazim:harfi",
+    "madd_leen",
+    "madd_tabii",
+    "qalqalah:kubra",
+    "tafkheem"
+   ]
+  },
+  {
+   "surah": 19,
+   "ayah": 91,
+   "words": 4,
+   "covers": [
+    "hams",
+    "idgham_mutaqaribayn:kamil",
+    "ikhfa:light",
+    "jahr",
+    "madd_iwad",
+    "madd_tabii",
+    "rakhawah",
+    "tafkheem:raa",
+    "takreer"
+   ]
+  },
+  {
+   "surah": 19,
+   "ayah": 92,
+   "words": 6,
+   "covers": [
+    "hams",
+    "idgham_ghunnah:naqis",
+    "idgham_mutaqaribayn:kamil",
+    "iqlab",
+    "madd_iwad",
+    "madd_tabii",
+    "rakhawah",
+    "tafkheem:raa",
+    "takreer"
+   ]
+  },
+  {
+   "surah": 23,
+   "ayah": 93,
+   "words": 6,
+   "covers": [
+    "ghunnah",
+    "idgham_mutaqaribayn:kamil",
+    "madd_arid_lissukun",
+    "madd_tabii",
+    "tafkheem",
+    "tafkheem:raa",
+    "takreer",
+    "tarqeeq:raa"
+   ]
+  },
+  {
+   "surah": 23,
+   "ayah": 97,
+   "words": 7,
+   "covers": [
+    "hamzat_wasl",
+    "idgham_mutaqaribayn:kamil",
+    "izhar_halqi",
+    "madd_arid_lissukun",
+    "madd_tabii",
+    "safir",
+    "tafashhi",
+    "tafkheem",
+    "tafkheem:raa",
+    "takreer"
+   ]
+  },
+  {
+   "surah": 23,
+   "ayah": 118,
+   "words": 7,
+   "covers": [
+    "hamzat_wasl",
+    "idgham_mutaqaribayn:kamil",
+    "ikhfa:light",
+    "izhar_shafawi:before_waw_faa",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_tabii",
+    "rakhawah",
+    "tafkheem",
+    "tafkheem:raa",
+    "takreer",
+    "tarqeeq:raa",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 26,
+   "ayah": 1,
+   "words": 3,
+   "covers": [
+    "idgham_ghunnah:kamil",
+    "madd_lazim:harfi",
+    "madd_tabii",
+    "tafkheem"
+   ]
+  },
+  {
+   "surah": 26,
+   "ayah": 63,
+   "words": 13,
+   "covers": [
+    "hams",
+    "hamzat_wasl",
+    "idgham_mithlayn:kamil",
+    "ikhfa:light",
+    "istitaalah",
+    "itbaq",
+    "jahr",
+    "jawaz_wajhayn",
+    "madd_arid_lissukun",
+    "madd_munfasil",
+    "madd_tabii",
+    "rakhawah",
+    "safir",
+    "tafkheem",
+    "tafkheem:raa",
+    "takreer",
+    "tarqeeq:raa",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 27,
+   "ayah": 22,
+   "words": 14,
+   "covers": [
+    "idgham_ghunnah:naqis",
+    "idgham_mutajanisayn:naqis",
+    "ikhfa:light",
+    "iqlab",
+    "izhar_shafawi",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_silah_sughra",
+    "madd_tabii",
+    "qalqalah:sughra",
+    "rakhawah",
+    "safir",
+    "tafkheem",
+    "tafkheem:raa"
+   ]
+  },
+  {
+   "surah": 29,
+   "ayah": 35,
+   "words": 7,
+   "covers": [
+    "hams",
+    "idgham_ghunnah:naqis",
+    "idgham_mutajanisayn:kamil",
+    "idgham_no_ghunnah",
+    "iqlab",
+    "izhar_halqi",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_badal",
+    "madd_munfasil",
+    "madd_tabii",
+    "rakhawah",
+    "shiddah",
+    "tafkheem",
+    "tafkheem:raa",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 30,
+   "ayah": 46,
+   "words": 17,
+   "covers": [
+    "hams",
+    "hamzat_wasl",
+    "idgham_ghunnah:naqis",
+    "idgham_no_ghunnah",
+    "idgham_shafawi",
+    "ikhfa:light",
+    "istitaalah",
+    "izhar_halqi",
+    "izhar_shafawi",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_badal",
+    "madd_silah_kubra",
+    "madd_silah_sughra",
+    "madd_tabii",
+    "qalqalah:sughra",
+    "rakhawah",
+    "safir",
+    "tafashhi",
+    "tafkheem",
+    "tafkheem:raa",
+    "takreer",
+    "tarqeeq:raa",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 36,
+   "ayah": 52,
+   "words": 12,
+   "covers": [
+    "hams",
+    "hamzat_wasl",
+    "idgham_ghunnah:kamil",
+    "iqlab",
+    "itbaq",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_tabii",
+    "rakhawah",
+    "safir",
+    "sakt",
+    "tafkheem",
+    "tafkheem:raa",
+    "takreer",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 37,
+   "ayah": 56,
+   "words": 5,
+   "covers": [
+    "hamzat_wasl",
+    "idgham_mutajanisayn:kamil",
+    "ikhfa:light",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_tabii",
+    "tafkheem",
+    "tafkheem:lam_allah",
+    "tafkheem:raa",
+    "takreer",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 39,
+   "ayah": 56,
+   "words": 14,
+   "covers": [
+    "hams",
+    "hamzat_wasl",
+    "idgham_ghunnah:naqis",
+    "idgham_mutajanisayn:naqis",
+    "ikhfa:light",
+    "iqlab",
+    "madd_arid_lissukun",
+    "madd_tabii",
+    "rakhawah",
+    "safir",
+    "tafkheem",
+    "tafkheem:raa",
+    "takreer",
+    "tarqeeq:lam_allah",
+    "tarqeeq:raa"
+   ]
+  },
+  {
+   "surah": 42,
+   "ayah": 2,
+   "words": 3,
+   "covers": [
+    "ikhfa:heavy",
+    "ikhfa:light",
+    "madd_lazim:harfi",
+    "madd_leen",
+    "tafkheem"
+   ]
+  },
+  {
+   "surah": 54,
+   "ayah": 15,
+   "words": 6,
+   "covers": [
+    "hams",
+    "idgham_ghunnah:kamil",
+    "idgham_mutajanisayn:kamil",
+    "ikhfa:light",
+    "jahr",
+    "madd_badal",
+    "madd_munfasil",
+    "madd_tabii",
+    "shiddah",
+    "tafkheem",
+    "tafkheem:raa",
+    "takreer",
+    "tarqeeq:raa",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 55,
+   "ayah": 64,
+   "words": 1,
+   "covers": [
+    "ghunnah",
+    "madd_arid_lissukun",
+    "madd_lazim:kalimi",
+    "qalqalah:sughra"
+   ]
+  },
+  {
+   "surah": 56,
+   "ayah": 6,
+   "words": 3,
+   "covers": [
+    "hams",
+    "idgham_ghunnah:kamil",
+    "iqlab",
+    "madd_iwad",
+    "madd_muttasil",
+    "madd_tabii",
+    "shiddah"
+   ]
+  },
+  {
+   "surah": 56,
+   "ayah": 29,
+   "words": 2,
+   "covers": [
+    "idgham_ghunnah:kamil",
+    "ikhfa:heavy",
+    "itbaq",
+    "jahr",
+    "madd_arid_lissukun",
+    "qalqalah:kubra",
+    "tafkheem",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 57,
+   "ayah": 29,
+   "words": 22,
+   "covers": [
+    "ghunnah",
+    "hams",
+    "hamzat_wasl",
+    "idgham_ghunnah:kamil",
+    "idgham_ghunnah:naqis",
+    "ikhfa:light",
+    "istitaalah",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_muttasil",
+    "madd_tabii",
+    "qalqalah:sughra",
+    "rakhawah",
+    "tafashhi",
+    "tafkheem:lam_allah",
+    "tafkheem:raa",
+    "tarqeeq:lam_allah",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 59,
+   "ayah": 4,
+   "words": 12,
+   "covers": [
+    "ghunnah",
+    "hamzat_wasl",
+    "idgham_ghunnah:naqis",
+    "izhar_shafawi",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_lazim:kalimi",
+    "madd_silah_sughra",
+    "madd_tabii",
+    "qalqalah:kubra",
+    "safir",
+    "tafashhi",
+    "tafkheem",
+    "tafkheem:lam_allah",
+    "tafkheem:raa",
+    "tarqeeq:lam_allah",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 66,
+   "ayah": 5,
+   "words": 17,
+   "covers": [
+    "ghunnah",
+    "hams",
+    "idgham_ghunnah:kamil",
+    "idgham_ghunnah:naqis",
+    "ikhfa:heavy",
+    "ikhfa:light",
+    "itbaq",
+    "izhar_halqi",
+    "jahr",
+    "madd_iwad",
+    "madd_muttasil",
+    "madd_silah_kubra",
+    "madd_tabii",
+    "qalqalah:sughra",
+    "rakhawah",
+    "safir",
+    "tafkheem",
+    "tafkheem:raa"
+   ]
+  },
+  {
+   "surah": 71,
+   "ayah": 12,
+   "words": 9,
+   "covers": [
+    "ghunnah",
+    "idgham_ghunnah:naqis",
+    "idgham_mithlayn:kamil",
+    "ikhfa_shafawi",
+    "izhar_halqi",
+    "izhar_shafawi",
+    "izhar_shafawi:before_waw_faa",
+    "madd_iwad",
+    "madd_tabii",
+    "qalqalah:sughra",
+    "tafkheem:raa"
+   ]
+  },
+  {
+   "surah": 73,
+   "ayah": 3,
+   "words": 5,
+   "covers": [
+    "ghunnah",
+    "hams",
+    "hamzat_wasl",
+    "ikhfa:heavy",
+    "izhar_halqi",
+    "madd_iwad",
+    "madd_silah_kubra",
+    "madd_tabii",
+    "rakhawah",
+    "safir",
+    "tafkheem"
+   ]
+  },
+  {
+   "surah": 74,
+   "ayah": 14,
+   "words": 3,
+   "covers": [
+    "idgham_mutajanisayn:kamil",
+    "izhar_shafawi",
+    "madd_iwad",
+    "madd_silah_sughra",
+    "madd_tabii"
+   ]
+  },
+  {
+   "surah": 75,
+   "ayah": 27,
+   "words": 3,
+   "covers": [
+    "madd_arid_lissukun",
+    "madd_tabii",
+    "qalqalah:kubra",
+    "sakt",
+    "tafkheem:raa"
+   ]
+  },
+  {
+   "surah": 77,
+   "ayah": 20,
+   "words": 5,
+   "covers": [
+    "hams",
+    "idgham_ghunnah:kamil",
+    "idgham_mutaqaribayn:kamil",
+    "idgham_shafawi",
+    "izhar_shafawi",
+    "madd_arid_lissukun",
+    "madd_muttasil",
+    "rakhawah"
+   ]
+  },
+  {
+   "surah": 80,
+   "ayah": 27,
+   "words": 3,
+   "covers": [
+    "hams",
+    "iqlab",
+    "madd_iwad",
+    "madd_tabii",
+    "shiddah"
+   ]
+  },
+  {
+   "surah": 83,
+   "ayah": 14,
+   "words": 8,
+   "covers": [
+    "hams",
+    "idgham_shafawi",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_tabii",
+    "safir",
+    "sakt",
+    "shiddah",
+    "tafkheem",
+    "tafkheem:raa",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 90,
+   "ayah": 8,
+   "words": 4,
+   "covers": [
+    "idgham_mithlayn:kamil",
+    "izhar_shafawi",
+    "jahr",
+    "madd_leen",
+    "madd_silah_sughra",
+    "qalqalah:sughra",
+    "rakhawah"
+   ]
+  },
+  {
+   "surah": 90,
+   "ayah": 9,
+   "words": 2,
+   "covers": [
+    "idgham_ghunnah:naqis",
+    "jahr",
+    "madd_leen",
+    "madd_tabii",
+    "rakhawah",
+    "safir",
+    "tafashhi"
+   ]
+  },
+  {
+   "surah": 90,
+   "ayah": 10,
+   "words": 2,
+   "covers": [
+    "ghunnah",
+    "hamzat_wasl",
+    "jahr",
+    "madd_leen",
+    "madd_tabii",
+    "qalqalah:sughra",
+    "rakhawah"
+   ]
+  },
+  {
+   "surah": 106,
+   "ayah": 1,
+   "words": 2,
+   "covers": [
+    "hams",
+    "jahr",
+    "madd_badal",
+    "madd_leen",
+    "madd_tabii",
+    "rakhawah",
+    "tafashhi",
+    "tafkheem",
+    "tafkheem:raa"
+   ]
+  },
+  {
+   "surah": 109,
+   "ayah": 4,
+   "words": 5,
+   "covers": [
+    "idgham_ghunnah:kamil",
+    "idgham_mutajanisayn:kamil",
+    "madd_munfasil",
+    "madd_tabii"
+   ]
+  },
+  {
+   "surah": 111,
+   "ayah": 1,
+   "words": 5,
+   "covers": [
+    "hams",
+    "idgham_ghunnah:naqis",
+    "madd_munfasil",
+    "madd_tabii",
+    "qalqalah:akbar",
+    "shiddah"
+   ]
+  },
+  {
+   "surah": 112,
+   "ayah": 1,
+   "words": 4,
+   "covers": [
+    "hamzat_wasl",
+    "jahr",
+    "qalqalah:kubra",
+    "tafkheem",
+    "tafkheem:lam_allah",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 112,
+   "ayah": 4,
+   "words": 5,
+   "covers": [
+    "idgham_no_ghunnah",
+    "izhar_halqi",
+    "izhar_shafawi",
+    "madd_silah_sughra",
+    "qalqalah:kubra"
+   ]
+  },
+  {
+   "surah": 113,
+   "ayah": 1,
+   "words": 4,
+   "covers": [
+    "hamzat_wasl",
+    "jahr",
+    "madd_tabii",
+    "qalqalah:kubra",
+    "tafkheem",
+    "tafkheem:raa",
+    "tawassut"
+   ]
+  },
+  {
+   "surah": 114,
+   "ayah": 1,
+   "words": 4,
+   "covers": [
+    "ghunnah",
+    "hams",
+    "hamzat_wasl",
+    "jahr",
+    "madd_arid_lissukun",
+    "madd_tabii",
+    "rakhawah",
+    "safir",
+    "tafkheem",
+    "tafkheem:raa",
+    "tawassut"
+   ]
+  }
+ ],
+ "coverage": {
+  "ghunnah": {
+   "selected": 27,
+   "in_quran": 5007
+  },
+  "hams": {
+   "selected": 44,
+   "in_quran": 6658
+  },
+  "hamzat_wasl": {
+   "selected": 74,
+   "in_quran": 13252
+  },
+  "idgham_ghunnah:kamil": {
+   "selected": 15,
+   "in_quran": 1510
+  },
+  "idgham_ghunnah:naqis": {
+   "selected": 20,
+   "in_quran": 2430
+  },
+  "idgham_mithlayn:kamil": {
+   "selected": 6,
+   "in_quran": 148
+  },
+  "idgham_mutajanisayn:kamil": {
+   "selected": 6,
+   "in_quran": 58
+  },
+  "idgham_mutajanisayn:naqis": {
+   "selected": 4,
+   "in_quran": 4
+  },
+  "idgham_mutaqaribayn:kamil": {
+   "selected": 6,
+   "in_quran": 30
+  },
+  "idgham_no_ghunnah": {
+   "selected": 8,
+   "in_quran": 1058
+  },
+  "idgham_shafawi": {
+   "selected": 9,
+   "in_quran": 840
+  },
+  "ikhfa:heavy": {
+   "selected": 8,
+   "in_quran": 881
+  },
+  "ikhfa:light": {
+   "selected": 36,
+   "in_quran": 4435
+  },
+  "ikhfa_shafawi": {
+   "selected": 6,
+   "in_quran": 496
+  },
+  "iqlab": {
+   "selected": 13,
+   "in_quran": 565
+  },
+  "istitaalah": {
+   "selected": 8,
+   "in_quran": 236
+  },
+  "itbaq": {
+   "selected": 22,
+   "in_quran": 3422
+  },
+  "izhar_halqi": {
+   "selected": 15,
+   "in_quran": 3010
+  },
+  "izhar_shafawi": {
+   "selected": 30,
+   "in_quran": 4447
+  },
+  "izhar_shafawi:before_waw_faa": {
+   "selected": 12,
+   "in_quran": 1714
+  },
+  "jahr": {
+   "selected": 113,
+   "in_quran": 18788
+  },
+  "jawaz_wajhayn": {
+   "selected": 1,
+   "in_quran": 1
+  },
+  "madd_arid_lissukun": {
+   "selected": 36,
+   "in_quran": 4536
+  },
+  "madd_badal": {
+   "selected": 11,
+   "in_quran": 1604
+  },
+  "madd_iwad": {
+   "selected": 10,
+   "in_quran": 910
+  },
+  "madd_lazim:harfi": {
+   "selected": 6,
+   "in_quran": 42
+  },
+  "madd_lazim:kalimi": {
+   "selected": 6,
+   "in_quran": 106
+  },
+  "madd_leen": {
+   "selected": 6,
+   "in_quran": 15
+  },
+  "madd_munfasil": {
+   "selected": 22,
+   "in_quran": 2656
+  },
+  "madd_muttasil": {
+   "selected": 15,
+   "in_quran": 2165
+  },
+  "madd_silah_kubra": {
+   "selected": 7,
+   "in_quran": 324
+  },
+  "madd_silah_sughra": {
+   "selected": 14,
+   "in_quran": 1894
+  },
+  "madd_tabii": {
+   "selected": 176,
+   "in_quran": 34424
+  },
+  "qalqalah:akbar": {
+   "selected": 1,
+   "in_quran": 1
+  },
+  "qalqalah:kubra": {
+   "selected": 8,
+   "in_quran": 423
+  },
+  "qalqalah:sughra": {
+   "selected": 30,
+   "in_quran": 3414
+  },
+  "rakhawah": {
+   "selected": 86,
+   "in_quran": 12399
+  },
+  "safir": {
+   "selected": 52,
+   "in_quran": 9675
+  },
+  "sakt": {
+   "selected": 5,
+   "in_quran": 5
+  },
+  "shiddah": {
+   "selected": 11,
+   "in_quran": 1362
+  },
+  "tafashhi": {
+   "selected": 12,
+   "in_quran": 2124
+  },
+  "tafkheem": {
+   "selected": 86,
+   "in_quran": 11249
+  },
+  "tafkheem:lam_allah": {
+   "selected": 14,
+   "in_quran": 1987
+  },
+  "tafkheem:raa": {
+   "selected": 64,
+   "in_quran": 9621
+  },
+  "takreer": {
+   "selected": 30,
+   "in_quran": 3332
+  },
+  "tarqeeq:lam_allah": {
+   "selected": 7,
+   "in_quran": 714
+  },
+  "tarqeeq:raa": {
+   "selected": 13,
+   "in_quran": 2778
+  },
+  "tawassut": {
+   "selected": 60,
+   "in_quran": 11685
+  }
+ },
+ "total_words": 515
+}

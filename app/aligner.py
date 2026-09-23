@@ -31,7 +31,7 @@ from app.tajweed_rules import HAMZA_FORMS, ParsedText
 logger = logging.getLogger(__name__)
 
 DEFAULT_CTC_MODEL = os.environ.get("QAARI_ALIGNER_MODEL", "TBOGamer22/wav2vec2-quran-phonetics")
-MAX_CTC_SECONDS = 120.0
+MAX_CTC_SECONDS = 180.0
 
 
 class AlignmentError(RuntimeError):
@@ -201,19 +201,47 @@ class CTCForcedAligner:
         blank = tok.pad_token_id
         self.blank = int(blank if blank is not None else 0)
         self.phonetic = "ā" in self.vocab
+        self._cache: dict[tuple[int, int], tuple[npt.NDArray[np.float32], float]] = {}
 
     def emissions(self, audio: AudioSignal) -> tuple[npt.NDArray[np.float32], float]:
+        """Frame log-posteriors (T x V) and the frame duration; cached per audio buffer.
+
+        Audio longer than 30 s is processed in 20 s windows with 2 s context on each side, which
+        keeps memory flat and matches the utterance lengths the model was trained on.
+        """
+        key = (len(audio.samples), hash(audio.samples[:: max(1, len(audio.samples) // 4096)].tobytes()))
+        cached = self._cache.get(key)
+        if cached is not None:
+            return cached
         if audio.duration_s > MAX_CTC_SECONDS:
-            raise AlignmentError(f"Audio longer than {MAX_CTC_SECONDS:.0f}s; analyze one ayah at a time")
-        torch = self._torch
-        inputs = self.processor(audio.samples, sampling_rate=audio.sr, return_tensors="pt")
-        with torch.inference_mode():
-            logits = self.model(inputs.input_values.to(self.device)).logits[0]
-            lp = torch.log_softmax(logits.float(), dim=-1).cpu().numpy()
+            raise AlignmentError(f"Audio longer than {MAX_CTC_SECONDS:.0f}s; segment it first (see app.segmenter)")
+        x, sr = audio.samples, audio.sr
+        if audio.duration_s <= 30.0:
+            lp = self._forward(x, sr)
+        else:
+            win, ctx_s = int(20 * sr), int(2 * sr)
+            parts = []
+            for start in range(0, len(x), win):
+                a, b = max(0, start - ctx_s), min(len(x), start + win + ctx_s)
+                chunk_lp = self._forward(x[a:b], sr)
+                fps = chunk_lp.shape[0] / ((b - a) / sr)
+                lo = int(round((start - a) / sr * fps))
+                hi = lo + int(round(min(win, len(x) - start) / sr * fps))
+                parts.append(chunk_lp[lo:hi])
+            lp = np.concatenate(parts)
         frame_s = audio.duration_s / lp.shape[0]
+        self._cache = {key: (lp, frame_s)}  # keep only the latest buffer
         return lp, frame_s
 
-    def align(self, audio: AudioSignal, parsed: ParsedText) -> Alignment:
+    def _forward(self, x: npt.NDArray[np.float32], sr: int) -> npt.NDArray[np.float32]:
+        torch = self._torch
+        inputs = self.processor(x, sampling_rate=sr, return_tensors="pt")
+        with torch.inference_mode():
+            logits = self.model(inputs.input_values.to(self.device)).logits[0]
+            return torch.log_softmax(logits.float(), dim=-1).cpu().numpy()
+
+    def targets(self, parsed: ParsedText) -> tuple[list[int], list[int], list[int]]:
+        """(token ids, owning unit index per token, units without any vocabulary token)."""
         unit_tokens = phonetic_tokens(parsed) if self.phonetic else script_tokens(parsed)
         targets: list[int] = []
         owner: list[int] = []
@@ -225,6 +253,10 @@ class CTCForcedAligner:
                 continue
             targets.extend(ids)
             owner.extend([unit_idx] * len(ids))
+        return targets, owner, missing
+
+    def align(self, audio: AudioSignal, parsed: ParsedText) -> Alignment:
+        targets, owner, missing = self.targets(parsed)
         lp, frame_s = self.emissions(audio)
         path = ctc_forced_align(lp, targets, self.blank)
         spans = spans_from_path(path, owner, frame_s, lp, targets, end_s=_speech_end(audio))

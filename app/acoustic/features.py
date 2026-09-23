@@ -60,6 +60,26 @@ def band_energy(x: npt.NDArray[np.floating], sr: int, lo: float, hi: float) -> f
     return float(spec[mask].mean()) if mask.any() else 0.0
 
 
+def band_power_db(x: npt.NDArray[np.floating], sr: int, lo: float, hi: float) -> float:
+    return float(10.0 * np.log10(band_energy(x, sr, lo, hi) + 1e-20))
+
+
+def spectral_flatness(x: npt.NDArray[np.floating], sr: int, lo: float, hi: float) -> float:
+    """Wiener entropy (geometric / arithmetic mean of the power spectrum) inside [lo, hi) Hz.
+
+    1.0 is white noise spread evenly across the band; values near 0 mean a peaky spectrum.
+    """
+    if len(x) < 64:
+        return float("nan")
+    n_fft = int(2 ** np.ceil(np.log2(max(len(x), 512))))
+    spec = np.abs(np.fft.rfft(np.asarray(x, dtype=np.float64) * np.hanning(len(x)), n=n_fft)) ** 2
+    freqs = np.fft.rfftfreq(n_fft, 1.0 / sr)
+    band = spec[(freqs >= lo) & (freqs < hi)] + 1e-20
+    if band.size == 0:
+        return float("nan")
+    return float(np.exp(np.mean(np.log(band))) / np.mean(band))
+
+
 def band_energy_ratio_db(x: npt.NDArray[np.floating], sr: int, num: tuple[float, float],
                          den: tuple[float, float]) -> float:
     a = band_energy(x, sr, *num)
@@ -217,6 +237,47 @@ class AcousticContext:
             return NAN_FORMANTS
         f1, f2, f3, b1, b2 = (float(v) for v in np.nanmedian(arr, axis=0))
         return FormantEstimate(f1, f2, f3, b1, b2, n_frames=int(arr.shape[0]))
+
+    @cached_property
+    def _harmonicity(self):  # type: ignore[no-untyped-def]
+        if not HAVE_PARSELMOUTH:
+            return None
+        return self._sound.to_harmonicity_cc(time_step=0.005, minimum_pitch=75.0, silence_threshold=0.1,
+                                             periods_per_window=1.0)
+
+    def hnr(self, start_s: float, end_s: float) -> float:
+        """Median harmonics-to-noise ratio (dB) over ``[start_s, end_s]``.
+
+        Praat's cross-correlation harmonicity is used when available; otherwise the normalised
+        autocorrelation peak r in the 75–500 Hz lag range gives HNR = 10·log10(r / (1 − r)).
+        """
+        if end_s - start_s < 0.02:
+            return float("nan")
+        if HAVE_PARSELMOUTH:
+            h = self._harmonicity
+            times = np.arange(start_s + 0.01, end_s - 0.01 + 1e-9, 0.005)
+            vals = np.array([h.get_value(t) for t in times], dtype=np.float64) if times.size else np.zeros(0)
+            vals = vals[np.isfinite(vals) & (vals > -150)]
+            return float(np.median(vals)) if vals.size else float("nan")
+        seg = self.audio.segment(start_s, end_s).astype(np.float64)
+        frame, hop = int(0.04 * self.sr), int(0.01 * self.sr)
+        if len(seg) < frame:
+            frame = len(seg)
+        win = np.hanning(frame)
+        # Boersma (1993): divide the frame autocorrelation by the window's own autocorrelation.
+        w_ac = np.correlate(win, win, mode="full")[frame - 1:]
+        lo, hi = int(self.sr / 500), min(frame - 1, int(self.sr / 75))
+        vals = []
+        for a in range(0, len(seg) - frame + 1, hop):
+            x = seg[a: a + frame] - seg[a: a + frame].mean()
+            if not np.any(x):
+                continue
+            ac = np.correlate(x * win, x * win, mode="full")[frame - 1:]
+            ac = ac / (ac[0] + 1e-12) / (w_ac / w_ac[0] + 1e-12)
+            if hi > lo:
+                r = float(np.clip(np.max(ac[lo:hi]), 1e-4, 0.9999))
+                vals.append(10 * np.log10(r / (1 - r)))
+        return float(np.median(vals)) if vals else float("nan")
 
     def f0_in(self, start_s: float, end_s: float) -> FloatArray:
         t, f0 = self.f0_track

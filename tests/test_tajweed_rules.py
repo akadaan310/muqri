@@ -35,7 +35,7 @@ def test_madd_is_elided_before_sakin_of_next_word() -> None:
     fi = parsed.words[3]
     assert fi.text == "فِى"
     assert all(not parsed.units[i].madd_letter for i in fi.unit_indices)
-    assert not any(r.word == "فِى" for r in parsed.rules)
+    assert not any(r.word == "فِى" and r.rule_type.value.startswith("madd") for r in parsed.rules)
 
 
 def test_noon_sakinah_rules() -> None:

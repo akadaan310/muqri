@@ -23,8 +23,9 @@ def create_app(options: AnalysisOptions | None = None):  # type: ignore[no-untyp
     except ImportError as exc:  # pragma: no cover - optional dependency
         raise RuntimeError("pip install fastapi uvicorn python-multipart") from exc
 
-    app = FastAPI(title="qaari-eval", version="0.1.0")
+    app = FastAPI(title="qaari-eval", version="2.0.0")
     evaluator = QaariEvaluator(options)
+    app.state.evaluator = evaluator
 
     @app.get("/health")
     def health() -> dict[str, str]:
@@ -35,7 +36,11 @@ def create_app(options: AnalysisOptions | None = None):  # type: ignore[no-untyp
         audio: UploadFile = File(...),  # noqa: B008
         surah: int | None = Form(None),  # noqa: B008
         ayah: int | None = Form(None),  # noqa: B008
+        ayah_end: int | None = Form(None),  # noqa: B008
         text: str | None = Form(None),  # noqa: B008
+        tareeq: str | None = Form(None),  # noqa: B008
+        mode: str | None = Form(None),  # noqa: B008
+        benchmark: str | None = Form(None),  # noqa: B008
     ) -> dict[str, Any]:
         data = await audio.read()
         if not data:
@@ -46,10 +51,19 @@ def create_app(options: AnalysisOptions | None = None):  # type: ignore[no-untyp
         with tempfile.NamedTemporaryFile(suffix=suffix) as tmp:
             tmp.write(data)
             tmp.flush()
+            opts = evaluator.options
+            saved = (opts.tareeq, opts.mode, opts.benchmark)
             try:
-                result = evaluator.analyze_file(tmp.name, surah=surah, ayah=ayah, text=text)
+                if tareeq:
+                    opts.tareeq = tareeq
+                if mode:
+                    opts.mode = mode
+                opts.benchmark = benchmark
+                result = evaluator.analyze_file(tmp.name, surah=surah, ayah=ayah, ayah_end=ayah_end, text=text)
             except (AudioError, AlignmentError, QuranTextError, TajweedParseError, ValueError) as exc:
                 raise HTTPException(422, str(exc)) from exc
+            finally:
+                opts.tareeq, opts.mode, opts.benchmark = saved
         return result.report
 
     return app

@@ -74,6 +74,36 @@ def strip_basmala(text: str, surah: int, ayah: int) -> str:
     return text
 
 
+_FULL_API = "https://api.alquran.cloud/v1/quran/quran-uthmani"
+
+
+def get_full_quran(*, allow_network: bool = True, timeout: float = 60.0) -> dict[tuple[int, int], str]:
+    """All 6236 ayahs as {(surah, ayah): text}, downloaded once and cached on disk."""
+    cache_file = _cache_dir() / "quran-uthmani.json"
+    if cache_file.exists():
+        raw = json.loads(cache_file.read_text(encoding="utf-8"))
+    else:
+        if not allow_network:
+            raise QuranTextError("Full Qur'an text is not cached and network access is disabled")
+        try:
+            with urllib.request.urlopen(_FULL_API, timeout=timeout) as resp:  # noqa: S310 - fixed https URL
+                payload = json.loads(resp.read().decode("utf-8"))
+        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+            raise QuranTextError(f"Could not download the Qur'an text: {exc}") from exc
+        raw = {
+            f"{s['number']}:{a['numberInSurah']}": strip_basmala(a["text"], s["number"], a["numberInSurah"])
+            for s in payload["data"]["surahs"] for a in s["ayahs"]
+        }
+        cache_file.write_text(json.dumps(raw, ensure_ascii=False), encoding="utf-8")
+    out = {}
+    for key, text in raw.items():
+        s_, a_ = key.split(":")
+        out[(int(s_), int(a_))] = text
+    if len(out) != sum(AYAH_COUNTS):
+        raise QuranTextError(f"Expected {sum(AYAH_COUNTS)} ayahs, got {len(out)}")
+    return out
+
+
 def get_ayah_text(surah: int, ayah: int, *, allow_network: bool = True, timeout: float = 15.0) -> str:
     """Return the Uthmani text of ``surah:ayah``."""
     validate_reference(surah, ayah)

@@ -19,6 +19,7 @@ select = ["E", "F", "W", "I", "B", "UP"]
 
 [tool.ruff.lint.per-file-ignores]
 "datasets/index_reciters.py" = ["E402"]
+"notebooks/*.ipynb" = ["E501"]  # shell commands
 
 [tool.mypy]
 python_version = "3.11"

@@ -8,22 +8,60 @@ from typing import Any
 
 
 class RuleType(StrEnum):
-    """Canonical Hafs 'an 'Asim Tajweed rules that the engine evaluates."""
+    """Canonical Hafs 'an 'Asim Tajweed rules (Ahkaam) and articulation qualities (Sifaat)."""
 
+    # Mudood
     MADD_TABII = "madd_tabii"
     MADD_MUTTASIL = "madd_muttasil"
     MADD_MUNFASIL = "madd_munfasil"
     MADD_LAZIM = "madd_lazim"
     MADD_ARID = "madd_arid_lissukun"
-    GHUNNAH = "ghunnah"
+    MADD_LEEN = "madd_leen"
+    MADD_BADAL = "madd_badal"
+    MADD_IWAD = "madd_iwad"
+    MADD_SILAH_SUGHRA = "madd_silah_sughra"
+    MADD_SILAH_KUBRA = "madd_silah_kubra"
+    # Noon sakinah / tanween
+    IZHAR_HALQI = "izhar_halqi"
     IKHFA = "ikhfa"
     IDGHAM_GHUNNAH = "idgham_ghunnah"
+    IDGHAM_NO_GHUNNAH = "idgham_no_ghunnah"
     IQLAB = "iqlab"
+    # Meem sakinah
     IKHFA_SHAFAWI = "ikhfa_shafawi"
     IDGHAM_SHAFAWI = "idgham_shafawi"
+    IZHAR_SHAFAWI = "izhar_shafawi"
+    # Ghunnah mushaddadah
+    GHUNNAH = "ghunnah"
+    # Qalqalah (detail: sughra / kubra / akbar)
     QALQALAH = "qalqalah"
+    # Idghaam classes of other letters (detail: kamil / naqis)
+    IDGHAM_MITHLAYN = "idgham_mithlayn"
+    IDGHAM_MUTAJANISAYN = "idgham_mutajanisayn"
+    IDGHAM_MUTAQARIBAYN = "idgham_mutaqaribayn"
+    # Raa / Lam
     TAFKHEEM = "tafkheem"
     TARQEEQ = "tarqeeq"
+    JAWAZ_WAJHAYN = "jawaz_wajhayn"
+    # Wasl / Waqf / Sakt
+    HAMZAT_WASL = "hamzat_wasl"
+    SAKT = "sakt"
+    # Sifaat
+    HAMS = "hams"
+    JAHR = "jahr"
+    SHIDDAH = "shiddah"
+    TAWASSUT = "tawassut"
+    RAKHAWAH = "rakhawah"
+    ITBAQ = "itbaq"
+    SAFIR = "safir"
+    TAFASHHI = "tafashhi"
+    ISTITAALAH = "istitaalah"
+    TAKREER = "takreer"
+
+
+class Tareeq(StrEnum):
+    SHATIBIYYAH = "shatibiyyah"
+    TAYYIBAH = "tayyibah"
 
 
 MADD_RULES: frozenset[RuleType] = frozenset(
@@ -33,9 +71,21 @@ MADD_RULES: frozenset[RuleType] = frozenset(
         RuleType.MADD_MUNFASIL,
         RuleType.MADD_LAZIM,
         RuleType.MADD_ARID,
+        RuleType.MADD_LEEN,
+        RuleType.MADD_BADAL,
+        RuleType.MADD_IWAD,
+        RuleType.MADD_SILAH_SUGHRA,
+        RuleType.MADD_SILAH_KUBRA,
     }
 )
 
+NOON_RULES: frozenset[RuleType] = frozenset(
+    {RuleType.IZHAR_HALQI, RuleType.IKHFA, RuleType.IDGHAM_GHUNNAH, RuleType.IDGHAM_NO_GHUNNAH, RuleType.IQLAB}
+)
+MEEM_RULES: frozenset[RuleType] = frozenset(
+    {RuleType.IKHFA_SHAFAWI, RuleType.IDGHAM_SHAFAWI, RuleType.IZHAR_SHAFAWI}
+)
+# Rules whose window must carry a held nasal resonance.
 NASAL_RULES: frozenset[RuleType] = frozenset(
     {
         RuleType.GHUNNAH,
@@ -46,8 +96,38 @@ NASAL_RULES: frozenset[RuleType] = frozenset(
         RuleType.IDGHAM_SHAFAWI,
     }
 )
+IDGHAM_CLASS_RULES: frozenset[RuleType] = frozenset(
+    {RuleType.IDGHAM_MITHLAYN, RuleType.IDGHAM_MUTAJANISAYN, RuleType.IDGHAM_MUTAQARIBAYN}
+)
+WEIGHT_RULES: frozenset[RuleType] = frozenset({RuleType.TAFKHEEM, RuleType.TARQEEQ, RuleType.JAWAZ_WAJHAYN})
+WASL_RULES: frozenset[RuleType] = frozenset({RuleType.HAMZAT_WASL, RuleType.SAKT})
+SIFAAT_RULES: frozenset[RuleType] = frozenset(
+    {
+        RuleType.HAMS, RuleType.JAHR, RuleType.SHIDDAH, RuleType.TAWASSUT, RuleType.RAKHAWAH, RuleType.ITBAQ,
+        RuleType.SAFIR, RuleType.TAFASHHI, RuleType.ISTITAALAH, RuleType.TAKREER,
+    }
+)
 
-WEIGHT_RULES: frozenset[RuleType] = frozenset({RuleType.TAFKHEEM, RuleType.TARQEEQ})
+
+def rule_category(rule_type: RuleType) -> str:
+    """Scoring family of a rule: madd, noon, meem, ghunnah, qalqalah, idgham, weight, wasl, sifaat."""
+    if rule_type in MADD_RULES:
+        return "madd"
+    if rule_type in NOON_RULES:
+        return "noon"
+    if rule_type in MEEM_RULES:
+        return "meem"
+    if rule_type is RuleType.GHUNNAH:
+        return "ghunnah"
+    if rule_type is RuleType.QALQALAH:
+        return "qalqalah"
+    if rule_type in IDGHAM_CLASS_RULES:
+        return "idgham"
+    if rule_type in WEIGHT_RULES:
+        return "weight"
+    if rule_type in WASL_RULES:
+        return "wasl"
+    return "sifaat"
 
 
 class Status(StrEnum):
@@ -55,6 +135,8 @@ class Status(StrEnum):
     WARNING = "WARNING"
     FAIL = "FAIL"
     SKIPPED = "SKIPPED"
+    # A short or breath-driven stop in a live recitation (Waqf al-Dharoori), not a Tajweed error.
+    VALID_NECESSARY_PAUSE = "VALID_NECESSARY_PAUSE"
 
 
 class Vowel(StrEnum):
@@ -82,6 +164,8 @@ class LetterUnit:
     synthetic: bool = False
     assimilated: bool = False
     elided: bool = False
+    orig_vowel: Vowel | None = None  # vowel before waqf removed it
+    wasla: bool = False  # a hamzat al-wasl (pronounced only at the start of a phrase)
 
     @property
     def pronounced(self) -> bool:
@@ -93,6 +177,9 @@ class Word:
     index: int
     text: str
     unit_indices: list[int] = field(default_factory=list)
+    ayah: int = 0  # position of the ayah within the analysed passage
+    stop_after: bool = False  # the reciter stops (waqf) after this word
+    sakt_after: bool = False  # Hafs sakt (brief breathless pause) after this word
 
 
 @dataclass(slots=True)
@@ -107,6 +194,7 @@ class RuleInstance:
     letter: str | None = None
     detail: str = ""
     at_waqf: bool = False
+    ayah: int = 0
 
 
 @dataclass(slots=True)
@@ -148,6 +236,8 @@ class RuleDiagnostic:
     score: float | None = None
     metrics: dict[str, float] = field(default_factory=dict)
     letter: str | None = None
+    ayah: int = 0
+    detail: str = ""
 
     def to_dict(self) -> dict[str, Any]:
         out: dict[str, Any] = {
@@ -157,6 +247,8 @@ class RuleDiagnostic:
         }
         if self.letter:
             out["letter"] = self.letter
+        if self.detail:
+            out["detail"] = self.detail
         if self.expected_harakat is not None:
             out["expected_harakat"] = self.expected_harakat
         if self.expected_range is not None:

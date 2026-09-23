@@ -6,6 +6,7 @@ soxr>=0.3
 librosa>=0.10
 praat-parselmouth>=0.4.3
 faiss-cpu>=1.7.4
+nara_wpe>=0.0.11  # Taraweeh adapter: WPE dereverberation
 
 # Tests
 pytest>=8.0

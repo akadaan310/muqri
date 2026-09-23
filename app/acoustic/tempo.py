@@ -13,7 +13,7 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from app.models import MADD_RULES, NASAL_RULES, Alignment
+from app.models import MADD_RULES, NASAL_RULES, Alignment, RuleType
 from app.tajweed_rules import ParsedText
 
 MIN_HARAKA_MS = 80.0
@@ -50,8 +50,13 @@ def short_syllable_units(parsed: ParsedText) -> list[int]:
     """Indices of units that form a plain short open syllable (1 harakah)."""
     excluded: set[int] = set()
     for rule in parsed.rules:
-        if rule.rule_type in MADD_RULES or rule.rule_type in NASAL_RULES:
+        if rule.rule_type in MADD_RULES:
             excluded.update(rule.unit_indices)
+        elif rule.rule_type in NASAL_RULES:
+            # Only the nasal carrier is lengthened; an Ikhfa/Iqlab target letter is a normal syllable.
+            excluded.add(rule.unit_indices[0])
+            if rule.rule_type in (RuleType.IDGHAM_GHUNNAH, RuleType.IDGHAM_SHAFAWI):
+                excluded.update(rule.unit_indices)
     pron = [u for u in parsed.units if u.pronounced]
     last = pron[-1].index if pron else -1
     out: list[int] = []

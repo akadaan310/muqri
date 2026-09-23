@@ -21,3 +21,22 @@ def make_signal():
         return condition(samples, SR, denoise="never")
 
     return _make
+
+
+def make_eval(samples, spans: dict[int, tuple[float, float]], parsed, haraka_ms: float = 200.0,  # type: ignore[no-untyped-def]
+              mode: str = "studio", pauses=None):
+    """EvalContext over synthetic audio with a known alignment (unit index -> (start_s, end_s))."""
+    from app.acoustic.features import AcousticContext
+    from app.acoustic.tempo import TempoEstimate
+    from app.models import AlignedUnit, Alignment
+    from app.tajweed_rules.base import EvalContext
+
+    audio = condition(samples, SR, denoise="never")
+    align = Alignment(units={i: AlignedUnit(i, a, b) for i, (a, b) in spans.items()}, method="test")
+    return EvalContext(parsed=parsed, alignment=align, ctx=AcousticContext(audio),
+                       tempo=TempoEstimate(haraka_ms, 10, "test"), mode=mode, pauses=pauses or [])
+
+
+@pytest.fixture
+def eval_ctx():
+    return make_eval

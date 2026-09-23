@@ -9,8 +9,8 @@ import pytest
 import soundfile as sf
 
 import main
+from app.fingerprint import ENV_DIM, TAJWEED_DIM, Fingerprint, MfccStatsEmbedder, ReciterIndex, ReciterProfile
 from app.pipeline import AnalysisOptions, QaariEvaluator
-from app.profiling import MfccStatsEmbedder, ReciterIndex, ReciterProfile, StyleVector
 from app.tajweed_rules import parse_text
 from tests.synth import SR, burst, concat, nasal_murmur, silence, vowel
 
@@ -47,14 +47,14 @@ def synthesize(tmp_path):  # type: ignore[no-untyped-def]
 def index_dir(tmp_path):  # type: ignore[no-untyped-def]
     pytest.importorskip("faiss")
     rng = np.random.default_rng(0)
-    idx = ReciterIndex(MfccStatsEmbedder.backend)
-    for i, (name, style) in enumerate({
-        "Mahmoud Khalil Al-Hussary": StyleVector(300, 1.0, 1.0, 20.0),
-        "Siddiq Al-Minshawi": StyleVector(240, 1.3, 3.0, 12.0),
-        "Mishary Alafasy": StyleVector(330, 0.9, 4.5, 8.0),
-    }.items()):
-        timbre = rng.standard_normal(128).astype(np.float32)
-        idx.add(ReciterProfile(f"r{i}", name, timbre / np.linalg.norm(timbre), style, MfccStatsEmbedder.backend))
+    idx = ReciterIndex(MfccStatsEmbedder.backend, "studio")
+    for i, (name, haraka) in enumerate({"Mahmoud Khalil Al-Hussary": 200.0, "Siddiq Al-Minshawi": 260.0,
+                                        "Mishary Alafasy": 330.0}.items()):
+        timbre = rng.standard_normal(192).astype(np.float32)
+        taj = np.full(TAJWEED_DIM, np.nan)
+        taj[0] = haraka
+        idx.add(ReciterProfile(f"r{i}", name, Fingerprint(timbre / np.linalg.norm(timbre), taj, np.zeros(ENV_DIM),
+                                                          MfccStatsEmbedder.backend)))
     out = tmp_path / "index"
     idx.save(out)
     return out
@@ -63,7 +63,7 @@ def index_dir(tmp_path):  # type: ignore[no-untyped-def]
 def test_pipeline_report_matches_spec(tmp_path, index_dir) -> None:  # type: ignore[no-untyped-def]
     wav, align = synthesize(tmp_path)
     ev = QaariEvaluator(AnalysisOptions(alignment_json=align, index_dir=index_dir, timbre_backend="mfcc",
-                                        denoise="never"))
+                                        denoise="never", mode="studio", style_weight=1.0, benchmark="hussary"))
     result = ev.analyze_file(wav, surah=113, ayah=2)
     report = result.report
 
@@ -86,8 +86,12 @@ def test_pipeline_report_matches_spec(tmp_path, index_dir) -> None:  # type: ign
 
     matches = report["reciter_similarity_match"]["top_matches"]
     assert len(matches) == 3
-    assert matches[0]["reciter_name"] == "Mahmoud Khalil Al-Hussary"  # closest style (tempo 300, bias 1.0)
+    assert matches[0]["reciter_name"] == "Mahmoud Khalil Al-Hussary"  # closest tempo (200 ms harakah)
     assert {"reciter_name", "style_similarity_pct", "timbre_similarity_pct", "matched_traits"} <= set(matches[0])
+    assert report["fingerprint"]["dimensions"] == 232
+    assert report["benchmark_comparison"]["benchmark"] == "Mahmoud Khalil Al-Hussary"
+    assert summary["mode"] == "studio" and summary["tareeq"] == "shatibiyyah"
+    assert summary["acoustic_environment"] is not None and summary["tajweed_perfection_index"] is not None
     json.dumps(report, ensure_ascii=False)  # must be serialisable
 
 
@@ -97,17 +101,20 @@ def test_cli_analyze_writes_report(tmp_path, index_dir, capsys) -> None:  # type
     code = main.main([
         "analyze", "--audio", str(wav), "--surah", "113", "--ayah", "2", "--alignment-json", str(align),
         "--index-dir", str(index_dir), "--timbre-backend", "mfcc", "--denoise", "never", "--output", str(out),
+        "--tareeq", "tayyibah", "--mode", "taraweeh_adapted", "--benchmark", "hussary",
     ])
     assert code == 0
     printed = capsys.readouterr().out
-    assert "Overall Tajweed score" in printed and "madd_tabii" in printed
+    assert "Tajweed perfection index" in printed and "madd_tabii" in printed and "Benchmark" in printed
     data = json.loads(out.read_text(encoding="utf-8"))
     assert data["recitation_summary"]["reference"] == "113:2"
+    assert data["recitation_summary"]["tareeq"] == "tayyibah"
+    assert data["recitation_summary"]["mode"] == "taraweeh_adapted"
 
 
 def test_cli_reports_errors(tmp_path, capsys) -> None:  # type: ignore[no-untyped-def]
     assert main.main(["analyze", "--audio", str(tmp_path / "nope.wav"), "--surah", "113", "--ayah", "2"]) == 1
     assert "not found" in capsys.readouterr().err
-    assert main.main(["analyze", "--audio", "x.wav"]) == 2
+    assert main.main(["analyze", "--audio", "x.wav"]) == 2  # neither --text nor --surah
     assert main.main(["rules", "--surah", "113", "--ayah", "1"]) == 0
     assert "qalqalah" in capsys.readouterr().out

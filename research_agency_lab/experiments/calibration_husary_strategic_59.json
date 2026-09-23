@@ -1,0 +1,627 @@
+{
+    "anchor": "Husary_128kbps",
+    "n_rows": 59,
+    "count_scale_ruler": "counts",
+    "version": 1,
+    "peers": [
+        "Abdul_Basit_Murattal_192kbps",
+        "Alafasy_128kbps",
+        "Hudhaify_128kbps",
+        "Husary_Muallim_128kbps",
+        "Minshawy_Murattal_128kbps",
+        "Mohammad_al_Tablaway_128kbps",
+        "Muhammad_Ayyoub_128kbps"
+    ],
+    "validation": {
+        "raw_textbook": {
+            "Husary_128kbps": {
+                "perfection": 71.7231990414857,
+                "sifaat": 82.46305418719211,
+                "categories": {
+                    "weight": 91.78807947019867,
+                    "madd": 64.62922077922077,
+                    "ghunnah": 54.40370370370371,
+                    "meem": 66.72407407407407,
+                    "idgham": 96.36363636363636,
+                    "sifaat": 82.46305418719211,
+                    "wasl": 95.0632911392405,
+                    "noon": 62.17798165137617,
+                    "qalqalah": 94.14634146341464
+                }
+            }
+        },
+        "calibrated_in_sample": {
+            "Husary_128kbps": {
+                "perfection": 77.87879538908335,
+                "sifaat": 85.71791381373714,
+                "categories": {
+                    "weight": 94.4305742480354,
+                    "madd": 71.33540998927566,
+                    "ghunnah": 91.71253000165862,
+                    "meem": 66.72407407407407,
+                    "idgham": 96.36363636363636,
+                    "sifaat": 85.71791381373714,
+                    "wasl": 89.73684210526315,
+                    "noon": 71.86578422718026,
+                    "qalqalah": 95.45454545454545
+                }
+            }
+        },
+        "leave_one_peer_out": {
+            "Alafasy_128kbps": {
+                "perfection": null
+            },
+            "Muhammad_Ayyoub_128kbps": {
+                "perfection": null
+            },
+            "Husary_Muallim_128kbps": {
+                "perfection": null
+            },
+            "Minshawy_Murattal_128kbps": {
+                "perfection": null
+            },
+            "Abdul_Basit_Murattal_192kbps": {
+                "perfection": null
+            },
+            "Hudhaify_128kbps": {
+                "perfection": null
+            },
+            "Mohammad_al_Tablaway_128kbps": {
+                "perfection": null
+            }
+        },
+        "weight_search": {
+            "default_weights": {
+                "weight": 0.6,
+                "madd": 1,
+                "ghunnah": 1,
+                "meem": 0.8,
+                "idgham": 0.8,
+                "sifaat": 1,
+                "wasl": 0.5,
+                "noon": 1,
+                "qalqalah": 0.8
+            },
+            "imams_mean_tuned": null,
+            "weights": {
+                "weight": 0.6,
+                "madd": 1,
+                "ghunnah": 1,
+                "meem": 0.8,
+                "idgham": 0.8,
+                "sifaat": 1,
+                "wasl": 0.5,
+                "noon": 1,
+                "qalqalah": 0.8
+            },
+            "peers_min_tuned": null,
+            "had_imams": false,
+            "peers_mean_tuned": null,
+            "peers_mean_default": null,
+            "imams_mean_default": null
+        }
+    },
+    "n_observations": 1276,
+    "count_scale": 0.9140767824497257,
+    "imams": [
+        "Abdullaah_3awwaad_Al-Juhaynee_128kbps",
+        "Abdullah_Matroud_128kbps",
+        "Abdurrahmaan_As-Sudais_192kbps",
+        "MaherAlMuaiqly128kbps",
+        "Nasser_Alqatami_128kbps",
+        "Salah_Al_Budair_128kbps",
+        "Saood_ash-Shuraym_128kbps",
+        "Yasser_Ad-Dussary_128kbps"
+    ],
+    "reliability": {
+        "align_conf_min": 0.2,
+        "align_min_ms": 40
+    },
+    "evidence": {
+        "rakhawah": [
+            {
+                "metric": "duration_ratio",
+                "side": "both",
+                "anchor": {
+                    "median": 1.062,
+                    "sigma": 0.4210584,
+                    "p5": 0.5399999999999999,
+                    "p95": 6.418700000000006,
+                    "p25": 0.7735000000000001,
+                    "p75": 1.2435,
+                    "n": 39
+                },
+                "peer_consensus": 1.062,
+                "peers": {
+                },
+                "candidates": {
+                    "duration_ratio": {
+                        "median": 1.062,
+                        "rcv": 0.39647683615819207,
+                        "n": 39
+                    }
+                }
+            }
+        ],
+        "ghunnah": [
+            {
+                "metric": "core_counts",
+                "side": "both",
+                "anchor": {
+                    "median": 3.2285,
+                    "sigma": 0.6419658,
+                    "p5": 0.78025,
+                    "p95": 3.98025,
+                    "p25": 2.72225,
+                    "p75": 3.5882500000000004,
+                    "n": 26
+                },
+                "peer_consensus": 3.2285,
+                "peers": {
+                },
+                "candidates": {
+                    "core_counts": {
+                        "median": 3.2285,
+                        "rcv": 0.19884336379123432,
+                        "n": 26
+                    },
+                    "counts": {
+                        "median": 3.396,
+                        "rcv": 0.1995136042402826,
+                        "n": 26
+                    }
+                }
+            },
+            {
+                "metric": "nasal_contrast_db",
+                "side": "lower",
+                "anchor": {
+                    "median": 16.83,
+                    "sigma": 3.6190265999999984,
+                    "p5": 9.6754,
+                    "p95": 21.760799999999996,
+                    "p25": 15.113,
+                    "p75": 19.91,
+                    "n": 25
+                },
+                "peer_consensus": 16.83,
+                "peers": {
+                },
+                "candidates": {
+                    "nasal_contrast_db": {
+                        "median": 16.83,
+                        "rcv": 0.2150342602495543,
+                        "n": 25
+                    },
+                    "nasal_energy_ratio_db": {
+                        "median": 20.558,
+                        "rcv": 0.2538911032201576,
+                        "n": 26
+                    }
+                }
+            }
+        ],
+        "hams": [
+            {
+                "metric": "voicing_fraction",
+                "side": "upper",
+                "anchor": {
+                    "median": 0,
+                    "sigma": 0,
+                    "p5": 0,
+                    "p95": 0.97,
+                    "p25": 0,
+                    "p75": 0.25,
+                    "n": 27
+                },
+                "peer_consensus": 0,
+                "peers": {
+                },
+                "candidates": {
+                    "voicing_fraction": {
+                        "median": 0,
+                        "rcv": 0,
+                        "n": 27
+                    }
+                }
+            }
+        ],
+        "tafkheem:raa": [
+            {
+                "metric": "f2_minus_f1_hz",
+                "side": "upper",
+                "anchor": {
+                    "median": 377.7975,
+                    "sigma": 93.54538830000001,
+                    "p5": 52.50675,
+                    "p95": 681.54225,
+                    "p25": 306.8295,
+                    "p75": 411.9665,
+                    "n": 46
+                },
+                "peer_consensus": 377.7975,
+                "peers": {
+                },
+                "candidates": {
+                    "f2_minus_f1_hz": {
+                        "median": 377.7975,
+                        "rcv": 0.24760721894665796,
+                        "n": 46
+                    }
+                }
+            }
+        ],
+        "tawassut": [
+            {
+                "metric": "duration_ratio",
+                "side": "both",
+                "anchor": {
+                    "median": 1.0265,
+                    "sigma": 0.22461389999999995,
+                    "p5": 0.46519999999999995,
+                    "p95": 1.67285,
+                    "p25": 0.9255,
+                    "p75": 1.2977500000000002,
+                    "n": 38
+                },
+                "peer_consensus": 1.0265,
+                "peers": {
+                },
+                "candidates": {
+                    "duration_ratio": {
+                        "median": 1.0265,
+                        "rcv": 0.2188152946906965,
+                        "n": 38
+                    }
+                }
+            }
+        ],
+        "takreer": [
+            {
+                "metric": "taps",
+                "side": "upper",
+                "anchor": {
+                    "median": 0,
+                    "sigma": 0,
+                    "p5": 0,
+                    "p95": 2.200000000000003,
+                    "p25": 0,
+                    "p75": 1,
+                    "n": 20
+                },
+                "peer_consensus": 0,
+                "peers": {
+                },
+                "candidates": {
+                    "taps": {
+                        "median": 0,
+                        "rcv": 0,
+                        "n": 20
+                    }
+                }
+            }
+        ],
+        "safir": [
+            {
+                "metric": "safir_high_band_spike_db",
+                "side": "lower",
+                "anchor": {
+                    "median": 30.1875,
+                    "sigma": 3.7472714999999996,
+                    "p5": 21.63515,
+                    "p95": 35.2311,
+                    "p25": 27.93875,
+                    "p75": 32.728,
+                    "n": 30
+                },
+                "peer_consensus": 30.1875,
+                "peers": {
+                },
+                "candidates": {
+                    "safir_high_band_spike_db": {
+                        "median": 30.1875,
+                        "rcv": 0.12413321739130434,
+                        "n": 30
+                    }
+                }
+            }
+        ],
+        "ikhfa:light": [
+            {
+                "metric": "counts",
+                "side": "both",
+                "anchor": {
+                    "median": 2.398,
+                    "sigma": 0.3943716,
+                    "p5": 1.512,
+                    "p95": 2.738,
+                    "p25": 1.705,
+                    "p75": 2.589,
+                    "n": 21
+                },
+                "peer_consensus": 2.398,
+                "peers": {
+                },
+                "candidates": {
+                    "core_counts": {
+                        "median": 2.31,
+                        "rcv": 0.17393272727272718,
+                        "n": 21
+                    },
+                    "counts": {
+                        "median": 2.398,
+                        "rcv": 0.16445854879065888,
+                        "n": 21
+                    }
+                }
+            }
+        ],
+        "jahr": [
+            {
+                "metric": "voicing_fraction",
+                "side": "lower",
+                "anchor": {
+                    "median": 0.95,
+                    "sigma": 0.07413000000000006,
+                    "p5": 0.5145,
+                    "p95": 1,
+                    "p25": 0.8,
+                    "p75": 1,
+                    "n": 51
+                },
+                "peer_consensus": 0.95,
+                "peers": {
+                },
+                "candidates": {
+                    "voicing_fraction": {
+                        "median": 0.95,
+                        "rcv": 0.07803157894736848,
+                        "n": 51
+                    }
+                }
+            }
+        ],
+        "madd_tabii": [
+            {
+                "metric": "counts",
+                "side": "both",
+                "anchor": {
+                    "median": 2.222,
+                    "sigma": 0.32913719999999996,
+                    "p5": 1.7818999999999998,
+                    "p95": 4.9781999999999975,
+                    "p25": 2,
+                    "p75": 2.467,
+                    "n": 107
+                },
+                "peer_consensus": 2.222,
+                "peers": {
+                },
+                "candidates": {
+                    "core_counts": {
+                        "median": 1.916,
+                        "rcv": 0.1539861169102295,
+                        "n": 107
+                    },
+                    "counts": {
+                        "median": 2.222,
+                        "rcv": 0.1481265526552655,
+                        "n": 107
+                    }
+                }
+            }
+        ],
+        "qalqalah:sughra": [
+            {
+                "metric": "energy_rise_db",
+                "side": "lower",
+                "anchor": {
+                    "median": 13.533999999999999,
+                    "sigma": 4.4359392,
+                    "p5": 9.212799999999998,
+                    "p95": 20.589399999999998,
+                    "p25": 12.04925,
+                    "p75": 17.08475,
+                    "n": 22
+                },
+                "peer_consensus": 13.533999999999999,
+                "peers": {
+                },
+                "candidates": {
+                    "energy_rise_db": {
+                        "median": 13.533999999999999,
+                        "rcv": 0.3277626126791784,
+                        "n": 22
+                    }
+                }
+            }
+        ],
+        "hamzat_wasl": [
+            {
+                "metric": "gap_ms",
+                "side": "upper",
+                "anchor": {
+                    "median": 0,
+                    "sigma": 0,
+                    "p5": 0,
+                    "p95": 0,
+                    "p25": 0,
+                    "p75": 0,
+                    "n": 33
+                },
+                "peer_consensus": 0,
+                "peers": {
+                },
+                "candidates": {
+                    "gap_ms": {
+                        "median": 0,
+                        "rcv": 0,
+                        "n": 33
+                    }
+                }
+            }
+        ],
+        "tafkheem": [
+            {
+                "metric": "f2_minus_f1_hz",
+                "side": "upper",
+                "anchor": {
+                    "median": 359.609,
+                    "sigma": 154.62183659999994,
+                    "p5": 123.4253,
+                    "p95": 954.2973999999992,
+                    "p25": 252.4825,
+                    "p75": 437.06899999999996,
+                    "n": 67
+                },
+                "peer_consensus": 359.609,
+                "peers": {
+                },
+                "candidates": {
+                    "f2_minus_f1_hz": {
+                        "median": 359.609,
+                        "rcv": 0.4299720991410113,
+                        "n": 67
+                    }
+                }
+            }
+        ]
+    },
+    "rules": {
+        "rakhawah": [
+            {
+                "metric": "duration_ratio",
+                "side": "both",
+                "hi": 1.062,
+                "scale": 0.4210584,
+                "lo": 1.062
+            }
+        ],
+        "ghunnah": [
+            {
+                "metric": "core_counts",
+                "side": "both",
+                "hi": 3.2285,
+                "scale": 0.6419658,
+                "lo": 3.2285
+            },
+            {
+                "metric": "nasal_contrast_db",
+                "side": "lower",
+                "hi": 16.83,
+                "scale": 3.6190265999999984,
+                "lo": 16.83
+            }
+        ],
+        "hams": [
+            {
+                "metric": "voicing_fraction",
+                "side": "upper",
+                "hi": 0,
+                "scale": 0.05,
+                "lo": 0
+            }
+        ],
+        "tafkheem:raa": [
+            {
+                "metric": "f2_minus_f1_hz",
+                "side": "upper",
+                "hi": 377.7975,
+                "scale": 93.54538830000001,
+                "lo": 377.7975
+            }
+        ],
+        "tawassut": [
+            {
+                "metric": "duration_ratio",
+                "side": "both",
+                "hi": 1.0265,
+                "scale": 0.22461389999999995,
+                "lo": 1.0265
+            }
+        ],
+        "takreer": [
+            {
+                "metric": "taps",
+                "side": "upper",
+                "hi": 0,
+                "scale": 0.5,
+                "lo": 0
+            }
+        ],
+        "safir": [
+            {
+                "metric": "safir_high_band_spike_db",
+                "side": "lower",
+                "hi": 30.1875,
+                "scale": 3.7472714999999996,
+                "lo": 30.1875
+            }
+        ],
+        "ikhfa:light": [
+            {
+                "metric": "counts",
+                "side": "both",
+                "hi": 2.398,
+                "scale": 0.3943716,
+                "lo": 2.398
+            }
+        ],
+        "jahr": [
+            {
+                "metric": "voicing_fraction",
+                "side": "lower",
+                "hi": 0.95,
+                "scale": 0.07413000000000006,
+                "lo": 0.95
+            }
+        ],
+        "madd_tabii": [
+            {
+                "metric": "counts",
+                "side": "both",
+                "hi": 2.222,
+                "scale": 0.32913719999999996,
+                "lo": 2.222
+            }
+        ],
+        "qalqalah:sughra": [
+            {
+                "metric": "energy_rise_db",
+                "side": "lower",
+                "hi": 13.533999999999999,
+                "scale": 4.4359392,
+                "lo": 13.533999999999999
+            }
+        ],
+        "hamzat_wasl": [
+            {
+                "metric": "gap_ms",
+                "side": "upper",
+                "hi": 0,
+                "scale": 15,
+                "lo": 0
+            }
+        ],
+        "tafkheem": [
+            {
+                "metric": "f2_minus_f1_hz",
+                "side": "upper",
+                "hi": 359.609,
+                "scale": 154.62183659999994,
+                "lo": 359.609
+            }
+        ]
+    },
+    "category_weights": {
+        "weight": 0.6,
+        "madd": 1,
+        "ghunnah": 1,
+        "meem": 0.8,
+        "idgham": 0.8,
+        "sifaat": 1,
+        "wasl": 0.5,
+        "noon": 1,
+        "qalqalah": 0.8
+    }
+}

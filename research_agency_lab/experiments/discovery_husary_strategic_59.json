@@ -1,0 +1,48 @@
+{
+    "Husary_128kbps": {
+        "duration_law_span": {
+            "n": 350,
+            "median_haraka_ms": 320.317,
+            "lambda": 80,
+            "implied_counts_scale": 0.713988054766137,
+            "bic": 4284.9218127492195,
+            "metric": "duration_ms",
+            "T_unit": "100 ms",
+            "terms_ms": {
+                "1": -395.08744773233036,
+                "T": 118.62449987230337,
+                "n": 448.63075490095997
+            },
+            "r2": 0.5163986194375731,
+            "ms_per_count_at_median_T": 448.63075490095997,
+            "overhead_ms_at_median_T": -15.11300847636437,
+            "reciter": "Husary_128kbps"
+        },
+        "tempo_dynamics": {
+            "pooled": {
+            },
+            "per_surah": {
+            },
+            "model": "dT/dτ = κ(T∞ − T) + φ",
+            "reciter": "Husary_128kbps"
+        },
+        "duration_law_core": {
+            "n": 350,
+            "median_haraka_ms": 320.317,
+            "lambda": 80,
+            "implied_counts_scale": 0.8126486456324796,
+            "bic": 3974.1915031915305,
+            "metric": "core_ms",
+            "T_unit": "100 ms",
+            "terms_ms": {
+                "1": -551.6944461494817,
+                "T": 150.29147824352853,
+                "n": 394.16419595543556
+            },
+            "r2": 0.6793249966286833,
+            "ms_per_count_at_median_T": 394.16419595543556,
+            "overhead_ms_at_median_T": -70.2852917841584,
+            "reciter": "Husary_128kbps"
+        }
+    }
+}

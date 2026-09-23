@@ -52,7 +52,15 @@ Done means all of the following:
   - `wheels/`: parselmouth, faiss-cpu, soxr, speechbrain, nara_wpe and their deps, built for Kaggle's Python 3.12.
   - `hf_hub/`: the wav2vec2 and ECAPA model snapshots.
   - The rebuild recipe is in the `kaggle_bridge.py push-deps` docstring.
-- **Smoke3** (`qaari-smoke3-0`) was launched with the offline bundle and was running at this update. Check it first.
+- **Kaggle pipeline verified** (smoke5, rows in `benchmarks/results/kaggle/smoke5/`):
+  - Offline install works, models load, and 28 rows (Husary and Dosari, Al-Fatiha, both modes) were written in about 2 minutes.
+  - Rows match the local run: same harakah, scores within ±2–5. The Quran-MD source is 64 kbps WAV, the local run used 128 kbps MP3.
+  - Studio mode takes about 2.7 s per ayah per process.
+- **Full run launched** (tag `full`): 11 Quran-MD reciters × 6236 ayahs × {studio, taraweeh_adapted}, about 137k rows.
+  - 5 kernels × 4 processes, 20 shards, 11.5 h cap; roughly 5 h expected.
+  - Every process takes Husary's ayahs first, so his rows finish first even if the session runs out.
+  - Kernels are `qaari-full-0..3`. `qaari-full-4` was auto-launched once smoke4 freed the 5th session slot; if it is missing, run `launch ... --only 4` with the same arguments.
+  - Collect with `kaggle_bridge.py collect --tag full --kernels 5`.
 - **Octave on Kaggle** needs apt, and so needs internet. Until the account is phone-verified, run `octave_bridge.py` on the VM over the collected rows. It reads audio from the EveryAyah cache, or from `--local-root` if you download Quran-MD parts with `kaggle datasets download`.
 
 ## 4. Files
@@ -77,17 +85,12 @@ Done means all of the following:
 - **Secrets.** Never write tokens into the repo.
 
 ## 6. Next steps
-1. **Check smoke3.** Run `collect --tag smoke3 --kernels 1` and read `benchmarks/results/kaggle/smoke3/k0_qaari-smoke3-0.log`.
-   - Confirm the rows contain `metrics.core_ms` and `key`.
-   - If it failed, fix it, run `push-code`, and relaunch.
+1. **Collect the `full` run.** Check `status --tag full --kernels 5` until all are COMPLETE, then `collect --tag full --kernels 5`. Confirm the row counts per reciter and mode.
    - Optionally ask the user to phone-verify Kaggle, which gives internet and makes the in-kernel Octave pass possible.
-2. **Full Husary run.** Run `python research_agency_lab/compute_bridge/kaggle_bridge.py launch --tag husary-all --reciters Husary_128kbps Husary_Muallim_128kbps --verses all --modes studio --kernels 5 --procs 4`. Add `--octave` only if the kernels have internet.
+2. **Full run: already launched** (see Current state). Anything missing can be relaunched with `--only K`.
    - About 12.5k rows; each kernel stops cleanly at 11.5 h.
    - Collect with `collect --tag husary-all --kernels 5`.
-3. **Peers and imams.**
-   - After step 2, run peers on the full Qur'an: `Minshawy_Murattal_128kbps Hudhaify_128kbps Abdul_Basit_Murattal_192kbps Alafasy_128kbps`, tag `peers-all`.
-   - Run the imams in both modes on the strategic set plus a stratified ~1000-ayah sample, tag `imams`: `Yasser_Ad-Dussary_128kbps Nasser_Alqatami_128kbps Saood_ash-Shuraym_128kbps Abdurrahmaan_As-Sudais_192kbps Abdullaah_3awwaad_Al-Juhaynee_128kbps`, with `--modes studio taraweeh_adapted`.
-   - Tablaway, Ayyoub, Budair, Matroud and Muaiqly aren't in Quran-MD. Run them on the VM from EveryAyah (`benchmarks/run_benchmark.py --reciters ...`, strategic set).
+3. **Reciters outside Quran-MD.** The Quran-MD peers and imams are already in the `full` run. Tablaway, Ayyoub, Budair, Matroud and Muaiqly aren't in Quran-MD: run them on the VM from EveryAyah (`benchmarks/run_benchmark.py --reciters ... --modes studio taraweeh_adapted`, strategic set).
 4. **Calibrate and discover in Julia.**
    - `julia --project=research_agency_lab/substrate_library/julia research_agency_lab/substrate_library/julia/calibrate.jl app/data/calibration.json benchmarks/results/kaggle/*/k*_runs_*.jsonl <local rows>`
    - `discover.jl research_agency_lab/experiments/discovery_full.json <same rows>`, which gives the tempo ODE per surah and the duration law per reciter.

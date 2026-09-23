@@ -101,6 +101,8 @@ def launch(args: argparse.Namespace) -> None:
     user = username()
     total = args.kernels * args.procs
     for k in range(args.kernels):
+        if args.only is not None and k not in args.only:
+            continue
         with tempfile.TemporaryDirectory() as tmp:
             cfg = {"reciters": args.reciters, "verses": args.verses, "modes": args.modes, "procs": args.procs,
                    "shard_base": k * args.procs, "shard_total": total, "octave": args.octave, "tag": args.tag,
@@ -159,6 +161,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--hours", type=float, default=11.5, help="stop cleanly before Kaggle's 12 h limit")
     p.add_argument("--octave", action="store_true")
     p.add_argument("--gpu", action="store_true")
+    p.add_argument("--only", type=int, nargs="*", default=None,
+                   help="(re)launch only these kernel indices, keeping the full shard layout")
     for name in ("status", "collect"):
         p = sub.add_parser(name)
         p.add_argument("--tag", required=True)

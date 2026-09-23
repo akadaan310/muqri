@@ -78,6 +78,7 @@ Useful options:
 | `--no-stop` | The reciter continues into the next ayah (no waqf rules at the end) |
 | `--include-alignment` | Add per-letter timings to the JSON |
 | `--index-dir DIR` | Reciter index location (default `index/`) |
+| `--style-weight W` | Weight of style vs. timbre in reciter matching (default 0.6 per spec; 0 = timbre only) |
 | `--denoise auto\|always\|never` | Spectral-subtraction denoising (auto when SNR < 15 dB) |
 
 Other commands:
@@ -115,12 +116,16 @@ python datasets/index_reciters.py           # (re)build the reciter index from E
   "reciter_profile": {"style_vector": {"tempo_harakat_per_min": 181.4, "madd_stretch_bias": 1.03}},
   "reciter_similarity_match": {
     "top_matches": [
-      {"reciter_name": "Husary", "style_similarity_pct": 94.2, "timbre_similarity_pct": 71.0,
-       "matched_traits": ["Measured Murattal tempo", "Precise Madd timing"]}
-    ]
+      {"reciter_name": "Husary", "reciter_id": "Husary_128kbps", "combined_similarity_pct": 58.0,
+       "style_similarity_pct": 35.4, "timbre_similarity_pct": 58.0, "matched_traits": ["Wide melodic range"]}
+    ],
+    "index_size": 44,
+    "style_weight": 0.0
   }
 }
 ```
+
+(The match block is real output for Husary's held-out recording of 1:7 with `--style-weight 0`.)
 
 Statuses: `PASS`, `WARNING` (close to the target), `FAIL`, and `SKIPPED` (the analyzer could not
 measure the rule reliably). Skipped rules are excluded from the score.
@@ -185,8 +190,9 @@ and any letter next to a heavy one.
 `index/reciters_faiss.index` stores one 132-d vector per reciter (timbre ⊕ raw style) in a FAISS
 `IndexFlatIP`. `index/reciters_meta.json` holds names, the embedding back-end and the style
 statistics. The shipped index covers every distinct Hafs reciter in the EveryAyah catalogue,
-built from Al-Ikhlas and Al-Falaq with CTC alignment and ECAPA timbre. EveryAyah hosts about 45
-distinct Hafs reciters. To reach 100+, add other sources with
+built from Al-Ikhlas and Al-Falaq with CTC alignment and ECAPA timbre: **44 reciters**
+(Ibrahim Akhdar was skipped because EveryAyah's MP3s for him failed to decode). EveryAyah hosts
+about 45 distinct Hafs reciters. To reach 100+, add other sources with
 `--extra-catalog my_sources.json`:
 
 ```json
@@ -209,7 +215,7 @@ Use `"unit_index"` to address the parser's internal unit numbering directly. `ma
 ## Tests
 
 ```bash
-pytest                # 51 tests: parser, madd/tempo, qalqalah, ghunnah, tafkheem, FAISS, aligner, audio, CLI, API
+pytest                # 52 tests: parser, madd/tempo, qalqalah, ghunnah, tafkheem, FAISS, aligner, audio, CLI, API
 ```
 
 The DSP tests use Klatt-style source-filter synthesis (`tests/synth.py`) with known formants,
@@ -233,9 +239,12 @@ Known limitations:
 * **The CTC model** was trained on word-level audio; its card warns about full ayahs. Forced
   alignment copes well because the target text is known, but boundaries can drift by a frame or
   two (20 ms).
-* **Style features vary from ayah to ayah.** Tempo in particular depends on the passage, so the
-  style half of the reciter match is a *style* comparison, not speaker identification. Timbre is
-  the stable identity signal.
+* **Style features vary from ayah to ayah.** On 24 held-out recordings (8 reciters × Al-Fatiha
+  5–7, none of them in the index), timbre alone ranked the true reciter first 92 % of the time
+  (top-3: 96 %). With the spec's `0.6·style + 0.4·timbre` weighting that fell to 33 % (top-3:
+  50 %), because tempo and Madd bias change more between passages than between reciters. The
+  default keeps the spec's weights, which answer "whose *style* is this closest to"; use
+  `--style-weight 0` (or around 0.2) when the goal is to identify the voice.
 * **Not covered:** Madd Lazim Harfi (muqattaʿat letters), Madd Leen, Hafs's saktāt, Imalah, the
   Tayyibah 2-count Munfasil, and Tafkheem on letters carrying kasrah. The formant thresholds are
   set from phonetic literature and checked on a small set of recordings, not calibrated on a

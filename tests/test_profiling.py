@@ -130,3 +130,11 @@ def test_mfcc_timbre_embedding_separates_voices(make_signal) -> None:  # type: i
     high = emb.embed(make_signal(concat(vowel(0.6, (900, 2100, 3100), f0=240), vowel(0.6, (500, 2500, 3300), f0=250))))
     assert low_a.shape == (TIMBRE_DIM,)
     assert float(low_a @ low_b) > float(low_a @ high)
+
+
+def test_style_weight_zero_ranks_by_timbre(index: ReciterIndex) -> None:
+    husary, minshawi = _profiles()[0], _profiles()[1]
+    assert index.search(husary.timbre, minshawi.style, k=1, style_weight=0.0)[0].reciter_id == "husary"
+    assert index.search(husary.timbre, minshawi.style, k=1, style_weight=1.0)[0].reciter_id == "minshawi"
+    with pytest.raises(ProfileError):
+        index.search(husary.timbre, minshawi.style, style_weight=1.5)

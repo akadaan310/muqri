@@ -1,0 +1,553 @@
+{
+  "format": "qaari-eval-reciter-index/1",
+  "backend": "ecapa-voxceleb-proj128-v1",
+  "profile_dim": 132,
+  "style_fields": [
+    "tempo_harakat_per_min",
+    "madd_stretch_bias",
+    "pitch_range_semitones",
+    "nasal_resonance_db"
+  ],
+  "style_mean": [
+    254.6281887508325,
+    1.0926814302164705,
+    2.6824599383504393,
+    16.867640715791264
+  ],
+  "style_std": [
+    52.945580842065766,
+    0.22603042514489502,
+    0.6357854696853652,
+    6.679626455606075
+  ],
+  "reciters": [
+    {
+      "reciter_id": "AbdulSamad_64kbps_QuranExplorer.Com",
+      "name": "AbdulSamad",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/AbdulSamad_64kbps_QuranExplorer.Com/",
+      "style": {
+        "tempo_harakat_per_min": 154.96,
+        "madd_stretch_bias": 1.303,
+        "pitch_range_semitones": 2.308,
+        "nasal_resonance_db": 10.256
+      }
+    },
+    {
+      "reciter_id": "Abdul_Basit_Mujawwad_128kbps",
+      "name": "Abdul Basit Mujawwad",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Abdul_Basit_Mujawwad_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 170.389,
+        "madd_stretch_bias": 1.347,
+        "pitch_range_semitones": 2.509,
+        "nasal_resonance_db": 10.969
+      }
+    },
+    {
+      "reciter_id": "Abdul_Basit_Murattal_192kbps",
+      "name": "Abdul Basit Murattal",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Abdul_Basit_Murattal_192kbps/",
+      "style": {
+        "tempo_harakat_per_min": 250.198,
+        "madd_stretch_bias": 0.982,
+        "pitch_range_semitones": 2.063,
+        "nasal_resonance_db": 25.951
+      }
+    },
+    {
+      "reciter_id": "Abdullaah_3awwaad_Al-Juhaynee_128kbps",
+      "name": "Abdullaah 3awwaad Al-Juhaynee",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Abdullaah_3awwaad_Al-Juhaynee_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 421.102,
+        "madd_stretch_bias": 0.956,
+        "pitch_range_semitones": 3.644,
+        "nasal_resonance_db": 1.219
+      }
+    },
+    {
+      "reciter_id": "Abdullah_Basfar_192kbps",
+      "name": "Abdullah Basfar",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Abdullah_Basfar_192kbps/",
+      "style": {
+        "tempo_harakat_per_min": 243.147,
+        "madd_stretch_bias": 1.141,
+        "pitch_range_semitones": 3.022,
+        "nasal_resonance_db": 8.835
+      }
+    },
+    {
+      "reciter_id": "Abdullah_Matroud_128kbps",
+      "name": "Abdullah Matroud",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Abdullah_Matroud_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 386.974,
+        "madd_stretch_bias": 1.572,
+        "pitch_range_semitones": 3.506,
+        "nasal_resonance_db": 22.133
+      }
+    },
+    {
+      "reciter_id": "Abdurrahmaan_As-Sudais_192kbps",
+      "name": "Abdurrahmaan As-Sudais",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Abdurrahmaan_As-Sudais_192kbps/",
+      "style": {
+        "tempo_harakat_per_min": 250.092,
+        "madd_stretch_bias": 1.102,
+        "pitch_range_semitones": 2.4,
+        "nasal_resonance_db": 6.751
+      }
+    },
+    {
+      "reciter_id": "Abu_Bakr_Ash-Shaatree_128kbps",
+      "name": "Abu Bakr Ash-Shaatree",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Abu_Bakr_Ash-Shaatree_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 270.383,
+        "madd_stretch_bias": 0.872,
+        "pitch_range_semitones": 2.092,
+        "nasal_resonance_db": 15.884
+      }
+    },
+    {
+      "reciter_id": "Ahmed_Neana_128kbps",
+      "name": "Ahmed Neana",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Ahmed_Neana_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 236.768,
+        "madd_stretch_bias": 0.92,
+        "pitch_range_semitones": 1.935,
+        "nasal_resonance_db": 9.028
+      }
+    },
+    {
+      "reciter_id": "Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net",
+      "name": "Ahmed ibn Ali al-Ajamy",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net/",
+      "style": {
+        "tempo_harakat_per_min": 284.111,
+        "madd_stretch_bias": 0.729,
+        "pitch_range_semitones": 3.739,
+        "nasal_resonance_db": 23.374
+      }
+    },
+    {
+      "reciter_id": "Akram_AlAlaqimy_128kbps",
+      "name": "Akram Al Alaqimy",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Akram_AlAlaqimy_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 237.427,
+        "madd_stretch_bias": 1.102,
+        "pitch_range_semitones": 2.584,
+        "nasal_resonance_db": 7.882
+      }
+    },
+    {
+      "reciter_id": "Alafasy_128kbps",
+      "name": "Alafasy",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Alafasy_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 261.867,
+        "madd_stretch_bias": 1.053,
+        "pitch_range_semitones": 4.041,
+        "nasal_resonance_db": 20.077
+      }
+    },
+    {
+      "reciter_id": "Ali_Hajjaj_AlSuesy_128kbps",
+      "name": "Ali Hajjaj AlSuesy",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Ali_Hajjaj_AlSuesy_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 268.72,
+        "madd_stretch_bias": 0.877,
+        "pitch_range_semitones": 2.072,
+        "nasal_resonance_db": 15.721
+      }
+    },
+    {
+      "reciter_id": "Ali_Jaber_64kbps",
+      "name": "Ali Jaber",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Ali_Jaber_64kbps/",
+      "style": {
+        "tempo_harakat_per_min": 240.105,
+        "madd_stretch_bias": 1.004,
+        "pitch_range_semitones": 2.17,
+        "nasal_resonance_db": 18.494
+      }
+    },
+    {
+      "reciter_id": "Ayman_Sowaid_64kbps",
+      "name": "Ayman Sowaid",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Ayman_Sowaid_64kbps/",
+      "style": {
+        "tempo_harakat_per_min": 216.546,
+        "madd_stretch_bias": 1.129,
+        "pitch_range_semitones": 2.322,
+        "nasal_resonance_db": 23.236
+      }
+    },
+    {
+      "reciter_id": "Fares_Abbad_64kbps",
+      "name": "Fares Abbad",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Fares_Abbad_64kbps/",
+      "style": {
+        "tempo_harakat_per_min": 259.682,
+        "madd_stretch_bias": 0.899,
+        "pitch_range_semitones": 3.432,
+        "nasal_resonance_db": 7.908
+      }
+    },
+    {
+      "reciter_id": "Ghamadi_40kbps",
+      "name": "Ghamadi",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Ghamadi_40kbps/",
+      "style": {
+        "tempo_harakat_per_min": 281.303,
+        "madd_stretch_bias": 0.974,
+        "pitch_range_semitones": 2.85,
+        "nasal_resonance_db": 18.866
+      }
+    },
+    {
+      "reciter_id": "Hani_Rifai_192kbps",
+      "name": "Hani Rifai",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Hani_Rifai_192kbps/",
+      "style": {
+        "tempo_harakat_per_min": 255.848,
+        "madd_stretch_bias": 1.077,
+        "pitch_range_semitones": 3.558,
+        "nasal_resonance_db": 23.202
+      }
+    },
+    {
+      "reciter_id": "Hudhaify_128kbps",
+      "name": "Hudhaify",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Hudhaify_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 280.251,
+        "madd_stretch_bias": 1.058,
+        "pitch_range_semitones": 1.967,
+        "nasal_resonance_db": 27.576
+      }
+    },
+    {
+      "reciter_id": "Husary_128kbps",
+      "name": "Husary",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Husary_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 162.976,
+        "madd_stretch_bias": 1.269,
+        "pitch_range_semitones": 3.018,
+        "nasal_resonance_db": 9.503
+      }
+    },
+    {
+      "reciter_id": "Husary_128kbps_Mujawwad",
+      "name": "Husary Mujawwad",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Husary_128kbps_Mujawwad/",
+      "style": {
+        "tempo_harakat_per_min": 145.718,
+        "madd_stretch_bias": 1.205,
+        "pitch_range_semitones": 2.109,
+        "nasal_resonance_db": 5.744
+      }
+    },
+    {
+      "reciter_id": "Husary_Muallim_128kbps",
+      "name": "Husary (Muallim)",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Husary_Muallim_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 261.734,
+        "madd_stretch_bias": 1.219,
+        "pitch_range_semitones": 2.494,
+        "nasal_resonance_db": 9.195
+      }
+    },
+    {
+      "reciter_id": "Karim_Mansoori_40kbps",
+      "name": "Karim Mansoori (Iran)",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Karim_Mansoori_40kbps/",
+      "style": {
+        "tempo_harakat_per_min": 185.822,
+        "madd_stretch_bias": 1.423,
+        "pitch_range_semitones": 3.006,
+        "nasal_resonance_db": 12.666
+      }
+    },
+    {
+      "reciter_id": "Khaalid_Abdullaah_al-Qahtaanee_192kbps",
+      "name": "Khalid Abdullah al-Qahtanee",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Khaalid_Abdullaah_al-Qahtaanee_192kbps/",
+      "style": {
+        "tempo_harakat_per_min": 279.217,
+        "madd_stretch_bias": 0.934,
+        "pitch_range_semitones": 2.102,
+        "nasal_resonance_db": 21.201
+      }
+    },
+    {
+      "reciter_id": "MaherAlMuaiqly128kbps",
+      "name": "Maher Al Muaiqly",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/MaherAlMuaiqly128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 331.522,
+        "madd_stretch_bias": 0.984,
+        "pitch_range_semitones": 1.528,
+        "nasal_resonance_db": 25.402
+      }
+    },
+    {
+      "reciter_id": "Menshawi_32kbps",
+      "name": "Menshawi",
+      "n_segments": 6,
+      "source": "https://everyayah.com/data/Menshawi_32kbps/",
+      "style": {
+        "tempo_harakat_per_min": 264.675,
+        "madd_stretch_bias": 2.138,
+        "pitch_range_semitones": 2.526,
+        "nasal_resonance_db": 22.239
+      }
+    },
+    {
+      "reciter_id": "Minshawy_Mujawwad_192kbps",
+      "name": "Minshawy Mujawwad",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Minshawy_Mujawwad_192kbps/",
+      "style": {
+        "tempo_harakat_per_min": 181.938,
+        "madd_stretch_bias": 1.136,
+        "pitch_range_semitones": 3.366,
+        "nasal_resonance_db": 8.189
+      }
+    },
+    {
+      "reciter_id": "Minshawy_Murattal_128kbps",
+      "name": "Minshawy Murattal",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Minshawy_Murattal_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 239.2,
+        "madd_stretch_bias": 0.957,
+        "pitch_range_semitones": 1.835,
+        "nasal_resonance_db": 18.769
+      }
+    },
+    {
+      "reciter_id": "Mohammad_al_Tablaway_128kbps",
+      "name": "Mohammad al Tablaway",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Mohammad_al_Tablaway_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 193.058,
+        "madd_stretch_bias": 1.307,
+        "pitch_range_semitones": 3.404,
+        "nasal_resonance_db": 14.592
+      }
+    },
+    {
+      "reciter_id": "Muhammad_AbdulKareem_128kbps",
+      "name": "Muhammad AbdulKareem",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Muhammad_AbdulKareem_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 261.427,
+        "madd_stretch_bias": 1.027,
+        "pitch_range_semitones": 3.774,
+        "nasal_resonance_db": 23.287
+      }
+    },
+    {
+      "reciter_id": "Muhammad_Ayyoub_128kbps",
+      "name": "Muhammad Ayyoub",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Muhammad_Ayyoub_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 256.355,
+        "madd_stretch_bias": 1.048,
+        "pitch_range_semitones": 2.778,
+        "nasal_resonance_db": 27.418
+      }
+    },
+    {
+      "reciter_id": "Muhammad_Jibreel_128kbps",
+      "name": "Muhammad Jibreel",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Muhammad_Jibreel_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 262.513,
+        "madd_stretch_bias": 1.084,
+        "pitch_range_semitones": 2.948,
+        "nasal_resonance_db": 15.869
+      }
+    },
+    {
+      "reciter_id": "Muhsin_Al_Qasim_192kbps",
+      "name": "Muhsin Al Qasim",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Muhsin_Al_Qasim_192kbps/",
+      "style": {
+        "tempo_harakat_per_min": 263.369,
+        "madd_stretch_bias": 0.946,
+        "pitch_range_semitones": 2.334,
+        "nasal_resonance_db": 19.225
+      }
+    },
+    {
+      "reciter_id": "Mustafa_Ismail_48kbps",
+      "name": "Mustafa Ismail",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Mustafa_Ismail_48kbps/",
+      "style": {
+        "tempo_harakat_per_min": 217.29,
+        "madd_stretch_bias": 1.15,
+        "pitch_range_semitones": 3.713,
+        "nasal_resonance_db": 22.557
+      }
+    },
+    {
+      "reciter_id": "Nasser_Alqatami_128kbps",
+      "name": "Nasser Alqatami",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Nasser_Alqatami_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 335.175,
+        "madd_stretch_bias": 1.224,
+        "pitch_range_semitones": 2.469,
+        "nasal_resonance_db": 16.773
+      }
+    },
+    {
+      "reciter_id": "Sahl_Yassin_128kbps",
+      "name": "Sahl Yassin",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Sahl_Yassin_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 272.729,
+        "madd_stretch_bias": 0.985,
+        "pitch_range_semitones": 1.689,
+        "nasal_resonance_db": 17.656
+      }
+    },
+    {
+      "reciter_id": "Salaah_AbdulRahman_Bukhatir_128kbps",
+      "name": "Salaah AbdulRahman Bukhatir",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Salaah_AbdulRahman_Bukhatir_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 254.924,
+        "madd_stretch_bias": 1.092,
+        "pitch_range_semitones": 2.626,
+        "nasal_resonance_db": 22.56
+      }
+    },
+    {
+      "reciter_id": "Salah_Al_Budair_128kbps",
+      "name": "Salah Al Budair",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Salah_Al_Budair_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 242.825,
+        "madd_stretch_bias": 0.98,
+        "pitch_range_semitones": 2.364,
+        "nasal_resonance_db": 18.285
+      }
+    },
+    {
+      "reciter_id": "Saood_ash-Shuraym_128kbps",
+      "name": "Saood bin Ibraaheem Ash-Shuraym",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Saood_ash-Shuraym_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 300.507,
+        "madd_stretch_bias": 0.855,
+        "pitch_range_semitones": 2.649,
+        "nasal_resonance_db": 14.055
+      }
+    },
+    {
+      "reciter_id": "Yaser_Salamah_128kbps",
+      "name": "Yaser Salamah",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Yaser_Salamah_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 284.242,
+        "madd_stretch_bias": 1.12,
+        "pitch_range_semitones": 3.56,
+        "nasal_resonance_db": 26.87
+      }
+    },
+    {
+      "reciter_id": "Yasser_Ad-Dussary_128kbps",
+      "name": "Yasser Ad-Dussary",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/Yasser_Ad-Dussary_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 296.288,
+        "madd_stretch_bias": 1.006,
+        "pitch_range_semitones": 2.383,
+        "nasal_resonance_db": 12.763
+      }
+    },
+    {
+      "reciter_id": "aziz_alili_128kbps",
+      "name": "Aziz Alili",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/aziz_alili_128kbps/",
+      "style": {
+        "tempo_harakat_per_min": 249.017,
+        "madd_stretch_bias": 0.925,
+        "pitch_range_semitones": 2.703,
+        "nasal_resonance_db": 18.011
+      }
+    },
+    {
+      "reciter_id": "khalefa_al_tunaiji_64kbps",
+      "name": "Khalefa Al-Tunaiji",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/khalefa_al_tunaiji_64kbps/",
+      "style": {
+        "tempo_harakat_per_min": 272.522,
+        "madd_stretch_bias": 0.968,
+        "pitch_range_semitones": 2.382,
+        "nasal_resonance_db": 25.326
+      }
+    },
+    {
+      "reciter_id": "mahmoud_ali_al_banna_32kbps",
+      "name": "Mahmoud Ali Al-Banna",
+      "n_segments": 9,
+      "source": "https://everyayah.com/data/mahmoud_ali_al_banna_32kbps/",
+      "style": {
+        "tempo_harakat_per_min": 218.727,
+        "madd_stretch_bias": 1.002,
+        "pitch_range_semitones": 2.051,
+        "nasal_resonance_db": 16.654
+      }
+    }
+  ]
+}

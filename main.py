@@ -41,6 +41,8 @@ def _build_parser() -> argparse.ArgumentParser:
     a.add_argument("--alignment-json", help="pre-computed letter alignment (see README)")
     a.add_argument("--index-dir", default="index", help="directory holding the reciter FAISS index")
     a.add_argument("--top-k", type=int, default=3)
+    a.add_argument("--style-weight", type=float, default=0.6,
+                   help="weight of Tajweed style vs. timbre in reciter matching (0 = timbre only)")
     a.add_argument("--timbre-backend", choices=["auto", "ecapa", "mfcc"], default="auto")
     a.add_argument("--no-stop", action="store_true", help="the recitation continues past the ayah end (wasl)")
     a.add_argument("--denoise", choices=["auto", "always", "never"], default="auto")
@@ -98,7 +100,8 @@ def render_text_report(report: dict[str, Any]) -> str:
     lines.append("─" * 72)
     match = report["reciter_similarity_match"]
     if match.get("top_matches"):
-        lines.append(" Closest reciters (S = 0.6·style + 0.4·timbre):")
+        w = match.get("style_weight", 0.6)
+        lines.append(f" Closest reciters (S = {w:g}·style + {1 - w:g}·timbre):")
         for m in match["top_matches"]:
             lines.append(
                 f"   • {m['reciter_name']:<36} style {m['style_similarity_pct']:5.1f}%  "
@@ -117,7 +120,7 @@ def render_text_report(report: dict[str, Any]) -> str:
 def cmd_analyze(args: argparse.Namespace) -> int:
     opts = AnalysisOptions(
         aligner=args.aligner, aligner_model=args.aligner_model, alignment_json=args.alignment_json,
-        index_dir=args.index_dir, top_k=args.top_k, timbre_backend=args.timbre_backend,
+        index_dir=args.index_dir, top_k=args.top_k, style_weight=args.style_weight, timbre_backend=args.timbre_backend,
         stop_at_end=not args.no_stop, denoise=args.denoise, include_alignment=args.include_alignment,
         allow_network=not args.offline,
     )

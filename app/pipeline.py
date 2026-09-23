@@ -34,6 +34,7 @@ class AnalysisOptions:
     alignment_json: str | Path | None = None
     index_dir: str | Path | None = "index"
     top_k: int = 3
+    style_weight: float = 0.6
     timbre_backend: str = "auto"
     stop_at_end: bool = True
     denoise: str = "auto"
@@ -137,8 +138,9 @@ class QaariEvaluator:
                 matches_block = {"top_matches": [], "note": (
                     f"Index built with {index.backend!r} embeddings but query used {backend!r}")}
             else:
-                matches = index.search(timbre, style, k=self.options.top_k)
-                matches_block = {"top_matches": [m.to_dict() for m in matches], "index_size": len(index)}
+                matches = index.search(timbre, style, k=self.options.top_k, style_weight=self.options.style_weight)
+                matches_block = {"top_matches": [m.to_dict() for m in matches], "index_size": len(index),
+                                 "style_weight": self.options.style_weight}
         except ProfileError as exc:
             matches_block = {"top_matches": [], "note": str(exc)}
 

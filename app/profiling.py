@@ -334,7 +334,11 @@ class ReciterIndex:
         self._style_index.add(self._style_z)
 
     # -- search ---------------------------------------------------------------------------
-    def search(self, timbre: FloatArray, style: StyleVector, k: int = 3) -> list[Match]:
+    def search(self, timbre: FloatArray, style: StyleVector, k: int = 3,
+               style_weight: float = STYLE_WEIGHT) -> list[Match]:
+        """Rank reciters by ``style_weight·S_style + (1 − style_weight)·S_timbre``."""
+        if not 0.0 <= style_weight <= 1.0:
+            raise ProfileError(f"style_weight must be in [0, 1], got {style_weight}")
         if self._timbre_index is None:
             self.build()
         assert self._timbre_index is not None and self._style_index is not None and self._style_z is not None
@@ -362,7 +366,7 @@ class ReciterIndex:
             ref_z = self._style_z[i].astype(np.float64)
             dist = float(np.linalg.norm((q_z - ref_z)[mask])) if mask.any() else float("inf")
             s_sim = math.exp(-(dist**2) / (2 * STYLE_KERNEL_SIGMA**2)) if math.isfinite(dist) else 0.0
-            combined = STYLE_WEIGHT * s_sim + TIMBRE_WEIGHT * t_sim
+            combined = style_weight * s_sim + (1.0 - style_weight) * t_sim
             results.append(Match(prof.reciter_id, prof.name, combined, s_sim, t_sim,
                                  describe_traits(q_z, ref_z, t_sim, mask)))
         results.sort(key=lambda m: m.combined_similarity, reverse=True)

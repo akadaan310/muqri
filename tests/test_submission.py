@@ -79,8 +79,16 @@ def test_rules_are_named_with_what_they_require(passage, engine) -> None:  # typ
     durational = [v for v in rules if v["mechanism"] == "durational" and v["expected_counts"]]
     assert durational, "a verse should contain at least one length-governed rule"
     for v in durational:
-        # the absolute count scale is not calibrated, so these must be flagged, never silently shipped
-        assert v.get("confidence") == "unvalidated"
+        # the scale is fitted, so a length verdict is stated in tajweed counts against what the rule
+        # requires -- "expected 2, given 1.71" -- and says how far it can be trusted
+        assert v["evidence"]["given_counts"] is not None
+        assert v["evidence"]["expected"] == v["expected_counts"]
+        assert v.get("confidence") in {"validated", "unvalidated"}
+    # the six-count level is the only one the fit does not recover, so it alone stays flagged
+    six = [v for v in durational if sum(v["expected_counts"]) / 2 == 6.0]
+    assert all(v["confidence"] == "unvalidated" for v in six)
+    common = [v for v in durational if sum(v["expected_counts"]) / 2 in (1.5, 2.0, 4.0, 4.5)]
+    assert common and all(v["confidence"] == "validated" for v in common)
 
 
 def test_passage_segmentation_does_not_drift(passage, engine) -> None:  # type: ignore[no-untyped-def]

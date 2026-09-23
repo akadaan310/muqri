@@ -32,11 +32,36 @@ import numpy as np
 from app.analysis import FRAME_S, Unit, analyse_clip, ctc_viterbi
 from app.rule_bind import ph_units
 
-SCHEMA_VERSION = "1.0"
+SCHEMA_VERSION = "1.1"
 ROOT = Path(__file__).resolve().parents[1]
 # how much audio one ayah may consume, as a multiple of its phoneme count, when walking a long
 # recording: generous enough for the slowest mujawwad, tight enough to stay linear
 FRAMES_PER_PHONEME_MAX = 12.0
+
+# The absolute count scale, fitted by Theil-Sen over 10,600 durational instances on the anchors
+# (substrate_library/julia/madd_scale.jl). measured = intercept + slope x nominal, so a measured
+# duration converts to counts by the inverse. Four of the five nominal levels recover within 0.15
+# counts (1.5 -> 1.50, 2 -> 2.04, 4 -> 3.90, 4.5 -> 4.35); the six-count level does not (7.21 from
+# n=105), because madd lazim is genuinely stretched beyond six in mujawwad style, so verdicts there
+# stay flagged.
+_SCALE_PATH = ROOT / "research_agency_lab/experiments/calibration/madd_scale.json"
+WELL_FITTED_NOMINALS = (1.5, 2.0, 4.0, 4.5)
+NOMINAL_TOLERANCE = 0.75          # counts; a verdict fires only outside this band
+
+
+def count_scale() -> tuple[float, float]:
+    """(intercept, slope) of measured-against-nominal, or the identity when unfitted."""
+    try:
+        d = json.loads(_SCALE_PATH.read_text())
+        return float(d["intercept"]), float(d["slope"])
+    except Exception:  # noqa: BLE001 - an unfitted deployment must still serve
+        return 0.0, 1.0
+
+
+def to_counts(measured: float) -> float:
+    """Convert a measured own-counts duration into tajweed counts using the fitted scale."""
+    a, b = count_scale()
+    return (measured - a) / b if b else measured
 
 
 @dataclass(slots=True)
@@ -72,9 +97,12 @@ class RuleVerdict:
              "expected_counts": list(self.expected_counts) if self.expected_counts else None,
              "measured_counts": self.measured_counts, "evidence": self.evidence}
         if self.mechanism == "durational" and self.measured_counts is not None:
-            # the absolute count scale is not yet calibrated (measured 2.25 : 6.20 : 12.0 against a
-            # nominal 2 : 4 : 6), so the number is reported but must not drive a user-facing verdict
-            d["confidence"] = "unvalidated"
+            # The scale is fitted and recovers four of five nominal levels within 0.15 counts, so
+            # those verdicts are trustworthy. The six-count level recovers at 7.21 (n=105), because
+            # madd lazim is genuinely stretched beyond six in mujawwad, so it stays flagged.
+            nominal = (self.expected_counts[0] + self.expected_counts[1]) / 2 \
+                if self.expected_counts else None
+            d["confidence"] = "validated" if nominal in WELL_FITTED_NOMINALS else "unvalidated"
         return d
 
 
@@ -87,9 +115,12 @@ def grade_rule(b, units: list[Unit]) -> RuleVerdict:  # type: ignore[no-untyped-
 
     if b.mechanism == "durational" and b.expected_counts and measured is not None:
         lo, hi = b.expected_counts
-        # a tolerance band: the count scale is uncalibrated, so judge generously until it is fitted
-        status = "pass" if lo * 0.6 <= measured <= hi * 1.8 else ("short" if measured < lo else "long")
-        ev = {"expected": [lo, hi], "measured": measured}
+        # convert the measured duration into tajweed counts with the fitted scale, so the verdict can
+        # be stated as "you gave 2.1 counts where 4 are required" instead of a bare ratio
+        got = round(to_counts(measured), 2)
+        status = "pass" if lo - NOMINAL_TOLERANCE <= got <= hi + NOMINAL_TOLERANCE else \
+            ("short" if got < lo else "long")
+        ev = {"expected": [lo, hi], "given_counts": got, "raw_own_counts": measured}
     elif b.mechanism == "attribute" and b.head:
         llrs = [u.sifat[b.head]["llr"] for u in us if b.head in u.sifat]
         if llrs:

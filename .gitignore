@@ -10,3 +10,15 @@ analysis_report.json
 pretrained_models/
 *.wav
 *.mp3
+
+# Large generated artifacts — regenerable, never committed
+# muaalem posterior dumps: raw float32 per clip (modal_T300 alone is 1.8 GB)
+research_agency_lab/experiments/qaari_keys/dump_*/
+research_agency_lab/experiments/qaari_keys/modal_*/
+# ONNX exports of the 605 M-param acoustic model (2.9 GB)
+research_agency_lab/experiments/sdk/
+*.onnx
+*.onnx.data
+*.f32
+# per-shard benchmark rows from cloud runs (514 MB)
+benchmarks/results/modal/

@@ -17,14 +17,17 @@ import numpy.typing as npt
 from app.acoustic.features import AcousticContext, highband_flux, short_time_rms
 from app.models import Alignment, RuleDiagnostic, RuleInstance, Status
 
-CLOSURE_DROP_DB = 12.0
-MIN_CLOSURE_MS = 20.0
+CLOSURE_DROP_DB = 8.0  # voiced stops in reverberant rooms keep a voice bar + reverb tail
+MIN_CLOSURE_MS = 15.0
 SEARCH_AFTER_RELEASE_MS = 60.0
 # The burst often precedes the return of voicing (which is where RMS says the closure ends).
 SEARCH_BEFORE_RELEASE_MS = 50.0
 FLUX_RATIO_MIN = 3.0
 RISE_MIN_DB = 6.0
-RISE_STRONG_DB = {"sughra": 8.0, "kubra": 12.0}
+# Weaker evidence of a release (e.g. masked by room reverb) is reported as a WARNING, not a FAIL.
+PARTIAL_FLUX_RATIO = 2.0
+PARTIAL_RISE_DB = 4.0
+RISE_STRONG_DB = {"sughra": 8.0, "kubra": 10.0}
 PRE_PAD_S = 0.15  # long enough to include the preceding vowel as level reference
 POST_PAD_S = 0.08
 
@@ -72,8 +75,6 @@ def detect_release_burst(x: npt.NDArray[np.floating], sr: int, *, letter_start_s
     ref = float(np.percentile(db, 98))
     closed = db < ref - CLOSURE_DROP_DB
     runs = [(a, b) for a, b in _runs(closed) if (b - a) * hop_s * 1000 >= MIN_CLOSURE_MS]
-    # Ignore leading/trailing silence that touches the segment edges without a release after it.
-    runs = [(a, b) for a, b in runs if b < len(db) - 5]
     if letter_end_s is None:
         letter_end_s = len(x) / sr
     lo_i, hi_i = int(letter_start_s / hop_s), int(letter_end_s / hop_s)
@@ -94,24 +95,58 @@ def detect_release_burst(x: npt.NDArray[np.floating], sr: int, *, letter_start_s
 
 def _release_after(db: npt.NDArray[np.float64], flux: npt.NDArray[np.float64], a: int, b: int, hop_s: float,
                    global_med: float) -> BurstResult:
-    closure_ms = (b - a) * hop_s * 1000
-    closure_level = float(np.median(db[a:b]))  # robust to the fade-in/out edges of the run
-    # Align the flux frames (8 ms) with the RMS frames (5 ms) by their centres.
-    shift = 2
-    s0 = max(a + shift, b - int(SEARCH_BEFORE_RELEASE_MS) + shift)
-    s1 = min(len(flux), b + int(SEARCH_AFTER_RELEASE_MS) + shift)
+    """Measure the release of the occlusion that starts at frame ``a``.
+
+    A weak post-release echo can stay below the closure threshold, merging the occlusion, the
+    release and the following pause into one low-energy run ``[a, b)``. The occlusion level is
+    therefore taken from the start of the run, and the release is searched both inside the run
+    and just after it.
+    """
+    min_closure = int(MIN_CLOSURE_MS)
+    shift = 2  # flux frames (8 ms) vs RMS frames (5 ms): align centres
+    s0 = min(len(flux) - 1, a + min_closure + shift)
+    s1 = min(len(flux), min(b, a + 250) + int(SEARCH_AFTER_RELEASE_MS) + shift)
     if s1 <= s0:
-        return BurstResult(present=False, closure_found=True, closure_ms=closure_ms, release_s=b * hop_s)
-    peak_i = int(np.argmax(flux[s0:s1])) + s0
-    inner = flux[a + shift: b + shift]
+        return BurstResult(present=False, closure_found=True, closure_ms=(b - a) * hop_s * 1000,
+                           release_s=b * hop_s)
+    # Score the strongest few flux peaks: inside a long run the largest spike may be noise.
+    window = flux[s0:s1]
+    order = np.argsort(window)[::-1]
+    peaks: list[int] = []
+    for k in order:
+        if all(abs(int(k) - p) > 8 for p in peaks):
+            peaks.append(int(k))
+        if len(peaks) == 5:
+            break
+    best: BurstResult | None = None
+    for k in peaks:
+        res = _measure_release(db, flux, a, b, k + s0, shift, hop_s, global_med)
+        if best is None or (res.present, res.rise_db * min(res.flux_ratio, 20.0)) > (
+            best.present, best.rise_db * min(best.flux_ratio, 20.0)
+        ):
+            best = res
+    assert best is not None
+    return best
+
+
+def _measure_release(db: npt.NDArray[np.float64], flux: npt.NDArray[np.float64], a: int, b: int, peak_i: int,
+                     shift: int, hop_s: float, global_med: float) -> BurstResult:
+    release = peak_i - shift
+    occl = db[a: max(a + 5, release - 3)]
+    closure_level = float(np.percentile(occl, 20))  # the deepest part of the occlusion
+    inner = flux[a + shift: max(a + shift + 1, release - 3 + shift)]
     baseline = float(np.percentile(inner, 25)) if inner.size >= 5 else global_med
     flux_ratio = float(flux[peak_i] / (max(baseline, global_med * 0.25) + 1e-9))
-    e1 = min(len(db), b + int(SEARCH_AFTER_RELEASE_MS))
-    rise = float(np.max(db[b:e1]) - closure_level) if e1 > b else 0.0
+    lo = max(a, release - 5)
+    hi = min(len(db), release + int(SEARCH_AFTER_RELEASE_MS))
+    rise = float(np.max(db[lo:hi]) - closure_level) if hi > lo else 0.0
+    # The acoustic release is where energy returns: the end of the run if it comes soon after the
+    # burst, otherwise the burst itself.
+    end = b if 0 <= b - release <= SEARCH_BEFORE_RELEASE_MS else release
     return BurstResult(
         present=flux_ratio >= FLUX_RATIO_MIN and rise >= RISE_MIN_DB, closure_found=True,
-        closure_ms=closure_ms, release_s=b * hop_s,
-        burst_latency_ms=float((peak_i - shift - b) * hop_s * 1000), flux_ratio=flux_ratio, rise_db=rise,
+        closure_ms=max(0, release - a) * hop_s * 1000, release_s=end * hop_s,
+        burst_latency_ms=float((release - end) * hop_s * 1000), flux_ratio=flux_ratio, rise_db=rise,
     )
 
 
@@ -140,6 +175,12 @@ def analyze_qalqalah(rule: RuleInstance, alignment: Alignment, ctx: AcousticCont
         advice = ("stopping on it calls for a stronger (Kubra) bounce." if kind == "kubra"
                   else "give it a crisper bounce.")
         feedback = f"Release on {letter_name} ({letter}) is present but faint ({result.rise_db:.0f} dB rise); {advice}"
+    elif result.closure_found and result.flux_ratio >= PARTIAL_FLUX_RATIO and result.rise_db >= PARTIAL_RISE_DB:
+        status, score = Status.WARNING, 0.4
+        feedback = (
+            f"Only a weak release was detected on {letter_name} ({letter}) ({result.rise_db:.0f} dB rise); "
+            "make the Qalqalah bounce clearly audible."
+        )
     elif not result.closure_found:
         status, score = Status.FAIL, 0.1
         feedback = (

@@ -5,7 +5,7 @@ from __future__ import annotations
 from app.acoustic.features import AcousticContext
 from app.acoustic.qalqalah import analyze_qalqalah, detect_release_burst
 from app.models import AlignedUnit, Alignment, RuleInstance, RuleType, Status
-from tests.synth import SR, burst, concat, silence, vowel
+from tests.synth import SR, burst, concat, silence, voice_bar, vowel
 
 
 def plosive(with_burst: bool, burst_amp: float = 0.4):  # type: ignore[no-untyped-def]
@@ -50,3 +50,12 @@ def test_analyze_qalqalah_statuses(make_signal) -> None:  # type: ignore[no-unty
     assert good.feedback == "Clear acoustic release burst detected on letter Qaf (ق)."
     bad = _diag(plosive(False), make_signal)
     assert bad.status is Status.FAIL
+
+
+def test_faint_release_in_reverberant_closure_is_a_warning(make_signal) -> None:  # type: ignore[no-untyped-def]
+    # The occlusion keeps a voice bar (as in reverberant rooms) and the echo is weak.
+    faint = concat(vowel(0.15), voice_bar(0.05, amp=0.1), burst(amp=0.03),
+                   vowel(0.05, (500, 1500, 2500), amp=0.1), silence(0.1))
+    diag = _diag(faint, make_signal)
+    assert diag.status is Status.WARNING
+    assert 6 <= diag.metrics["energy_rise_db"] < 10

@@ -80,3 +80,10 @@ def burst(duration_s: float = 0.012, amp: float = 0.4, seed: int = 1) -> np.ndar
 
 def concat(*parts: np.ndarray) -> np.ndarray:
     return np.concatenate([np.asarray(p, dtype=np.float64) for p in parts]).astype(np.float32)
+
+
+def voice_bar(duration_s: float, amp: float = 0.05, f0: float = 120.0, seed: int = 4) -> np.ndarray:
+    """Low-frequency voicing that persists through a stop closure (no onset/offset ramps)."""
+    y = _resonator(glottal_source(duration_s, f0, seed=seed), 250, 80)
+    y = y - y.mean()
+    return y / (np.max(np.abs(y)) + 1e-9) * amp

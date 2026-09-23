@@ -157,7 +157,7 @@ differences.
 ### Qalqalah (`acoustic/qalqalah.py`)
 The detector finds the occlusion, an RMS drop of ≥ 12 dB lasting ≥ 20 ms. It then looks for a
 high-band (>1.5 kHz) spectral-flux transient and an energy rebound from 50 ms before to 60 ms
-after the release. Kubra needs a stronger rebound (≥ 12 dB) than Sughra (≥ 8 dB).
+after the release. Kubra needs a stronger rebound (≥ 10 dB) than Sughra (≥ 8 dB).
 
 ### Tafkheem / Tarqeeq (`acoustic/tafkheem.py`)
 Formants come from Praat's Burg tracker via `praat-parselmouth`, with a numpy LPC fallback. They
@@ -209,7 +209,7 @@ Use `"unit_index"` to address the parser's internal unit numbering directly. `ma
 ## Tests
 
 ```bash
-pytest                # 50 tests: parser, madd/tempo, qalqalah, ghunnah, tafkheem, FAISS, aligner, audio, CLI, API
+pytest                # 51 tests: parser, madd/tempo, qalqalah, ghunnah, tafkheem, FAISS, aligner, audio, CLI, API
 ```
 
 The DSP tests use Klatt-style source-filter synthesis (`tests/synth.py`) with known formants,

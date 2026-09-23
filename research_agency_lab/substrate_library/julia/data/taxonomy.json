@@ -1,0 +1,135 @@
+{
+ "rule_category": {
+  "madd_tabii": "madd",
+  "madd_muttasil": "madd",
+  "madd_munfasil": "madd",
+  "madd_lazim": "madd",
+  "madd_arid_lissukun": "madd",
+  "madd_leen": "madd",
+  "madd_badal": "madd",
+  "madd_iwad": "madd",
+  "madd_silah_sughra": "madd",
+  "madd_silah_kubra": "madd",
+  "izhar_halqi": "noon",
+  "ikhfa": "noon",
+  "idgham_ghunnah": "noon",
+  "idgham_no_ghunnah": "noon",
+  "iqlab": "noon",
+  "ikhfa_shafawi": "meem",
+  "idgham_shafawi": "meem",
+  "izhar_shafawi": "meem",
+  "ghunnah": "ghunnah",
+  "qalqalah": "qalqalah",
+  "idgham_mithlayn": "idgham",
+  "idgham_mutajanisayn": "idgham",
+  "idgham_mutaqaribayn": "idgham",
+  "tafkheem": "weight",
+  "tarqeeq": "weight",
+  "jawaz_wajhayn": "weight",
+  "hamzat_wasl": "wasl",
+  "sakt": "wasl",
+  "hams": "sifaat",
+  "jahr": "sifaat",
+  "shiddah": "sifaat",
+  "tawassut": "sifaat",
+  "rakhawah": "sifaat",
+  "itbaq": "sifaat",
+  "safir": "sifaat",
+  "tafashhi": "sifaat",
+  "istitaalah": "sifaat",
+  "takreer": "sifaat"
+ },
+ "category_weights": {
+  "madd": 1.0,
+  "noon": 1.0,
+  "meem": 0.8,
+  "ghunnah": 1.0,
+  "qalqalah": 0.8,
+  "idgham": 0.8,
+  "weight": 0.6,
+  "wasl": 0.5,
+  "sifaat": 1.0
+ },
+ "expected_counts": {
+  "madd_tabii": 2.0,
+  "madd_lazim": 6.0,
+  "madd_iwad": 2.0,
+  "madd_munfasil": 4.5,
+  "madd_silah_kubra": 4.5,
+  "madd_muttasil": 4.5,
+  "madd_badal": 2.0,
+  "madd_silah_sughra": 2.0,
+  "ghunnah": 2.0,
+  "idgham_ghunnah": 2.0,
+  "ikhfa": 2.0,
+  "iqlab": 2.0,
+  "ikhfa_shafawi": 2.0,
+  "idgham_shafawi": 2.0
+ },
+ "roster": {
+  "Husary_128kbps": {
+   "name": "Mahmoud Khalil Al-Hussary",
+   "set": "studio"
+  },
+  "Husary_Muallim_128kbps": {
+   "name": "Al-Hussary (Muallim)",
+   "set": "studio"
+  },
+  "Minshawy_Murattal_128kbps": {
+   "name": "Siddiq Al-Minshawi (Murattal)",
+   "set": "studio"
+  },
+  "Hudhaify_128kbps": {
+   "name": "Ali Al-Hudhaify",
+   "set": "studio"
+  },
+  "Abdul_Basit_Murattal_192kbps": {
+   "name": "Abdul Basit Abdul Samad (Murattal)",
+   "set": "studio"
+  },
+  "Alafasy_128kbps": {
+   "name": "Mishary Alafasy",
+   "set": "studio"
+  },
+  "Mohammad_al_Tablaway_128kbps": {
+   "name": "Mohammad Al-Tablawi",
+   "set": "studio"
+  },
+  "Muhammad_Ayyoub_128kbps": {
+   "name": "Muhammad Ayyoub",
+   "set": "studio"
+  },
+  "Yasser_Ad-Dussary_128kbps": {
+   "name": "Yasser Al-Dosari",
+   "set": "taraweeh"
+  },
+  "Nasser_Alqatami_128kbps": {
+   "name": "Nasser Al-Qatami",
+   "set": "taraweeh"
+  },
+  "Saood_ash-Shuraym_128kbps": {
+   "name": "Saud Al-Shuraim",
+   "set": "taraweeh"
+  },
+  "Abdurrahmaan_As-Sudais_192kbps": {
+   "name": "Abdul Rahman Al-Sudais",
+   "set": "taraweeh"
+  },
+  "Abdullaah_3awwaad_Al-Juhaynee_128kbps": {
+   "name": "Abdullah Al-Juhany",
+   "set": "taraweeh"
+  },
+  "Salah_Al_Budair_128kbps": {
+   "name": "Salah Al-Budair",
+   "set": "taraweeh"
+  },
+  "Abdullah_Matroud_128kbps": {
+   "name": "Abdullah Al-Matroud",
+   "set": "taraweeh"
+  },
+  "MaherAlMuaiqly128kbps": {
+   "name": "Maher Al-Muaiqly",
+   "set": "taraweeh"
+  }
+ }
+}

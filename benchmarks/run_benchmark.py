@@ -27,9 +27,10 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from app.audio import AudioError, load_audio  # noqa: E402
+from app.calibration import rule_key  # noqa: E402
 from app.pipeline import AnalysisOptions, QaariEvaluator  # noqa: E402
 from app.quran_text import AYAH_COUNTS, get_ayah_text  # noqa: E402
-from benchmarks.roster import EVERYAYAH_URL, ROSTER  # noqa: E402
+from benchmarks.roster import EVERYAYAH_URL, QURAN_MD, ROSTER  # noqa: E402
 
 logger = logging.getLogger("benchmark")
 STRATEGIC = ROOT / "app" / "data" / "strategic_verses.json"
@@ -47,6 +48,21 @@ def verse_list(spec: str) -> list[tuple[int, int]]:
         s, rng = part.split(":")
         a0, _, a1 = rng.partition("-")
         out += [(int(s), a) for a in range(int(a0), int(a1 or a0) + 1)]
+    return out
+
+
+def local_dirs(root: Path) -> dict[str, Path]:
+    """Map EveryAyah folder -> directory holding ``SSS_AAA.wav`` under a Quran-MD root (any depth)."""
+    out: dict[str, Path] = {}
+    # Fixed depths only: a recursive glob over ~190k mounted WAV files takes minutes per reciter.
+    prefixes = ["", "*/", "*/*/", "*/*/*/", "*/*/*/*/"]
+    for folder, qid in QURAN_MD.items():
+        for pre in prefixes:
+            hits = [h for pat in (f"{pre}{qid}/001_001.wav", f"{pre}{qid}/{qid}/001_001.wav")
+                    for h in root.glob(pat)]
+            if hits:
+                out[folder] = hits[0].parent
+                break
     return out
 
 
@@ -75,8 +91,11 @@ def download(folder: str, surah: int, ayah: int, cache: Path) -> Path | None:
 
 
 def compact(diag: dict) -> dict:  # type: ignore[type-arg]
-    keep = ("rule_type", "detail", "word", "letter", "status", "score", "measured_harakat", "expected_harakat_range")
-    return {k: diag[k] for k in keep if k in diag}
+    keep = ("rule_type", "detail", "word", "letter", "status", "score", "measured_harakat", "expected_harakat_range",
+            "metrics", "location")
+    out = {k: diag[k] for k in keep if k in diag}
+    out["key"] = rule_key(diag["rule_type"], diag.get("detail", ""), diag.get("letter"))
+    return out
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -89,6 +108,9 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--cache-dir", default=str(Path.home() / ".cache" / "qaari-eval" / "everyayah"))
     ap.add_argument("--shard", default="0/1", help="i/n: process every n-th (reciter, ayah) pair")
     ap.add_argument("--timbre-backend", default="ecapa")
+    ap.add_argument("--local-root", default=None,
+                    help="Quran-MD WAV root (e.g. /kaggle/input); reciters found there are read locally")
+    ap.add_argument("--threads", type=int, default=0, help="torch intra-op threads (0 = library default)")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args(argv)
     logging.basicConfig(level=logging.DEBUG if args.verbose else logging.INFO, format="%(asctime)s %(message)s")
@@ -110,7 +132,7 @@ def main(argv: list[str] | None = None) -> int:
     texts = {v: get_ayah_text(*v) for v in verses}
     evaluators = {m: QaariEvaluator(AnalysisOptions(aligner="ctc", index_dir=None, mode=m, tareeq=args.tareeq,
                                                     denoise="never", timbre_backend=args.timbre_backend,
-                                                    compute_fingerprint=(m == "studio")))
+                                                    compute_fingerprint=(m == "studio"), calibration=None))
                   for m in args.modes}
     # Share one aligner and embedder across modes.
     first = next(iter(evaluators.values()))
@@ -121,8 +143,23 @@ def main(argv: list[str] | None = None) -> int:
 
     jobs = [(f, v) for f in reciters for v in verses]
     jobs = [j for k, j in enumerate(jobs) if k % shard_n == shard_i]
+    if args.threads:
+        import torch
+
+        torch.set_num_threads(args.threads)
+    local = local_dirs(Path(args.local_root)) if args.local_root else {}
+    if args.local_root:
+        logger.info("Local Quran-MD sources: %s", {k: str(v) for k, v in local.items()})
+
+    def fetch(job: tuple[str, tuple[int, int]]) -> Path | None:
+        folder, (surah, ayah) = job
+        if folder in local:
+            p = local[folder] / f"{surah:03d}_{ayah:03d}.wav"
+            return p if p.exists() else None
+        return download(folder, surah, ayah, cache)
+
     with ThreadPoolExecutor(max_workers=4) as pool:
-        paths = dict(zip(jobs, pool.map(lambda j: download(j[0], j[1][0], j[1][1], cache), jobs), strict=True))
+        paths = dict(zip(jobs, pool.map(fetch, jobs), strict=True))
     n = 0
     with out.open("a", encoding="utf-8") as fh:
         for (folder, (surah, ayah)) in jobs:
@@ -151,7 +188,7 @@ def main(argv: list[str] | None = None) -> int:
                     "tareeq": args.tareeq, "perfection": s["tajweed_perfection_index"], "sifaat": s["sifaat_score"],
                     "haraka_ms": s["base_haraka_duration_ms"], "environment": s["acoustic_environment"],
                     "diagnostics": [compact(d) for d in res.report["detailed_rule_diagnostics"]],
-                    "seconds": round(time.time() - t0, 2),
+                    "seconds": round(time.time() - t0, 2), "duration_s": round(audio.duration_s, 3),
                 }
                 if res.fingerprint is not None:
                     row["fingerprint"] = {"timbre": [round(float(x), 6) for x in res.fingerprint.timbre],

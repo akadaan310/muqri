@@ -18,7 +18,8 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from app.models import MADD_RULES, RuleDiagnostic, RuleType, Status, rule_category
+from app.calibration import Calibration
+from app.models import MADD_RULES, MEEM_RULES, NOON_RULES, RuleDiagnostic, RuleInstance, RuleType, Status, rule_category
 from app.sifaat import ghair_mutadhaddah, hams_jahr, itbaq, sukoon_spectrum
 from app.tajweed_rules import (
     idghaam_classes,
@@ -66,6 +67,9 @@ class ScoreSummary:
 
 
 class TajweedScorer:
+    def __init__(self, calibration: Calibration | None = None) -> None:
+        self.calibration = calibration
+
     def evaluate(self, ev: EvalContext) -> list[RuleDiagnostic]:
         diagnostics: list[RuleDiagnostic] = []
         for rule in ev.parsed.rules:
@@ -80,32 +84,46 @@ class TajweedScorer:
                 diag = skipped(rule, f"Analysis failed: {exc}")
             diag.ayah = rule.ayah
             diag.detail = rule.detail
+            _attach_alignment_metrics(diag, rule, ev)
+            if self.calibration is not None:
+                diag = self.calibration.apply(diag)
             diagnostics.append(diag)
         diagnostics.sort(key=lambda d: (d.start_ms, d.end_ms))
         return diagnostics
 
-    @staticmethod
-    def summarize(diagnostics: list[RuleDiagnostic]) -> ScoreSummary:
-        per_cat: dict[str, list[float]] = {}
-        for d in diagnostics:
-            if d.status in _EXCLUDED or d.score is None:
-                continue
-            per_cat.setdefault(rule_category(d.rule_type), []).append(d.score)
+    @property
+    def weights(self) -> dict[str, float]:
+        """Category weights: the calibration's optimised weights when present, else the defaults."""
+        tuned = (self.calibration.meta.get("category_weights") if self.calibration else None) or {}
+        return {c: float(tuned.get(c, w)) for c, w in CATEGORY_WEIGHTS.items()}
 
-        def weighted(cats: list[str]) -> float | None:
-            total_w = sum(CATEGORY_WEIGHTS[c] * len(per_cat[c]) for c in cats if c in per_cat)
-            if not total_w:
-                return None
-            return sum(CATEGORY_WEIGHTS[c] * sum(per_cat[c]) for c in cats if c in per_cat) / total_w * 100
+    def summarize(self, diagnostics: list[RuleDiagnostic]) -> ScoreSummary:
+        return summarize_diagnostics(diagnostics, self.weights)
 
-        ahkaam = [c for c in CATEGORY_WEIGHTS if c != "sifaat"]
-        counts = Counter(str(d.status) for d in diagnostics)
-        return ScoreSummary(
-            overall=weighted(ahkaam), sifaat=weighted(["sifaat"]),
-            by_category={c: round(float(np.mean(v)) * 100, 1) for c, v in per_cat.items()},
-            status_counts={s.value: counts.get(s.value, 0) for s in Status},
-            evaluated=sum(len(v) for c, v in per_cat.items() if c != "sifaat"),
-        )
+
+def summarize_diagnostics(diagnostics: list[RuleDiagnostic],
+                          weights: dict[str, float] | None = None) -> ScoreSummary:
+    weights = weights or CATEGORY_WEIGHTS
+    per_cat: dict[str, list[float]] = {}
+    for d in diagnostics:
+        if d.status in _EXCLUDED or d.score is None:
+            continue
+        per_cat.setdefault(rule_category(d.rule_type), []).append(d.score)
+
+    def weighted(cats: list[str]) -> float | None:
+        total_w = sum(weights[c] * len(per_cat[c]) for c in cats if c in per_cat)
+        if not total_w:
+            return None
+        return sum(weights[c] * sum(per_cat[c]) for c in cats if c in per_cat) / total_w * 100
+
+    ahkaam = [c for c in weights if c != "sifaat"]
+    counts = Counter(str(d.status) for d in diagnostics)
+    return ScoreSummary(
+        overall=weighted(ahkaam), sifaat=weighted(["sifaat"]),
+        by_category={c: round(float(np.mean(v)) * 100, 1) for c, v in per_cat.items()},
+        status_counts={s.value: counts.get(s.value, 0) for s in Status},
+        evaluated=sum(len(v) for c, v in per_cat.items() if c != "sifaat"),
+    )
 
 
 def consistency_notes(diagnostics: list[RuleDiagnostic]) -> list[str]:
@@ -119,3 +137,26 @@ def consistency_notes(diagnostics: list[RuleDiagnostic]) -> list[str]:
                 "keep the same length for every occurrence."
             )
     return notes
+
+
+_CORE_RULES = frozenset({*MADD_RULES, *NOON_RULES, *MEEM_RULES, RuleType.GHUNNAH})
+
+
+def _attach_alignment_metrics(diag: RuleDiagnostic, rule: RuleInstance, ev: EvalContext) -> None:
+    """Record how trustworthy the span is and the local tempo, for offline calibration.
+
+    ``align_conf`` is the lowest mean CTC posterior over the rule's units (the alignment model's
+    own likelihood of the span); ``align_min_ms`` the shortest unit, which exposes collapsed spans.
+    """
+    units = [ev.alignment.units[i] for i in rule.unit_indices if i in ev.alignment.units]
+    if not units:
+        return
+    diag.metrics.setdefault("align_conf", min(u.confidence for u in units))
+    diag.metrics.setdefault("align_min_ms", min(u.duration_s for u in units) * 1000.0)
+    diag.metrics.setdefault("haraka_ms", ev.haraka_ms(units[0].start_s))
+    if diag.measured_harakat is not None:
+        diag.metrics.setdefault("counts", diag.measured_harakat)
+    if diag.rule_type in _CORE_RULES and diag.end_ms > diag.start_ms:
+        core = ev.vowel_core_ms(diag.start_ms / 1000, diag.end_ms / 1000)
+        diag.metrics.setdefault("core_ms", core)
+        diag.metrics.setdefault("core_counts", core / diag.metrics["haraka_ms"])

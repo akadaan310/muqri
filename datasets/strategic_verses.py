@@ -23,6 +23,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
+from app.calibration import key_of  # noqa: E402
 from app.models import RuleInstance  # noqa: E402
 from app.quran_text import get_full_quran  # noqa: E402
 from app.tajweed_rules import TajweedParser  # noqa: E402
@@ -33,22 +34,7 @@ ANCHORS = [(1, a) for a in range(1, 8)] + [(111, 1), (112, 1), (112, 4), (113, 1
 
 
 def rule_key(rule: RuleInstance) -> str:
-    rt = rule.rule_type.value
-    if rt == "qalqalah":
-        return f"qalqalah:{rule.detail}"
-    if rt.startswith("idgham_mu") or rt == "idgham_mithlayn":
-        return f"{rt}:{rule.detail}"
-    if rt == "madd_lazim":
-        return f"madd_lazim:{rule.detail.split(':')[0]}"
-    if rt == "ikhfa":
-        return f"ikhfa:{rule.detail.split('; ')[-1]}"
-    if rt == "idgham_ghunnah":
-        return f"idgham_ghunnah:{rule.detail.split('; ')[-1]}"
-    if rt in ("tafkheem", "tarqeeq") and rule.letter in ("ر", "ل"):
-        return f"{rt}:{'raa' if rule.letter == 'ر' else 'lam_allah'}"
-    if rt == "izhar_shafawi" and rule.detail:
-        return "izhar_shafawi:before_waw_faa"
-    return rt
+    return key_of(rule)
 
 
 def select(per_key: int, max_words: int) -> dict[str, Any]:

@@ -77,6 +77,11 @@ def strip_basmala(text: str, surah: int, ayah: int) -> str:
 _FULL_API = "https://api.alquran.cloud/v1/quran/quran-uthmani"
 
 
+@lru_cache(maxsize=1)
+def _cached_full_quran() -> dict[tuple[int, int], str]:
+    return get_full_quran(allow_network=False)
+
+
 def get_full_quran(*, allow_network: bool = True, timeout: float = 60.0) -> dict[tuple[int, int], str]:
     """All 6236 ayahs as {(surah, ayah): text}, downloaded once and cached on disk."""
     cache_file = _cache_dir() / "quran-uthmani.json"
@@ -117,6 +122,8 @@ def get_ayah_text(surah: int, ayah: int, *, allow_network: bool = True, timeout:
     cache_file = _cache_dir() / f"{surah:03d}{ayah:03d}.txt"
     if cache_file.exists():
         return cache_file.read_text(encoding="utf-8")
+    if (_cache_dir() / "quran-uthmani.json").exists():
+        return _cached_full_quran()[(surah, ayah)]
 
     if not allow_network:
         raise QuranTextError(

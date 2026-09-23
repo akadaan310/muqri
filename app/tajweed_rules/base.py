@@ -139,6 +139,43 @@ class EvalContext:
         a = lo + best[0] * hop / sr
         return a, a + (best[1] - best[0] + 1) * hop / sr + frame / sr
 
+    @cached_property
+    def vowel_band_envelope_db(self) -> tuple[np.ndarray, int]:
+        """Hilbert envelope (dB, 5 ms hop) of the 100-1000 Hz band: the analytic-signal magnitude
+        of the vowel/F1 region, smoothed over 20 ms. Mirrors ``qaari_features.m`` (Octave reference)."""
+        from scipy.signal import butter, hilbert, sosfiltfilt
+
+        sr = self.ctx.sr
+        sos = butter(4, [100, 1000], btype="bandpass", fs=sr, output="sos")
+        env = np.abs(hilbert(sosfiltfilt(sos, self.ctx.x.astype(np.float64))))
+        k = int(0.02 * sr)
+        env = np.convolve(env, np.ones(k) / k, mode="full")[: len(env)]  # causal, as Octave's filter()
+        hop = int(0.005 * sr)
+        return 20 * np.log10(env[::hop] + 1e-9), hop
+
+    def vowel_core_ms(self, start_s: float, end_s: float, drop_db: float = 10.0) -> float:
+        """Longest voiced run whose vowel-band envelope stays within ``drop_db`` of the span peak.
+
+        CTC spans absorb neighbouring closures and transitions; the core is the sustained vowel
+        (or nasal murmur) itself, the quantity a harakah count is defined on.
+        """
+        env_db, hop = self.vowel_band_envelope_db
+        sr = self.ctx.sr
+        a, b = int(start_s * sr / hop), int(end_s * sr / hop)
+        if b - a < 3:
+            return 0.0
+        seg = env_db[a:b]
+        t_frames = (np.arange(a, b) * hop) / sr
+        t, f0 = self.ctx.f0_track
+        voiced = np.interp(t_frames, t, np.isfinite(f0).astype(float), left=0, right=0) > 0.5 if t.size else \
+            np.zeros(b - a, dtype=bool)
+        good = (seg > seg.max() - drop_db) & voiced
+        best = run = 0
+        for g in good:
+            run = run + 1 if g else 0
+            best = max(best, run)
+        return best * hop / sr * 1000.0
+
     def voicing_fraction(self, start_s: float, end_s: float) -> float:
         t, f0 = self.ctx.f0_track
         sel = (t >= start_s) & (t <= end_s)

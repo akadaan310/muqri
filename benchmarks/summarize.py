@@ -24,6 +24,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
+from app.calibration import Calibration  # noqa: E402
 from app.fingerprint import Fingerprint, ReciterIndex, ReciterProfile, merge_fingerprints  # noqa: E402
 from app.models import MADD_RULES, MEEM_RULES, NOON_RULES, RuleType, rule_category  # noqa: E402
 from app.scoring import CATEGORY_WEIGHTS  # noqa: E402
@@ -42,7 +43,8 @@ def load_rows(paths: list[Path]) -> list[dict]:  # type: ignore[type-arg]
     return rows
 
 
-def aggregate(diags: list[dict]) -> dict[str, Any]:  # type: ignore[type-arg]
+def aggregate(diags: list[dict], weights: dict[str, float] | None = None) -> dict[str, Any]:  # type: ignore[type-arg]
+    weights = weights or CATEGORY_WEIGHTS
     per_cat: dict[str, list[float]] = collections.defaultdict(list)
     status: collections.Counter[str] = collections.Counter()
     timing_fail = timing_n = 0
@@ -57,17 +59,49 @@ def aggregate(diags: list[dict]) -> dict[str, Any]:  # type: ignore[type-arg]
             timing_fail += d["status"] == "FAIL"
 
     def weighted(cats: list[str]) -> float | None:
-        w = sum(CATEGORY_WEIGHTS[c] * len(per_cat[c]) for c in cats if per_cat.get(c))
-        return None if not w else sum(CATEGORY_WEIGHTS[c] * sum(per_cat[c]) for c in cats if per_cat.get(c)) / w * 100
+        w = sum(weights[c] * len(per_cat[c]) for c in cats if per_cat.get(c))
+        return None if not w else sum(weights[c] * sum(per_cat[c]) for c in cats if per_cat.get(c)) / w * 100
 
     return {
-        "perfection": weighted([c for c in CATEGORY_WEIGHTS if c != "sifaat"]),
+        "perfection": weighted([c for c in weights if c != "sifaat"]),
         "sifaat": weighted(["sifaat"]),
         "categories": {c: round(float(np.mean(v)) * 100, 1) for c, v in sorted(per_cat.items())},
         "status_counts": dict(status),
         "timing_rules": timing_n,
         "timing_fails": timing_fail,
     }
+
+
+def recalibrate(diags: list[dict], cal: Calibration) -> list[dict]:  # type: ignore[type-arg]
+    """Re-judge raw benchmark diagnostics with the calibration (same code path as the live scorer)."""
+    out = []
+    for d in diags:
+        res = cal.judge(d["rule_type"], d.get("detail", ""), d.get("letter"), d["status"], d.get("metrics", {}))
+        if res is not None:
+            status, score, z, _ = res
+            d = {**d, "status": status.value, "score": score, "z": z}
+        out.append(d)
+    return out
+
+
+def rule_gaps(rows: list[dict], cal: Calibration) -> dict[str, dict[str, dict[str, float]]]:  # type: ignore[type-arg]
+    """Per reciter and rule key: signed distance from the reference hull in robust-σ units, pass rate."""
+    acc: dict[str, dict[str, list[tuple[float, bool]]]] = collections.defaultdict(lambda: collections.defaultdict(list))
+    for r in rows:
+        for d in r["diagnostics"]:
+            key = d.get("key") or d["rule_type"]
+            bands = cal.rules.get(key)
+            if not bands:
+                continue
+            b = bands[0]
+            x = d.get("metrics", {}).get(b.metric)
+            if x is None or cal.unreliable(d.get("metrics", {}), b.metric.endswith("counts")):
+                continue
+            signed = (x - b.hi) / b.scale if x > b.hi else ((x - b.lo) / b.scale if x < b.lo else 0.0)
+            acc[r["reciter"]][key].append((signed, b.z(x) <= 2.0))
+    return {rec: {k: {"n": len(v), "median_signed_z": round(float(np.median([a for a, _ in v])), 2),
+                      "pass_rate": round(100 * float(np.mean([p for _, p in v])), 1)}
+                  for k, v in keys.items()} for rec, keys in acc.items()}
 
 
 def rule_table(rows: list[dict], mode: str) -> dict[str, dict[str, float]]:  # type: ignore[type-arg]
@@ -111,8 +145,8 @@ def build_indices(rows: list[dict], index_dir: Path) -> dict[str, int]:  # type:
 def markdown(summary: dict) -> str:  # type: ignore[type-arg]
     lines = ["# qaari-eval v2 benchmark", "", f"Verses: {summary['verses']} ayahs per reciter "
              "(strategic set covering every rule).", "",
-             "| Reciter | Set | Perfection (studio) | Perfection (adapted) | Sifaat | Timing FAILs studio → adapted |"
-             " FP reduction |", "|---|---|---|---|---|---|---|"]
+             "| Reciter | Set | Raw textbook | Perfection (studio) | Perfection (adapted) | Sifaat |"
+             " Timing FAILs studio → adapted | FP reduction |", "|---|---|---|---|---|---|---|---|"]
     for r in summary["reciters"]:
         s, a = r["modes"].get("studio", {}), r["modes"].get("taraweeh_adapted", {})
 
@@ -120,7 +154,8 @@ def markdown(summary: dict) -> str:  # type: ignore[type-arg]
             return "–" if v is None else f"{v:.1f}"
 
         red = r.get("timing_fp_reduction_pct")
-        lines.append(f"| {r['name']} | {r['category']} | {f(s.get('perfection'))} | {f(a.get('perfection'))} | "
+        lines.append(f"| {r['name']} | {r['category']} | {f(s.get('raw_perfection'))} | {f(s.get('perfection'))} | "
+                     f"{f(a.get('perfection'))} | "
                      f"{f(s.get('sifaat'))} | {s.get('timing_fails', '–')} → {a.get('timing_fails', '–')} "
                      f"(of {s.get('timing_rules', '–')}) | {f(red)}{'%' if red is not None else ''} |")
     agg = summary["aggregate"]
@@ -136,7 +171,12 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--out-dir", default=str(ROOT / "benchmarks" / "results"))
     ap.add_argument("--index-dir", default=str(ROOT / "index"))
     ap.add_argument("--no-index", action="store_true")
+    ap.add_argument("--calibration", default=str(ROOT / "app" / "data" / "calibration.json"),
+                    help="re-judge the raw rows with this calibration ('none' for textbook verdicts only)")
     args = ap.parse_args(argv)
+    cal = Calibration.load(args.calibration) if args.calibration != "none" else None
+    weights = {c: float((cal.meta.get("category_weights") or {}).get(c, w)) if cal else w
+               for c, w in CATEGORY_WEIGHTS.items()}
     paths = [Path(p) for p in args.runs] if args.runs else sorted((ROOT / "benchmarks" / "results").glob("runs*.jsonl"))
     rows = load_rows(paths)
     by: dict[tuple[str, str], list[dict]] = collections.defaultdict(list)  # type: ignore[type-arg]
@@ -150,7 +190,10 @@ def main(argv: list[str] | None = None) -> int:
         for mode in ("studio", "taraweeh_adapted"):
             rs = by.get((rid, mode), [])
             if rs:
-                agg = aggregate([d for r in rs for d in r["diagnostics"]])
+                raw_diags = [d for r in rs for d in r["diagnostics"]]
+                agg = aggregate(recalibrate(raw_diags, cal), weights) if cal else aggregate(raw_diags)
+                raw = aggregate(raw_diags)
+                agg["raw_perfection"], agg["raw_timing_fails"] = raw["perfection"], raw["timing_fails"]
                 agg["ayahs"] = len(rs)
                 agg["haraka_ms_median"] = float(np.median([r["haraka_ms"] for r in rs]))
                 modes[mode] = agg
@@ -182,7 +225,11 @@ def main(argv: list[str] | None = None) -> int:
             "taraweeh_timing_fp_reduction_pct": round(100 * (fails_s - fails_a) / fails_s, 1) if fails_s else None,
         },
         "pass_rate_by_rule_studio_mode": rule_table(rows, "studio"),
+        "calibration": None if cal is None else {"path": args.calibration, "count_scale": cal.count_scale,
+                                                 "category_weights": weights, "rule_keys": len(cal.rules)},
     }
+    if cal is not None:
+        summary["rule_gaps_vs_reference"] = rule_gaps([r for r in rows if r["mode"] == "studio"], cal)
     if not args.no_index:
         summary["indices"] = build_indices(rows, Path(args.index_dir))
     out = Path(args.out_dir)

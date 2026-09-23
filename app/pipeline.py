@@ -24,6 +24,7 @@ from app.acoustic.features import AcousticContext
 from app.acoustic.tempo import TempoEstimate, estimate_tempo
 from app.aligner import Aligner, AlignmentError, HeuristicAligner, export_alignment, get_aligner
 from app.audio import AudioSignal, load_audio
+from app.calibration import Calibration, default_calibration
 from app.fingerprint import (
     DEFAULT_STYLE_WEIGHT,
     Fingerprint,
@@ -69,6 +70,7 @@ class AnalysisOptions:
     dynamic_waqf: bool = True
     include_sifaat: bool = True
     compute_fingerprint: bool = True
+    calibration: str | Path | None = "default"  # None = raw textbook verdicts (benchmark collection)
 
 
 @dataclass(slots=True)
@@ -93,7 +95,13 @@ class QaariEvaluator:
         self._aligner: Aligner | None = None
         self._embedder: TimbreEmbedder | None = None
         self._indices: dict[str, ReciterIndex] | None = None
-        self.scorer = TajweedScorer()
+        self.scorer = TajweedScorer(calibration=self._load_calibration())
+
+    def _load_calibration(self) -> Calibration | None:
+        c = self.options.calibration
+        if c is None:
+            return None
+        return default_calibration(None if c == "default" else str(c))
 
     # -- lazily built components --------------------------------------------------------------
     @property

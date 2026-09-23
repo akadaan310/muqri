@@ -1,0 +1,367 @@
+{
+ "ا": {
+  "makhraj_zone": "jawf",
+  "makhraj": "oral cavity — prolongation, no contact",
+  "istila": "istifal",
+  "weight": "inherent-light",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 0
+ },
+ "ء": {
+  "makhraj_zone": "halq",
+  "makhraj": "deepest throat (aqṣā al-ḥalq)",
+  "istila": "istifal",
+  "weight": "inherent-light",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 0
+ },
+ "ه": {
+  "makhraj_zone": "halq",
+  "makhraj": "deepest throat (aqṣā al-ḥalq)",
+  "istila": "istifal",
+  "weight": "inherent-light",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 0
+ },
+ "ع": {
+  "makhraj_zone": "halq",
+  "makhraj": "middle throat (wasaṭ al-ḥalq)",
+  "istila": "istifal",
+  "weight": "inherent-light",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 0
+ },
+ "ح": {
+  "makhraj_zone": "halq",
+  "makhraj": "middle throat (wasaṭ al-ḥalq)",
+  "istila": "istifal",
+  "weight": "inherent-light",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 0
+ },
+ "غ": {
+  "makhraj_zone": "halq",
+  "makhraj": "nearest throat (adnā al-ḥalq)",
+  "istila": "isti'la",
+  "weight": "inherent-heavy",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 1
+ },
+ "خ": {
+  "makhraj_zone": "halq",
+  "makhraj": "nearest throat (adnā al-ḥalq)",
+  "istila": "isti'la",
+  "weight": "inherent-heavy",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 1
+ },
+ "ق": {
+  "makhraj_zone": "lisan",
+  "makhraj": "deepest tongue with the soft palate",
+  "istila": "isti'la",
+  "weight": "inherent-heavy",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 1
+ },
+ "ك": {
+  "makhraj_zone": "lisan",
+  "makhraj": "deepest tongue, slightly forward, with the hard palate",
+  "istila": "istifal",
+  "weight": "inherent-light",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 0
+ },
+ "ج": {
+  "makhraj_zone": "lisan",
+  "makhraj": "middle of the tongue with the hard palate",
+  "istila": "istifal",
+  "weight": "inherent-light",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 0
+ },
+ "ش": {
+  "makhraj_zone": "lisan",
+  "makhraj": "middle of the tongue with the hard palate",
+  "istila": "istifal",
+  "weight": "inherent-light",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 0
+ },
+ "ي": {
+  "makhraj_zone": "lisan",
+  "makhraj": "middle of the tongue with the hard palate",
+  "istila": "istifal",
+  "weight": "inherent-light",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": true,
+  "n_inherent": 1
+ },
+ "ض": {
+  "makhraj_zone": "lisan",
+  "makhraj": "edge of the tongue with the upper molars",
+  "istila": "isti'la",
+  "weight": "inherent-heavy",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 1
+ },
+ "ل": {
+  "makhraj_zone": "lisan",
+  "makhraj": "both edges of the tongue, forward, with the gums",
+  "istila": "istifal",
+  "weight": "contextual",
+  "weight_rules": [
+   [
+    "heavy",
+    "lām of the Divine Name ٱللَّه after a fatḥah or ḍammah, or ayah-initial"
+   ],
+   [
+    "light",
+    "lām of the Divine Name after a kasrah — بِسْمِ ٱللَّهِ"
+   ],
+   [
+    "light",
+    "every other lām, always"
+   ]
+  ],
+  "idhlaq": "idhlaq",
+  "inhiraf": true,
+  "lin": false,
+  "n_inherent": 2
+ },
+ "ن": {
+  "makhraj_zone": "lisan",
+  "makhraj": "tip of the tongue with the gums above the incisors",
+  "istila": "istifal",
+  "weight": "inherent-light",
+  "weight_rules": null,
+  "idhlaq": "idhlaq",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 1
+ },
+ "ر": {
+  "makhraj_zone": "lisan",
+  "makhraj": "tip of the tongue, slightly further back, with the gums",
+  "istila": "istifal",
+  "weight": "contextual",
+  "weight_rules": [
+   [
+    "heavy",
+    "ر with fatḥah or ḍammah"
+   ],
+   [
+    "heavy",
+    "ر sākin after fatḥah or ḍammah"
+   ],
+   [
+    "heavy",
+    "ر sākin after an INCIDENTAL ('āriḍ) kasrah, e.g. hamzat al-waṣl"
+   ],
+   [
+    "heavy",
+    "ر sākin after an original kasrah when a ḥarf isti'lā' follows in the same word and is not itself kasrah'd — مِرْصَاد، قِرْطَاس"
+   ],
+   [
+    "light",
+    "ر with kasrah"
+   ],
+   [
+    "light",
+    "ر sākin after an ORIGINAL kasrah with no isti'lā' following — فِرْعَوْن"
+   ],
+   [
+    "light",
+    "ر sākin at waqf preceded by a sākin yā' (leen) — خَيْر"
+   ],
+   [
+    "either",
+    "jawāz al-wajhayn: ر sākin after kasrah with a kasrah'd isti'lā' after — فِرْقٍ; and some waqf cases — مِصْر، ٱلْقِطْر، يَسْر، أَنْ أَسْر، نُذُر"
+   ]
+  ],
+  "idhlaq": "idhlaq",
+  "inhiraf": true,
+  "lin": false,
+  "n_inherent": 2
+ },
+ "ط": {
+  "makhraj_zone": "lisan",
+  "makhraj": "tip of the tongue with the roots of the upper incisors",
+  "istila": "isti'la",
+  "weight": "inherent-heavy",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 1
+ },
+ "د": {
+  "makhraj_zone": "lisan",
+  "makhraj": "tip of the tongue with the roots of the upper incisors",
+  "istila": "istifal",
+  "weight": "inherent-light",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 0
+ },
+ "ت": {
+  "makhraj_zone": "lisan",
+  "makhraj": "tip of the tongue with the roots of the upper incisors",
+  "istila": "istifal",
+  "weight": "inherent-light",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 0
+ },
+ "ص": {
+  "makhraj_zone": "lisan",
+  "makhraj": "tip of the tongue between the incisors",
+  "istila": "isti'la",
+  "weight": "inherent-heavy",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 1
+ },
+ "ز": {
+  "makhraj_zone": "lisan",
+  "makhraj": "tip of the tongue between the incisors",
+  "istila": "istifal",
+  "weight": "inherent-light",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 0
+ },
+ "س": {
+  "makhraj_zone": "lisan",
+  "makhraj": "tip of the tongue between the incisors",
+  "istila": "istifal",
+  "weight": "inherent-light",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 0
+ },
+ "ظ": {
+  "makhraj_zone": "lisan",
+  "makhraj": "tip of the tongue with the tips of the upper incisors",
+  "istila": "isti'la",
+  "weight": "inherent-heavy",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 1
+ },
+ "ذ": {
+  "makhraj_zone": "lisan",
+  "makhraj": "tip of the tongue with the tips of the upper incisors",
+  "istila": "istifal",
+  "weight": "inherent-light",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 0
+ },
+ "ث": {
+  "makhraj_zone": "lisan",
+  "makhraj": "tip of the tongue with the tips of the upper incisors",
+  "istila": "istifal",
+  "weight": "inherent-light",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 0
+ },
+ "ف": {
+  "makhraj_zone": "shafatan",
+  "makhraj": "inside of the lower lip with the tips of the upper incisors",
+  "istila": "istifal",
+  "weight": "inherent-light",
+  "weight_rules": null,
+  "idhlaq": "idhlaq",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 1
+ },
+ "ب": {
+  "makhraj_zone": "shafatan",
+  "makhraj": "both lips, closed",
+  "istila": "istifal",
+  "weight": "inherent-light",
+  "weight_rules": null,
+  "idhlaq": "idhlaq",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 1
+ },
+ "م": {
+  "makhraj_zone": "shafatan",
+  "makhraj": "both lips, lightly closed",
+  "istila": "istifal",
+  "weight": "inherent-light",
+  "weight_rules": null,
+  "idhlaq": "idhlaq",
+  "inhiraf": false,
+  "lin": false,
+  "n_inherent": 1
+ },
+ "و": {
+  "makhraj_zone": "shafatan",
+  "makhraj": "both lips, rounded, not closed",
+  "istila": "istifal",
+  "weight": "inherent-light",
+  "weight_rules": null,
+  "idhlaq": "ismat",
+  "inhiraf": false,
+  "lin": true,
+  "n_inherent": 1
+ }
+}

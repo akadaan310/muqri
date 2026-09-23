@@ -30,9 +30,10 @@ from typing import Any
 import numpy as np
 
 from app.analysis import FRAME_S, Unit, analyse_clip, ctc_viterbi
+from app.ghunnah import grade_ghunnah, letter_strength
 from app.rule_bind import ph_units
 
-SCHEMA_VERSION = "1.1"
+SCHEMA_VERSION = "1.2"
 ROOT = Path(__file__).resolve().parents[1]
 # how much audio one ayah may consume, as a multiple of its phoneme count, when walking a long
 # recording: generous enough for the slowest mujawwad, tight enough to stay linear
@@ -208,6 +209,39 @@ def _roll_up(verdicts: list[RuleVerdict]) -> dict[str, Any]:
     return by
 
 
+def _ghunnah_roll_up(gs: list[Any]) -> dict[str, Any]:
+    """Maratib al-Ghunnah: how each grade of nasalisation was held."""
+    by: dict[str, dict[str, Any]] = {}
+    for g in gs:
+        d = by.setdefault(g.grade, {"n": 0, "pass": 0, "short": 0, "long": 0, "given": []})
+        d["n"] += 1
+        if g.status in d:
+            d[g.status] += 1
+        if g.given_counts is not None:
+            d["given"].append(g.given_counts)
+    for d in by.values():
+        vals = d.pop("given")
+        d["median_counts"] = round(statistics.median(vals), 2) if vals else None
+        d["accuracy"] = round(d["pass"] / d["n"], 4) if d["n"] else None
+    return by
+
+
+def _strength_roll_up(ayahs: list[dict[str, Any]]) -> dict[str, Any]:
+    """Letter quwwa: strong sifat expected against realised, and which are most often weak."""
+    exp = real = 0
+    missing: dict[str, int] = {}
+    for a in ayahs:
+        for l in a["letters"]:
+            st = l.get("strength") or {}
+            exp += st.get("expected", 0)
+            real += st.get("realised", 0)
+            for m in st.get("missing", []):
+                missing[m] = missing.get(m, 0) + 1
+    return {"strong_sifat_expected": exp, "realised": real,
+            "ratio": round(real / exp, 4) if exp else None,
+            "weakest": dict(sorted(missing.items(), key=lambda kv: -kv[1])[:5])}
+
+
 def _mastery(per_ayah: list[dict[str, Any]]) -> dict[str, Any]:
     """Cross-ayah statistics: consistency, tempo and the sukoon spectrum over the whole submission."""
     by_class: dict[str, list[float]] = {}
@@ -245,10 +279,13 @@ def _mastery(per_ayah: list[dict[str, Any]]) -> dict[str, Any]:
 def build_report(per_ayah: list[dict[str, Any]], rule_filter: str | None = None) -> dict[str, Any]:
     """Assemble the submission report from per-ayah results."""
     all_v: list[RuleVerdict] = []
+    all_gh: list[Any] = []
     ayahs = []
     for a in per_ayah:
         vs = [v for v in a["verdicts"] if not rule_filter or v.rule.startswith(rule_filter)]
         all_v.extend(vs)
+        gh = a.get("ghunnah", [])
+        all_gh.extend(gh)
         units = a["_units"]
         ayahs.append({
             "surah": a["surah"], "ayah": a["ayah"], "frames": a["frames"],
@@ -258,8 +295,10 @@ def build_report(per_ayah: list[dict[str, Any]], rule_filter: str | None = None)
                          "duration_counts": u.duration_counts,
                          "identity": {"gop": u.gop, "heard_instead": u.best_competitor,
                                       "llr": u.competitor_llr, "confirmed": u.confirmed},
-                         "sifat": u.sifat} for u in units],
+                         "sifat": u.sifat, "strength": letter_strength(u)}
+                        for u in units],
             "rules": [v.to_dict() for v in vs],
+            "ghunnah": [g.to_dict() for g in gh],
         })
     errors = [v.to_dict() for v in all_v if v.status in {"short", "long", "wrong"}]
     letters = sum(len(a["letters"]) for a in ayahs)
@@ -273,6 +312,8 @@ def build_report(per_ayah: list[dict[str, Any]], rule_filter: str | None = None)
         },
         "mastery": _mastery(per_ayah),
         "by_rule": _roll_up(all_v),
+        "ghunnah_grades": _ghunnah_roll_up(all_gh),
+        "letter_strength": _strength_roll_up(ayahs),
         "errors": errors,
         "ayahs": ayahs,
     }

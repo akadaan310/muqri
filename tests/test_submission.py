@@ -136,3 +136,37 @@ def test_rule_practice_filter(passage, engine) -> None:  # type: ignore[no-untyp
     assert rep["by_rule"], "no madd rules found to practise"
     assert all(k.startswith("madd") for k in rep["by_rule"])
     assert all(v["rule"].startswith("madd") for a in rep["ayahs"] for v in a["rules"])
+
+
+def test_ghunnah_is_graded_by_the_four_maratib(passage, engine) -> None:  # type: ignore[no-untyped-def]
+    """Maratib al-Ghunnah: akmal > kamilah > naqisah > anqas, graded by structural context.
+
+    Measured on the anchor: akmal 2.20 counts, kamilah 2.43, naqisah 1.41. Akmal and kamilah are both
+    the full two counts — the treatise separates them by oral articulation, not by length — so only
+    naqisah is asserted to be shorter.
+    """
+    lay, hus, big = passage
+    rep = engine.analyze(None, [(r["sura"], r["aya"]) for r in hus], posteriors=big)
+    grades = rep["ghunnah_grades"]
+    assert grades, "a passage must contain nasalisation to grade"
+    assert set(grades) <= {"akmal", "kamilah", "naqisah", "anqas"}
+    for g, v in grades.items():
+        assert v["n"] > 0 and 0.0 <= v["accuracy"] <= 1.0
+        assert v["median_counts"] is not None, f"{g} graded without a measured hold"
+    if {"akmal", "naqisah"} <= set(grades):
+        assert grades["naqisah"]["median_counts"] < grades["akmal"]["median_counts"], \
+            "a clear sakin nun is held for less than a doubled one"
+
+
+def test_letter_strength_reports_quwwa(passage, engine) -> None:  # type: ignore[no-untyped-def]
+    """A letter's strength is the sum of the strong sifat it carries, not one attribute."""
+    lay, hus, big = passage
+    rep = engine.analyze(None, [(r["sura"], r["aya"]) for r in hus], posteriors=big)
+    st = rep["letter_strength"]
+    assert st["strong_sifat_expected"] > 0
+    assert 0.0 <= st["ratio"] <= 1.0
+    assert st["realised"] <= st["strong_sifat_expected"]
+    per_letter = [l["strength"] for a in rep["ayahs"] for l in a["letters"]]
+    assert any(s["expected"] for s in per_letter), "some letters must carry strong sifat"
+    for s in per_letter:
+        assert s["realised"] <= s["expected"]

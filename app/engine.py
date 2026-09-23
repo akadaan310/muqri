@@ -20,7 +20,8 @@ import numpy as np
 
 from app.analysis import analyse_clip
 from app.rule_bind import bind
-from app.submission import AyahRef, build_report, grade_rule, walk_alignment
+from app.ghunnah import grade_ghunnah
+from app.submission import AyahRef, build_report, grade_rule, to_counts, walk_alignment
 from app.tajweed_rules.parser import TajweedParser
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -123,10 +124,12 @@ class Engine:
             units = analyse_clip(lp[t0:t1], r.phonemes, vocab, blank, ph["first"], ph["width"],
                                  blocks, r.expected_sifat)
             parsed = self.parser.parse(r.uthmani)
-            verdicts = [grade_rule(b, units) for b in bind(parsed, r.phonemes, r.word_ph)]
+            bounds = bind(parsed, r.phonemes, r.word_ph)
+            verdicts = [grade_rule(b, units) for b in bounds]
+            ghunnah = [g for g in (grade_ghunnah(b, units, to_counts) for b in bounds) if g]
             harakas = [u.duration_s / u.duration_counts for u in units
                        if u.duration_counts not in (None, 0)]
             per_ayah.append({"surah": r.surah, "ayah": r.ayah, "frames": [t0, t1],
                              "haraka_s": round(float(np.median(harakas)), 3) if harakas else None,
-                             "verdicts": verdicts, "_units": units})
+                             "verdicts": verdicts, "ghunnah": ghunnah, "_units": units})
         return build_report(per_ayah, rule_filter)

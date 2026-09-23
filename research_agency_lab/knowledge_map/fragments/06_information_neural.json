@@ -1,0 +1,1800 @@
+{
+ "nodes": [
+  {
+   "id": "phen:lahn:jali",
+   "type": "phenomenon",
+   "label": "Lahn jali (letter/harakah error)",
+   "level": "ijazah",
+   "status": "missing",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": "Undetectable: aligner forced to canonical; low-conf spans SKIPPED (MNAR bias)"
+  },
+  {
+   "id": "phen:lahn:khafi",
+   "type": "phenomenon",
+   "label": "Lahn khafi (timing/ghunnah/sifaat)",
+   "level": "101-ijazah",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "phen:madd_length",
+   "type": "phenomenon",
+   "label": "Madd length & consistency",
+   "level": "101",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "phen:ghunnah",
+   "type": "phenomenon",
+   "label": "Ghunnah duration/nasality",
+   "level": "101",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "phen:sifaat",
+   "type": "phenomenon",
+   "label": "Sifaat al-huruf",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj",
+   "type": "phenomenon",
+   "label": "Makharij (letter articulation)",
+   "level": "101-ijazah",
+   "status": "missing",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "phen:hafs_variants",
+   "type": "phenomenon",
+   "label": "Legit Hafs variants (munfasil 4/5 vs 2, arid 2/4/6)",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "phen:ijazah_grade",
+   "type": "phenomenon",
+   "label": "Ordinal grade 101→ijazah",
+   "level": "ijazah",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "code:app/aligner.py",
+   "type": "code",
+   "label": "CTC forced aligner (canonical-only Viterbi)",
+   "level": "",
+   "status": "implemented",
+   "priority": 2,
+   "refs": [],
+   "file": "app/aligner.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/calibration.py",
+   "type": "code",
+   "label": "Robust-z calibration; unreliable→SKIPPED",
+   "level": "",
+   "status": "implemented",
+   "priority": 2,
+   "refs": [],
+   "file": "app/calibration.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/scoring.py",
+   "type": "code",
+   "label": "Category-weighted mean perfection index",
+   "level": "",
+   "status": "implemented",
+   "priority": 2,
+   "refs": [],
+   "file": "app/scoring.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/fingerprint.py",
+   "type": "code",
+   "label": "232-d fingerprint ECAPA+FAISS",
+   "level": "",
+   "status": "implemented",
+   "priority": 2,
+   "refs": [],
+   "file": "app/fingerprint.py",
+   "note": ""
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/julia/src/QaariLab.jl",
+   "type": "code",
+   "label": "Julia calibration core",
+   "level": "",
+   "status": "implemented",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/substrate_library/julia/src/QaariLab.jl",
+   "note": ""
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "type": "code",
+   "label": "Julia frontier (conformal LOO)",
+   "level": "",
+   "status": "implemented",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "note": ""
+  },
+  {
+   "id": "code:app/mdd/",
+   "type": "code",
+   "label": "Proposed MDD module (GOP, sifa tiers)",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "app/mdd/",
+   "note": ""
+  },
+  {
+   "id": "code:app/information/channel.py",
+   "type": "code",
+   "label": "Proposed letter-channel module",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "app/information/channel.py",
+   "note": ""
+  },
+  {
+   "id": "math:letter_channel",
+   "type": "math",
+   "label": "Letter channel confusion P(ŷ|x), ΔKL jali index",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:channel_capacity",
+   "type": "math",
+   "label": "Channel capacity (Blahut–Arimoto)",
+   "level": "",
+   "status": "proposed",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:surprisal",
+   "type": "math",
+   "label": "Excess surprisal under reference predictive (nats)",
+   "level": "",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:js_divergence",
+   "type": "math",
+   "label": "Jensen–Shannon reciter×rule verdict",
+   "level": "",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:mutual_information",
+   "type": "math",
+   "label": "KSG MI ruler relevance / verdict entropy health",
+   "level": "",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:mdl",
+   "type": "math",
+   "label": "MDL / PSIS-LOO / WBIC rule-model selection",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:rate_distortion",
+   "type": "math",
+   "label": "Rate–distortion perfection (expected distortion)",
+   "level": "",
+   "status": "speculative",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:info_bottleneck",
+   "type": "math",
+   "label": "Information bottleneck (nuisance invariance)",
+   "level": "",
+   "status": "proposed",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:irt",
+   "type": "math",
+   "label": "Item response theory (Rasch→LLTM→GRM→MIRT)",
+   "level": "",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:mirt",
+   "type": "math",
+   "label": "Multidimensional IRT θ_jali/timing/nasal/sifaat",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:testlet",
+   "type": "math",
+   "label": "Testlet (ayah) random effects",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:many_facet_rasch",
+   "type": "math",
+   "label": "Many-facet Rasch (recording condition)",
+   "level": "",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:cat",
+   "type": "math",
+   "label": "Computerized adaptive testing",
+   "level": "",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:bayes_decision",
+   "type": "math",
+   "label": "Bayes decision w/ jali/khafi loss matrix + REVIEW",
+   "level": "",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:poisson_jali_rate",
+   "type": "math",
+   "label": "Poisson jali rate, rule-of-three exam length",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:ordinal_regression",
+   "type": "math",
+   "label": "Cumulative/sequential ordinal grade",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:proper_scoring",
+   "type": "math",
+   "label": "Proper scoring (log, Brier, CRPS, RPS)",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:cauchy_combination",
+   "type": "math",
+   "label": "Cauchy p-value combination (replace max z)",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:conformal_loo",
+   "type": "math",
+   "label": "Conformal peer-LOO thresholds",
+   "level": "",
+   "status": "implemented",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:mondrian_conformal",
+   "type": "math",
+   "label": "Mondrian conformal per rule key",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:hierarchical_conformal",
+   "type": "math",
+   "label": "Two-layer hierarchical conformal",
+   "level": "",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:conformal_risk_control",
+   "type": "math",
+   "label": "Conformal risk control (expert false-FAIL)",
+   "level": "",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:learn_then_test",
+   "type": "math",
+   "label": "Learn-then-Test multi-risk",
+   "level": "",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:loo_pit",
+   "type": "math",
+   "label": "LOO-PIT calibration check",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:temperature_scaling",
+   "type": "math",
+   "label": "Temperature/vector scaling of CTC posteriors",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:mnar",
+   "type": "math",
+   "label": "Missing-not-at-random skip modeling",
+   "level": "",
+   "status": "missing",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "math:bayes_hierarchical",
+   "type": "math",
+   "label": "Bayesian hierarchical reference (roadmap A5)",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "algo:gop_classic",
+   "type": "algorithm",
+   "label": "Classic GOP (Witt–Young)",
+   "level": "",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "algo:gop_sf",
+   "type": "algorithm",
+   "label": "Segmentation-free CTC GOP",
+   "level": "",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "algo:gop_subst_aware",
+   "type": "algorithm",
+   "label": "Substitution-aware GOP (lahn-jali confusion set)",
+   "level": "",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "algo:free_phone_decode",
+   "type": "algorithm",
+   "label": "Free phone decoding + Levenshtein",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "algo:attribute_mdd",
+   "type": "algorithm",
+   "label": "Articulatory-attribute MDD",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "algo:perturbation",
+   "type": "algorithm",
+   "label": "Counterfactual perturbation (WSOLA madd, ghunnah trunc, splices)",
+   "level": "",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "algo:mahalanobis_ood",
+   "type": "algorithm",
+   "label": "Class-conditional Mahalanobis anomaly",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "algo:deep_knn",
+   "type": "algorithm",
+   "label": "Deep kNN anomaly",
+   "level": "",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "algo:cond_flow",
+   "type": "algorithm",
+   "label": "Conditional normalizing flow",
+   "level": "",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "algo:deep_svdd",
+   "type": "algorithm",
+   "label": "Deep SVDD",
+   "level": "",
+   "status": "speculative",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "algo:contrastive_embed",
+   "type": "algorithm",
+   "label": "SupCon/GE2E reciter embedding",
+   "level": "",
+   "status": "proposed",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "algo:ssm_prosody",
+   "type": "algorithm",
+   "label": "S4/Mamba/Neural CDE prosody",
+   "level": "",
+   "status": "speculative",
+   "priority": 5,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "algo:ksg",
+   "type": "algorithm",
+   "label": "KSG MI estimator",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "algo:blahut_arimoto",
+   "type": "algorithm",
+   "label": "Blahut–Arimoto",
+   "level": "",
+   "status": "proposed",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "algo:psis_loo",
+   "type": "algorithm",
+   "label": "PSIS-LOO",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:Turing.jl",
+   "type": "package",
+   "label": "Turing.jl",
+   "level": "",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:ConformalPrediction.jl",
+   "type": "package",
+   "label": "ConformalPrediction.jl",
+   "level": "",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:Lux.jl",
+   "type": "package",
+   "label": "Lux.jl",
+   "level": "",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:NearestNeighbors.jl",
+   "type": "package",
+   "label": "NearestNeighbors.jl",
+   "level": "",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:ParetoSmooth.jl",
+   "type": "package",
+   "label": "ParetoSmooth.jl",
+   "level": "",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:Associations.jl",
+   "type": "package",
+   "label": "Associations.jl",
+   "level": "",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:transformers",
+   "type": "package",
+   "label": "transformers",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:brms",
+   "type": "package",
+   "label": "brms",
+   "level": "",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:zuko",
+   "type": "package",
+   "label": "zuko",
+   "level": "",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "model:hf:TBOGamer22/wav2vec2-quran-phonetics",
+   "type": "model",
+   "label": "Current aligner; word-level training (domain shift)",
+   "level": "",
+   "status": "implemented",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "model:hf:obadx/muaalem-model-v3_2",
+   "type": "model",
+   "label": "w2v-BERT 2.0 11-level CTC (phonemes+10 sifaat)",
+   "level": "",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "model:hf:obadx/recitation-segmenter-v2",
+   "type": "model",
+   "label": "Waqf segmenter",
+   "level": "",
+   "status": "proposed",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "model:hf:facebook/w2v-bert-2.0",
+   "type": "model",
+   "label": "SSL backbone",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "model:hf:microsoft/wavlm-large",
+   "type": "model",
+   "label": "SSL backbone robust to reverb",
+   "level": "",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "model:hf:openai/whisper-large-v3",
+   "type": "model",
+   "label": "Encoder for speech-to-phoneme",
+   "level": "",
+   "status": "proposed",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "model:hf:IqraEval/Iqra_wavlm_base",
+   "type": "model",
+   "label": "Iqra'Eval MDD baseline",
+   "level": "",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "model:ecapa",
+   "type": "model",
+   "label": "ECAPA-TDNN timbre",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "data:hf:obadx/qdat_bench",
+   "type": "dataset",
+   "label": "159 learner clips, per-rule madd/ghunnah/qalqalah labels",
+   "level": "",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "data:hf:obadx/muaalem-annotated-v3",
+   "type": "dataset",
+   "label": "850h expert QPS-annotated",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "data:hf:IqraEval/QuranMB.v2",
+   "type": "dataset",
+   "label": "Iqra'Eval MDD test (phoneme, no Tajweed)",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "data:hf:IqraEval/Iqra_train",
+   "type": "dataset",
+   "label": "Iqra'Eval train",
+   "level": "",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "data:hf:IqraEval/Iqra_TTS",
+   "type": "dataset",
+   "label": "Synthetic error TTS",
+   "level": "",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "data:hf:Buraaq/quran-md-ayahs",
+   "type": "dataset",
+   "label": "Quran-MD 30 reciters",
+   "level": "",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "data:hf:Buraaq/quran-md-words",
+   "type": "dataset",
+   "label": "Word-level audio (aligner training)",
+   "level": "",
+   "status": "proposed",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "data:tadabur",
+   "type": "dataset",
+   "label": "Tadabur 1400h 600+ reciters",
+   "level": "",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "data:quranic_audio_dataset",
+   "type": "dataset",
+   "label": "Crowdsourced learner recitations",
+   "level": "",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "data:perturbation_set",
+   "type": "dataset",
+   "label": "Synthetic labelled lahn (to build)",
+   "level": "",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "data:local:everyayah_only_strategic",
+   "type": "dataset",
+   "label": "491 rows local raw verdicts",
+   "level": "",
+   "status": "implemented",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/06_information_neural.md",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2509.00094",
+   "type": "source",
+   "label": "muaalem/QPS multi-level CTC",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2506.07722",
+   "type": "source",
+   "label": "QuranMB benchmark",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2507.16838",
+   "type": "source",
+   "label": "GOP-SF",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2506.02080",
+   "type": "source",
+   "label": "Substitution-aware GOP",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2311.07037",
+   "type": "source",
+   "label": "Attribute MDD",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:1809.07441",
+   "type": "source",
+   "label": "Hierarchical conformal",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2208.02814",
+   "type": "source",
+   "label": "Conformal risk control",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2110.01052",
+   "type": "source",
+   "label": "Learn-then-Test",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2104.08279",
+   "type": "source",
+   "label": "Conformal outlier p-values",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:1905.09501",
+   "type": "source",
+   "label": "Bayesian IRT brms",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1007/BF03372160",
+   "type": "source",
+   "label": "Samejima GRM",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1007/978-1-4757-3990-9",
+   "type": "source",
+   "label": "Explanatory IRT",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1007/BF02294533",
+   "type": "source",
+   "label": "Testlet model",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1198/016214506000001437",
+   "type": "source",
+   "label": "Proper scoring rules",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1080/01621459.2018.1554485",
+   "type": "source",
+   "label": "Cauchy combination",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:cond-mat/0305641",
+   "type": "source",
+   "label": "KSG MI",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:1208.6338",
+   "type": "source",
+   "label": "WBIC",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:1507.04544",
+   "type": "source",
+   "label": "PSIS-LOO",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:physics/0004057",
+   "type": "source",
+   "label": "Information bottleneck",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:1706.04599",
+   "type": "source",
+   "label": "Temperature scaling",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1016/S0167-6393(99)00044-8",
+   "type": "source",
+   "label": "GOP Witt-Young",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:1807.03888",
+   "type": "source",
+   "label": "Mahalanobis OOD",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:1912.02762",
+   "type": "source",
+   "label": "Normalizing flows",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2604.18932",
+   "type": "source",
+   "label": "Tadabur",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2312.05187",
+   "type": "source",
+   "label": "Seamless w2v-BERT 2.0",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2110.13900",
+   "type": "source",
+   "label": "WavLM",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2312.00752",
+   "type": "source",
+   "label": "Mamba",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1109/TIT.1972.1054855",
+   "type": "source",
+   "label": "Blahut",
+   "level": "",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  }
+ ],
+ "edges": [
+  {
+   "from": "phen:lahn:jali",
+   "to": "math:letter_channel",
+   "rel": "models"
+  },
+  {
+   "from": "phen:lahn:jali",
+   "to": "algo:gop_subst_aware",
+   "rel": "models"
+  },
+  {
+   "from": "phen:lahn:jali",
+   "to": "math:poisson_jali_rate",
+   "rel": "models"
+  },
+  {
+   "from": "phen:makhraj",
+   "to": "algo:attribute_mdd",
+   "rel": "models"
+  },
+  {
+   "from": "phen:lahn:khafi",
+   "to": "math:surprisal",
+   "rel": "models"
+  },
+  {
+   "from": "phen:madd_length",
+   "to": "algo:perturbation",
+   "rel": "validates"
+  },
+  {
+   "from": "phen:ghunnah",
+   "to": "algo:perturbation",
+   "rel": "validates"
+  },
+  {
+   "from": "phen:sifaat",
+   "to": "model:hf:obadx/muaalem-model-v3_2",
+   "rel": "models"
+  },
+  {
+   "from": "phen:hafs_variants",
+   "to": "math:mdl",
+   "rel": "models"
+  },
+  {
+   "from": "phen:ijazah_grade",
+   "to": "math:ordinal_regression",
+   "rel": "models"
+  },
+  {
+   "from": "phen:ijazah_grade",
+   "to": "math:mirt",
+   "rel": "models"
+  },
+  {
+   "from": "math:letter_channel",
+   "to": "algo:free_phone_decode",
+   "rel": "requires"
+  },
+  {
+   "from": "math:letter_channel",
+   "to": "math:channel_capacity",
+   "rel": "requires"
+  },
+  {
+   "from": "math:channel_capacity",
+   "to": "algo:blahut_arimoto",
+   "rel": "implements"
+  },
+  {
+   "from": "math:surprisal",
+   "to": "math:bayes_hierarchical",
+   "rel": "requires"
+  },
+  {
+   "from": "math:surprisal",
+   "to": "math:proper_scoring",
+   "rel": "requires"
+  },
+  {
+   "from": "math:mutual_information",
+   "to": "algo:ksg",
+   "rel": "requires"
+  },
+  {
+   "from": "math:mdl",
+   "to": "algo:psis_loo",
+   "rel": "requires"
+  },
+  {
+   "from": "math:irt",
+   "to": "pkg:Turing.jl",
+   "rel": "requires"
+  },
+  {
+   "from": "math:irt",
+   "to": "pkg:brms",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "math:mirt",
+   "to": "math:irt",
+   "rel": "requires"
+  },
+  {
+   "from": "math:testlet",
+   "to": "math:irt",
+   "rel": "requires"
+  },
+  {
+   "from": "math:many_facet_rasch",
+   "to": "math:irt",
+   "rel": "requires"
+  },
+  {
+   "from": "math:cat",
+   "to": "math:irt",
+   "rel": "requires"
+  },
+  {
+   "from": "math:bayes_decision",
+   "to": "math:irt",
+   "rel": "requires"
+  },
+  {
+   "from": "math:bayes_decision",
+   "to": "math:surprisal",
+   "rel": "requires"
+  },
+  {
+   "from": "math:bayes_decision",
+   "to": "algo:gop_sf",
+   "rel": "requires"
+  },
+  {
+   "from": "math:bayes_decision",
+   "to": "math:mnar",
+   "rel": "implements"
+  },
+  {
+   "from": "math:poisson_jali_rate",
+   "to": "algo:perturbation",
+   "rel": "requires"
+  },
+  {
+   "from": "math:ordinal_regression",
+   "to": "math:mirt",
+   "rel": "requires"
+  },
+  {
+   "from": "math:cauchy_combination",
+   "to": "code:app/calibration.py",
+   "rel": "implements"
+  },
+  {
+   "from": "math:conformal_loo",
+   "to": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "rel": "implements"
+  },
+  {
+   "from": "math:hierarchical_conformal",
+   "to": "math:conformal_loo",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "math:mondrian_conformal",
+   "to": "pkg:ConformalPrediction.jl",
+   "rel": "requires"
+  },
+  {
+   "from": "math:conformal_risk_control",
+   "to": "algo:perturbation",
+   "rel": "requires"
+  },
+  {
+   "from": "math:learn_then_test",
+   "to": "math:conformal_risk_control",
+   "rel": "requires"
+  },
+  {
+   "from": "math:loo_pit",
+   "to": "math:bayes_hierarchical",
+   "rel": "validates"
+  },
+  {
+   "from": "math:temperature_scaling",
+   "to": "model:hf:TBOGamer22/wav2vec2-quran-phonetics",
+   "rel": "validates"
+  },
+  {
+   "from": "math:temperature_scaling",
+   "to": "algo:gop_sf",
+   "rel": "validates"
+  },
+  {
+   "from": "math:mnar",
+   "to": "code:app/calibration.py",
+   "rel": "models"
+  },
+  {
+   "from": "math:mnar",
+   "to": "code:app/scoring.py",
+   "rel": "models"
+  },
+  {
+   "from": "math:irt",
+   "to": "code:app/scoring.py",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "math:surprisal",
+   "to": "code:app/calibration.py",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "algo:gop_sf",
+   "to": "model:hf:obadx/muaalem-model-v3_2",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:gop_subst_aware",
+   "to": "algo:gop_sf",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:gop_sf",
+   "to": "algo:gop_classic",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "algo:free_phone_decode",
+   "to": "model:hf:TBOGamer22/wav2vec2-quran-phonetics",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:attribute_mdd",
+   "to": "model:hf:obadx/muaalem-model-v3_2",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:gop_sf",
+   "to": "code:app/mdd/",
+   "rel": "implements"
+  },
+  {
+   "from": "math:letter_channel",
+   "to": "code:app/information/channel.py",
+   "rel": "implements"
+  },
+  {
+   "from": "model:hf:obadx/muaalem-model-v3_2",
+   "to": "model:hf:facebook/w2v-bert-2.0",
+   "rel": "requires"
+  },
+  {
+   "from": "model:hf:obadx/muaalem-model-v3_2",
+   "to": "data:hf:obadx/muaalem-annotated-v3",
+   "rel": "trained_on"
+  },
+  {
+   "from": "model:hf:TBOGamer22/wav2vec2-quran-phonetics",
+   "to": "data:hf:Buraaq/quran-md-words",
+   "rel": "trained_on"
+  },
+  {
+   "from": "model:hf:TBOGamer22/wav2vec2-quran-phonetics",
+   "to": "code:app/aligner.py",
+   "rel": "implements"
+  },
+  {
+   "from": "data:hf:obadx/qdat_bench",
+   "to": "algo:gop_sf",
+   "rel": "validates"
+  },
+  {
+   "from": "data:hf:IqraEval/QuranMB.v2",
+   "to": "algo:gop_subst_aware",
+   "rel": "validates"
+  },
+  {
+   "from": "data:perturbation_set",
+   "to": "algo:perturbation",
+   "rel": "implements"
+  },
+  {
+   "from": "data:tadabur",
+   "to": "algo:contrastive_embed",
+   "rel": "validates"
+  },
+  {
+   "from": "data:tadabur",
+   "to": "algo:mahalanobis_ood",
+   "rel": "validates"
+  },
+  {
+   "from": "data:quranic_audio_dataset",
+   "to": "math:irt",
+   "rel": "validates"
+  },
+  {
+   "from": "data:local:everyayah_only_strategic",
+   "to": "math:irt",
+   "rel": "validates"
+  },
+  {
+   "from": "algo:mahalanobis_ood",
+   "to": "math:conformal_risk_control",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:cond_flow",
+   "to": "algo:mahalanobis_ood",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "algo:deep_knn",
+   "to": "algo:mahalanobis_ood",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "algo:deep_svdd",
+   "to": "algo:mahalanobis_ood",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "algo:cond_flow",
+   "to": "pkg:zuko",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:cond_flow",
+   "to": "pkg:Lux.jl",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:ksg",
+   "to": "pkg:NearestNeighbors.jl",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:ksg",
+   "to": "pkg:Associations.jl",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "algo:psis_loo",
+   "to": "pkg:ParetoSmooth.jl",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:contrastive_embed",
+   "to": "model:ecapa",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "model:ecapa",
+   "to": "code:app/fingerprint.py",
+   "rel": "implements"
+  },
+  {
+   "from": "math:info_bottleneck",
+   "to": "algo:contrastive_embed",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:ssm_prosody",
+   "to": "code:research_agency_lab/substrate_library/julia/src/QaariLab.jl",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "math:bayes_hierarchical",
+   "to": "code:research_agency_lab/substrate_library/julia/src/QaariLab.jl",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "math:rate_distortion",
+   "to": "math:bayes_decision",
+   "rel": "requires"
+  },
+  {
+   "from": "math:js_divergence",
+   "to": "math:surprisal",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "model:hf:IqraEval/Iqra_wavlm_base",
+   "to": "model:hf:microsoft/wavlm-large",
+   "rel": "requires"
+  },
+  {
+   "from": "model:hf:openai/whisper-large-v3",
+   "to": "model:hf:obadx/muaalem-model-v3_2",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "model:hf:obadx/recitation-segmenter-v2",
+   "to": "phen:hafs_variants",
+   "rel": "models"
+  },
+  {
+   "from": "model:hf:obadx/muaalem-model-v3_2",
+   "to": "src:arxiv:2509.00094",
+   "rel": "cites"
+  },
+  {
+   "from": "data:hf:IqraEval/QuranMB.v2",
+   "to": "src:arxiv:2506.07722",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:gop_sf",
+   "to": "src:arxiv:2507.16838",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:gop_subst_aware",
+   "to": "src:arxiv:2506.02080",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:attribute_mdd",
+   "to": "src:arxiv:2311.07037",
+   "rel": "cites"
+  },
+  {
+   "from": "math:hierarchical_conformal",
+   "to": "src:arxiv:1809.07441",
+   "rel": "cites"
+  },
+  {
+   "from": "math:conformal_risk_control",
+   "to": "src:arxiv:2208.02814",
+   "rel": "cites"
+  },
+  {
+   "from": "math:learn_then_test",
+   "to": "src:arxiv:2110.01052",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:mahalanobis_ood",
+   "to": "src:arxiv:2104.08279",
+   "rel": "cites"
+  },
+  {
+   "from": "math:irt",
+   "to": "src:arxiv:1905.09501",
+   "rel": "cites"
+  },
+  {
+   "from": "math:irt",
+   "to": "src:doi:10.1007/BF03372160",
+   "rel": "cites"
+  },
+  {
+   "from": "math:irt",
+   "to": "src:doi:10.1007/978-1-4757-3990-9",
+   "rel": "cites"
+  },
+  {
+   "from": "math:testlet",
+   "to": "src:doi:10.1007/BF02294533",
+   "rel": "cites"
+  },
+  {
+   "from": "math:proper_scoring",
+   "to": "src:doi:10.1198/016214506000001437",
+   "rel": "cites"
+  },
+  {
+   "from": "math:cauchy_combination",
+   "to": "src:doi:10.1080/01621459.2018.1554485",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:ksg",
+   "to": "src:arxiv:cond-mat/0305641",
+   "rel": "cites"
+  },
+  {
+   "from": "math:mdl",
+   "to": "src:arxiv:1208.6338",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:psis_loo",
+   "to": "src:arxiv:1507.04544",
+   "rel": "cites"
+  },
+  {
+   "from": "math:info_bottleneck",
+   "to": "src:arxiv:physics/0004057",
+   "rel": "cites"
+  },
+  {
+   "from": "math:temperature_scaling",
+   "to": "src:arxiv:1706.04599",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:gop_classic",
+   "to": "src:doi:10.1016/S0167-6393(99)00044-8",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:mahalanobis_ood",
+   "to": "src:arxiv:1807.03888",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:cond_flow",
+   "to": "src:arxiv:1912.02762",
+   "rel": "cites"
+  },
+  {
+   "from": "data:tadabur",
+   "to": "src:arxiv:2604.18932",
+   "rel": "cites"
+  },
+  {
+   "from": "model:hf:facebook/w2v-bert-2.0",
+   "to": "src:arxiv:2312.05187",
+   "rel": "cites"
+  },
+  {
+   "from": "model:hf:microsoft/wavlm-large",
+   "to": "src:arxiv:2110.13900",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:ssm_prosody",
+   "to": "src:arxiv:2312.00752",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:blahut_arimoto",
+   "to": "src:doi:10.1109/TIT.1972.1054855",
+   "rel": "cites"
+  }
+ ]
+}

@@ -1,0 +1,1232 @@
+{
+ "nodes": [
+  {
+   "id": "doc:tajweed_treatises",
+   "type": "source",
+   "label": "Tajweed treatises I–IV",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "implemented",
+   "file": "datastore/tajweed_taxonomy.py",
+   "note": "41 concepts mapped to engine mechanisms"
+  },
+  {
+   "id": "treatise:I",
+   "type": "source",
+   "label": "Treatise I",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "reference"
+  },
+  {
+   "id": "mech:tempo",
+   "type": "method",
+   "label": "Mechanism: tempo",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "implemented"
+  },
+  {
+   "id": "concept:zaman_proportionality",
+   "type": "phenomenon",
+   "label": "Zamān/Harakah = K constant across tempo",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "covered",
+   "note": "every duration is expressed in the reciter's OWN counts, so the ratio is what is judged",
+   "section": "1.1",
+   "file": "sukoon_timing.jl"
+  },
+  {
+   "id": "concept:three_tempos",
+   "type": "phenomenon",
+   "label": "Taḥqīq / Tadwīr / Ḥadr baseline (≈350/250/150 ms per harakah)",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "covered",
+   "note": "measured haraka_s spans 0.16–0.40 s over 41 reciters, which straddles all three bands; classifying each reciter into a mode is a one-line addition",
+   "section": "1.2",
+   "file": "sukoon_timing.jl"
+  },
+  {
+   "id": "mech:-",
+   "type": "method",
+   "label": "Mechanism: -",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "implemented"
+  },
+  {
+   "id": "concept:physiology",
+   "type": "phenomenon",
+   "label": "Respiratory / laryngeal / supraglottal mechanics",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "out_of_scope",
+   "note": "anatomical explanation, not an acoustic measurement",
+   "section": "1.3",
+   "file": ""
+  },
+  {
+   "id": "mech:spectral",
+   "type": "method",
+   "label": "Mechanism: spectral",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "implemented"
+  },
+  {
+   "id": "concept:harakah_anatomy",
+   "type": "phenomenon",
+   "label": "Fatḥah / Kasrah / Ḍammah articulatory posture",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "partial",
+   "note": "the phoneme head distinguishes the three vowels and letter_report.jl confirms every expected vowel is recorded (id_vowel = 1.0000 for all 41 reciters, every tempo); F1/F2 purity is not wired",
+   "section": "2.1",
+   "file": "app/sifaat/formants.py"
+  },
+  {
+   "id": "mech:consistency",
+   "type": "method",
+   "label": "Mechanism: consistency",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "implemented"
+  },
+  {
+   "id": "concept:harakah_isochrony",
+   "type": "phenomenon",
+   "label": "Zamān(Fatḥah) = Zamān(Kasrah) = Zamān(Ḍammah)",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "blocked",
+   "note": "BUILT AND RUN, but not measurable at the model's 40 ms frame rate: a short vowel is 1–2 frames, so the per-vowel medians all quantise to exactly 1.0 and the isochrony spread is 0.0 for all 41 reciters. Needs sub-frame onset estimation or a finer-rate alignment, not more data",
+   "section": "2.2",
+   "file": "harakat_timing.jl"
+  },
+  {
+   "id": "concept:harakah_weight_independence",
+   "type": "phenomenon",
+   "label": "Vowel length independent of the consonant's weight",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "blocked",
+   "note": "same 40 ms quantisation: heavy-vs-light vowel bias reads exactly 0.0 for every reciter",
+   "section": "2.2",
+   "file": "harakat_timing.jl"
+  },
+  {
+   "id": "mech:durational",
+   "type": "method",
+   "label": "Mechanism: durational",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "implemented"
+  },
+  {
+   "id": "concept:ikhtilas",
+   "type": "phenomenon",
+   "label": "Ikhtilās — vowel truncated below 1U (≈⅔U)",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "covered",
+   "note": "measured as the short tail of the vowel-duration distribution: anchors 5.18 %, others 4.54 %",
+   "section": "2.3",
+   "file": "harakat_timing.jl"
+  },
+  {
+   "id": "concept:ishba",
+   "type": "phenomenon",
+   "label": "Ishbā' — vowel stretched beyond 1U into a madd",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "covered",
+   "note": "the long tail: anchors 1.47 % vs others 2.22 % — anchors over-stretch vowels less, the expected direction (ishbā' is the error the treatise warns of at slow tempo)",
+   "section": "2.3",
+   "file": "harakat_timing.jl"
+  },
+  {
+   "id": "concept:sukoon_shiddah",
+   "type": "phenomenon",
+   "label": "Shiddah — complete stop, shortest sākin duration",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "covered",
+   "note": "measured per reciter in own counts",
+   "section": "3.2",
+   "file": "sukoon_timing.jl"
+  },
+  {
+   "id": "concept:sukoon_tawassut",
+   "type": "phenomenon",
+   "label": "Tawassuṭ / bayniyyah (ل ن ع م ر) — medium duration",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "covered",
+   "note": "the 'لن عمر' set; measured",
+   "section": "3.3",
+   "file": "sukoon_timing.jl"
+  },
+  {
+   "id": "concept:sukoon_rakhawah",
+   "type": "phenomenon",
+   "label": "Rakhāwah — sustained flow, longest sākin duration",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "covered",
+   "note": "anchor separation rikhw−shadeed 0.861 vs 0.617 for others; mujawwad styles top the ranking",
+   "section": "3.4",
+   "file": "sukoon_timing.jl"
+  },
+  {
+   "id": "concept:madd_tabii_2u",
+   "type": "phenomenon",
+   "label": "Madd Ṭabī'ī locked at 2 counts",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "covered",
+   "note": "madd_short 93.7 % / madd_long 99.0 %; anchors measure 2.25 own-counts",
+   "section": "4.2",
+   "file": "ruleswap_gop.jl + tasawi_run.jl"
+  },
+  {
+   "id": "concept:madd_4_5_6",
+   "type": "phenomenon",
+   "label": "The 4, 5 and 6-count scales",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "partial",
+   "note": "detected and consistency-scored, but the ABSOLUTE scale is uncalibrated: measured 2.25 : 6.20 : 12.0 where the notation implies 2 : 4 : 6",
+   "section": "4.3",
+   "file": "ruleswap_gop.jl + tasawi_run.jl"
+  },
+  {
+   "id": "concept:ghunnah_four_levels",
+   "type": "phenomenon",
+   "label": "Marātib al-Ghunnah: Akmal > Kāmilah > Nāqiṣah > Anqaṣ",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "uncovered",
+   "note": "we measure ghunnah length but do not GRADE it by structural context; the four levels are distinguishable from the phoneme string (mushaddad/idghām vs ikhfā'/iqlāb vs iẓhār vs voweled)",
+   "section": "5.2",
+   "file": ""
+  },
+  {
+   "id": "mech:attribute",
+   "type": "method",
+   "label": "Mechanism: attribute",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "implemented"
+  },
+  {
+   "id": "concept:ghunnah_vs_madd",
+   "type": "phenomenon",
+   "label": "2U ghunnah ≠ 2U madd; no nasal bleed into the madd",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "partial",
+   "note": "the head judges nasality; the 'velum snaps shut instantly' cut-off is not measured",
+   "section": "5.3/6.1",
+   "file": "SifatGop.jl (ghonna head)"
+  },
+  {
+   "id": "concept:madd_arid",
+   "type": "phenomenon",
+   "label": "Madd 'Āriḍ li-s-Sukoon at 2/4/6 with terminal decay",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "partial",
+   "note": "located by the parser; not yet a tasāwī class of its own",
+   "section": "6.2",
+   "file": "rule_catalogue"
+  },
+  {
+   "id": "concept:aqwa_al_mudud",
+   "type": "phenomenon",
+   "label": "Strength order Lāzim > Muttaṣil > 'Āriḍ > Munfaṣil > Badal",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "uncovered",
+   "note": "rule-resolution logic, not a measurement: when two causes collide the stronger sets the expected duration. Needed so the engine expects the RIGHT target before judging it",
+   "section": "7.1",
+   "file": ""
+  },
+  {
+   "id": "concept:taswiyat_al_mudud",
+   "type": "phenomenon",
+   "label": "Taswiyah — every instance of a madd category held identically",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "covered",
+   "note": "exactly what the CV measures; anchors more consistent in all six held classes",
+   "section": "7.2",
+   "file": "tasawi_run.jl"
+  },
+  {
+   "id": "concept:madd_drift",
+   "type": "phenomenon",
+   "label": "Drift error — a category shrinking over a passage through fatigue",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "uncovered",
+   "note": "a TREND over verse position, not a variance; one regression over the same durations we already have",
+   "section": "7.2",
+   "file": ""
+  },
+  {
+   "id": "treatise:I/II",
+   "type": "source",
+   "label": "Treatise I/II",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "reference"
+  },
+  {
+   "id": "concept:tafkhim_five_levels",
+   "type": "phenomenon",
+   "label": "Five graded levels of tafkhīm by vowel context",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "partial",
+   "note": "the head has mofakham / moraqaq / adnā-l-mofakham (3 classes); the treatise grades 5 by whether the letter carries fatḥah+alif, fatḥah, ḍammah, sukoon or kasrah",
+   "section": "3.2",
+   "file": "SifatGop.jl (tafkheem head)"
+  },
+  {
+   "id": "treatise:II",
+   "type": "source",
+   "label": "Treatise II",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "reference"
+  },
+  {
+   "id": "concept:tafkhim_nisbi",
+   "type": "phenomenon",
+   "label": "Relative heaviness: isti'lā' without iṭbāq + kasrah",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "partial",
+   "note": "the distinction exists in the head's 'adnā' class but is not conditioned on the vowel",
+   "section": "3.2",
+   "file": "SifatGop.jl"
+  },
+  {
+   "id": "concept:raa_lam_weight",
+   "type": "phenomenon",
+   "label": "Conditional tafkhīm/tarqīq of ر and of the lām of ٱللَّه",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "covered",
+   "note": "the strictest conditional rules in tajweed — 11 conditions stored as data and each pinned by a test. The phonetizer applies them correctly, including ر sākin after an original kasrah with an isti'lā' following (مِرْصَاد heavy) vs without (فِرْعَوْن light), and the jalālah after fatḥah/ḍammah vs kasrah. Corpus: ر 79.3 % heavy / 20.7 % light, ل 13.7 % / 86.3 %. NOTE the jalālah rule depends on the PRECEDING word, so it must be validated on full ayahs, never isolated words",
+   "section": "3.2/12",
+   "file": "datastore/letter_reference.py + tests/test_raa_lam_weight.py"
+  },
+  {
+   "id": "concept:letter_completeness",
+   "type": "phenomenon",
+   "label": "Every letter's full 5–7 classical sifāt, applied and not applied",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "covered",
+   "note": "10 judged attributes from the heads plus the inherent ones no model can judge (isti'lā'/istifāl, idhlāq/iṣmāt, inḥirāf, līn) and the makhraj; median 7.36 characteristics per unit",
+   "section": "3.1",
+   "file": "letter_report.jl + datastore/letter_reference.py"
+  },
+  {
+   "id": "concept:hadr_integrity",
+   "type": "phenomenon",
+   "label": "Under Ḥadr, tawassuṭ/rakhāwah must not collapse into shiddah",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "covered",
+   "note": "this IS the separation metric: fast imams show the smallest rikhw−shadeed gap (Shuraym 0.250)",
+   "section": "8.2",
+   "file": "sukoon_timing.jl"
+  },
+  {
+   "id": "concept:hams_jahr",
+   "type": "phenomenon",
+   "label": "Hams vs Jahr — breath vs vocal-fold vibration",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "covered",
+   "note": "1.0 % anchor false alarm",
+   "section": "2.1",
+   "file": "SifatGop.jl (hams_or_jahr)"
+  },
+  {
+   "id": "concept:shidda_rakhawa_attr",
+   "type": "phenomenon",
+   "label": "Shiddah / Tawassuṭ / Rakhāwah as a letter quality",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "covered",
+   "note": "three classes, 1.0 % anchor false alarm",
+   "section": "2.2",
+   "file": "SifatGop.jl (shidda_or_rakhawa)"
+  },
+  {
+   "id": "concept:istila_istifal",
+   "type": "phenomenon",
+   "label": "Isti'lā' vs Istifāl — tongue-root elevation",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "partial",
+   "note": "the head covers istiṭāla (ض); isti'lā'/istifāl proper has no dedicated head and is inferred from tafkhīm",
+   "section": "2.3",
+   "file": "SifatGop.jl (istitala)"
+  },
+  {
+   "id": "concept:itbaq_infitah",
+   "type": "phenomenon",
+   "label": "Iṭbāq vs Infitāḥ — trapping sound against the palate",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "covered",
+   "note": "1.0 % anchor false alarm, n = 2,108 at T300",
+   "section": "2.4",
+   "file": "SifatGop.jl (itbaq)"
+  },
+  {
+   "id": "concept:idhlaq_ismat",
+   "type": "phenomenon",
+   "label": "Idhlāq vs Iṣmāt — ease of production",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "out_of_scope",
+   "note": "a lexical/morphological constraint, not an audible per-instance quality; no muaalem head",
+   "section": "2.5",
+   "file": ""
+  },
+  {
+   "id": "concept:letter_strength",
+   "type": "phenomenon",
+   "label": "Composite letter strength from its sifāt",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "partial",
+   "note": "derivable by combining the ten head LLRs; not yet computed as one score",
+   "section": "3.1",
+   "file": "SifatGop.jl"
+  },
+  {
+   "id": "mech:segmental",
+   "type": "method",
+   "label": "Mechanism: segmental",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "implemented"
+  },
+  {
+   "id": "concept:makharij_clinicals",
+   "type": "phenomenon",
+   "label": "Per-letter articulation clinics (ء ه ع ح غ خ ق ك ج ش ي ض ل ر ط د ت ص ز س ظ ذ ث ف ب م و)",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "covered",
+   "note": "letter identity and its classical confusions at T300: 216,577 consonant swaps, 99.91 % detected, 99.06 % NAMED; makhraj recorded per letter",
+   "section": "4–16",
+   "file": "textswap_gop.jl + datastore/letter_reference.py"
+  },
+  {
+   "id": "concept:compound_collisions",
+   "type": "phenomenon",
+   "label": "Adjacent-letter collisions and assimilation",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "partial",
+   "note": "idghām/shadda covered; not every collision type",
+   "section": "17",
+   "file": "ruleswap_gop.jl (idgham_undo)"
+  },
+  {
+   "id": "concept:endurance",
+   "type": "phenomenon",
+   "label": "Muscular endurance and self-correction",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "uncovered",
+   "note": "overlaps madd_drift: degradation over a long pass",
+   "section": "18",
+   "file": ""
+  },
+  {
+   "id": "treatise:III",
+   "type": "source",
+   "label": "Treatise III",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "reference"
+  },
+  {
+   "id": "concept:itmam_universal",
+   "type": "phenomenon",
+   "label": "Universal law of vowel perfection",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "uncovered",
+   "note": "every harakah fully formed and equal; the measurement is harakah_isochrony plus ikhtilās/ishbā'",
+   "section": "1.1",
+   "file": ""
+  },
+  {
+   "id": "concept:neutral_sukoon_zero",
+   "type": "phenomenon",
+   "label": "The neutral sukoon state as the absolute zero point",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "partial",
+   "note": "we measure sakin durations by class; 'zero point' as a reference posture is not modelled",
+   "section": "1.2",
+   "file": "sukoon_timing.jl"
+  },
+  {
+   "id": "concept:vowel_sequences",
+   "type": "phenomenon",
+   "label": "Consecutive ḍammah, alternating vowels, ḍammah→sukoon",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "uncovered",
+   "note": "sequence-level vowel integrity (كُتُبُهُ, يَعِدُكُمُ, كُنتُمْ); measurable from the same durations",
+   "section": "3.1–3.3",
+   "file": ""
+  },
+  {
+   "id": "treatise:IV",
+   "type": "source",
+   "label": "Treatise IV",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "reference"
+  },
+  {
+   "id": "concept:ten_readers",
+   "type": "phenomenon",
+   "label": "The ten readers' structural systematics",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "out_of_scope",
+   "note": "the engine is Hafs 'an 'Āṣim only; other readings would need their own reference text and thresholds",
+   "section": "I–III",
+   "file": ""
+  },
+  {
+   "id": "concept:metric_temporal_pulse",
+   "type": "phenomenon",
+   "label": "Temporal Pulse Isochrony — 1U/2U/4U/5U/6U ratios hold across tempo",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "covered",
+   "note": "the treatise's own first evaluation metric; this is the tasāwī CV plus own-counts normalisation",
+   "section": "IV.1",
+   "file": "tasawi_run.jl + sukoon_timing.jl"
+  },
+  {
+   "id": "concept:metric_formant_integrity",
+   "type": "phenomenon",
+   "label": "Formant Track Integrity — pure /a/ /i/ /u/, zero nasalisation on vowels",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "partial",
+   "note": "formant code exists in the legacy pipeline; not wired to the muaalem path, and 'zero nasalisation on pure vowels' is checkable with the ghonna head",
+   "section": "IV.2",
+   "file": "app/sifaat/formants.py"
+  },
+  {
+   "id": "concept:metric_consonantal_envelope",
+   "type": "phenomenon",
+   "label": "Consonantal Envelope — complete closure, clean release",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "partial",
+   "note": "qalqala release covered at 99.84 %; energy-drop during the stop phase is not measured",
+   "section": "IV.3",
+   "file": "SifatGop.jl (qalqla) + ruleswap_gop.jl"
+  },
+  {
+   "id": "concept:metric_nasal_isolation",
+   "type": "phenomenon",
+   "label": "Nasal Channel Isolation — clear ghunnah, instant cut-off",
+   "refs": [
+    "datastore/tajweed_taxonomy.py"
+   ],
+   "status": "partial",
+   "note": "nasal presence covered; the cut-off transient is not",
+   "section": "IV.4",
+   "file": "SifatGop.jl (ghonna)"
+  }
+ ],
+ "edges": [
+  {
+   "from": "concept:zaman_proportionality",
+   "to": "treatise:I",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:zaman_proportionality",
+   "to": "mech:tempo",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:zaman_proportionality",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:three_tempos",
+   "to": "treatise:I",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:three_tempos",
+   "to": "mech:tempo",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:three_tempos",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:physiology",
+   "to": "treatise:I",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:physiology",
+   "to": "mech:-",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:physiology",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:harakah_anatomy",
+   "to": "treatise:I",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:harakah_anatomy",
+   "to": "mech:spectral",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:harakah_anatomy",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:harakah_isochrony",
+   "to": "treatise:I",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:harakah_isochrony",
+   "to": "mech:consistency",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:harakah_isochrony",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:harakah_weight_independence",
+   "to": "treatise:I",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:harakah_weight_independence",
+   "to": "mech:consistency",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:harakah_weight_independence",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:ikhtilas",
+   "to": "treatise:I",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:ikhtilas",
+   "to": "mech:durational",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:ikhtilas",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:ishba",
+   "to": "treatise:I",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:ishba",
+   "to": "mech:durational",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:ishba",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:sukoon_shiddah",
+   "to": "treatise:I",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:sukoon_shiddah",
+   "to": "mech:tempo",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:sukoon_shiddah",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:sukoon_tawassut",
+   "to": "treatise:I",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:sukoon_tawassut",
+   "to": "mech:tempo",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:sukoon_tawassut",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:sukoon_rakhawah",
+   "to": "treatise:I",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:sukoon_rakhawah",
+   "to": "mech:tempo",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:sukoon_rakhawah",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:madd_tabii_2u",
+   "to": "treatise:I",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:madd_tabii_2u",
+   "to": "mech:durational",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:madd_tabii_2u",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:madd_4_5_6",
+   "to": "treatise:I",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:madd_4_5_6",
+   "to": "mech:durational",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:madd_4_5_6",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:ghunnah_four_levels",
+   "to": "treatise:I",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:ghunnah_four_levels",
+   "to": "mech:durational",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:ghunnah_four_levels",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:ghunnah_vs_madd",
+   "to": "treatise:I",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:ghunnah_vs_madd",
+   "to": "mech:attribute",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:ghunnah_vs_madd",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:madd_arid",
+   "to": "treatise:I",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:madd_arid",
+   "to": "mech:durational",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:madd_arid",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:aqwa_al_mudud",
+   "to": "treatise:I",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:aqwa_al_mudud",
+   "to": "mech:-",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:aqwa_al_mudud",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:taswiyat_al_mudud",
+   "to": "treatise:I",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:taswiyat_al_mudud",
+   "to": "mech:consistency",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:taswiyat_al_mudud",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:madd_drift",
+   "to": "treatise:I",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:madd_drift",
+   "to": "mech:consistency",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:madd_drift",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:tafkhim_five_levels",
+   "to": "treatise:I/II",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:tafkhim_five_levels",
+   "to": "mech:attribute",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:tafkhim_five_levels",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:tafkhim_nisbi",
+   "to": "treatise:II",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:tafkhim_nisbi",
+   "to": "mech:attribute",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:tafkhim_nisbi",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:raa_lam_weight",
+   "to": "treatise:II",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:raa_lam_weight",
+   "to": "mech:attribute",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:raa_lam_weight",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:letter_completeness",
+   "to": "treatise:II",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:letter_completeness",
+   "to": "mech:attribute",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:letter_completeness",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:hadr_integrity",
+   "to": "treatise:I",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:hadr_integrity",
+   "to": "mech:tempo",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:hadr_integrity",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:hams_jahr",
+   "to": "treatise:II",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:hams_jahr",
+   "to": "mech:attribute",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:hams_jahr",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:shidda_rakhawa_attr",
+   "to": "treatise:II",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:shidda_rakhawa_attr",
+   "to": "mech:attribute",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:shidda_rakhawa_attr",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:istila_istifal",
+   "to": "treatise:II",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:istila_istifal",
+   "to": "mech:attribute",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:istila_istifal",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:itbaq_infitah",
+   "to": "treatise:II",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:itbaq_infitah",
+   "to": "mech:attribute",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:itbaq_infitah",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:idhlaq_ismat",
+   "to": "treatise:II",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:idhlaq_ismat",
+   "to": "mech:-",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:idhlaq_ismat",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:letter_strength",
+   "to": "treatise:II",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:letter_strength",
+   "to": "mech:attribute",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:letter_strength",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:makharij_clinicals",
+   "to": "treatise:II",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:makharij_clinicals",
+   "to": "mech:segmental",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:makharij_clinicals",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:compound_collisions",
+   "to": "treatise:II",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:compound_collisions",
+   "to": "mech:segmental",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:compound_collisions",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:endurance",
+   "to": "treatise:II",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:endurance",
+   "to": "mech:consistency",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:endurance",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:itmam_universal",
+   "to": "treatise:III",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:itmam_universal",
+   "to": "mech:consistency",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:itmam_universal",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:neutral_sukoon_zero",
+   "to": "treatise:III",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:neutral_sukoon_zero",
+   "to": "mech:tempo",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:neutral_sukoon_zero",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:vowel_sequences",
+   "to": "treatise:III",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:vowel_sequences",
+   "to": "mech:consistency",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:vowel_sequences",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:ten_readers",
+   "to": "treatise:IV",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:ten_readers",
+   "to": "mech:-",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:ten_readers",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:metric_temporal_pulse",
+   "to": "treatise:IV",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:metric_temporal_pulse",
+   "to": "mech:consistency",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:metric_temporal_pulse",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:metric_formant_integrity",
+   "to": "treatise:IV",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:metric_formant_integrity",
+   "to": "mech:spectral",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:metric_formant_integrity",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:metric_consonantal_envelope",
+   "to": "treatise:IV",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:metric_consonantal_envelope",
+   "to": "mech:attribute",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:metric_consonantal_envelope",
+   "rel": "defines"
+  },
+  {
+   "from": "concept:metric_nasal_isolation",
+   "to": "treatise:IV",
+   "rel": "from_source"
+  },
+  {
+   "from": "concept:metric_nasal_isolation",
+   "to": "mech:attribute",
+   "rel": "measured_by"
+  },
+  {
+   "from": "doc:tajweed_treatises",
+   "to": "concept:metric_nasal_isolation",
+   "rel": "defines"
+  }
+ ]
+}

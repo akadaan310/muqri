@@ -1,0 +1,1534 @@
+{
+ "_doc": "Hand-maintained core: what is IMPLEMENTED in the repo today (engine + research lab) and the frontier_math_roadmap.md items. Research-agent fragments (00-07) add proposals. Verified against the code on 2026-09-23 (HEAD 7a37469 + working tree); details, formulas, constants and evidence are in ../CODEBASE_ATLAS.md. Notes starting with BUGGY flag measured defects; build_map keeps the most advanced status across fragments, so a 'partial' here can be overridden by an 'implemented' elsewhere (see atlas, Graph hygiene).",
+ "nodes": [
+  {
+   "id": "code:app/audio.py",
+   "type": "code",
+   "label": "load/condition audio: mono, 16 kHz, 40 Hz HPF, -1 dBFS, SNR, spectral subtraction",
+   "status": "implemented",
+   "note": "tests/test_audio.py"
+  },
+  {
+   "id": "code:app/quran_text.py",
+   "type": "code",
+   "label": "Uthmani text provider (bundled sample, alquran.cloud Tanzil cache), basmala stripping",
+   "status": "implemented"
+  },
+  {
+   "id": "code:app/models.py",
+   "type": "code",
+   "label": "RuleType (39), Status, LetterUnit, RuleInstance, Alignment, RuleDiagnostic",
+   "status": "implemented",
+   "note": "In flight: Status.REVIEW being added (P0 skip-bias fix)."
+  },
+  {
+   "id": "code:app/tajweed_rules/parser.py",
+   "type": "code",
+   "label": "Uthmani text -> letter units -> rule instances (Hafs)",
+   "status": "implemented",
+   "note": "BUGGY: 12 Hafs orthography bugs (00 §1 rows 28,45,46,51,99,109,110,112,119,120 + 2 sakt bugs; 04 §0): _DROP deletes U+06D6-06DB/06E3/06EA-06ED; U+06DC inside يبصط/بصطة gives a false sakt; U+06E0 alif always silent; sakt vs ayah-end stop (18:1, 36:52, 69:28)."
+  },
+  {
+   "id": "code:app/aligner.py",
+   "type": "code",
+   "label": "wav2vec2 CTC forced alignment; per-frame phonetic log-posteriors",
+   "status": "implemented",
+   "note": "Forced to the canonical text (no competitor, so no GOP). Vocab lacks single tokens for ث ذ خ ش غ (split into 2); word-initial hamza has no token (01 §0). align_conf = mean exp(logpost) over non-blank frames."
+  },
+  {
+   "id": "code:app/segmenter.py",
+   "type": "code",
+   "label": "ayah locator: pause chunking + semi-global CTC Viterbi + forward chain",
+   "status": "implemented",
+   "note": "Library only: not called by app/pipeline.py (tests/test_segmenter.py)."
+  },
+  {
+   "id": "code:app/acoustic/tempo.py",
+   "type": "code",
+   "label": "harakah (beat) = median open short syllable, IQR rejection",
+   "status": "implemented",
+   "note": "Inflates counts ~1.095x vs the tabii ruler (03 §0); calibrate.jl count_scale 0.914."
+  },
+  {
+   "id": "code:app/acoustic/features.py",
+   "type": "code",
+   "label": "Praat Burg-LPC formants, F0, HNR, band energies, flatness, high-band flux",
+   "status": "implemented",
+   "note": "BUGGY (formants): Octave vs Python F1/F2 r=0.34, p90 abs err 465/1089 Hz on 308 spans (07 §0.1); timing (core_ms) agrees r=0.9975."
+  },
+  {
+   "id": "code:app/tajweed_rules/base.py",
+   "type": "code",
+   "label": "EvalContext: spans, local haraka, voiced_extent, vowel_core_ms (Hilbert 100-1000 Hz), frication_window, silence_runs, band_status",
+   "status": "implemented"
+  },
+  {
+   "id": "code:app/tajweed_rules/mudood_engine.py",
+   "type": "code",
+   "label": "madd durations in counts",
+   "status": "implemented",
+   "note": "25-76% of long madds measure < half target for 4/5 reciters (CTC collapse, 03 §0)."
+  },
+  {
+   "id": "code:app/tajweed_rules/noon_sakinah.py",
+   "type": "code",
+   "label": "izhar/ikhfa/idgham/iqlab",
+   "status": "implemented",
+   "note": "Raw textbook FAIL rates on experts are high (ikhfa:light 172/205, ghunnah 135/165 on 6 reciters, local studio rows)."
+  },
+  {
+   "id": "code:app/tajweed_rules/meem_sakinah.py",
+   "type": "code",
+   "label": "shafawi rules",
+   "status": "implemented"
+  },
+  {
+   "id": "code:app/tajweed_rules/qalqalah_engine.py",
+   "type": "code",
+   "label": "qalqalah burst energy rise",
+   "status": "implemented",
+   "note": "Kubra not louder than sughra on experts (13.0 vs 13.7 dB, 02 §0.6); RISE_STRONG_DB assumes kubra > sughra."
+  },
+  {
+   "id": "code:app/tajweed_rules/idghaam_classes.py",
+   "type": "code",
+   "label": "mithlayn/mutajanisayn/mutaqaribayn releases",
+   "status": "implemented"
+  },
+  {
+   "id": "code:app/tajweed_rules/raa_lam_rules.py",
+   "type": "code",
+   "label": "raa / lam of Allah tafkheem-tarqeeq",
+   "status": "implemented"
+  },
+  {
+   "id": "code:app/tajweed_rules/sakt_wasl.py",
+   "type": "code",
+   "label": "hamzat al-wasl in wasl; 4 saktat of Hafs",
+   "status": "implemented",
+   "note": "Sakt judged in absolute ms (200-400), not beats (03 §1)."
+  },
+  {
+   "id": "code:app/sifaat/formants.py",
+   "type": "code",
+   "label": "heaviness index H = 1-(F2-F1)/(F2ref-F1ref); itbaq; nasality",
+   "status": "implemented",
+   "note": "H orders tafkheem maratib monotonically (Spearman rho=-0.42, n=600, 02 §0.3)."
+  },
+  {
+   "id": "code:app/sifaat/hams_jahr.py",
+   "type": "code",
+   "label": "HNR / voicing-fraction hams/jahr; breath detection",
+   "status": "partial",
+   "note": "BUGGY: hams 186 FAIL vs 90 PASS on experts (02 §0.1); voicing is the wrong correlate (airflow/VOT)."
+  },
+  {
+   "id": "code:app/sifaat/sukoon_spectrum.py",
+   "type": "code",
+   "label": "shiddah/tawassut/rakhawah by occlusion",
+   "status": "partial",
+   "note": "BUGGY: occlusion_ms median 0 (94% WARNING); duration ratios 1.0/1.5/2.2 falsified (02 §0.2)."
+  },
+  {
+   "id": "code:app/sifaat/ghair_mutadhaddah.py",
+   "type": "code",
+   "label": "safir, tafashhi, istitaalah, takreer taps",
+   "status": "implemented",
+   "note": "safir mostly SKIPPED (363/497, 02 §2); istitaalah 68/75 WARNING (ratio threshold 1.0 vs expert median 0.67)."
+  },
+  {
+   "id": "code:app/sifaat/itbaq.py",
+   "type": "code",
+   "label": "itbaq/infitah",
+   "status": "implemented"
+  },
+  {
+   "id": "code:app/calibration.py",
+   "type": "code",
+   "label": "median/MAD bands + robust z verdict (production)",
+   "status": "implemented",
+   "note": "BUGGY: unreliable() -> SKIPPED excludes low-confidence spans (MNAR skip bias, 06 D2). Inactive by default: app/data/calibration.json does not exist in the repo. In flight: REVIEW status."
+  },
+  {
+   "id": "code:app/scoring.py",
+   "type": "code",
+   "label": "validator dispatch, category-weighted perfection index, sifaat score, consistency notes",
+   "status": "implemented",
+   "note": "Excludes SKIPPED (skip bias); tasawi only as notes (>1.5 counts). In flight: REVIEW counted + coverage."
+  },
+  {
+   "id": "code:app/taraweeh_adapter/dereverb.py",
+   "type": "code",
+   "label": "blind RT60, WPE, late-reverb suppression, proximity EQ, 8-d environment profile",
+   "status": "implemented"
+  },
+  {
+   "id": "code:app/taraweeh_adapter/fatigue_detector.py",
+   "type": "code",
+   "label": "pause/breath detection, dynamic waqf stops, fatigue report, pitch profile",
+   "status": "implemented"
+  },
+  {
+   "id": "code:app/taraweeh_adapter/pace_normalizer.py",
+   "type": "code",
+   "label": "hadr/tadweer/tahqeeq class, local harakah (+-4 s median)",
+   "status": "implemented"
+  },
+  {
+   "id": "code:app/fingerprint.py",
+   "type": "code",
+   "label": "232-d fingerprint (192 timbre + 32 tajweed + 8 env), FAISS IP",
+   "status": "implemented",
+   "note": "No spectral covariance is indexed: roadmap C2 'latent bug' premise is false; C2 = new feature, not a fix. README: timbre-only top-1 92% (24 held-out clips), 0.6 style weight drops it to 33%."
+  },
+  {
+   "id": "code:app/pipeline.py",
+   "type": "code",
+   "label": "end-to-end QaariEvaluator (mode, align, dynamic waqf, tempo, validators, score, fingerprint)",
+   "status": "implemented"
+  },
+  {
+   "id": "code:app/api.py",
+   "type": "code",
+   "label": "FastAPI /health /analyze",
+   "status": "implemented"
+  },
+  {
+   "id": "code:app/modal_endpoint.py",
+   "type": "code",
+   "label": "Modal T4 scale-to-zero deployment of the API",
+   "status": "implemented"
+  },
+  {
+   "id": "code:app/lahn/gop.py",
+   "type": "code",
+   "label": "substitution-aware CTC GOP (lahn jali), windowed forward-sum LLR vs confusion set",
+   "status": "partial",
+   "note": "IN FLIGHT (another agent, 2026-09-23): not wired into the pipeline or calibrated yet."
+  },
+  {
+   "id": "code:benchmarks/run_benchmark.py",
+   "type": "code",
+   "label": "per (reciter, ayah, mode) JSONL rows with raw textbook verdicts",
+   "status": "implemented"
+  },
+  {
+   "id": "code:benchmarks/summarize.py",
+   "type": "code",
+   "label": "aggregate rows, re-judge with calibration, build FAISS indices",
+   "status": "implemented"
+  },
+  {
+   "id": "code:benchmarks/roster.py",
+   "type": "code",
+   "label": "8 studio + 8 taraweeh EveryAyah reciters; Quran-MD ids",
+   "status": "implemented"
+  },
+  {
+   "id": "code:datasets/strategic_verses.py",
+   "type": "code",
+   "label": "weighted greedy set cover of ayahs over rule keys (59 ayahs, 515 words, 48 keys)",
+   "status": "implemented"
+  },
+  {
+   "id": "code:datasets/index_reciters.py",
+   "type": "code",
+   "label": "run_benchmark (studio) + summarize -> indices",
+   "status": "implemented"
+  },
+  {
+   "id": "code:tests/",
+   "type": "code",
+   "label": "pytest suite (84 tests: 80 pass, 4 skip on 2026-09-23)",
+   "status": "implemented"
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/julia/src/QaariLab.jl",
+   "type": "code",
+   "label": "Julia calibration (bands, LOO, weight search)",
+   "status": "implemented"
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/julia/src/Discovery.jl",
+   "type": "code",
+   "label": "tempo ODE + SINDy duration law",
+   "status": "implemented",
+   "note": "Tempo ODE never fitted (no surah with >=20 ayahs); duration law lambda at grid edge (07 §0.3-0.4)."
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "type": "code",
+   "label": "distributional calibration layer (roadmap A1-A4, B1; C2 SPD machinery)",
+   "status": "implemented",
+   "note": "15/15 identity tests (julia/test/test_frontier.jl, re-run 2026-09-23). Not yet consumed by app/ (no Python port)."
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/julia/calibrate.jl",
+   "type": "code",
+   "label": "driver: runs -> calibration.json",
+   "status": "implemented"
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/julia/discover.jl",
+   "type": "code",
+   "label": "driver: duration law + tempo ODE per reciter",
+   "status": "implemented"
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/julia/frontier.jl",
+   "type": "code",
+   "label": "driver: frontier_calibrate + beat_normalization (+ --export clouds)",
+   "status": "implemented"
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/julia/frontier_crosscheck.jl",
+   "type": "code",
+   "label": "synthetic fixtures for the Octave cross-check",
+   "status": "implemented"
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/octave/fr_*.m",
+   "type": "code",
+   "label": "Octave mirror of Frontier.jl",
+   "status": "implemented",
+   "note": "fr_crosscheck.m: worst rel.err 5.49e-15 (re-run 2026-09-23); fr_real_crosscheck.m on 11 real keys: 1.02e-13 (c3.md)."
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/octave/qaari_features.m",
+   "type": "code",
+   "label": "Octave DSP cross-check (core_ms r=0.9975 vs Python)",
+   "status": "implemented",
+   "note": "Formants disagree with Python (r=0.34): different LPC order/ceiling/bandwidth limit (07 §0.2)."
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/octave/lpc.m",
+   "type": "code",
+   "label": "lpc() shim via levinson (octave-signal 1.4.1 lacks lpc)",
+   "status": "implemented"
+  },
+  {
+   "id": "code:research_agency_lab/compute_bridge/octave_bridge.py",
+   "type": "code",
+   "label": "run qaari_features.m on benchmark spans",
+   "status": "implemented"
+  },
+  {
+   "id": "code:research_agency_lab/compute_bridge/validate_loop.py",
+   "type": "code",
+   "label": "continuous Octave<->Julia validation loop",
+   "status": "implemented"
+  },
+  {
+   "id": "code:research_agency_lab/compute_bridge/modal_batch.py",
+   "type": "code",
+   "label": "Modal fan-out benchmark collection (CPU shards, optional T4)",
+   "status": "implemented"
+  },
+  {
+   "id": "code:research_agency_lab/compute_bridge/kaggle_bridge.py",
+   "type": "code",
+   "label": "Kaggle kernel launcher/collector (+ kaggle_worker.py)",
+   "status": "implemented"
+  },
+  {
+   "id": "data:strategic_verses",
+   "type": "dataset",
+   "label": "app/data/strategic_verses.json: 59 ayahs covering 48 rule keys (>=6 each or all)",
+   "status": "implemented",
+   "file": "app/data/strategic_verses.json"
+  },
+  {
+   "id": "data:benchmark_rows_local",
+   "type": "dataset",
+   "label": "benchmarks/results/local/*.jsonl: Husary 59 + 5 EveryAyah-only reciters x 59 x 2 modes (649 rows)",
+   "status": "implemented",
+   "file": "benchmarks/results/local/"
+  },
+  {
+   "id": "math:robust_median_mad",
+   "type": "math",
+   "label": "median/MAD hull + robust z (|z|<=2 PASS, <=3 WARN)",
+   "status": "implemented",
+   "file": "app/calibration.py"
+  },
+  {
+   "id": "math:ogk",
+   "type": "math",
+   "label": "OGK robust scatter (Maronna-Zamar 2002) + chi2 reweight",
+   "status": "implemented",
+   "file": "Frontier.jl ogk / fr_ogk.m",
+   "refs": [
+    "doi:10.1198/004017002188618509"
+   ]
+  },
+  {
+   "id": "math:bures_wasserstein",
+   "type": "math",
+   "label": "Bures-Wasserstein barycenter reference + closed-form W2 (loc/shape split)",
+   "status": "implemented",
+   "priority": 1,
+   "file": "Frontier.jl bw_barycenter,w2_gauss / fr_bw_barycenter.m",
+   "refs": [
+    "doi:10.1137/100805741",
+    "arXiv:1511.05355"
+   ]
+  },
+  {
+   "id": "math:airm",
+   "type": "math",
+   "label": "affine-invariant (Fisher-Rao) SPD shape distance",
+   "status": "implemented",
+   "priority": 1,
+   "file": "Frontier.jl airm_dist / fr_airm.m",
+   "refs": [
+    "arXiv:2304.14885"
+   ]
+  },
+  {
+   "id": "math:log_euclidean",
+   "type": "math",
+   "label": "log-Euclidean vech(log C) embedding + mean",
+   "status": "implemented",
+   "file": "Frontier.jl le_vec,le_mean",
+   "refs": [
+    "doi:10.1002/mrm.20965"
+   ]
+  },
+  {
+   "id": "math:karcher_mean",
+   "type": "math",
+   "label": "AIRM Frechet/Karcher mean",
+   "status": "implemented",
+   "file": "Frontier.jl karcher_mean / fr_karcher.m"
+  },
+  {
+   "id": "math:conformal_loo",
+   "type": "math",
+   "label": "split-conformal peer-LOO thresholds (reciter + instance level)",
+   "status": "implemented",
+   "priority": 1,
+   "file": "Frontier.jl conformal_threshold,frontier_calibrate / fr_conformal.m",
+   "note": "With P<=9 peers, reciter-level coverage only in 10% steps; alpha=0.05 needs >=19 references (06 §0.5)."
+  },
+  {
+   "id": "math:sinkhorn_divergence",
+   "type": "math",
+   "label": "debiased Sinkhorn divergence with arbitrary ground metric",
+   "status": "implemented",
+   "file": "Frontier.jl sinkhorn_divergence / fr_sinkhorn_div.m",
+   "refs": [
+    "arXiv:1810.08278"
+   ]
+  },
+  {
+   "id": "algo:beat_normalization",
+   "type": "algorithm",
+   "label": "B1 local-beat madd counts (same-ayah tabii as ruler) + Fisher separation test",
+   "status": "implemented",
+   "file": "Frontier.jl beat_normalization",
+   "note": "FALSIFIED on the local sample: Fisher separation 0.71 -> 0.53 (c3.md)."
+  },
+  {
+   "id": "math:tempo_relaxation_ode",
+   "type": "math",
+   "label": "dT/dtau = kappa(Tinf - T) + phi",
+   "status": "implemented",
+   "file": "Discovery.jl"
+  },
+  {
+   "id": "algo:sindy_stlsq",
+   "type": "algorithm",
+   "label": "STLSQ sparse regression, BIC threshold, harakah duration law",
+   "status": "implemented",
+   "file": "Discovery.jl",
+   "note": "Husary D_core = -552 + 150 T + 394 n ms, R2 0.68 (discovery_latest.json)."
+  },
+  {
+   "id": "algo:ctc_viterbi",
+   "type": "algorithm",
+   "label": "exact CTC Viterbi forced alignment",
+   "status": "implemented",
+   "file": "app/aligner.py"
+  },
+  {
+   "id": "algo:ctc_semiglobal",
+   "type": "algorithm",
+   "label": "semi-global CTC Viterbi (free start/end word, 2-nat token bonus) + score-weighted LIS chain",
+   "status": "implemented",
+   "file": "app/segmenter.py"
+  },
+  {
+   "id": "algo:median_iqr_beat",
+   "type": "algorithm",
+   "label": "harakah = median of open short-syllable spans after 1.5 IQR rejection; global-rate fallback",
+   "status": "implemented",
+   "file": "app/acoustic/tempo.py"
+  },
+  {
+   "id": "algo:local_beat_window",
+   "type": "algorithm",
+   "label": "local harakah = median short-syllable duration within +-4 s (>=5 samples)",
+   "status": "implemented",
+   "file": "app/taraweeh_adapter/pace_normalizer.py"
+  },
+  {
+   "id": "algo:vowel_core_hilbert",
+   "type": "algorithm",
+   "label": "core_ms = longest voiced run of 100-1000 Hz Hilbert envelope within 10 dB of span peak",
+   "status": "implemented",
+   "file": "app/tajweed_rules/base.py vowel_core_ms / qaari_features.m"
+  },
+  {
+   "id": "algo:release_burst",
+   "type": "algorithm",
+   "label": "closure (RMS < p98-8 dB, >=15 ms) + high-band (>1.5 kHz) flux peak + energy rise",
+   "status": "implemented",
+   "file": "app/tajweed_rules/qalqalah_engine.py"
+  },
+  {
+   "id": "algo:ner_nasal_contrast",
+   "type": "algorithm",
+   "label": "NER = 10 log10(E[150-400]/E[750-1100]) minus the reciter's oral-vowel median",
+   "status": "implemented",
+   "file": "app/sifaat/formants.py"
+  },
+  {
+   "id": "algo:praat_burg_formants",
+   "type": "algorithm",
+   "label": "Praat Burg formants (ceiling 5000/5500 Hz), median over voiced nucleus frames within 6 dB",
+   "status": "implemented",
+   "file": "app/acoustic/features.py"
+  },
+  {
+   "id": "algo:breath_flatness",
+   "type": "algorithm",
+   "label": "breath = unvoiced (<30%), audible, flat (500-5000 Hz flatness >=0.15) frames >=120 ms",
+   "status": "implemented",
+   "file": "app/sifaat/hams_jahr.py detect_breath"
+  },
+  {
+   "id": "algo:rt60_blind",
+   "type": "algorithm",
+   "label": "blind RT60 from T20-style decay fits after offsets (500-4000 Hz)",
+   "status": "implemented",
+   "file": "app/taraweeh_adapter/dereverb.py",
+   "note": "Biased low above ~1 s (synthetic 1.0/1.5 s -> 0.7/0.8 s)."
+  },
+  {
+   "id": "algo:late_reverb_suppression",
+   "type": "algorithm",
+   "label": "Lebart/Habets statistical late-reverb spectral gain (floor -15 dB)",
+   "status": "implemented",
+   "file": "app/taraweeh_adapter/dereverb.py"
+  },
+  {
+   "id": "algo:spectral_subtraction",
+   "type": "algorithm",
+   "label": "spectral subtraction denoiser (quietest 10% frames, over-subtraction 1.5)",
+   "status": "implemented",
+   "file": "app/audio.py"
+  },
+  {
+   "id": "algo:greedy_set_cover",
+   "type": "algorithm",
+   "label": "weighted greedy set cover of ayahs over rule keys",
+   "status": "implemented",
+   "file": "datasets/strategic_verses.py"
+  },
+  {
+   "id": "algo:weight_search_nelder_mead",
+   "type": "algorithm",
+   "label": "category-weight search: max peers-imams separation, LOO peers >= 95, L2 pull (Nelder-Mead)",
+   "status": "implemented",
+   "file": "QaariLab.jl optimise_weights"
+  },
+  {
+   "id": "algo:gop_subst_aware",
+   "type": "algorithm",
+   "label": "Substitution-aware GOP (lahn-jali confusion set)",
+   "status": "partial",
+   "file": "app/lahn/gop.py",
+   "note": "IN FLIGHT: module written by another agent, not wired or calibrated."
+  },
+  {
+   "id": "math:bayes_hierarchical",
+   "type": "math",
+   "label": "A5 hierarchical Student-t partial pooling, measurement-error model",
+   "status": "proposed",
+   "priority": 3
+  },
+  {
+   "id": "math:evt_gpd",
+   "type": "math",
+   "label": "A6 POT / Generalized Pareto tail thresholds (SPOT)",
+   "status": "proposed",
+   "priority": 3
+  },
+  {
+   "id": "math:elastic_fda_srvf",
+   "type": "math",
+   "label": "B1 full: SRVF phase/amplitude registration",
+   "status": "proposed",
+   "priority": 2
+  },
+  {
+   "id": "math:koopman_hankel_dmd",
+   "type": "math",
+   "label": "B2 Hankel-DMD Koopman spectra",
+   "status": "proposed",
+   "priority": 4
+  },
+  {
+   "id": "math:gp_latent_force",
+   "type": "math",
+   "label": "B3 GP / latent-force tempo drift",
+   "status": "proposed",
+   "priority": 4
+  },
+  {
+   "id": "math:path_signature",
+   "type": "math",
+   "label": "C1 log-signature features (tempo-warp invariant)",
+   "status": "proposed",
+   "priority": 2
+  },
+  {
+   "id": "math:persistent_homology",
+   "type": "math",
+   "label": "C3 sliding-window persistent homology of F0",
+   "status": "speculative",
+   "priority": 5
+  },
+  {
+   "id": "phen:madd",
+   "type": "phenomenon",
+   "label": "Mudood (all madd types)",
+   "level": "intermediate",
+   "status": "implemented"
+  },
+  {
+   "id": "phen:timing:harakah",
+   "type": "phenomenon",
+   "label": "harakah beat / tempo",
+   "level": "101",
+   "status": "implemented"
+  },
+  {
+   "id": "phen:timing:tasawi",
+   "type": "phenomenon",
+   "label": "tasawi al-mudood: equal length per madd type across a recitation",
+   "level": "ijazah",
+   "status": "partial",
+   "note": "scoring.consistency_notes flags max-min > 1.5 counts (muttasil/munfasil/arid), unscored; AIRM/Bures shape term in Frontier.jl measures dispersion vs reference; no per-type equality verdict yet"
+  },
+  {
+   "id": "phen:ghunnah",
+   "type": "phenomenon",
+   "label": "ghunnah (2 counts, nasality)",
+   "level": "intermediate",
+   "status": "implemented"
+  },
+  {
+   "id": "phen:noon_meem_sakinah",
+   "type": "phenomenon",
+   "label": "noon/meem sakinah & tanween rules",
+   "level": "101",
+   "status": "implemented"
+  },
+  {
+   "id": "phen:qalqalah",
+   "type": "phenomenon",
+   "label": "qalqalah",
+   "level": "intermediate",
+   "status": "implemented"
+  },
+  {
+   "id": "phen:tafkheem_tarqeeq",
+   "type": "phenomenon",
+   "label": "tafkheem/tarqeeq (isti'la, raa, lam of Allah)",
+   "level": "intermediate",
+   "status": "implemented"
+  },
+  {
+   "id": "phen:sifaat",
+   "type": "phenomenon",
+   "label": "17 sifaat",
+   "level": "advanced",
+   "status": "partial",
+   "note": "missing: idhlaq/ismat, inhiraf, leen-as-sifah, khafa; sakin letters only; hams/jahr and shiddah validators measured wrong on experts; judged one at a time, no joint letter profile"
+  },
+  {
+   "id": "phen:makharij",
+   "type": "phenomenon",
+   "label": "17 makharij (articulation points)",
+   "level": "advanced",
+   "status": "missing",
+   "note": "no explicit makhraj verification; CTC posteriors in aligner.py are the natural GOP source (app/lahn/gop.py in flight)"
+  },
+  {
+   "id": "phen:waqf_ibtida",
+   "type": "phenomenon",
+   "label": "waqf & ibtida' (stop/start choices, forms)",
+   "level": "advanced",
+   "status": "partial",
+   "note": "stops are an INPUT to the parser (ayah ends + dynamic_stops >= 0.30 s); waqf signs are deleted by _DROP; stop choice, restart and raum/ishmam not modeled"
+  },
+  {
+   "id": "phen:sakt_hamzat_wasl",
+   "type": "phenomenon",
+   "label": "saktat + hamzat al-wasl",
+   "level": "intermediate",
+   "status": "implemented"
+  },
+  {
+   "id": "phen:lahn",
+   "type": "phenomenon",
+   "label": "lahn jali vs khafi grading hierarchy",
+   "level": "ijazah",
+   "status": "missing",
+   "note": "Skip bias makes jali errors raise the score today (06 D2); substitution GOP in flight."
+  },
+  {
+   "id": "phen:lahn:jali",
+   "type": "phenomenon",
+   "label": "Lahn jali (wrong letter / harakah / dropped or added letter)",
+   "level": "101",
+   "status": "missing",
+   "note": "Forced alignment cannot see substitutions; app/lahn/gop.py in flight."
+  },
+  {
+   "id": "phen:fingerprint",
+   "type": "phenomenon",
+   "label": "reciter style / identity",
+   "level": "advanced",
+   "status": "implemented"
+  },
+  {
+   "id": "phen:reverb",
+   "type": "phenomenon",
+   "label": "Taraweeh reverberation / live acoustics",
+   "status": "implemented"
+  },
+  {
+   "id": "phen:fatigue",
+   "type": "phenomenon",
+   "label": "Taraweeh fatigue (breath rate, spectral-tilt drift)",
+   "status": "partial",
+   "note": "Reported only (fatigue_report); never scored."
+  },
+  {
+   "id": "phen:timing:maratib",
+   "type": "phenomenon",
+   "label": "Tahqeeq/tadweer/hadr",
+   "status": "implemented",
+   "note": "Fixed thresholds 150/220 ms (pace_normalizer.classify_pace)."
+  },
+  {
+   "id": "code:datasets/qaari_keys/",
+   "type": "code",
+   "label": "QaariKeys rule-targeted verse dataset: per-ayah key counts (rule/letter/confusion pair/repetition/Hafs special case/waqf sign), nested tiers T10⊂T100⊂T300, reciter catalogue, open word timings",
+   "status": "implemented",
+   "file": "datasets/qaari_keys/",
+   "note": "features.py (188 keys × 6236 ayahs), select.jl (weighted greedy submodular cover, need doubling) = select_mirror.m (Octave, 410/410 rows identical), catalogue.py (43 EveryAyah Hafs reciter-styles, 177 QuranicAudio, 13 quran.com timed), fetch.py (quran-align CC BY 4.0 + QDC segments)"
+  },
+  {
+   "id": "dataset:qaari_keys_tiers",
+   "type": "dataset",
+   "label": "QaariKeys tiers: T10 (109 words, 171/188 keys), T100 (1133 words, 188/188), T300 (4243 words, 188/188) × 43 reciter-styles + 13 quran.com timed",
+   "status": "implemented",
+   "file": "datasets/qaari_keys/build/tiers.json"
+  },
+  {
+   "id": "dataset:quran_align",
+   "type": "dataset",
+   "label": "quran-align word timings (C. Fair 2016, CC BY 4.0) for 12 EveryAyah reciters (As-Sudais file is a crash log)",
+   "status": "implemented",
+   "file": "~/.cache/qaari-eval/quran_align"
+  },
+  {
+   "id": "dataset:qdc_segments",
+   "type": "dataset",
+   "label": "quran.com / QDC per-word segments on 13 surah recordings (verse cut + shifted)",
+   "status": "implemented"
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/julia/src/CtcGop.jl",
+   "type": "code",
+   "label": "CTC forward/Viterbi, run units, segmentation-free substitution GOP on muaalem posteriors, repetition/skip detection and reading path",
+   "status": "implemented",
+   "file": "research_agency_lab/substrate_library/julia/src/CtcGop.jl",
+   "note": "test/test_ctcgop.jl 28/28 (brute-force identities); Octave ctc_forward.m/ctc_viterbi.m agree 3e-6, 0/554 frame diffs on real posteriors"
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/julia/textswap_gop.jl",
+   "type": "code",
+   "label": "text-swap test of muaalem GOP: recall and correct-diagnosis rate at conformal anchor-only thresholds",
+   "status": "implemented"
+  },
+  {
+   "id": "code:research_agency_lab/experiments/learner_eval/muaalem_dump.py",
+   "type": "code",
+   "label": "muaalem-v3.2 frame posteriors (phonemes + 10 sifat levels, 40 ms frames) as raw float32 for Julia/Octave; QuranMB, EveryAyah, QDC sources",
+   "status": "implemented"
+  },
+  {
+   "id": "algo:reading_path",
+   "type": "algorithm",
+   "label": "Free decode + Needleman–Wunsch against the text: repetitions (iʿādah) and skips typed and inserted into the reading path before GOP",
+   "status": "implemented",
+   "note": "found on Husary 8:26 (a re-read phrase forced onto the text produced a false fatha→kasra)"
+  },
+  {
+   "id": "algo:anchor_tail_ruler",
+   "type": "algorithm",
+   "label": "Calibration ruler choice by the near-gold anchor's false-FAIL rate under the final band (not robust CV)",
+   "status": "implemented",
+   "file": "research_agency_lab/substrate_library/julia/src/QaariLab.jl",
+   "note": "madd_tabii: span counts gave Husary Muallim 12% FAIL (pauses swallowed), voiced core halves the tail"
+  },
+  {
+   "id": "phen:anchor_gate",
+   "type": "phenomenon",
+   "label": "Gate philosophy: near-gold anchor (slow studio muallim/mujawwad) ≈97, few % flagged; other masters make real mistakes and are graded, not forced to pass",
+   "status": "implemented",
+   "file": "research_agency_lab/orchestrator/gates.py"
+  },
+  {
+   "id": "algo:gop_segmentation_free",
+   "status": "partial",
+   "note": "Julia CtcGop.gop_sf on muaalem posteriors; T10 text-swap under way"
+  },
+  {
+   "id": "algo:text_swap_h1",
+   "status": "implemented",
+   "note": "julia/textswap_gop.jl (muaalem) and experiments/lahn_gop/text_swap.py (old CTC)"
+  },
+  {
+   "id": "algo:second_judge_ensemble",
+   "status": "partial",
+   "note": "muaalem-v3.2 local: QuranMB head-to-head recall 0.65 vs 0.15 (CTC GOP)"
+  }
+ ],
+ "edges": [
+  {
+   "from": "phen:madd",
+   "to": "code:app/tajweed_rules/mudood_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:timing:harakah",
+   "to": "code:app/acoustic/tempo.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:timing:harakah",
+   "to": "code:app/taraweeh_adapter/pace_normalizer.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:timing:maratib",
+   "to": "code:app/taraweeh_adapter/pace_normalizer.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:timing:tasawi",
+   "to": "code:app/scoring.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:noon_meem_sakinah",
+   "to": "code:app/tajweed_rules/noon_sakinah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:noon_meem_sakinah",
+   "to": "code:app/tajweed_rules/meem_sakinah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:qalqalah",
+   "to": "code:app/tajweed_rules/qalqalah_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:idgham:classes",
+   "to": "code:app/tajweed_rules/idghaam_classes.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:tafkheem_tarqeeq",
+   "to": "code:app/tajweed_rules/raa_lam_rules.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:tafkheem_tarqeeq",
+   "to": "code:app/sifaat/formants.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:ghunnah",
+   "to": "code:app/sifaat/formants.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:ghunnah",
+   "to": "code:app/tajweed_rules/noon_sakinah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifaat",
+   "to": "code:app/sifaat/hams_jahr.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifaat",
+   "to": "code:app/sifaat/sukoon_spectrum.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifaat",
+   "to": "code:app/sifaat/ghair_mutadhaddah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifaat",
+   "to": "code:app/sifaat/itbaq.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:hams",
+   "to": "code:app/sifaat/hams_jahr.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:jahr",
+   "to": "code:app/sifaat/hams_jahr.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:shiddah",
+   "to": "code:app/sifaat/sukoon_spectrum.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:tawassut",
+   "to": "code:app/sifaat/sukoon_spectrum.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:rakhawah",
+   "to": "code:app/sifaat/sukoon_spectrum.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:itbaq",
+   "to": "code:app/sifaat/itbaq.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:safir",
+   "to": "code:app/sifaat/ghair_mutadhaddah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:takreer",
+   "to": "code:app/sifaat/ghair_mutadhaddah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sakt_hamzat_wasl",
+   "to": "code:app/tajweed_rules/sakt_wasl.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:waqf_ibtida",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:waqf_ibtida",
+   "to": "code:app/taraweeh_adapter/fatigue_detector.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:fingerprint",
+   "to": "code:app/fingerprint.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:reverb",
+   "to": "code:app/taraweeh_adapter/dereverb.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:fatigue",
+   "to": "code:app/taraweeh_adapter/fatigue_detector.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:makharij",
+   "to": "code:app/aligner.py",
+   "rel": "requires"
+  },
+  {
+   "from": "phen:lahn:jali",
+   "to": "code:app/lahn/gop.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:lahn:jali",
+   "to": "code:app/aligner.py",
+   "rel": "requires"
+  },
+  {
+   "from": "math:robust_median_mad",
+   "to": "code:app/calibration.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "math:robust_median_mad",
+   "to": "code:research_agency_lab/substrate_library/julia/src/QaariLab.jl",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "math:bures_wasserstein",
+   "to": "math:robust_median_mad",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "math:bures_wasserstein",
+   "to": "math:ogk",
+   "rel": "requires"
+  },
+  {
+   "from": "math:conformal_loo",
+   "to": "math:bures_wasserstein",
+   "rel": "validates"
+  },
+  {
+   "from": "math:airm",
+   "to": "phen:timing:tasawi",
+   "rel": "models"
+  },
+  {
+   "from": "math:bures_wasserstein",
+   "to": "phen:madd",
+   "rel": "models"
+  },
+  {
+   "from": "math:bures_wasserstein",
+   "to": "phen:ghunnah",
+   "rel": "models"
+  },
+  {
+   "from": "math:bures_wasserstein",
+   "to": "phen:tafkheem_tarqeeq",
+   "rel": "models"
+  },
+  {
+   "from": "math:bures_wasserstein",
+   "to": "phen:sifaat",
+   "rel": "models"
+  },
+  {
+   "from": "math:bures_wasserstein",
+   "to": "phen:qalqalah",
+   "rel": "models"
+  },
+  {
+   "from": "math:sinkhorn_divergence",
+   "to": "phen:makharij",
+   "rel": "models"
+  },
+  {
+   "from": "algo:beat_normalization",
+   "to": "phen:madd",
+   "rel": "models"
+  },
+  {
+   "from": "algo:beat_normalization",
+   "to": "phen:timing:harakah",
+   "rel": "requires"
+  },
+  {
+   "from": "math:tempo_relaxation_ode",
+   "to": "phen:timing:harakah",
+   "rel": "models"
+  },
+  {
+   "from": "algo:sindy_stlsq",
+   "to": "phen:madd",
+   "rel": "models"
+  },
+  {
+   "from": "math:elastic_fda_srvf",
+   "to": "math:tempo_relaxation_ode",
+   "rel": "generalizes"
+  },
+  {
+   "from": "math:koopman_hankel_dmd",
+   "to": "math:tempo_relaxation_ode",
+   "rel": "generalizes"
+  },
+  {
+   "from": "math:bayes_hierarchical",
+   "to": "math:bures_wasserstein",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "math:path_signature",
+   "to": "phen:fingerprint",
+   "rel": "models"
+  },
+  {
+   "from": "math:log_euclidean",
+   "to": "phen:fingerprint",
+   "rel": "models"
+  },
+  {
+   "from": "algo:ctc_viterbi",
+   "to": "code:app/aligner.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:ctc_semiglobal",
+   "to": "code:app/segmenter.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:ctc_semiglobal",
+   "to": "algo:ctc_viterbi",
+   "rel": "generalizes"
+  },
+  {
+   "from": "algo:median_iqr_beat",
+   "to": "code:app/acoustic/tempo.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:median_iqr_beat",
+   "to": "phen:timing:harakah",
+   "rel": "models"
+  },
+  {
+   "from": "algo:local_beat_window",
+   "to": "code:app/taraweeh_adapter/pace_normalizer.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:local_beat_window",
+   "to": "phen:timing:harakah",
+   "rel": "models"
+  },
+  {
+   "from": "algo:vowel_core_hilbert",
+   "to": "code:app/tajweed_rules/base.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:vowel_core_hilbert",
+   "to": "code:research_agency_lab/substrate_library/octave/qaari_features.m",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:vowel_core_hilbert",
+   "to": "phen:madd",
+   "rel": "models"
+  },
+  {
+   "from": "algo:release_burst",
+   "to": "code:app/tajweed_rules/qalqalah_engine.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:release_burst",
+   "to": "phen:qalqalah",
+   "rel": "models"
+  },
+  {
+   "from": "algo:release_burst",
+   "to": "phen:idgham:classes",
+   "rel": "models"
+  },
+  {
+   "from": "algo:ner_nasal_contrast",
+   "to": "code:app/sifaat/formants.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:ner_nasal_contrast",
+   "to": "phen:ghunnah",
+   "rel": "models"
+  },
+  {
+   "from": "algo:praat_burg_formants",
+   "to": "code:app/acoustic/features.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:heaviness_index",
+   "to": "code:app/sifaat/formants.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:heaviness_index",
+   "to": "algo:praat_burg_formants",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:hnr_voicing",
+   "to": "code:app/sifaat/hams_jahr.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:hf_tilt_flatness",
+   "to": "code:app/sifaat/ghair_mutadhaddah.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:tap_count",
+   "to": "code:app/sifaat/ghair_mutadhaddah.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:breath_flatness",
+   "to": "code:app/sifaat/hams_jahr.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:breath_flatness",
+   "to": "phen:sakt",
+   "rel": "models"
+  },
+  {
+   "from": "algo:wpe",
+   "to": "code:app/taraweeh_adapter/dereverb.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:rt60_blind",
+   "to": "code:app/taraweeh_adapter/dereverb.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:late_reverb_suppression",
+   "to": "code:app/taraweeh_adapter/dereverb.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:rt60_blind",
+   "to": "phen:reverb",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:spectral_subtraction",
+   "to": "code:app/audio.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:greedy_set_cover",
+   "to": "code:datasets/strategic_verses.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "data:strategic_verses",
+   "to": "code:datasets/strategic_verses.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:weight_search_nelder_mead",
+   "to": "code:research_agency_lab/substrate_library/julia/src/QaariLab.jl",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:gop_subst_aware",
+   "to": "code:app/lahn/gop.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:gop_subst_aware",
+   "to": "phen:lahn:jali",
+   "rel": "models"
+  },
+  {
+   "from": "math:bures_wasserstein",
+   "to": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "math:airm",
+   "to": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "math:conformal_loo",
+   "to": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "math:ogk",
+   "to": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "math:sinkhorn_divergence",
+   "to": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "math:log_euclidean",
+   "to": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "math:karcher_mean",
+   "to": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "algo:beat_normalization",
+   "to": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "math:bures_wasserstein",
+   "to": "code:research_agency_lab/substrate_library/octave/fr_*.m",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "math:ogk",
+   "to": "code:research_agency_lab/substrate_library/octave/fr_*.m",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "math:airm",
+   "to": "code:research_agency_lab/substrate_library/octave/fr_*.m",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "math:karcher_mean",
+   "to": "code:research_agency_lab/substrate_library/octave/fr_*.m",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "math:conformal_loo",
+   "to": "code:research_agency_lab/substrate_library/octave/fr_*.m",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "math:sinkhorn_divergence",
+   "to": "code:research_agency_lab/substrate_library/octave/fr_*.m",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "code:research_agency_lab/substrate_library/octave/fr_*.m",
+   "to": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "rel": "cross_checks"
+  },
+  {
+   "from": "code:research_agency_lab/substrate_library/julia/frontier_crosscheck.jl",
+   "to": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "rel": "validates"
+  },
+  {
+   "from": "code:research_agency_lab/substrate_library/octave/qaari_features.m",
+   "to": "code:app/acoustic/features.py",
+   "rel": "cross_checks"
+  },
+  {
+   "from": "code:research_agency_lab/substrate_library/octave/qaari_features.m",
+   "to": "code:app/tajweed_rules/base.py",
+   "rel": "cross_checks"
+  },
+  {
+   "from": "code:research_agency_lab/compute_bridge/validate_loop.py",
+   "to": "code:research_agency_lab/compute_bridge/octave_bridge.py",
+   "rel": "requires"
+  },
+  {
+   "from": "code:research_agency_lab/compute_bridge/octave_bridge.py",
+   "to": "code:research_agency_lab/substrate_library/octave/qaari_features.m",
+   "rel": "requires"
+  },
+  {
+   "from": "code:research_agency_lab/substrate_library/julia/calibrate.jl",
+   "to": "code:research_agency_lab/substrate_library/julia/src/QaariLab.jl",
+   "rel": "requires"
+  },
+  {
+   "from": "code:research_agency_lab/substrate_library/julia/discover.jl",
+   "to": "code:research_agency_lab/substrate_library/julia/src/Discovery.jl",
+   "rel": "requires"
+  },
+  {
+   "from": "code:research_agency_lab/substrate_library/julia/frontier.jl",
+   "to": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "rel": "requires"
+  },
+  {
+   "from": "code:research_agency_lab/substrate_library/julia/calibrate.jl",
+   "to": "code:app/calibration.py",
+   "rel": "validates"
+  },
+  {
+   "from": "code:app/calibration.py",
+   "to": "code:app/scoring.py",
+   "rel": "part_of"
+  },
+  {
+   "from": "code:app/scoring.py",
+   "to": "code:app/pipeline.py",
+   "rel": "part_of"
+  },
+  {
+   "from": "code:app/tajweed_rules/parser.py",
+   "to": "code:app/pipeline.py",
+   "rel": "part_of"
+  },
+  {
+   "from": "code:app/aligner.py",
+   "to": "code:app/pipeline.py",
+   "rel": "part_of"
+  },
+  {
+   "from": "code:app/fingerprint.py",
+   "to": "code:app/pipeline.py",
+   "rel": "part_of"
+  },
+  {
+   "from": "code:app/taraweeh_adapter/dereverb.py",
+   "to": "code:app/pipeline.py",
+   "rel": "part_of"
+  },
+  {
+   "from": "code:app/audio.py",
+   "to": "code:app/pipeline.py",
+   "rel": "part_of"
+  },
+  {
+   "from": "code:app/quran_text.py",
+   "to": "code:app/pipeline.py",
+   "rel": "part_of"
+  },
+  {
+   "from": "code:app/api.py",
+   "to": "code:app/pipeline.py",
+   "rel": "requires"
+  },
+  {
+   "from": "code:app/modal_endpoint.py",
+   "to": "code:app/api.py",
+   "rel": "requires"
+  },
+  {
+   "from": "code:benchmarks/run_benchmark.py",
+   "to": "code:app/pipeline.py",
+   "rel": "requires"
+  },
+  {
+   "from": "code:benchmarks/summarize.py",
+   "to": "code:app/calibration.py",
+   "rel": "requires"
+  },
+  {
+   "from": "code:benchmarks/run_benchmark.py",
+   "to": "data:strategic_verses",
+   "rel": "requires"
+  },
+  {
+   "from": "code:research_agency_lab/compute_bridge/modal_batch.py",
+   "to": "code:benchmarks/run_benchmark.py",
+   "rel": "requires"
+  },
+  {
+   "from": "code:research_agency_lab/compute_bridge/kaggle_bridge.py",
+   "to": "code:benchmarks/run_benchmark.py",
+   "rel": "requires"
+  },
+  {
+   "from": "data:benchmark_rows_local",
+   "to": "code:benchmarks/run_benchmark.py",
+   "rel": "implemented_in"
+  },
+  {
+   "from": "code:tests/",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "validates"
+  },
+  {
+   "from": "code:tests/",
+   "to": "code:app/aligner.py",
+   "rel": "validates"
+  },
+  {
+   "from": "code:tests/",
+   "to": "code:app/calibration.py",
+   "rel": "validates"
+  },
+  {
+   "from": "code:tests/",
+   "to": "code:app/fingerprint.py",
+   "rel": "validates"
+  },
+  {
+   "from": "code:tests/",
+   "to": "code:app/taraweeh_adapter/dereverb.py",
+   "rel": "validates"
+  },
+  {
+   "from": "code:research_agency_lab/substrate_library/julia/src/CtcGop.jl",
+   "to": "algo:gop_segmentation_free",
+   "rel": "implements"
+  },
+  {
+   "from": "code:research_agency_lab/substrate_library/julia/src/CtcGop.jl",
+   "to": "algo:reading_path",
+   "rel": "implements"
+  },
+  {
+   "from": "code:research_agency_lab/substrate_library/julia/textswap_gop.jl",
+   "to": "algo:text_swap_h1",
+   "rel": "implements"
+  },
+  {
+   "from": "code:research_agency_lab/substrate_library/julia/textswap_gop.jl",
+   "to": "algo:conformal_thresholds",
+   "rel": "implements"
+  },
+  {
+   "from": "code:research_agency_lab/experiments/learner_eval/muaalem_dump.py",
+   "to": "algo:second_judge_ensemble",
+   "rel": "implements"
+  },
+  {
+   "from": "code:research_agency_lab/experiments/learner_eval/muaalem_dump.py",
+   "to": "pkg:muaalem_model",
+   "rel": "requires"
+  },
+  {
+   "from": "code:datasets/qaari_keys/",
+   "to": "dataset:qaari_keys_tiers",
+   "rel": "implements"
+  },
+  {
+   "from": "dataset:qaari_keys_tiers",
+   "to": "dataset:quran_align",
+   "rel": "requires"
+  },
+  {
+   "from": "dataset:qaari_keys_tiers",
+   "to": "dataset:qdc_segments",
+   "rel": "requires"
+  },
+  {
+   "from": "phen:lahn:jali",
+   "to": "code:research_agency_lab/substrate_library/julia/src/CtcGop.jl",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:madd",
+   "to": "algo:anchor_tail_ruler",
+   "rel": "measured_by"
+  }
+ ]
+}

@@ -1,0 +1,1959 @@
+{
+ "nodes": [
+  {
+   "id": "phen:sifah:takreer",
+   "type": "phenomenon",
+   "label": "Takreer (single-tap raa)",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "phen:qalqalah",
+   "type": "phenomenon",
+   "label": "Qalqalah bounce",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "phen:idgham:kamil",
+   "type": "phenomenon",
+   "label": "Idgham kamil single release",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "phen:sakt",
+   "type": "phenomenon",
+   "label": "Sakt vs waqf pause",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "phen:tafkheem",
+   "type": "phenomenon",
+   "label": "Tafkheem F2 collapse",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "phen:ghunnah",
+   "type": "phenomenon",
+   "label": "Ghunnah nasal antiresonance",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "phen:ikhfa",
+   "type": "phenomenon",
+   "label": "Ikhfa anticipation",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "phen:iqlab",
+   "type": "phenomenon",
+   "label": "Iqlab lip closure vs nasal onset",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "phen:idgham:naqis",
+   "type": "phenomenon",
+   "label": "Idgham naqis itbaq retention",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "phen:madd:counts",
+   "type": "phenomenon",
+   "label": "Madd/ghunnah counts",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "phen:madd:tasawi",
+   "type": "phenomenon",
+   "label": "Hafs madd consistency (tasawi)",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "phen:makharij",
+   "type": "phenomenon",
+   "label": "Makharij (articulation points)",
+   "level": "phenomenon",
+   "status": "missing",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "phen:idgham:classes",
+   "type": "phenomenon",
+   "label": "Mithlayn/mutajanisayn/mutaqaribayn",
+   "level": "phenomenon",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "phen:maqam",
+   "type": "phenomenon",
+   "label": "Maqam (melodic mode)",
+   "level": "phenomenon",
+   "status": "missing",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "phen:waqf_ibtida",
+   "type": "phenomenon",
+   "label": "Waqf and ibtida quality",
+   "level": "phenomenon",
+   "status": "missing",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "phen:tareeq:talfiq",
+   "type": "phenomenon",
+   "label": "Mixing turuq (talfiq)",
+   "level": "phenomenon",
+   "status": "missing",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "phen:alignment_uncertainty",
+   "type": "phenomenon",
+   "label": "Alignment uncertainty",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "phen:fatigue",
+   "type": "phenomenon",
+   "label": "Taraweeh fatigue",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "phen:reciter_style",
+   "type": "phenomenon",
+   "label": "Reciter style / melody law",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "phen:text_hierarchy",
+   "type": "phenomenon",
+   "label": "Letter-word-ayah-surah hierarchy",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:persistent_homology_0d",
+   "type": "math",
+   "label": "0-dim sublevel persistence (prominence)",
+   "level": "math",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:vineyards",
+   "type": "math",
+   "label": "Vineyards (time-varying persistence)",
+   "level": "math",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:circle_persistence",
+   "type": "math",
+   "label": "Persistence on S1 pitch-class density",
+   "level": "math",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:sliding_window_torus",
+   "type": "math",
+   "label": "Sliding-window tori (quasiperiodic)",
+   "level": "math",
+   "status": "speculative",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:dtm_filtration",
+   "type": "math",
+   "label": "DTM filtration",
+   "level": "math",
+   "status": "speculative",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:multiparameter_persistence",
+   "type": "math",
+   "label": "Multiparameter persistence (signed barcodes)",
+   "level": "math",
+   "status": "speculative",
+   "priority": 5,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:zigzag",
+   "type": "math",
+   "label": "Zigzag persistence",
+   "level": "math",
+   "status": "speculative",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:persistence_landscape",
+   "type": "math",
+   "label": "Persistence landscapes",
+   "level": "math",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:persistence_image",
+   "type": "math",
+   "label": "Persistence images",
+   "level": "math",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:bottleneck_stability",
+   "type": "math",
+   "label": "Bottleneck stability theorem",
+   "level": "math",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:cellular_sheaf",
+   "type": "math",
+   "label": "Cellular sheaf / sheaf Laplacian",
+   "level": "math",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:consistency_radius",
+   "type": "math",
+   "label": "Consistency radius",
+   "level": "math",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:sheaf_of_sets_csp",
+   "type": "math",
+   "label": "Sheaf of sets / contextuality CSP",
+   "level": "math",
+   "status": "speculative",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:tree_gmrf",
+   "type": "math",
+   "label": "Tree GMRF (hierarchy)",
+   "level": "math",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:hodgerank",
+   "type": "math",
+   "label": "HodgeRank / combinatorial Hodge",
+   "level": "math",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:hodge_flow_melody",
+   "type": "math",
+   "label": "Hodge decomposition of melodic flows",
+   "level": "math",
+   "status": "speculative",
+   "priority": 5,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:graph_trend_filtering",
+   "type": "math",
+   "label": "Graph trend filtering / Laplacian regularisation",
+   "level": "math",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:makhraj_metric",
+   "type": "math",
+   "label": "Makhraj tree x sifaat cube metric",
+   "level": "math",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:tree_wasserstein",
+   "type": "math",
+   "label": "Tree-Wasserstein W1",
+   "level": "math",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:ctc_trellis_ffbs",
+   "type": "math",
+   "label": "Random walk on CTC trellis (FFBS)",
+   "level": "math",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:personalized_pagerank",
+   "type": "math",
+   "label": "Personalised PageRank root cause",
+   "level": "math",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:graph_components",
+   "type": "math",
+   "label": "Connected components (failure incidents)",
+   "level": "math",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:gsp_repetition",
+   "type": "math",
+   "label": "GSP on text graph with repetition edges",
+   "level": "math",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:graph_wavelets",
+   "type": "math",
+   "label": "Spectral graph wavelets",
+   "level": "math",
+   "status": "speculative",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:dependency_cut",
+   "type": "math",
+   "label": "Cut cost in dependency graph",
+   "level": "math",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:spectral_clustering",
+   "type": "math",
+   "label": "Spectral clustering of CTC confusion graph",
+   "level": "math",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:gnn",
+   "type": "math",
+   "label": "GNN / neural sheaf diffusion",
+   "level": "math",
+   "status": "speculative",
+   "priority": 5,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:fisher_rao_simplex",
+   "type": "math",
+   "label": "Fisher-Rao on simplex",
+   "level": "math",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:fisher_rao_normal",
+   "type": "math",
+   "label": "Fisher-Rao univariate normal (hyperbolic)",
+   "level": "math",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:circular_ot",
+   "type": "math",
+   "label": "Tonic-invariant circular W1",
+   "level": "math",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:grassmannian",
+   "type": "math",
+   "label": "Grassmann / Martin distance",
+   "level": "math",
+   "status": "speculative",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:gromov_wasserstein",
+   "type": "math",
+   "label": "Gromov-Wasserstein / fused GW",
+   "level": "math",
+   "status": "speculative",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:signature_kernel",
+   "type": "math",
+   "label": "Signature kernel (Goursat PDE) MMD",
+   "level": "math",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:levy_area_precedence",
+   "type": "math",
+   "label": "Levy-area precedence index",
+   "level": "math",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:bures_wasserstein",
+   "type": "math",
+   "label": "Bures-Wasserstein",
+   "level": "math",
+   "status": "implemented",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:airm",
+   "type": "math",
+   "label": "AIRM SPD",
+   "level": "math",
+   "status": "implemented",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:log_euclidean",
+   "type": "math",
+   "label": "Log-Euclidean SPD",
+   "level": "math",
+   "status": "implemented",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:karcher_mean",
+   "type": "math",
+   "label": "Karcher mean",
+   "level": "math",
+   "status": "implemented",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "math:sinkhorn_divergence",
+   "type": "math",
+   "label": "Sinkhorn divergence",
+   "level": "math",
+   "status": "implemented",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "algo:prominence_event_count",
+   "type": "algorithm",
+   "label": "Prominence-based tap/release/burst counting",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "algo:topo_formant_tracking",
+   "type": "algorithm",
+   "label": "Topological formant/antiformant tracking",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "algo:maqam_scale_degrees",
+   "type": "algorithm",
+   "label": "Persistent scale-degree extraction + circular OT maqam",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "algo:haraka_field",
+   "type": "algorithm",
+   "label": "Joint haraka field + global madd choice",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "algo:sheaf_reconciliation",
+   "type": "algorithm",
+   "label": "Python/Octave/overlapping-rule sheaf reconciliation",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "algo:tahrirat_csp",
+   "type": "algorithm",
+   "label": "Tahrirat arc-consistency checker",
+   "level": "algorithm",
+   "status": "speculative",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "algo:hodgerank_reciters",
+   "type": "algorithm",
+   "label": "HodgeRank reciter comparison / confound detector",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "algo:makhraj_w1_score",
+   "type": "algorithm",
+   "label": "Tree-W1 makhraj score with directional feedback",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "algo:ffbs_alignment_uncertainty",
+   "type": "algorithm",
+   "label": "FFBS alignment sampling -> verdict distribution",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "algo:failure_incidents",
+   "type": "algorithm",
+   "label": "Failure incidents + root cause",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "algo:replicate_icc",
+   "type": "algorithm",
+   "label": "Repetition-edge replicate ICC",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "algo:waqf_cut_cost",
+   "type": "algorithm",
+   "label": "Waqf/ibtida dependency-cut scoring",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "algo:confusion_audit",
+   "type": "algorithm",
+   "label": "CTC confusion-graph makhraj audit",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "algo:levy_precedence",
+   "type": "algorithm",
+   "label": "Precedence index for ikhfa/iqlab/qalqalah/naqis",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "algo:sigkernel_mmd",
+   "type": "algorithm",
+   "label": "Signature-kernel MMD path-law test",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "algo:fr_choice_consistency",
+   "type": "algorithm",
+   "label": "FR choice-distribution consistency",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "algo:zigzag_fatigue",
+   "type": "algorithm",
+   "label": "Zigzag vibrato-loss fatigue detector",
+   "level": "algorithm",
+   "status": "speculative",
+   "priority": 5,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/05_topology_geometry_graphs.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:Ripserer",
+   "type": "package",
+   "label": "Ripserer.jl",
+   "level": "package",
+   "status": "missing",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:PersistenceDiagrams",
+   "type": "package",
+   "label": "PersistenceDiagrams.jl",
+   "level": "package",
+   "status": "missing",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:Graphs",
+   "type": "package",
+   "label": "Graphs.jl",
+   "level": "package",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:SimpleWeightedGraphs",
+   "type": "package",
+   "label": "SimpleWeightedGraphs.jl",
+   "level": "package",
+   "status": "missing",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:Manifolds",
+   "type": "package",
+   "label": "Manifolds.jl",
+   "level": "package",
+   "status": "missing",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:Manopt",
+   "type": "package",
+   "label": "Manopt.jl",
+   "level": "package",
+   "status": "missing",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:OptimalTransport",
+   "type": "package",
+   "label": "OptimalTransport.jl",
+   "level": "package",
+   "status": "missing",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:GraphNeuralNetworks",
+   "type": "package",
+   "label": "GraphNeuralNetworks.jl",
+   "level": "package",
+   "status": "missing",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:SparseArrays",
+   "type": "package",
+   "label": "SparseArrays",
+   "level": "package",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "pkg:python:POT",
+   "type": "package",
+   "label": "POT (GW/FGW)",
+   "level": "package",
+   "status": "missing",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "pkg:python:multipers",
+   "type": "package",
+   "label": "multipers",
+   "level": "package",
+   "status": "missing",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "pkg:python:iisignature",
+   "type": "package",
+   "label": "iisignature",
+   "level": "package",
+   "status": "missing",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "pkg:octave:signal",
+   "type": "package",
+   "label": "Octave signal",
+   "level": "package",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1007/s00454-006-1276-5",
+   "type": "source",
+   "label": "Cohen-Steiner et al. 2007 stability",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arXiv:2306.03801",
+   "type": "source",
+   "label": "Loiseaux et al. signed barcodes",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arXiv:2103.04540",
+   "type": "source",
+   "label": "Gakhar-Perea quasiperiodic",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arXiv:2009.08972",
+   "type": "source",
+   "label": "Tymochko et al. zigzag",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arXiv:1808.01513",
+   "type": "source",
+   "label": "Hansen-Ghrist sheaf spectral",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arXiv:1805.08927",
+   "type": "source",
+   "label": "Robinson consistency radius",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arXiv:1102.0264",
+   "type": "source",
+   "label": "Abramsky-Brandenburger",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arXiv:0811.1067",
+   "type": "source",
+   "label": "HodgeRank",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arXiv:1410.7690",
+   "type": "source",
+   "label": "Graph trend filtering",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arXiv:1902.00342",
+   "type": "source",
+   "label": "Tree-sliced Wasserstein",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1111/j.1467-9868.2011.01018.x",
+   "type": "source",
+   "label": "Evans-Matsen tree KR",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1007/s10579-011-9167-7",
+   "type": "source",
+   "label": "Quranic dependency treebank",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1007/s10851-011-0284-0",
+   "type": "source",
+   "label": "Rabin et al. circle OT",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1109/ACCESS.2021.3098415",
+   "type": "source",
+   "label": "Maqam-478",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arXiv:2006.14794",
+   "type": "source",
+   "label": "Signature kernel Goursat",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arXiv:1810.10971",
+   "type": "source",
+   "label": "Chevyrev-Oberhauser",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1007/s10208-011-9093-5",
+   "type": "source",
+   "label": "Memoli GW",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arXiv:1805.09114",
+   "type": "source",
+   "label": "Fused GW",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.21105/joss.02614",
+   "type": "source",
+   "label": "Ripserer.jl",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:arXiv:2202.04579",
+   "type": "source",
+   "label": "Neural sheaf diffusion",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1145/1137856.1137877",
+   "type": "source",
+   "label": "Vineyards",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "code:app/sifaat/ghair_mutadhaddah.py",
+   "type": "code",
+   "label": "count_taps",
+   "level": "code",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "app/sifaat/ghair_mutadhaddah.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/tajweed_rules/qalqalah_engine.py",
+   "type": "code",
+   "label": "release burst/count",
+   "level": "code",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "app/tajweed_rules/qalqalah_engine.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/aligner.py",
+   "type": "code",
+   "label": "CTC forced aligner",
+   "level": "code",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "app/aligner.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/scoring.py",
+   "type": "code",
+   "label": "summarize/consistency_notes",
+   "level": "code",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "app/scoring.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/tajweed_rules/parser.py",
+   "type": "code",
+   "label": "parser (drops waqf signs)",
+   "level": "code",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/sifaat/formants.py",
+   "type": "code",
+   "label": "formants/nasality",
+   "level": "code",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "app/sifaat/formants.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/acoustic/tempo.py",
+   "type": "code",
+   "label": "haraka estimate",
+   "level": "code",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "app/acoustic/tempo.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/tajweed_rules/noon_sakinah.py",
+   "type": "code",
+   "label": "ikhfa/iqlab",
+   "level": "code",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "app/tajweed_rules/noon_sakinah.py",
+   "note": ""
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/julia/src/QaariLab.jl",
+   "type": "code",
+   "label": "Julia calibrator",
+   "level": "code",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/substrate_library/julia/src/QaariLab.jl",
+   "note": ""
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "type": "code",
+   "label": "Frontier geometry",
+   "level": "code",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "note": ""
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/octave/qaari_features.m",
+   "type": "code",
+   "label": "Octave DSP",
+   "level": "code",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/substrate_library/octave/qaari_features.m",
+   "note": ""
+  },
+  {
+   "id": "code:app/taraweeh_adapter/fatigue_detector.py",
+   "type": "code",
+   "label": "fatigue detector",
+   "level": "code",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "app/taraweeh_adapter/fatigue_detector.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/fingerprint.py",
+   "type": "code",
+   "label": "232-d fingerprint",
+   "level": "code",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "app/fingerprint.py",
+   "note": ""
+  }
+ ],
+ "edges": [
+  {
+   "from": "math:persistent_homology_0d",
+   "to": "phen:sifah:takreer",
+   "rel": "models"
+  },
+  {
+   "from": "math:persistent_homology_0d",
+   "to": "phen:qalqalah",
+   "rel": "models"
+  },
+  {
+   "from": "math:persistent_homology_0d",
+   "to": "phen:idgham:kamil",
+   "rel": "models"
+  },
+  {
+   "from": "math:persistent_homology_0d",
+   "to": "phen:sakt",
+   "rel": "models"
+  },
+  {
+   "from": "algo:prominence_event_count",
+   "to": "math:persistent_homology_0d",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:prominence_event_count",
+   "to": "math:bottleneck_stability",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:prominence_event_count",
+   "to": "code:app/sifaat/ghair_mutadhaddah.py",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "algo:prominence_event_count",
+   "to": "code:app/tajweed_rules/qalqalah_engine.py",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "algo:prominence_event_count",
+   "to": "pkg:julia:Ripserer",
+   "rel": "requires"
+  },
+  {
+   "from": "math:bottleneck_stability",
+   "to": "src:doi:10.1007/s00454-006-1276-5",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:topo_formant_tracking",
+   "to": "math:vineyards",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:topo_formant_tracking",
+   "to": "phen:tafkheem",
+   "rel": "models"
+  },
+  {
+   "from": "algo:topo_formant_tracking",
+   "to": "phen:ghunnah",
+   "rel": "models"
+  },
+  {
+   "from": "algo:topo_formant_tracking",
+   "to": "code:app/sifaat/formants.py",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "math:vineyards",
+   "to": "src:doi:10.1145/1137856.1137877",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:maqam_scale_degrees",
+   "to": "math:circle_persistence",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:maqam_scale_degrees",
+   "to": "math:circular_ot",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:maqam_scale_degrees",
+   "to": "phen:maqam",
+   "rel": "models"
+  },
+  {
+   "from": "math:circular_ot",
+   "to": "src:doi:10.1007/s10851-011-0284-0",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:maqam_scale_degrees",
+   "to": "src:doi:10.1109/ACCESS.2021.3098415",
+   "rel": "validates"
+  },
+  {
+   "from": "math:sliding_window_torus",
+   "to": "phen:maqam",
+   "rel": "models"
+  },
+  {
+   "from": "math:sliding_window_torus",
+   "to": "src:arXiv:2103.04540",
+   "rel": "cites"
+  },
+  {
+   "from": "math:multiparameter_persistence",
+   "to": "phen:alignment_uncertainty",
+   "rel": "models"
+  },
+  {
+   "from": "math:multiparameter_persistence",
+   "to": "src:arXiv:2306.03801",
+   "rel": "cites"
+  },
+  {
+   "from": "math:dtm_filtration",
+   "to": "math:sliding_window_torus",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:zigzag_fatigue",
+   "to": "math:zigzag",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:zigzag_fatigue",
+   "to": "phen:fatigue",
+   "rel": "models"
+  },
+  {
+   "from": "algo:zigzag_fatigue",
+   "to": "code:app/taraweeh_adapter/fatigue_detector.py",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "math:zigzag",
+   "to": "src:arXiv:2009.08972",
+   "rel": "cites"
+  },
+  {
+   "from": "math:persistence_landscape",
+   "to": "pkg:julia:PersistenceDiagrams",
+   "rel": "requires"
+  },
+  {
+   "from": "math:persistence_image",
+   "to": "pkg:julia:PersistenceDiagrams",
+   "rel": "requires"
+  },
+  {
+   "from": "math:persistence_image",
+   "to": "code:app/fingerprint.py",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:haraka_field",
+   "to": "math:cellular_sheaf",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:haraka_field",
+   "to": "math:graph_trend_filtering",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:haraka_field",
+   "to": "phen:madd:counts",
+   "rel": "models"
+  },
+  {
+   "from": "algo:haraka_field",
+   "to": "phen:madd:tasawi",
+   "rel": "models"
+  },
+  {
+   "from": "algo:haraka_field",
+   "to": "code:app/acoustic/tempo.py",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "algo:haraka_field",
+   "to": "code:app/scoring.py",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "algo:haraka_field",
+   "to": "code:research_agency_lab/substrate_library/julia/src/QaariLab.jl",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:haraka_field",
+   "to": "pkg:julia:SparseArrays",
+   "rel": "requires"
+  },
+  {
+   "from": "math:graph_trend_filtering",
+   "to": "src:arXiv:1410.7690",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:sheaf_reconciliation",
+   "to": "math:cellular_sheaf",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:sheaf_reconciliation",
+   "to": "math:consistency_radius",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:sheaf_reconciliation",
+   "to": "code:research_agency_lab/substrate_library/octave/qaari_features.m",
+   "rel": "requires"
+  },
+  {
+   "from": "math:cellular_sheaf",
+   "to": "src:arXiv:1808.01513",
+   "rel": "cites"
+  },
+  {
+   "from": "math:consistency_radius",
+   "to": "src:arXiv:1805.08927",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:tahrirat_csp",
+   "to": "math:sheaf_of_sets_csp",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:tahrirat_csp",
+   "to": "phen:tareeq:talfiq",
+   "rel": "models"
+  },
+  {
+   "from": "math:sheaf_of_sets_csp",
+   "to": "src:arXiv:1102.0264",
+   "rel": "cites"
+  },
+  {
+   "from": "math:tree_gmrf",
+   "to": "phen:text_hierarchy",
+   "rel": "models"
+  },
+  {
+   "from": "math:cellular_sheaf",
+   "to": "math:tree_gmrf",
+   "rel": "generalizes"
+  },
+  {
+   "from": "algo:hodgerank_reciters",
+   "to": "math:hodgerank",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:hodgerank_reciters",
+   "to": "phen:reciter_style",
+   "rel": "models"
+  },
+  {
+   "from": "math:hodgerank",
+   "to": "src:arXiv:0811.1067",
+   "rel": "cites"
+  },
+  {
+   "from": "math:hodge_flow_melody",
+   "to": "phen:maqam",
+   "rel": "models"
+  },
+  {
+   "from": "math:makhraj_metric",
+   "to": "phen:makharij",
+   "rel": "models"
+  },
+  {
+   "from": "math:makhraj_metric",
+   "to": "phen:idgham:classes",
+   "rel": "models"
+  },
+  {
+   "from": "math:makhraj_metric",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "validates"
+  },
+  {
+   "from": "algo:makhraj_w1_score",
+   "to": "math:tree_wasserstein",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:makhraj_w1_score",
+   "to": "math:makhraj_metric",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:makhraj_w1_score",
+   "to": "code:app/aligner.py",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:makhraj_w1_score",
+   "to": "phen:makharij",
+   "rel": "models"
+  },
+  {
+   "from": "math:tree_wasserstein",
+   "to": "src:arXiv:1902.00342",
+   "rel": "cites"
+  },
+  {
+   "from": "math:tree_wasserstein",
+   "to": "src:doi:10.1111/j.1467-9868.2011.01018.x",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:ffbs_alignment_uncertainty",
+   "to": "math:ctc_trellis_ffbs",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:ffbs_alignment_uncertainty",
+   "to": "phen:alignment_uncertainty",
+   "rel": "models"
+  },
+  {
+   "from": "algo:ffbs_alignment_uncertainty",
+   "to": "code:app/aligner.py",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:failure_incidents",
+   "to": "math:graph_components",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:failure_incidents",
+   "to": "math:personalized_pagerank",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:failure_incidents",
+   "to": "code:app/scoring.py",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:failure_incidents",
+   "to": "pkg:julia:Graphs",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:failure_incidents",
+   "to": "algo:ffbs_alignment_uncertainty",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:replicate_icc",
+   "to": "math:gsp_repetition",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:replicate_icc",
+   "to": "phen:madd:tasawi",
+   "rel": "models"
+  },
+  {
+   "from": "math:graph_wavelets",
+   "to": "math:gsp_repetition",
+   "rel": "generalizes"
+  },
+  {
+   "from": "algo:waqf_cut_cost",
+   "to": "math:dependency_cut",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:waqf_cut_cost",
+   "to": "phen:waqf_ibtida",
+   "rel": "models"
+  },
+  {
+   "from": "algo:waqf_cut_cost",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:waqf_cut_cost",
+   "to": "src:doi:10.1007/s10579-011-9167-7",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:confusion_audit",
+   "to": "math:spectral_clustering",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:confusion_audit",
+   "to": "math:makhraj_metric",
+   "rel": "validates"
+  },
+  {
+   "from": "algo:confusion_audit",
+   "to": "math:gromov_wasserstein",
+   "rel": "requires"
+  },
+  {
+   "from": "math:gnn",
+   "to": "pkg:julia:GraphNeuralNetworks",
+   "rel": "requires"
+  },
+  {
+   "from": "math:gnn",
+   "to": "src:arXiv:2202.04579",
+   "rel": "cites"
+  },
+  {
+   "from": "math:gnn",
+   "to": "math:cellular_sheaf",
+   "rel": "generalizes"
+  },
+  {
+   "from": "algo:fr_choice_consistency",
+   "to": "math:fisher_rao_simplex",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:fr_choice_consistency",
+   "to": "phen:madd:tasawi",
+   "rel": "models"
+  },
+  {
+   "from": "math:fisher_rao_normal",
+   "to": "math:airm",
+   "rel": "generalizes"
+  },
+  {
+   "from": "math:grassmannian",
+   "to": "phen:reciter_style",
+   "rel": "models"
+  },
+  {
+   "from": "math:grassmannian",
+   "to": "pkg:julia:Manifolds",
+   "rel": "requires"
+  },
+  {
+   "from": "math:grassmannian",
+   "to": "math:log_euclidean",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "math:gromov_wasserstein",
+   "to": "pkg:python:POT",
+   "rel": "requires"
+  },
+  {
+   "from": "math:gromov_wasserstein",
+   "to": "src:doi:10.1007/s10208-011-9093-5",
+   "rel": "cites"
+  },
+  {
+   "from": "math:gromov_wasserstein",
+   "to": "src:arXiv:1805.09114",
+   "rel": "cites"
+  },
+  {
+   "from": "math:gromov_wasserstein",
+   "to": "math:bures_wasserstein",
+   "rel": "generalizes"
+  },
+  {
+   "from": "algo:sigkernel_mmd",
+   "to": "math:signature_kernel",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:sigkernel_mmd",
+   "to": "phen:reciter_style",
+   "rel": "models"
+  },
+  {
+   "from": "algo:sigkernel_mmd",
+   "to": "phen:fatigue",
+   "rel": "models"
+  },
+  {
+   "from": "math:signature_kernel",
+   "to": "src:arXiv:2006.14794",
+   "rel": "cites"
+  },
+  {
+   "from": "math:signature_kernel",
+   "to": "src:arXiv:1810.10971",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:levy_precedence",
+   "to": "math:levy_area_precedence",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:levy_precedence",
+   "to": "phen:ikhfa",
+   "rel": "models"
+  },
+  {
+   "from": "algo:levy_precedence",
+   "to": "phen:iqlab",
+   "rel": "models"
+  },
+  {
+   "from": "algo:levy_precedence",
+   "to": "phen:qalqalah",
+   "rel": "models"
+  },
+  {
+   "from": "algo:levy_precedence",
+   "to": "phen:idgham:naqis",
+   "rel": "models"
+  },
+  {
+   "from": "algo:levy_precedence",
+   "to": "code:app/tajweed_rules/noon_sakinah.py",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "math:circular_ot",
+   "to": "math:sinkhorn_divergence",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "math:bures_wasserstein",
+   "to": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "rel": "implements"
+  },
+  {
+   "from": "math:airm",
+   "to": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "rel": "implements"
+  },
+  {
+   "from": "math:log_euclidean",
+   "to": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "rel": "implements"
+  },
+  {
+   "from": "math:karcher_mean",
+   "to": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "rel": "implements"
+  },
+  {
+   "from": "math:sinkhorn_divergence",
+   "to": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "rel": "implements"
+  },
+  {
+   "from": "pkg:julia:Ripserer",
+   "to": "src:doi:10.21105/joss.02614",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:prominence_event_count",
+   "to": "code:research_agency_lab/substrate_library/octave/qaari_features.m",
+   "rel": "validates"
+  },
+  {
+   "from": "math:multiparameter_persistence",
+   "to": "pkg:python:multipers",
+   "rel": "requires"
+  },
+  {
+   "from": "math:signature_kernel",
+   "to": "pkg:python:iisignature",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "math:karcher_mean",
+   "to": "pkg:julia:Manopt",
+   "rel": "requires"
+  },
+  {
+   "from": "math:tree_wasserstein",
+   "to": "pkg:julia:OptimalTransport",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "math:graph_components",
+   "to": "pkg:julia:SimpleWeightedGraphs",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:prominence_event_count",
+   "to": "pkg:octave:signal",
+   "rel": "validates"
+  }
+ ]
+}

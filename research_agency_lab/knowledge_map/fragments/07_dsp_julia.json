@@ -1,0 +1,1569 @@
+{
+ "nodes": [
+  {
+   "id": "phen:harakah",
+   "type": "phenomenon",
+   "label": "Harakah / tempo",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "phen:madd",
+   "type": "phenomenon",
+   "label": "Madd elongation",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "phen:ghunnah",
+   "type": "phenomenon",
+   "label": "Ghunnah / nasalisation",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "phen:iqlab",
+   "type": "phenomenon",
+   "label": "Iqlab",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "phen:ikhfa",
+   "type": "phenomenon",
+   "label": "Ikhfa'",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "phen:qalqalah",
+   "type": "phenomenon",
+   "label": "Qalqalah",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "phen:takreer",
+   "type": "phenomenon",
+   "label": "Takreer (raa trill)",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "phen:tafkheem",
+   "type": "phenomenon",
+   "label": "Tafkheem / itbaq",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "phen:makharij",
+   "type": "phenomenon",
+   "label": "Makharij",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "phen:safir_tafashhi",
+   "type": "phenomenon",
+   "label": "Safir / tafashhi / hams",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "phen:jahr",
+   "type": "phenomenon",
+   "label": "Jahr / phonation",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "phen:waqf_sakt",
+   "type": "phenomenon",
+   "label": "Waqf / sakt / breath",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "phen:maqam",
+   "type": "phenomenon",
+   "label": "Maqam pitch",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "phen:fatigue",
+   "type": "phenomenon",
+   "label": "Taraweeh fatigue",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "phen:reverb",
+   "type": "phenomenon",
+   "label": "Taraweeh reverberation",
+   "level": "phenomenon",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/julia/src/Discovery.jl",
+   "type": "code",
+   "label": "Discovery.jl (tempo ODE + STLSQ)",
+   "level": "code",
+   "status": "implemented",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/substrate_library/julia/src/Discovery.jl",
+   "note": "duration_law: unnormalised columns, lambda optimum at grid edge (80); tempo_dynamics empty on 59 rows"
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/octave/qaari_features.m",
+   "type": "code",
+   "label": "Octave DSP cross-check",
+   "level": "code",
+   "status": "implemented",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/substrate_library/octave/qaari_features.m",
+   "note": "core_ms r=0.9975 vs Python; F1/F2 r=0.34 (formant slot swaps)"
+  },
+  {
+   "id": "code:app/acoustic/features.py",
+   "type": "code",
+   "label": "Python Praat features",
+   "level": "code",
+   "status": "implemented",
+   "priority": 1,
+   "refs": [],
+   "file": "app/acoustic/features.py",
+   "note": ""
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/julia/Manifest.toml",
+   "type": "code",
+   "label": "Julia Manifest (1.11.5; host julia is 1.10.9)",
+   "level": "code",
+   "status": "partial",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/substrate_library/julia/Manifest.toml",
+   "note": "version drift blocks reproducibility"
+  },
+  {
+   "id": "math:tempo_relaxation_ode",
+   "type": "math",
+   "label": "dT/dtau = kappa(Tinf-T)+phi",
+   "level": "math",
+   "status": "implemented",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "math:harakah_power_law",
+   "type": "math",
+   "label": "log D = a log n + b log T + reciter + final (test a=b=1)",
+   "level": "math",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "math:ritardando_curve",
+   "type": "math",
+   "label": "Friberg-Sundberg final ritardando v(x)",
+   "level": "math",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "math:task_dynamics_2nd_order",
+   "type": "math",
+   "label": "Critically damped target approach (Saltzman-Munhall)",
+   "level": "math",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "math:qta_fujisaki",
+   "type": "math",
+   "label": "qTA / Fujisaki pitch target models",
+   "level": "math",
+   "status": "speculative",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "math:langevin_maqam_potential",
+   "type": "math",
+   "label": "Langevin SDE with maqam potential wells",
+   "level": "math",
+   "status": "speculative",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "math:fitness_fatigue",
+   "type": "math",
+   "label": "Latent fatigue ODE (Banister form)",
+   "level": "math",
+   "status": "speculative",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "math:locus_equation",
+   "type": "math",
+   "label": "Locus equations F2onset = k F2vowel + c",
+   "level": "math",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "math:a1_p0",
+   "type": "math",
+   "label": "A1-P0 nasality index",
+   "level": "math",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "math:koopman_spectrum",
+   "type": "math",
+   "label": "Koopman / Hankel-DMD spectrum",
+   "level": "math",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "math:hierarchical_bayes",
+   "type": "math",
+   "label": "Hierarchical Student-t model with measurement error",
+   "level": "math",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:sindy_stlsq",
+   "type": "algorithm",
+   "label": "SINDy / STLSQ",
+   "level": "algorithm",
+   "status": "implemented",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:esindy",
+   "type": "algorithm",
+   "label": "Ensemble SINDy + stability selection",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:weak_sindy",
+   "type": "algorithm",
+   "label": "Weak-form SINDy",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:symbolic_regression",
+   "type": "algorithm",
+   "label": "Dimensional symbolic regression",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:ude",
+   "type": "algorithm",
+   "label": "Universal differential equation + distillation",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:neural_sde",
+   "type": "algorithm",
+   "label": "Neural / Langevin SDE",
+   "level": "algorithm",
+   "status": "speculative",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:dmd",
+   "type": "algorithm",
+   "label": "Hankel DMD",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:nuts",
+   "type": "algorithm",
+   "label": "NUTS + PSIS-LOO",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:gpu_ensemble_bootstrap",
+   "type": "algorithm",
+   "label": "GPU ensemble parametric bootstrap nulls",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:multitaper",
+   "type": "algorithm",
+   "label": "Multitaper spectra",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:reassignment",
+   "type": "algorithm",
+   "label": "Reassigned spectrogram",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:synchrosqueezing",
+   "type": "algorithm",
+   "label": "Synchrosqueezing (2nd order)",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:scattering",
+   "type": "algorithm",
+   "label": "Wavelet scattering transform",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:emd_vmd",
+   "type": "algorithm",
+   "label": "EMD / VMD",
+   "level": "algorithm",
+   "status": "speculative",
+   "priority": 5,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:modulation_spectrum",
+   "type": "algorithm",
+   "label": "Modulation spectrum / SRMR",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:iaif_qcp",
+   "type": "algorithm",
+   "label": "IAIF / QCP glottal inverse filtering",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:cpp",
+   "type": "algorithm",
+   "label": "Cepstral peak prominence",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:lpc_harmonised",
+   "type": "algorithm",
+   "label": "Harmonised LPC ceiling + slot-swap QC",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:karma_kalman",
+   "type": "algorithm",
+   "label": "KARMA Kalman formant+antiformant tracker",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:particle_filter_formants",
+   "type": "algorithm",
+   "label": "Particle-filter formant tracker",
+   "level": "algorithm",
+   "status": "speculative",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:deepformants",
+   "type": "algorithm",
+   "label": "DNN formant tracker",
+   "level": "algorithm",
+   "status": "speculative",
+   "priority": 4,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:glrt_burst",
+   "type": "algorithm",
+   "label": "CUSUM/GLRT burst onset + Teager energy",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:spectral_moments",
+   "type": "algorithm",
+   "label": "Spectral moments (burst/frication)",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:hsmm",
+   "type": "algorithm",
+   "label": "Explicit-duration HMM segmentation",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:breath_detector",
+   "type": "algorithm",
+   "label": "Breath vs sakt classifier",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:pyin",
+   "type": "algorithm",
+   "label": "pYIN",
+   "level": "algorithm",
+   "status": "partial",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:crepe_rmvpe",
+   "type": "algorithm",
+   "label": "CREPE / RMVPE",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:pitch_histogram",
+   "type": "algorithm",
+   "label": "Tonic + learned-scale pitch histogram",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:wpe",
+   "type": "algorithm",
+   "label": "WPE dereverberation",
+   "level": "algorithm",
+   "status": "implemented",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "algo:reverb_audit",
+   "type": "algorithm",
+   "label": "RIR robustness audit",
+   "level": "algorithm",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:DataDrivenDiffEq",
+   "type": "package",
+   "label": "DataDrivenDiffEq 1.16.1",
+   "level": "package",
+   "status": "implemented",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:DataDrivenSparse",
+   "type": "package",
+   "label": "DataDrivenSparse 0.2.3",
+   "level": "package",
+   "status": "implemented",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:SymbolicRegression",
+   "type": "package",
+   "label": "SymbolicRegression 2.4.1",
+   "level": "package",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:DataDrivenSR",
+   "type": "package",
+   "label": "DataDrivenSR 0.1.9",
+   "level": "package",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:DataDrivenDMD",
+   "type": "package",
+   "label": "DataDrivenDMD 0.1.8",
+   "level": "package",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:Lux",
+   "type": "package",
+   "label": "Lux 1.31.4",
+   "level": "package",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:SciMLSensitivity",
+   "type": "package",
+   "label": "SciMLSensitivity 7.119.11",
+   "level": "package",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:Turing",
+   "type": "package",
+   "label": "Turing 0.49.0",
+   "level": "package",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:DiffEqGPU",
+   "type": "package",
+   "label": "DiffEqGPU 3.21.2",
+   "level": "package",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:CUDA",
+   "type": "package",
+   "label": "CUDA 6.4.0",
+   "level": "package",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:StochasticDiffEq",
+   "type": "package",
+   "label": "StochasticDiffEq 7.2.0",
+   "level": "package",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:ModelingToolkit",
+   "type": "package",
+   "label": "ModelingToolkit 11.45.1",
+   "level": "package",
+   "status": "implemented",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:LowLevelParticleFilters",
+   "type": "package",
+   "label": "LowLevelParticleFilters 3.31.1",
+   "level": "package",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:ParetoSmooth",
+   "type": "package",
+   "label": "ParetoSmooth 0.7.17",
+   "level": "package",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:julia:DynamicQuantities",
+   "type": "package",
+   "label": "DynamicQuantities 1.13.0",
+   "level": "package",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:octave:signal",
+   "type": "package",
+   "label": "signal 1.4.1",
+   "level": "package",
+   "status": "implemented",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:octave:ltfat",
+   "type": "package",
+   "label": "ltfat forge",
+   "level": "package",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:python:kymatio",
+   "type": "package",
+   "label": "kymatio",
+   "level": "package",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:python:nara_wpe",
+   "type": "package",
+   "label": "nara_wpe",
+   "level": "package",
+   "status": "implemented",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "pkg:python:crepe",
+   "type": "package",
+   "label": "crepe",
+   "level": "package",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1073/pnas.1517384113",
+   "type": "source",
+   "label": "Brunton 2016 SINDy",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "src:arXiv:2001.04385",
+   "type": "source",
+   "label": "Rackauckas UDE",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "src:arXiv:2305.01582",
+   "type": "source",
+   "label": "Cranmer PySR",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1137/20M1343166",
+   "type": "source",
+   "label": "Messenger-Bortz weak SINDy",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1098/rspa.2021.0904",
+   "type": "source",
+   "label": "Fasel E-SINDy",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1121/1.4739462",
+   "type": "source",
+   "label": "Mehta KARMA 2012",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1121/1.420083",
+   "type": "source",
+   "label": "Chen 1997 A1-P0",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1121/1.5008854",
+   "type": "source",
+   "label": "Styler 2017 nasality",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1016/j.acha.2010.08.002",
+   "type": "source",
+   "label": "Daubechies SST 2011",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1109/TSP.2014.2326991",
+   "type": "source",
+   "label": "Anden-Mallat scattering",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1109/PROC.1982.12433",
+   "type": "source",
+   "label": "Thomson multitaper",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1016/0167-6393(92)90008-7",
+   "type": "source",
+   "label": "Alku IAIF 1992",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1016/j.wocn.2010.09.002",
+   "type": "source",
+   "label": "Jongman 2011 Arabic emphasis",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1121/1.426720",
+   "type": "source",
+   "label": "Friberg-Sundberg ritardando",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1121/1.3037222",
+   "type": "source",
+   "label": "Prom-on qTA",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "src:arXiv:2304.06835",
+   "type": "source",
+   "label": "DiffEqGPU",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1007/s11222-016-9696-4",
+   "type": "source",
+   "label": "Vehtari PSIS-LOO",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  },
+  {
+   "id": "src:doi:10.1109/TASL.2010.2052251",
+   "type": "source",
+   "label": "Nakatani WPE",
+   "level": "source",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/07_dsp_julia_discovery.md",
+   "note": ""
+  }
+ ],
+ "edges": [
+  {
+   "from": "code:research_agency_lab/substrate_library/julia/src/Discovery.jl",
+   "to": "algo:sindy_stlsq",
+   "rel": "implements"
+  },
+  {
+   "from": "code:research_agency_lab/substrate_library/julia/src/Discovery.jl",
+   "to": "math:tempo_relaxation_ode",
+   "rel": "implements"
+  },
+  {
+   "from": "phen:harakah",
+   "to": "math:harakah_power_law",
+   "rel": "models"
+  },
+  {
+   "from": "phen:harakah",
+   "to": "math:tempo_relaxation_ode",
+   "rel": "models"
+  },
+  {
+   "from": "phen:madd",
+   "to": "math:ritardando_curve",
+   "rel": "models"
+  },
+  {
+   "from": "phen:madd",
+   "to": "math:hierarchical_bayes",
+   "rel": "models"
+  },
+  {
+   "from": "phen:ghunnah",
+   "to": "math:task_dynamics_2nd_order",
+   "rel": "models"
+  },
+  {
+   "from": "phen:tafkheem",
+   "to": "math:task_dynamics_2nd_order",
+   "rel": "models"
+  },
+  {
+   "from": "phen:makharij",
+   "to": "math:locus_equation",
+   "rel": "models"
+  },
+  {
+   "from": "phen:maqam",
+   "to": "math:langevin_maqam_potential",
+   "rel": "models"
+  },
+  {
+   "from": "phen:maqam",
+   "to": "math:qta_fujisaki",
+   "rel": "models"
+  },
+  {
+   "from": "phen:fatigue",
+   "to": "math:fitness_fatigue",
+   "rel": "models"
+  },
+  {
+   "from": "algo:multitaper",
+   "to": "phen:safir_tafashhi",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:multitaper",
+   "to": "phen:jahr",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:reassignment",
+   "to": "phen:qalqalah",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:glrt_burst",
+   "to": "phen:qalqalah",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:spectral_moments",
+   "to": "phen:qalqalah",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:spectral_moments",
+   "to": "phen:safir_tafashhi",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:scattering",
+   "to": "phen:takreer",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:modulation_spectrum",
+   "to": "phen:takreer",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:modulation_spectrum",
+   "to": "phen:reverb",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:karma_kalman",
+   "to": "phen:tafkheem",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:karma_kalman",
+   "to": "phen:iqlab",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:karma_kalman",
+   "to": "phen:makharij",
+   "rel": "measures"
+  },
+  {
+   "from": "math:a1_p0",
+   "to": "phen:ghunnah",
+   "rel": "measures"
+  },
+  {
+   "from": "math:a1_p0",
+   "to": "phen:ikhfa",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:iaif_qcp",
+   "to": "phen:jahr",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:cpp",
+   "to": "phen:fatigue",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:hsmm",
+   "to": "phen:madd",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:breath_detector",
+   "to": "phen:waqf_sakt",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:pyin",
+   "to": "phen:maqam",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:crepe_rmvpe",
+   "to": "phen:maqam",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:pitch_histogram",
+   "to": "phen:maqam",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:synchrosqueezing",
+   "to": "phen:maqam",
+   "rel": "measures"
+  },
+  {
+   "from": "algo:wpe",
+   "to": "phen:reverb",
+   "rel": "models"
+  },
+  {
+   "from": "algo:reverb_audit",
+   "to": "phen:reverb",
+   "rel": "validates"
+  },
+  {
+   "from": "algo:karma_kalman",
+   "to": "algo:lpc_harmonised",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "algo:particle_filter_formants",
+   "to": "algo:karma_kalman",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "algo:deepformants",
+   "to": "algo:karma_kalman",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "algo:emd_vmd",
+   "to": "algo:synchrosqueezing",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "algo:karma_kalman",
+   "to": "algo:lpc_harmonised",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:karma_kalman",
+   "to": "pkg:julia:LowLevelParticleFilters",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:iaif_qcp",
+   "to": "algo:karma_kalman",
+   "rel": "cross_checks"
+  },
+  {
+   "from": "algo:esindy",
+   "to": "algo:sindy_stlsq",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "algo:weak_sindy",
+   "to": "algo:sindy_stlsq",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "algo:sindy_stlsq",
+   "to": "pkg:julia:DataDrivenSparse",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:symbolic_regression",
+   "to": "pkg:julia:SymbolicRegression",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:symbolic_regression",
+   "to": "pkg:julia:DynamicQuantities",
+   "rel": "requires"
+  },
+  {
+   "from": "pkg:julia:DataDrivenSR",
+   "to": "pkg:julia:SymbolicRegression",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:ude",
+   "to": "pkg:julia:Lux",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:ude",
+   "to": "pkg:julia:SciMLSensitivity",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:ude",
+   "to": "algo:sindy_stlsq",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:neural_sde",
+   "to": "pkg:julia:StochasticDiffEq",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:dmd",
+   "to": "pkg:julia:DataDrivenDMD",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:nuts",
+   "to": "pkg:julia:Turing",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:nuts",
+   "to": "pkg:julia:ParetoSmooth",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:gpu_ensemble_bootstrap",
+   "to": "pkg:julia:DiffEqGPU",
+   "rel": "requires"
+  },
+  {
+   "from": "pkg:julia:DiffEqGPU",
+   "to": "pkg:julia:CUDA",
+   "rel": "requires"
+  },
+  {
+   "from": "math:hierarchical_bayes",
+   "to": "algo:nuts",
+   "rel": "requires"
+  },
+  {
+   "from": "math:harakah_power_law",
+   "to": "algo:nuts",
+   "rel": "requires"
+  },
+  {
+   "from": "math:harakah_power_law",
+   "to": "algo:esindy",
+   "rel": "requires"
+  },
+  {
+   "from": "math:harakah_power_law",
+   "to": "algo:symbolic_regression",
+   "rel": "requires"
+  },
+  {
+   "from": "math:tempo_relaxation_ode",
+   "to": "algo:ude",
+   "rel": "requires"
+  },
+  {
+   "from": "math:tempo_relaxation_ode",
+   "to": "algo:gpu_ensemble_bootstrap",
+   "rel": "validates"
+  },
+  {
+   "from": "math:task_dynamics_2nd_order",
+   "to": "algo:weak_sindy",
+   "rel": "requires"
+  },
+  {
+   "from": "math:task_dynamics_2nd_order",
+   "to": "pkg:julia:ModelingToolkit",
+   "rel": "requires"
+  },
+  {
+   "from": "math:koopman_spectrum",
+   "to": "algo:dmd",
+   "rel": "requires"
+  },
+  {
+   "from": "math:koopman_spectrum",
+   "to": "math:tempo_relaxation_ode",
+   "rel": "cross_checks"
+  },
+  {
+   "from": "math:langevin_maqam_potential",
+   "to": "algo:neural_sde",
+   "rel": "requires"
+  },
+  {
+   "from": "math:fitness_fatigue",
+   "to": "algo:ude",
+   "rel": "requires"
+  },
+  {
+   "from": "math:task_dynamics_2nd_order",
+   "to": "algo:karma_kalman",
+   "rel": "requires"
+  },
+  {
+   "from": "code:research_agency_lab/substrate_library/octave/qaari_features.m",
+   "to": "code:app/acoustic/features.py",
+   "rel": "cross_checks"
+  },
+  {
+   "from": "code:research_agency_lab/substrate_library/octave/qaari_features.m",
+   "to": "math:harakah_power_law",
+   "rel": "cross_checks"
+  },
+  {
+   "from": "code:research_agency_lab/substrate_library/octave/qaari_features.m",
+   "to": "pkg:octave:signal",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:reassignment",
+   "to": "pkg:octave:ltfat",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:scattering",
+   "to": "pkg:python:kymatio",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:wpe",
+   "to": "pkg:python:nara_wpe",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:crepe_rmvpe",
+   "to": "pkg:python:crepe",
+   "rel": "requires"
+  },
+  {
+   "from": "code:research_agency_lab/substrate_library/julia/src/Discovery.jl",
+   "to": "code:research_agency_lab/substrate_library/julia/Manifest.toml",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:sindy_stlsq",
+   "to": "src:doi:10.1073/pnas.1517384113",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:ude",
+   "to": "src:arXiv:2001.04385",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:symbolic_regression",
+   "to": "src:arXiv:2305.01582",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:weak_sindy",
+   "to": "src:doi:10.1137/20M1343166",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:esindy",
+   "to": "src:doi:10.1098/rspa.2021.0904",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:karma_kalman",
+   "to": "src:doi:10.1121/1.4739462",
+   "rel": "cites"
+  },
+  {
+   "from": "math:a1_p0",
+   "to": "src:doi:10.1121/1.420083",
+   "rel": "cites"
+  },
+  {
+   "from": "math:a1_p0",
+   "to": "src:doi:10.1121/1.5008854",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:synchrosqueezing",
+   "to": "src:doi:10.1016/j.acha.2010.08.002",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:scattering",
+   "to": "src:doi:10.1109/TSP.2014.2326991",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:multitaper",
+   "to": "src:doi:10.1109/PROC.1982.12433",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:iaif_qcp",
+   "to": "src:doi:10.1016/0167-6393(92)90008-7",
+   "rel": "cites"
+  },
+  {
+   "from": "phen:tafkheem",
+   "to": "src:doi:10.1016/j.wocn.2010.09.002",
+   "rel": "cites"
+  },
+  {
+   "from": "math:ritardando_curve",
+   "to": "src:doi:10.1121/1.426720",
+   "rel": "cites"
+  },
+  {
+   "from": "math:qta_fujisaki",
+   "to": "src:doi:10.1121/1.3037222",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:gpu_ensemble_bootstrap",
+   "to": "src:arXiv:2304.06835",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:nuts",
+   "to": "src:doi:10.1007/s11222-016-9696-4",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:wpe",
+   "to": "src:doi:10.1109/TASL.2010.2052251",
+   "rel": "cites"
+  }
+ ]
+}

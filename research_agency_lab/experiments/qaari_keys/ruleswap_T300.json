@@ -1,0 +1,2390 @@
+{
+    "families": {
+        "ghunnah_drop": {
+            "other_median_flag_rate": 0.041102861365475765,
+            "anchor_flag_rate": 0.025536854323853744,
+            "other_median_win_rate": 0.9588971386345242,
+            "per_speaker": {
+                "everyayah:Husary_Muallim_128kbps": {
+                    "win_rate": 0.9704861111111112,
+                    "flag_rate": 0.029513888888888888,
+                    "anchor": true,
+                    "median_margin": 28.108779907226562,
+                    "n": 576
+                },
+                "everyayah:Salah_Al_Budair_128kbps": {
+                    "win_rate": 0.9252336448598131,
+                    "flag_rate": 0.07476635514018691,
+                    "anchor": false,
+                    "median_margin": 21.91742992401123,
+                    "n": 642
+                },
+                "everyayah:Ahmed_Neana_128kbps": {
+                    "win_rate": 0.9565916398713826,
+                    "flag_rate": 0.04340836012861737,
+                    "anchor": false,
+                    "median_margin": 26.58364200592041,
+                    "n": 622
+                },
+                "everyayah:Abdul_Basit_Mujawwad_128kbps": {
+                    "win_rate": 0.9802867383512545,
+                    "flag_rate": 0.01971326164874552,
+                    "anchor": false,
+                    "median_margin": 24.621414184570312,
+                    "n": 558
+                },
+                "everyayah:Karim_Mansoori_40kbps": {
+                    "win_rate": 0.9722222222222222,
+                    "flag_rate": 0.027777777777777776,
+                    "anchor": false,
+                    "median_margin": 24.879581451416016,
+                    "n": 540
+                },
+                "everyayah:Akram_AlAlaqimy_128kbps": {
+                    "win_rate": 0.9695024077046549,
+                    "flag_rate": 0.030497592295345103,
+                    "anchor": false,
+                    "median_margin": 25.39963150024414,
+                    "n": 623
+                },
+                "everyayah:Muhsin_Al_Qasim_192kbps": {
+                    "win_rate": 0.9407176287051482,
+                    "flag_rate": 0.059282371294851796,
+                    "anchor": false,
+                    "median_margin": 21.890975952148438,
+                    "n": 641
+                },
+                "everyayah:Saood_ash-Shuraym_128kbps": {
+                    "win_rate": 0.9439252336448598,
+                    "flag_rate": 0.056074766355140186,
+                    "anchor": false,
+                    "median_margin": 19.46721363067627,
+                    "n": 642
+                },
+                "everyayah:Yasser_Ad-Dussary_128kbps": {
+                    "win_rate": 0.9407176287051482,
+                    "flag_rate": 0.059282371294851796,
+                    "anchor": false,
+                    "median_margin": 23.461502075195312,
+                    "n": 641
+                },
+                "everyayah:Abdullah_Basfar_192kbps": {
+                    "win_rate": 0.9662379421221865,
+                    "flag_rate": 0.03376205787781351,
+                    "anchor": false,
+                    "median_margin": 26.953004837036133,
+                    "n": 622
+                },
+                "everyayah:Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net": {
+                    "win_rate": 0.8916797488226059,
+                    "flag_rate": 0.10832025117739404,
+                    "anchor": false,
+                    "median_margin": 21.14962387084961,
+                    "n": 637
+                },
+                "everyayah:Hudhaify_128kbps": {
+                    "win_rate": 0.9727126805778491,
+                    "flag_rate": 0.027287319422150885,
+                    "anchor": false,
+                    "median_margin": 26.814796447753906,
+                    "n": 623
+                },
+                "everyayah:Muhammad_Ayyoub_128kbps": {
+                    "win_rate": 0.978441127694859,
+                    "flag_rate": 0.02155887230514096,
+                    "anchor": false,
+                    "median_margin": 26.611841201782227,
+                    "n": 603
+                },
+                "everyayah:Ali_Hajjaj_AlSuesy_128kbps": {
+                    "win_rate": 0.9582664526484751,
+                    "flag_rate": 0.04173354735152488,
+                    "anchor": false,
+                    "median_margin": 26.79591178894043,
+                    "n": 623
+                },
+                "everyayah:Hani_Rifai_192kbps": {
+                    "win_rate": 0.913322632423756,
+                    "flag_rate": 0.08667736757624397,
+                    "anchor": false,
+                    "median_margin": 24.095138549804688,
+                    "n": 623
+                },
+                "everyayah:aziz_alili_128kbps": {
+                    "win_rate": 0.9708265802269044,
+                    "flag_rate": 0.029173419773095625,
+                    "anchor": false,
+                    "median_margin": 25.343486785888672,
+                    "n": 617
+                },
+                "everyayah:mahmoud_ali_al_banna_32kbps": {
+                    "win_rate": 0.971107544141252,
+                    "flag_rate": 0.028892455858747994,
+                    "anchor": false,
+                    "median_margin": 26.64445686340332,
+                    "n": 623
+                },
+                "everyayah:khalefa_al_tunaiji_64kbps": {
+                    "win_rate": 0.9390048154093098,
+                    "flag_rate": 0.060995184590690206,
+                    "anchor": false,
+                    "median_margin": 25.540958404541016,
+                    "n": 623
+                },
+                "everyayah:Abu_Bakr_Ash-Shaatree_128kbps": {
+                    "win_rate": 0.962843295638126,
+                    "flag_rate": 0.03715670436187399,
+                    "anchor": false,
+                    "median_margin": 24.915563583374023,
+                    "n": 619
+                },
+                "everyayah:Abdurrahmaan_As-Sudais_192kbps": {
+                    "win_rate": 0.9017160686427457,
+                    "flag_rate": 0.09828393135725429,
+                    "anchor": false,
+                    "median_margin": 19.485279083251953,
+                    "n": 641
+                },
+                "everyayah:Ali_Jaber_64kbps": {
+                    "win_rate": 0.9657853810264385,
+                    "flag_rate": 0.03421461897356143,
+                    "anchor": false,
+                    "median_margin": 24.668241500854492,
+                    "n": 643
+                },
+                "everyayah:Khaalid_Abdullaah_al-Qahtaanee_192kbps": {
+                    "win_rate": 0.9486356340288925,
+                    "flag_rate": 0.051364365971107544,
+                    "anchor": false,
+                    "median_margin": 22.32204818725586,
+                    "n": 623
+                },
+                "everyayah:MaherAlMuaiqly128kbps": {
+                    "win_rate": 0.9215070643642073,
+                    "flag_rate": 0.07849293563579278,
+                    "anchor": false,
+                    "median_margin": 19.709930419921875,
+                    "n": 637
+                },
+                "everyayah:Fares_Abbad_64kbps": {
+                    "win_rate": 0.9455676516329704,
+                    "flag_rate": 0.05443234836702955,
+                    "anchor": false,
+                    "median_margin": 23.277639389038086,
+                    "n": 643
+                },
+                "everyayah:Muhammad_AbdulKareem_128kbps": {
+                    "win_rate": 0.9515625,
+                    "flag_rate": 0.0484375,
+                    "anchor": false,
+                    "median_margin": 23.420780181884766,
+                    "n": 640
+                },
+                "everyayah:Alafasy_128kbps": {
+                    "win_rate": 0.9677938808373591,
+                    "flag_rate": 0.0322061191626409,
+                    "anchor": false,
+                    "median_margin": 24.854690551757812,
+                    "n": 621
+                },
+                "everyayah:Abdul_Basit_Murattal_192kbps": {
+                    "win_rate": 0.9717425431711146,
+                    "flag_rate": 0.0282574568288854,
+                    "anchor": false,
+                    "median_margin": 26.635637283325195,
+                    "n": 637
+                },
+                "everyayah:Mustafa_Ismail_48kbps": {
+                    "win_rate": 0.9637681159420289,
+                    "flag_rate": 0.036231884057971016,
+                    "anchor": false,
+                    "median_margin": 24.9578800201416,
+                    "n": 138
+                },
+                "everyayah:Husary_128kbps_Mujawwad": {
+                    "win_rate": 0.9837251356238698,
+                    "flag_rate": 0.0162748643761302,
+                    "anchor": true,
+                    "median_margin": 24.664730072021484,
+                    "n": 553
+                },
+                "everyayah:Sahl_Yassin_128kbps": {
+                    "win_rate": 0.9597423510466989,
+                    "flag_rate": 0.040257648953301126,
+                    "anchor": false,
+                    "median_margin": 24.5186710357666,
+                    "n": 621
+                },
+                "everyayah:Salaah_AbdulRahman_Bukhatir_128kbps": {
+                    "win_rate": 0.9471228615863142,
+                    "flag_rate": 0.05287713841368585,
+                    "anchor": false,
+                    "median_margin": 23.06087875366211,
+                    "n": 643
+                },
+                "everyayah:Yaser_Salamah_128kbps": {
+                    "win_rate": 0.9720062208398134,
+                    "flag_rate": 0.027993779160186624,
+                    "anchor": false,
+                    "median_margin": 25.97998046875,
+                    "n": 643
+                },
+                "everyayah:Mohammad_al_Tablaway_128kbps": {
+                    "win_rate": 0.9630818619582665,
+                    "flag_rate": 0.03691813804173355,
+                    "anchor": false,
+                    "median_margin": 25.60614776611328,
+                    "n": 623
+                },
+                "everyayah:Muhammad_Jibreel_128kbps": {
+                    "win_rate": 0.9559748427672956,
+                    "flag_rate": 0.0440251572327044,
+                    "anchor": false,
+                    "median_margin": 24.747010231018066,
+                    "n": 636
+                },
+                "everyayah:Abdullah_Matroud_128kbps": {
+                    "win_rate": 0.9390048154093098,
+                    "flag_rate": 0.060995184590690206,
+                    "anchor": false,
+                    "median_margin": 23.524301528930664,
+                    "n": 623
+                },
+                "everyayah:Ghamadi_40kbps": {
+                    "win_rate": 0.9580093312597201,
+                    "flag_rate": 0.041990668740279936,
+                    "anchor": false,
+                    "median_margin": 24.391857147216797,
+                    "n": 643
+                },
+                "everyayah:Nasser_Alqatami_128kbps": {
+                    "win_rate": 0.94375,
+                    "flag_rate": 0.05625,
+                    "anchor": false,
+                    "median_margin": 24.011332511901855,
+                    "n": 640
+                },
+                "everyayah:Ayman_Sowaid_64kbps": {
+                    "win_rate": 0.9595278246205734,
+                    "flag_rate": 0.04047217537942664,
+                    "anchor": false,
+                    "median_margin": 27.374267578125,
+                    "n": 593
+                },
+                "everyayah:Minshawy_Mujawwad_192kbps": {
+                    "win_rate": 0.9655797101449275,
+                    "flag_rate": 0.034420289855072464,
+                    "anchor": false,
+                    "median_margin": 23.73956871032715,
+                    "n": 552
+                },
+                "everyayah:Minshawy_Murattal_128kbps": {
+                    "win_rate": 0.9668874172185431,
+                    "flag_rate": 0.033112582781456956,
+                    "anchor": false,
+                    "median_margin": 26.667978286743164,
+                    "n": 604
+                },
+                "everyayah:Husary_128kbps": {
+                    "win_rate": 0.9696969696969697,
+                    "flag_rate": 0.030303030303030304,
+                    "anchor": true,
+                    "median_margin": 27.28474235534668,
+                    "n": 594
+                }
+            },
+            "anchor_median_margin": 26.341270446777344,
+            "anchor_win_rate": 0.9744631456761462,
+            "anchor_n": 1723,
+            "n_edits": 24889
+        },
+        "idgham_undo": {
+            "other_median_flag_rate": 0.0082304912779681,
+            "anchor_flag_rate": 0.008415147265077139,
+            "other_median_win_rate": 0.991769508722032,
+            "per_speaker": {
+                "everyayah:Husary_Muallim_128kbps": {
+                    "win_rate": 0.9926547743966422,
+                    "flag_rate": 0.007345225603357817,
+                    "anchor": true,
+                    "median_margin": 12.51578426361084,
+                    "n": 953
+                },
+                "everyayah:Salah_Al_Budair_128kbps": {
+                    "win_rate": 0.9894026974951831,
+                    "flag_rate": 0.010597302504816955,
+                    "anchor": false,
+                    "median_margin": 11.21955919265747,
+                    "n": 1038
+                },
+                "everyayah:Ahmed_Neana_128kbps": {
+                    "win_rate": 0.9941690962099126,
+                    "flag_rate": 0.0058309037900874635,
+                    "anchor": false,
+                    "median_margin": 12.055435180664062,
+                    "n": 1029
+                },
+                "everyayah:Abdul_Basit_Mujawwad_128kbps": {
+                    "win_rate": 0.9902491874322861,
+                    "flag_rate": 0.009750812567713976,
+                    "anchor": false,
+                    "median_margin": 10.775053977966309,
+                    "n": 923
+                },
+                "everyayah:Karim_Mansoori_40kbps": {
+                    "win_rate": 0.9945295404814004,
+                    "flag_rate": 0.005470459518599562,
+                    "anchor": false,
+                    "median_margin": 11.127930164337158,
+                    "n": 914
+                },
+                "everyayah:Akram_AlAlaqimy_128kbps": {
+                    "win_rate": 0.9961089494163424,
+                    "flag_rate": 0.0038910505836575876,
+                    "anchor": false,
+                    "median_margin": 12.124884128570557,
+                    "n": 1028
+                },
+                "everyayah:Muhsin_Al_Qasim_192kbps": {
+                    "win_rate": 0.9894128970163619,
+                    "flag_rate": 0.010587102983638113,
+                    "anchor": false,
+                    "median_margin": 11.235496520996094,
+                    "n": 1039
+                },
+                "everyayah:Saood_ash-Shuraym_128kbps": {
+                    "win_rate": 0.9865125240847784,
+                    "flag_rate": 0.01348747591522158,
+                    "anchor": false,
+                    "median_margin": 10.204856395721436,
+                    "n": 1038
+                },
+                "everyayah:Yasser_Ad-Dussary_128kbps": {
+                    "win_rate": 0.9951830443159922,
+                    "flag_rate": 0.004816955684007707,
+                    "anchor": false,
+                    "median_margin": 11.478546619415283,
+                    "n": 1038
+                },
+                "everyayah:Abdullah_Basfar_192kbps": {
+                    "win_rate": 0.9951314508276533,
+                    "flag_rate": 0.004868549172346641,
+                    "anchor": false,
+                    "median_margin": 12.36928939819336,
+                    "n": 1027
+                },
+                "everyayah:Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net": {
+                    "win_rate": 0.9774730656219393,
+                    "flag_rate": 0.022526934378060724,
+                    "anchor": false,
+                    "median_margin": 10.164739608764648,
+                    "n": 1021
+                },
+                "everyayah:Hudhaify_128kbps": {
+                    "win_rate": 0.9931840311587147,
+                    "flag_rate": 0.006815968841285297,
+                    "anchor": false,
+                    "median_margin": 12.330394744873047,
+                    "n": 1027
+                },
+                "everyayah:Muhammad_Ayyoub_128kbps": {
+                    "win_rate": 0.9970472440944882,
+                    "flag_rate": 0.002952755905511811,
+                    "anchor": false,
+                    "median_margin": 12.321378231048584,
+                    "n": 1016
+                },
+                "everyayah:Ali_Hajjaj_AlSuesy_128kbps": {
+                    "win_rate": 0.9961089494163424,
+                    "flag_rate": 0.0038910505836575876,
+                    "anchor": false,
+                    "median_margin": 12.171341896057129,
+                    "n": 1028
+                },
+                "everyayah:Hani_Rifai_192kbps": {
+                    "win_rate": 0.9912280701754386,
+                    "flag_rate": 0.008771929824561403,
+                    "anchor": false,
+                    "median_margin": 11.312049388885498,
+                    "n": 1026
+                },
+                "everyayah:aziz_alili_128kbps": {
+                    "win_rate": 0.9970530451866405,
+                    "flag_rate": 0.0029469548133595285,
+                    "anchor": false,
+                    "median_margin": 12.072447299957275,
+                    "n": 1018
+                },
+                "everyayah:mahmoud_ali_al_banna_32kbps": {
+                    "win_rate": 0.9961089494163424,
+                    "flag_rate": 0.0038910505836575876,
+                    "anchor": false,
+                    "median_margin": 12.321703910827637,
+                    "n": 1028
+                },
+                "everyayah:khalefa_al_tunaiji_64kbps": {
+                    "win_rate": 0.9688715953307393,
+                    "flag_rate": 0.0311284046692607,
+                    "anchor": false,
+                    "median_margin": 12.246891021728516,
+                    "n": 1028
+                },
+                "everyayah:Abu_Bakr_Ash-Shaatree_128kbps": {
+                    "win_rate": 0.9961089494163424,
+                    "flag_rate": 0.0038910505836575876,
+                    "anchor": false,
+                    "median_margin": 11.609163284301758,
+                    "n": 1028
+                },
+                "everyayah:Abdurrahmaan_As-Sudais_192kbps": {
+                    "win_rate": 0.9922928709055877,
+                    "flag_rate": 0.007707129094412331,
+                    "anchor": false,
+                    "median_margin": 11.418825149536133,
+                    "n": 1038
+                },
+                "everyayah:Ali_Jaber_64kbps": {
+                    "win_rate": 0.9961501443695862,
+                    "flag_rate": 0.0038498556304138597,
+                    "anchor": false,
+                    "median_margin": 12.448602676391602,
+                    "n": 1039
+                },
+                "everyayah:Khaalid_Abdullaah_al-Qahtaanee_192kbps": {
+                    "win_rate": 0.9814995131450828,
+                    "flag_rate": 0.018500486854917234,
+                    "anchor": false,
+                    "median_margin": 11.08354377746582,
+                    "n": 1027
+                },
+                "everyayah:MaherAlMuaiqly128kbps": {
+                    "win_rate": 0.9759615384615384,
+                    "flag_rate": 0.02403846153846154,
+                    "anchor": false,
+                    "median_margin": 9.934258937835693,
+                    "n": 1040
+                },
+                "everyayah:Fares_Abbad_64kbps": {
+                    "win_rate": 0.9884393063583815,
+                    "flag_rate": 0.011560693641618497,
+                    "anchor": false,
+                    "median_margin": 10.989224910736084,
+                    "n": 1038
+                },
+                "everyayah:Muhammad_AbdulKareem_128kbps": {
+                    "win_rate": 0.9893203883495145,
+                    "flag_rate": 0.010679611650485437,
+                    "anchor": false,
+                    "median_margin": 10.825762271881104,
+                    "n": 1030
+                },
+                "everyayah:Alafasy_128kbps": {
+                    "win_rate": 0.9961089494163424,
+                    "flag_rate": 0.0038910505836575876,
+                    "anchor": false,
+                    "median_margin": 12.269286155700684,
+                    "n": 1028
+                },
+                "everyayah:Abdul_Basit_Murattal_192kbps": {
+                    "win_rate": 0.9960199004975124,
+                    "flag_rate": 0.003980099502487562,
+                    "anchor": false,
+                    "median_margin": 12.267463684082031,
+                    "n": 1005
+                },
+                "everyayah:Mustafa_Ismail_48kbps": {
+                    "win_rate": 0.9924528301886792,
+                    "flag_rate": 0.007547169811320755,
+                    "anchor": false,
+                    "median_margin": 11.624810218811035,
+                    "n": 265
+                },
+                "everyayah:Husary_128kbps_Mujawwad": {
+                    "win_rate": 0.9868852459016394,
+                    "flag_rate": 0.013114754098360656,
+                    "anchor": true,
+                    "median_margin": 11.541841506958008,
+                    "n": 915
+                },
+                "everyayah:Sahl_Yassin_128kbps": {
+                    "win_rate": 0.9922178988326849,
+                    "flag_rate": 0.007782101167315175,
+                    "anchor": false,
+                    "median_margin": 11.908104419708252,
+                    "n": 1028
+                },
+                "everyayah:Salaah_AbdulRahman_Bukhatir_128kbps": {
+                    "win_rate": 0.9816955684007708,
+                    "flag_rate": 0.018304431599229287,
+                    "anchor": false,
+                    "median_margin": 11.551901817321777,
+                    "n": 1038
+                },
+                "everyayah:Yaser_Salamah_128kbps": {
+                    "win_rate": 0.9903660886319846,
+                    "flag_rate": 0.009633911368015413,
+                    "anchor": false,
+                    "median_margin": 11.595776557922363,
+                    "n": 1038
+                },
+                "everyayah:Mohammad_al_Tablaway_128kbps": {
+                    "win_rate": 0.9941634241245136,
+                    "flag_rate": 0.005836575875486381,
+                    "anchor": false,
+                    "median_margin": 11.88074779510498,
+                    "n": 1028
+                },
+                "everyayah:Muhammad_Jibreel_128kbps": {
+                    "win_rate": 0.9903288201160542,
+                    "flag_rate": 0.009671179883945842,
+                    "anchor": false,
+                    "median_margin": 12.162062644958496,
+                    "n": 1034
+                },
+                "everyayah:Abdullah_Matroud_128kbps": {
+                    "win_rate": 0.989310009718173,
+                    "flag_rate": 0.010689990281827016,
+                    "anchor": false,
+                    "median_margin": 11.328088760375977,
+                    "n": 1029
+                },
+                "everyayah:Ghamadi_40kbps": {
+                    "win_rate": 0.991321118611379,
+                    "flag_rate": 0.008678881388621022,
+                    "anchor": false,
+                    "median_margin": 11.814956665039062,
+                    "n": 1037
+                },
+                "everyayah:Nasser_Alqatami_128kbps": {
+                    "win_rate": 0.9893924783027965,
+                    "flag_rate": 0.010607521697203472,
+                    "anchor": false,
+                    "median_margin": 11.68331241607666,
+                    "n": 1037
+                },
+                "everyayah:Ayman_Sowaid_64kbps": {
+                    "win_rate": 0.9939271255060729,
+                    "flag_rate": 0.006072874493927126,
+                    "anchor": false,
+                    "median_margin": 12.061253547668457,
+                    "n": 988
+                },
+                "everyayah:Minshawy_Mujawwad_192kbps": {
+                    "win_rate": 0.9745575221238938,
+                    "flag_rate": 0.025442477876106196,
+                    "anchor": false,
+                    "median_margin": 9.768738746643066,
+                    "n": 904
+                },
+                "everyayah:Minshawy_Murattal_128kbps": {
+                    "win_rate": 0.9901574803149606,
+                    "flag_rate": 0.00984251968503937,
+                    "anchor": false,
+                    "median_margin": 12.487679481506348,
+                    "n": 1016
+                },
+                "everyayah:Husary_128kbps": {
+                    "win_rate": 0.9949186991869918,
+                    "flag_rate": 0.00508130081300813,
+                    "anchor": true,
+                    "median_margin": 12.195069313049316,
+                    "n": 984
+                }
+            },
+            "anchor_median_margin": 12.078851699829102,
+            "anchor_win_rate": 0.9915848527349228,
+            "anchor_n": 2852,
+            "n_edits": 40833
+        },
+        "madd_short": {
+            "other_median_flag_rate": 0.07580756482059489,
+            "anchor_flag_rate": 0.06287053632979457,
+            "other_median_win_rate": 0.9241924351794051,
+            "per_speaker": {
+                "everyayah:Husary_Muallim_128kbps": {
+                    "win_rate": 0.9090909090909091,
+                    "flag_rate": 0.09090909090909091,
+                    "anchor": true,
+                    "median_margin": 11.943490028381348,
+                    "n": 2420
+                },
+                "everyayah:Salah_Al_Budair_128kbps": {
+                    "win_rate": 0.8894230769230769,
+                    "flag_rate": 0.11057692307692307,
+                    "anchor": false,
+                    "median_margin": 9.202322959899902,
+                    "n": 2704
+                },
+                "everyayah:Ahmed_Neana_128kbps": {
+                    "win_rate": 0.8455162019593067,
+                    "flag_rate": 0.1544837980406933,
+                    "anchor": false,
+                    "median_margin": 10.513569355010986,
+                    "n": 2654
+                },
+                "everyayah:Abdul_Basit_Mujawwad_128kbps": {
+                    "win_rate": 0.9831751509922347,
+                    "flag_rate": 0.016824849007765316,
+                    "anchor": false,
+                    "median_margin": 11.10456371307373,
+                    "n": 2318
+                },
+                "everyayah:Karim_Mansoori_40kbps": {
+                    "win_rate": 0.9518388791593695,
+                    "flag_rate": 0.04816112084063047,
+                    "anchor": false,
+                    "median_margin": 10.905584335327148,
+                    "n": 2284
+                },
+                "everyayah:Akram_AlAlaqimy_128kbps": {
+                    "win_rate": 0.9502637528259231,
+                    "flag_rate": 0.04973624717407687,
+                    "anchor": false,
+                    "median_margin": 10.991591453552246,
+                    "n": 2654
+                },
+                "everyayah:Muhsin_Al_Qasim_192kbps": {
+                    "win_rate": 0.9016272189349113,
+                    "flag_rate": 0.09837278106508876,
+                    "anchor": false,
+                    "median_margin": 9.466854095458984,
+                    "n": 2704
+                },
+                "everyayah:Saood_ash-Shuraym_128kbps": {
+                    "win_rate": 0.896819526627219,
+                    "flag_rate": 0.10318047337278106,
+                    "anchor": false,
+                    "median_margin": 8.538798332214355,
+                    "n": 2704
+                },
+                "everyayah:Yasser_Ad-Dussary_128kbps": {
+                    "win_rate": 0.9289940828402367,
+                    "flag_rate": 0.07100591715976332,
+                    "anchor": false,
+                    "median_margin": 9.888936996459961,
+                    "n": 2704
+                },
+                "everyayah:Abdullah_Basfar_192kbps": {
+                    "win_rate": 0.9513758009800226,
+                    "flag_rate": 0.04862419901997738,
+                    "anchor": false,
+                    "median_margin": 11.355535507202148,
+                    "n": 2653
+                },
+                "everyayah:Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net": {
+                    "win_rate": 0.9408903853348298,
+                    "flag_rate": 0.05910961466517022,
+                    "anchor": false,
+                    "median_margin": 9.397598266601562,
+                    "n": 2673
+                },
+                "everyayah:Hudhaify_128kbps": {
+                    "win_rate": 0.9905802562170309,
+                    "flag_rate": 0.009419743782969104,
+                    "anchor": false,
+                    "median_margin": 10.824333190917969,
+                    "n": 2654
+                },
+                "everyayah:Muhammad_Ayyoub_128kbps": {
+                    "win_rate": 0.9911978568694987,
+                    "flag_rate": 0.008802143130501339,
+                    "anchor": false,
+                    "median_margin": 11.351390838623047,
+                    "n": 2613
+                },
+                "everyayah:Ali_Hajjaj_AlSuesy_128kbps": {
+                    "win_rate": 0.8447626224566692,
+                    "flag_rate": 0.15523737754333083,
+                    "anchor": false,
+                    "median_margin": 11.020812034606934,
+                    "n": 2654
+                },
+                "everyayah:Hani_Rifai_192kbps": {
+                    "win_rate": 0.9006046863189721,
+                    "flag_rate": 0.09939531368102797,
+                    "anchor": false,
+                    "median_margin": 10.354317665100098,
+                    "n": 2646
+                },
+                "everyayah:aziz_alili_128kbps": {
+                    "win_rate": 0.9586964759378552,
+                    "flag_rate": 0.04130352406214475,
+                    "anchor": false,
+                    "median_margin": 11.082123756408691,
+                    "n": 2639
+                },
+                "everyayah:mahmoud_ali_al_banna_32kbps": {
+                    "win_rate": 0.848153730218538,
+                    "flag_rate": 0.15184626978146196,
+                    "anchor": false,
+                    "median_margin": 10.650083541870117,
+                    "n": 2654
+                },
+                "everyayah:khalefa_al_tunaiji_64kbps": {
+                    "win_rate": 0.9683496608892238,
+                    "flag_rate": 0.031650339110776186,
+                    "anchor": false,
+                    "median_margin": 11.087193489074707,
+                    "n": 2654
+                },
+                "everyayah:Abu_Bakr_Ash-Shaatree_128kbps": {
+                    "win_rate": 0.979276563677468,
+                    "flag_rate": 0.020723436322532027,
+                    "anchor": false,
+                    "median_margin": 10.478763580322266,
+                    "n": 2654
+                },
+                "everyayah:Abdurrahmaan_As-Sudais_192kbps": {
+                    "win_rate": 0.8975591715976331,
+                    "flag_rate": 0.10244082840236686,
+                    "anchor": false,
+                    "median_margin": 9.495295524597168,
+                    "n": 2704
+                },
+                "everyayah:Ali_Jaber_64kbps": {
+                    "win_rate": 0.8513313609467456,
+                    "flag_rate": 0.14866863905325445,
+                    "anchor": false,
+                    "median_margin": 10.824257373809814,
+                    "n": 2704
+                },
+                "everyayah:Khaalid_Abdullaah_al-Qahtaanee_192kbps": {
+                    "win_rate": 0.9592913682623445,
+                    "flag_rate": 0.04070863173765549,
+                    "anchor": false,
+                    "median_margin": 10.13412094116211,
+                    "n": 2653
+                },
+                "everyayah:MaherAlMuaiqly128kbps": {
+                    "win_rate": 0.9570688378978535,
+                    "flag_rate": 0.04293116210214656,
+                    "anchor": false,
+                    "median_margin": 8.162227630615234,
+                    "n": 2702
+                },
+                "everyayah:Fares_Abbad_64kbps": {
+                    "win_rate": 0.952645209027007,
+                    "flag_rate": 0.04735479097299297,
+                    "anchor": false,
+                    "median_margin": 9.936492919921875,
+                    "n": 2703
+                },
+                "everyayah:Muhammad_AbdulKareem_128kbps": {
+                    "win_rate": 0.9301634472511144,
+                    "flag_rate": 0.06983655274888559,
+                    "anchor": false,
+                    "median_margin": 9.722738265991211,
+                    "n": 2692
+                },
+                "everyayah:Alafasy_128kbps": {
+                    "win_rate": 0.975885455915599,
+                    "flag_rate": 0.024114544084400905,
+                    "anchor": false,
+                    "median_margin": 11.111165046691895,
+                    "n": 2654
+                },
+                "everyayah:Abdul_Basit_Murattal_192kbps": {
+                    "win_rate": 0.9181508147025388,
+                    "flag_rate": 0.08184918529746116,
+                    "anchor": false,
+                    "median_margin": 10.962261199951172,
+                    "n": 2639
+                },
+                "everyayah:Mustafa_Ismail_48kbps": {
+                    "win_rate": 0.8686371100164204,
+                    "flag_rate": 0.13136288998357964,
+                    "anchor": false,
+                    "median_margin": 10.295550346374512,
+                    "n": 609
+                },
+                "everyayah:Husary_128kbps_Mujawwad": {
+                    "win_rate": 0.9129677980852916,
+                    "flag_rate": 0.08703220191470844,
+                    "anchor": true,
+                    "median_margin": 10.963221073150635,
+                    "n": 2298
+                },
+                "everyayah:Sahl_Yassin_128kbps": {
+                    "win_rate": 0.8775433308214017,
+                    "flag_rate": 0.12245666917859835,
+                    "anchor": false,
+                    "median_margin": 10.289012432098389,
+                    "n": 2654
+                },
+                "everyayah:Salaah_AbdulRahman_Bukhatir_128kbps": {
+                    "win_rate": 0.9108727810650887,
+                    "flag_rate": 0.08912721893491124,
+                    "anchor": false,
+                    "median_margin": 9.833003044128418,
+                    "n": 2704
+                },
+                "everyayah:Yaser_Salamah_128kbps": {
+                    "win_rate": 0.8879437869822485,
+                    "flag_rate": 0.11205621301775148,
+                    "anchor": false,
+                    "median_margin": 10.35315227508545,
+                    "n": 2704
+                },
+                "everyayah:Mohammad_al_Tablaway_128kbps": {
+                    "win_rate": 0.9856819894498869,
+                    "flag_rate": 0.014318010550113038,
+                    "anchor": false,
+                    "median_margin": 10.996726036071777,
+                    "n": 2654
+                },
+                "everyayah:Muhammad_Jibreel_128kbps": {
+                    "win_rate": 0.8446927374301676,
+                    "flag_rate": 0.1553072625698324,
+                    "anchor": false,
+                    "median_margin": 10.297403335571289,
+                    "n": 2685
+                },
+                "everyayah:Abdullah_Matroud_128kbps": {
+                    "win_rate": 0.8944591029023746,
+                    "flag_rate": 0.10554089709762533,
+                    "anchor": false,
+                    "median_margin": 10.207508087158203,
+                    "n": 2653
+                },
+                "everyayah:Ghamadi_40kbps": {
+                    "win_rate": 0.9485756566777654,
+                    "flag_rate": 0.051424343322234556,
+                    "anchor": false,
+                    "median_margin": 10.20178508758545,
+                    "n": 2703
+                },
+                "everyayah:Nasser_Alqatami_128kbps": {
+                    "win_rate": 0.9193907875185735,
+                    "flag_rate": 0.08060921248142645,
+                    "anchor": false,
+                    "median_margin": 10.175308227539062,
+                    "n": 2692
+                },
+                "everyayah:Ayman_Sowaid_64kbps": {
+                    "win_rate": 0.9857029388403494,
+                    "flag_rate": 0.014297061159650517,
+                    "anchor": false,
+                    "median_margin": 12.047968864440918,
+                    "n": 2518
+                },
+                "everyayah:Minshawy_Mujawwad_192kbps": {
+                    "win_rate": 0.8744531933508312,
+                    "flag_rate": 0.12554680664916884,
+                    "anchor": false,
+                    "median_margin": 9.45461368560791,
+                    "n": 2286
+                },
+                "everyayah:Minshawy_Murattal_128kbps": {
+                    "win_rate": 0.9135093761959434,
+                    "flag_rate": 0.08649062380405664,
+                    "anchor": false,
+                    "median_margin": 10.984811782836914,
+                    "n": 2613
+                },
+                "everyayah:Husary_128kbps": {
+                    "win_rate": 0.9857988165680474,
+                    "flag_rate": 0.014201183431952662,
+                    "anchor": true,
+                    "median_margin": 11.944870948791504,
+                    "n": 2535
+                }
+            },
+            "anchor_median_margin": 11.635165214538574,
+            "anchor_win_rate": 0.9371294636702054,
+            "anchor_n": 7253,
+            "n_edits": 105399
+        },
+        "qalqala_drop": {
+            "other_median_flag_rate": 0.0068597880273134765,
+            "anchor_flag_rate": 0.001610305958132045,
+            "other_median_win_rate": 0.9931402119726865,
+            "per_speaker": {
+                "everyayah:Husary_Muallim_128kbps": {
+                    "win_rate": 1,
+                    "flag_rate": 0,
+                    "anchor": true,
+                    "median_margin": 10.546420097351074,
+                    "n": 210
+                },
+                "everyayah:Salah_Al_Budair_128kbps": {
+                    "win_rate": 0.9734513274336283,
+                    "flag_rate": 0.02654867256637168,
+                    "anchor": false,
+                    "median_margin": 9.879957675933838,
+                    "n": 226
+                },
+                "everyayah:Ahmed_Neana_128kbps": {
+                    "win_rate": 1,
+                    "flag_rate": 0,
+                    "anchor": false,
+                    "median_margin": 10.1160888671875,
+                    "n": 219
+                },
+                "everyayah:Abdul_Basit_Mujawwad_128kbps": {
+                    "win_rate": 0.9901477832512315,
+                    "flag_rate": 0.009852216748768473,
+                    "anchor": false,
+                    "median_margin": 9.759380340576172,
+                    "n": 203
+                },
+                "everyayah:Karim_Mansoori_40kbps": {
+                    "win_rate": 0.98989898989899,
+                    "flag_rate": 0.010101010101010102,
+                    "anchor": false,
+                    "median_margin": 9.98096513748169,
+                    "n": 198
+                },
+                "everyayah:Akram_AlAlaqimy_128kbps": {
+                    "win_rate": 0.9908675799086758,
+                    "flag_rate": 0.0091324200913242,
+                    "anchor": false,
+                    "median_margin": 10.427468299865723,
+                    "n": 219
+                },
+                "everyayah:Muhsin_Al_Qasim_192kbps": {
+                    "win_rate": 0.9867256637168141,
+                    "flag_rate": 0.01327433628318584,
+                    "anchor": false,
+                    "median_margin": 9.898646354675293,
+                    "n": 226
+                },
+                "everyayah:Saood_ash-Shuraym_128kbps": {
+                    "win_rate": 0.9778761061946902,
+                    "flag_rate": 0.022123893805309734,
+                    "anchor": false,
+                    "median_margin": 9.484221458435059,
+                    "n": 226
+                },
+                "everyayah:Yasser_Ad-Dussary_128kbps": {
+                    "win_rate": 1,
+                    "flag_rate": 0,
+                    "anchor": false,
+                    "median_margin": 10.24361801147461,
+                    "n": 226
+                },
+                "everyayah:Abdullah_Basfar_192kbps": {
+                    "win_rate": 1,
+                    "flag_rate": 0,
+                    "anchor": false,
+                    "median_margin": 10.643841743469238,
+                    "n": 219
+                },
+                "everyayah:Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net": {
+                    "win_rate": 0.8699551569506726,
+                    "flag_rate": 0.13004484304932734,
+                    "anchor": false,
+                    "median_margin": 7.765716552734375,
+                    "n": 223
+                },
+                "everyayah:Hudhaify_128kbps": {
+                    "win_rate": 1,
+                    "flag_rate": 0,
+                    "anchor": false,
+                    "median_margin": 9.927366256713867,
+                    "n": 219
+                },
+                "everyayah:Muhammad_Ayyoub_128kbps": {
+                    "win_rate": 0.9907407407407407,
+                    "flag_rate": 0.009259259259259259,
+                    "anchor": false,
+                    "median_margin": 10.45924186706543,
+                    "n": 216
+                },
+                "everyayah:Ali_Hajjaj_AlSuesy_128kbps": {
+                    "win_rate": 0.9954337899543378,
+                    "flag_rate": 0.0045662100456621,
+                    "anchor": false,
+                    "median_margin": 10.27612018585205,
+                    "n": 219
+                },
+                "everyayah:Hani_Rifai_192kbps": {
+                    "win_rate": 0.9954128440366973,
+                    "flag_rate": 0.0045871559633027525,
+                    "anchor": false,
+                    "median_margin": 10.033166408538818,
+                    "n": 218
+                },
+                "everyayah:aziz_alili_128kbps": {
+                    "win_rate": 1,
+                    "flag_rate": 0,
+                    "anchor": false,
+                    "median_margin": 10.333641052246094,
+                    "n": 217
+                },
+                "everyayah:mahmoud_ali_al_banna_32kbps": {
+                    "win_rate": 0.9954337899543378,
+                    "flag_rate": 0.0045662100456621,
+                    "anchor": false,
+                    "median_margin": 10.576823234558105,
+                    "n": 219
+                },
+                "everyayah:khalefa_al_tunaiji_64kbps": {
+                    "win_rate": 0.9634703196347032,
+                    "flag_rate": 0.0365296803652968,
+                    "anchor": false,
+                    "median_margin": 10.328079223632812,
+                    "n": 219
+                },
+                "everyayah:Abu_Bakr_Ash-Shaatree_128kbps": {
+                    "win_rate": 0.9908675799086758,
+                    "flag_rate": 0.0091324200913242,
+                    "anchor": false,
+                    "median_margin": 10.09531307220459,
+                    "n": 219
+                },
+                "everyayah:Abdurrahmaan_As-Sudais_192kbps": {
+                    "win_rate": 0.9778761061946902,
+                    "flag_rate": 0.022123893805309734,
+                    "anchor": false,
+                    "median_margin": 9.875372886657715,
+                    "n": 226
+                },
+                "everyayah:Ali_Jaber_64kbps": {
+                    "win_rate": 0.9867256637168141,
+                    "flag_rate": 0.01327433628318584,
+                    "anchor": false,
+                    "median_margin": 10.378796577453613,
+                    "n": 226
+                },
+                "everyayah:Khaalid_Abdullaah_al-Qahtaanee_192kbps": {
+                    "win_rate": 0.9817351598173516,
+                    "flag_rate": 0.0182648401826484,
+                    "anchor": false,
+                    "median_margin": 9.345142364501953,
+                    "n": 219
+                },
+                "everyayah:MaherAlMuaiqly128kbps": {
+                    "win_rate": 0.9601769911504425,
+                    "flag_rate": 0.03982300884955752,
+                    "anchor": false,
+                    "median_margin": 8.990821838378906,
+                    "n": 226
+                },
+                "everyayah:Fares_Abbad_64kbps": {
+                    "win_rate": 0.9823008849557522,
+                    "flag_rate": 0.017699115044247787,
+                    "anchor": false,
+                    "median_margin": 10.327957153320312,
+                    "n": 226
+                },
+                "everyayah:Muhammad_AbdulKareem_128kbps": {
+                    "win_rate": 0.9866666666666667,
+                    "flag_rate": 0.013333333333333334,
+                    "anchor": false,
+                    "median_margin": 9.637369155883789,
+                    "n": 225
+                },
+                "everyayah:Alafasy_128kbps": {
+                    "win_rate": 1,
+                    "flag_rate": 0,
+                    "anchor": false,
+                    "median_margin": 10.354532241821289,
+                    "n": 219
+                },
+                "everyayah:Abdul_Basit_Murattal_192kbps": {
+                    "win_rate": 1,
+                    "flag_rate": 0,
+                    "anchor": false,
+                    "median_margin": 10.410768508911133,
+                    "n": 225
+                },
+                "everyayah:Mustafa_Ismail_48kbps": {
+                    "win_rate": 1,
+                    "flag_rate": 0,
+                    "anchor": false,
+                    "median_margin": 9.439476013183594,
+                    "n": 45
+                },
+                "everyayah:Husary_128kbps_Mujawwad": {
+                    "win_rate": 1,
+                    "flag_rate": 0,
+                    "anchor": true,
+                    "median_margin": 10.093435287475586,
+                    "n": 199
+                },
+                "everyayah:Sahl_Yassin_128kbps": {
+                    "win_rate": 1,
+                    "flag_rate": 0,
+                    "anchor": false,
+                    "median_margin": 10.593179702758789,
+                    "n": 219
+                },
+                "everyayah:Salaah_AbdulRahman_Bukhatir_128kbps": {
+                    "win_rate": 0.995575221238938,
+                    "flag_rate": 0.004424778761061947,
+                    "anchor": false,
+                    "median_margin": 10.036572456359863,
+                    "n": 226
+                },
+                "everyayah:Yaser_Salamah_128kbps": {
+                    "win_rate": 1,
+                    "flag_rate": 0,
+                    "anchor": false,
+                    "median_margin": 10.42040205001831,
+                    "n": 226
+                },
+                "everyayah:Mohammad_al_Tablaway_128kbps": {
+                    "win_rate": 0.9954337899543378,
+                    "flag_rate": 0.0045662100456621,
+                    "anchor": false,
+                    "median_margin": 10.006324768066406,
+                    "n": 219
+                },
+                "everyayah:Muhammad_Jibreel_128kbps": {
+                    "win_rate": 0.9955555555555555,
+                    "flag_rate": 0.0044444444444444444,
+                    "anchor": false,
+                    "median_margin": 10.149469375610352,
+                    "n": 225
+                },
+                "everyayah:Abdullah_Matroud_128kbps": {
+                    "win_rate": 0.9863013698630136,
+                    "flag_rate": 0.0136986301369863,
+                    "anchor": false,
+                    "median_margin": 9.790743827819824,
+                    "n": 219
+                },
+                "everyayah:Ghamadi_40kbps": {
+                    "win_rate": 0.995575221238938,
+                    "flag_rate": 0.004424778761061947,
+                    "anchor": false,
+                    "median_margin": 10.130691051483154,
+                    "n": 226
+                },
+                "everyayah:Nasser_Alqatami_128kbps": {
+                    "win_rate": 1,
+                    "flag_rate": 0,
+                    "anchor": false,
+                    "median_margin": 10.271387100219727,
+                    "n": 224
+                },
+                "everyayah:Ayman_Sowaid_64kbps": {
+                    "win_rate": 1,
+                    "flag_rate": 0,
+                    "anchor": false,
+                    "median_margin": 10.865482807159424,
+                    "n": 216
+                },
+                "everyayah:Minshawy_Mujawwad_192kbps": {
+                    "win_rate": 0.8905472636815921,
+                    "flag_rate": 0.10945273631840796,
+                    "anchor": false,
+                    "median_margin": 7.27130126953125,
+                    "n": 201
+                },
+                "everyayah:Minshawy_Murattal_128kbps": {
+                    "win_rate": 0.9814814814814815,
+                    "flag_rate": 0.018518518518518517,
+                    "anchor": false,
+                    "median_margin": 9.810233116149902,
+                    "n": 216
+                },
+                "everyayah:Husary_128kbps": {
+                    "win_rate": 0.9952830188679245,
+                    "flag_rate": 0.0047169811320754715,
+                    "anchor": true,
+                    "median_margin": 10.399424076080322,
+                    "n": 212
+                }
+            },
+            "anchor_median_margin": 10.314555168151855,
+            "anchor_win_rate": 0.998389694041868,
+            "anchor_n": 621,
+            "n_edits": 8806
+        },
+        "iqlab_no_ghunnah": {
+            "other_median_flag_rate": 0.04411764705882353,
+            "anchor_flag_rate": 0.026737967914438502,
+            "other_median_win_rate": 0.9558823529411765,
+            "per_speaker": {
+                "everyayah:Husary_Muallim_128kbps": {
+                    "win_rate": 0.9682539682539683,
+                    "flag_rate": 0.031746031746031744,
+                    "anchor": true,
+                    "median_margin": 28.948802947998047,
+                    "n": 63
+                },
+                "everyayah:Salah_Al_Budair_128kbps": {
+                    "win_rate": 0.9264705882352942,
+                    "flag_rate": 0.07352941176470588,
+                    "anchor": false,
+                    "median_margin": 24.644174575805664,
+                    "n": 68
+                },
+                "everyayah:Ahmed_Neana_128kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 29.799962043762207,
+                    "n": 68
+                },
+                "everyayah:Abdul_Basit_Mujawwad_128kbps": {
+                    "win_rate": 0.9827586206896551,
+                    "flag_rate": 0.017241379310344827,
+                    "anchor": false,
+                    "median_margin": 28.171669960021973,
+                    "n": 58
+                },
+                "everyayah:Karim_Mansoori_40kbps": {
+                    "win_rate": 0.9482758620689655,
+                    "flag_rate": 0.05172413793103448,
+                    "anchor": false,
+                    "median_margin": 26.682756423950195,
+                    "n": 58
+                },
+                "everyayah:Akram_AlAlaqimy_128kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 30.229228973388672,
+                    "n": 68
+                },
+                "everyayah:Muhsin_Al_Qasim_192kbps": {
+                    "win_rate": 0.9117647058823529,
+                    "flag_rate": 0.08823529411764706,
+                    "anchor": false,
+                    "median_margin": 27.710351943969727,
+                    "n": 68
+                },
+                "everyayah:Saood_ash-Shuraym_128kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 28.13992404937744,
+                    "n": 68
+                },
+                "everyayah:Yasser_Ad-Dussary_128kbps": {
+                    "win_rate": 0.9558823529411765,
+                    "flag_rate": 0.04411764705882353,
+                    "anchor": false,
+                    "median_margin": 28.96233558654785,
+                    "n": 68
+                },
+                "everyayah:Abdullah_Basfar_192kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 24.60360336303711,
+                    "n": 68
+                },
+                "everyayah:Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net": {
+                    "win_rate": 0.8823529411764706,
+                    "flag_rate": 0.11764705882352941,
+                    "anchor": false,
+                    "median_margin": 24.473960876464844,
+                    "n": 68
+                },
+                "everyayah:Hudhaify_128kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 30.27116298675537,
+                    "n": 68
+                },
+                "everyayah:Muhammad_Ayyoub_128kbps": {
+                    "win_rate": 0.9696969696969697,
+                    "flag_rate": 0.030303030303030304,
+                    "anchor": false,
+                    "median_margin": 29.363425254821777,
+                    "n": 66
+                },
+                "everyayah:Ali_Hajjaj_AlSuesy_128kbps": {
+                    "win_rate": 0.9558823529411765,
+                    "flag_rate": 0.04411764705882353,
+                    "anchor": false,
+                    "median_margin": 29.97109031677246,
+                    "n": 68
+                },
+                "everyayah:Hani_Rifai_192kbps": {
+                    "win_rate": 0.8970588235294118,
+                    "flag_rate": 0.10294117647058823,
+                    "anchor": false,
+                    "median_margin": 25.572046279907227,
+                    "n": 68
+                },
+                "everyayah:aziz_alili_128kbps": {
+                    "win_rate": 0.7014925373134329,
+                    "flag_rate": 0.29850746268656714,
+                    "anchor": false,
+                    "median_margin": 4.110293388366699,
+                    "n": 67
+                },
+                "everyayah:mahmoud_ali_al_banna_32kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 31.18519115447998,
+                    "n": 68
+                },
+                "everyayah:khalefa_al_tunaiji_64kbps": {
+                    "win_rate": 0.9264705882352942,
+                    "flag_rate": 0.07352941176470588,
+                    "anchor": false,
+                    "median_margin": 29.167380332946777,
+                    "n": 68
+                },
+                "everyayah:Abu_Bakr_Ash-Shaatree_128kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 28.089015007019043,
+                    "n": 68
+                },
+                "everyayah:Abdurrahmaan_As-Sudais_192kbps": {
+                    "win_rate": 0.9558823529411765,
+                    "flag_rate": 0.04411764705882353,
+                    "anchor": false,
+                    "median_margin": 25.55156898498535,
+                    "n": 68
+                },
+                "everyayah:Ali_Jaber_64kbps": {
+                    "win_rate": 0.9264705882352942,
+                    "flag_rate": 0.07352941176470588,
+                    "anchor": false,
+                    "median_margin": 23.026824951171875,
+                    "n": 68
+                },
+                "everyayah:Khaalid_Abdullaah_al-Qahtaanee_192kbps": {
+                    "win_rate": 0.9558823529411765,
+                    "flag_rate": 0.04411764705882353,
+                    "anchor": false,
+                    "median_margin": 26.8131046295166,
+                    "n": 68
+                },
+                "everyayah:MaherAlMuaiqly128kbps": {
+                    "win_rate": 0.8529411764705882,
+                    "flag_rate": 0.14705882352941177,
+                    "anchor": false,
+                    "median_margin": 25.459070205688477,
+                    "n": 68
+                },
+                "everyayah:Fares_Abbad_64kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 29.99405860900879,
+                    "n": 68
+                },
+                "everyayah:Muhammad_AbdulKareem_128kbps": {
+                    "win_rate": 0.9411764705882353,
+                    "flag_rate": 0.058823529411764705,
+                    "anchor": false,
+                    "median_margin": 25.804292678833008,
+                    "n": 68
+                },
+                "everyayah:Alafasy_128kbps": {
+                    "win_rate": 0.9558823529411765,
+                    "flag_rate": 0.04411764705882353,
+                    "anchor": false,
+                    "median_margin": 28.881178855895996,
+                    "n": 68
+                },
+                "everyayah:Abdul_Basit_Murattal_192kbps": {
+                    "win_rate": 0.9411764705882353,
+                    "flag_rate": 0.058823529411764705,
+                    "anchor": false,
+                    "median_margin": 29.88809871673584,
+                    "n": 68
+                },
+                "everyayah:Mustafa_Ismail_48kbps": {
+                    "win_rate": 1,
+                    "flag_rate": 0,
+                    "anchor": false,
+                    "median_margin": 29.956117630004883,
+                    "n": 9
+                },
+                "everyayah:Husary_128kbps_Mujawwad": {
+                    "win_rate": 0.9655172413793104,
+                    "flag_rate": 0.034482758620689655,
+                    "anchor": true,
+                    "median_margin": 28.21309757232666,
+                    "n": 58
+                },
+                "everyayah:Sahl_Yassin_128kbps": {
+                    "win_rate": 0.9411764705882353,
+                    "flag_rate": 0.058823529411764705,
+                    "anchor": false,
+                    "median_margin": 24.10753631591797,
+                    "n": 68
+                },
+                "everyayah:Salaah_AbdulRahman_Bukhatir_128kbps": {
+                    "win_rate": 0.9411764705882353,
+                    "flag_rate": 0.058823529411764705,
+                    "anchor": false,
+                    "median_margin": 27.459559440612793,
+                    "n": 68
+                },
+                "everyayah:Yaser_Salamah_128kbps": {
+                    "win_rate": 0.9558823529411765,
+                    "flag_rate": 0.04411764705882353,
+                    "anchor": false,
+                    "median_margin": 28.576601028442383,
+                    "n": 68
+                },
+                "everyayah:Mohammad_al_Tablaway_128kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 29.347488403320312,
+                    "n": 68
+                },
+                "everyayah:Muhammad_Jibreel_128kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 28.77199077606201,
+                    "n": 68
+                },
+                "everyayah:Abdullah_Matroud_128kbps": {
+                    "win_rate": 0.75,
+                    "flag_rate": 0.25,
+                    "anchor": false,
+                    "median_margin": 7.726190567016602,
+                    "n": 68
+                },
+                "everyayah:Ghamadi_40kbps": {
+                    "win_rate": 0.9558823529411765,
+                    "flag_rate": 0.04411764705882353,
+                    "anchor": false,
+                    "median_margin": 28.529870986938477,
+                    "n": 68
+                },
+                "everyayah:Nasser_Alqatami_128kbps": {
+                    "win_rate": 0.9558823529411765,
+                    "flag_rate": 0.04411764705882353,
+                    "anchor": false,
+                    "median_margin": 28.79011344909668,
+                    "n": 68
+                },
+                "everyayah:Ayman_Sowaid_64kbps": {
+                    "win_rate": 0,
+                    "flag_rate": 1,
+                    "anchor": false,
+                    "median_margin": -10.513744354248047,
+                    "n": 65
+                },
+                "everyayah:Minshawy_Mujawwad_192kbps": {
+                    "win_rate": 0.9180327868852459,
+                    "flag_rate": 0.08196721311475409,
+                    "anchor": false,
+                    "median_margin": 20.947744369506836,
+                    "n": 61
+                },
+                "everyayah:Minshawy_Murattal_128kbps": {
+                    "win_rate": 0.9696969696969697,
+                    "flag_rate": 0.030303030303030304,
+                    "anchor": false,
+                    "median_margin": 29.73624038696289,
+                    "n": 66
+                },
+                "everyayah:Husary_128kbps": {
+                    "win_rate": 0.9848484848484849,
+                    "flag_rate": 0.015151515151515152,
+                    "anchor": true,
+                    "median_margin": 28.953505516052246,
+                    "n": 66
+                }
+            },
+            "anchor_median_margin": 28.731298446655273,
+            "anchor_win_rate": 0.9732620320855615,
+            "anchor_n": 187,
+            "n_edits": 2677
+        },
+        "ikhfa_izhar": {
+            "other_median_flag_rate": 0.05660377358490566,
+            "anchor_flag_rate": 0.04377564979480164,
+            "other_median_win_rate": 0.9433962264150944,
+            "per_speaker": {
+                "everyayah:Husary_Muallim_128kbps": {
+                    "win_rate": 0.9469387755102041,
+                    "flag_rate": 0.053061224489795916,
+                    "anchor": true,
+                    "median_margin": 45.034488677978516,
+                    "n": 245
+                },
+                "everyayah:Salah_Al_Budair_128kbps": {
+                    "win_rate": 0.9398496240601504,
+                    "flag_rate": 0.06015037593984962,
+                    "anchor": false,
+                    "median_margin": 42.467939376831055,
+                    "n": 266
+                },
+                "everyayah:Ahmed_Neana_128kbps": {
+                    "win_rate": 0.9283018867924528,
+                    "flag_rate": 0.07169811320754717,
+                    "anchor": false,
+                    "median_margin": 45.53194046020508,
+                    "n": 265
+                },
+                "everyayah:Abdul_Basit_Mujawwad_128kbps": {
+                    "win_rate": 0.9746835443037974,
+                    "flag_rate": 0.02531645569620253,
+                    "anchor": false,
+                    "median_margin": 44.29692840576172,
+                    "n": 237
+                },
+                "everyayah:Karim_Mansoori_40kbps": {
+                    "win_rate": 0.948051948051948,
+                    "flag_rate": 0.05194805194805195,
+                    "anchor": false,
+                    "median_margin": 43.75768280029297,
+                    "n": 231
+                },
+                "everyayah:Akram_AlAlaqimy_128kbps": {
+                    "win_rate": 0.9433962264150944,
+                    "flag_rate": 0.05660377358490566,
+                    "anchor": false,
+                    "median_margin": 45.6656494140625,
+                    "n": 265
+                },
+                "everyayah:Muhsin_Al_Qasim_192kbps": {
+                    "win_rate": 0.9473684210526315,
+                    "flag_rate": 0.05263157894736842,
+                    "anchor": false,
+                    "median_margin": 42.48113441467285,
+                    "n": 266
+                },
+                "everyayah:Saood_ash-Shuraym_128kbps": {
+                    "win_rate": 0.924812030075188,
+                    "flag_rate": 0.07518796992481203,
+                    "anchor": false,
+                    "median_margin": 41.84381103515625,
+                    "n": 266
+                },
+                "everyayah:Yasser_Ad-Dussary_128kbps": {
+                    "win_rate": 0.9135338345864662,
+                    "flag_rate": 0.08646616541353383,
+                    "anchor": false,
+                    "median_margin": 43.90018081665039,
+                    "n": 266
+                },
+                "everyayah:Abdullah_Basfar_192kbps": {
+                    "win_rate": 0.9433962264150944,
+                    "flag_rate": 0.05660377358490566,
+                    "anchor": false,
+                    "median_margin": 46.317543029785156,
+                    "n": 265
+                },
+                "everyayah:Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net": {
+                    "win_rate": 0.928030303030303,
+                    "flag_rate": 0.07196969696969698,
+                    "anchor": false,
+                    "median_margin": 39.822227478027344,
+                    "n": 264
+                },
+                "everyayah:Hudhaify_128kbps": {
+                    "win_rate": 0.9622641509433962,
+                    "flag_rate": 0.03773584905660377,
+                    "anchor": false,
+                    "median_margin": 45.63638687133789,
+                    "n": 265
+                },
+                "everyayah:Muhammad_Ayyoub_128kbps": {
+                    "win_rate": 0.9688715953307393,
+                    "flag_rate": 0.0311284046692607,
+                    "anchor": false,
+                    "median_margin": 46.622257232666016,
+                    "n": 257
+                },
+                "everyayah:Ali_Hajjaj_AlSuesy_128kbps": {
+                    "win_rate": 0.9358490566037736,
+                    "flag_rate": 0.06415094339622641,
+                    "anchor": false,
+                    "median_margin": 45.107948303222656,
+                    "n": 265
+                },
+                "everyayah:Hani_Rifai_192kbps": {
+                    "win_rate": 0.8905660377358491,
+                    "flag_rate": 0.10943396226415095,
+                    "anchor": false,
+                    "median_margin": 44.08669662475586,
+                    "n": 265
+                },
+                "everyayah:aziz_alili_128kbps": {
+                    "win_rate": 0.9580152671755725,
+                    "flag_rate": 0.04198473282442748,
+                    "anchor": false,
+                    "median_margin": 45.939510345458984,
+                    "n": 262
+                },
+                "everyayah:mahmoud_ali_al_banna_32kbps": {
+                    "win_rate": 0.9509433962264151,
+                    "flag_rate": 0.04905660377358491,
+                    "anchor": false,
+                    "median_margin": 46.45833969116211,
+                    "n": 265
+                },
+                "everyayah:khalefa_al_tunaiji_64kbps": {
+                    "win_rate": 0.9245283018867925,
+                    "flag_rate": 0.07547169811320754,
+                    "anchor": false,
+                    "median_margin": 46.46729278564453,
+                    "n": 265
+                },
+                "everyayah:Abu_Bakr_Ash-Shaatree_128kbps": {
+                    "win_rate": 0.9509433962264151,
+                    "flag_rate": 0.04905660377358491,
+                    "anchor": false,
+                    "median_margin": 45.64197540283203,
+                    "n": 265
+                },
+                "everyayah:Abdurrahmaan_As-Sudais_192kbps": {
+                    "win_rate": 0.9210526315789473,
+                    "flag_rate": 0.07894736842105263,
+                    "anchor": false,
+                    "median_margin": 42.62124252319336,
+                    "n": 266
+                },
+                "everyayah:Ali_Jaber_64kbps": {
+                    "win_rate": 0.9586466165413534,
+                    "flag_rate": 0.041353383458646614,
+                    "anchor": false,
+                    "median_margin": 45.70126533508301,
+                    "n": 266
+                },
+                "everyayah:Khaalid_Abdullaah_al-Qahtaanee_192kbps": {
+                    "win_rate": 0.939622641509434,
+                    "flag_rate": 0.06037735849056604,
+                    "anchor": false,
+                    "median_margin": 42.41400146484375,
+                    "n": 265
+                },
+                "everyayah:MaherAlMuaiqly128kbps": {
+                    "win_rate": 0.9360902255639098,
+                    "flag_rate": 0.06390977443609022,
+                    "anchor": false,
+                    "median_margin": 41.30149459838867,
+                    "n": 266
+                },
+                "everyayah:Fares_Abbad_64kbps": {
+                    "win_rate": 0.9022556390977443,
+                    "flag_rate": 0.09774436090225563,
+                    "anchor": false,
+                    "median_margin": 43.76969909667969,
+                    "n": 266
+                },
+                "everyayah:Muhammad_AbdulKareem_128kbps": {
+                    "win_rate": 0.9323308270676691,
+                    "flag_rate": 0.06766917293233082,
+                    "anchor": false,
+                    "median_margin": 44.042354583740234,
+                    "n": 266
+                },
+                "everyayah:Alafasy_128kbps": {
+                    "win_rate": 0.9547169811320755,
+                    "flag_rate": 0.045283018867924525,
+                    "anchor": false,
+                    "median_margin": 45.55082702636719,
+                    "n": 265
+                },
+                "everyayah:Abdul_Basit_Murattal_192kbps": {
+                    "win_rate": 0.9467680608365019,
+                    "flag_rate": 0.053231939163498096,
+                    "anchor": false,
+                    "median_margin": 45.33106994628906,
+                    "n": 263
+                },
+                "everyayah:Mustafa_Ismail_48kbps": {
+                    "win_rate": 0.9508196721311475,
+                    "flag_rate": 0.04918032786885246,
+                    "anchor": false,
+                    "median_margin": 43.514625549316406,
+                    "n": 61
+                },
+                "everyayah:Husary_128kbps_Mujawwad": {
+                    "win_rate": 0.9656652360515021,
+                    "flag_rate": 0.034334763948497854,
+                    "anchor": true,
+                    "median_margin": 45.41691970825195,
+                    "n": 233
+                },
+                "everyayah:Sahl_Yassin_128kbps": {
+                    "win_rate": 0.9320754716981132,
+                    "flag_rate": 0.06792452830188679,
+                    "anchor": false,
+                    "median_margin": 43.43054962158203,
+                    "n": 265
+                },
+                "everyayah:Salaah_AbdulRahman_Bukhatir_128kbps": {
+                    "win_rate": 0.924812030075188,
+                    "flag_rate": 0.07518796992481203,
+                    "anchor": false,
+                    "median_margin": 42.67878341674805,
+                    "n": 266
+                },
+                "everyayah:Yaser_Salamah_128kbps": {
+                    "win_rate": 0.943609022556391,
+                    "flag_rate": 0.05639097744360902,
+                    "anchor": false,
+                    "median_margin": 45.13499069213867,
+                    "n": 266
+                },
+                "everyayah:Mohammad_al_Tablaway_128kbps": {
+                    "win_rate": 0.9509433962264151,
+                    "flag_rate": 0.04905660377358491,
+                    "anchor": false,
+                    "median_margin": 45.33977127075195,
+                    "n": 265
+                },
+                "everyayah:Muhammad_Jibreel_128kbps": {
+                    "win_rate": 0.9431818181818182,
+                    "flag_rate": 0.056818181818181816,
+                    "anchor": false,
+                    "median_margin": 44.52215766906738,
+                    "n": 264
+                },
+                "everyayah:Abdullah_Matroud_128kbps": {
+                    "win_rate": 0.909433962264151,
+                    "flag_rate": 0.09056603773584905,
+                    "anchor": false,
+                    "median_margin": 42.124881744384766,
+                    "n": 265
+                },
+                "everyayah:Ghamadi_40kbps": {
+                    "win_rate": 0.9473684210526315,
+                    "flag_rate": 0.05263157894736842,
+                    "anchor": false,
+                    "median_margin": 44.75750923156738,
+                    "n": 266
+                },
+                "everyayah:Nasser_Alqatami_128kbps": {
+                    "win_rate": 0.9172932330827067,
+                    "flag_rate": 0.08270676691729323,
+                    "anchor": false,
+                    "median_margin": 44.895286560058594,
+                    "n": 266
+                },
+                "everyayah:Ayman_Sowaid_64kbps": {
+                    "win_rate": 0.9446640316205533,
+                    "flag_rate": 0.05533596837944664,
+                    "anchor": false,
+                    "median_margin": 44.75774383544922,
+                    "n": 253
+                },
+                "everyayah:Minshawy_Mujawwad_192kbps": {
+                    "win_rate": 0.9523809523809523,
+                    "flag_rate": 0.047619047619047616,
+                    "anchor": false,
+                    "median_margin": 41.29184341430664,
+                    "n": 231
+                },
+                "everyayah:Minshawy_Murattal_128kbps": {
+                    "win_rate": 0.9494163424124513,
+                    "flag_rate": 0.05058365758754864,
+                    "anchor": false,
+                    "median_margin": 44.43983840942383,
+                    "n": 257
+                },
+                "everyayah:Husary_128kbps": {
+                    "win_rate": 0.9565217391304348,
+                    "flag_rate": 0.043478260869565216,
+                    "anchor": true,
+                    "median_margin": 45.24940490722656,
+                    "n": 253
+                }
+            },
+            "anchor_median_margin": 45.189395904541016,
+            "anchor_win_rate": 0.9562243502051984,
+            "anchor_n": 731,
+            "n_edits": 10479
+        },
+        "iqlab_undo": {
+            "other_median_flag_rate": 0.029411764705882353,
+            "anchor_flag_rate": 0.026737967914438502,
+            "other_median_win_rate": 0.9705882352941176,
+            "per_speaker": {
+                "everyayah:Husary_Muallim_128kbps": {
+                    "win_rate": 0.9682539682539683,
+                    "flag_rate": 0.031746031746031744,
+                    "anchor": true,
+                    "median_margin": 39.758358001708984,
+                    "n": 63
+                },
+                "everyayah:Salah_Al_Budair_128kbps": {
+                    "win_rate": 0.9852941176470589,
+                    "flag_rate": 0.014705882352941176,
+                    "anchor": false,
+                    "median_margin": 38.81218910217285,
+                    "n": 68
+                },
+                "everyayah:Ahmed_Neana_128kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 40.123268127441406,
+                    "n": 68
+                },
+                "everyayah:Abdul_Basit_Mujawwad_128kbps": {
+                    "win_rate": 0.9827586206896551,
+                    "flag_rate": 0.017241379310344827,
+                    "anchor": false,
+                    "median_margin": 39.22969627380371,
+                    "n": 58
+                },
+                "everyayah:Karim_Mansoori_40kbps": {
+                    "win_rate": 0.9655172413793104,
+                    "flag_rate": 0.034482758620689655,
+                    "anchor": false,
+                    "median_margin": 36.226823806762695,
+                    "n": 58
+                },
+                "everyayah:Akram_AlAlaqimy_128kbps": {
+                    "win_rate": 0.9852941176470589,
+                    "flag_rate": 0.014705882352941176,
+                    "anchor": false,
+                    "median_margin": 40.93939781188965,
+                    "n": 68
+                },
+                "everyayah:Muhsin_Al_Qasim_192kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 40.90755271911621,
+                    "n": 68
+                },
+                "everyayah:Saood_ash-Shuraym_128kbps": {
+                    "win_rate": 1,
+                    "flag_rate": 0,
+                    "anchor": false,
+                    "median_margin": 41.68315315246582,
+                    "n": 68
+                },
+                "everyayah:Yasser_Ad-Dussary_128kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 39.49456977844238,
+                    "n": 68
+                },
+                "everyayah:Abdullah_Basfar_192kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 34.038917541503906,
+                    "n": 68
+                },
+                "everyayah:Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net": {
+                    "win_rate": 0.9558823529411765,
+                    "flag_rate": 0.04411764705882353,
+                    "anchor": false,
+                    "median_margin": 35.62430763244629,
+                    "n": 68
+                },
+                "everyayah:Hudhaify_128kbps": {
+                    "win_rate": 0.9852941176470589,
+                    "flag_rate": 0.014705882352941176,
+                    "anchor": false,
+                    "median_margin": 41.85968589782715,
+                    "n": 68
+                },
+                "everyayah:Muhammad_Ayyoub_128kbps": {
+                    "win_rate": 0.9848484848484849,
+                    "flag_rate": 0.015151515151515152,
+                    "anchor": false,
+                    "median_margin": 40.12528991699219,
+                    "n": 66
+                },
+                "everyayah:Ali_Hajjaj_AlSuesy_128kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 41.140092849731445,
+                    "n": 68
+                },
+                "everyayah:Hani_Rifai_192kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 38.13233184814453,
+                    "n": 68
+                },
+                "everyayah:aziz_alili_128kbps": {
+                    "win_rate": 0.9253731343283582,
+                    "flag_rate": 0.07462686567164178,
+                    "anchor": false,
+                    "median_margin": 11.643299102783203,
+                    "n": 67
+                },
+                "everyayah:mahmoud_ali_al_banna_32kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 42.44790077209473,
+                    "n": 68
+                },
+                "everyayah:khalefa_al_tunaiji_64kbps": {
+                    "win_rate": 0.9264705882352942,
+                    "flag_rate": 0.07352941176470588,
+                    "anchor": false,
+                    "median_margin": 40.80878257751465,
+                    "n": 68
+                },
+                "everyayah:Abu_Bakr_Ash-Shaatree_128kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 39.28835868835449,
+                    "n": 68
+                },
+                "everyayah:Abdurrahmaan_As-Sudais_192kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 39.652849197387695,
+                    "n": 68
+                },
+                "everyayah:Ali_Jaber_64kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 33.10885810852051,
+                    "n": 68
+                },
+                "everyayah:Khaalid_Abdullaah_al-Qahtaanee_192kbps": {
+                    "win_rate": 0.9558823529411765,
+                    "flag_rate": 0.04411764705882353,
+                    "anchor": false,
+                    "median_margin": 37.77433395385742,
+                    "n": 68
+                },
+                "everyayah:MaherAlMuaiqly128kbps": {
+                    "win_rate": 0.9558823529411765,
+                    "flag_rate": 0.04411764705882353,
+                    "anchor": false,
+                    "median_margin": 37.04019355773926,
+                    "n": 68
+                },
+                "everyayah:Fares_Abbad_64kbps": {
+                    "win_rate": 0.9852941176470589,
+                    "flag_rate": 0.014705882352941176,
+                    "anchor": false,
+                    "median_margin": 41.9959716796875,
+                    "n": 68
+                },
+                "everyayah:Muhammad_AbdulKareem_128kbps": {
+                    "win_rate": 0.9411764705882353,
+                    "flag_rate": 0.058823529411764705,
+                    "anchor": false,
+                    "median_margin": 36.321319580078125,
+                    "n": 68
+                },
+                "everyayah:Alafasy_128kbps": {
+                    "win_rate": 0.9558823529411765,
+                    "flag_rate": 0.04411764705882353,
+                    "anchor": false,
+                    "median_margin": 39.73541069030762,
+                    "n": 68
+                },
+                "everyayah:Abdul_Basit_Murattal_192kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 39.83993911743164,
+                    "n": 68
+                },
+                "everyayah:Mustafa_Ismail_48kbps": {
+                    "win_rate": 1,
+                    "flag_rate": 0,
+                    "anchor": false,
+                    "median_margin": 40.80023956298828,
+                    "n": 9
+                },
+                "everyayah:Husary_128kbps_Mujawwad": {
+                    "win_rate": 0.9655172413793104,
+                    "flag_rate": 0.034482758620689655,
+                    "anchor": true,
+                    "median_margin": 40.2821102142334,
+                    "n": 58
+                },
+                "everyayah:Sahl_Yassin_128kbps": {
+                    "win_rate": 0.9411764705882353,
+                    "flag_rate": 0.058823529411764705,
+                    "anchor": false,
+                    "median_margin": 34.212995529174805,
+                    "n": 68
+                },
+                "everyayah:Salaah_AbdulRahman_Bukhatir_128kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 40.135074615478516,
+                    "n": 68
+                },
+                "everyayah:Yaser_Salamah_128kbps": {
+                    "win_rate": 0.9558823529411765,
+                    "flag_rate": 0.04411764705882353,
+                    "anchor": false,
+                    "median_margin": 38.527854919433594,
+                    "n": 68
+                },
+                "everyayah:Mohammad_al_Tablaway_128kbps": {
+                    "win_rate": 0.9852941176470589,
+                    "flag_rate": 0.014705882352941176,
+                    "anchor": false,
+                    "median_margin": 41.28932189941406,
+                    "n": 68
+                },
+                "everyayah:Muhammad_Jibreel_128kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 41.805986404418945,
+                    "n": 68
+                },
+                "everyayah:Abdullah_Matroud_128kbps": {
+                    "win_rate": 0.9411764705882353,
+                    "flag_rate": 0.058823529411764705,
+                    "anchor": false,
+                    "median_margin": 15.745488166809082,
+                    "n": 68
+                },
+                "everyayah:Ghamadi_40kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 41.73431968688965,
+                    "n": 68
+                },
+                "everyayah:Nasser_Alqatami_128kbps": {
+                    "win_rate": 0.9705882352941176,
+                    "flag_rate": 0.029411764705882353,
+                    "anchor": false,
+                    "median_margin": 40.75080680847168,
+                    "n": 68
+                },
+                "everyayah:Ayman_Sowaid_64kbps": {
+                    "win_rate": 0.1076923076923077,
+                    "flag_rate": 0.8923076923076924,
+                    "anchor": false,
+                    "median_margin": -3.9470272064208984,
+                    "n": 65
+                },
+                "everyayah:Minshawy_Mujawwad_192kbps": {
+                    "win_rate": 0.9344262295081968,
+                    "flag_rate": 0.06557377049180328,
+                    "anchor": false,
+                    "median_margin": 30.35219955444336,
+                    "n": 61
+                },
+                "everyayah:Minshawy_Murattal_128kbps": {
+                    "win_rate": 0.9696969696969697,
+                    "flag_rate": 0.030303030303030304,
+                    "anchor": false,
+                    "median_margin": 41.94612121582031,
+                    "n": 66
+                },
+                "everyayah:Husary_128kbps": {
+                    "win_rate": 0.9848484848484849,
+                    "flag_rate": 0.015151515151515152,
+                    "anchor": true,
+                    "median_margin": 40.376853942871094,
+                    "n": 66
+                }
+            },
+            "anchor_median_margin": 40.21882247924805,
+            "anchor_win_rate": 0.9732620320855615,
+            "anchor_n": 187,
+            "n_edits": 2677
+        },
+        "madd_long": {
+            "other_median_flag_rate": 0.01423898996698151,
+            "anchor_flag_rate": 0.010064800772094306,
+            "other_median_win_rate": 0.9857610100330185,
+            "per_speaker": {
+                "everyayah:Husary_Muallim_128kbps": {
+                    "win_rate": 1,
+                    "flag_rate": 0,
+                    "anchor": true,
+                    "median_margin": 26.684971809387207,
+                    "n": 2420
+                },
+                "everyayah:Salah_Al_Budair_128kbps": {
+                    "win_rate": 0.9888971132494448,
+                    "flag_rate": 0.011102886750555145,
+                    "anchor": false,
+                    "median_margin": 37.14775276184082,
+                    "n": 2702
+                },
+                "everyayah:Ahmed_Neana_128kbps": {
+                    "win_rate": 0.9996232102486813,
+                    "flag_rate": 0.00037678975131876413,
+                    "anchor": false,
+                    "median_margin": 33.04474639892578,
+                    "n": 2654
+                },
+                "everyayah:Abdul_Basit_Mujawwad_128kbps": {
+                    "win_rate": 0.9879206212251941,
+                    "flag_rate": 0.012079378774805867,
+                    "anchor": false,
+                    "median_margin": 21.51539897918701,
+                    "n": 2318
+                },
+                "everyayah:Karim_Mansoori_40kbps": {
+                    "win_rate": 0.9855516637478109,
+                    "flag_rate": 0.014448336252189142,
+                    "anchor": false,
+                    "median_margin": 21.831969261169434,
+                    "n": 2284
+                },
+                "everyayah:Akram_AlAlaqimy_128kbps": {
+                    "win_rate": 0.9898266767143934,
+                    "flag_rate": 0.010173323285606632,
+                    "anchor": false,
+                    "median_margin": 30.67283535003662,
+                    "n": 2654
+                },
+                "everyayah:Muhsin_Al_Qasim_192kbps": {
+                    "win_rate": 0.9951923076923077,
+                    "flag_rate": 0.004807692307692308,
+                    "anchor": false,
+                    "median_margin": 33.373952865600586,
+                    "n": 2704
+                },
+                "everyayah:Saood_ash-Shuraym_128kbps": {
+                    "win_rate": 0.9922308546059934,
+                    "flag_rate": 0.00776914539400666,
+                    "anchor": false,
+                    "median_margin": 43.80451583862305,
+                    "n": 2703
+                },
+                "everyayah:Yasser_Ad-Dussary_128kbps": {
+                    "win_rate": 0.9770625231224566,
+                    "flag_rate": 0.02293747687754347,
+                    "anchor": false,
+                    "median_margin": 34.8427734375,
+                    "n": 2703
+                },
+                "everyayah:Abdullah_Basfar_192kbps": {
+                    "win_rate": 0.9913305691669808,
+                    "flag_rate": 0.008669430833019224,
+                    "anchor": false,
+                    "median_margin": 30.608875274658203,
+                    "n": 2653
+                },
+                "everyayah:Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net": {
+                    "win_rate": 0.9738121960344183,
+                    "flag_rate": 0.026187803965581742,
+                    "anchor": false,
+                    "median_margin": 31.955764770507812,
+                    "n": 2673
+                },
+                "everyayah:Hudhaify_128kbps": {
+                    "win_rate": 0.9864355689525245,
+                    "flag_rate": 0.013564431047475508,
+                    "anchor": false,
+                    "median_margin": 36.66515350341797,
+                    "n": 2654
+                },
+                "everyayah:Muhammad_Ayyoub_128kbps": {
+                    "win_rate": 0.98584003061615,
+                    "flag_rate": 0.014159969383849981,
+                    "anchor": false,
+                    "median_margin": 31.840368270874023,
+                    "n": 2613
+                },
+                "everyayah:Ali_Hajjaj_AlSuesy_128kbps": {
+                    "win_rate": 0.9992464204973625,
+                    "flag_rate": 0.0007535795026375283,
+                    "anchor": false,
+                    "median_margin": 30.064377784729004,
+                    "n": 2654
+                },
+                "everyayah:Hani_Rifai_192kbps": {
+                    "win_rate": 0.9731568998109641,
+                    "flag_rate": 0.026843100189035917,
+                    "anchor": false,
+                    "median_margin": 31.352800369262695,
+                    "n": 2645
+                },
+                "everyayah:aziz_alili_128kbps": {
+                    "win_rate": 0.9897688518378174,
+                    "flag_rate": 0.010231148162182645,
+                    "anchor": false,
+                    "median_margin": 30.75503158569336,
+                    "n": 2639
+                },
+                "everyayah:mahmoud_ali_al_banna_32kbps": {
+                    "win_rate": 0.9969856819894499,
+                    "flag_rate": 0.003014318010550113,
+                    "anchor": false,
+                    "median_margin": 34.61511421203613,
+                    "n": 2654
+                },
+                "everyayah:khalefa_al_tunaiji_64kbps": {
+                    "win_rate": 0.9837919336600075,
+                    "flag_rate": 0.01620806633999246,
+                    "anchor": false,
+                    "median_margin": 33.65825653076172,
+                    "n": 2653
+                },
+                "everyayah:Abu_Bakr_Ash-Shaatree_128kbps": {
+                    "win_rate": 0.975885455915599,
+                    "flag_rate": 0.024114544084400905,
+                    "anchor": false,
+                    "median_margin": 34.469377517700195,
+                    "n": 2654
+                },
+                "everyayah:Abdurrahmaan_As-Sudais_192kbps": {
+                    "win_rate": 0.9837278106508875,
+                    "flag_rate": 0.016272189349112426,
+                    "anchor": false,
+                    "median_margin": 36.20695686340332,
+                    "n": 2704
+                },
+                "everyayah:Ali_Jaber_64kbps": {
+                    "win_rate": 0.9966715976331361,
+                    "flag_rate": 0.0033284023668639054,
+                    "anchor": false,
+                    "median_margin": 30.89485263824463,
+                    "n": 2704
+                },
+                "everyayah:Khaalid_Abdullaah_al-Qahtaanee_192kbps": {
+                    "win_rate": 0.9739819004524887,
+                    "flag_rate": 0.026018099547511313,
+                    "anchor": false,
+                    "median_margin": 32.67280578613281,
+                    "n": 2652
+                },
+                "everyayah:MaherAlMuaiqly128kbps": {
+                    "win_rate": 0.9811250925240562,
+                    "flag_rate": 0.018874907475943746,
+                    "anchor": false,
+                    "median_margin": 41.981754302978516,
+                    "n": 2702
+                },
+                "everyayah:Fares_Abbad_64kbps": {
+                    "win_rate": 0.974472807991121,
+                    "flag_rate": 0.025527192008879023,
+                    "anchor": false,
+                    "median_margin": 33.56916046142578,
+                    "n": 2703
+                },
+                "everyayah:Muhammad_AbdulKareem_128kbps": {
+                    "win_rate": 0.9955423476968797,
+                    "flag_rate": 0.004457652303120356,
+                    "anchor": false,
+                    "median_margin": 34.9194221496582,
+                    "n": 2692
+                },
+                "everyayah:Alafasy_128kbps": {
+                    "win_rate": 0.980783722682743,
+                    "flag_rate": 0.01921627731725697,
+                    "anchor": false,
+                    "median_margin": 29.77353286743164,
+                    "n": 2654
+                },
+                "everyayah:Abdul_Basit_Murattal_192kbps": {
+                    "win_rate": 0.9996210685865858,
+                    "flag_rate": 0.00037893141341417203,
+                    "anchor": false,
+                    "median_margin": 29.601560592651367,
+                    "n": 2639
+                },
+                "everyayah:Mustafa_Ismail_48kbps": {
+                    "win_rate": 0.9950738916256158,
+                    "flag_rate": 0.0049261083743842365,
+                    "anchor": false,
+                    "median_margin": 29.643924713134766,
+                    "n": 609
+                },
+                "everyayah:Husary_128kbps_Mujawwad": {
+                    "win_rate": 0.9860748476936466,
+                    "flag_rate": 0.01392515230635335,
+                    "anchor": true,
+                    "median_margin": 21.195794105529785,
+                    "n": 2298
+                },
+                "everyayah:Sahl_Yassin_128kbps": {
+                    "win_rate": 0.9856819894498869,
+                    "flag_rate": 0.014318010550113038,
+                    "anchor": false,
+                    "median_margin": 35.304433822631836,
+                    "n": 2654
+                },
+                "everyayah:Salaah_AbdulRahman_Bukhatir_128kbps": {
+                    "win_rate": 0.9763138415988157,
+                    "flag_rate": 0.023686158401184307,
+                    "anchor": false,
+                    "median_margin": 35.20721244812012,
+                    "n": 2702
+                },
+                "everyayah:Yaser_Salamah_128kbps": {
+                    "win_rate": 0.9833579881656804,
+                    "flag_rate": 0.01664201183431953,
+                    "anchor": false,
+                    "median_margin": 34.6641845703125,
+                    "n": 2704
+                },
+                "everyayah:Mohammad_al_Tablaway_128kbps": {
+                    "win_rate": 0.982290881688018,
+                    "flag_rate": 0.017709118311981915,
+                    "anchor": false,
+                    "median_margin": 29.63791275024414,
+                    "n": 2654
+                },
+                "everyayah:Muhammad_Jibreel_128kbps": {
+                    "win_rate": 0.9985102420856611,
+                    "flag_rate": 0.0014897579143389199,
+                    "anchor": false,
+                    "median_margin": 32.281620025634766,
+                    "n": 2685
+                },
+                "everyayah:Abdullah_Matroud_128kbps": {
+                    "win_rate": 0.9830380701093102,
+                    "flag_rate": 0.016961929890689786,
+                    "anchor": false,
+                    "median_margin": 25.447341918945312,
+                    "n": 2653
+                },
+                "everyayah:Ghamadi_40kbps": {
+                    "win_rate": 0.9848316685164632,
+                    "flag_rate": 0.015168331483536811,
+                    "anchor": false,
+                    "median_margin": 35.70679473876953,
+                    "n": 2703
+                },
+                "everyayah:Nasser_Alqatami_128kbps": {
+                    "win_rate": 0.9713967310549777,
+                    "flag_rate": 0.028603268945022287,
+                    "anchor": false,
+                    "median_margin": 35.2382926940918,
+                    "n": 2692
+                },
+                "everyayah:Ayman_Sowaid_64kbps": {
+                    "win_rate": 0.9797458300238284,
+                    "flag_rate": 0.020254169976171566,
+                    "anchor": false,
+                    "median_margin": 25.651680946350098,
+                    "n": 2518
+                },
+                "everyayah:Minshawy_Mujawwad_192kbps": {
+                    "win_rate": 0.9868766404199475,
+                    "flag_rate": 0.013123359580052493,
+                    "anchor": false,
+                    "median_margin": 20.42692279815674,
+                    "n": 2286
+                },
+                "everyayah:Minshawy_Murattal_128kbps": {
+                    "win_rate": 1,
+                    "flag_rate": 0,
+                    "anchor": false,
+                    "median_margin": 30.724750518798828,
+                    "n": 2613
+                },
+                "everyayah:Husary_128kbps": {
+                    "win_rate": 0.9838264299802761,
+                    "flag_rate": 0.016173570019723867,
+                    "anchor": true,
+                    "median_margin": 23.871688842773438,
+                    "n": 2535
+                }
+            },
+            "anchor_median_margin": 23.772844314575195,
+            "anchor_win_rate": 0.9899351992279057,
+            "anchor_n": 7253,
+            "n_edits": 105390
+        }
+    },
+    "alpha": 0.01,
+    "clips": 11996
+}

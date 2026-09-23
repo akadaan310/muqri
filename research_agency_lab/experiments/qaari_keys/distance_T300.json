@@ -1,0 +1,303 @@
+{
+    "features": [
+        "cv_ghunnah_م",
+        "cv_ghunnah_ن",
+        "cv_ikhfa_noon",
+        "cv_madd_2",
+        "cv_madd_4",
+        "cv_madd_6",
+        "len_ghunnah_م",
+        "len_ghunnah_ن",
+        "len_ikhfa_noon",
+        "len_madd_2",
+        "len_madd_4",
+        "len_madd_6",
+        "rikhw",
+        "rule_ghunnah_drop",
+        "rule_idgham_undo",
+        "rule_ikhfa_izhar",
+        "rule_iqlab_no_ghunnah",
+        "rule_iqlab_undo",
+        "rule_madd_long",
+        "rule_madd_short",
+        "rule_qalqala_drop",
+        "sep",
+        "shadeed",
+        "sif_ghonna_[لا غنة]",
+        "sif_ghonna_[مغن]",
+        "sif_hams_or_jahr_[جهر]",
+        "sif_hams_or_jahr_[همس]",
+        "sif_istitala_[لا إستطالة]",
+        "sif_istitala_[مستطيل]",
+        "sif_itbaq_[مطبق]",
+        "sif_itbaq_[منفتح]",
+        "sif_qalqla_[لا قلقلة]",
+        "sif_qalqla_[مقلقل]",
+        "sif_safeer_[صفير]",
+        "sif_safeer_[لا صفير]",
+        "sif_shidda_or_rakhawa_[بين الشدة والرخاوة]",
+        "sif_shidda_or_rakhawa_[رخو]",
+        "sif_shidda_or_rakhawa_[شديد]",
+        "sif_tafashie_[لا تفشي]",
+        "sif_tafashie_[متفشي]",
+        "sif_tafkheem_or_taqeeq_[أدنى المفخم]",
+        "sif_tafkheem_or_taqeeq_[مرقق]",
+        "sif_tafkheem_or_taqeeq_[مفخم]",
+        "sif_tikraar_[لا تكرار]",
+        "sif_tikraar_[مكرر]"
+    ],
+    "tier": "T300",
+    "reciters": [
+        {
+            "rank": 1,
+            "distance": 4.227241228976586,
+            "anchor": true,
+            "reciter_id": "everyayah:Husary_128kbps"
+        },
+        {
+            "rank": 2,
+            "distance": 4.86579032882408,
+            "anchor": true,
+            "reciter_id": "everyayah:Husary_128kbps_Mujawwad"
+        },
+        {
+            "rank": 3,
+            "distance": 4.996772134064355,
+            "anchor": true,
+            "reciter_id": "everyayah:Husary_Muallim_128kbps"
+        },
+        {
+            "rank": 4,
+            "distance": 6.1211079165453866,
+            "anchor": false,
+            "reciter_id": "everyayah:Akram_AlAlaqimy_128kbps"
+        },
+        {
+            "rank": 5,
+            "distance": 6.491560621431873,
+            "anchor": false,
+            "reciter_id": "everyayah:Abdul_Basit_Murattal_192kbps"
+        },
+        {
+            "rank": 6,
+            "distance": 6.542012081073425,
+            "anchor": false,
+            "reciter_id": "everyayah:Abdullah_Basfar_192kbps"
+        },
+        {
+            "rank": 7,
+            "distance": 6.79972129736717,
+            "anchor": false,
+            "reciter_id": "everyayah:Ahmed_Neana_128kbps"
+        },
+        {
+            "rank": 8,
+            "distance": 6.891038352453878,
+            "anchor": false,
+            "reciter_id": "everyayah:Muhammad_Jibreel_128kbps"
+        },
+        {
+            "rank": 9,
+            "distance": 6.893782569556677,
+            "anchor": false,
+            "reciter_id": "everyayah:Alafasy_128kbps"
+        },
+        {
+            "rank": 10,
+            "distance": 6.922772305383549,
+            "anchor": false,
+            "reciter_id": "everyayah:Sahl_Yassin_128kbps"
+        },
+        {
+            "rank": 11,
+            "distance": 7.156895643259628,
+            "anchor": false,
+            "reciter_id": "everyayah:Ali_Jaber_64kbps"
+        },
+        {
+            "rank": 12,
+            "distance": 7.322567563163677,
+            "anchor": false,
+            "reciter_id": "everyayah:Mohammad_al_Tablaway_128kbps"
+        },
+        {
+            "rank": 13,
+            "distance": 7.588701640683933,
+            "anchor": false,
+            "reciter_id": "everyayah:Salaah_AbdulRahman_Bukhatir_128kbps"
+        },
+        {
+            "rank": 14,
+            "distance": 7.66811694091016,
+            "anchor": false,
+            "reciter_id": "everyayah:Khaalid_Abdullaah_al-Qahtaanee_192kbps"
+        },
+        {
+            "rank": 15,
+            "distance": 7.6719382723744545,
+            "anchor": false,
+            "reciter_id": "everyayah:Muhammad_AbdulKareem_128kbps"
+        },
+        {
+            "rank": 16,
+            "distance": 7.7975581069228275,
+            "anchor": false,
+            "reciter_id": "everyayah:Abu_Bakr_Ash-Shaatree_128kbps"
+        },
+        {
+            "rank": 17,
+            "distance": 7.8269765069038355,
+            "anchor": false,
+            "reciter_id": "everyayah:Minshawy_Murattal_128kbps"
+        },
+        {
+            "rank": 18,
+            "distance": 8.033381379128054,
+            "anchor": false,
+            "reciter_id": "everyayah:Salah_Al_Budair_128kbps"
+        },
+        {
+            "rank": 19,
+            "distance": 8.159374282390088,
+            "anchor": false,
+            "reciter_id": "everyayah:Ali_Hajjaj_AlSuesy_128kbps"
+        },
+        {
+            "rank": 20,
+            "distance": 8.381556209882687,
+            "anchor": false,
+            "reciter_id": "everyayah:mahmoud_ali_al_banna_32kbps"
+        },
+        {
+            "rank": 21,
+            "distance": 8.705302763175915,
+            "anchor": false,
+            "reciter_id": "everyayah:Hani_Rifai_192kbps"
+        },
+        {
+            "rank": 22,
+            "distance": 8.830904936819936,
+            "anchor": false,
+            "reciter_id": "everyayah:Karim_Mansoori_40kbps"
+        },
+        {
+            "rank": 23,
+            "distance": 9.04874590370203,
+            "anchor": false,
+            "reciter_id": "everyayah:Abdurrahmaan_As-Sudais_192kbps"
+        },
+        {
+            "rank": 24,
+            "distance": 9.656399909327058,
+            "anchor": false,
+            "reciter_id": "everyayah:Muhsin_Al_Qasim_192kbps"
+        },
+        {
+            "rank": 25,
+            "distance": 9.657968869289359,
+            "anchor": false,
+            "reciter_id": "everyayah:Yasser_Ad-Dussary_128kbps"
+        },
+        {
+            "rank": 26,
+            "distance": 9.734409364421165,
+            "anchor": false,
+            "reciter_id": "everyayah:Fares_Abbad_64kbps"
+        },
+        {
+            "rank": 27,
+            "distance": 9.872069298627375,
+            "anchor": false,
+            "reciter_id": "everyayah:Muhammad_Ayyoub_128kbps"
+        },
+        {
+            "rank": 28,
+            "distance": 9.93140085841684,
+            "anchor": false,
+            "reciter_id": "everyayah:Ghamadi_40kbps"
+        },
+        {
+            "rank": 29,
+            "distance": 10.019923939075019,
+            "anchor": false,
+            "reciter_id": "everyayah:Mustafa_Ismail_48kbps"
+        },
+        {
+            "rank": 30,
+            "distance": 10.070884425720456,
+            "anchor": false,
+            "reciter_id": "everyayah:Abdul_Basit_Mujawwad_128kbps"
+        },
+        {
+            "rank": 31,
+            "distance": 10.353919704967215,
+            "anchor": false,
+            "reciter_id": "everyayah:Nasser_Alqatami_128kbps"
+        },
+        {
+            "rank": 32,
+            "distance": 11.168865181402278,
+            "anchor": false,
+            "reciter_id": "everyayah:Yaser_Salamah_128kbps"
+        },
+        {
+            "rank": 33,
+            "distance": 11.574862751908318,
+            "anchor": false,
+            "reciter_id": "everyayah:MaherAlMuaiqly128kbps"
+        },
+        {
+            "rank": 34,
+            "distance": 12.250279541575235,
+            "anchor": false,
+            "reciter_id": "everyayah:Saood_ash-Shuraym_128kbps"
+        },
+        {
+            "rank": 35,
+            "distance": 12.679442142082788,
+            "anchor": false,
+            "reciter_id": "everyayah:Hudhaify_128kbps"
+        },
+        {
+            "rank": 36,
+            "distance": 13.779201286429533,
+            "anchor": false,
+            "reciter_id": "everyayah:Abdullah_Matroud_128kbps"
+        },
+        {
+            "rank": 37,
+            "distance": 16.51585511696833,
+            "anchor": false,
+            "reciter_id": "everyayah:aziz_alili_128kbps"
+        },
+        {
+            "rank": 38,
+            "distance": 21.73233215770219,
+            "anchor": false,
+            "reciter_id": "everyayah:khalefa_al_tunaiji_64kbps"
+        },
+        {
+            "rank": 39,
+            "distance": 27.691200966802235,
+            "anchor": false,
+            "reciter_id": "everyayah:Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net"
+        },
+        {
+            "rank": 40,
+            "distance": 29.218709845168554,
+            "anchor": false,
+            "reciter_id": "everyayah:Minshawy_Mujawwad_192kbps"
+        },
+        {
+            "rank": 41,
+            "distance": 74.79910067752351,
+            "anchor": false,
+            "reciter_id": "everyayah:Ayman_Sowaid_64kbps"
+        }
+    ],
+    "anchor_ranks": [
+        1,
+        2,
+        3
+    ]
+}

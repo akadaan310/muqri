@@ -1,0 +1,2875 @@
+{
+ "nodes": [
+  {
+   "id": "phen:sifah:hams",
+   "type": "phenomenon",
+   "label": "Hams",
+   "level": "101",
+   "status": "partial",
+   "priority": 1,
+   "refs": [],
+   "file": "app/sifaat/hams_jahr.py",
+   "note": "Airflow not voicing; 186 false FAILs on experts"
+  },
+  {
+   "id": "code:app/sifaat/hams_jahr.py",
+   "type": "code",
+   "label": "app/sifaat/hams_jahr.py",
+   "level": null,
+   "status": "implemented",
+   "priority": null,
+   "refs": [],
+   "file": "app/sifaat/hams_jahr.py",
+   "note": null
+  },
+  {
+   "id": "phen:sifah:jahr",
+   "type": "phenomenon",
+   "label": "Jahr",
+   "level": "101",
+   "status": "partial",
+   "priority": 1,
+   "refs": [],
+   "file": "app/sifaat/hams_jahr.py",
+   "note": "Low airflow at release (ط ق ء voiceless yet majhur)"
+  },
+  {
+   "id": "phen:sifah:shiddah",
+   "type": "phenomenon",
+   "label": "Shiddah",
+   "level": "101",
+   "status": "partial",
+   "priority": 1,
+   "refs": [],
+   "file": "app/sifaat/sukoon_spectrum.py",
+   "note": "occlusion_ms median 0; reuse burst detector"
+  },
+  {
+   "id": "code:app/sifaat/sukoon_spectrum.py",
+   "type": "code",
+   "label": "app/sifaat/sukoon_spectrum.py",
+   "level": null,
+   "status": "implemented",
+   "priority": null,
+   "refs": [],
+   "file": "app/sifaat/sukoon_spectrum.py",
+   "note": null
+  },
+  {
+   "id": "phen:sifah:tawassut",
+   "type": "phenomenon",
+   "label": "Tawassut",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "app/sifaat/sukoon_spectrum.py",
+   "note": null
+  },
+  {
+   "id": "phen:sifah:rakhawah",
+   "type": "phenomenon",
+   "label": "Rakhawah",
+   "level": "101",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "app/sifaat/sukoon_spectrum.py",
+   "note": "2.2 duration ratio falsified (median 0.76)"
+  },
+  {
+   "id": "phen:sifah:istila",
+   "type": "phenomenon",
+   "label": "Isti'la",
+   "level": "101",
+   "status": "implemented",
+   "priority": 2,
+   "refs": [],
+   "file": "app/sifaat/formants.py",
+   "note": "heaviness index orders tafkheem levels"
+  },
+  {
+   "id": "code:app/sifaat/formants.py",
+   "type": "code",
+   "label": "app/sifaat/formants.py",
+   "level": null,
+   "status": "implemented",
+   "priority": null,
+   "refs": [],
+   "file": "app/sifaat/formants.py",
+   "note": null
+  },
+  {
+   "id": "phen:sifah:istifal",
+   "type": "phenomenon",
+   "label": "Istifal",
+   "level": "101",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "app/sifaat/formants.py",
+   "note": null
+  },
+  {
+   "id": "phen:sifah:itbaq",
+   "type": "phenomenon",
+   "label": "Itbaq",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "app/sifaat/itbaq.py",
+   "note": null
+  },
+  {
+   "id": "code:app/sifaat/itbaq.py",
+   "type": "code",
+   "label": "app/sifaat/itbaq.py",
+   "level": null,
+   "status": "implemented",
+   "priority": null,
+   "refs": [],
+   "file": "app/sifaat/itbaq.py",
+   "note": null
+  },
+  {
+   "id": "phen:sifah:infitah",
+   "type": "phenomenon",
+   "label": "Infitah",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/sifaat/itbaq.py",
+   "note": null
+  },
+  {
+   "id": "phen:sifah:idhlaq",
+   "type": "phenomenon",
+   "label": "Idhlaq",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 5,
+   "refs": [],
+   "file": null,
+   "note": "phonotactic; do not score"
+  },
+  {
+   "id": "phen:sifah:ismat",
+   "type": "phenomenon",
+   "label": "Ismat",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 5,
+   "refs": [],
+   "file": null,
+   "note": "phonotactic; do not score"
+  },
+  {
+   "id": "phen:sifah:safir",
+   "type": "phenomenon",
+   "label": "Safir",
+   "level": "101",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": "app/sifaat/ghair_mutadhaddah.py",
+   "note": "most tokens SKIPPED"
+  },
+  {
+   "id": "code:app/sifaat/ghair_mutadhaddah.py",
+   "type": "code",
+   "label": "app/sifaat/ghair_mutadhaddah.py",
+   "level": null,
+   "status": "implemented",
+   "priority": null,
+   "refs": [],
+   "file": "app/sifaat/ghair_mutadhaddah.py",
+   "note": null
+  },
+  {
+   "id": "phen:sifah:qalqalah",
+   "type": "phenomenon",
+   "label": "Qalqalah",
+   "level": "101",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "app/tajweed_rules/qalqalah_engine.py",
+   "note": "kubra≈sughra in burst energy"
+  },
+  {
+   "id": "code:app/tajweed_rules/qalqalah_engine.py",
+   "type": "code",
+   "label": "app/tajweed_rules/qalqalah_engine.py",
+   "level": null,
+   "status": "implemented",
+   "priority": null,
+   "refs": [],
+   "file": "app/tajweed_rules/qalqalah_engine.py",
+   "note": null
+  },
+  {
+   "id": "phen:sifah:leen",
+   "type": "phenomenon",
+   "label": "Leen",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 3,
+   "refs": [],
+   "file": null,
+   "note": "diphthong glide quality"
+  },
+  {
+   "id": "phen:sifah:inhiraf",
+   "type": "phenomenon",
+   "label": "Inhiraf",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 3,
+   "refs": [],
+   "file": null,
+   "note": "lateral ل / retracted ر"
+  },
+  {
+   "id": "phen:sifah:takreer",
+   "type": "phenomenon",
+   "label": "Takreer",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/sifaat/ghair_mutadhaddah.py",
+   "note": null
+  },
+  {
+   "id": "phen:sifah:tafashshi",
+   "type": "phenomenon",
+   "label": "Tafashshi",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/sifaat/ghair_mutadhaddah.py",
+   "note": null
+  },
+  {
+   "id": "phen:sifah:istitalah",
+   "type": "phenomenon",
+   "label": "Istitalah",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 3,
+   "refs": [],
+   "file": "app/sifaat/ghair_mutadhaddah.py",
+   "note": "duration threshold wrong (median 0.67)"
+  },
+  {
+   "id": "phen:sifah:ghunnah",
+   "type": "phenomenon",
+   "label": "Ghunnah",
+   "level": "101",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "app/sifaat/formants.py",
+   "note": null
+  },
+  {
+   "id": "phen:sifah:khafa",
+   "type": "phenomenon",
+   "label": "Khafa",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 4,
+   "refs": [],
+   "file": null,
+   "note": "ه presence"
+  },
+  {
+   "id": "phen:letter:hamza",
+   "type": "phenomenon",
+   "label": "ء",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class mutawassit"
+  },
+  {
+   "id": "phen:letter:baa",
+   "type": "phenomenon",
+   "label": "ب",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class qawiyy"
+  },
+  {
+   "id": "phen:letter:taa",
+   "type": "phenomenon",
+   "label": "ت",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class daeef"
+  },
+  {
+   "id": "phen:letter:thaa",
+   "type": "phenomenon",
+   "label": "ث",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class adaaf"
+  },
+  {
+   "id": "phen:letter:jeem",
+   "type": "phenomenon",
+   "label": "ج",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class qawiyy"
+  },
+  {
+   "id": "phen:letter:haa_h",
+   "type": "phenomenon",
+   "label": "ح",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class adaaf"
+  },
+  {
+   "id": "phen:letter:khaa",
+   "type": "phenomenon",
+   "label": "خ",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class daeef"
+  },
+  {
+   "id": "phen:letter:dal",
+   "type": "phenomenon",
+   "label": "د",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class qawiyy"
+  },
+  {
+   "id": "phen:letter:dhal",
+   "type": "phenomenon",
+   "label": "ذ",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class daeef"
+  },
+  {
+   "id": "phen:letter:raa",
+   "type": "phenomenon",
+   "label": "ر",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class qawiyy"
+  },
+  {
+   "id": "phen:letter:zay",
+   "type": "phenomenon",
+   "label": "ز",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class daeef"
+  },
+  {
+   "id": "phen:letter:seen",
+   "type": "phenomenon",
+   "label": "س",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class daeef"
+  },
+  {
+   "id": "phen:letter:sheen",
+   "type": "phenomenon",
+   "label": "ش",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class daeef"
+  },
+  {
+   "id": "phen:letter:saad",
+   "type": "phenomenon",
+   "label": "ص",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class qawiyy"
+  },
+  {
+   "id": "phen:letter:daad",
+   "type": "phenomenon",
+   "label": "ض",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class qawiyy"
+  },
+  {
+   "id": "phen:letter:taa_t",
+   "type": "phenomenon",
+   "label": "ط",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class aqwa"
+  },
+  {
+   "id": "phen:letter:dhaa",
+   "type": "phenomenon",
+   "label": "ظ",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class qawiyy"
+  },
+  {
+   "id": "phen:letter:ayn",
+   "type": "phenomenon",
+   "label": "ع",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class daeef"
+  },
+  {
+   "id": "phen:letter:ghayn",
+   "type": "phenomenon",
+   "label": "غ",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class mutawassit"
+  },
+  {
+   "id": "phen:letter:faa",
+   "type": "phenomenon",
+   "label": "ف",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class adaaf"
+  },
+  {
+   "id": "phen:letter:qaf",
+   "type": "phenomenon",
+   "label": "ق",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class qawiyy"
+  },
+  {
+   "id": "phen:letter:kaf",
+   "type": "phenomenon",
+   "label": "ك",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class daeef"
+  },
+  {
+   "id": "phen:letter:lam",
+   "type": "phenomenon",
+   "label": "ل",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class mutawassit"
+  },
+  {
+   "id": "phen:letter:meem",
+   "type": "phenomenon",
+   "label": "م",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class mutawassit"
+  },
+  {
+   "id": "phen:letter:noon",
+   "type": "phenomenon",
+   "label": "ن",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class mutawassit"
+  },
+  {
+   "id": "phen:letter:haa",
+   "type": "phenomenon",
+   "label": "ه",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class adaaf"
+  },
+  {
+   "id": "phen:letter:waw",
+   "type": "phenomenon",
+   "label": "و",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class daeef"
+  },
+  {
+   "id": "phen:letter:yaa",
+   "type": "phenomenon",
+   "label": "ي",
+   "level": "101",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": "strength class daeef"
+  },
+  {
+   "id": "phen:grad:tafkheem_maratib",
+   "type": "phenomenon",
+   "label": "Maratib al-tafkheem (5 levels)",
+   "level": "ijazah",
+   "status": "partial",
+   "priority": 1,
+   "refs": [],
+   "file": null,
+   "note": "data: 0.595>0.481>0.201, rho=-0.42"
+  },
+  {
+   "id": "phen:grad:qalqalah_levels",
+   "type": "phenomenon",
+   "label": "Qalqalah sughra/kubra/akbar",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": "akbar distinct; kubra≈sughra"
+  },
+  {
+   "id": "phen:grad:ghunnah_maratib",
+   "type": "phenomenon",
+   "label": "Maratib al-ghunnah (5 levels)",
+   "level": "ijazah",
+   "status": "missing",
+   "priority": 3,
+   "refs": [],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "phen:grad:letter_strength",
+   "type": "phenomenon",
+   "label": "Letter strength classes (aqwa..adaaf)",
+   "level": "advanced",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": "S-W count reproduces al-Mursafi 29/29"
+  },
+  {
+   "id": "src:arXiv:2509.00094",
+   "type": "source",
+   "label": "Muaalem QPS sifaat CTC",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "arXiv:2509.00094"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:doi:10.1093/jss/fgu035",
+   "type": "source",
+   "label": "Heselwood & Maghrabi 2015 majhur airflow",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "doi:10.1093/jss/fgu035"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:doi:10.1177/0023830920986821",
+   "type": "source",
+   "label": "Kulikov VOT/emphasis Arabic stops",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "doi:10.1177/0023830920986821"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:doi:10.5334/labphon.19",
+   "type": "source",
+   "label": "Al-Tamimi 2017 pharyngealization",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "doi:10.5334/labphon.19"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:doi:10.1121/1.1288413",
+   "type": "source",
+   "label": "Jongman 2000 fricative moments",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "doi:10.1121/1.1288413"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:doi:10.1121/1.1458026",
+   "type": "source",
+   "label": "Stevens 2002 landmarks",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "doi:10.1121/1.1458026"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:doi:10.1044/jshr.3704.769",
+   "type": "source",
+   "label": "Hillenbrand 1994 CPP",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "doi:10.1044/jshr.3704.769"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:doi:10.1121/1.419620",
+   "type": "source",
+   "label": "Chen 1997 A1-P0",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "doi:10.1121/1.419620"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:doi:10.1006/jpho.2002.0179",
+   "type": "source",
+   "label": "Sole 2002 trills",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "doi:10.1006/jpho.2002.0179"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:doi:10.1121/1.1912396",
+   "type": "source",
+   "label": "Lobanov 1971",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "doi:10.1121/1.1912396"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:doi:10.1121/1.393381",
+   "type": "source",
+   "label": "Syrdal & Gopal 1986 Bark",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "doi:10.1121/1.393381"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:doi:10.1109/89.650310",
+   "type": "source",
+   "label": "Lee & Rose VTLN",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "doi:10.1109/89.650310"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:doi:10.1007/978-3-642-59830-2",
+   "type": "source",
+   "label": "Ganter & Wille FCA",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "doi:10.1007/978-3-642-59830-2"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:doi:10.1162/089976602760128018",
+   "type": "source",
+   "label": "Hinton PoE",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "doi:10.1162/089976602760128018"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:doi:10.1109/TIT.1968.1054142",
+   "type": "source",
+   "label": "Chow-Liu",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "doi:10.1109/TIT.1968.1054142"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:arXiv:1706.04599",
+   "type": "source",
+   "label": "Guo calibration",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "arXiv:1706.04599"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:arXiv:2107.07511",
+   "type": "source",
+   "label": "Conformal (Angelopoulos & Bates)",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "arXiv:2107.07511"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:doi:10.1109/TPAMI.2005.159",
+   "type": "source",
+   "label": "mRMR",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "doi:10.1109/TPAMI.2005.159"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:doi:10.1103/PhysRevE.69.066138",
+   "type": "source",
+   "label": "KSG MI",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "doi:10.1103/PhysRevE.69.066138"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:arXiv:2003.12298",
+   "type": "source",
+   "label": "MDL probing",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "arXiv:2003.12298"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:arXiv:1909.03368",
+   "type": "source",
+   "label": "Control tasks",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "arXiv:1909.03368"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:arXiv:2210.11723",
+   "type": "source",
+   "label": "SSL articulation (Cho)",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "arXiv:2210.11723"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:arXiv:1901.07884",
+   "type": "source",
+   "label": "CORAL ordinal",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "arXiv:1901.07884"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:doi:10.1016/j.specom.2016.09.001",
+   "type": "source",
+   "label": "WORLD D4C",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "doi:10.1016/j.specom.2016.09.001"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:doi:10.1121/1.417991",
+   "type": "source",
+   "label": "Hanson H1-H2",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "doi:10.1121/1.417991"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "src:book:hidayat_al_qari",
+   "type": "source",
+   "label": "al-Mursafi Hidayat al-Qari",
+   "level": null,
+   "status": null,
+   "priority": null,
+   "refs": [
+    "book:hidayat_al_qari"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "math:fca_lattice",
+   "type": "math",
+   "label": "Formal concept lattice of sifaat (33 concepts)",
+   "level": null,
+   "status": "proposed",
+   "priority": 2,
+   "refs": [
+    "src:doi:10.1007/978-3-642-59830-2"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "math:makhraj_distinctive_set",
+   "type": "math",
+   "label": "Makhraj-conditioned distinctive sifaat D(l)",
+   "level": null,
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "math:strength_poset",
+   "type": "math",
+   "label": "Strength poset / S-W linear extension",
+   "level": null,
+   "status": "proposed",
+   "priority": 3,
+   "refs": [
+    "src:book:hidayat_al_qari"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "math:poe_joint_profile",
+   "type": "math",
+   "label": "Product-of-experts joint letter profile",
+   "level": null,
+   "status": "proposed",
+   "priority": 1,
+   "refs": [
+    "src:doi:10.1162/089976602760128018",
+    "src:arXiv:1706.04599"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "math:chow_liu_bn",
+   "type": "math",
+   "label": "Chow-Liu Bayesian network over detector residuals",
+   "level": null,
+   "status": "proposed",
+   "priority": 4,
+   "refs": [
+    "src:doi:10.1109/TIT.1968.1054142"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "math:conformal_letter_sets",
+   "type": "math",
+   "label": "Conformal letter prediction sets",
+   "level": null,
+   "status": "proposed",
+   "priority": 2,
+   "refs": [
+    "src:arXiv:2107.07511"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "math:isotonic_ordinal",
+   "type": "math",
+   "label": "Isotonic mixed model + proportional odds / CORAL",
+   "level": null,
+   "status": "proposed",
+   "priority": 1,
+   "refs": [
+    "src:arXiv:1901.07884"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "math:mrmr_ksg",
+   "type": "math",
+   "label": "mRMR with KSG mutual information",
+   "level": null,
+   "status": "proposed",
+   "priority": 4,
+   "refs": [
+    "src:doi:10.1109/TPAMI.2005.159",
+    "src:doi:10.1103/PhysRevE.69.066138"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "math:mdl_probe",
+   "type": "math",
+   "label": "MDL probing",
+   "level": null,
+   "status": "proposed",
+   "priority": 4,
+   "refs": [
+    "src:arXiv:2003.12298"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "math:lobanov_bark_vtln",
+   "type": "math",
+   "label": "Robust Lobanov / Bark-difference / VTLN normalisation",
+   "level": null,
+   "status": "proposed",
+   "priority": 2,
+   "refs": [
+    "src:doi:10.1121/1.1912396",
+    "src:doi:10.1121/1.393381",
+    "src:doi:10.1109/89.650310"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "algo:landmark_closure_burst",
+   "type": "algorithm",
+   "label": "Closure/burst landmark detector",
+   "level": null,
+   "status": "proposed",
+   "priority": 1,
+   "refs": [
+    "src:doi:10.1121/1.1458026"
+   ],
+   "file": "app/tajweed_rules/qalqalah_engine.py",
+   "note": null
+  },
+  {
+   "id": "algo:vot_aspiration",
+   "type": "algorithm",
+   "label": "VOT / post-release aspiration",
+   "level": null,
+   "status": "proposed",
+   "priority": 1,
+   "refs": [
+    "src:doi:10.1177/0023830920986821",
+    "src:doi:10.1093/jss/fgu035"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "algo:cpp_aperiodicity",
+   "type": "algorithm",
+   "label": "CPP + D4C aperiodicity + H1-H2",
+   "level": null,
+   "status": "proposed",
+   "priority": 1,
+   "refs": [
+    "src:doi:10.1044/jshr.3704.769",
+    "src:doi:10.1016/j.specom.2016.09.001",
+    "src:doi:10.1121/1.417991"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "algo:hnr_voicing",
+   "type": "algorithm",
+   "label": "HNR + F0 voicing fraction (current)",
+   "level": null,
+   "status": "implemented",
+   "priority": 5,
+   "refs": [],
+   "file": "app/sifaat/hams_jahr.py",
+   "note": null
+  },
+  {
+   "id": "algo:heaviness_index",
+   "type": "algorithm",
+   "label": "Heaviness index F2-F1 vs light reference",
+   "level": null,
+   "status": "implemented",
+   "priority": 2,
+   "refs": [
+    "src:doi:10.5334/labphon.19"
+   ],
+   "file": "app/sifaat/formants.py",
+   "note": null
+  },
+  {
+   "id": "algo:spectral_moments",
+   "type": "algorithm",
+   "label": "Spectral moments COG/SD/skew/kurtosis",
+   "level": null,
+   "status": "proposed",
+   "priority": 2,
+   "refs": [
+    "src:doi:10.1121/1.1288413"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "algo:hf_tilt_flatness",
+   "type": "algorithm",
+   "label": "HF spike / spectral flatness (current)",
+   "level": null,
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "app/sifaat/ghair_mutadhaddah.py",
+   "note": null
+  },
+  {
+   "id": "algo:am_spectrum_trill",
+   "type": "algorithm",
+   "label": "Amplitude-modulation spectrum trill rate",
+   "level": null,
+   "status": "proposed",
+   "priority": 4,
+   "refs": [
+    "src:doi:10.1006/jpho.2002.0179"
+   ],
+   "file": "app/sifaat/ghair_mutadhaddah.py",
+   "note": null
+  },
+  {
+   "id": "algo:tap_count",
+   "type": "algorithm",
+   "label": "Tap dip counting (current)",
+   "level": null,
+   "status": "implemented",
+   "priority": 4,
+   "refs": [],
+   "file": "app/sifaat/ghair_mutadhaddah.py",
+   "note": null
+  },
+  {
+   "id": "algo:nasal_a1p0_ner",
+   "type": "algorithm",
+   "label": "NER + A1-P0 nasality",
+   "level": null,
+   "status": "partial",
+   "priority": 3,
+   "refs": [
+    "src:doi:10.1121/1.419620"
+   ],
+   "file": "app/sifaat/formants.py",
+   "note": null
+  },
+  {
+   "id": "algo:diphthong_trajectory",
+   "type": "algorithm",
+   "label": "Diphthong F2 trajectory + smoothness",
+   "level": null,
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "algo:lateral_antiformant",
+   "type": "algorithm",
+   "label": "Lateral antiformant / F3 check",
+   "level": null,
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "algo:f2_transition",
+   "type": "algorithm",
+   "label": "F2 transition duration, no-release",
+   "level": null,
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "algo:ssl_probe",
+   "type": "algorithm",
+   "label": "Layerwise SSL linear probes (within-letter contrasts)",
+   "level": null,
+   "status": "proposed",
+   "priority": 3,
+   "refs": [
+    "src:arXiv:2210.11723",
+    "src:arXiv:1909.03368"
+   ],
+   "file": "app/aligner.py",
+   "note": null
+  },
+  {
+   "id": "code:app/aligner.py",
+   "type": "code",
+   "label": "app/aligner.py",
+   "level": null,
+   "status": "implemented",
+   "priority": null,
+   "refs": [],
+   "file": "app/aligner.py",
+   "note": null
+  },
+  {
+   "id": "algo:muaalem_teacher",
+   "type": "algorithm",
+   "label": "Muaalem multi-level CTC sifaat teacher",
+   "level": null,
+   "status": "speculative",
+   "priority": 4,
+   "refs": [
+    "src:arXiv:2509.00094"
+   ],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "algo:lpc_counterfactual",
+   "type": "algorithm",
+   "label": "LPC resynthesis counterfactual validation",
+   "level": null,
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/substrate_library/octave/lpc.m",
+   "note": null
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/octave/lpc.m",
+   "type": "code",
+   "label": "research_agency_lab/substrate_library/octave/lpc.m",
+   "level": null,
+   "status": "implemented",
+   "priority": null,
+   "refs": [],
+   "file": "research_agency_lab/substrate_library/octave/lpc.m",
+   "note": null
+  },
+  {
+   "id": "pkg:Optim.jl",
+   "type": "package",
+   "label": "Optim.jl",
+   "level": null,
+   "status": "implemented",
+   "priority": null,
+   "refs": [],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "pkg:ForwardDiff.jl",
+   "type": "package",
+   "label": "ForwardDiff.jl",
+   "level": null,
+   "status": "implemented",
+   "priority": null,
+   "refs": [],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "pkg:Associations.jl",
+   "type": "package",
+   "label": "Associations.jl (KSG MI)",
+   "level": null,
+   "status": "proposed",
+   "priority": null,
+   "refs": [],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "pkg:octave-signal",
+   "type": "package",
+   "label": "Octave signal",
+   "level": null,
+   "status": "implemented",
+   "priority": null,
+   "refs": [],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "pkg:parselmouth",
+   "type": "package",
+   "label": "Praat/parselmouth",
+   "level": null,
+   "status": "implemented",
+   "priority": null,
+   "refs": [],
+   "file": null,
+   "note": null
+  },
+  {
+   "id": "code:research_agency_lab/experiments/deep_research/02_sifaat.md",
+   "type": "code",
+   "label": "Sifaat deep research report",
+   "level": null,
+   "status": "implemented",
+   "priority": null,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/02_sifaat.md",
+   "note": null
+  }
+ ],
+ "edges": [
+  {
+   "from": "phen:sifah:hams",
+   "to": "code:app/sifaat/hams_jahr.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:jahr",
+   "to": "code:app/sifaat/hams_jahr.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:shiddah",
+   "to": "code:app/sifaat/sukoon_spectrum.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:tawassut",
+   "to": "code:app/sifaat/sukoon_spectrum.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:rakhawah",
+   "to": "code:app/sifaat/sukoon_spectrum.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:istila",
+   "to": "code:app/sifaat/formants.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:istifal",
+   "to": "code:app/sifaat/formants.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:itbaq",
+   "to": "code:app/sifaat/itbaq.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:infitah",
+   "to": "code:app/sifaat/itbaq.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:safir",
+   "to": "code:app/sifaat/ghair_mutadhaddah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:qalqalah",
+   "to": "code:app/tajweed_rules/qalqalah_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:takreer",
+   "to": "code:app/sifaat/ghair_mutadhaddah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:tafashshi",
+   "to": "code:app/sifaat/ghair_mutadhaddah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:istitalah",
+   "to": "code:app/sifaat/ghair_mutadhaddah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:ghunnah",
+   "to": "code:app/sifaat/formants.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:hams",
+   "to": "phen:sifah:jahr",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "phen:sifah:shiddah",
+   "to": "phen:sifah:rakhawah",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "phen:sifah:istila",
+   "to": "phen:sifah:istifal",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "phen:sifah:itbaq",
+   "to": "phen:sifah:infitah",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "phen:sifah:idhlaq",
+   "to": "phen:sifah:ismat",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "phen:sifah:tawassut",
+   "to": "phen:sifah:shiddah",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:hamza",
+   "to": "phen:sifah:jahr",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:hamza",
+   "to": "phen:sifah:shiddah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:hamza",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:hamza",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:hamza",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:baa",
+   "to": "phen:sifah:jahr",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:baa",
+   "to": "phen:sifah:shiddah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:baa",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:baa",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:baa",
+   "to": "phen:sifah:idhlaq",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:baa",
+   "to": "phen:sifah:qalqalah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:taa",
+   "to": "phen:sifah:hams",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:taa",
+   "to": "phen:sifah:shiddah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:taa",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:taa",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:taa",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:thaa",
+   "to": "phen:sifah:hams",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:thaa",
+   "to": "phen:sifah:rakhawah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:thaa",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:thaa",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:thaa",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:jeem",
+   "to": "phen:sifah:jahr",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:jeem",
+   "to": "phen:sifah:shiddah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:jeem",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:jeem",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:jeem",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:jeem",
+   "to": "phen:sifah:qalqalah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:haa_h",
+   "to": "phen:sifah:hams",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:haa_h",
+   "to": "phen:sifah:rakhawah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:haa_h",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:haa_h",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:haa_h",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:khaa",
+   "to": "phen:sifah:hams",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:khaa",
+   "to": "phen:sifah:rakhawah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:khaa",
+   "to": "phen:sifah:istila",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:khaa",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:khaa",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:dal",
+   "to": "phen:sifah:jahr",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:dal",
+   "to": "phen:sifah:shiddah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:dal",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:dal",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:dal",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:dal",
+   "to": "phen:sifah:qalqalah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:dhal",
+   "to": "phen:sifah:jahr",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:dhal",
+   "to": "phen:sifah:rakhawah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:dhal",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:dhal",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:dhal",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:raa",
+   "to": "phen:sifah:jahr",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:raa",
+   "to": "phen:sifah:tawassut",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:raa",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:raa",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:raa",
+   "to": "phen:sifah:idhlaq",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:raa",
+   "to": "phen:sifah:inhiraf",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:raa",
+   "to": "phen:sifah:takreer",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:zay",
+   "to": "phen:sifah:jahr",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:zay",
+   "to": "phen:sifah:rakhawah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:zay",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:zay",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:zay",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:zay",
+   "to": "phen:sifah:safir",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:seen",
+   "to": "phen:sifah:hams",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:seen",
+   "to": "phen:sifah:rakhawah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:seen",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:seen",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:seen",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:seen",
+   "to": "phen:sifah:safir",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:sheen",
+   "to": "phen:sifah:hams",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:sheen",
+   "to": "phen:sifah:rakhawah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:sheen",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:sheen",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:sheen",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:sheen",
+   "to": "phen:sifah:tafashshi",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:saad",
+   "to": "phen:sifah:hams",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:saad",
+   "to": "phen:sifah:rakhawah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:saad",
+   "to": "phen:sifah:istila",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:saad",
+   "to": "phen:sifah:itbaq",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:saad",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:saad",
+   "to": "phen:sifah:safir",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:daad",
+   "to": "phen:sifah:jahr",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:daad",
+   "to": "phen:sifah:rakhawah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:daad",
+   "to": "phen:sifah:istila",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:daad",
+   "to": "phen:sifah:itbaq",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:daad",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:daad",
+   "to": "phen:sifah:istitalah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:taa_t",
+   "to": "phen:sifah:jahr",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:taa_t",
+   "to": "phen:sifah:shiddah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:taa_t",
+   "to": "phen:sifah:istila",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:taa_t",
+   "to": "phen:sifah:itbaq",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:taa_t",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:taa_t",
+   "to": "phen:sifah:qalqalah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:dhaa",
+   "to": "phen:sifah:jahr",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:dhaa",
+   "to": "phen:sifah:rakhawah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:dhaa",
+   "to": "phen:sifah:istila",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:dhaa",
+   "to": "phen:sifah:itbaq",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:dhaa",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:ayn",
+   "to": "phen:sifah:jahr",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:ayn",
+   "to": "phen:sifah:tawassut",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:ayn",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:ayn",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:ayn",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:ghayn",
+   "to": "phen:sifah:jahr",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:ghayn",
+   "to": "phen:sifah:rakhawah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:ghayn",
+   "to": "phen:sifah:istila",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:ghayn",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:ghayn",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:faa",
+   "to": "phen:sifah:hams",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:faa",
+   "to": "phen:sifah:rakhawah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:faa",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:faa",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:faa",
+   "to": "phen:sifah:idhlaq",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:qaf",
+   "to": "phen:sifah:jahr",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:qaf",
+   "to": "phen:sifah:shiddah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:qaf",
+   "to": "phen:sifah:istila",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:qaf",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:qaf",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:qaf",
+   "to": "phen:sifah:qalqalah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:kaf",
+   "to": "phen:sifah:hams",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:kaf",
+   "to": "phen:sifah:shiddah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:kaf",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:kaf",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:kaf",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:lam",
+   "to": "phen:sifah:jahr",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:lam",
+   "to": "phen:sifah:tawassut",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:lam",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:lam",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:lam",
+   "to": "phen:sifah:idhlaq",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:lam",
+   "to": "phen:sifah:inhiraf",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:meem",
+   "to": "phen:sifah:jahr",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:meem",
+   "to": "phen:sifah:tawassut",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:meem",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:meem",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:meem",
+   "to": "phen:sifah:idhlaq",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:meem",
+   "to": "phen:sifah:ghunnah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:noon",
+   "to": "phen:sifah:jahr",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:noon",
+   "to": "phen:sifah:tawassut",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:noon",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:noon",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:noon",
+   "to": "phen:sifah:idhlaq",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:noon",
+   "to": "phen:sifah:ghunnah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:haa",
+   "to": "phen:sifah:hams",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:haa",
+   "to": "phen:sifah:rakhawah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:haa",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:haa",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:haa",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:haa",
+   "to": "phen:sifah:khafa",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:waw",
+   "to": "phen:sifah:jahr",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:waw",
+   "to": "phen:sifah:rakhawah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:waw",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:waw",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:waw",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:waw",
+   "to": "phen:sifah:leen",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:yaa",
+   "to": "phen:sifah:jahr",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:yaa",
+   "to": "phen:sifah:rakhawah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:yaa",
+   "to": "phen:sifah:istifal",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:yaa",
+   "to": "phen:sifah:infitah",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:yaa",
+   "to": "phen:sifah:ismat",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:yaa",
+   "to": "phen:sifah:leen",
+   "rel": "has_sifah"
+  },
+  {
+   "from": "phen:letter:daad",
+   "to": "phen:letter:dhaa",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:daad",
+   "to": "phen:letter:dal",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:taa_t",
+   "to": "phen:letter:taa",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:saad",
+   "to": "phen:letter:seen",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:seen",
+   "to": "phen:letter:zay",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:dhaa",
+   "to": "phen:letter:dhal",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:qaf",
+   "to": "phen:letter:kaf",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:haa_h",
+   "to": "phen:letter:haa",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:sheen",
+   "to": "phen:letter:seen",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:thaa",
+   "to": "phen:letter:seen",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:grad:tafkheem_maratib",
+   "to": "phen:sifah:istila",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:grad:qalqalah_levels",
+   "to": "phen:sifah:qalqalah",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:grad:ghunnah_maratib",
+   "to": "phen:sifah:ghunnah",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:grad:tafkheem_maratib",
+   "to": "code:app/sifaat/formants.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:grad:qalqalah_levels",
+   "to": "code:app/tajweed_rules/qalqalah_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "math:fca_lattice",
+   "to": "src:doi:10.1007/978-3-642-59830-2",
+   "rel": "cites"
+  },
+  {
+   "from": "math:fca_lattice",
+   "to": "phen:grad:letter_strength",
+   "rel": "models"
+  },
+  {
+   "from": "math:makhraj_distinctive_set",
+   "to": "phen:grad:letter_strength",
+   "rel": "models"
+  },
+  {
+   "from": "math:strength_poset",
+   "to": "src:book:hidayat_al_qari",
+   "rel": "cites"
+  },
+  {
+   "from": "math:strength_poset",
+   "to": "phen:grad:letter_strength",
+   "rel": "models"
+  },
+  {
+   "from": "math:poe_joint_profile",
+   "to": "src:doi:10.1162/089976602760128018",
+   "rel": "cites"
+  },
+  {
+   "from": "math:poe_joint_profile",
+   "to": "src:arXiv:1706.04599",
+   "rel": "cites"
+  },
+  {
+   "from": "math:poe_joint_profile",
+   "to": "phen:sifah:istila",
+   "rel": "models"
+  },
+  {
+   "from": "math:poe_joint_profile",
+   "to": "phen:sifah:itbaq",
+   "rel": "models"
+  },
+  {
+   "from": "math:poe_joint_profile",
+   "to": "phen:sifah:hams",
+   "rel": "models"
+  },
+  {
+   "from": "math:poe_joint_profile",
+   "to": "phen:sifah:shiddah",
+   "rel": "models"
+  },
+  {
+   "from": "math:chow_liu_bn",
+   "to": "src:doi:10.1109/TIT.1968.1054142",
+   "rel": "cites"
+  },
+  {
+   "from": "math:chow_liu_bn",
+   "to": "math:poe_joint_profile",
+   "rel": "models"
+  },
+  {
+   "from": "math:conformal_letter_sets",
+   "to": "src:arXiv:2107.07511",
+   "rel": "cites"
+  },
+  {
+   "from": "math:conformal_letter_sets",
+   "to": "math:poe_joint_profile",
+   "rel": "models"
+  },
+  {
+   "from": "math:isotonic_ordinal",
+   "to": "src:arXiv:1901.07884",
+   "rel": "cites"
+  },
+  {
+   "from": "math:isotonic_ordinal",
+   "to": "phen:grad:tafkheem_maratib",
+   "rel": "models"
+  },
+  {
+   "from": "math:isotonic_ordinal",
+   "to": "phen:grad:qalqalah_levels",
+   "rel": "models"
+  },
+  {
+   "from": "math:isotonic_ordinal",
+   "to": "phen:grad:ghunnah_maratib",
+   "rel": "models"
+  },
+  {
+   "from": "math:isotonic_ordinal",
+   "to": "phen:sifah:tawassut",
+   "rel": "models"
+  },
+  {
+   "from": "math:mrmr_ksg",
+   "to": "src:doi:10.1109/TPAMI.2005.159",
+   "rel": "cites"
+  },
+  {
+   "from": "math:mrmr_ksg",
+   "to": "src:doi:10.1103/PhysRevE.69.066138",
+   "rel": "cites"
+  },
+  {
+   "from": "math:mdl_probe",
+   "to": "src:arXiv:2003.12298",
+   "rel": "cites"
+  },
+  {
+   "from": "math:lobanov_bark_vtln",
+   "to": "src:doi:10.1121/1.1912396",
+   "rel": "cites"
+  },
+  {
+   "from": "math:lobanov_bark_vtln",
+   "to": "src:doi:10.1121/1.393381",
+   "rel": "cites"
+  },
+  {
+   "from": "math:lobanov_bark_vtln",
+   "to": "src:doi:10.1109/89.650310",
+   "rel": "cites"
+  },
+  {
+   "from": "math:lobanov_bark_vtln",
+   "to": "phen:sifah:istila",
+   "rel": "models"
+  },
+  {
+   "from": "math:lobanov_bark_vtln",
+   "to": "phen:sifah:itbaq",
+   "rel": "models"
+  },
+  {
+   "from": "math:lobanov_bark_vtln",
+   "to": "phen:sifah:leen",
+   "rel": "models"
+  },
+  {
+   "from": "algo:landmark_closure_burst",
+   "to": "src:doi:10.1121/1.1458026",
+   "rel": "cites"
+  },
+  {
+   "from": "phen:sifah:shiddah",
+   "to": "algo:landmark_closure_burst",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:tawassut",
+   "to": "algo:landmark_closure_burst",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:rakhawah",
+   "to": "algo:landmark_closure_burst",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:qalqalah",
+   "to": "algo:landmark_closure_burst",
+   "rel": "measured_by"
+  },
+  {
+   "from": "algo:landmark_closure_burst",
+   "to": "code:app/tajweed_rules/qalqalah_engine.py",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:vot_aspiration",
+   "to": "src:doi:10.1177/0023830920986821",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:vot_aspiration",
+   "to": "src:doi:10.1093/jss/fgu035",
+   "rel": "cites"
+  },
+  {
+   "from": "phen:sifah:hams",
+   "to": "algo:vot_aspiration",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:jahr",
+   "to": "algo:vot_aspiration",
+   "rel": "measured_by"
+  },
+  {
+   "from": "algo:cpp_aperiodicity",
+   "to": "src:doi:10.1044/jshr.3704.769",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:cpp_aperiodicity",
+   "to": "src:doi:10.1016/j.specom.2016.09.001",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:cpp_aperiodicity",
+   "to": "src:doi:10.1121/1.417991",
+   "rel": "cites"
+  },
+  {
+   "from": "phen:sifah:hams",
+   "to": "algo:cpp_aperiodicity",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:jahr",
+   "to": "algo:cpp_aperiodicity",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:khafa",
+   "to": "algo:cpp_aperiodicity",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:hams",
+   "to": "algo:hnr_voicing",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:jahr",
+   "to": "algo:hnr_voicing",
+   "rel": "measured_by"
+  },
+  {
+   "from": "code:app/sifaat/hams_jahr.py",
+   "to": "algo:hnr_voicing",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:heaviness_index",
+   "to": "src:doi:10.5334/labphon.19",
+   "rel": "cites"
+  },
+  {
+   "from": "phen:sifah:istila",
+   "to": "algo:heaviness_index",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:istifal",
+   "to": "algo:heaviness_index",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:itbaq",
+   "to": "algo:heaviness_index",
+   "rel": "measured_by"
+  },
+  {
+   "from": "code:app/sifaat/formants.py",
+   "to": "algo:heaviness_index",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:spectral_moments",
+   "to": "src:doi:10.1121/1.1288413",
+   "rel": "cites"
+  },
+  {
+   "from": "phen:sifah:safir",
+   "to": "algo:spectral_moments",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:tafashshi",
+   "to": "algo:spectral_moments",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:safir",
+   "to": "algo:hf_tilt_flatness",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:tafashshi",
+   "to": "algo:hf_tilt_flatness",
+   "rel": "measured_by"
+  },
+  {
+   "from": "code:app/sifaat/ghair_mutadhaddah.py",
+   "to": "algo:hf_tilt_flatness",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:am_spectrum_trill",
+   "to": "src:doi:10.1006/jpho.2002.0179",
+   "rel": "cites"
+  },
+  {
+   "from": "phen:sifah:takreer",
+   "to": "algo:am_spectrum_trill",
+   "rel": "measured_by"
+  },
+  {
+   "from": "algo:am_spectrum_trill",
+   "to": "code:app/sifaat/ghair_mutadhaddah.py",
+   "rel": "requires"
+  },
+  {
+   "from": "phen:sifah:takreer",
+   "to": "algo:tap_count",
+   "rel": "measured_by"
+  },
+  {
+   "from": "code:app/sifaat/ghair_mutadhaddah.py",
+   "to": "algo:tap_count",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:nasal_a1p0_ner",
+   "to": "src:doi:10.1121/1.419620",
+   "rel": "cites"
+  },
+  {
+   "from": "phen:sifah:ghunnah",
+   "to": "algo:nasal_a1p0_ner",
+   "rel": "measured_by"
+  },
+  {
+   "from": "algo:nasal_a1p0_ner",
+   "to": "code:app/sifaat/formants.py",
+   "rel": "requires"
+  },
+  {
+   "from": "phen:sifah:leen",
+   "to": "algo:diphthong_trajectory",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:inhiraf",
+   "to": "algo:lateral_antiformant",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:istitalah",
+   "to": "algo:f2_transition",
+   "rel": "measured_by"
+  },
+  {
+   "from": "algo:ssl_probe",
+   "to": "src:arXiv:2210.11723",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:ssl_probe",
+   "to": "src:arXiv:1909.03368",
+   "rel": "cites"
+  },
+  {
+   "from": "phen:sifah:istila",
+   "to": "algo:ssl_probe",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:ghunnah",
+   "to": "algo:ssl_probe",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:qalqalah",
+   "to": "algo:ssl_probe",
+   "rel": "measured_by"
+  },
+  {
+   "from": "algo:ssl_probe",
+   "to": "code:app/aligner.py",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:muaalem_teacher",
+   "to": "src:arXiv:2509.00094",
+   "rel": "cites"
+  },
+  {
+   "from": "phen:sifah:hams",
+   "to": "algo:muaalem_teacher",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:shiddah",
+   "to": "algo:muaalem_teacher",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:istila",
+   "to": "algo:muaalem_teacher",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:itbaq",
+   "to": "algo:muaalem_teacher",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:safir",
+   "to": "algo:muaalem_teacher",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:qalqalah",
+   "to": "algo:muaalem_teacher",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:takreer",
+   "to": "algo:muaalem_teacher",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:tafashshi",
+   "to": "algo:muaalem_teacher",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:istitalah",
+   "to": "algo:muaalem_teacher",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:ghunnah",
+   "to": "algo:muaalem_teacher",
+   "rel": "measured_by"
+  },
+  {
+   "from": "algo:lpc_counterfactual",
+   "to": "code:research_agency_lab/substrate_library/octave/lpc.m",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:lpc_counterfactual",
+   "to": "math:poe_joint_profile",
+   "rel": "validates"
+  },
+  {
+   "from": "algo:lpc_counterfactual",
+   "to": "algo:heaviness_index",
+   "rel": "validates"
+  },
+  {
+   "from": "algo:landmark_closure_burst",
+   "to": "algo:vot_aspiration",
+   "rel": "part_of"
+  },
+  {
+   "from": "algo:vot_aspiration",
+   "to": "algo:hnr_voicing",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "algo:spectral_moments",
+   "to": "algo:hf_tilt_flatness",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "math:poe_joint_profile",
+   "to": "math:makhraj_distinctive_set",
+   "rel": "requires"
+  },
+  {
+   "from": "math:poe_joint_profile",
+   "to": "math:fca_lattice",
+   "rel": "requires"
+  },
+  {
+   "from": "math:isotonic_ordinal",
+   "to": "algo:heaviness_index",
+   "rel": "requires"
+  },
+  {
+   "from": "math:isotonic_ordinal",
+   "to": "pkg:Optim.jl",
+   "rel": "requires"
+  },
+  {
+   "from": "math:isotonic_ordinal",
+   "to": "pkg:ForwardDiff.jl",
+   "rel": "requires"
+  },
+  {
+   "from": "math:mrmr_ksg",
+   "to": "pkg:Associations.jl",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:lpc_counterfactual",
+   "to": "pkg:octave-signal",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:heaviness_index",
+   "to": "pkg:parselmouth",
+   "rel": "requires"
+  }
+ ]
+}

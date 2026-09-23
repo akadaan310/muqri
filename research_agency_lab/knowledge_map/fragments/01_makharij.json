@@ -1,0 +1,2152 @@
+{
+ "nodes": [
+  {
+   "id": "phen:makharij",
+   "type": "phenomenon",
+   "label": "Makharij al-huruf (17 articulation points)",
+   "level": "101",
+   "status": "missing",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": "No explicit makhraj verification in engine today"
+  },
+  {
+   "id": "phen:region:jawf",
+   "type": "phenomenon",
+   "label": "Jawf (oral/pharyngeal cavity)",
+   "level": "101",
+   "status": "missing",
+   "priority": 1,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:region:halq",
+   "type": "phenomenon",
+   "label": "Halq (throat)",
+   "level": "101",
+   "status": "missing",
+   "priority": 1,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:region:lisan",
+   "type": "phenomenon",
+   "label": "Lisan (tongue)",
+   "level": "101",
+   "status": "missing",
+   "priority": 1,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:region:shafatan",
+   "type": "phenomenon",
+   "label": "Shafatan (lips)",
+   "level": "101",
+   "status": "missing",
+   "priority": 1,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:region:khayshum",
+   "type": "phenomenon",
+   "label": "Khayshum (nasal cavity)",
+   "level": "101",
+   "status": "missing",
+   "priority": 1,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:jawf",
+   "type": "phenomenon",
+   "label": "Jawf: madd letters",
+   "level": "101",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "phen:letter:alif_madd",
+   "type": "phenomenon",
+   "label": "Letter ا madd",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:letter:waw_madd",
+   "type": "phenomenon",
+   "label": "Letter و madd",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:letter:yaa_madd",
+   "type": "phenomenon",
+   "label": "Letter ي madd",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:halq_aqsa",
+   "type": "phenomenon",
+   "label": "Aqsa al-halq (glottis)",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "phen:letter:hamza",
+   "type": "phenomenon",
+   "label": "Letter ء",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:letter:haa",
+   "type": "phenomenon",
+   "label": "Letter ه",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:halq_wasat",
+   "type": "phenomenon",
+   "label": "Wasat al-halq (mid-pharynx)",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "phen:letter:ain",
+   "type": "phenomenon",
+   "label": "Letter ع",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:letter:haa_h",
+   "type": "phenomenon",
+   "label": "Letter ح",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:halq_adna",
+   "type": "phenomenon",
+   "label": "Adna al-halq (upper pharynx/uvula)",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "phen:letter:ghain",
+   "type": "phenomenon",
+   "label": "Letter غ",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:letter:khaa",
+   "type": "phenomenon",
+   "label": "Letter خ",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:lisan_aqsa_qaf",
+   "type": "phenomenon",
+   "label": "Aqsa al-lisan + soft palate (qaf)",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "phen:letter:qaf",
+   "type": "phenomenon",
+   "label": "Letter ق",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": "sifat partially measured (itbaq/tafkheem/ghunnah/takrir/qalqalah) but not makhraj"
+  },
+  {
+   "id": "phen:makhraj:lisan_aqsa_kaf",
+   "type": "phenomenon",
+   "label": "Aqsa al-lisan slightly forward (kaf)",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "phen:letter:kaf",
+   "type": "phenomenon",
+   "label": "Letter ك",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:lisan_wasat",
+   "type": "phenomenon",
+   "label": "Wasat al-lisan + hard palate",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "phen:letter:jeem",
+   "type": "phenomenon",
+   "label": "Letter ج",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:letter:sheen",
+   "type": "phenomenon",
+   "label": "Letter ش",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:letter:yaa",
+   "type": "phenomenon",
+   "label": "Letter ي",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:lisan_hafah_dad",
+   "type": "phenomenon",
+   "label": "Side of tongue + upper molars (dad)",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "phen:letter:dad",
+   "type": "phenomenon",
+   "label": "Letter ض",
+   "level": "ijazah",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": "sifat partially measured (itbaq/tafkheem/ghunnah/takrir/qalqalah) but not makhraj"
+  },
+  {
+   "id": "phen:makhraj:lisan_hafah_lam",
+   "type": "phenomenon",
+   "label": "Front tongue edges to tip + gum (lam)",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "phen:letter:lam",
+   "type": "phenomenon",
+   "label": "Letter ل",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:lisan_taraf_nun",
+   "type": "phenomenon",
+   "label": "Tongue tip + gum below lam (nun)",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "phen:letter:nun",
+   "type": "phenomenon",
+   "label": "Letter ن",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:lisan_taraf_raa",
+   "type": "phenomenon",
+   "label": "Tongue tip + some dorsum (raa)",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "phen:letter:raa",
+   "type": "phenomenon",
+   "label": "Letter ر",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": "sifat partially measured (itbaq/tafkheem/ghunnah/takrir/qalqalah) but not makhraj"
+  },
+  {
+   "id": "phen:makhraj:lisan_nitiyya",
+   "type": "phenomenon",
+   "label": "Tip + roots of upper incisors (nit'iyya)",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "phen:letter:taa_emph",
+   "type": "phenomenon",
+   "label": "Letter ط",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": "sifat partially measured (itbaq/tafkheem/ghunnah/takrir/qalqalah) but not makhraj"
+  },
+  {
+   "id": "phen:letter:dal",
+   "type": "phenomenon",
+   "label": "Letter د",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:letter:taa",
+   "type": "phenomenon",
+   "label": "Letter ت",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:lisan_lithawiyya",
+   "type": "phenomenon",
+   "label": "Tip + edges of upper incisors (lithawiyya)",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "phen:letter:zaa_emph",
+   "type": "phenomenon",
+   "label": "Letter ظ",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": "sifat partially measured (itbaq/tafkheem/ghunnah/takrir/qalqalah) but not makhraj"
+  },
+  {
+   "id": "phen:letter:dhal",
+   "type": "phenomenon",
+   "label": "Letter ذ",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:letter:thaa",
+   "type": "phenomenon",
+   "label": "Letter ث",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:lisan_asaliyya",
+   "type": "phenomenon",
+   "label": "Tip near incisors, safir (asaliyya)",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "phen:letter:sad",
+   "type": "phenomenon",
+   "label": "Letter ص",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": "sifat partially measured (itbaq/tafkheem/ghunnah/takrir/qalqalah) but not makhraj"
+  },
+  {
+   "id": "phen:letter:seen",
+   "type": "phenomenon",
+   "label": "Letter س",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:letter:zay",
+   "type": "phenomenon",
+   "label": "Letter ز",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:shafah_faa",
+   "type": "phenomenon",
+   "label": "Inner lower lip + upper incisors",
+   "level": "101",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "phen:letter:faa",
+   "type": "phenomenon",
+   "label": "Letter ف",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:shafatan_both",
+   "type": "phenomenon",
+   "label": "Both lips",
+   "level": "101",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "phen:letter:baa",
+   "type": "phenomenon",
+   "label": "Letter ب",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:letter:meem",
+   "type": "phenomenon",
+   "label": "Letter م",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:letter:waw",
+   "type": "phenomenon",
+   "label": "Letter و",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:khayshum",
+   "type": "phenomenon",
+   "label": "Khayshum: ghunnah of nun/meem",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "phen:letter:ghunnah",
+   "type": "phenomenon",
+   "label": "Letter ghunnah (ن/م)",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": "sifat partially measured (itbaq/tafkheem/ghunnah/takrir/qalqalah) but not makhraj"
+  },
+  {
+   "id": "phen:idgham_adjacent_makhraj",
+   "type": "phenomenon",
+   "label": "Idgham mutajanisayn/mutaqaribayn with retained sifah (بسطت, نخلقكم)",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": "parser has pair sets; no acoustic geminate/sifah-persistence test"
+  },
+  {
+   "id": "phen:lahn_jali_khafi",
+   "type": "phenomenon",
+   "label": "Lahn jali vs lahn khafi severity",
+   "level": "101",
+   "status": "missing",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": "ground metric for diagnosis only, not to soften letter-identity FAIL"
+  },
+  {
+   "id": "phen:tokenizer_digraph_gap",
+   "type": "phenomenon",
+   "label": "CTC vocab lacks ث ذ خ ش غ (split into 2 tokens); initial hamza untokenised",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 1,
+   "refs": [],
+   "file": "app/aligner.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/aligner.py",
+   "type": "code",
+   "label": "CTC emissions/targets/spans_from_path",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "app/aligner.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/tajweed_rules/parser.py",
+   "type": "code",
+   "label": "letter units + sifat sets + idgham pairs",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "app/tajweed_rules/parser.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/sifaat/formants.py",
+   "type": "code",
+   "label": "F1/F2/F3, itbaq, NER",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "app/sifaat/formants.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/sifaat/ghair_mutadhaddah.py",
+   "type": "code",
+   "label": "safir/takrir/tafashshi/istitala",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "app/sifaat/ghair_mutadhaddah.py",
+   "note": ""
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "type": "code",
+   "label": "BW, conformal, sinkhorn",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "note": ""
+  },
+  {
+   "id": "code:research_agency_lab/substrate_library/octave/qaari_features.m",
+   "type": "code",
+   "label": "Octave DSP features",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/substrate_library/octave/qaari_features.m",
+   "note": ""
+  },
+  {
+   "id": "code:app/makharij/",
+   "type": "code",
+   "label": "proposed makharij package (tables/gop/cues/prototypes)",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "app/makharij/",
+   "note": ""
+  },
+  {
+   "id": "math:ctc_forward_backward",
+   "type": "math",
+   "label": "Log-space CTC forward/backward α/β",
+   "status": "partial",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": "aligner has CTC Viterbi only; forward/backward needed"
+  },
+  {
+   "id": "algo:gop_frame_posterior",
+   "type": "algorithm",
+   "label": "Frame-posterior GOP (LPP/LPR, blank-weighted)",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [
+    "src:witt_young_2000"
+   ],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "algo:gop_segmentation_free",
+   "type": "algorithm",
+   "label": "Segmentation-free sequence GOP with restricted substitutions",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [
+    "src:arxiv:2507.16838",
+    "src:arxiv:2506.02080"
+   ],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "math:makhraj_chain_rule_gop",
+   "type": "math",
+   "label": "Hierarchical GOP: region + makhraj|region + sifah|makhraj",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "algo:logit_gop_entropy",
+   "type": "algorithm",
+   "label": "Logit GOP, posterior entropy/margin",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [
+    "src:arxiv:2506.12067"
+   ],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "algo:text_swap_h1",
+   "type": "algorithm",
+   "label": "Counterfactual text-swap H1 from reference audio",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "algo:temperature_scaling",
+   "type": "algorithm",
+   "label": "Temperature scaling of CTC logits",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [
+    "src:arxiv:1706.04599"
+   ],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "math:articulatory_ground_metric",
+   "type": "math",
+   "label": "Articulatory ground metric (feature/commute-time/tree)",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [
+    "src:panphon",
+    "src:arxiv:1110.2306"
+   ],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "math:tree_wasserstein",
+   "type": "math",
+   "label": "Tree-Wasserstein makhraj distance (closed form)",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [
+    "src:arxiv:1902.00342"
+   ],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "math:ot_posterior_reference",
+   "type": "math",
+   "label": "OT between produced and reference posteriors",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [
+    "src:arxiv:1506.05439"
+   ],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "math:gromov_wasserstein",
+   "type": "math",
+   "label": "Gromov-Wasserstein confusion geometry",
+   "status": "speculative",
+   "priority": 5,
+   "refs": [
+    "src:memoli_2011"
+   ],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "algo:spectral_clustering_confusion",
+   "type": "algorithm",
+   "label": "Shepard similarity + Laplacian spectral clustering; eigengap 14/16/17 test",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [
+    "src:arxiv:0711.0189"
+   ],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "algo:graph_tikhonov_profile",
+   "type": "algorithm",
+   "label": "Graph-Tikhonov per-letter learner profile",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "math:feature_transmission",
+   "type": "math",
+   "label": "Miller-Nicely feature transmission, MI, KL/JS",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [
+    "src:miller_nicely_1955"
+   ],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "algo:blahut_arimoto_fano",
+   "type": "algorithm",
+   "label": "Channel capacity (Blahut-Arimoto) + Fano bound = verifiability audit",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [
+    "src:blahut_1972"
+   ],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "algo:pairwise_cue_llr",
+   "type": "algorithm",
+   "label": "Pairwise acoustic cue LLR (moments, VOT, burst, locus, closure, A1-P0)",
+   "status": "proposed",
+   "priority": 1,
+   "refs": [
+    "src:forrest_1988",
+    "src:sussman_1991",
+    "src:jongman_2011"
+   ],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "algo:area_function_wakita",
+   "type": "algorithm",
+   "label": "LPC area function pharyngeal index",
+   "status": "speculative",
+   "priority": 5,
+   "refs": [
+    "src:wakita_1973"
+   ],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "algo:sparc_inversion",
+   "type": "algorithm",
+   "label": "SPARC articulatory inversion (lisan/shafatan only)",
+   "status": "proposed",
+   "priority": 4,
+   "refs": [
+    "src:arxiv:2406.12998",
+    "src:arxiv:2310.10788"
+   ],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "algo:ssl_prototype_verifier",
+   "type": "algorithm",
+   "label": "Training-free SSL layer prototypes (LDA/Mahalanobis)",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [
+    "src:arxiv:2107.04734"
+   ],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "algo:multihead_makhraj_ctc",
+   "type": "algorithm",
+   "label": "Multi-head letter+makhraj+sifat CTC with Wasserstein loss",
+   "status": "speculative",
+   "priority": 5,
+   "refs": [
+    "src:arxiv:2509.00094",
+    "src:arxiv:2311.07037"
+   ],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "algo:second_judge_ensemble",
+   "type": "algorithm",
+   "label": "Second judges: muaalem-v3.2 + espeak IPA (linguistic-bias check)",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [
+    "src:arxiv:2509.00094",
+    "src:arxiv:2109.11680",
+    "src:arxiv:2604.22133"
+   ],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "algo:conformal_thresholds",
+   "type": "algorithm",
+   "label": "Conformal LOO thresholds (roadmap A4)",
+   "status": "implemented",
+   "priority": 1,
+   "refs": [],
+   "file": "research_agency_lab/experiments/deep_research/01_makharij.md",
+   "note": ""
+  },
+  {
+   "id": "src:witt_young_2000",
+   "type": "source",
+   "label": "Witt & Young 2000 Speech Commun 30:95",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:witt_young_2000"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2507.16838",
+   "type": "source",
+   "label": "Cao et al. Segmentation-free GOP",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:arxiv:2507.16838"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2506.02080",
+   "type": "source",
+   "label": "Parikh et al. substitution-aware AF-GOP",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:arxiv:2506.02080"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2506.12067",
+   "type": "source",
+   "label": "Parikh et al. logit GOP",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:arxiv:2506.12067"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:1706.04599",
+   "type": "source",
+   "label": "Guo et al. calibration",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:arxiv:1706.04599"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:panphon",
+   "type": "source",
+   "label": "Mortensen et al. PanPhon COLING 2016",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:panphon"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:1110.2306",
+   "type": "source",
+   "label": "Cuturi & Avis ground metric learning",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:arxiv:1110.2306"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:1902.00342",
+   "type": "source",
+   "label": "Le et al. tree-sliced Wasserstein",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:arxiv:1902.00342"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:1506.05439",
+   "type": "source",
+   "label": "Frogner et al. Wasserstein loss",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:arxiv:1506.05439"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:memoli_2011",
+   "type": "source",
+   "label": "Memoli 2011 FoCM 11:417",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:memoli_2011"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:0711.0189",
+   "type": "source",
+   "label": "von Luxburg spectral clustering",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:arxiv:0711.0189"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:miller_nicely_1955",
+   "type": "source",
+   "label": "Miller & Nicely 1955 JASA 27:338",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:miller_nicely_1955"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:blahut_1972",
+   "type": "source",
+   "label": "Blahut 1972 / Arimoto 1972 IEEE-IT",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:blahut_1972"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:forrest_1988",
+   "type": "source",
+   "label": "Forrest et al. 1988 JASA 84:115",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:forrest_1988"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:sussman_1991",
+   "type": "source",
+   "label": "Sussman et al. 1991 JASA 90:1309",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:sussman_1991"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:jongman_2011",
+   "type": "source",
+   "label": "Jongman et al. 2011 J Phon 39:85",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:jongman_2011"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:wakita_1973",
+   "type": "source",
+   "label": "Wakita 1973 IEEE AU-21:417",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:wakita_1973"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2406.12998",
+   "type": "source",
+   "label": "Cho et al. SPARC",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:arxiv:2406.12998"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2310.10788",
+   "type": "source",
+   "label": "Cho et al. SSL infer articulatory kinematics",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:arxiv:2310.10788"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2107.04734",
+   "type": "source",
+   "label": "Pasad et al. layer-wise SSL analysis",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:arxiv:2107.04734"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2509.00094",
+   "type": "source",
+   "label": "Abdelfattah et al. QPS / muaalem",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:arxiv:2509.00094"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2311.07037",
+   "type": "source",
+   "label": "Shahin et al. speech-attribute MDD",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:arxiv:2311.07037"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2109.11680",
+   "type": "source",
+   "label": "Xu et al. zero-shot phoneme recognition",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:arxiv:2109.11680"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2604.22133",
+   "type": "source",
+   "label": "Geng et al. prompt-free MDD (linguistic bias)",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:arxiv:2604.22133"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2506.07722",
+   "type": "source",
+   "label": "El Kheir et al. QuranMB",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:arxiv:2506.07722"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:arxiv:2606.24086",
+   "type": "source",
+   "label": "Zhang et al. IqraEval2 top system",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:arxiv:2606.24086"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:heselwood_2007",
+   "type": "source",
+   "label": "Heselwood 2007 JIPA tight-approximant ayn",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:heselwood_2007"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "src:kulikov_2024",
+   "type": "source",
+   "label": "Kulikov et al. 2024 F2/VOT emphasis",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "src:kulikov_2024"
+   ],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "pkg:julia_linearalgebra_distributions",
+   "type": "package",
+   "label": "Julia LinearAlgebra/Distributions/Optim (QaariLab)",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "pkg:speech_articulatory_coding",
+   "type": "package",
+   "label": "pip speech-articulatory-coding (SPARC)",
+   "status": "proposed",
+   "priority": 4,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "pkg:muaalem_model",
+   "type": "package",
+   "label": "HF obadx/muaalem-model-v3_2 + muaalem-annotated-v3",
+   "status": "proposed",
+   "priority": 3,
+   "refs": [],
+   "file": null,
+   "note": ""
+  },
+  {
+   "id": "pkg:quranmb",
+   "type": "package",
+   "label": "IqraEval QuranMB.v1 test set",
+   "status": "proposed",
+   "priority": 2,
+   "refs": [],
+   "file": null,
+   "note": ""
+  }
+ ],
+ "edges": [
+  {
+   "from": "phen:region:jawf",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:region:halq",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:region:lisan",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:region:shafatan",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:region:khayshum",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:jawf",
+   "to": "phen:region:jawf",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:alif_madd",
+   "to": "phen:makhraj:jawf",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:waw_madd",
+   "to": "phen:makhraj:jawf",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:yaa_madd",
+   "to": "phen:makhraj:jawf",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:halq_aqsa",
+   "to": "phen:region:halq",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:hamza",
+   "to": "phen:makhraj:halq_aqsa",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:haa",
+   "to": "phen:makhraj:halq_aqsa",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:halq_wasat",
+   "to": "phen:region:halq",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:ain",
+   "to": "phen:makhraj:halq_wasat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:haa_h",
+   "to": "phen:makhraj:halq_wasat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:halq_adna",
+   "to": "phen:region:halq",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:ghain",
+   "to": "phen:makhraj:halq_adna",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:khaa",
+   "to": "phen:makhraj:halq_adna",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:lisan_aqsa_qaf",
+   "to": "phen:region:lisan",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:qaf",
+   "to": "phen:makhraj:lisan_aqsa_qaf",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:lisan_aqsa_kaf",
+   "to": "phen:region:lisan",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:kaf",
+   "to": "phen:makhraj:lisan_aqsa_kaf",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:lisan_wasat",
+   "to": "phen:region:lisan",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:jeem",
+   "to": "phen:makhraj:lisan_wasat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:sheen",
+   "to": "phen:makhraj:lisan_wasat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:yaa",
+   "to": "phen:makhraj:lisan_wasat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:lisan_hafah_dad",
+   "to": "phen:region:lisan",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:dad",
+   "to": "phen:makhraj:lisan_hafah_dad",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:lisan_hafah_lam",
+   "to": "phen:region:lisan",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:lam",
+   "to": "phen:makhraj:lisan_hafah_lam",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:lisan_taraf_nun",
+   "to": "phen:region:lisan",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:nun",
+   "to": "phen:makhraj:lisan_taraf_nun",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:lisan_taraf_raa",
+   "to": "phen:region:lisan",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:raa",
+   "to": "phen:makhraj:lisan_taraf_raa",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:lisan_nitiyya",
+   "to": "phen:region:lisan",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:taa_emph",
+   "to": "phen:makhraj:lisan_nitiyya",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:dal",
+   "to": "phen:makhraj:lisan_nitiyya",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:taa",
+   "to": "phen:makhraj:lisan_nitiyya",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:lisan_lithawiyya",
+   "to": "phen:region:lisan",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:zaa_emph",
+   "to": "phen:makhraj:lisan_lithawiyya",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:dhal",
+   "to": "phen:makhraj:lisan_lithawiyya",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:thaa",
+   "to": "phen:makhraj:lisan_lithawiyya",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:lisan_asaliyya",
+   "to": "phen:region:lisan",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:sad",
+   "to": "phen:makhraj:lisan_asaliyya",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:seen",
+   "to": "phen:makhraj:lisan_asaliyya",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:zay",
+   "to": "phen:makhraj:lisan_asaliyya",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:shafah_faa",
+   "to": "phen:region:shafatan",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:faa",
+   "to": "phen:makhraj:shafah_faa",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:shafatan_both",
+   "to": "phen:region:shafatan",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:baa",
+   "to": "phen:makhraj:shafatan_both",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:meem",
+   "to": "phen:makhraj:shafatan_both",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:waw",
+   "to": "phen:makhraj:shafatan_both",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:khayshum",
+   "to": "phen:region:khayshum",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:ghunnah",
+   "to": "phen:makhraj:khayshum",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letter:dad",
+   "to": "phen:letter:zaa_emph",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:dad",
+   "to": "phen:letter:dal",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:zaa_emph",
+   "to": "phen:letter:dhal",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:zaa_emph",
+   "to": "phen:letter:zay",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:dhal",
+   "to": "phen:letter:zay",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:dhal",
+   "to": "phen:letter:dal",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:thaa",
+   "to": "phen:letter:seen",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:thaa",
+   "to": "phen:letter:taa",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:haa_h",
+   "to": "phen:letter:haa",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:haa_h",
+   "to": "phen:letter:khaa",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:ain",
+   "to": "phen:letter:hamza",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:qaf",
+   "to": "phen:letter:kaf",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:qaf",
+   "to": "phen:letter:ghain",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:sad",
+   "to": "phen:letter:seen",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:letter:taa_emph",
+   "to": "phen:letter:taa",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:idgham_adjacent_makhraj",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:tokenizer_digraph_gap",
+   "to": "code:app/aligner.py",
+   "rel": "part_of"
+  },
+  {
+   "from": "algo:gop_frame_posterior",
+   "to": "src:witt_young_2000",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:gop_segmentation_free",
+   "to": "src:arxiv:2507.16838",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:gop_segmentation_free",
+   "to": "src:arxiv:2506.02080",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:logit_gop_entropy",
+   "to": "src:arxiv:2506.12067",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:temperature_scaling",
+   "to": "src:arxiv:1706.04599",
+   "rel": "cites"
+  },
+  {
+   "from": "math:articulatory_ground_metric",
+   "to": "src:panphon",
+   "rel": "cites"
+  },
+  {
+   "from": "math:articulatory_ground_metric",
+   "to": "src:arxiv:1110.2306",
+   "rel": "cites"
+  },
+  {
+   "from": "math:tree_wasserstein",
+   "to": "src:arxiv:1902.00342",
+   "rel": "cites"
+  },
+  {
+   "from": "math:ot_posterior_reference",
+   "to": "src:arxiv:1506.05439",
+   "rel": "cites"
+  },
+  {
+   "from": "math:gromov_wasserstein",
+   "to": "src:memoli_2011",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:spectral_clustering_confusion",
+   "to": "src:arxiv:0711.0189",
+   "rel": "cites"
+  },
+  {
+   "from": "math:feature_transmission",
+   "to": "src:miller_nicely_1955",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:blahut_arimoto_fano",
+   "to": "src:blahut_1972",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:pairwise_cue_llr",
+   "to": "src:forrest_1988",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:pairwise_cue_llr",
+   "to": "src:sussman_1991",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:pairwise_cue_llr",
+   "to": "src:jongman_2011",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:area_function_wakita",
+   "to": "src:wakita_1973",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:sparc_inversion",
+   "to": "src:arxiv:2406.12998",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:sparc_inversion",
+   "to": "src:arxiv:2310.10788",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:ssl_prototype_verifier",
+   "to": "src:arxiv:2107.04734",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:multihead_makhraj_ctc",
+   "to": "src:arxiv:2509.00094",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:multihead_makhraj_ctc",
+   "to": "src:arxiv:2311.07037",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:second_judge_ensemble",
+   "to": "src:arxiv:2509.00094",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:second_judge_ensemble",
+   "to": "src:arxiv:2109.11680",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:second_judge_ensemble",
+   "to": "src:arxiv:2604.22133",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:sparc_inversion",
+   "to": "pkg:speech_articulatory_coding",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:second_judge_ensemble",
+   "to": "pkg:muaalem_model",
+   "rel": "requires"
+  },
+  {
+   "from": "pkg:quranmb",
+   "to": "src:arxiv:2506.07722",
+   "rel": "cites"
+  },
+  {
+   "from": "pkg:quranmb",
+   "to": "algo:gop_segmentation_free",
+   "rel": "validates"
+  },
+  {
+   "from": "pkg:quranmb",
+   "to": "algo:pairwise_cue_llr",
+   "rel": "validates"
+  },
+  {
+   "from": "src:arxiv:2606.24086",
+   "to": "pkg:quranmb",
+   "rel": "cites"
+  },
+  {
+   "from": "algo:gop_segmentation_free",
+   "to": "phen:makharij",
+   "rel": "models"
+  },
+  {
+   "from": "algo:gop_segmentation_free",
+   "to": "phen:tokenizer_digraph_gap",
+   "rel": "models"
+  },
+  {
+   "from": "math:makhraj_chain_rule_gop",
+   "to": "phen:makharij",
+   "rel": "models"
+  },
+  {
+   "from": "math:makhraj_chain_rule_gop",
+   "to": "phen:lahn_jali_khafi",
+   "rel": "models"
+  },
+  {
+   "from": "math:articulatory_ground_metric",
+   "to": "phen:makharij",
+   "rel": "models"
+  },
+  {
+   "from": "math:tree_wasserstein",
+   "to": "phen:makharij",
+   "rel": "models"
+  },
+  {
+   "from": "math:ot_posterior_reference",
+   "to": "phen:makharij",
+   "rel": "models"
+  },
+  {
+   "from": "algo:spectral_clustering_confusion",
+   "to": "phen:makharij",
+   "rel": "models"
+  },
+  {
+   "from": "algo:graph_tikhonov_profile",
+   "to": "phen:makharij",
+   "rel": "models"
+  },
+  {
+   "from": "math:feature_transmission",
+   "to": "phen:makharij",
+   "rel": "models"
+  },
+  {
+   "from": "algo:blahut_arimoto_fano",
+   "to": "phen:makharij",
+   "rel": "models"
+  },
+  {
+   "from": "algo:ssl_prototype_verifier",
+   "to": "phen:makharij",
+   "rel": "models"
+  },
+  {
+   "from": "algo:second_judge_ensemble",
+   "to": "phen:tokenizer_digraph_gap",
+   "rel": "models"
+  },
+  {
+   "from": "algo:sparc_inversion",
+   "to": "phen:region:lisan",
+   "rel": "models"
+  },
+  {
+   "from": "algo:sparc_inversion",
+   "to": "phen:region:shafatan",
+   "rel": "models"
+  },
+  {
+   "from": "algo:area_function_wakita",
+   "to": "phen:region:halq",
+   "rel": "models"
+  },
+  {
+   "from": "algo:multihead_makhraj_ctc",
+   "to": "phen:makharij",
+   "rel": "models"
+  },
+  {
+   "from": "algo:gop_frame_posterior",
+   "to": "phen:makharij",
+   "rel": "models"
+  },
+  {
+   "from": "algo:logit_gop_entropy",
+   "to": "phen:makharij",
+   "rel": "models"
+  },
+  {
+   "from": "phen:letter:dad",
+   "to": "algo:pairwise_cue_llr",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:letter:zaa_emph",
+   "to": "algo:pairwise_cue_llr",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:letter:thaa",
+   "to": "algo:pairwise_cue_llr",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:letter:haa_h",
+   "to": "algo:pairwise_cue_llr",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:letter:ain",
+   "to": "algo:pairwise_cue_llr",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:letter:hamza",
+   "to": "algo:pairwise_cue_llr",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:letter:qaf",
+   "to": "algo:pairwise_cue_llr",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:letter:sad",
+   "to": "algo:pairwise_cue_llr",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:letter:taa_emph",
+   "to": "algo:pairwise_cue_llr",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:letter:dhal",
+   "to": "algo:pairwise_cue_llr",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:idgham_adjacent_makhraj",
+   "to": "algo:pairwise_cue_llr",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:makhraj:khayshum",
+   "to": "code:app/sifaat/formants.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "algo:gop_segmentation_free",
+   "to": "math:ctc_forward_backward",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:gop_segmentation_free",
+   "to": "code:app/aligner.py",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:gop_frame_posterior",
+   "to": "math:ctc_forward_backward",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:gop_frame_posterior",
+   "to": "code:app/aligner.py",
+   "rel": "requires"
+  },
+  {
+   "from": "math:makhraj_chain_rule_gop",
+   "to": "algo:gop_segmentation_free",
+   "rel": "requires"
+  },
+  {
+   "from": "math:tree_wasserstein",
+   "to": "math:articulatory_ground_metric",
+   "rel": "requires"
+  },
+  {
+   "from": "math:ot_posterior_reference",
+   "to": "math:articulatory_ground_metric",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:gop_segmentation_free",
+   "to": "math:articulatory_ground_metric",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:graph_tikhonov_profile",
+   "to": "math:articulatory_ground_metric",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:text_swap_h1",
+   "to": "algo:gop_segmentation_free",
+   "rel": "validates"
+  },
+  {
+   "from": "algo:conformal_thresholds",
+   "to": "code:research_agency_lab/substrate_library/julia/src/Frontier.jl",
+   "rel": "implements"
+  },
+  {
+   "from": "algo:gop_segmentation_free",
+   "to": "algo:conformal_thresholds",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:pairwise_cue_llr",
+   "to": "algo:conformal_thresholds",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:blahut_arimoto_fano",
+   "to": "algo:gop_segmentation_free",
+   "rel": "validates"
+  },
+  {
+   "from": "algo:pairwise_cue_llr",
+   "to": "code:app/sifaat/formants.py",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:pairwise_cue_llr",
+   "to": "code:research_agency_lab/substrate_library/octave/qaari_features.m",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:pairwise_cue_llr",
+   "to": "pkg:julia_linearalgebra_distributions",
+   "rel": "requires"
+  },
+  {
+   "from": "algo:ssl_prototype_verifier",
+   "to": "algo:multihead_makhraj_ctc",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "algo:gop_frame_posterior",
+   "to": "algo:gop_segmentation_free",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "algo:temperature_scaling",
+   "to": "algo:gop_segmentation_free",
+   "rel": "requires"
+  },
+  {
+   "from": "code:app/makharij/",
+   "to": "algo:gop_segmentation_free",
+   "rel": "implements"
+  },
+  {
+   "from": "code:app/makharij/",
+   "to": "algo:pairwise_cue_llr",
+   "rel": "implements"
+  },
+  {
+   "from": "code:app/makharij/",
+   "to": "algo:ssl_prototype_verifier",
+   "rel": "implements"
+  },
+  {
+   "from": "code:app/makharij/",
+   "to": "math:articulatory_ground_metric",
+   "rel": "implements"
+  },
+  {
+   "from": "math:ctc_forward_backward",
+   "to": "code:app/aligner.py",
+   "rel": "implements"
+  },
+  {
+   "from": "phen:letter:ain",
+   "to": "src:heselwood_2007",
+   "rel": "cites"
+  },
+  {
+   "from": "phen:letter:taa_emph",
+   "to": "src:kulikov_2024",
+   "rel": "cites"
+  }
+ ]
+}

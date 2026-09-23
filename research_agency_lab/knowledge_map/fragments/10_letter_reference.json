@@ -1,0 +1,997 @@
+{
+ "nodes": [
+  {
+   "id": "ref:letters",
+   "type": "artifact",
+   "label": "Per-letter makhraj and inherent sifāt",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "file": "datastore/letter_reference.py",
+   "note": "29 letters; the sifāt no acoustic head can judge"
+  },
+  {
+   "id": "letter:ا",
+   "type": "phenomenon",
+   "label": "ا",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "oral cavity — prolongation, no contact"
+  },
+  {
+   "id": "makhraj:jawf",
+   "type": "phenomenon",
+   "label": "Makhraj zone: jawf",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented"
+  },
+  {
+   "id": "sifah:istifal",
+   "type": "phenomenon",
+   "label": "istifal",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented"
+  },
+  {
+   "id": "sifah:ismat",
+   "type": "phenomenon",
+   "label": "ismat",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented"
+  },
+  {
+   "id": "letter:ء",
+   "type": "phenomenon",
+   "label": "ء",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "deepest throat (aqṣā al-ḥalq)"
+  },
+  {
+   "id": "makhraj:halq",
+   "type": "phenomenon",
+   "label": "Makhraj zone: halq",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented"
+  },
+  {
+   "id": "letter:ه",
+   "type": "phenomenon",
+   "label": "ه",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "deepest throat (aqṣā al-ḥalq)"
+  },
+  {
+   "id": "letter:ع",
+   "type": "phenomenon",
+   "label": "ع",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "middle throat (wasaṭ al-ḥalq)"
+  },
+  {
+   "id": "letter:ح",
+   "type": "phenomenon",
+   "label": "ح",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "middle throat (wasaṭ al-ḥalq)"
+  },
+  {
+   "id": "letter:غ",
+   "type": "phenomenon",
+   "label": "غ",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "nearest throat (adnā al-ḥalq)"
+  },
+  {
+   "id": "sifah:isti'la",
+   "type": "phenomenon",
+   "label": "isti'la",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented"
+  },
+  {
+   "id": "letter:خ",
+   "type": "phenomenon",
+   "label": "خ",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "nearest throat (adnā al-ḥalq)"
+  },
+  {
+   "id": "letter:ق",
+   "type": "phenomenon",
+   "label": "ق",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "deepest tongue with the soft palate"
+  },
+  {
+   "id": "makhraj:lisan",
+   "type": "phenomenon",
+   "label": "Makhraj zone: lisan",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented"
+  },
+  {
+   "id": "letter:ك",
+   "type": "phenomenon",
+   "label": "ك",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "deepest tongue, slightly forward, with the hard palate"
+  },
+  {
+   "id": "letter:ج",
+   "type": "phenomenon",
+   "label": "ج",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "middle of the tongue with the hard palate"
+  },
+  {
+   "id": "letter:ش",
+   "type": "phenomenon",
+   "label": "ش",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "middle of the tongue with the hard palate"
+  },
+  {
+   "id": "letter:ي",
+   "type": "phenomenon",
+   "label": "ي",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "middle of the tongue with the hard palate"
+  },
+  {
+   "id": "sifah:lin",
+   "type": "phenomenon",
+   "label": "lin",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented"
+  },
+  {
+   "id": "letter:ض",
+   "type": "phenomenon",
+   "label": "ض",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "edge of the tongue with the upper molars"
+  },
+  {
+   "id": "letter:ل",
+   "type": "phenomenon",
+   "label": "ل",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "both edges of the tongue, forward, with the gums"
+  },
+  {
+   "id": "sifah:idhlaq",
+   "type": "phenomenon",
+   "label": "idhlaq",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented"
+  },
+  {
+   "id": "sifah:inhiraf",
+   "type": "phenomenon",
+   "label": "inhiraf",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented"
+  },
+  {
+   "id": "letter:ن",
+   "type": "phenomenon",
+   "label": "ن",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "tip of the tongue with the gums above the incisors"
+  },
+  {
+   "id": "letter:ر",
+   "type": "phenomenon",
+   "label": "ر",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "tip of the tongue, slightly further back, with the gums"
+  },
+  {
+   "id": "letter:ط",
+   "type": "phenomenon",
+   "label": "ط",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "tip of the tongue with the roots of the upper incisors"
+  },
+  {
+   "id": "letter:د",
+   "type": "phenomenon",
+   "label": "د",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "tip of the tongue with the roots of the upper incisors"
+  },
+  {
+   "id": "letter:ت",
+   "type": "phenomenon",
+   "label": "ت",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "tip of the tongue with the roots of the upper incisors"
+  },
+  {
+   "id": "letter:ص",
+   "type": "phenomenon",
+   "label": "ص",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "tip of the tongue between the incisors"
+  },
+  {
+   "id": "letter:ز",
+   "type": "phenomenon",
+   "label": "ز",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "tip of the tongue between the incisors"
+  },
+  {
+   "id": "letter:س",
+   "type": "phenomenon",
+   "label": "س",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "tip of the tongue between the incisors"
+  },
+  {
+   "id": "letter:ظ",
+   "type": "phenomenon",
+   "label": "ظ",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "tip of the tongue with the tips of the upper incisors"
+  },
+  {
+   "id": "letter:ذ",
+   "type": "phenomenon",
+   "label": "ذ",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "tip of the tongue with the tips of the upper incisors"
+  },
+  {
+   "id": "letter:ث",
+   "type": "phenomenon",
+   "label": "ث",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "tip of the tongue with the tips of the upper incisors"
+  },
+  {
+   "id": "letter:ف",
+   "type": "phenomenon",
+   "label": "ف",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "inside of the lower lip with the tips of the upper incisors"
+  },
+  {
+   "id": "makhraj:shafatan",
+   "type": "phenomenon",
+   "label": "Makhraj zone: shafatan",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented"
+  },
+  {
+   "id": "letter:ب",
+   "type": "phenomenon",
+   "label": "ب",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "both lips, closed"
+  },
+  {
+   "id": "letter:م",
+   "type": "phenomenon",
+   "label": "م",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "both lips, lightly closed"
+  },
+  {
+   "id": "letter:و",
+   "type": "phenomenon",
+   "label": "و",
+   "refs": [
+    "datastore/letter_reference.py"
+   ],
+   "status": "implemented",
+   "note": "both lips, rounded, not closed"
+  }
+ ],
+ "edges": [
+  {
+   "from": "letter:ا",
+   "to": "makhraj:jawf",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ا",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ا",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ا",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ء",
+   "to": "makhraj:halq",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ء",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ء",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ء",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ه",
+   "to": "makhraj:halq",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ه",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ه",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ه",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ع",
+   "to": "makhraj:halq",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ع",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ع",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ع",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ح",
+   "to": "makhraj:halq",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ح",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ح",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ح",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:غ",
+   "to": "makhraj:halq",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:غ",
+   "to": "sifah:isti'la",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:غ",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:غ",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:خ",
+   "to": "makhraj:halq",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:خ",
+   "to": "sifah:isti'la",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:خ",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:خ",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ق",
+   "to": "makhraj:lisan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ق",
+   "to": "sifah:isti'la",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ق",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ق",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ك",
+   "to": "makhraj:lisan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ك",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ك",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ك",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ج",
+   "to": "makhraj:lisan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ج",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ج",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ج",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ش",
+   "to": "makhraj:lisan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ش",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ش",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ش",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ي",
+   "to": "makhraj:lisan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ي",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ي",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ي",
+   "to": "sifah:lin",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ي",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ض",
+   "to": "makhraj:lisan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ض",
+   "to": "sifah:isti'la",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ض",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ض",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ل",
+   "to": "makhraj:lisan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ل",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ل",
+   "to": "sifah:idhlaq",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ل",
+   "to": "sifah:inhiraf",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ل",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ن",
+   "to": "makhraj:lisan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ن",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ن",
+   "to": "sifah:idhlaq",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ن",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ر",
+   "to": "makhraj:lisan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ر",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ر",
+   "to": "sifah:idhlaq",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ر",
+   "to": "sifah:inhiraf",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ر",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ط",
+   "to": "makhraj:lisan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ط",
+   "to": "sifah:isti'la",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ط",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ط",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:د",
+   "to": "makhraj:lisan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:د",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:د",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:د",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ت",
+   "to": "makhraj:lisan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ت",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ت",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ت",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ص",
+   "to": "makhraj:lisan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ص",
+   "to": "sifah:isti'la",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ص",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ص",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ز",
+   "to": "makhraj:lisan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ز",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ز",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ز",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:س",
+   "to": "makhraj:lisan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:س",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:س",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:س",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ظ",
+   "to": "makhraj:lisan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ظ",
+   "to": "sifah:isti'la",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ظ",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ظ",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ذ",
+   "to": "makhraj:lisan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ذ",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ذ",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ذ",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ث",
+   "to": "makhraj:lisan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ث",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ث",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ث",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ف",
+   "to": "makhraj:shafatan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ف",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ف",
+   "to": "sifah:idhlaq",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ف",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:ب",
+   "to": "makhraj:shafatan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:ب",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:ب",
+   "to": "sifah:idhlaq",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:ب",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:م",
+   "to": "makhraj:shafatan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:م",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:م",
+   "to": "sifah:idhlaq",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:م",
+   "rel": "describes"
+  },
+  {
+   "from": "letter:و",
+   "to": "makhraj:shafatan",
+   "rel": "articulated_at"
+  },
+  {
+   "from": "letter:و",
+   "to": "sifah:istifal",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:و",
+   "to": "sifah:ismat",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "letter:و",
+   "to": "sifah:lin",
+   "rel": "has_inherent"
+  },
+  {
+   "from": "ref:letters",
+   "to": "letter:و",
+   "rel": "describes"
+  }
+ ]
+}

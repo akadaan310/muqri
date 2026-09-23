@@ -1,0 +1,3374 @@
+{
+ "nodes": [
+  {
+   "id": "phen:letters",
+   "type": "phenomenon",
+   "label": "Letters & harakat",
+   "level": "101",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:madd",
+   "type": "phenomenon",
+   "label": "Mudood",
+   "level": "101",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:noon",
+   "type": "phenomenon",
+   "label": "Noon sakinah & tanween",
+   "level": "101",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:meem",
+   "type": "phenomenon",
+   "label": "Meem sakinah",
+   "level": "101",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:lam",
+   "type": "phenomenon",
+   "label": "Lam rules",
+   "level": "101",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:qalqalah",
+   "type": "phenomenon",
+   "label": "Qalqalah",
+   "level": "101",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:idgham",
+   "type": "phenomenon",
+   "label": "Idgham classes",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:raa",
+   "type": "phenomenon",
+   "label": "Raa rules",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:weight",
+   "type": "phenomenon",
+   "label": "Tafkheem/tarqeeq",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:wasl",
+   "type": "phenomenon",
+   "label": "Hamzat al-wasl & saktat",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:makharij",
+   "type": "phenomenon",
+   "label": "17 Makharij",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifaat",
+   "type": "phenomenon",
+   "label": "17 Sifaat",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:waqf",
+   "type": "phenomenon",
+   "label": "Waqf & ibtida'",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:timing",
+   "type": "phenomenon",
+   "label": "Maratib, tanasub, tasawi",
+   "level": "ijazah",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:hafs",
+   "type": "phenomenon",
+   "label": "Hafs special cases",
+   "level": "ijazah",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:lahn",
+   "type": "phenomenon",
+   "label": "Lahn",
+   "level": "101",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:lahn:jali",
+   "type": "phenomenon",
+   "label": "Lahn jali",
+   "level": "101",
+   "status": "partial",
+   "priority": 1,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": "engine near-blind to letter/harakah errors"
+  },
+  {
+   "id": "phen:lahn:khafi",
+   "type": "phenomenon",
+   "label": "Lahn khafi",
+   "level": "101",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:letters:identity",
+   "type": "phenomenon",
+   "label": "Letter identity (no substitution)",
+   "level": "101",
+   "status": "missing",
+   "priority": 1,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": "forced CTC; low align_conf -> SKIPPED masks errors"
+  },
+  {
+   "id": "phen:letters:haraka_quality",
+   "type": "phenomenon",
+   "label": "Short vowel quality",
+   "level": "101",
+   "status": "missing",
+   "priority": 1,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:letters:haraka_length",
+   "type": "phenomenon",
+   "label": "Short vowel length (no ishba')",
+   "level": "101",
+   "status": "missing",
+   "priority": 1,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:letters:sukoon",
+   "type": "phenomenon",
+   "label": "Sukoon (no epenthetic vowel)",
+   "level": "101",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:letters:shaddah",
+   "type": "phenomenon",
+   "label": "Shaddah on all letters",
+   "level": "101",
+   "status": "partial",
+   "priority": 1,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": "only n/m and idgham targets"
+  },
+  {
+   "id": "phen:letters:tanween",
+   "type": "phenomenon",
+   "label": "Tanween",
+   "level": "101",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:madd:tabii",
+   "type": "phenomenon",
+   "label": "Madd tabii",
+   "level": "101",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:madd:muttasil",
+   "type": "phenomenon",
+   "label": "Madd muttasil",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:madd:munfasil",
+   "type": "phenomenon",
+   "label": "Madd munfasil",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:madd:lazim",
+   "type": "phenomenon",
+   "label": "Madd lazim kalimi/harfi",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:madd:ayn",
+   "type": "phenomenon",
+   "label": "Ayn 4/6 (19:1, 42:2)",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:madd:alm_allah",
+   "type": "phenomenon",
+   "label": "Alif-Lam-Mim Allah 6 or 2 (3:1-2)",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": "BUG: 6 only"
+  },
+  {
+   "id": "phen:madd:arid",
+   "type": "phenomenon",
+   "label": "Madd arid lis-sukun",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:madd:leen",
+   "type": "phenomenon",
+   "label": "Madd leen",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": "no leen<=arid"
+  },
+  {
+   "id": "phen:madd:badal",
+   "type": "phenomenon",
+   "label": "Madd badal",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:madd:iwad",
+   "type": "phenomenon",
+   "label": "Madd iwad",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:madd:silah",
+   "type": "phenomenon",
+   "label": "Silah sughra/kubra + exceptions",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:madd:farq",
+   "type": "phenomenon",
+   "label": "Madd al-farq (6 or tas-heel)",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": "tas-heel not accepted"
+  },
+  {
+   "id": "phen:madd:tamkeen",
+   "type": "phenomenon",
+   "label": "Madd tamkeen",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 4,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:madd:hierarchy",
+   "type": "phenomenon",
+   "label": "Aqwa al-sababayn",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:madd:relations",
+   "type": "phenomenon",
+   "label": "Muttasil>=munfasil, leen<=arid",
+   "level": "ijazah",
+   "status": "missing",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:noon:izhar_halqi",
+   "type": "phenomenon",
+   "label": "Izhar halqi",
+   "level": "101",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:noon:idgham_ghunnah",
+   "type": "phenomenon",
+   "label": "Idgham with ghunnah",
+   "level": "101",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:noon:izhar_mutlaq",
+   "type": "phenomenon",
+   "label": "Izhar mutlaq (dunya...)",
+   "level": "101",
+   "status": "partial",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:noon:idgham_no_ghunnah",
+   "type": "phenomenon",
+   "label": "Idgham without ghunnah",
+   "level": "101",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:noon:iqlab",
+   "type": "phenomenon",
+   "label": "Iqlab",
+   "level": "101",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:noon:ikhfa",
+   "type": "phenomenon",
+   "label": "Ikhfa haqiqi",
+   "level": "101",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:noon:ghunnah_mushaddadah",
+   "type": "phenomenon",
+   "label": "Ghunnah mushaddadah",
+   "level": "101",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:noon:ghunnah_maratib",
+   "type": "phenomenon",
+   "label": "Ghunnah maratib ordering",
+   "level": "ijazah",
+   "status": "partial",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:meem:ikhfa_shafawi",
+   "type": "phenomenon",
+   "label": "Ikhfa shafawi",
+   "level": "101",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:meem:idgham_shafawi",
+   "type": "phenomenon",
+   "label": "Idgham shafawi",
+   "level": "101",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:meem:izhar_shafawi",
+   "type": "phenomenon",
+   "label": "Izhar shafawi",
+   "level": "101",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:lam:qamariyyah",
+   "type": "phenomenon",
+   "label": "Lam qamariyyah",
+   "level": "101",
+   "status": "missing",
+   "priority": 1,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:lam:shamsiyyah",
+   "type": "phenomenon",
+   "label": "Lam shamsiyyah",
+   "level": "101",
+   "status": "missing",
+   "priority": 1,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:lam:allah",
+   "type": "phenomenon",
+   "label": "Lam of the Divine Name",
+   "level": "101",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:lam:fil_izhar",
+   "type": "phenomenon",
+   "label": "Izhar of verb lam / hal / bal",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:qalqalah:levels",
+   "type": "phenomenon",
+   "label": "Qalqalah sughra/kubra/akbar",
+   "level": "101",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:qalqalah:no_bounce",
+   "type": "phenomenon",
+   "label": "No bounce on non-qalqalah letters",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 4,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:idgham:mithlayn",
+   "type": "phenomenon",
+   "label": "Idgham mithlayn",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:idgham:mutajanisayn",
+   "type": "phenomenon",
+   "label": "Idgham mutajanisayn (+ta naqis)",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:idgham:mutaqaribayn",
+   "type": "phenomenon",
+   "label": "Idgham mutaqaribayn",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:raa:core",
+   "type": "phenomenon",
+   "label": "Raa core rules",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:raa:waqf",
+   "type": "phenomenon",
+   "label": "Raa at waqf after sakin/yaa",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:raa:jawaz",
+   "type": "phenomenon",
+   "label": "Raa jawaz (firq, misr, qitr)",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:raa:yasr_nudhur",
+   "type": "phenomenon",
+   "label": "Raa yasr/nudhur/asr at waqf",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 1,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": "BUG: tafkheem only"
+  },
+  {
+   "id": "phen:raa:imala",
+   "type": "phenomenon",
+   "label": "Imala majraha 11:41",
+   "level": "ijazah",
+   "status": "missing",
+   "priority": 1,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": "BUG: tafkheem expected"
+  },
+  {
+   "id": "phen:weight:istila",
+   "type": "phenomenon",
+   "label": "Tafkheem isti'la letters",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:weight:maratib",
+   "type": "phenomenon",
+   "label": "5 levels of tafkheem",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": "binary only"
+  },
+  {
+   "id": "phen:weight:istifal_leak",
+   "type": "phenomenon",
+   "label": "Tarqeeq of istifal letters near heavy",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:weight:alif_follows",
+   "type": "phenomenon",
+   "label": "Alif follows preceding letter",
+   "level": "101",
+   "status": "partial",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:wasl:dropped",
+   "type": "phenomenon",
+   "label": "Hamzat al-wasl dropped in wasl",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:wasl:ibtida_vowel",
+   "type": "phenomenon",
+   "label": "Hamzat al-wasl ibtida vowel",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 1,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": "BUG: imshu/iqdu/imru' -> damma"
+  },
+  {
+   "id": "phen:wasl:ism",
+   "type": "phenomenon",
+   "label": "al-ismu 49:11",
+   "level": "ijazah",
+   "status": "partial",
+   "priority": 4,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:wasl:sakinayn",
+   "type": "phenomenon",
+   "label": "Kasra for joining two sakins",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 4,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:wasl:saktat",
+   "type": "phenomenon",
+   "label": "4 saktat of Hafs",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 1,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": "BUGS: U+06DC seen-mark false sakt (2:245,7:69); valid waqf penalised (18:1,36:52)"
+  },
+  {
+   "id": "phen:wasl:maliyah",
+   "type": "phenomenon",
+   "label": "Maliyah sakt or idgham",
+   "level": "intermediate",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:wasl:between_surahs",
+   "type": "phenomenon",
+   "label": "Basmalah / Anfal-Tawbah",
+   "level": "intermediate",
+   "status": "missing",
+   "priority": 4,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:wasl:haa_sakt",
+   "type": "phenomenon",
+   "label": "Haa al-sakt kept",
+   "level": "intermediate",
+   "status": "partial",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:jawf",
+   "type": "phenomenon",
+   "label": "Jawf (madd letters)",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:halq_aqsa",
+   "type": "phenomenon",
+   "label": "Aqsa al-halq ء ه",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:halq_wasat",
+   "type": "phenomenon",
+   "label": "Wasat al-halq ع ح",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:halq_adna",
+   "type": "phenomenon",
+   "label": "Adna al-halq غ خ",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:qaf",
+   "type": "phenomenon",
+   "label": "Aqsa al-lisan ق",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:kaf",
+   "type": "phenomenon",
+   "label": "ك",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:wasat_lisan",
+   "type": "phenomenon",
+   "label": "ج ش ي",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:dad",
+   "type": "phenomenon",
+   "label": "Hafat al-lisan ض",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:lam",
+   "type": "phenomenon",
+   "label": "ل",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:noon",
+   "type": "phenomenon",
+   "label": "ن",
+   "level": "advanced",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:raa",
+   "type": "phenomenon",
+   "label": "ر",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:nitiyyah",
+   "type": "phenomenon",
+   "label": "ت د ط",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:asaliyyah",
+   "type": "phenomenon",
+   "label": "ص س ز",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:lathawiyyah",
+   "type": "phenomenon",
+   "label": "ث ذ ظ",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:faa",
+   "type": "phenomenon",
+   "label": "ف",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:shafatan",
+   "type": "phenomenon",
+   "label": "ب م و",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:makhraj:khayshum",
+   "type": "phenomenon",
+   "label": "Khayshum (ghunnah)",
+   "level": "advanced",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:hams",
+   "type": "phenomenon",
+   "label": "Hams",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:jahr",
+   "type": "phenomenon",
+   "label": "Jahr",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:shiddah",
+   "type": "phenomenon",
+   "label": "Shiddah",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:tawassut",
+   "type": "phenomenon",
+   "label": "Tawassut",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:rakhawah",
+   "type": "phenomenon",
+   "label": "Rakhawah",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:istila",
+   "type": "phenomenon",
+   "label": "Isti'la",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:istifal",
+   "type": "phenomenon",
+   "label": "Istifal",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:itbaq",
+   "type": "phenomenon",
+   "label": "Itbaq",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:infitah",
+   "type": "phenomenon",
+   "label": "Infitah",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:idhlaq",
+   "type": "phenomenon",
+   "label": "Idhlaq",
+   "level": "advanced",
+   "status": "not_observable",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:ismat",
+   "type": "phenomenon",
+   "label": "Ismat",
+   "level": "advanced",
+   "status": "not_observable",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:safir",
+   "type": "phenomenon",
+   "label": "Safir",
+   "level": "advanced",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:qalqalah",
+   "type": "phenomenon",
+   "label": "Qalqalah",
+   "level": "advanced",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:leen",
+   "type": "phenomenon",
+   "label": "Leen",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:inhiraf",
+   "type": "phenomenon",
+   "label": "Inhiraf",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:takreer",
+   "type": "phenomenon",
+   "label": "Takreer",
+   "level": "advanced",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:tafashhi",
+   "type": "phenomenon",
+   "label": "Tafashhi",
+   "level": "advanced",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:istitaalah",
+   "type": "phenomenon",
+   "label": "Istitaalah",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:ghunnah",
+   "type": "phenomenon",
+   "label": "Ghunnah",
+   "level": "advanced",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:khafa",
+   "type": "phenomenon",
+   "label": "Khafa (haa clarity)",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:sifah:quwwah",
+   "type": "phenomenon",
+   "label": "Strong/weak letters",
+   "level": "advanced",
+   "status": "not_observable",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:waqf:types",
+   "type": "phenomenon",
+   "label": "Waqf kinds (tamm/kafi/hasan/qabih)",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:waqf:signs",
+   "type": "phenomenon",
+   "label": "Waqf signs",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:waqf:muanaqah",
+   "type": "phenomenon",
+   "label": "Mu'anaqah",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:waqf:ibtida",
+   "type": "phenomenon",
+   "label": "Ibtida quality/restart",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:waqf:sukun_mahd",
+   "type": "phenomenon",
+   "label": "Waqf with sukun mahd",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 1,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:waqf:raum",
+   "type": "phenomenon",
+   "label": "Raum",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 4,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:waqf:ishmam",
+   "type": "phenomenon",
+   "label": "Ishmam at waqf",
+   "level": "advanced",
+   "status": "not_observable",
+   "priority": 5,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:waqf:ta_marbutah",
+   "type": "phenomenon",
+   "label": "Ta marbutah -> haa",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:waqf:waqf_alifs",
+   "type": "phenomenon",
+   "label": "Alifs pronounced only at waqf (U+06E0)",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 1,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": "BUG: always silent"
+  },
+  {
+   "id": "phen:waqf:salasila",
+   "type": "phenomenon",
+   "label": "Salasila two ways",
+   "level": "advanced",
+   "status": "partial",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:waqf:atani",
+   "type": "phenomenon",
+   "label": "Atani 27:36 yaa",
+   "level": "advanced",
+   "status": "missing",
+   "priority": 4,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:timing:maratib",
+   "type": "phenomenon",
+   "label": "Tahqeeq/tadweer/hadr",
+   "level": "ijazah",
+   "status": "implemented",
+   "priority": 4,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:timing:tanasub",
+   "type": "phenomenon",
+   "label": "Proportionality to local tempo",
+   "level": "ijazah",
+   "status": "implemented",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:timing:tasawi",
+   "type": "phenomenon",
+   "label": "Tasawi al-mudood",
+   "level": "ijazah",
+   "status": "partial",
+   "priority": 1,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:timing:wujuh_consistency",
+   "type": "phenomenon",
+   "label": "Consistency of chosen wujuh / no talfeeq",
+   "level": "ijazah",
+   "status": "missing",
+   "priority": 1,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:timing:pitch_rhythm",
+   "type": "phenomenon",
+   "label": "Pitch/rhythm stability",
+   "level": "ijazah",
+   "status": "partial",
+   "priority": 5,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:hafs:tamanna",
+   "type": "phenomenon",
+   "label": "Ta'manna ishmam/raum 12:11",
+   "level": "ijazah",
+   "status": "missing",
+   "priority": 2,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:hafs:aajami",
+   "type": "phenomenon",
+   "label": "A'jamiyy tas-heel 41:44",
+   "level": "ijazah",
+   "status": "missing",
+   "priority": 1,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": "BUG"
+  },
+  {
+   "id": "phen:hafs:majraha",
+   "type": "phenomenon",
+   "label": "Majraha imala 11:41",
+   "level": "ijazah",
+   "status": "missing",
+   "priority": 1,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": "BUG"
+  },
+  {
+   "id": "phen:hafs:dad_du'f",
+   "type": "phenomenon",
+   "label": "Du'f fath/damm 30:54",
+   "level": "ijazah",
+   "status": "partial",
+   "priority": 4,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:hafs:yabsut",
+   "type": "phenomenon",
+   "label": "Yabsut/bastah seen 2:245 7:69",
+   "level": "ijazah",
+   "status": "missing",
+   "priority": 1,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": "BUG"
+  },
+  {
+   "id": "phen:hafs:musaytirun",
+   "type": "phenomenon",
+   "label": "Musaytirun sad/seen 52:37",
+   "level": "ijazah",
+   "status": "missing",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:hafs:bimusaytir",
+   "type": "phenomenon",
+   "label": "Bimusaytir sad 88:22",
+   "level": "ijazah",
+   "status": "implemented",
+   "priority": 5,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:hafs:yasin_nun",
+   "type": "phenomenon",
+   "label": "Yasin/Nun izhar",
+   "level": "ijazah",
+   "status": "partial",
+   "priority": 3,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:hafs:yalhath",
+   "type": "phenomenon",
+   "label": "Yalhath dhalik idgham 7:176",
+   "level": "ijazah",
+   "status": "implemented",
+   "priority": 5,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:hafs:irkab",
+   "type": "phenomenon",
+   "label": "Irkab ma'ana idgham 11:42",
+   "level": "ijazah",
+   "status": "implemented",
+   "priority": 5,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "phen:hafs:nakhluqkum",
+   "type": "phenomenon",
+   "label": "Nakhluqkum kamil 77:20",
+   "level": "ijazah",
+   "status": "implemented",
+   "priority": 5,
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "code:app/aligner.py",
+   "type": "code",
+   "label": "aligner.py",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "app/aligner.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/calibration.py",
+   "type": "code",
+   "label": "calibration.py",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "app/calibration.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/pipeline.py",
+   "type": "code",
+   "label": "pipeline.py",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "app/pipeline.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/scoring.py",
+   "type": "code",
+   "label": "scoring.py",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "app/scoring.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/sifaat/formants.py",
+   "type": "code",
+   "label": "formants.py",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "app/sifaat/formants.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/sifaat/ghair_mutadhaddah.py",
+   "type": "code",
+   "label": "ghair_mutadhaddah.py",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "app/sifaat/ghair_mutadhaddah.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/sifaat/hams_jahr.py",
+   "type": "code",
+   "label": "hams_jahr.py",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "app/sifaat/hams_jahr.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/sifaat/itbaq.py",
+   "type": "code",
+   "label": "itbaq.py",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "app/sifaat/itbaq.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/sifaat/sukoon_spectrum.py",
+   "type": "code",
+   "label": "sukoon_spectrum.py",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "app/sifaat/sukoon_spectrum.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/tajweed_rules/base.py",
+   "type": "code",
+   "label": "base.py",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "app/tajweed_rules/base.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/tajweed_rules/idghaam_classes.py",
+   "type": "code",
+   "label": "idghaam_classes.py",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "app/tajweed_rules/idghaam_classes.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/tajweed_rules/meem_sakinah.py",
+   "type": "code",
+   "label": "meem_sakinah.py",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "app/tajweed_rules/meem_sakinah.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/tajweed_rules/mudood_engine.py",
+   "type": "code",
+   "label": "mudood_engine.py",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "app/tajweed_rules/mudood_engine.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/tajweed_rules/noon_sakinah.py",
+   "type": "code",
+   "label": "noon_sakinah.py",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "app/tajweed_rules/noon_sakinah.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/tajweed_rules/parser.py",
+   "type": "code",
+   "label": "parser.py",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "app/tajweed_rules/parser.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/tajweed_rules/qalqalah_engine.py",
+   "type": "code",
+   "label": "qalqalah_engine.py",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "app/tajweed_rules/qalqalah_engine.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/tajweed_rules/raa_lam_rules.py",
+   "type": "code",
+   "label": "raa_lam_rules.py",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "app/tajweed_rules/raa_lam_rules.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/tajweed_rules/sakt_wasl.py",
+   "type": "code",
+   "label": "sakt_wasl.py",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "app/tajweed_rules/sakt_wasl.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/taraweeh_adapter/fatigue_detector.py",
+   "type": "code",
+   "label": "fatigue_detector.py",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "app/taraweeh_adapter/fatigue_detector.py",
+   "note": ""
+  },
+  {
+   "id": "code:app/taraweeh_adapter/pace_normalizer.py",
+   "type": "code",
+   "label": "pace_normalizer.py",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "app/taraweeh_adapter/pace_normalizer.py",
+   "note": ""
+  },
+  {
+   "id": "src:curriculum_audit",
+   "type": "source",
+   "label": "00 curriculum audit",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "research_agency_lab/experiments/deep_research/00_curriculum_audit.md",
+   "note": "taxonomy + gap list"
+  },
+  {
+   "id": "src:jazariyyah",
+   "type": "source",
+   "label": "al-Muqaddimah al-Jazariyyah",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:tuhfah",
+   "type": "source",
+   "label": "Tuhfat al-Atfal",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:nihayah",
+   "type": "source",
+   "label": "Nihayat al-Qawl al-Mufid",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  },
+  {
+   "id": "src:hidayat_qari",
+   "type": "source",
+   "label": "Hidayat al-Qari ch.19 (Hafs)",
+   "status": "implemented",
+   "refs": [
+    "research_agency_lab/experiments/deep_research/00_curriculum_audit.md"
+   ],
+   "file": "",
+   "note": ""
+  }
+ ],
+ "edges": [
+  {
+   "from": "phen:lahn:jali",
+   "to": "phen:lahn",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:lahn:khafi",
+   "to": "phen:lahn",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letters:identity",
+   "to": "phen:letters",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letters:identity",
+   "to": "code:app/aligner.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:letters:identity",
+   "to": "code:app/calibration.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:letters:haraka_quality",
+   "to": "phen:letters",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letters:haraka_quality",
+   "to": "code:app/aligner.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:letters:haraka_length",
+   "to": "phen:letters",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letters:sukoon",
+   "to": "phen:letters",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letters:sukoon",
+   "to": "code:app/sifaat/sukoon_spectrum.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:letters:sukoon",
+   "to": "code:app/tajweed_rules/qalqalah_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:letters:shaddah",
+   "to": "phen:letters",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letters:shaddah",
+   "to": "code:app/tajweed_rules/idghaam_classes.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:letters:shaddah",
+   "to": "code:app/tajweed_rules/noon_sakinah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:letters:tanween",
+   "to": "phen:letters",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letters:tanween",
+   "to": "code:app/tajweed_rules/noon_sakinah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:letters:tanween",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:madd:tabii",
+   "to": "phen:madd",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:madd:tabii",
+   "to": "code:app/tajweed_rules/mudood_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:madd:muttasil",
+   "to": "phen:madd",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:madd:muttasil",
+   "to": "code:app/tajweed_rules/mudood_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:madd:munfasil",
+   "to": "phen:madd",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:madd:munfasil",
+   "to": "code:app/tajweed_rules/mudood_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:madd:lazim",
+   "to": "phen:madd",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:madd:lazim",
+   "to": "code:app/tajweed_rules/mudood_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:madd:ayn",
+   "to": "phen:madd",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:madd:ayn",
+   "to": "code:app/tajweed_rules/mudood_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:madd:alm_allah",
+   "to": "phen:madd",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:madd:alm_allah",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:madd:arid",
+   "to": "phen:madd",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:madd:arid",
+   "to": "code:app/tajweed_rules/mudood_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:madd:leen",
+   "to": "phen:madd",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:madd:leen",
+   "to": "code:app/tajweed_rules/mudood_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:madd:badal",
+   "to": "phen:madd",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:madd:badal",
+   "to": "code:app/tajweed_rules/mudood_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:madd:iwad",
+   "to": "phen:madd",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:madd:iwad",
+   "to": "code:app/tajweed_rules/mudood_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:madd:iwad",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:madd:silah",
+   "to": "phen:madd",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:madd:silah",
+   "to": "code:app/tajweed_rules/mudood_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:madd:farq",
+   "to": "phen:madd",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:madd:farq",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:madd:tamkeen",
+   "to": "phen:madd",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:madd:tamkeen",
+   "to": "code:app/tajweed_rules/mudood_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:madd:hierarchy",
+   "to": "phen:madd",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:madd:hierarchy",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:madd:relations",
+   "to": "phen:madd",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:noon:izhar_halqi",
+   "to": "phen:noon",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:noon:izhar_halqi",
+   "to": "code:app/tajweed_rules/noon_sakinah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:noon:idgham_ghunnah",
+   "to": "phen:noon",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:noon:idgham_ghunnah",
+   "to": "code:app/tajweed_rules/noon_sakinah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:noon:izhar_mutlaq",
+   "to": "phen:noon",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:noon:izhar_mutlaq",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:noon:idgham_no_ghunnah",
+   "to": "phen:noon",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:noon:idgham_no_ghunnah",
+   "to": "code:app/tajweed_rules/noon_sakinah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:noon:iqlab",
+   "to": "phen:noon",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:noon:iqlab",
+   "to": "code:app/tajweed_rules/noon_sakinah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:noon:ikhfa",
+   "to": "phen:noon",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:noon:ikhfa",
+   "to": "code:app/tajweed_rules/noon_sakinah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:noon:ghunnah_mushaddadah",
+   "to": "phen:noon",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:noon:ghunnah_mushaddadah",
+   "to": "code:app/tajweed_rules/noon_sakinah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:noon:ghunnah_maratib",
+   "to": "phen:noon",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:noon:ghunnah_maratib",
+   "to": "code:app/tajweed_rules/noon_sakinah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:meem:ikhfa_shafawi",
+   "to": "phen:meem",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:meem:ikhfa_shafawi",
+   "to": "code:app/tajweed_rules/meem_sakinah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:meem:idgham_shafawi",
+   "to": "phen:meem",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:meem:idgham_shafawi",
+   "to": "code:app/tajweed_rules/meem_sakinah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:meem:izhar_shafawi",
+   "to": "phen:meem",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:meem:izhar_shafawi",
+   "to": "code:app/tajweed_rules/meem_sakinah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:lam:qamariyyah",
+   "to": "phen:lam",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:lam:shamsiyyah",
+   "to": "phen:lam",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:lam:shamsiyyah",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:lam:allah",
+   "to": "phen:lam",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:lam:allah",
+   "to": "code:app/tajweed_rules/raa_lam_rules.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:lam:fil_izhar",
+   "to": "phen:lam",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:qalqalah:levels",
+   "to": "phen:qalqalah",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:qalqalah:levels",
+   "to": "code:app/tajweed_rules/qalqalah_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:qalqalah:no_bounce",
+   "to": "phen:qalqalah",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:qalqalah:no_bounce",
+   "to": "code:app/sifaat/ghair_mutadhaddah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:idgham:mithlayn",
+   "to": "phen:idgham",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:idgham:mithlayn",
+   "to": "code:app/tajweed_rules/idghaam_classes.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:idgham:mutajanisayn",
+   "to": "phen:idgham",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:idgham:mutajanisayn",
+   "to": "code:app/tajweed_rules/idghaam_classes.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:idgham:mutaqaribayn",
+   "to": "phen:idgham",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:idgham:mutaqaribayn",
+   "to": "code:app/tajweed_rules/idghaam_classes.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:raa:core",
+   "to": "phen:raa",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:raa:core",
+   "to": "code:app/tajweed_rules/raa_lam_rules.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:raa:core",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:raa:waqf",
+   "to": "phen:raa",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:raa:waqf",
+   "to": "code:app/tajweed_rules/raa_lam_rules.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:raa:jawaz",
+   "to": "phen:raa",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:raa:jawaz",
+   "to": "code:app/tajweed_rules/raa_lam_rules.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:raa:yasr_nudhur",
+   "to": "phen:raa",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:raa:yasr_nudhur",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:raa:imala",
+   "to": "phen:raa",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:raa:imala",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:weight:istila",
+   "to": "phen:weight",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:weight:istila",
+   "to": "code:app/tajweed_rules/raa_lam_rules.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:weight:istila",
+   "to": "code:app/sifaat/formants.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:weight:maratib",
+   "to": "phen:weight",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:weight:maratib",
+   "to": "code:app/sifaat/formants.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:weight:istifal_leak",
+   "to": "phen:weight",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:weight:istifal_leak",
+   "to": "code:app/sifaat/formants.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:weight:alif_follows",
+   "to": "phen:weight",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:weight:alif_follows",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:wasl:dropped",
+   "to": "phen:wasl",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:wasl:dropped",
+   "to": "code:app/tajweed_rules/sakt_wasl.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:wasl:ibtida_vowel",
+   "to": "phen:wasl",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:wasl:ibtida_vowel",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:wasl:ism",
+   "to": "phen:wasl",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:wasl:ism",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:wasl:sakinayn",
+   "to": "phen:wasl",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:wasl:sakinayn",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:wasl:saktat",
+   "to": "phen:wasl",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:wasl:saktat",
+   "to": "code:app/tajweed_rules/sakt_wasl.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:wasl:saktat",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:wasl:maliyah",
+   "to": "phen:wasl",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:wasl:maliyah",
+   "to": "code:app/tajweed_rules/sakt_wasl.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:wasl:between_surahs",
+   "to": "phen:wasl",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:wasl:haa_sakt",
+   "to": "phen:wasl",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:wasl:haa_sakt",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:wasl:haa_sakt",
+   "to": "code:app/sifaat/hams_jahr.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:makhraj:jawf",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:jawf",
+   "to": "code:app/tajweed_rules/mudood_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:makhraj:halq_aqsa",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:halq_wasat",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:halq_adna",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:qaf",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:qaf",
+   "to": "code:app/tajweed_rules/qalqalah_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:makhraj:kaf",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:wasat_lisan",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:wasat_lisan",
+   "to": "code:app/sifaat/ghair_mutadhaddah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:makhraj:dad",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:dad",
+   "to": "code:app/sifaat/ghair_mutadhaddah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:makhraj:lam",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:noon",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:noon",
+   "to": "code:app/sifaat/formants.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:makhraj:raa",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:raa",
+   "to": "code:app/sifaat/ghair_mutadhaddah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:makhraj:nitiyyah",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:nitiyyah",
+   "to": "code:app/tajweed_rules/qalqalah_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:makhraj:nitiyyah",
+   "to": "code:app/sifaat/itbaq.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:makhraj:asaliyyah",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:asaliyyah",
+   "to": "code:app/sifaat/ghair_mutadhaddah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:makhraj:lathawiyyah",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:faa",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:shafatan",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:shafatan",
+   "to": "code:app/tajweed_rules/noon_sakinah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:makhraj:khayshum",
+   "to": "phen:makharij",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makhraj:khayshum",
+   "to": "code:app/sifaat/formants.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:makhraj:dad",
+   "to": "phen:makhraj:nitiyyah",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:makhraj:lathawiyyah",
+   "to": "phen:makhraj:asaliyyah",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:makhraj:halq_wasat",
+   "to": "phen:makhraj:halq_aqsa",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:sifah:hams",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:hams",
+   "to": "code:app/sifaat/hams_jahr.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:jahr",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:jahr",
+   "to": "code:app/sifaat/hams_jahr.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:shiddah",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:shiddah",
+   "to": "code:app/sifaat/sukoon_spectrum.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:tawassut",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:tawassut",
+   "to": "code:app/sifaat/sukoon_spectrum.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:rakhawah",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:rakhawah",
+   "to": "code:app/sifaat/sukoon_spectrum.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:istila",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:istila",
+   "to": "code:app/sifaat/formants.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:istifal",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:istifal",
+   "to": "code:app/sifaat/formants.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:itbaq",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:itbaq",
+   "to": "code:app/sifaat/itbaq.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:infitah",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:infitah",
+   "to": "code:app/sifaat/itbaq.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:idhlaq",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:ismat",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:safir",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:safir",
+   "to": "code:app/sifaat/ghair_mutadhaddah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:qalqalah",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:qalqalah",
+   "to": "code:app/tajweed_rules/qalqalah_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:leen",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:leen",
+   "to": "code:app/tajweed_rules/mudood_engine.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:inhiraf",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:takreer",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:takreer",
+   "to": "code:app/sifaat/ghair_mutadhaddah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:tafashhi",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:tafashhi",
+   "to": "code:app/sifaat/ghair_mutadhaddah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:istitaalah",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:istitaalah",
+   "to": "code:app/sifaat/ghair_mutadhaddah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:ghunnah",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:ghunnah",
+   "to": "code:app/tajweed_rules/noon_sakinah.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:sifah:khafa",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:quwwah",
+   "to": "phen:sifaat",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:sifah:hams",
+   "to": "phen:sifah:jahr",
+   "rel": "alternative_to"
+  },
+  {
+   "from": "phen:waqf:types",
+   "to": "phen:waqf",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:waqf:types",
+   "to": "code:app/taraweeh_adapter/fatigue_detector.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:waqf:signs",
+   "to": "phen:waqf",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:waqf:signs",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:waqf:muanaqah",
+   "to": "phen:waqf",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:waqf:ibtida",
+   "to": "phen:waqf",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:waqf:ibtida",
+   "to": "code:app/aligner.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:waqf:sukun_mahd",
+   "to": "phen:waqf",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:waqf:raum",
+   "to": "phen:waqf",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:waqf:ishmam",
+   "to": "phen:waqf",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:waqf:ta_marbutah",
+   "to": "phen:waqf",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:waqf:ta_marbutah",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:waqf:waqf_alifs",
+   "to": "phen:waqf",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:waqf:waqf_alifs",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:waqf:salasila",
+   "to": "phen:waqf",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:waqf:salasila",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:waqf:atani",
+   "to": "phen:waqf",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:timing:maratib",
+   "to": "phen:timing",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:timing:maratib",
+   "to": "code:app/taraweeh_adapter/pace_normalizer.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:timing:tanasub",
+   "to": "phen:timing",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:timing:tanasub",
+   "to": "code:app/taraweeh_adapter/pace_normalizer.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:timing:tanasub",
+   "to": "code:app/tajweed_rules/base.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:timing:tasawi",
+   "to": "phen:timing",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:timing:tasawi",
+   "to": "code:app/scoring.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:timing:wujuh_consistency",
+   "to": "phen:timing",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:timing:pitch_rhythm",
+   "to": "phen:timing",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:timing:pitch_rhythm",
+   "to": "code:app/pipeline.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:hafs:tamanna",
+   "to": "phen:hafs",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:hafs:tamanna",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:hafs:aajami",
+   "to": "phen:hafs",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:hafs:aajami",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:hafs:majraha",
+   "to": "phen:hafs",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:hafs:majraha",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:hafs:dad_du'f",
+   "to": "phen:hafs",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:hafs:dad_du'f",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:hafs:yabsut",
+   "to": "phen:hafs",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:hafs:yabsut",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:hafs:musaytirun",
+   "to": "phen:hafs",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:hafs:musaytirun",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:hafs:bimusaytir",
+   "to": "phen:hafs",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:hafs:bimusaytir",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:hafs:yasin_nun",
+   "to": "phen:hafs",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:hafs:yasin_nun",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:hafs:yalhath",
+   "to": "phen:hafs",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:hafs:yalhath",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:hafs:irkab",
+   "to": "phen:hafs",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:hafs:irkab",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:hafs:nakhluqkum",
+   "to": "phen:hafs",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:hafs:nakhluqkum",
+   "to": "code:app/tajweed_rules/parser.py",
+   "rel": "measured_by"
+  },
+  {
+   "from": "phen:hafs:majraha",
+   "to": "phen:raa:imala",
+   "rel": "requires"
+  },
+  {
+   "from": "phen:hafs:yabsut",
+   "to": "phen:wasl:saktat",
+   "rel": "confusable_with"
+  },
+  {
+   "from": "phen:hafs:aajami",
+   "to": "phen:madd:farq",
+   "rel": "requires"
+  },
+  {
+   "from": "phen:letters:identity",
+   "to": "phen:lahn:jali",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:letters:shaddah",
+   "to": "phen:lahn:jali",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:weight:maratib",
+   "to": "phen:lahn:khafi",
+   "rel": "part_of"
+  },
+  {
+   "from": "phen:makharij",
+   "to": "src:jazariyyah",
+   "rel": "cites"
+  },
+  {
+   "from": "phen:sifaat",
+   "to": "src:jazariyyah",
+   "rel": "cites"
+  },
+  {
+   "from": "phen:noon",
+   "to": "src:tuhfah",
+   "rel": "cites"
+  },
+  {
+   "from": "phen:lahn",
+   "to": "src:nihayah",
+   "rel": "cites"
+  },
+  {
+   "from": "phen:hafs",
+   "to": "src:hidayat_qari",
+   "rel": "cites"
+  },
+  {
+   "from": "phen:madd",
+   "to": "src:tuhfah",
+   "rel": "cites"
+  }
+ ]
+}

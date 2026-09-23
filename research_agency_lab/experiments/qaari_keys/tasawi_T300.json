@@ -1,0 +1,1794 @@
+{
+    "classes": {
+        "madd_6": {
+            "cv_threshold": 0.22995428571428575,
+            "n_anchor_reciters": 3,
+            "other_frac_exceeding": 0.631578947368421,
+            "other_median_cv": 0.23906925,
+            "per_speaker": {
+                "everyayah:Husary_128kbps": {
+                    "cv": 0.22995428571428575,
+                    "median_counts": 11.666666666666668,
+                    "anchor": true,
+                    "exceeds_tau": false,
+                    "n": 35
+                },
+                "everyayah:Salah_Al_Budair_128kbps": {
+                    "cv": 0.3088749999999999,
+                    "median_counts": 16,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:Ahmed_Neana_128kbps": {
+                    "cv": 0.25816417910447775,
+                    "median_counts": 16.75,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:Abdul_Basit_Mujawwad_128kbps": {
+                    "cv": 0.2912250000000002,
+                    "median_counts": 10.666666666666668,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:Karim_Mansoori_40kbps": {
+                    "cv": 0.16988125,
+                    "median_counts": 13.714285714285712,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 35
+                },
+                "everyayah:Akram_AlAlaqimy_128kbps": {
+                    "cv": 0.1504086956521742,
+                    "median_counts": 17.25,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 35
+                },
+                "everyayah:Muhsin_Al_Qasim_192kbps": {
+                    "cv": 0.19387846153846114,
+                    "median_counts": 17.333333333333336,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 35
+                },
+                "everyayah:Saood_ash-Shuraym_128kbps": {
+                    "cv": 0.3916301886792452,
+                    "median_counts": 17.666666666666668,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:Yasser_Ad-Dussary_128kbps": {
+                    "cv": 0.2471000000000002,
+                    "median_counts": 23.714285714285715,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:Abdullah_Basfar_192kbps": {
+                    "cv": 0.14825999999999998,
+                    "median_counts": 12.5,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 35
+                },
+                "everyayah:Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net": {
+                    "cv": 0.3397624999999999,
+                    "median_counts": 16,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:Hudhaify_128kbps": {
+                    "cv": 0.24092249999999993,
+                    "median_counts": 26.666666666666668,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:Muhammad_Ayyoub_128kbps": {
+                    "cv": 0.17609425287356315,
+                    "median_counts": 21.75,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 35
+                },
+                "everyayah:Ali_Hajjaj_AlSuesy_128kbps": {
+                    "cv": 0.19958076923076923,
+                    "median_counts": 13,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 35
+                },
+                "everyayah:Hani_Rifai_192kbps": {
+                    "cv": 0.2429816666666665,
+                    "median_counts": 12.857142857142856,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:aziz_alili_128kbps": {
+                    "cv": 0.5021709677419355,
+                    "median_counts": 15.5,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:mahmoud_ali_al_banna_32kbps": {
+                    "cv": 0.17496521739130422,
+                    "median_counts": 15.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 35
+                },
+                "everyayah:khalefa_al_tunaiji_64kbps": {
+                    "cv": 0.22340547945205486,
+                    "median_counts": 24.333333333333332,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 35
+                },
+                "everyayah:Abu_Bakr_Ash-Shaatree_128kbps": {
+                    "cv": 0.37065,
+                    "median_counts": 20,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:Abdurrahmaan_As-Sudais_192kbps": {
+                    "cv": 0.2340947368421055,
+                    "median_counts": 19.000000000000004,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:Ali_Jaber_64kbps": {
+                    "cv": 0.40153749999999994,
+                    "median_counts": 12,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:Khaalid_Abdullaah_al-Qahtaanee_192kbps": {
+                    "cv": 0.23062666666666665,
+                    "median_counts": 22.5,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:MaherAlMuaiqly128kbps": {
+                    "cv": 0.3421384615384615,
+                    "median_counts": 19.5,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:Fares_Abbad_64kbps": {
+                    "cv": 0.18926808510638296,
+                    "median_counts": 15.666666666666668,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 35
+                },
+                "everyayah:Muhammad_AbdulKareem_128kbps": {
+                    "cv": 0.29967446808510645,
+                    "median_counts": 15.666666666666668,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:Alafasy_128kbps": {
+                    "cv": 0.3002734177215189,
+                    "median_counts": 22.57142857142857,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:Abdul_Basit_Murattal_192kbps": {
+                    "cv": 0.2372160000000001,
+                    "median_counts": 14.285714285714285,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:Mustafa_Ismail_48kbps": {
+                    "cv": 0.2358681818181817,
+                    "median_counts": 13.2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 8
+                },
+                "everyayah:Husary_128kbps_Mujawwad": {
+                    "cv": 0.16944000000000017,
+                    "median_counts": 10,
+                    "anchor": true,
+                    "exceeds_tau": false,
+                    "n": 35
+                },
+                "everyayah:Sahl_Yassin_128kbps": {
+                    "cv": 0.12354999999999983,
+                    "median_counts": 20,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 35
+                },
+                "everyayah:Salaah_AbdulRahman_Bukhatir_128kbps": {
+                    "cv": 0.2316562499999999,
+                    "median_counts": 21.333333333333336,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:Yaser_Salamah_128kbps": {
+                    "cv": 0.2734893203883493,
+                    "median_counts": 34.333333333333336,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:Mohammad_al_Tablaway_128kbps": {
+                    "cv": 0.14255769230769236,
+                    "median_counts": 17.333333333333336,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 35
+                },
+                "everyayah:Muhammad_Jibreel_128kbps": {
+                    "cv": 0.1701344262295082,
+                    "median_counts": 15.25,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 35
+                },
+                "everyayah:Abdullah_Matroud_128kbps": {
+                    "cv": 0.2531268292682928,
+                    "median_counts": 8.2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:Ghamadi_40kbps": {
+                    "cv": 0.39015789473684226,
+                    "median_counts": 19.000000000000004,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:Nasser_Alqatami_128kbps": {
+                    "cv": 0.28611578947368393,
+                    "median_counts": 19.000000000000004,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:Ayman_Sowaid_64kbps": {
+                    "cv": 0.2208127659574468,
+                    "median_counts": 11.75,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 35
+                },
+                "everyayah:Minshawy_Mujawwad_192kbps": {
+                    "cv": 0.19752134831460672,
+                    "median_counts": 11.866666666666665,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 33
+                },
+                "everyayah:Minshawy_Murattal_128kbps": {
+                    "cv": 0.28390212765957445,
+                    "median_counts": 15.666666666666668,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 35
+                },
+                "everyayah:Husary_Muallim_128kbps": {
+                    "cv": 0.20881690140845072,
+                    "median_counts": 14.2,
+                    "anchor": true,
+                    "exceeds_tau": false,
+                    "n": 35
+                }
+            },
+            "threshold_exact": false,
+            "anchor_median_counts": 12,
+            "anchor_cv": 0.20881690140845072
+        },
+        "madd_4": {
+            "cv_threshold": 0.5591813148788928,
+            "n_anchor_reciters": 3,
+            "other_frac_exceeding": 0.3684210526315789,
+            "other_median_cv": 0.47501723684210523,
+            "per_speaker": {
+                "everyayah:Husary_128kbps": {
+                    "cv": 0.2086622222222225,
+                    "median_counts": 6.428571428571428,
+                    "anchor": true,
+                    "exceeds_tau": false,
+                    "n": 505
+                },
+                "everyayah:Salah_Al_Budair_128kbps": {
+                    "cv": 0.6177499999999999,
+                    "median_counts": 4,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 529
+                },
+                "everyayah:Ahmed_Neana_128kbps": {
+                    "cv": 0.6976941176470588,
+                    "median_counts": 4.25,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 519
+                },
+                "everyayah:Abdul_Basit_Mujawwad_128kbps": {
+                    "cv": 0.29060930232558124,
+                    "median_counts": 7.166666666666667,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 470
+                },
+                "everyayah:Karim_Mansoori_40kbps": {
+                    "cv": 0.27650812772133515,
+                    "median_counts": 8.833333333333334,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 458
+                },
+                "everyayah:Akram_AlAlaqimy_128kbps": {
+                    "cv": 0.32431875,
+                    "median_counts": 8,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 519
+                },
+                "everyayah:Muhsin_Al_Qasim_192kbps": {
+                    "cv": 0.6918799999999999,
+                    "median_counts": 5,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 529
+                },
+                "everyayah:Saood_ash-Shuraym_128kbps": {
+                    "cv": 0.7138444444444443,
+                    "median_counts": 4.5,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 529
+                },
+                "everyayah:Yasser_Ad-Dussary_128kbps": {
+                    "cv": 0.5861441860465119,
+                    "median_counts": 10.75,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 529
+                },
+                "everyayah:Abdullah_Basfar_192kbps": {
+                    "cv": 0.2118000000000001,
+                    "median_counts": 7.666666666666667,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 519
+                },
+                "everyayah:Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net": {
+                    "cv": 0.43928888888888895,
+                    "median_counts": 9.000000000000002,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 519
+                },
+                "everyayah:Hudhaify_128kbps": {
+                    "cv": 0.2912250000000001,
+                    "median_counts": 14.000000000000002,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 519
+                },
+                "everyayah:Muhammad_Ayyoub_128kbps": {
+                    "cv": 0.238275,
+                    "median_counts": 14,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 515
+                },
+                "everyayah:Ali_Hajjaj_AlSuesy_128kbps": {
+                    "cv": 0.481845,
+                    "median_counts": 3.3333333333333335,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 519
+                },
+                "everyayah:Hani_Rifai_192kbps": {
+                    "cv": 0.7413,
+                    "median_counts": 6,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 519
+                },
+                "everyayah:aziz_alili_128kbps": {
+                    "cv": 0.31212631578947375,
+                    "median_counts": 6.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 517
+                },
+                "everyayah:mahmoud_ali_al_banna_32kbps": {
+                    "cv": 0.49420000000000003,
+                    "median_counts": 3.5000000000000004,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 519
+                },
+                "everyayah:khalefa_al_tunaiji_64kbps": {
+                    "cv": 0.23409473684210522,
+                    "median_counts": 12.666666666666668,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 519
+                },
+                "everyayah:Abu_Bakr_Ash-Shaatree_128kbps": {
+                    "cv": 0.2824000000000001,
+                    "median_counts": 7,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 519
+                },
+                "everyayah:Abdurrahmaan_As-Sudais_192kbps": {
+                    "cv": 0.7138444444444443,
+                    "median_counts": 4.5,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 529
+                },
+                "everyayah:Ali_Jaber_64kbps": {
+                    "cv": 0.5702307692307692,
+                    "median_counts": 3.25,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 529
+                },
+                "everyayah:Khaalid_Abdullaah_al-Qahtaanee_192kbps": {
+                    "cv": 0.33478064516129036,
+                    "median_counts": 10.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 519
+                },
+                "everyayah:MaherAlMuaiqly128kbps": {
+                    "cv": 0.51891,
+                    "median_counts": 10,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 529
+                },
+                "everyayah:Fares_Abbad_64kbps": {
+                    "cv": 0.3843777777777775,
+                    "median_counts": 9.000000000000002,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 529
+                },
+                "everyayah:Muhammad_AbdulKareem_128kbps": {
+                    "cv": 0.46818947368421043,
+                    "median_counts": 6.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 523
+                },
+                "everyayah:Alafasy_128kbps": {
+                    "cv": 0.24205714285714283,
+                    "median_counts": 12.25,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 519
+                },
+                "everyayah:Abdul_Basit_Murattal_192kbps": {
+                    "cv": 0.6040222222222221,
+                    "median_counts": 6.75,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 519
+                },
+                "everyayah:Mustafa_Ismail_48kbps": {
+                    "cv": 0.44477999999999995,
+                    "median_counts": 2.857142857142857,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 110
+                },
+                "everyayah:Husary_128kbps_Mujawwad": {
+                    "cv": 0.3921994186046512,
+                    "median_counts": 5.7333333333333325,
+                    "anchor": true,
+                    "exceeds_tau": false,
+                    "n": 467
+                },
+                "everyayah:Sahl_Yassin_128kbps": {
+                    "cv": 0.684276923076923,
+                    "median_counts": 4.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 519
+                },
+                "everyayah:Salaah_AbdulRahman_Bukhatir_128kbps": {
+                    "cv": 0.7766000000000002,
+                    "median_counts": 7,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 529
+                },
+                "everyayah:Yaser_Salamah_128kbps": {
+                    "cv": 0.9434727272727272,
+                    "median_counts": 7.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 529
+                },
+                "everyayah:Mohammad_al_Tablaway_128kbps": {
+                    "cv": 0.1969078125000001,
+                    "median_counts": 10.666666666666668,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 519
+                },
+                "everyayah:Muhammad_Jibreel_128kbps": {
+                    "cv": 0.4942,
+                    "median_counts": 3,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 527
+                },
+                "everyayah:Abdullah_Matroud_128kbps": {
+                    "cv": 0.35299999999999987,
+                    "median_counts": 4.199999999999999,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 519
+                },
+                "everyayah:Ghamadi_40kbps": {
+                    "cv": 0.41512800000000005,
+                    "median_counts": 8.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 529
+                },
+                "everyayah:Nasser_Alqatami_128kbps": {
+                    "cv": 0.9884,
+                    "median_counts": 8,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 528
+                },
+                "everyayah:Ayman_Sowaid_64kbps": {
+                    "cv": 0.17442352941176464,
+                    "median_counts": 6.8,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 505
+                },
+                "everyayah:Minshawy_Mujawwad_192kbps": {
+                    "cv": 0.7413,
+                    "median_counts": 5.428571428571428,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 469
+                },
+                "everyayah:Minshawy_Murattal_128kbps": {
+                    "cv": 0.5282827586206895,
+                    "median_counts": 7.249999999999999,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 515
+                },
+                "everyayah:Husary_Muallim_128kbps": {
+                    "cv": 0.5591813148788928,
+                    "median_counts": 6.4222222222222225,
+                    "anchor": true,
+                    "exceeds_tau": false,
+                    "n": 488
+                }
+            },
+            "threshold_exact": false,
+            "anchor_median_counts": 6.199999999999999,
+            "anchor_cv": 0.3921994186046512
+        },
+        "ghunnah_م": {
+            "cv_threshold": 0.23671764705882348,
+            "n_anchor_reciters": 3,
+            "other_frac_exceeding": 0.34210526315789475,
+            "other_median_cv": 0.21180000000000004,
+            "per_speaker": {
+                "everyayah:Husary_128kbps": {
+                    "cv": 0.23671764705882348,
+                    "median_counts": 3.4,
+                    "anchor": true,
+                    "exceeds_tau": false,
+                    "n": 151
+                },
+                "everyayah:Salah_Al_Budair_128kbps": {
+                    "cv": 0.29652,
+                    "median_counts": 4.166666666666667,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 162
+                },
+                "everyayah:Ahmed_Neana_128kbps": {
+                    "cv": 0.1412,
+                    "median_counts": 5.25,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 162
+                },
+                "everyayah:Abdul_Basit_Mujawwad_128kbps": {
+                    "cv": 0.1485655332302936,
+                    "median_counts": 3.5549450549450547,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 138
+                },
+                "everyayah:Karim_Mansoori_40kbps": {
+                    "cv": 0.19768000000000008,
+                    "median_counts": 4.285714285714286,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 138
+                },
+                "everyayah:Akram_AlAlaqimy_128kbps": {
+                    "cv": 0.15606315789473682,
+                    "median_counts": 4.75,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 162
+                },
+                "everyayah:Muhsin_Al_Qasim_192kbps": {
+                    "cv": 0.3421384615384616,
+                    "median_counts": 4.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 162
+                },
+                "everyayah:Saood_ash-Shuraym_128kbps": {
+                    "cv": 0.24709999999999988,
+                    "median_counts": 3.5999999999999996,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 162
+                },
+                "everyayah:Yasser_Ad-Dussary_128kbps": {
+                    "cv": 0.21180000000000007,
+                    "median_counts": 4.666666666666667,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 162
+                },
+                "everyayah:Abdullah_Basfar_192kbps": {
+                    "cv": 0.2471,
+                    "median_counts": 6,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 161
+                },
+                "everyayah:Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net": {
+                    "cv": 0.4236,
+                    "median_counts": 4.666666666666667,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 162
+                },
+                "everyayah:Hudhaify_128kbps": {
+                    "cv": 0.20217272727272725,
+                    "median_counts": 7.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 162
+                },
+                "everyayah:Muhammad_Ayyoub_128kbps": {
+                    "cv": 0.1684772727272728,
+                    "median_counts": 7.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 155
+                },
+                "everyayah:Ali_Hajjaj_AlSuesy_128kbps": {
+                    "cv": 0.17791200000000015,
+                    "median_counts": 5,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 162
+                },
+                "everyayah:Hani_Rifai_192kbps": {
+                    "cv": 0.2566038461538462,
+                    "median_counts": 4.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 162
+                },
+                "everyayah:aziz_alili_128kbps": {
+                    "cv": 0.1744235294117647,
+                    "median_counts": 4.25,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 161
+                },
+                "everyayah:mahmoud_ali_al_banna_32kbps": {
+                    "cv": 0.16473333333333331,
+                    "median_counts": 4.5,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 162
+                },
+                "everyayah:khalefa_al_tunaiji_64kbps": {
+                    "cv": 0.261635294117647,
+                    "median_counts": 5.666666666666667,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 162
+                },
+                "everyayah:Abu_Bakr_Ash-Shaatree_128kbps": {
+                    "cv": 0.29651999999999984,
+                    "median_counts": 5,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 162
+                },
+                "everyayah:Abdurrahmaan_As-Sudais_192kbps": {
+                    "cv": 0.14826000000000006,
+                    "median_counts": 3.3333333333333335,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 162
+                },
+                "everyayah:Ali_Jaber_64kbps": {
+                    "cv": 0.19768,
+                    "median_counts": 3.75,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 162
+                },
+                "everyayah:Khaalid_Abdullaah_al-Qahtaanee_192kbps": {
+                    "cv": 0.23586818181818167,
+                    "median_counts": 3.666666666666667,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 162
+                },
+                "everyayah:MaherAlMuaiqly128kbps": {
+                    "cv": 0.37065,
+                    "median_counts": 4,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 162
+                },
+                "everyayah:Fares_Abbad_64kbps": {
+                    "cv": 0.21180000000000007,
+                    "median_counts": 4.666666666666667,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 162
+                },
+                "everyayah:Muhammad_AbdulKareem_128kbps": {
+                    "cv": 0.22809230769230746,
+                    "median_counts": 4.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 162
+                },
+                "everyayah:Alafasy_128kbps": {
+                    "cv": 0.1779120000000002,
+                    "median_counts": 6.25,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 162
+                },
+                "everyayah:Abdul_Basit_Murattal_192kbps": {
+                    "cv": 0.23721600000000018,
+                    "median_counts": 5,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 162
+                },
+                "everyayah:Mustafa_Ismail_48kbps": {
+                    "cv": 0.17557105263157902,
+                    "median_counts": 3.8,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 41
+                },
+                "everyayah:Husary_128kbps_Mujawwad": {
+                    "cv": 0.14825999999999992,
+                    "median_counts": 2.857142857142857,
+                    "anchor": true,
+                    "exceeds_tau": false,
+                    "n": 139
+                },
+                "everyayah:Sahl_Yassin_128kbps": {
+                    "cv": 0.3177,
+                    "median_counts": 4.666666666666667,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 162
+                },
+                "everyayah:Salaah_AbdulRahman_Bukhatir_128kbps": {
+                    "cv": 0.21180000000000007,
+                    "median_counts": 4.666666666666667,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 162
+                },
+                "everyayah:Yaser_Salamah_128kbps": {
+                    "cv": 0.238275,
+                    "median_counts": 7,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 162
+                },
+                "everyayah:Mohammad_al_Tablaway_128kbps": {
+                    "cv": 0.2118,
+                    "median_counts": 5.25,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 162
+                },
+                "everyayah:Muhammad_Jibreel_128kbps": {
+                    "cv": 0.18532499999999982,
+                    "median_counts": 4,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 162
+                },
+                "everyayah:Abdullah_Matroud_128kbps": {
+                    "cv": 0.21179999999999996,
+                    "median_counts": 3.5000000000000004,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 162
+                },
+                "everyayah:Ghamadi_40kbps": {
+                    "cv": 0.22809230769230776,
+                    "median_counts": 4.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 162
+                },
+                "everyayah:Nasser_Alqatami_128kbps": {
+                    "cv": 0.3488470588235293,
+                    "median_counts": 5.666666666666667,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 162
+                },
+                "everyayah:Ayman_Sowaid_64kbps": {
+                    "cv": 0.12230202020202027,
+                    "median_counts": 5.4,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 152
+                },
+                "everyayah:Minshawy_Mujawwad_192kbps": {
+                    "cv": 0.1520615384615384,
+                    "median_counts": 3.714285714285714,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 138
+                },
+                "everyayah:Minshawy_Murattal_128kbps": {
+                    "cv": 0.16473333333333331,
+                    "median_counts": 4.5,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 155
+                },
+                "everyayah:Husary_Muallim_128kbps": {
+                    "cv": 0.17442352941176464,
+                    "median_counts": 3.4,
+                    "anchor": true,
+                    "exceeds_tau": false,
+                    "n": 149
+                }
+            },
+            "threshold_exact": false,
+            "anchor_median_counts": 3.1999999999999997,
+            "anchor_cv": 0.17442352941176464
+        },
+        "ghunnah_ن": {
+            "cv_threshold": 0.1995807692307694,
+            "n_anchor_reciters": 3,
+            "other_frac_exceeding": 0.6578947368421053,
+            "other_median_cv": 0.23265415384615387,
+            "per_speaker": {
+                "everyayah:Husary_128kbps": {
+                    "cv": 0.1986989690721648,
+                    "median_counts": 3.464285714285714,
+                    "anchor": true,
+                    "exceeds_tau": false,
+                    "n": 182
+                },
+                "everyayah:Salah_Al_Budair_128kbps": {
+                    "cv": 0.22809230769230776,
+                    "median_counts": 4.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 207
+                },
+                "everyayah:Ahmed_Neana_128kbps": {
+                    "cv": 0.17384469026548682,
+                    "median_counts": 5.380952380952381,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 188
+                },
+                "everyayah:Abdul_Basit_Mujawwad_128kbps": {
+                    "cv": 0.1710692307692307,
+                    "median_counts": 3.714285714285714,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 175
+                },
+                "everyayah:Karim_Mansoori_40kbps": {
+                    "cv": 0.23937812500000002,
+                    "median_counts": 4.571428571428571,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 163
+                },
+                "everyayah:Akram_AlAlaqimy_128kbps": {
+                    "cv": 0.19768000000000008,
+                    "median_counts": 5,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 188
+                },
+                "everyayah:Muhsin_Al_Qasim_192kbps": {
+                    "cv": 0.29652,
+                    "median_counts": 3.75,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 207
+                },
+                "everyayah:Saood_ash-Shuraym_128kbps": {
+                    "cv": 0.24709999999999993,
+                    "median_counts": 4,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 207
+                },
+                "everyayah:Yasser_Ad-Dussary_128kbps": {
+                    "cv": 0.4941999999999999,
+                    "median_counts": 5,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 207
+                },
+                "everyayah:Abdullah_Basfar_192kbps": {
+                    "cv": 0.23721599999999998,
+                    "median_counts": 6.25,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 188
+                },
+                "everyayah:Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net": {
+                    "cv": 0.46331249999999996,
+                    "median_counts": 5.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 205
+                },
+                "everyayah:Hudhaify_128kbps": {
+                    "cv": 0.26956363636363645,
+                    "median_counts": 7.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 188
+                },
+                "everyayah:Muhammad_Ayyoub_128kbps": {
+                    "cv": 0.2118,
+                    "median_counts": 7,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 184
+                },
+                "everyayah:Ali_Hajjaj_AlSuesy_128kbps": {
+                    "cv": 0.15606315789473682,
+                    "median_counts": 4.75,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 188
+                },
+                "everyayah:Hani_Rifai_192kbps": {
+                    "cv": 0.28611578947368427,
+                    "median_counts": 4.75,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 188
+                },
+                "everyayah:aziz_alili_128kbps": {
+                    "cv": 0.2616352941176469,
+                    "median_counts": 4.25,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 186
+                },
+                "everyayah:mahmoud_ali_al_banna_32kbps": {
+                    "cv": 0.1995807692307694,
+                    "median_counts": 4.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 188
+                },
+                "everyayah:khalefa_al_tunaiji_64kbps": {
+                    "cv": 0.2713687499999998,
+                    "median_counts": 5.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 188
+                },
+                "everyayah:Abu_Bakr_Ash-Shaatree_128kbps": {
+                    "cv": 0.21003500000000003,
+                    "median_counts": 5,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 188
+                },
+                "everyayah:Abdurrahmaan_As-Sudais_192kbps": {
+                    "cv": 0.14826000000000025,
+                    "median_counts": 3.3333333333333335,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 207
+                },
+                "everyayah:Ali_Jaber_64kbps": {
+                    "cv": 0.31769999999999976,
+                    "median_counts": 3.5000000000000004,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 207
+                },
+                "everyayah:Khaalid_Abdullaah_al-Qahtaanee_192kbps": {
+                    "cv": 0.24709999999999993,
+                    "median_counts": 4,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 188
+                },
+                "everyayah:MaherAlMuaiqly128kbps": {
+                    "cv": 0.3843777777777777,
+                    "median_counts": 4.5,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 207
+                },
+                "everyayah:Fares_Abbad_64kbps": {
+                    "cv": 0.19768000000000008,
+                    "median_counts": 5,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 207
+                },
+                "everyayah:Muhammad_AbdulKareem_128kbps": {
+                    "cv": 0.21180000000000007,
+                    "median_counts": 4.666666666666667,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 205
+                },
+                "everyayah:Alafasy_128kbps": {
+                    "cv": 0.19768,
+                    "median_counts": 6.25,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 188
+                },
+                "everyayah:Abdul_Basit_Murattal_192kbps": {
+                    "cv": 0.3223043478260869,
+                    "median_counts": 5.75,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 204
+                },
+                "everyayah:Mustafa_Ismail_48kbps": {
+                    "cv": 0.1647333333333333,
+                    "median_counts": 3.5999999999999996,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 35
+                },
+                "everyayah:Husary_128kbps_Mujawwad": {
+                    "cv": 0.1995807692307694,
+                    "median_counts": 2.8888888888888893,
+                    "anchor": true,
+                    "exceeds_tau": false,
+                    "n": 173
+                },
+                "everyayah:Sahl_Yassin_128kbps": {
+                    "cv": 0.3706500000000001,
+                    "median_counts": 5.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 188
+                },
+                "everyayah:Salaah_AbdulRahman_Bukhatir_128kbps": {
+                    "cv": 0.12355000000000022,
+                    "median_counts": 4,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 207
+                },
+                "everyayah:Yaser_Salamah_128kbps": {
+                    "cv": 0.3177,
+                    "median_counts": 7,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 207
+                },
+                "everyayah:Mohammad_al_Tablaway_128kbps": {
+                    "cv": 0.2118,
+                    "median_counts": 5.25,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 188
+                },
+                "everyayah:Muhammad_Jibreel_128kbps": {
+                    "cv": 0.12355000000000022,
+                    "median_counts": 4,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 202
+                },
+                "everyayah:Abdullah_Matroud_128kbps": {
+                    "cv": 0.2495465346534652,
+                    "median_counts": 3.3666666666666667,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 188
+                },
+                "everyayah:Ghamadi_40kbps": {
+                    "cv": 0.2745555555555557,
+                    "median_counts": 4.5,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 207
+                },
+                "everyayah:Nasser_Alqatami_128kbps": {
+                    "cv": 0.5462210526315789,
+                    "median_counts": 6.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 205
+                },
+                "everyayah:Ayman_Sowaid_64kbps": {
+                    "cv": 0.11860800000000009,
+                    "median_counts": 5,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 182
+                },
+                "everyayah:Minshawy_Mujawwad_192kbps": {
+                    "cv": 0.2118000000000002,
+                    "median_counts": 4,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 175
+                },
+                "everyayah:Minshawy_Murattal_128kbps": {
+                    "cv": 0.16473333333333331,
+                    "median_counts": 4.5,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 184
+                },
+                "everyayah:Husary_Muallim_128kbps": {
+                    "cv": 0.17442352941176464,
+                    "median_counts": 3.4,
+                    "anchor": true,
+                    "exceeds_tau": false,
+                    "n": 177
+                }
+            },
+            "threshold_exact": false,
+            "anchor_median_counts": 3.2857142857142856,
+            "anchor_cv": 0.1986989690721648
+        },
+        "ikhfa_noon": {
+            "cv_threshold": 0.21180000000000002,
+            "n_anchor_reciters": 3,
+            "other_frac_exceeding": 0.6578947368421053,
+            "other_median_cv": 0.22685267558528432,
+            "per_speaker": {
+                "everyayah:Husary_128kbps": {
+                    "cv": 0.21180000000000002,
+                    "median_counts": 3.3333333333333335,
+                    "anchor": true,
+                    "exceeds_tau": false,
+                    "n": 251
+                },
+                "everyayah:Salah_Al_Budair_128kbps": {
+                    "cv": 0.2471000000000001,
+                    "median_counts": 4,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 264
+                },
+                "everyayah:Ahmed_Neana_128kbps": {
+                    "cv": 0.22239,
+                    "median_counts": 5,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 263
+                },
+                "everyayah:Abdul_Basit_Mujawwad_128kbps": {
+                    "cv": 0.12355000000000015,
+                    "median_counts": 3.428571428571428,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 235
+                },
+                "everyayah:Karim_Mansoori_40kbps": {
+                    "cv": 0.2118000000000002,
+                    "median_counts": 4,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 229
+                },
+                "everyayah:Akram_AlAlaqimy_128kbps": {
+                    "cv": 0.16473333333333331,
+                    "median_counts": 4.5,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 263
+                },
+                "everyayah:Muhsin_Al_Qasim_192kbps": {
+                    "cv": 0.2471000000000001,
+                    "median_counts": 4,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 264
+                },
+                "everyayah:Saood_ash-Shuraym_128kbps": {
+                    "cv": 0.2965199999999999,
+                    "median_counts": 3.3333333333333335,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 264
+                },
+                "everyayah:Yasser_Ad-Dussary_128kbps": {
+                    "cv": 0.4118333333333332,
+                    "median_counts": 6,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 264
+                },
+                "everyayah:Abdullah_Basfar_192kbps": {
+                    "cv": 0.1933826086956522,
+                    "median_counts": 5.75,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 263
+                },
+                "everyayah:Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net": {
+                    "cv": 0.33813684210526307,
+                    "median_counts": 4.75,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 262
+                },
+                "everyayah:Hudhaify_128kbps": {
+                    "cv": 0.2471000000000002,
+                    "median_counts": 7.142857142857142,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 263
+                },
+                "everyayah:Muhammad_Ayyoub_128kbps": {
+                    "cv": 0.1684772727272728,
+                    "median_counts": 7.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 255
+                },
+                "everyayah:Ali_Hajjaj_AlSuesy_128kbps": {
+                    "cv": 0.16473333333333331,
+                    "median_counts": 4.5,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 263
+                },
+                "everyayah:Hani_Rifai_192kbps": {
+                    "cv": 0.22809230769230776,
+                    "median_counts": 4.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 263
+                },
+                "everyayah:aziz_alili_128kbps": {
+                    "cv": 0.18532499999999982,
+                    "median_counts": 4,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 260
+                },
+                "everyayah:mahmoud_ali_al_banna_32kbps": {
+                    "cv": 0.16473333333333331,
+                    "median_counts": 4.75,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 263
+                },
+                "everyayah:khalefa_al_tunaiji_64kbps": {
+                    "cv": 0.27798749999999994,
+                    "median_counts": 5.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 263
+                },
+                "everyayah:Abu_Bakr_Ash-Shaatree_128kbps": {
+                    "cv": 0.21180000000000007,
+                    "median_counts": 4.666666666666667,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 263
+                },
+                "everyayah:Abdurrahmaan_As-Sudais_192kbps": {
+                    "cv": 0.26956363636363645,
+                    "median_counts": 3.666666666666667,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 264
+                },
+                "everyayah:Ali_Jaber_64kbps": {
+                    "cv": 0.16473333333333348,
+                    "median_counts": 3.5999999999999996,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 264
+                },
+                "everyayah:Khaalid_Abdullaah_al-Qahtaanee_192kbps": {
+                    "cv": 0.2503090909090907,
+                    "median_counts": 3.666666666666667,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 263
+                },
+                "everyayah:MaherAlMuaiqly128kbps": {
+                    "cv": 0.3953599999999999,
+                    "median_counts": 5,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 264
+                },
+                "everyayah:Fares_Abbad_64kbps": {
+                    "cv": 0.29651999999999973,
+                    "median_counts": 5,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 264
+                },
+                "everyayah:Muhammad_AbdulKareem_128kbps": {
+                    "cv": 0.1976799999999998,
+                    "median_counts": 5,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 264
+                },
+                "everyayah:Alafasy_128kbps": {
+                    "cv": 0.2471,
+                    "median_counts": 6,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 263
+                },
+                "everyayah:Abdul_Basit_Murattal_192kbps": {
+                    "cv": 0.2642895652173916,
+                    "median_counts": 5.111111111111112,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 261
+                },
+                "everyayah:Mustafa_Ismail_48kbps": {
+                    "cv": 0.17557105263157902,
+                    "median_counts": 3.8,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 61
+                },
+                "everyayah:Husary_128kbps_Mujawwad": {
+                    "cv": 0.12892173913043478,
+                    "median_counts": 2.875,
+                    "anchor": true,
+                    "exceeds_tau": false,
+                    "n": 231
+                },
+                "everyayah:Sahl_Yassin_128kbps": {
+                    "cv": 0.34213846153846145,
+                    "median_counts": 4.333333333333334,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 263
+                },
+                "everyayah:Salaah_AbdulRahman_Bukhatir_128kbps": {
+                    "cv": 0.24709999999999993,
+                    "median_counts": 4,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 264
+                },
+                "everyayah:Yaser_Salamah_128kbps": {
+                    "cv": 0.22238999999999998,
+                    "median_counts": 6.666666666666667,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 264
+                },
+                "everyayah:Mohammad_al_Tablaway_128kbps": {
+                    "cv": 0.2363565217391305,
+                    "median_counts": 5.75,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 263
+                },
+                "everyayah:Muhammad_Jibreel_128kbps": {
+                    "cv": 0.19768,
+                    "median_counts": 3.75,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 262
+                },
+                "everyayah:Abdullah_Matroud_128kbps": {
+                    "cv": 0.21180000000000015,
+                    "median_counts": 3.5000000000000004,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 263
+                },
+                "everyayah:Ghamadi_40kbps": {
+                    "cv": 0.3177,
+                    "median_counts": 4.666666666666667,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 264
+                },
+                "everyayah:Nasser_Alqatami_128kbps": {
+                    "cv": 0.4360588235294118,
+                    "median_counts": 5.666666666666667,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 264
+                },
+                "everyayah:Ayman_Sowaid_64kbps": {
+                    "cv": 0.11860800000000009,
+                    "median_counts": 5,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 251
+                },
+                "everyayah:Minshawy_Mujawwad_192kbps": {
+                    "cv": 0.2256130434782609,
+                    "median_counts": 3.8333333333333335,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 229
+                },
+                "everyayah:Minshawy_Murattal_128kbps": {
+                    "cv": 0.16473333333333331,
+                    "median_counts": 4.5,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 255
+                },
+                "everyayah:Husary_Muallim_128kbps": {
+                    "cv": 0.13478181818181798,
+                    "median_counts": 3.4,
+                    "anchor": true,
+                    "exceeds_tau": false,
+                    "n": 243
+                }
+            },
+            "threshold_exact": false,
+            "anchor_median_counts": 3.1999999999999997,
+            "anchor_cv": 0.13478181818181798
+        },
+        "madd_2": {
+            "cv_threshold": 0.13899375000000008,
+            "n_anchor_reciters": 3,
+            "other_frac_exceeding": 0.868421052631579,
+            "other_median_cv": 0.18532499999999982,
+            "per_speaker": {
+                "everyayah:Husary_128kbps": {
+                    "cv": 0.11404615384615403,
+                    "median_counts": 2.166666666666667,
+                    "anchor": true,
+                    "exceeds_tau": false,
+                    "n": 1972
+                },
+                "everyayah:Salah_Al_Budair_128kbps": {
+                    "cv": 0.24709999999999993,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2117
+                },
+                "everyayah:Ahmed_Neana_128kbps": {
+                    "cv": 0.18532499999999982,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2077
+                },
+                "everyayah:Abdul_Basit_Mujawwad_128kbps": {
+                    "cv": 0.11991617647058836,
+                    "median_counts": 2.4285714285714284,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 1790
+                },
+                "everyayah:Karim_Mansoori_40kbps": {
+                    "cv": 0.14535294117647088,
+                    "median_counts": 2.4285714285714284,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 1768
+                },
+                "everyayah:Akram_AlAlaqimy_128kbps": {
+                    "cv": 0.18532499999999982,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2077
+                },
+                "everyayah:Muhsin_Al_Qasim_192kbps": {
+                    "cv": 0.24709999999999993,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2117
+                },
+                "everyayah:Saood_ash-Shuraym_128kbps": {
+                    "cv": 0.24709999999999993,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2117
+                },
+                "everyayah:Yasser_Ad-Dussary_128kbps": {
+                    "cv": 0.18532499999999982,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2117
+                },
+                "everyayah:Abdullah_Basfar_192kbps": {
+                    "cv": 0.16473333333333331,
+                    "median_counts": 2.25,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2076
+                },
+                "everyayah:Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net": {
+                    "cv": 0.24709999999999993,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2097
+                },
+                "everyayah:Hudhaify_128kbps": {
+                    "cv": 0,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 2077
+                },
+                "everyayah:Muhammad_Ayyoub_128kbps": {
+                    "cv": 0.18532499999999982,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2040
+                },
+                "everyayah:Ali_Hajjaj_AlSuesy_128kbps": {
+                    "cv": 0.18532499999999982,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2077
+                },
+                "everyayah:Hani_Rifai_192kbps": {
+                    "cv": 0.18532499999999982,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2069
+                },
+                "everyayah:aziz_alili_128kbps": {
+                    "cv": 0.18532499999999982,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2064
+                },
+                "everyayah:mahmoud_ali_al_banna_32kbps": {
+                    "cv": 0.18532499999999982,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2077
+                },
+                "everyayah:khalefa_al_tunaiji_64kbps": {
+                    "cv": 0.21180000000000007,
+                    "median_counts": 2.3333333333333335,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2077
+                },
+                "everyayah:Abu_Bakr_Ash-Shaatree_128kbps": {
+                    "cv": 0.18532499999999982,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2077
+                },
+                "everyayah:Abdurrahmaan_As-Sudais_192kbps": {
+                    "cv": 0.24709999999999993,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2117
+                },
+                "everyayah:Ali_Jaber_64kbps": {
+                    "cv": 0.18532499999999982,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2117
+                },
+                "everyayah:Khaalid_Abdullaah_al-Qahtaanee_192kbps": {
+                    "cv": 0.185325,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2077
+                },
+                "everyayah:MaherAlMuaiqly128kbps": {
+                    "cv": 0.24709999999999993,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2117
+                },
+                "everyayah:Fares_Abbad_64kbps": {
+                    "cv": 0.2118000000000002,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2117
+                },
+                "everyayah:Muhammad_AbdulKareem_128kbps": {
+                    "cv": 0.24709999999999993,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2111
+                },
+                "everyayah:Alafasy_128kbps": {
+                    "cv": 0.18532499999999982,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2077
+                },
+                "everyayah:Abdul_Basit_Murattal_192kbps": {
+                    "cv": 0.14826000000000011,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2062
+                },
+                "everyayah:Mustafa_Ismail_48kbps": {
+                    "cv": 0.14826000000000011,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 488
+                },
+                "everyayah:Husary_128kbps_Mujawwad": {
+                    "cv": 0.13899375000000008,
+                    "median_counts": 2.2857142857142856,
+                    "anchor": true,
+                    "exceeds_tau": false,
+                    "n": 1773
+                },
+                "everyayah:Sahl_Yassin_128kbps": {
+                    "cv": 0.24709999999999993,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2077
+                },
+                "everyayah:Salaah_AbdulRahman_Bukhatir_128kbps": {
+                    "cv": 0.24709999999999993,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2117
+                },
+                "everyayah:Yaser_Salamah_128kbps": {
+                    "cv": 0.16473333333333331,
+                    "median_counts": 2.25,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2117
+                },
+                "everyayah:Mohammad_al_Tablaway_128kbps": {
+                    "cv": 0.18532499999999982,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2077
+                },
+                "everyayah:Muhammad_Jibreel_128kbps": {
+                    "cv": 0.18532499999999982,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2100
+                },
+                "everyayah:Abdullah_Matroud_128kbps": {
+                    "cv": 0.18532499999999982,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2077
+                },
+                "everyayah:Ghamadi_40kbps": {
+                    "cv": 0,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 2117
+                },
+                "everyayah:Nasser_Alqatami_128kbps": {
+                    "cv": 0.21180000000000007,
+                    "median_counts": 2.3333333333333335,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2107
+                },
+                "everyayah:Ayman_Sowaid_64kbps": {
+                    "cv": 0.1235500000000001,
+                    "median_counts": 2.4,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 1955
+                },
+                "everyayah:Minshawy_Mujawwad_192kbps": {
+                    "cv": 0.13899375000000008,
+                    "median_counts": 2.2857142857142856,
+                    "anchor": false,
+                    "exceeds_tau": false,
+                    "n": 1765
+                },
+                "everyayah:Minshawy_Murattal_128kbps": {
+                    "cv": 0.18532499999999982,
+                    "median_counts": 2,
+                    "anchor": false,
+                    "exceeds_tau": true,
+                    "n": 2040
+                },
+                "everyayah:Husary_Muallim_128kbps": {
+                    "cv": 0.134781818181818,
+                    "median_counts": 2.1999999999999997,
+                    "anchor": true,
+                    "exceeds_tau": false,
+                    "n": 1874
+                }
+            },
+            "threshold_exact": false,
+            "anchor_median_counts": 2.25,
+            "anchor_cv": 0.134781818181818
+        }
+    },
+    "alpha": 0.01,
+    "clips": 11553
+}

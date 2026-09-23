@@ -1,0 +1,1469 @@
+{
+ "nodes": [
+  {
+   "id": "rule:catalogue",
+   "type": "artifact",
+   "label": "Tajweed rule catalogue",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "implemented",
+   "file": "datastore/rule_catalogue.py",
+   "note": "40 rule types, 1,160,912 located instances in engine_diag"
+  },
+  {
+   "id": "mech:segmental",
+   "type": "method",
+   "label": "Segmental test (phoneme-string counterfactual)",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "implemented"
+  },
+  {
+   "id": "mech:durational",
+   "type": "method",
+   "label": "Durational test (length as character repetition)",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "implemented"
+  },
+  {
+   "id": "mech:attribute",
+   "type": "method",
+   "label": "Attribute test (muaalem sifat head)",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "implemented"
+  },
+  {
+   "id": "fam:mudood",
+   "type": "phenomenon",
+   "label": "Mudood",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "partial"
+  },
+  {
+   "id": "rule:madd_tabii",
+   "type": "rule",
+   "label": "madd_tabii",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "plausible",
+   "note": "madd letter ا/ۥ/ۦ run of 2; counterfactual: run 2 → 1 or 4 (wrong count)",
+   "instances": 206927,
+   "legacy_pass_rate": 0.5222,
+   "mechanism": "durational"
+  },
+  {
+   "id": "rule:madd_muttasil",
+   "type": "rule",
+   "label": "madd_muttasil",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "broken",
+   "note": "madd run of 4–5 before hamza in the same word; counterfactual: 4 → 2 or 6",
+   "instances": 13195,
+   "legacy_pass_rate": 0.0521,
+   "mechanism": "durational"
+  },
+  {
+   "id": "rule:madd_munfasil",
+   "type": "rule",
+   "label": "madd_munfasil",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "broken",
+   "note": "madd run of 4–5 across a word boundary; counterfactual: 4 → 2 or 6",
+   "instances": 15461,
+   "legacy_pass_rate": 0.0581,
+   "mechanism": "durational"
+  },
+  {
+   "id": "rule:madd_lazim",
+   "type": "rule",
+   "label": "madd_lazim",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "broken",
+   "note": "madd run of 6; counterfactual: 6 → 2 or 4",
+   "instances": 1058,
+   "legacy_pass_rate": 0.0435,
+   "mechanism": "durational"
+  },
+  {
+   "id": "rule:madd_arid_lissukun",
+   "type": "rule",
+   "label": "madd_arid_lissukun",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "plausible",
+   "note": "madd run of 2/4/6 before a final sukoon; counterfactual: vary the count",
+   "instances": 30778,
+   "legacy_pass_rate": 0.5588,
+   "mechanism": "durational"
+  },
+  {
+   "id": "rule:madd_leen",
+   "type": "rule",
+   "label": "madd_leen",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "plausible",
+   "note": "و/ي leen run before a stop; counterfactual: vary the count",
+   "instances": 974,
+   "legacy_pass_rate": 0.5688,
+   "mechanism": "durational"
+  },
+  {
+   "id": "rule:madd_badal",
+   "type": "rule",
+   "label": "madd_badal",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "suspect",
+   "note": "hamza + madd run of 2; counterfactual: 2 → 4",
+   "instances": 9731,
+   "legacy_pass_rate": 0.182,
+   "mechanism": "durational"
+  },
+  {
+   "id": "rule:madd_iwad",
+   "type": "rule",
+   "label": "madd_iwad",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "broken",
+   "note": "tanween fath → ا run of 2 at a stop; counterfactual: 2 → 0 (no 'iwad)",
+   "instances": 7763,
+   "legacy_pass_rate": 0.0195,
+   "mechanism": "durational"
+  },
+  {
+   "id": "rule:madd_silah_sughra",
+   "type": "rule",
+   "label": "madd_silah_sughra",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "suspect",
+   "note": "ۥ/ۦ run of 2 on the pronoun ha; counterfactual: 2 → 0 (no silah)",
+   "instances": 10912,
+   "legacy_pass_rate": 0.4931,
+   "mechanism": "durational"
+  },
+  {
+   "id": "rule:madd_silah_kubra",
+   "type": "rule",
+   "label": "madd_silah_kubra",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "broken",
+   "note": "ۥ/ۦ run of 4 on the pronoun ha before hamza; counterfactual: 4 → 2 or 0",
+   "instances": 1950,
+   "legacy_pass_rate": 0.079,
+   "mechanism": "durational"
+  },
+  {
+   "id": "fam:noon_sakinah",
+   "type": "phenomenon",
+   "label": "Noon Sakinah",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "partial"
+  },
+  {
+   "id": "rule:izhar_halqi",
+   "type": "rule",
+   "label": "izhar_halqi",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "plausible",
+   "note": "clear ن before a throat letter; counterfactual: ن → ں (wrongly hidden)",
+   "instances": 17466,
+   "legacy_pass_rate": 0.7398,
+   "mechanism": "segmental"
+  },
+  {
+   "id": "head:ghonna",
+   "type": "model_output",
+   "label": "muaalem head: ghonna",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "implemented",
+   "file": "research_agency_lab/substrate_library/julia/src/SifatGop.jl"
+  },
+  {
+   "id": "rule:ikhfa",
+   "type": "rule",
+   "label": "ikhfa",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "broken",
+   "note": "ں run of ~3 (nasalised, held); counterfactual: ں → ن (izhar) or run → 1",
+   "instances": 31041,
+   "legacy_pass_rate": 0.0476,
+   "mechanism": "durational"
+  },
+  {
+   "id": "rule:idgham_ghunnah",
+   "type": "rule",
+   "label": "idgham_ghunnah",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "broken",
+   "note": "ن absorbed into ي/ن/م/و, held run; counterfactual: restore the ن (no idgham)",
+   "instances": 21818,
+   "legacy_pass_rate": 0.0684,
+   "mechanism": "segmental"
+  },
+  {
+   "id": "rule:idgham_no_ghunnah",
+   "type": "rule",
+   "label": "idgham_no_ghunnah",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "suspect",
+   "note": "ن absorbed into ل/ر, no ghunnah; counterfactual: restore ن / add ghunnah",
+   "instances": 6279,
+   "legacy_pass_rate": 0.2895,
+   "mechanism": "segmental"
+  },
+  {
+   "id": "rule:iqlab",
+   "type": "rule",
+   "label": "iqlab",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "suspect",
+   "note": "ن → م before ب, held; counterfactual: م → ن (no iqlab)",
+   "instances": 3467,
+   "legacy_pass_rate": 0.1881,
+   "mechanism": "segmental"
+  },
+  {
+   "id": "fam:meem_sakinah",
+   "type": "phenomenon",
+   "label": "Meem Sakinah",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "partial"
+  },
+  {
+   "id": "rule:ikhfa_shafawi",
+   "type": "rule",
+   "label": "ikhfa_shafawi",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "broken",
+   "note": "م held before ب; counterfactual: shorten the hold / no ikhfa",
+   "instances": 2994,
+   "legacy_pass_rate": 0.0578,
+   "mechanism": "durational"
+  },
+  {
+   "id": "rule:idgham_shafawi",
+   "type": "rule",
+   "label": "idgham_shafawi",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "broken",
+   "note": "م + م merged into a held run; counterfactual: split the run (no idgham)",
+   "instances": 5124,
+   "legacy_pass_rate": 0.0342,
+   "mechanism": "segmental"
+  },
+  {
+   "id": "rule:izhar_shafawi",
+   "type": "rule",
+   "label": "izhar_shafawi",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "plausible",
+   "note": "clear م, not held; counterfactual: hold it (wrong ikhfa)",
+   "instances": 34699,
+   "legacy_pass_rate": 0.7098,
+   "mechanism": "segmental"
+  },
+  {
+   "id": "fam:ghunnah",
+   "type": "phenomenon",
+   "label": "Ghunnah",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "partial"
+  },
+  {
+   "id": "rule:ghunnah",
+   "type": "rule",
+   "label": "ghunnah",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "broken",
+   "note": "ن/م shadda as a run of ~4; counterfactual: run → 1 (ghunnah dropped)",
+   "instances": 30539,
+   "legacy_pass_rate": 0.0451,
+   "mechanism": "durational"
+  },
+  {
+   "id": "fam:qalqalah",
+   "type": "phenomenon",
+   "label": "Qalqalah",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "partial"
+  },
+  {
+   "id": "rule:qalqalah",
+   "type": "rule",
+   "label": "qalqalah",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "plausible",
+   "note": "ق ط ب ج د at sukoon; counterfactual: expect moqalqal vs not_moqalqal",
+   "instances": 24984,
+   "legacy_pass_rate": 0.8165,
+   "mechanism": "attribute"
+  },
+  {
+   "id": "head:qalqla",
+   "type": "model_output",
+   "label": "muaalem head: qalqla",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "implemented",
+   "file": "research_agency_lab/substrate_library/julia/src/SifatGop.jl"
+  },
+  {
+   "id": "fam:idgham",
+   "type": "phenomenon",
+   "label": "Idgham",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "partial"
+  },
+  {
+   "id": "rule:idgham_mithlayn",
+   "type": "rule",
+   "label": "idgham_mithlayn",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "plausible",
+   "note": "identical letters merged into one run of 2; counterfactual: split the run",
+   "instances": 960,
+   "legacy_pass_rate": 0.9406,
+   "mechanism": "segmental"
+  },
+  {
+   "id": "rule:idgham_mutajanisayn",
+   "type": "rule",
+   "label": "idgham_mutajanisayn",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "plausible",
+   "note": "same-makhraj pair merged; counterfactual: keep both letters distinct",
+   "instances": 508,
+   "legacy_pass_rate": 0.811,
+   "mechanism": "segmental"
+  },
+  {
+   "id": "rule:idgham_mutaqaribayn",
+   "type": "rule",
+   "label": "idgham_mutaqaribayn",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "plausible",
+   "note": "near-makhraj pair merged; counterfactual: keep both letters distinct",
+   "instances": 268,
+   "legacy_pass_rate": 0.9813,
+   "mechanism": "segmental"
+  },
+  {
+   "id": "fam:raa_lam",
+   "type": "phenomenon",
+   "label": "Raa Lam",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "partial"
+  },
+  {
+   "id": "rule:tafkheem",
+   "type": "rule",
+   "label": "tafkheem",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "plausible",
+   "note": "heavy realisation of ر/ل; counterfactual: expect mofakham vs moraqaq",
+   "instances": 139317,
+   "legacy_pass_rate": 0.7155,
+   "mechanism": "attribute"
+  },
+  {
+   "id": "head:tafkheem_or_taqeeq",
+   "type": "model_output",
+   "label": "muaalem head: tafkheem_or_taqeeq",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "implemented",
+   "file": "research_agency_lab/substrate_library/julia/src/SifatGop.jl"
+  },
+  {
+   "id": "rule:tarqeeq",
+   "type": "rule",
+   "label": "tarqeeq",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "suspect",
+   "note": "light realisation of ر/ل; counterfactual: expect moraqaq vs mofakham",
+   "instances": 21103,
+   "legacy_pass_rate": 0.4164,
+   "mechanism": "attribute"
+  },
+  {
+   "id": "rule:jawaz_wajhayn",
+   "type": "rule",
+   "label": "jawaz_wajhayn",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "plausible",
+   "note": "both realisations permitted; counterfactual: either accepted (never FAIL)",
+   "instances": 24,
+   "legacy_pass_rate": 1.0,
+   "mechanism": "attribute"
+  },
+  {
+   "id": "fam:wasl_waqf",
+   "type": "phenomenon",
+   "label": "Wasl Waqf",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "partial"
+  },
+  {
+   "id": "rule:hamzat_wasl",
+   "type": "rule",
+   "label": "hamzat_wasl",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "plausible",
+   "note": "initial hamza dropped when joined; counterfactual: restore/drop the hamza",
+   "instances": 79849,
+   "legacy_pass_rate": 0.9977,
+   "mechanism": "segmental"
+  },
+  {
+   "id": "rule:sakt",
+   "type": "rule",
+   "label": "sakt",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "broken",
+   "note": "brief silence without breath; counterfactual: remove the pause / make it a waqf",
+   "instances": 104,
+   "legacy_pass_rate": 0.0481,
+   "mechanism": "durational"
+  },
+  {
+   "id": "fam:sifaat",
+   "type": "phenomenon",
+   "label": "Sifaat",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "partial"
+  },
+  {
+   "id": "rule:hams",
+   "type": "rule",
+   "label": "hams",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "suspect",
+   "note": "voiceless letter; counterfactual: expect hams vs jahr",
+   "instances": 45811,
+   "legacy_pass_rate": 0.3915,
+   "mechanism": "attribute"
+  },
+  {
+   "id": "head:hams_or_jahr",
+   "type": "model_output",
+   "label": "muaalem head: hams_or_jahr",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "implemented",
+   "file": "research_agency_lab/substrate_library/julia/src/SifatGop.jl"
+  },
+  {
+   "id": "rule:jahr",
+   "type": "rule",
+   "label": "jahr",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "plausible",
+   "note": "voiced letter; counterfactual: expect jahr vs hams",
+   "instances": 116962,
+   "legacy_pass_rate": 0.5659,
+   "mechanism": "attribute"
+  },
+  {
+   "id": "rule:shiddah",
+   "type": "rule",
+   "label": "shiddah",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "suspect",
+   "note": "full stop of the airflow; counterfactual: expect shadeed",
+   "instances": 9234,
+   "legacy_pass_rate": 0.3012,
+   "mechanism": "attribute"
+  },
+  {
+   "id": "head:shidda_or_rakhawa",
+   "type": "model_output",
+   "label": "muaalem head: shidda_or_rakhawa",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "implemented",
+   "file": "research_agency_lab/substrate_library/julia/src/SifatGop.jl"
+  },
+  {
+   "id": "rule:tawassut",
+   "type": "rule",
+   "label": "tawassut",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "plausible",
+   "note": "between shidda and rakhawa; counterfactual: expect between",
+   "instances": 72675,
+   "legacy_pass_rate": 0.6404,
+   "mechanism": "attribute"
+  },
+  {
+   "id": "rule:rakhawah",
+   "type": "rule",
+   "label": "rakhawah",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "suspect",
+   "note": "continuant; counterfactual: expect rikhw",
+   "instances": 80864,
+   "legacy_pass_rate": 0.4253,
+   "mechanism": "attribute"
+  },
+  {
+   "id": "rule:itbaq",
+   "type": "rule",
+   "label": "itbaq",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "plausible",
+   "note": "tongue raised to the palate; counterfactual: expect motbaq vs monfateh",
+   "instances": 20801,
+   "legacy_pass_rate": 0.706,
+   "mechanism": "attribute"
+  },
+  {
+   "id": "head:itbaq",
+   "type": "model_output",
+   "label": "muaalem head: itbaq",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "implemented",
+   "file": "research_agency_lab/substrate_library/julia/src/SifatGop.jl"
+  },
+  {
+   "id": "rule:safir",
+   "type": "rule",
+   "label": "safir",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "suspect",
+   "note": "whistle (ص ز س); counterfactual: expect safeer",
+   "instances": 58793,
+   "legacy_pass_rate": 0.4993,
+   "mechanism": "attribute"
+  },
+  {
+   "id": "head:safeer",
+   "type": "model_output",
+   "label": "muaalem head: safeer",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "implemented",
+   "file": "research_agency_lab/substrate_library/julia/src/SifatGop.jl"
+  },
+  {
+   "id": "rule:tafashhi",
+   "type": "rule",
+   "label": "tafashhi",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "plausible",
+   "note": "spreading (ش); counterfactual: expect motafashie",
+   "instances": 12892,
+   "legacy_pass_rate": 0.6233,
+   "mechanism": "attribute"
+  },
+  {
+   "id": "head:tafashie",
+   "type": "model_output",
+   "label": "muaalem head: tafashie",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "implemented",
+   "file": "research_agency_lab/substrate_library/julia/src/SifatGop.jl"
+  },
+  {
+   "id": "rule:istitaalah",
+   "type": "rule",
+   "label": "istitaalah",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "suspect",
+   "note": "elongation (ض); counterfactual: expect mostateel",
+   "instances": 2156,
+   "legacy_pass_rate": 0.2426,
+   "mechanism": "attribute"
+  },
+  {
+   "id": "head:istitala",
+   "type": "model_output",
+   "label": "muaalem head: istitala",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "implemented",
+   "file": "research_agency_lab/substrate_library/julia/src/SifatGop.jl"
+  },
+  {
+   "id": "rule:takreer",
+   "type": "rule",
+   "label": "takreer",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "plausible",
+   "note": "trill of ر (must not be exaggerated); counterfactual: expect not_mokarar",
+   "instances": 21431,
+   "legacy_pass_rate": 0.7245,
+   "mechanism": "attribute"
+  },
+  {
+   "id": "head:tikraar",
+   "type": "model_output",
+   "label": "muaalem head: tikraar",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "implemented",
+   "file": "research_agency_lab/substrate_library/julia/src/SifatGop.jl"
+  },
+  {
+   "id": "fam:lahn",
+   "type": "phenomenon",
+   "label": "Lahn",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "partial"
+  },
+  {
+   "id": "rule:lahn_letter",
+   "type": "rule",
+   "label": "lahn_letter",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "unmeasured",
+   "note": "the consonant itself; counterfactual: swap to a classical confusion",
+   "instances": 0,
+   "legacy_pass_rate": null,
+   "mechanism": "segmental"
+  },
+  {
+   "id": "rule:lahn_harakah",
+   "type": "rule",
+   "label": "lahn_harakah",
+   "refs": [
+    "datastore/rule_catalogue.py"
+   ],
+   "status": "unmeasured",
+   "note": "the short vowel itself; counterfactual: swap fatha/damma/kasra",
+   "instances": 0,
+   "legacy_pass_rate": null,
+   "mechanism": "segmental"
+  }
+ ],
+ "edges": [
+  {
+   "from": "rule:madd_tabii",
+   "to": "fam:mudood",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:madd_tabii",
+   "to": "mech:durational",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:madd_tabii",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:madd_muttasil",
+   "to": "fam:mudood",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:madd_muttasil",
+   "to": "mech:durational",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:madd_muttasil",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:madd_munfasil",
+   "to": "fam:mudood",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:madd_munfasil",
+   "to": "mech:durational",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:madd_munfasil",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:madd_lazim",
+   "to": "fam:mudood",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:madd_lazim",
+   "to": "mech:durational",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:madd_lazim",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:madd_arid_lissukun",
+   "to": "fam:mudood",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:madd_arid_lissukun",
+   "to": "mech:durational",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:madd_arid_lissukun",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:madd_leen",
+   "to": "fam:mudood",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:madd_leen",
+   "to": "mech:durational",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:madd_leen",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:madd_badal",
+   "to": "fam:mudood",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:madd_badal",
+   "to": "mech:durational",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:madd_badal",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:madd_iwad",
+   "to": "fam:mudood",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:madd_iwad",
+   "to": "mech:durational",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:madd_iwad",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:madd_silah_sughra",
+   "to": "fam:mudood",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:madd_silah_sughra",
+   "to": "mech:durational",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:madd_silah_sughra",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:madd_silah_kubra",
+   "to": "fam:mudood",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:madd_silah_kubra",
+   "to": "mech:durational",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:madd_silah_kubra",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:izhar_halqi",
+   "to": "fam:noon_sakinah",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:izhar_halqi",
+   "to": "mech:segmental",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:izhar_halqi",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:izhar_halqi",
+   "to": "head:ghonna",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:ikhfa",
+   "to": "fam:noon_sakinah",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:ikhfa",
+   "to": "mech:durational",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:ikhfa",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:ikhfa",
+   "to": "head:ghonna",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:idgham_ghunnah",
+   "to": "fam:noon_sakinah",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:idgham_ghunnah",
+   "to": "mech:segmental",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:idgham_ghunnah",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:idgham_ghunnah",
+   "to": "head:ghonna",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:idgham_no_ghunnah",
+   "to": "fam:noon_sakinah",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:idgham_no_ghunnah",
+   "to": "mech:segmental",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:idgham_no_ghunnah",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:idgham_no_ghunnah",
+   "to": "head:ghonna",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:iqlab",
+   "to": "fam:noon_sakinah",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:iqlab",
+   "to": "mech:segmental",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:iqlab",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:iqlab",
+   "to": "head:ghonna",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:ikhfa_shafawi",
+   "to": "fam:meem_sakinah",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:ikhfa_shafawi",
+   "to": "mech:durational",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:ikhfa_shafawi",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:ikhfa_shafawi",
+   "to": "head:ghonna",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:idgham_shafawi",
+   "to": "fam:meem_sakinah",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:idgham_shafawi",
+   "to": "mech:segmental",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:idgham_shafawi",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:idgham_shafawi",
+   "to": "head:ghonna",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:izhar_shafawi",
+   "to": "fam:meem_sakinah",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:izhar_shafawi",
+   "to": "mech:segmental",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:izhar_shafawi",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:izhar_shafawi",
+   "to": "head:ghonna",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:ghunnah",
+   "to": "fam:ghunnah",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:ghunnah",
+   "to": "mech:durational",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:ghunnah",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:ghunnah",
+   "to": "head:ghonna",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:qalqalah",
+   "to": "fam:qalqalah",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:qalqalah",
+   "to": "mech:attribute",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:qalqalah",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:qalqalah",
+   "to": "head:qalqla",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:idgham_mithlayn",
+   "to": "fam:idgham",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:idgham_mithlayn",
+   "to": "mech:segmental",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:idgham_mithlayn",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:idgham_mutajanisayn",
+   "to": "fam:idgham",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:idgham_mutajanisayn",
+   "to": "mech:segmental",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:idgham_mutajanisayn",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:idgham_mutaqaribayn",
+   "to": "fam:idgham",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:idgham_mutaqaribayn",
+   "to": "mech:segmental",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:idgham_mutaqaribayn",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:tafkheem",
+   "to": "fam:raa_lam",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:tafkheem",
+   "to": "mech:attribute",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:tafkheem",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:tafkheem",
+   "to": "head:tafkheem_or_taqeeq",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:tarqeeq",
+   "to": "fam:raa_lam",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:tarqeeq",
+   "to": "mech:attribute",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:tarqeeq",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:tarqeeq",
+   "to": "head:tafkheem_or_taqeeq",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:jawaz_wajhayn",
+   "to": "fam:raa_lam",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:jawaz_wajhayn",
+   "to": "mech:attribute",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:jawaz_wajhayn",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:jawaz_wajhayn",
+   "to": "head:tafkheem_or_taqeeq",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:hamzat_wasl",
+   "to": "fam:wasl_waqf",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:hamzat_wasl",
+   "to": "mech:segmental",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:hamzat_wasl",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:sakt",
+   "to": "fam:wasl_waqf",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:sakt",
+   "to": "mech:durational",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:sakt",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:hams",
+   "to": "fam:sifaat",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:hams",
+   "to": "mech:attribute",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:hams",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:hams",
+   "to": "head:hams_or_jahr",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:jahr",
+   "to": "fam:sifaat",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:jahr",
+   "to": "mech:attribute",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:jahr",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:jahr",
+   "to": "head:hams_or_jahr",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:shiddah",
+   "to": "fam:sifaat",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:shiddah",
+   "to": "mech:attribute",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:shiddah",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:shiddah",
+   "to": "head:shidda_or_rakhawa",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:tawassut",
+   "to": "fam:sifaat",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:tawassut",
+   "to": "mech:attribute",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:tawassut",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:tawassut",
+   "to": "head:shidda_or_rakhawa",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:rakhawah",
+   "to": "fam:sifaat",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:rakhawah",
+   "to": "mech:attribute",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:rakhawah",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:rakhawah",
+   "to": "head:shidda_or_rakhawa",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:itbaq",
+   "to": "fam:sifaat",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:itbaq",
+   "to": "mech:attribute",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:itbaq",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:itbaq",
+   "to": "head:itbaq",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:safir",
+   "to": "fam:sifaat",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:safir",
+   "to": "mech:attribute",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:safir",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:safir",
+   "to": "head:safeer",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:tafashhi",
+   "to": "fam:sifaat",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:tafashhi",
+   "to": "mech:attribute",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:tafashhi",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:tafashhi",
+   "to": "head:tafashie",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:istitaalah",
+   "to": "fam:sifaat",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:istitaalah",
+   "to": "mech:attribute",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:istitaalah",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:istitaalah",
+   "to": "head:istitala",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:takreer",
+   "to": "fam:sifaat",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:takreer",
+   "to": "mech:attribute",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:takreer",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:takreer",
+   "to": "head:tikraar",
+   "rel": "judged_by"
+  },
+  {
+   "from": "rule:lahn_letter",
+   "to": "fam:lahn",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:lahn_letter",
+   "to": "mech:segmental",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:lahn_letter",
+   "rel": "catalogues"
+  },
+  {
+   "from": "rule:lahn_harakah",
+   "to": "fam:lahn",
+   "rel": "belongs_to"
+  },
+  {
+   "from": "rule:lahn_harakah",
+   "to": "mech:segmental",
+   "rel": "tested_by"
+  },
+  {
+   "from": "rule:catalogue",
+   "to": "rule:lahn_harakah",
+   "rel": "catalogues"
+  }
+ ]
+}

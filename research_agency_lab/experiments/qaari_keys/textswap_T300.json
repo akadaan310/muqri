@@ -1,0 +1,864 @@
+{
+    "deviations": {
+        "everyayah:Husary_Muallim_128kbps": 82,
+        "everyayah:Salah_Al_Budair_128kbps": 47,
+        "everyayah:Ahmed_Neana_128kbps": 18,
+        "everyayah:Abdul_Basit_Mujawwad_128kbps": 31,
+        "everyayah:Karim_Mansoori_40kbps": 24,
+        "everyayah:Akram_AlAlaqimy_128kbps": 65,
+        "everyayah:Muhsin_Al_Qasim_192kbps": 9,
+        "everyayah:Saood_ash-Shuraym_128kbps": 30,
+        "everyayah:Yasser_Ad-Dussary_128kbps": 68,
+        "everyayah:Abdullah_Basfar_192kbps": 46,
+        "everyayah:Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net": 85,
+        "everyayah:Hudhaify_128kbps": 59,
+        "everyayah:Muhammad_Ayyoub_128kbps": 61,
+        "everyayah:Ali_Hajjaj_AlSuesy_128kbps": 28,
+        "everyayah:Hani_Rifai_192kbps": 25,
+        "everyayah:aziz_alili_128kbps": 12,
+        "everyayah:mahmoud_ali_al_banna_32kbps": 24,
+        "everyayah:khalefa_al_tunaiji_64kbps": 43,
+        "everyayah:Abu_Bakr_Ash-Shaatree_128kbps": 121,
+        "everyayah:Abdurrahmaan_As-Sudais_192kbps": 36,
+        "everyayah:Ali_Jaber_64kbps": 11,
+        "everyayah:Khaalid_Abdullaah_al-Qahtaanee_192kbps": 57,
+        "everyayah:MaherAlMuaiqly128kbps": 107,
+        "everyayah:Fares_Abbad_64kbps": 5,
+        "everyayah:Muhammad_AbdulKareem_128kbps": 88,
+        "everyayah:Alafasy_128kbps": 47,
+        "everyayah:Abdul_Basit_Murattal_192kbps": 27,
+        "everyayah:Mustafa_Ismail_48kbps": 10,
+        "everyayah:Husary_128kbps_Mujawwad": 37,
+        "everyayah:Sahl_Yassin_128kbps": 52,
+        "everyayah:Salaah_AbdulRahman_Bukhatir_128kbps": 70,
+        "everyayah:Yaser_Salamah_128kbps": 50,
+        "everyayah:Mohammad_al_Tablaway_128kbps": 7,
+        "everyayah:Muhammad_Jibreel_128kbps": 44,
+        "everyayah:Abdullah_Matroud_128kbps": 21,
+        "everyayah:Ghamadi_40kbps": 46,
+        "everyayah:Nasser_Alqatami_128kbps": 123,
+        "everyayah:Ayman_Sowaid_64kbps": 92,
+        "everyayah:Minshawy_Mujawwad_192kbps": 53,
+        "everyayah:Minshawy_Murattal_128kbps": 35,
+        "everyayah:Husary_128kbps": 17
+    },
+    "anchors": [
+        "everyayah:Husary_128kbps",
+        "everyayah:Husary_128kbps_Mujawwad",
+        "qdc:6",
+        "qdc:12",
+        "everyayah:Husary_Muallim_128kbps"
+    ],
+    "alpha": 0.01,
+    "consonant": {
+        "anchor_null_n": 13150,
+        "threshold": 0.06706046313047409,
+        "per_speaker": {
+            "everyayah:Husary_Muallim_128kbps": {
+                "named": 0.9962166467542811,
+                "clean_flag_rate": 0.007251302968502153,
+                "anchor": true,
+                "clean_units": 4413,
+                "recall": 1,
+                "swaps": 5022
+            },
+            "everyayah:Salah_Al_Budair_128kbps": {
+                "named": 0.9916952518505145,
+                "clean_flag_rate": 0.018693508627773213,
+                "anchor": false,
+                "clean_units": 4868,
+                "recall": 0.9996389239935006,
+                "swaps": 5539
+            },
+            "everyayah:Ahmed_Neana_128kbps": {
+                "named": 0.9928519061583577,
+                "clean_flag_rate": 0.015859766277128547,
+                "anchor": false,
+                "clean_units": 4792,
+                "recall": 0.9987170087976539,
+                "swaps": 5456
+            },
+            "everyayah:Abdul_Basit_Mujawwad_128kbps": {
+                "named": 0.9931135225375626,
+                "clean_flag_rate": 0.019235336024697222,
+                "anchor": false,
+                "clean_units": 4211,
+                "recall": 0.9995826377295493,
+                "swaps": 4792
+            },
+            "everyayah:Karim_Mansoori_40kbps": {
+                "named": 0.986272439281943,
+                "clean_flag_rate": 0.030987268796540957,
+                "anchor": false,
+                "clean_units": 4163,
+                "recall": 0.9987328405491024,
+                "swaps": 4735
+            },
+            "everyayah:Akram_AlAlaqimy_128kbps": {
+                "named": 0.9943181818181818,
+                "clean_flag_rate": 0.013564273789649415,
+                "anchor": false,
+                "clean_units": 4792,
+                "recall": 0.999266862170088,
+                "swaps": 5456
+            },
+            "everyayah:Muhsin_Al_Qasim_192kbps": {
+                "named": 0.9875428777757718,
+                "clean_flag_rate": 0.027115858668857847,
+                "anchor": false,
+                "clean_units": 4868,
+                "recall": 0.9998194619967503,
+                "swaps": 5539
+            },
+            "everyayah:Saood_ash-Shuraym_128kbps": {
+                "named": 0.9920563278570139,
+                "clean_flag_rate": 0.015817584223500412,
+                "anchor": false,
+                "clean_units": 4868,
+                "recall": 0.9998194619967503,
+                "swaps": 5539
+            },
+            "everyayah:Yasser_Ad-Dussary_128kbps": {
+                "named": 0.9922368658602636,
+                "clean_flag_rate": 0.014790468364831553,
+                "anchor": false,
+                "clean_units": 4868,
+                "recall": 0.9992778479870013,
+                "swaps": 5539
+            },
+            "everyayah:Abdullah_Basfar_192kbps": {
+                "named": 0.9954136855622822,
+                "clean_flag_rate": 0.008355964069354502,
+                "anchor": false,
+                "clean_units": 4787,
+                "recall": 0.9992661896899652,
+                "swaps": 5451
+            },
+            "everyayah:Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net": {
+                "named": 0.9801312431644186,
+                "clean_flag_rate": 0.057883817427385895,
+                "anchor": false,
+                "clean_units": 4820,
+                "recall": 0.9983594604447685,
+                "swaps": 5486
+            },
+            "everyayah:Hudhaify_128kbps": {
+                "named": 0.9954178885630498,
+                "clean_flag_rate": 0.0077212020033388985,
+                "anchor": false,
+                "clean_units": 4792,
+                "recall": 1,
+                "swaps": 5456
+            },
+            "everyayah:Muhammad_Ayyoub_128kbps": {
+                "named": 0.9951591882331037,
+                "clean_flag_rate": 0.008699342244854658,
+                "anchor": false,
+                "clean_units": 4713,
+                "recall": 0.9994414447961274,
+                "swaps": 5371
+            },
+            "everyayah:Ali_Hajjaj_AlSuesy_128kbps": {
+                "named": 0.9945014662756598,
+                "clean_flag_rate": 0.011686143572621035,
+                "anchor": false,
+                "clean_units": 4792,
+                "recall": 0.999266862170088,
+                "swaps": 5456
+            },
+            "everyayah:Hani_Rifai_192kbps": {
+                "named": 0.9863920559029055,
+                "clean_flag_rate": 0.03265647896169144,
+                "anchor": false,
+                "clean_units": 4777,
+                "recall": 0.9994483265906583,
+                "swaps": 5438
+            },
+            "everyayah:aziz_alili_128kbps": {
+                "named": 0.9957595870206489,
+                "clean_flag_rate": 0.01007979840403192,
+                "anchor": false,
+                "clean_units": 4762,
+                "recall": 0.9998156342182891,
+                "swaps": 5424
+            },
+            "everyayah:mahmoud_ali_al_banna_32kbps": {
+                "named": 0.9948680351906158,
+                "clean_flag_rate": 0.00813856427378965,
+                "anchor": false,
+                "clean_units": 4792,
+                "recall": 0.999633431085044,
+                "swaps": 5456
+            },
+            "everyayah:khalefa_al_tunaiji_64kbps": {
+                "named": 0.9657258064516129,
+                "clean_flag_rate": 0.03714524207011686,
+                "anchor": false,
+                "clean_units": 4792,
+                "recall": 0.9981671554252199,
+                "swaps": 5456
+            },
+            "everyayah:Abu_Bakr_Ash-Shaatree_128kbps": {
+                "named": 0.9946847507331378,
+                "clean_flag_rate": 0.012729549248747913,
+                "anchor": false,
+                "clean_units": 4792,
+                "recall": 0.9994501466275659,
+                "swaps": 5456
+            },
+            "everyayah:Abdurrahmaan_As-Sudais_192kbps": {
+                "named": 0.9922368658602636,
+                "clean_flag_rate": 0.014790468364831553,
+                "anchor": false,
+                "clean_units": 4868,
+                "recall": 0.9996389239935006,
+                "swaps": 5539
+            },
+            "everyayah:Ali_Jaber_64kbps": {
+                "named": 0.9962087019317566,
+                "clean_flag_rate": 0.009038619556285949,
+                "anchor": false,
+                "clean_units": 4868,
+                "recall": 0.9994583859902509,
+                "swaps": 5539
+            },
+            "everyayah:Khaalid_Abdullaah_al-Qahtaanee_192kbps": {
+                "named": 0.9840542521994134,
+                "clean_flag_rate": 0.03359766277128547,
+                "anchor": false,
+                "clean_units": 4792,
+                "recall": 0.999266862170088,
+                "swaps": 5456
+            },
+            "everyayah:MaherAlMuaiqly128kbps": {
+                "named": 0.9873623397725221,
+                "clean_flag_rate": 0.02999178307313065,
+                "anchor": false,
+                "clean_units": 4868,
+                "recall": 0.9981946199675031,
+                "swaps": 5539
+            },
+            "everyayah:Fares_Abbad_64kbps": {
+                "named": 0.9891677198050189,
+                "clean_flag_rate": 0.023007395234182416,
+                "anchor": false,
+                "clean_units": 4868,
+                "recall": 0.9996389239935006,
+                "swaps": 5539
+            },
+            "everyayah:Muhammad_AbdulKareem_128kbps": {
+                "named": 0.9931059506531205,
+                "clean_flag_rate": 0.021267809209167873,
+                "anchor": false,
+                "clean_units": 4843,
+                "recall": 0.999455732946299,
+                "swaps": 5512
+            },
+            "everyayah:Alafasy_128kbps": {
+                "named": 0.9956011730205279,
+                "clean_flag_rate": 0.009181969949916527,
+                "anchor": false,
+                "clean_units": 4792,
+                "recall": 1,
+                "swaps": 5456
+            },
+            "everyayah:Abdul_Basit_Murattal_192kbps": {
+                "named": 0.9952100221075902,
+                "clean_flag_rate": 0.008803185914902536,
+                "anchor": false,
+                "clean_units": 4771,
+                "recall": 1,
+                "swaps": 5428
+            },
+            "everyayah:Mustafa_Ismail_48kbps": {
+                "named": 0.9828291087489779,
+                "clean_flag_rate": 0.04064272211720227,
+                "anchor": false,
+                "clean_units": 1058,
+                "recall": 0.9983646770237122,
+                "swaps": 1223
+            },
+            "everyayah:Husary_128kbps_Mujawwad": {
+                "named": 0.9925941599661448,
+                "clean_flag_rate": 0.012996389891696752,
+                "anchor": true,
+                "clean_units": 4155,
+                "recall": 0.9993652137113839,
+                "swaps": 4726
+            },
+            "everyayah:Sahl_Yassin_128kbps": {
+                "named": 0.9926686217008798,
+                "clean_flag_rate": 0.015025041736227046,
+                "anchor": false,
+                "clean_units": 4792,
+                "recall": 0.998900293255132,
+                "swaps": 5456
+            },
+            "everyayah:Salaah_AbdulRahman_Bukhatir_128kbps": {
+                "named": 0.9873623397725221,
+                "clean_flag_rate": 0.025472473294987676,
+                "anchor": false,
+                "clean_units": 4868,
+                "recall": 0.9994583859902509,
+                "swaps": 5539
+            },
+            "everyayah:Yaser_Salamah_128kbps": {
+                "named": 0.9947643979057592,
+                "clean_flag_rate": 0.010271158586688579,
+                "anchor": false,
+                "clean_units": 4868,
+                "recall": 0.9996389239935006,
+                "swaps": 5539
+            },
+            "everyayah:Mohammad_al_Tablaway_128kbps": {
+                "named": 0.9930351906158358,
+                "clean_flag_rate": 0.019198664440734557,
+                "anchor": false,
+                "clean_units": 4792,
+                "recall": 0.9994501466275659,
+                "swaps": 5456
+            },
+            "everyayah:Muhammad_Jibreel_128kbps": {
+                "named": 0.9832099656977794,
+                "clean_flag_rate": 0.022801972062448644,
+                "anchor": false,
+                "clean_units": 4868,
+                "recall": 0.9913341758440152,
+                "swaps": 5539
+            },
+            "everyayah:Abdullah_Matroud_128kbps": {
+                "named": 0.9879032258064516,
+                "clean_flag_rate": 0.02921535893155259,
+                "anchor": false,
+                "clean_units": 4792,
+                "recall": 0.998900293255132,
+                "swaps": 5456
+            },
+            "everyayah:Ghamadi_40kbps": {
+                "named": 0.992597941866763,
+                "clean_flag_rate": 0.013968775677896467,
+                "anchor": false,
+                "clean_units": 4868,
+                "recall": 0.9990973099837516,
+                "swaps": 5539
+            },
+            "everyayah:Nasser_Alqatami_128kbps": {
+                "named": 0.9936651583710407,
+                "clean_flag_rate": 0.015242018537590113,
+                "anchor": false,
+                "clean_units": 4855,
+                "recall": 0.9992760180995475,
+                "swaps": 5525
+            },
+            "everyayah:Ayman_Sowaid_64kbps": {
+                "named": 0.9938603223330775,
+                "clean_flag_rate": 0.010043668122270743,
+                "anchor": false,
+                "clean_units": 4580,
+                "recall": 0.9992325402916347,
+                "swaps": 5212
+            },
+            "everyayah:Minshawy_Mujawwad_192kbps": {
+                "named": 0.9676802041250265,
+                "clean_flag_rate": 0.0999515972894482,
+                "anchor": false,
+                "clean_units": 4132,
+                "recall": 0.9955347650435892,
+                "swaps": 4703
+            },
+            "everyayah:Minshawy_Murattal_128kbps": {
+                "named": 0.9919940420778254,
+                "clean_flag_rate": 0.015913430935709738,
+                "anchor": false,
+                "clean_units": 4713,
+                "recall": 0.9988828895922547,
+                "swaps": 5371
+            },
+            "everyayah:Husary_128kbps": {
+                "named": 0.9963587581448831,
+                "clean_flag_rate": 0.00960279353993889,
+                "anchor": true,
+                "clean_units": 4582,
+                "recall": 0.9998083556918359,
+                "swaps": 5218
+            }
+        },
+        "threshold_exact": true,
+        "named_recall": 0.9906361247962618,
+        "recall": 0.9990580717250678,
+        "swaps": 216577,
+        "per_pair": {
+            "ص→س": {
+                "named": 0.9934738019765057,
+                "recall": 0.9955248927838896,
+                "n": 5363
+            },
+            "ض→ظ": {
+                "named": 0.9961573236889693,
+                "recall": 1,
+                "n": 4424
+            },
+            "ت→ط": {
+                "named": 0.9754398978036016,
+                "recall": 0.9997527506490296,
+                "n": 24267
+            },
+            "س→ص": {
+                "named": 0.9939364142903966,
+                "recall": 0.9986889544411668,
+                "n": 12204
+            },
+            "ذ→د": {
+                "named": 0.9941537851763773,
+                "recall": 0.9980182322631788,
+                "n": 10092
+            },
+            "ه→ح": {
+                "named": 0.9804573804573805,
+                "recall": 0.999520230289461,
+                "n": 31265
+            },
+            "ذ→ز": {
+                "named": 0.9958382877526754,
+                "recall": 0.999900911613159,
+                "n": 10092
+            },
+            "ز→ذ": {
+                "named": 0.98248730964467,
+                "recall": 0.9903553299492386,
+                "n": 3940
+            },
+            "د→ض": {
+                "named": 0.9970998147103842,
+                "recall": 0.999516635785064,
+                "n": 12413
+            },
+            "ط→ت": {
+                "named": 0.9904942965779467,
+                "recall": 0.9990494296577946,
+                "n": 4208
+            },
+            "س→ث": {
+                "named": 0.9934447722058342,
+                "recall": 0.9991805965257292,
+                "n": 12204
+            },
+            "خ→غ": {
+                "named": 0.994140625,
+                "recall": 0.9996744791666666,
+                "n": 6144
+            },
+            "ع→ء": {
+                "named": 0.9964794201397877,
+                "recall": 0.9991198550349469,
+                "n": 19315
+            },
+            "ح→ه": {
+                "named": 0.9966640502354788,
+                "recall": 0.9986263736263736,
+                "n": 10192
+            },
+            "ظ→ز": {
+                "named": 0.9890026545316648,
+                "recall": 1,
+                "n": 2637
+            },
+            "ك→ق": {
+                "named": 0.9965461771385314,
+                "recall": 0.999337623012869,
+                "n": 21136
+            },
+            "ث→س": {
+                "named": 0.989296287861535,
+                "recall": 0.9984058301070371,
+                "n": 4391
+            },
+            "ق→ك": {
+                "named": 0.9967382086241764,
+                "recall": 0.9994781133798682,
+                "n": 15329
+            },
+            "ض→د": {
+                "named": 0.9961573236889693,
+                "recall": 1,
+                "n": 4424
+            },
+            "غ→خ": {
+                "named": 0.9940875049270792,
+                "recall": 0.9992116673236106,
+                "n": 2537
+            }
+        }
+    },
+    "vowel": {
+        "anchor_null_n": 31250,
+        "threshold": 0.7346946597099304,
+        "per_speaker": {
+            "everyayah:Husary_Muallim_128kbps": {
+                "named": 0.9879097773105228,
+                "clean_flag_rate": 0.011373411067571441,
+                "anchor": true,
+                "clean_units": 10463,
+                "recall": 0.9939309949345312,
+                "swaps": 20926
+            },
+            "everyayah:Salah_Al_Budair_128kbps": {
+                "named": 0.9877221602129304,
+                "clean_flag_rate": 0.01133339057267966,
+                "anchor": false,
+                "clean_units": 11647,
+                "recall": 0.9936035030479952,
+                "swaps": 23294
+            },
+            "everyayah:Ahmed_Neana_128kbps": {
+                "named": 0.9883445797914293,
+                "clean_flag_rate": 0.011655420208570678,
+                "anchor": false,
+                "clean_units": 11411,
+                "recall": 0.9942599246341249,
+                "swaps": 22822
+            },
+            "everyayah:Abdul_Basit_Mujawwad_128kbps": {
+                "named": 0.9923015396920616,
+                "clean_flag_rate": 0.007998400319936013,
+                "anchor": false,
+                "clean_units": 10002,
+                "recall": 0.9963007398520296,
+                "swaps": 20004
+            },
+            "everyayah:Karim_Mansoori_40kbps": {
+                "named": 0.989210819572485,
+                "clean_flag_rate": 0.010029378988957553,
+                "anchor": false,
+                "clean_units": 9871,
+                "recall": 0.9949853105055212,
+                "swaps": 19742
+            },
+            "everyayah:Akram_AlAlaqimy_128kbps": {
+                "named": 0.9878625887301726,
+                "clean_flag_rate": 0.010954342301288231,
+                "anchor": false,
+                "clean_units": 11411,
+                "recall": 0.9939093856804837,
+                "swaps": 22822
+            },
+            "everyayah:Muhsin_Al_Qasim_192kbps": {
+                "named": 0.9909418734438052,
+                "clean_flag_rate": 0.009186915085429724,
+                "anchor": false,
+                "clean_units": 11647,
+                "recall": 0.9956211900060101,
+                "swaps": 23294
+            },
+            "everyayah:Saood_ash-Shuraym_128kbps": {
+                "named": 0.9894822701124754,
+                "clean_flag_rate": 0.010474800377779685,
+                "anchor": false,
+                "clean_units": 11647,
+                "recall": 0.9947625998111101,
+                "swaps": 23294
+            },
+            "everyayah:Yasser_Ad-Dussary_128kbps": {
+                "named": 0.9865624865839523,
+                "clean_flag_rate": 0.012878852923499613,
+                "anchor": false,
+                "clean_units": 11647,
+                "recall": 0.9932168462628257,
+                "swaps": 23293
+            },
+            "everyayah:Abdullah_Basfar_192kbps": {
+                "named": 0.9889064281329475,
+                "clean_flag_rate": 0.011049723756906077,
+                "anchor": false,
+                "clean_units": 11403,
+                "recall": 0.994475138121547,
+                "swaps": 22806
+            },
+            "everyayah:Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net": {
+                "named": 0.984769591252278,
+                "clean_flag_rate": 0.014579536579015881,
+                "anchor": false,
+                "clean_units": 11523,
+                "recall": 0.9924498828430096,
+                "swaps": 23046
+            },
+            "everyayah:Hudhaify_128kbps": {
+                "named": 0.9890456576987118,
+                "clean_flag_rate": 0.009376917009902725,
+                "anchor": false,
+                "clean_units": 11411,
+                "recall": 0.9943475593725353,
+                "swaps": 22822
+            },
+            "everyayah:Muhammad_Ayyoub_128kbps": {
+                "named": 0.9885472370766488,
+                "clean_flag_rate": 0.009982174688057042,
+                "anchor": false,
+                "clean_units": 11220,
+                "recall": 0.9939839572192514,
+                "swaps": 22440
+            },
+            "everyayah:Ali_Hajjaj_AlSuesy_128kbps": {
+                "named": 0.9883007624222242,
+                "clean_flag_rate": 0.011830689685391289,
+                "anchor": false,
+                "clean_units": 11411,
+                "recall": 0.9943913767417404,
+                "swaps": 22822
+            },
+            "everyayah:Hani_Rifai_192kbps": {
+                "named": 0.9842678853928635,
+                "clean_flag_rate": 0.01608367024081561,
+                "anchor": false,
+                "clean_units": 11378,
+                "recall": 0.9919581648795922,
+                "swaps": 22756
+            },
+            "everyayah:aziz_alili_128kbps": {
+                "named": 0.9899929465702698,
+                "clean_flag_rate": 0.009962969493916417,
+                "anchor": false,
+                "clean_units": 11342,
+                "recall": 0.994974431317228,
+                "swaps": 22684
+            },
+            "everyayah:mahmoud_ali_al_banna_32kbps": {
+                "named": 0.9867233371308387,
+                "clean_flag_rate": 0.0120059591622119,
+                "anchor": false,
+                "clean_units": 11411,
+                "recall": 0.993120673034791,
+                "swaps": 22822
+            },
+            "everyayah:khalefa_al_tunaiji_64kbps": {
+                "named": 0.9684076768030847,
+                "clean_flag_rate": 0.025151169923757776,
+                "anchor": false,
+                "clean_units": 11411,
+                "recall": 0.981070896503374,
+                "swaps": 22822
+            },
+            "everyayah:Abu_Bakr_Ash-Shaatree_128kbps": {
+                "named": 0.9876435018841468,
+                "clean_flag_rate": 0.01139251599333976,
+                "anchor": false,
+                "clean_units": 11411,
+                "recall": 0.993690298834458,
+                "swaps": 22822
+            },
+            "everyayah:Abdurrahmaan_As-Sudais_192kbps": {
+                "named": 0.9877221602129304,
+                "clean_flag_rate": 0.011848544689619645,
+                "anchor": false,
+                "clean_units": 11647,
+                "recall": 0.9937752210869751,
+                "swaps": 23294
+            },
+            "everyayah:Ali_Jaber_64kbps": {
+                "named": 0.9914140980510002,
+                "clean_flag_rate": 0.008585901948999742,
+                "anchor": false,
+                "clean_units": 11647,
+                "recall": 0.9957070490255001,
+                "swaps": 23294
+            },
+            "everyayah:Khaalid_Abdullaah_al-Qahtaanee_192kbps": {
+                "named": 0.9847508873406073,
+                "clean_flag_rate": 0.0149855402681623,
+                "anchor": false,
+                "clean_units": 11411,
+                "recall": 0.9922878050918014,
+                "swaps": 22821
+            },
+            "everyayah:MaherAlMuaiqly128kbps": {
+                "named": 0.9860479093328754,
+                "clean_flag_rate": 0.01296471194298961,
+                "anchor": false,
+                "clean_units": 11647,
+                "recall": 0.9928307718725852,
+                "swaps": 23294
+            },
+            "everyayah:Fares_Abbad_64kbps": {
+                "named": 0.9862625568816004,
+                "clean_flag_rate": 0.01433845625482957,
+                "anchor": false,
+                "clean_units": 11647,
+                "recall": 0.9933888554992703,
+                "swaps": 23294
+            },
+            "everyayah:Muhammad_AbdulKareem_128kbps": {
+                "named": 0.9865366358850436,
+                "clean_flag_rate": 0.01303184603434884,
+                "anchor": false,
+                "clean_units": 11587,
+                "recall": 0.9931820143264003,
+                "swaps": 23174
+            },
+            "everyayah:Alafasy_128kbps": {
+                "named": 0.9891771098063272,
+                "clean_flag_rate": 0.010954342301288231,
+                "anchor": false,
+                "clean_units": 11411,
+                "recall": 0.9946104635877662,
+                "swaps": 22822
+            },
+            "everyayah:Abdul_Basit_Murattal_192kbps": {
+                "named": 0.9886593406593407,
+                "clean_flag_rate": 0.010021978021978023,
+                "anchor": false,
+                "clean_units": 11375,
+                "recall": 0.993934065934066,
+                "swaps": 22750
+            },
+            "everyayah:Mustafa_Ismail_48kbps": {
+                "named": 0.9871894409937888,
+                "clean_flag_rate": 0.011645962732919254,
+                "anchor": false,
+                "clean_units": 2576,
+                "recall": 0.9943711180124224,
+                "swaps": 5152
+            },
+            "everyayah:Husary_128kbps_Mujawwad": {
+                "named": 0.9916059870550162,
+                "clean_flag_rate": 0.008596278317152104,
+                "anchor": true,
+                "clean_units": 9888,
+                "recall": 0.9958535598705501,
+                "swaps": 19776
+            },
+            "everyayah:Sahl_Yassin_128kbps": {
+                "named": 0.9855396345471277,
+                "clean_flag_rate": 0.012619402331084042,
+                "anchor": false,
+                "clean_units": 11411,
+                "recall": 0.9926821786950616,
+                "swaps": 22821
+            },
+            "everyayah:Salaah_AbdulRahman_Bukhatir_128kbps": {
+                "named": 0.9847170945307805,
+                "clean_flag_rate": 0.01502532841074955,
+                "anchor": false,
+                "clean_units": 11647,
+                "recall": 0.9923585472653902,
+                "swaps": 23294
+            },
+            "everyayah:Yaser_Salamah_128kbps": {
+                "named": 0.9883231733493604,
+                "clean_flag_rate": 0.010904095475229672,
+                "anchor": false,
+                "clean_units": 11647,
+                "recall": 0.9937752210869751,
+                "swaps": 23294
+            },
+            "everyayah:Mohammad_al_Tablaway_128kbps": {
+                "named": 0.9892647445447376,
+                "clean_flag_rate": 0.011129611778108842,
+                "anchor": false,
+                "clean_units": 11411,
+                "recall": 0.994829550433792,
+                "swaps": 22822
+            },
+            "everyayah:Muhammad_Jibreel_128kbps": {
+                "named": 0.9817541750740566,
+                "clean_flag_rate": 0.012621275865029622,
+                "anchor": false,
+                "clean_units": 11647,
+                "recall": 0.9878933585197269,
+                "swaps": 23293
+            },
+            "everyayah:Abdullah_Matroud_128kbps": {
+                "named": 0.9875120497765314,
+                "clean_flag_rate": 0.012969941284725265,
+                "anchor": false,
+                "clean_units": 11411,
+                "recall": 0.9939532030496889,
+                "swaps": 22822
+            },
+            "everyayah:Ghamadi_40kbps": {
+                "named": 0.9867777109985404,
+                "clean_flag_rate": 0.012191980767579635,
+                "anchor": false,
+                "clean_units": 11647,
+                "recall": 0.9932600669700352,
+                "swaps": 23294
+            },
+            "everyayah:Nasser_Alqatami_128kbps": {
+                "named": 0.985490398691122,
+                "clean_flag_rate": 0.012399896667527771,
+                "anchor": false,
+                "clean_units": 11613,
+                "recall": 0.9923792301730819,
+                "swaps": 23226
+            },
+            "everyayah:Ayman_Sowaid_64kbps": {
+                "named": 0.9878183322607337,
+                "clean_flag_rate": 0.011951824951733015,
+                "anchor": false,
+                "clean_units": 10877,
+                "recall": 0.9938861818516135,
+                "swaps": 21754
+            },
+            "everyayah:Minshawy_Mujawwad_192kbps": {
+                "named": 0.990131244277139,
+                "clean_flag_rate": 0.010275714721741784,
+                "anchor": false,
+                "clean_units": 9829,
+                "recall": 0.9954725811374504,
+                "swaps": 19658
+            },
+            "everyayah:Minshawy_Murattal_128kbps": {
+                "named": 0.9867201426024955,
+                "clean_flag_rate": 0.011497326203208556,
+                "anchor": false,
+                "clean_units": 11220,
+                "recall": 0.9935383244206774,
+                "swaps": 22440
+            },
+            "everyayah:Husary_128kbps": {
+                "named": 0.9894944490320213,
+                "clean_flag_rate": 0.009817414441691898,
+                "anchor": true,
+                "clean_units": 10899,
+                "recall": 0.9946784108633819,
+                "swaps": 21798
+            }
+        },
+        "threshold_exact": true,
+        "named_recall": 0.9872630906205924,
+        "recall": 0.9934546897038082,
+        "swaps": 907520,
+        "per_pair": {
+            "ُ→ِ": {
+                "named": 0.9759957170781509,
+                "recall": 0.9965388015289035,
+                "n": 80319
+            },
+            "َ→ُ": {
+                "named": 0.9963890933216354,
+                "recall": 0.9977522468468011,
+                "n": 275831
+            },
+            "َ→ِ": {
+                "named": 0.9963419630135844,
+                "recall": 0.9980676573699113,
+                "n": 275831
+            },
+            "ُ→َ": {
+                "named": 0.9757467099938993,
+                "recall": 0.9794569155492474,
+                "n": 80319
+            },
+            "ِ→ُ": {
+                "named": 0.9709458974910614,
+                "recall": 0.9988013646003012,
+                "n": 97611
+            },
+            "ِ→َ": {
+                "named": 0.9708838324334846,
+                "recall": 0.9719083281254802,
+                "n": 97609
+            }
+        }
+    },
+    "clips": 11996
+}

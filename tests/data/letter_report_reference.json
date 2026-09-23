@@ -1,0 +1,4677 @@
+{
+    "units": [
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "inside of the lower lip with the tips of the upper incisors",
+                "makhraj_zone": "shafatan",
+                "istila": "istifal",
+                "idhlaq": "idhlaq"
+            },
+            "n_judged": 10,
+            "onset_s": 0.24,
+            "run_length": 1,
+            "i": 1,
+            "n_characteristics": 14,
+            "symbol": "ف",
+            "char_span": [
+                1,
+                1
+            ],
+            "duration_counts": 0.29,
+            "kind": "consonant",
+            "frames": [
+                7,
+                7
+            ],
+            "duration_s": 0.08,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -12.031,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[رخو]",
+                    "llr": 8.606,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 11.562,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 13.826,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 13.607,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 12.965,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 12.854,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[همس]",
+                    "llr": 9.874,
+                    "realised": true,
+                    "model_best": "[جهر]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 14.133,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 12.104,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 11.178,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 0.32,
+            "run_length": 1,
+            "i": 2,
+            "n_characteristics": 0,
+            "symbol": "َ",
+            "char_span": [
+                2,
+                2
+            ],
+            "duration_counts": 0.57,
+            "kind": "harakah",
+            "frames": [
+                9,
+                10
+            ],
+            "duration_s": 0.16,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ِ",
+                "competitor_llr": -15.974,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "deepest throat (aqṣā al-ḥalq)",
+                "makhraj_zone": "halq",
+                "istila": "istifal",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 0.48,
+            "run_length": 1,
+            "i": 3,
+            "n_characteristics": 14,
+            "symbol": "ء",
+            "char_span": [
+                3,
+                3
+            ],
+            "duration_counts": 0.29,
+            "kind": "consonant",
+            "frames": [
+                13,
+                14
+            ],
+            "duration_s": 0.08,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -11.205,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[شديد]",
+                    "llr": 10.305,
+                    "realised": true,
+                    "model_best": "[بين الشدة والرخاوة]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 12.327,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 12.813,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 14.164,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 12.69,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 13.914,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 12.321,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 12.469,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 11.754,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 12.368,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 0.56,
+            "run_length": 1,
+            "i": 4,
+            "n_characteristics": 0,
+            "symbol": "َ",
+            "char_span": [
+                4,
+                4
+            ],
+            "duration_counts": 0.71,
+            "kind": "harakah",
+            "frames": [
+                15,
+                15
+            ],
+            "duration_s": 0.2,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ِ",
+                "competitor_llr": -14.234,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "nearest throat (adnā al-ḥalq)",
+                "makhraj_zone": "halq",
+                "istila": "isti'la",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 0.76,
+            "run_length": 1,
+            "i": 5,
+            "n_characteristics": 14,
+            "symbol": "خ",
+            "char_span": [
+                5,
+                5
+            ],
+            "duration_counts": 0.14,
+            "kind": "consonant",
+            "frames": [
+                20,
+                20
+            ],
+            "duration_s": 0.04,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ح",
+                "competitor_llr": -13.45,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[رخو]",
+                    "llr": 8.256,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 10.827,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 10.531,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مفخم]",
+                    "llr": 15.172,
+                    "realised": true,
+                    "model_best": "[أدنى المفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 11.984,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 13.018,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[همس]",
+                    "llr": 11.015,
+                    "realised": true,
+                    "model_best": "[جهر]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 7.136,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 15.108,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 11.108,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 0.8,
+            "run_length": 1,
+            "i": 6,
+            "n_characteristics": 0,
+            "symbol": "َ",
+            "char_span": [
+                6,
+                6
+            ],
+            "duration_counts": 1,
+            "kind": "harakah",
+            "frames": [
+                21,
+                22
+            ],
+            "duration_s": 0.28,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ُ",
+                "competitor_llr": -23.3,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "tip of the tongue with the tips of the upper incisors",
+                "makhraj_zone": "lisan",
+                "istila": "istifal",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 1.08,
+            "run_length": 1,
+            "i": 7,
+            "n_characteristics": 14,
+            "symbol": "ذ",
+            "char_span": [
+                7,
+                7
+            ],
+            "duration_counts": 0.14,
+            "kind": "consonant",
+            "frames": [
+                28,
+                28
+            ],
+            "duration_s": 0.04,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "د",
+                "competitor_llr": -11.808,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[رخو]",
+                    "llr": 11.546,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 14.095,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 15.553,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 15.47,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 13.25,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 15.146,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 16.713,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 11.456,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 14.61,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 13.24,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 1.12,
+            "run_length": 1,
+            "i": 8,
+            "n_characteristics": 0,
+            "symbol": "َ",
+            "char_span": [
+                8,
+                8
+            ],
+            "duration_counts": 1,
+            "kind": "harakah",
+            "frames": [
+                29,
+                30
+            ],
+            "duration_s": 0.28,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ُ",
+                "competitor_llr": -21.891,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "tip of the tongue with the roots of the upper incisors",
+                "makhraj_zone": "lisan",
+                "istila": "istifal",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 1.4,
+            "run_length": 1,
+            "i": 9,
+            "n_characteristics": 14,
+            "symbol": "ت",
+            "char_span": [
+                9,
+                9
+            ],
+            "duration_counts": 0.86,
+            "kind": "consonant",
+            "frames": [
+                36,
+                36
+            ],
+            "duration_s": 0.24,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -10.907,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[شديد]",
+                    "llr": 14.532,
+                    "realised": true,
+                    "model_best": "[رخو]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 14.203,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 8.714,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 14.499,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 14.788,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 16.18,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[همس]",
+                    "llr": 13.708,
+                    "realised": true,
+                    "model_best": "[جهر]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 10.115,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 15.203,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 13.479,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "deepest throat (aqṣā al-ḥalq)",
+                "makhraj_zone": "halq",
+                "istila": "istifal",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 1.64,
+            "run_length": 1,
+            "i": 10,
+            "n_characteristics": 14,
+            "symbol": "ه",
+            "char_span": [
+                10,
+                10
+            ],
+            "duration_counts": 0.14,
+            "kind": "consonant",
+            "frames": [
+                42,
+                42
+            ],
+            "duration_s": 0.04,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -13.113,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[رخو]",
+                    "llr": 11.179,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 11.673,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 12.502,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 11.376,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 13.376,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 11.928,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[همس]",
+                    "llr": 12.036,
+                    "realised": true,
+                    "model_best": "[جهر]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 13.557,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 14.462,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 13.937,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 1.68,
+            "run_length": 1,
+            "i": 11,
+            "n_characteristics": 0,
+            "symbol": "ُ",
+            "char_span": [
+                11,
+                11
+            ],
+            "duration_counts": 1.14,
+            "kind": "harakah",
+            "frames": [
+                43,
+                44
+            ],
+            "duration_s": 0.32,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ِ",
+                "competitor_llr": -19.057,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 6,
+            "inherent": {
+                "makhraj": "both lips, lightly closed",
+                "makhraj_zone": "shafatan",
+                "istila": "istifal",
+                "idhlaq": "idhlaq"
+            },
+            "n_judged": 10,
+            "onset_s": 2,
+            "run_length": 1,
+            "i": 12,
+            "n_characteristics": 14,
+            "symbol": "م",
+            "char_span": [
+                12,
+                12
+            ],
+            "duration_counts": 0.14,
+            "kind": "consonant",
+            "frames": [
+                51,
+                51
+            ],
+            "duration_s": 0.04,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -10.533,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[بين الشدة والرخاوة]",
+                    "llr": 11.506,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 12.646,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 9.292,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 12.298,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 13.874,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 14.835,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 12.228,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 7.968,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[مغن]",
+                    "llr": 11.526,
+                    "realised": true,
+                    "model_best": "[لا غنة]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 14.523,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 2.04,
+            "run_length": 1,
+            "i": 13,
+            "n_characteristics": 0,
+            "symbol": "ُ",
+            "char_span": [
+                13,
+                13
+            ],
+            "duration_counts": 0.71,
+            "kind": "harakah",
+            "frames": [
+                52,
+                53
+            ],
+            "duration_s": 0.2,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ِ",
+                "competitor_llr": -19.335,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 6,
+            "inherent": {
+                "makhraj": "tip of the tongue between the incisors",
+                "makhraj_zone": "lisan",
+                "istila": "isti'la",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 2.24,
+            "run_length": 2,
+            "i": 14,
+            "n_characteristics": 14,
+            "symbol": "ص",
+            "char_span": [
+                14,
+                15
+            ],
+            "duration_counts": 1.43,
+            "kind": "consonant",
+            "frames": [
+                57,
+                66
+            ],
+            "duration_s": 0.4,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "س",
+                "competitor_llr": -27.718,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[رخو]",
+                    "llr": 9.555,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[صفير]",
+                    "llr": 9.707,
+                    "realised": true,
+                    "model_best": "[لا صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 13.376,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مفخم]",
+                    "llr": 10.829,
+                    "realised": true,
+                    "model_best": "[مرقق]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 12.067,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 10.63,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[همس]",
+                    "llr": 10.118,
+                    "realised": true,
+                    "model_best": "[جهر]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 13.649,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 12.858,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[مطبق]",
+                    "llr": 11.215,
+                    "realised": true,
+                    "model_best": "[منفتح]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 2.64,
+            "run_length": 1,
+            "i": 15,
+            "n_characteristics": 0,
+            "symbol": "َ",
+            "char_span": [
+                16,
+                16
+            ],
+            "duration_counts": 0.86,
+            "kind": "harakah",
+            "frames": [
+                67,
+                68
+            ],
+            "duration_s": 0.24,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ِ",
+                "competitor_llr": -14.529,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 6,
+            "inherent": {
+                "lin": true,
+                "makhraj": "middle of the tongue with the hard palate",
+                "makhraj_zone": "lisan",
+                "istila": "istifal",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 2.88,
+            "run_length": 1,
+            "i": 16,
+            "n_characteristics": 15,
+            "symbol": "ي",
+            "char_span": [
+                17,
+                17
+            ],
+            "duration_counts": 1.14,
+            "kind": "consonant",
+            "frames": [
+                73,
+                73
+            ],
+            "duration_s": 0.32,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -14.048,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[رخو]",
+                    "llr": 7.799,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 12.811,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 13.37,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 10.203,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 13.73,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 12.664,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 10.83,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 11.263,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 11.324,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 12.478,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "middle throat (wasaṭ al-ḥalq)",
+                "makhraj_zone": "halq",
+                "istila": "istifal",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 3.2,
+            "run_length": 1,
+            "i": 17,
+            "n_characteristics": 14,
+            "symbol": "ح",
+            "char_span": [
+                18,
+                18
+            ],
+            "duration_counts": 0.14,
+            "kind": "consonant",
+            "frames": [
+                81,
+                81
+            ],
+            "duration_s": 0.04,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -13.22,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[رخو]",
+                    "llr": 8.804,
+                    "realised": true,
+                    "model_best": "[بين الشدة والرخاوة]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 13.565,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 11.43,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 12.659,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 18.483,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 18.046,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[همس]",
+                    "llr": 6.644,
+                    "realised": true,
+                    "model_best": "[جهر]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 13.957,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 14.463,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 13.828,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 3.24,
+            "run_length": 1,
+            "i": 18,
+            "n_characteristics": 0,
+            "symbol": "َ",
+            "char_span": [
+                19,
+                19
+            ],
+            "duration_counts": 0.86,
+            "kind": "harakah",
+            "frames": [
+                82,
+                83
+            ],
+            "duration_s": 0.24,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ُ",
+                "competitor_llr": -18.034,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "tip of the tongue with the roots of the upper incisors",
+                "makhraj_zone": "lisan",
+                "istila": "istifal",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 3.48,
+            "run_length": 1,
+            "i": 19,
+            "n_characteristics": 14,
+            "symbol": "ت",
+            "char_span": [
+                20,
+                20
+            ],
+            "duration_counts": 0.29,
+            "kind": "consonant",
+            "frames": [
+                88,
+                88
+            ],
+            "duration_s": 0.08,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -11.682,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[شديد]",
+                    "llr": 17.256,
+                    "realised": true,
+                    "model_best": "[رخو]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 14.643,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 15.26,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 14.57,
+                    "realised": true,
+                    "model_best": "[أدنى المفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 11.629,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 15.356,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[همس]",
+                    "llr": 12.609,
+                    "realised": true,
+                    "model_best": "[جهر]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 15.501,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 15.655,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 12.293,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 3.56,
+            "run_length": 1,
+            "i": 20,
+            "n_characteristics": 0,
+            "symbol": "ُ",
+            "char_span": [
+                21,
+                21
+            ],
+            "duration_counts": 0.86,
+            "kind": "harakah",
+            "frames": [
+                90,
+                91
+            ],
+            "duration_s": 0.24,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ِ",
+                "competitor_llr": -19.617,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "both lips, closed",
+                "makhraj_zone": "shafatan",
+                "istila": "istifal",
+                "idhlaq": "idhlaq"
+            },
+            "n_judged": 10,
+            "onset_s": 3.8,
+            "run_length": 1,
+            "i": 21,
+            "n_characteristics": 14,
+            "symbol": "ب",
+            "char_span": [
+                22,
+                22
+            ],
+            "duration_counts": 0.14,
+            "kind": "consonant",
+            "frames": [
+                96,
+                96
+            ],
+            "duration_s": 0.04,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -14.207,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[شديد]",
+                    "llr": 13.647,
+                    "realised": true,
+                    "model_best": "[رخو]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 13.697,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 13.35,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 15.65,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 9.83,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 13.748,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 11.01,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 12.218,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 13.731,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 12.416,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 3.84,
+            "run_length": 1,
+            "i": 22,
+            "n_characteristics": 0,
+            "symbol": "ِ",
+            "char_span": [
+                23,
+                23
+            ],
+            "duration_counts": 0.71,
+            "kind": "harakah",
+            "frames": [
+                97,
+                98
+            ],
+            "duration_s": 0.2,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ُ",
+                "competitor_llr": -18.994,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 6,
+            "inherent": {
+                "makhraj": "both edges of the tongue, forward, with the gums",
+                "makhraj_zone": "lisan",
+                "inhiraf": true,
+                "istila": "istifal",
+                "idhlaq": "idhlaq"
+            },
+            "n_judged": 10,
+            "onset_s": 4.04,
+            "run_length": 1,
+            "i": 23,
+            "n_characteristics": 15,
+            "symbol": "ل",
+            "char_span": [
+                24,
+                24
+            ],
+            "duration_counts": 1,
+            "kind": "consonant",
+            "frames": [
+                102,
+                102
+            ],
+            "duration_s": 0.28,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -16.935,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[بين الشدة والرخاوة]",
+                    "llr": 15.405,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 14.226,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 13.447,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 14.551,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 13.35,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 15.592,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 15.352,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 12.519,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 12.431,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 14.887,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "middle throat (wasaṭ al-ḥalq)",
+                "makhraj_zone": "halq",
+                "istila": "istifal",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 4.32,
+            "run_length": 1,
+            "i": 24,
+            "n_characteristics": 14,
+            "symbol": "ح",
+            "char_span": [
+                25,
+                25
+            ],
+            "duration_counts": 0.29,
+            "kind": "consonant",
+            "frames": [
+                109,
+                109
+            ],
+            "duration_s": 0.08,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -11.414,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[رخو]",
+                    "llr": 10.876,
+                    "realised": true,
+                    "model_best": "[بين الشدة والرخاوة]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 13.76,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 13.552,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 12.887,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 17.334,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 18.256,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[همس]",
+                    "llr": 7.002,
+                    "realised": true,
+                    "model_best": "[جهر]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 17.145,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 15.427,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 13.067,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 4.4,
+            "run_length": 1,
+            "i": 25,
+            "n_characteristics": 0,
+            "symbol": "َ",
+            "char_span": [
+                26,
+                26
+            ],
+            "duration_counts": 0.71,
+            "kind": "harakah",
+            "frames": [
+                111,
+                112
+            ],
+            "duration_s": 0.2,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ُ",
+                "competitor_llr": -17.638,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "deepest tongue with the soft palate",
+                "makhraj_zone": "lisan",
+                "istila": "isti'la",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 4.6,
+            "run_length": 2,
+            "i": 26,
+            "n_characteristics": 14,
+            "symbol": "ق",
+            "char_span": [
+                27,
+                28
+            ],
+            "duration_counts": 1.43,
+            "kind": "consonant",
+            "frames": [
+                116,
+                125
+            ],
+            "duration_s": 0.4,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ك",
+                "competitor_llr": -14.525,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[شديد]",
+                    "llr": 9.077,
+                    "realised": true,
+                    "model_best": "[رخو]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 9.846,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 13.777,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[أدنى المفخم]",
+                    "llr": 5.276,
+                    "realised": true,
+                    "model_best": "[مرقق]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 12.207,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 11.597,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 5.512,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 12.385,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 12.492,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 10.517,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 5,
+            "run_length": 1,
+            "i": 27,
+            "n_characteristics": 0,
+            "symbol": "ِ",
+            "char_span": [
+                29,
+                29
+            ],
+            "duration_counts": 0.86,
+            "kind": "harakah",
+            "frames": [
+                126,
+                127
+            ],
+            "duration_s": 0.24,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ُ",
+                "competitor_llr": -22.613,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "inside of the lower lip with the tips of the upper incisors",
+                "makhraj_zone": "shafatan",
+                "istila": "istifal",
+                "idhlaq": "idhlaq"
+            },
+            "n_judged": 10,
+            "onset_s": 5.24,
+            "run_length": 1,
+            "i": 28,
+            "n_characteristics": 14,
+            "symbol": "ف",
+            "char_span": [
+                30,
+                30
+            ],
+            "duration_counts": 0.14,
+            "kind": "consonant",
+            "frames": [
+                132,
+                132
+            ],
+            "duration_s": 0.04,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -11.084,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[رخو]",
+                    "llr": 9.746,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 13.618,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 7.909,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 13.865,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 18.2,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 17.417,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[همس]",
+                    "llr": 14.098,
+                    "realised": true,
+                    "model_best": "[جهر]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 10.719,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 14.066,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 14.195,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 5.28,
+            "run_length": 1,
+            "i": 29,
+            "n_characteristics": 0,
+            "symbol": "َ",
+            "char_span": [
+                31,
+                31
+            ],
+            "duration_counts": 0.71,
+            "kind": "harakah",
+            "frames": [
+                133,
+                134
+            ],
+            "duration_s": 0.2,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ِ",
+                "competitor_llr": -21.784,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "middle of the tongue with the hard palate",
+                "makhraj_zone": "lisan",
+                "istila": "istifal",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 5.48,
+            "run_length": 1,
+            "i": 30,
+            "n_characteristics": 14,
+            "symbol": "ج",
+            "char_span": [
+                32,
+                32
+            ],
+            "duration_counts": 0.29,
+            "kind": "consonant",
+            "frames": [
+                138,
+                139
+            ],
+            "duration_s": 0.08,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -21.136,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[شديد]",
+                    "llr": 13.994,
+                    "realised": true,
+                    "model_best": "[رخو]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 14.324,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 12.605,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 12.309,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 9.075,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 12.643,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 14.03,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 12.874,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 15.068,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 12.091,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 5.56,
+            "run_length": 1,
+            "i": 31,
+            "n_characteristics": 0,
+            "symbol": "َ",
+            "char_span": [
+                33,
+                33
+            ],
+            "duration_counts": 0.71,
+            "kind": "harakah",
+            "frames": [
+                140,
+                140
+            ],
+            "duration_s": 0.2,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ِ",
+                "competitor_llr": -15.003,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "middle throat (wasaṭ al-ḥalq)",
+                "makhraj_zone": "halq",
+                "istila": "istifal",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 5.76,
+            "run_length": 1,
+            "i": 32,
+            "n_characteristics": 14,
+            "symbol": "ع",
+            "char_span": [
+                34,
+                34
+            ],
+            "duration_counts": 0.29,
+            "kind": "consonant",
+            "frames": [
+                145,
+                146
+            ],
+            "duration_s": 0.08,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -15.83,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[بين الشدة والرخاوة]",
+                    "llr": 14.465,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 15.573,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 16.115,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 15.099,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 17.806,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 16.73,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 15.976,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 13.885,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 13.325,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 15.037,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 5.84,
+            "run_length": 1,
+            "i": 33,
+            "n_characteristics": 0,
+            "symbol": "َ",
+            "char_span": [
+                35,
+                35
+            ],
+            "duration_counts": 0.71,
+            "kind": "harakah",
+            "frames": [
+                147,
+                148
+            ],
+            "duration_s": 0.2,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ِ",
+                "competitor_llr": -22.87,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 6,
+            "inherent": {
+                "makhraj": "both edges of the tongue, forward, with the gums",
+                "makhraj_zone": "lisan",
+                "inhiraf": true,
+                "istila": "istifal",
+                "idhlaq": "idhlaq"
+            },
+            "n_judged": 10,
+            "onset_s": 6.04,
+            "run_length": 1,
+            "i": 34,
+            "n_characteristics": 15,
+            "symbol": "ل",
+            "char_span": [
+                36,
+                36
+            ],
+            "duration_counts": 1.43,
+            "kind": "consonant",
+            "frames": [
+                152,
+                153
+            ],
+            "duration_s": 0.4,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -15.479,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[بين الشدة والرخاوة]",
+                    "llr": 12.619,
+                    "realised": true,
+                    "model_best": "[رخو]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 12.814,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 14.12,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 13.894,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 11.507,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 13.48,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 14.178,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 13.035,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 12.347,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 13.165,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 6,
+            "inherent": {
+                "makhraj": "tip of the tongue with the gums above the incisors",
+                "makhraj_zone": "lisan",
+                "istila": "istifal",
+                "idhlaq": "idhlaq"
+            },
+            "n_judged": 10,
+            "onset_s": 6.44,
+            "run_length": 1,
+            "i": 35,
+            "n_characteristics": 14,
+            "symbol": "ن",
+            "char_span": [
+                37,
+                37
+            ],
+            "duration_counts": 0.14,
+            "kind": "consonant",
+            "frames": [
+                162,
+                162
+            ],
+            "duration_s": 0.04,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -12.181,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[بين الشدة والرخاوة]",
+                    "llr": 13.692,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 14.454,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 9.357,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 13.537,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 14.991,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 13.544,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 14.388,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 9.023,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[مغن]",
+                    "llr": 12.182,
+                    "realised": true,
+                    "model_best": "[لا غنة]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 14.365,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 6.48,
+            "run_length": 1,
+            "i": 36,
+            "n_characteristics": 0,
+            "symbol": "َ",
+            "char_span": [
+                38,
+                38
+            ],
+            "duration_counts": 0.29,
+            "kind": "harakah",
+            "frames": [
+                163,
+                164
+            ],
+            "duration_s": 0.08,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ِ",
+                "competitor_llr": -26.019,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+                "makhraj": "oral cavity — prolongation, no contact",
+                "makhraj_zone": "jawf",
+                "istila": "istifal",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 0,
+            "onset_s": 6.56,
+            "run_length": 2,
+            "i": 37,
+            "n_characteristics": 4,
+            "symbol": "ا",
+            "char_span": [
+                39,
+                40
+            ],
+            "duration_counts": 1.86,
+            "kind": "madd",
+            "frames": [
+                165,
+                171
+            ],
+            "duration_s": 0.52,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ۥ",
+                "competitor_llr": -39.569,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "deepest throat (aqṣā al-ḥalq)",
+                "makhraj_zone": "halq",
+                "istila": "istifal",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 7.08,
+            "run_length": 1,
+            "i": 38,
+            "n_characteristics": 14,
+            "symbol": "ه",
+            "char_span": [
+                41,
+                41
+            ],
+            "duration_counts": 0.29,
+            "kind": "consonant",
+            "frames": [
+                178,
+                179
+            ],
+            "duration_s": 0.08,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -10.868,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[رخو]",
+                    "llr": 10.823,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 13.463,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 14.383,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 12.657,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 12.732,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 13.273,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[همس]",
+                    "llr": 12.372,
+                    "realised": true,
+                    "model_best": "[جهر]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 14.689,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 14.478,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 15.03,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 7.16,
+            "run_length": 1,
+            "i": 39,
+            "n_characteristics": 0,
+            "symbol": "ُ",
+            "char_span": [
+                42,
+                42
+            ],
+            "duration_counts": 1,
+            "kind": "harakah",
+            "frames": [
+                180,
+                181
+            ],
+            "duration_s": 0.28,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ِ",
+                "competitor_llr": -19.291,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 6,
+            "inherent": {
+                "makhraj": "both lips, lightly closed",
+                "makhraj_zone": "shafatan",
+                "istila": "istifal",
+                "idhlaq": "idhlaq"
+            },
+            "n_judged": 10,
+            "onset_s": 7.44,
+            "run_length": 1,
+            "i": 40,
+            "n_characteristics": 14,
+            "symbol": "م",
+            "char_span": [
+                43,
+                43
+            ],
+            "duration_counts": 1,
+            "kind": "consonant",
+            "frames": [
+                187,
+                187
+            ],
+            "duration_s": 0.28,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -12.219,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[بين الشدة والرخاوة]",
+                    "llr": 13.381,
+                    "realised": true,
+                    "model_best": "[رخو]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 13.182,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 8.575,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 13.461,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 14.196,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 15.209,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 13.004,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 7.249,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[مغن]",
+                    "llr": 12.475,
+                    "realised": true,
+                    "model_best": "[لا غنة]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 15.003,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "nearest throat (adnā al-ḥalq)",
+                "makhraj_zone": "halq",
+                "istila": "isti'la",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 7.72,
+            "run_length": 1,
+            "i": 41,
+            "n_characteristics": 14,
+            "symbol": "غ",
+            "char_span": [
+                44,
+                44
+            ],
+            "duration_counts": 0.29,
+            "kind": "consonant",
+            "frames": [
+                194,
+                194
+            ],
+            "duration_s": 0.08,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "خ",
+                "competitor_llr": -11.597,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[رخو]",
+                    "llr": 10.211,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 10.713,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 12.636,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مفخم]",
+                    "llr": 8.347,
+                    "realised": true,
+                    "model_best": "[مرقق]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 14.765,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 10.882,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 9.854,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 9.595,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 11.431,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 10.898,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 7.8,
+            "run_length": 1,
+            "i": 42,
+            "n_characteristics": 0,
+            "symbol": "ُ",
+            "char_span": [
+                45,
+                45
+            ],
+            "duration_counts": 0.86,
+            "kind": "harakah",
+            "frames": [
+                196,
+                196
+            ],
+            "duration_s": 0.24,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ِ",
+                "competitor_llr": -15.992,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "tip of the tongue with the tips of the upper incisors",
+                "makhraj_zone": "lisan",
+                "istila": "istifal",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 8.04,
+            "run_length": 1,
+            "i": 43,
+            "n_characteristics": 14,
+            "symbol": "ث",
+            "char_span": [
+                46,
+                46
+            ],
+            "duration_counts": 0.14,
+            "kind": "consonant",
+            "frames": [
+                202,
+                202
+            ],
+            "duration_s": 0.04,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "س",
+                "competitor_llr": -8.554,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[رخو]",
+                    "llr": 6.373,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 8.207,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 5.436,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 9.264,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 13.311,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 11.24,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[همس]",
+                    "llr": 9.934,
+                    "realised": true,
+                    "model_best": "[جهر]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 7.053,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 11.626,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 10.892,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 8.08,
+            "run_length": 1,
+            "i": 44,
+            "n_characteristics": 0,
+            "symbol": "َ",
+            "char_span": [
+                47,
+                47
+            ],
+            "duration_counts": 0.29,
+            "kind": "harakah",
+            "frames": [
+                203,
+                204
+            ],
+            "duration_s": 0.08,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ِ",
+                "competitor_llr": -19.844,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+                "makhraj": "oral cavity — prolongation, no contact",
+                "makhraj_zone": "jawf",
+                "istila": "istifal",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 0,
+            "onset_s": 8.16,
+            "run_length": 4,
+            "i": 45,
+            "n_characteristics": 4,
+            "symbol": "ا",
+            "char_span": [
+                48,
+                51
+            ],
+            "duration_counts": 4.57,
+            "kind": "madd",
+            "frames": [
+                205,
+                219
+            ],
+            "duration_s": 1.28,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ۦ",
+                "competitor_llr": -63.044,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "deepest throat (aqṣā al-ḥalq)",
+                "makhraj_zone": "halq",
+                "istila": "istifal",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 9.44,
+            "run_length": 1,
+            "i": 46,
+            "n_characteristics": 14,
+            "symbol": "ء",
+            "char_span": [
+                52,
+                52
+            ],
+            "duration_counts": 0.29,
+            "kind": "consonant",
+            "frames": [
+                237,
+                237
+            ],
+            "duration_s": 0.08,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -11.948,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[شديد]",
+                    "llr": 11.687,
+                    "realised": true,
+                    "model_best": "[بين الشدة والرخاوة]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 12.027,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 11.204,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 12.548,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 12.464,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 13.012,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 10.771,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 11.075,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 11.17,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 11.673,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 9.52,
+            "run_length": 1,
+            "i": 47,
+            "n_characteristics": 0,
+            "symbol": "َ",
+            "char_span": [
+                53,
+                53
+            ],
+            "duration_counts": 0.29,
+            "kind": "harakah",
+            "frames": [
+                239,
+                240
+            ],
+            "duration_s": 0.08,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ِ",
+                "competitor_llr": -19.32,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 10,
+            "onset_s": 9.6,
+            "run_length": 3,
+            "i": 48,
+            "n_characteristics": 10,
+            "symbol": "ں",
+            "char_span": [
+                54,
+                56
+            ],
+            "duration_counts": 19.43,
+            "kind": "ikhfa_noon",
+            "frames": [
+                241,
+                336
+            ],
+            "duration_s": 5.44,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "",
+                "competitor_llr": null,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[رخو]",
+                    "llr": 9.659,
+                    "realised": true,
+                    "model_best": "[بين الشدة والرخاوة]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 14.498,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 16.147,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 11.173,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 13.463,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 14.939,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 11.323,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 14.835,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[مغن]",
+                    "llr": -12.35,
+                    "realised": false,
+                    "model_best": "[لا غنة]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 14.569,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "inside of the lower lip with the tips of the upper incisors",
+                "makhraj_zone": "shafatan",
+                "istila": "istifal",
+                "idhlaq": "idhlaq"
+            },
+            "n_judged": 10,
+            "onset_s": 15.04,
+            "run_length": 1,
+            "i": 49,
+            "n_characteristics": 14,
+            "symbol": "ف",
+            "char_span": [
+                57,
+                57
+            ],
+            "duration_counts": 0.29,
+            "kind": "consonant",
+            "frames": [
+                377,
+                377
+            ],
+            "duration_s": 0.08,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -9.454,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[رخو]",
+                    "llr": 10.585,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 13.576,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 15.559,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 15.194,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 14.823,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 14.607,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[همس]",
+                    "llr": 11.802,
+                    "realised": true,
+                    "model_best": "[جهر]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 15.447,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 13.215,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 12.54,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 15.12,
+            "run_length": 1,
+            "i": 50,
+            "n_characteristics": 0,
+            "symbol": "َ",
+            "char_span": [
+                58,
+                58
+            ],
+            "duration_counts": 0.57,
+            "kind": "harakah",
+            "frames": [
+                379,
+                380
+            ],
+            "duration_s": 0.16,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ِ",
+                "competitor_llr": -20.105,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "both lips, closed",
+                "makhraj_zone": "shafatan",
+                "istila": "istifal",
+                "idhlaq": "idhlaq"
+            },
+            "n_judged": 10,
+            "onset_s": 15.28,
+            "run_length": 1,
+            "i": 51,
+            "n_characteristics": 14,
+            "symbol": "ب",
+            "char_span": [
+                59,
+                59
+            ],
+            "duration_counts": 0.29,
+            "kind": "consonant",
+            "frames": [
+                383,
+                384
+            ],
+            "duration_s": 0.08,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -13.099,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[شديد]",
+                    "llr": 11.968,
+                    "realised": true,
+                    "model_best": "[رخو]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 14.221,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 15.424,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 13.37,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 10.516,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 13.713,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 10.423,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 11.892,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 12.447,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 12.101,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 15.36,
+            "run_length": 1,
+            "i": 52,
+            "n_characteristics": 0,
+            "symbol": "ُ",
+            "char_span": [
+                60,
+                60
+            ],
+            "duration_counts": 0.71,
+            "kind": "harakah",
+            "frames": [
+                385,
+                386
+            ],
+            "duration_s": 0.2,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ِ",
+                "competitor_llr": -16.227,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "middle throat (wasaṭ al-ḥalq)",
+                "makhraj_zone": "halq",
+                "istila": "istifal",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 15.56,
+            "run_length": 1,
+            "i": 53,
+            "n_characteristics": 14,
+            "symbol": "ع",
+            "char_span": [
+                61,
+                61
+            ],
+            "duration_counts": 1.14,
+            "kind": "consonant",
+            "frames": [
+                390,
+                390
+            ],
+            "duration_s": 0.32,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -11.174,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[بين الشدة والرخاوة]",
+                    "llr": 13.766,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 14.874,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 14.118,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 14.608,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 16.601,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 15.237,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 15.594,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 14.646,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 12.615,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 12.987,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "tip of the tongue with the roots of the upper incisors",
+                "makhraj_zone": "lisan",
+                "istila": "istifal",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 15.88,
+            "run_length": 1,
+            "i": 54,
+            "n_characteristics": 14,
+            "symbol": "د",
+            "char_span": [
+                62,
+                62
+            ],
+            "duration_counts": 0.14,
+            "kind": "consonant",
+            "frames": [
+                398,
+                398
+            ],
+            "duration_s": 0.04,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ض",
+                "competitor_llr": -11.109,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[شديد]",
+                    "llr": 10.593,
+                    "realised": true,
+                    "model_best": "[رخو]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 11.745,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 10.137,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 11.71,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 11.437,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 9.377,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 10.645,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 8.902,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 10.231,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 10.92,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 15.92,
+            "run_length": 1,
+            "i": 55,
+            "n_characteristics": 0,
+            "symbol": "َ",
+            "char_span": [
+                63,
+                63
+            ],
+            "duration_counts": 0.71,
+            "kind": "harakah",
+            "frames": [
+                399,
+                400
+            ],
+            "duration_s": 0.2,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ُ",
+                "competitor_llr": -19.45,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 6,
+            "inherent": {
+                "makhraj": "both edges of the tongue, forward, with the gums",
+                "makhraj_zone": "lisan",
+                "inhiraf": true,
+                "istila": "istifal",
+                "idhlaq": "idhlaq"
+            },
+            "n_judged": 10,
+            "onset_s": 16.12,
+            "run_length": 2,
+            "i": 56,
+            "n_characteristics": 15,
+            "symbol": "ل",
+            "char_span": [
+                64,
+                65
+            ],
+            "duration_counts": 1.43,
+            "kind": "consonant",
+            "frames": [
+                404,
+                412
+            ],
+            "duration_s": 0.4,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -29.829,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[بين الشدة والرخاوة]",
+                    "llr": 11.586,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 11.584,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 13.934,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 9.337,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 10.963,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 11.755,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 10.375,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 12.378,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 9.923,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 12.109,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 16.52,
+            "run_length": 1,
+            "i": 57,
+            "n_characteristics": 0,
+            "symbol": "ِ",
+            "char_span": [
+                66,
+                66
+            ],
+            "duration_counts": 0.71,
+            "kind": "harakah",
+            "frames": [
+                414,
+                415
+            ],
+            "duration_s": 0.2,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ُ",
+                "competitor_llr": -22.863,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 6,
+            "inherent": {
+                "makhraj": "both edges of the tongue, forward, with the gums",
+                "makhraj_zone": "lisan",
+                "inhiraf": true,
+                "istila": "istifal",
+                "idhlaq": "idhlaq"
+            },
+            "n_judged": 10,
+            "onset_s": 16.72,
+            "run_length": 1,
+            "i": 58,
+            "n_characteristics": 15,
+            "symbol": "ل",
+            "char_span": [
+                67,
+                67
+            ],
+            "duration_counts": 1.29,
+            "kind": "consonant",
+            "frames": [
+                419,
+                420
+            ],
+            "duration_s": 0.36,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -16.906,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[بين الشدة والرخاوة]",
+                    "llr": 11.064,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 11.614,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 15.332,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 13.48,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 11.297,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 14.043,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 12.767,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 14.057,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 11.197,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 13.722,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "deepest tongue with the soft palate",
+                "makhraj_zone": "lisan",
+                "istila": "isti'la",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 17.08,
+            "run_length": 1,
+            "i": 59,
+            "n_characteristics": 14,
+            "symbol": "ق",
+            "char_span": [
+                68,
+                68
+            ],
+            "duration_counts": 0.14,
+            "kind": "consonant",
+            "frames": [
+                428,
+                428
+            ],
+            "duration_s": 0.04,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ك",
+                "competitor_llr": -10.137,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[شديد]",
+                    "llr": 12.536,
+                    "realised": true,
+                    "model_best": "[بين الشدة والرخاوة]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 12.802,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 9.27,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مفخم]",
+                    "llr": 9.33,
+                    "realised": true,
+                    "model_best": "[مرقق]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 12.437,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 14.587,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 11.948,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 6.885,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 17.916,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 14.873,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 17.12,
+            "run_length": 1,
+            "i": 60,
+            "n_characteristics": 0,
+            "symbol": "َ",
+            "char_span": [
+                69,
+                69
+            ],
+            "duration_counts": 0.71,
+            "kind": "harakah",
+            "frames": [
+                429,
+                430
+            ],
+            "duration_s": 0.2,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ُ",
+                "competitor_llr": -18.256,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 6,
+            "inherent": {
+                "lin": true,
+                "makhraj": "both lips, rounded, not closed",
+                "makhraj_zone": "shafatan",
+                "istila": "istifal",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 17.32,
+            "run_length": 1,
+            "i": 61,
+            "n_characteristics": 15,
+            "symbol": "و",
+            "char_span": [
+                70,
+                70
+            ],
+            "duration_counts": 1.29,
+            "kind": "consonant",
+            "frames": [
+                434,
+                435
+            ],
+            "duration_s": 0.36,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -14.937,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[رخو]",
+                    "llr": 12.105,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 16.397,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 18.642,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 14.665,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 14.387,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 14.848,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 13.193,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 13.654,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 12.764,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 13.809,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 6,
+            "inherent": {
+                "makhraj": "both lips, lightly closed",
+                "makhraj_zone": "shafatan",
+                "istila": "istifal",
+                "idhlaq": "idhlaq"
+            },
+            "n_judged": 10,
+            "onset_s": 17.68,
+            "run_length": 1,
+            "i": 62,
+            "n_characteristics": 14,
+            "symbol": "م",
+            "char_span": [
+                71,
+                71
+            ],
+            "duration_counts": 0.29,
+            "kind": "consonant",
+            "frames": [
+                443,
+                443
+            ],
+            "duration_s": 0.08,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -11.997,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[بين الشدة والرخاوة]",
+                    "llr": 11.747,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 12.635,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 13.361,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 13.48,
+                    "realised": true,
+                    "model_best": "[أدنى المفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 12.403,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 14.052,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 13.737,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 11.791,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[مغن]",
+                    "llr": 12.387,
+                    "realised": true,
+                    "model_best": "[لا غنة]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 13.554,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 17.76,
+            "run_length": 1,
+            "i": 63,
+            "n_characteristics": 0,
+            "symbol": "ِ",
+            "char_span": [
+                72,
+                72
+            ],
+            "duration_counts": 0.71,
+            "kind": "harakah",
+            "frames": [
+                445,
+                446
+            ],
+            "duration_s": 0.2,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ُ",
+                "competitor_llr": -18.422,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 5,
+            "inherent": {
+                "makhraj": "tip of the tongue with the tips of the upper incisors",
+                "makhraj_zone": "lisan",
+                "istila": "isti'la",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 10,
+            "onset_s": 17.96,
+            "run_length": 2,
+            "i": 64,
+            "n_characteristics": 14,
+            "symbol": "ظ",
+            "char_span": [
+                73,
+                74
+            ],
+            "duration_counts": 1.57,
+            "kind": "consonant",
+            "frames": [
+                450,
+                459
+            ],
+            "duration_s": 0.44,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ض",
+                "competitor_llr": -18.82,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[رخو]",
+                    "llr": 7.312,
+                    "realised": true,
+                    "model_best": "[بين الشدة والرخاوة]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 8.918,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 15.408,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مفخم]",
+                    "llr": 9.967,
+                    "realised": true,
+                    "model_best": "[مرقق]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 12.687,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 8.498,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 10.367,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 13.251,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 12.53,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[مطبق]",
+                    "llr": 7.769,
+                    "realised": true,
+                    "model_best": "[منفتح]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 18.4,
+            "run_length": 1,
+            "i": 65,
+            "n_characteristics": 0,
+            "symbol": "َ",
+            "char_span": [
+                75,
+                75
+            ],
+            "duration_counts": 0.29,
+            "kind": "harakah",
+            "frames": [
+                461,
+                462
+            ],
+            "duration_s": 0.08,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ِ",
+                "competitor_llr": -18.505,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+                "makhraj": "oral cavity — prolongation, no contact",
+                "makhraj_zone": "jawf",
+                "istila": "istifal",
+                "idhlaq": "ismat"
+            },
+            "n_judged": 0,
+            "onset_s": 18.48,
+            "run_length": 2,
+            "i": 66,
+            "n_characteristics": 4,
+            "symbol": "ا",
+            "char_span": [
+                76,
+                77
+            ],
+            "duration_counts": 1.43,
+            "kind": "madd",
+            "frames": [
+                463,
+                467
+            ],
+            "duration_s": 0.4,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ۦ",
+                "competitor_llr": -31.556,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 6,
+            "inherent": {
+                "makhraj": "both edges of the tongue, forward, with the gums",
+                "makhraj_zone": "lisan",
+                "inhiraf": true,
+                "istila": "istifal",
+                "idhlaq": "idhlaq"
+            },
+            "n_judged": 10,
+            "onset_s": 18.88,
+            "run_length": 1,
+            "i": 67,
+            "n_characteristics": 15,
+            "symbol": "ل",
+            "char_span": [
+                78,
+                78
+            ],
+            "duration_counts": 0.29,
+            "kind": "consonant",
+            "frames": [
+                473,
+                473
+            ],
+            "duration_s": 0.08,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -14.757,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[بين الشدة والرخاوة]",
+                    "llr": 12.893,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 12.64,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 14.083,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 18.699,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 11.187,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 12.545,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 13.798,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 11.573,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[لا غنة]",
+                    "llr": 11.166,
+                    "realised": true,
+                    "model_best": "[مغن]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 12.217,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 18.96,
+            "run_length": 1,
+            "i": 68,
+            "n_characteristics": 0,
+            "symbol": "ِ",
+            "char_span": [
+                79,
+                79
+            ],
+            "duration_counts": 0.86,
+            "kind": "harakah",
+            "frames": [
+                475,
+                476
+            ],
+            "duration_s": 0.24,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ُ",
+                "competitor_llr": -24.036,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 6,
+            "inherent": {
+                "makhraj": "both lips, lightly closed",
+                "makhraj_zone": "shafatan",
+                "istila": "istifal",
+                "idhlaq": "idhlaq"
+            },
+            "n_judged": 10,
+            "onset_s": 19.2,
+            "run_length": 1,
+            "i": 69,
+            "n_characteristics": 14,
+            "symbol": "م",
+            "char_span": [
+                80,
+                80
+            ],
+            "duration_counts": 0.14,
+            "kind": "consonant",
+            "frames": [
+                481,
+                481
+            ],
+            "duration_s": 0.04,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -9.504,
+                "gop": 0
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[بين الشدة والرخاوة]",
+                    "llr": 10.168,
+                    "realised": true,
+                    "model_best": "[شديد]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 12.343,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 8.794,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 15.109,
+                    "realised": true,
+                    "model_best": "[أدنى المفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 14.426,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 14.449,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 10.979,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 7.158,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[مغن]",
+                    "llr": 8.816,
+                    "realised": true,
+                    "model_best": "[لا غنة]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 14.59,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 19.24,
+            "run_length": 1,
+            "i": 70,
+            "n_characteristics": 0,
+            "symbol": "ِ",
+            "char_span": [
+                81,
+                81
+            ],
+            "duration_counts": 0.29,
+            "kind": "harakah",
+            "frames": [
+                482,
+                483
+            ],
+            "duration_s": 0.08,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ُ",
+                "competitor_llr": -21.876,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 0,
+            "inherent": {
+            },
+            "n_judged": 0,
+            "onset_s": 19.32,
+            "run_length": 4,
+            "i": 71,
+            "n_characteristics": 0,
+            "symbol": "ۦ",
+            "char_span": [
+                82,
+                85
+            ],
+            "duration_counts": 2.29,
+            "kind": "madd",
+            "frames": [
+                484,
+                499
+            ],
+            "duration_s": 0.64,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "ۥ",
+                "competitor_llr": -40.912,
+                "gop": 0
+            },
+            "characteristics": {
+            }
+        },
+        {
+            "n_marked": 6,
+            "inherent": {
+                "makhraj": "tip of the tongue with the gums above the incisors",
+                "makhraj_zone": "lisan",
+                "istila": "istifal",
+                "idhlaq": "idhlaq"
+            },
+            "n_judged": 10,
+            "onset_s": 19.96,
+            "run_length": 1,
+            "i": 72,
+            "n_characteristics": 14,
+            "symbol": "ن",
+            "char_span": [
+                86,
+                86
+            ],
+            "duration_counts": 0.14,
+            "kind": "consonant",
+            "frames": [
+                500,
+                500
+            ],
+            "duration_s": 0.04,
+            "identity": {
+                "confirmed": true,
+                "best_competitor": "∅",
+                "competitor_llr": -0.491,
+                "gop": -0.478
+            },
+            "characteristics": {
+                "shidda_or_rakhawa": {
+                    "expected": "[بين الشدة والرخاوة]",
+                    "llr": 13.527,
+                    "realised": true,
+                    "model_best": "[رخو]"
+                },
+                "safeer": {
+                    "expected": "[لا صفير]",
+                    "llr": 13.729,
+                    "realised": true,
+                    "model_best": "[صفير]"
+                },
+                "tafashie": {
+                    "expected": "[لا تفشي]",
+                    "llr": 7.112,
+                    "realised": true,
+                    "model_best": "[متفشي]"
+                },
+                "tafkheem_or_taqeeq": {
+                    "expected": "[مرقق]",
+                    "llr": 11.71,
+                    "realised": true,
+                    "model_best": "[مفخم]"
+                },
+                "qalqla": {
+                    "expected": "[لا قلقلة]",
+                    "llr": 15.931,
+                    "realised": true,
+                    "model_best": "[مقلقل]"
+                },
+                "istitala": {
+                    "expected": "[لا إستطالة]",
+                    "llr": 13.826,
+                    "realised": true,
+                    "model_best": "[مستطيل]"
+                },
+                "hams_or_jahr": {
+                    "expected": "[جهر]",
+                    "llr": 13.034,
+                    "realised": true,
+                    "model_best": "[همس]"
+                },
+                "tikraar": {
+                    "expected": "[لا تكرار]",
+                    "llr": 4.661,
+                    "realised": true,
+                    "model_best": "[مكرر]"
+                },
+                "ghonna": {
+                    "expected": "[مغن]",
+                    "llr": 10.454,
+                    "realised": true,
+                    "model_best": "[لا غنة]"
+                },
+                "itbaq": {
+                    "expected": "[منفتح]",
+                    "llr": 14.397,
+                    "realised": true,
+                    "model_best": "[مطبق]"
+                }
+            }
+        }
+    ],
+    "clip": "everyayah:Husary_Muallim_128kbps/023041",
+    "haraka_s": 0.28
+}

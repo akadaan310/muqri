@@ -54,12 +54,27 @@ PAGE = """<!doctype html>
  code{font:.86em ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--bg);padding:1px 5px;border-radius:4px}
  #status{margin-top:14px;font-size:.9rem;color:var(--mut)}
  details summary{cursor:pointer;color:var(--mut);font-size:.9rem;padding:4px 0}
+ .tabs{display:flex;gap:4px;margin-bottom:20px;border-bottom:1px solid var(--line)}
+ .tabs button{width:auto;margin:0;padding:9px 16px;background:transparent;color:var(--mut);border:0;border-bottom:2px solid transparent;font-weight:500;font-size:.95rem}
+ .tabs button.on{color:var(--fg);border-bottom-color:var(--fg)}
+ .pill{display:inline-block;padding:1px 8px;border-radius:99px;font-size:.76rem;font-weight:600}
+ .p-covered,.p-ship{background:#1a7f4b22;color:var(--ok)}
+ .p-partial,.p-caution{background:#8a610022;color:var(--warn)}
+ .p-uncovered,.p-absent,.p-broken{background:#b3261e22;color:var(--bad)}
+ .p-blocked,.p-hold,.p-out_of_scope,.p-suspect,.p-plausible,.p-unmeasured{background:#6b6b6b22;color:var(--mut)}
+ .bar{height:7px;border-radius:4px;background:var(--line);overflow:hidden;margin:10px 0 18px}
+ .bar>i{display:block;height:100%;background:var(--ok)}
 </style>
 <div class="wrap">
 <h1>Qaari — recitation analysis</h1>
 <p class="sub">Upload a recitation and every letter is scored: identity, its five to seven classical
 sifāt, timing in your own counts, and every located tajweed rule graded against what it requires.</p>
 
+<div class="tabs">
+  <button class="on" data-t="analyse">Analyse a recitation</button>
+  <button data-t="capability">What the engine can judge</button>
+</div>
+<div id="t-analyse">
 <form id="f">
   <label for="audio">Recitation (mp3 / wav / m4a)</label>
   <input id="audio" name="audio" type="file" accept="audio/*,.mp3,.wav,.m4a,.ogg" required>
@@ -69,11 +84,16 @@ sifāt, timing in your own counts, and every located tajweed rule graded against
     <div><label for="ayah_end">To ayah</label><input id="ayah_end" name="ayah_end" type="number" min="1" placeholder="optional"></div>
   </div>
   <button id="go" type="submit">Analyse</button>
+  <button id="det" type="button" style="margin-top:8px;background:transparent;color:var(--fg);border:1px solid var(--line)">Detect verses from the audio</button>
+  <div id="cands"></div>
   <div id="status"></div>
-  <p class="note">Inference runs on this box's CPU: about 4 s per verse, one to two minutes for a full
-  page. Leave surah blank only if auto-detect is enabled below.</p>
+  <p class="note">Inference runs on this box's CPU. Detection transcribes the first 25 s with
+  whisper-tiny-ar-quran and offers the matches — it does not choose for you, because top-1 is 0.88
+  while top-3 is 1.00 on corpus clips.</p>
 </form>
 <div id="out"></div>
+</div>
+<div id="t-capability" style="display:none"><div class="card">Loading…</div></div>
 </div>
 <script>
 const f=document.getElementById('f'),out=document.getElementById('out'),st=document.getElementById('status'),go=document.getElementById('go');
@@ -90,6 +110,90 @@ f.onsubmit=async e=>{
    render(j);
  }catch(err){clearInterval(tick);st.textContent='';out.innerHTML='<div class="card err">'+esc(err)+'</div>';}
  finally{go.disabled=false;}
+};
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
+ document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));
+ document.getElementById('t-analyse').style.display=b.dataset.t==='analyse'?'':'none';
+ document.getElementById('t-capability').style.display=b.dataset.t==='capability'?'':'none';
+ if(b.dataset.t==='capability')loadCap();
+});
+let capLoaded=false;
+async function loadCap(){
+ if(capLoaded)return; capLoaded=true;
+ const el=document.getElementById('t-capability');
+ try{
+  const j=await (await fetch('/capability')).json();
+  const s=j.summary||{};
+  let h='<div class="card"><h3 style="margin:0 0 4px">Treatise coverage</h3>';
+  h+='<div class="note">'+s.concepts+' concepts from the treatises · '+s.covered_pct+'% fully covered</div>';
+  h+='<div class="bar"><i style="width:'+s.covered_pct+'%"></i></div>';
+  for(const[k,v]of Object.entries(s.by_status||{}))h+=kv(k,v);
+  h+=kv('Rules catalogued',s.rules_catalogued);
+  h+=kv('Rule instances located',(s.rule_instances_located||0).toLocaleString());
+  h+='</div>';
+
+  if((j.matrix||[]).length){
+   h+='<div class="card"><h3 style="margin:0 0 10px">Capability — measured against target</h3><table>';
+   h+='<tr><th>Capability</th><th>Detects</th><th>Now</th><th>Target</th><th>Status</th></tr>';
+   for(const m of j.matrix){
+    h+='<tr><td><code>'+esc(m.capability)+'</code></td><td>'+esc(m.detects||'')+'</td>'
+      +'<td>'+(m.value==null?'—':(+m.value).toFixed(4))+'</td>'
+      +'<td>'+(m.target==null?'—':(+m.target).toFixed(3))+'</td>'
+      +'<td><span class="pill p-'+esc(m.readiness)+'">'+esc(m.readiness)+'</span></td></tr>';
+    if(m.gap&&m.gap!=='—')h+='<tr><td colspan="5" class="note" style="padding-top:0">'+esc(m.gap)+'</td></tr>';
+   }
+   h+='</table></div>';
+  }
+
+  h+='<div class="card"><h3 style="margin:0 0 10px">Every tajweed rule the parser locates</h3><table>';
+  h+='<tr><th>Rule</th><th>Family</th><th>Judged by</th><th>Instances</th><th>Status</th></tr>';
+  for(const r of j.rules){
+   h+='<tr><td><code>'+esc(r.rule_type)+'</code></td><td>'+esc(r.family)+'</td>'
+     +'<td>'+esc(r.mechanism)+(r.muaalem_head?' · '+esc(r.muaalem_head):'')+'</td>'
+     +'<td>'+(r.n_instances||0).toLocaleString()+'</td>'
+     +'<td><span class="pill p-'+esc(r.status)+'">'+esc(r.status)+'</span></td></tr>';
+   h+='<tr><td colspan="5" class="note" style="padding-top:0">'+esc(r.ph_signature||'')+' → test: '+esc(r.counterfactual||'')+'</td></tr>';
+  }
+  h+='</table></div>';
+
+  h+='<div class="card"><h3 style="margin:0 0 10px">Treatise concepts</h3><table>';
+  h+='<tr><th>Concept</th><th>Treatise</th><th>Mechanism</th><th>Status</th></tr>';
+  for(const t of j.taxonomy){
+   h+='<tr><td><b>'+esc(t.name)+'</b><br><code>'+esc(t.concept_id)+'</code></td>'
+     +'<td>'+esc(t.treatise)+' §'+esc(t.section)+'</td><td>'+esc(t.mechanism)+'</td>'
+     +'<td><span class="pill p-'+esc(t.status)+'">'+esc(t.status)+'</span></td></tr>';
+   if(t.note)h+='<tr><td colspan="4" class="note" style="padding-top:0">'+esc(t.note)+'</td></tr>';
+  }
+  h+='</table></div>';
+  el.innerHTML=h;
+ }catch(e){el.innerHTML='<div class="card err">'+esc(e)+'</div>';capLoaded=false;}
+}
+
+const det=document.getElementById('det'),cands=document.getElementById('cands');
+det.onclick=async()=>{
+ const fi=document.getElementById('audio');
+ if(!fi.files.length){st.textContent='Choose a file first.';return;}
+ det.disabled=true;cands.innerHTML='';
+ const t0=Date.now();
+ const tick=setInterval(()=>{st.textContent='Transcribing… '+((Date.now()-t0)/1000).toFixed(0)+'s';},500);
+ try{
+  const fd=new FormData();fd.append('audio',fi.files[0]);
+  const r=await fetch('/detect',{method:'POST',body:fd});const j=await r.json();
+  clearInterval(tick);
+  if(!r.ok||j.error){st.textContent='';cands.innerHTML='<div class="card err">'+esc(j.error||'failed')+'</div>';return;}
+  st.textContent='Transcribed in '+j.elapsed_seconds+'s';
+  let h='<div class="card"><div class="note" style="margin:0 0 8px">Heard: <span class="ar">'+esc(j.transcript)+'</span></div>';
+  h+='<div class="note" style="margin:0 0 8px">Pick the verse this starts at:</div>';
+  for(const c of j.candidates)
+   h+='<div class="k"><span><button type="button" class="pick" data-s="'+c.surah+'" data-a="'+c.ayah+'" style="width:auto;margin:0;padding:5px 12px;font-size:.85rem">'+c.surah+':'+c.ayah+'</button></span><span>match '+(100*c.score).toFixed(0)+'%</span></div>';
+  h+='</div>';cands.innerHTML=h;
+  document.querySelectorAll('.pick').forEach(b=>b.onclick=()=>{
+   document.getElementById('surah').value=b.dataset.s;
+   document.getElementById('ayah').value=b.dataset.a;
+   st.textContent='Set to '+b.dataset.s+':'+b.dataset.a+' — press Analyse.';
+  });
+ }catch(e){clearInterval(tick);st.textContent='';cands.innerHTML='<div class="card err">'+esc(e)+'</div>';}
+ finally{det.disabled=false;}
 };
 function kv(label,val,cls){return '<div class="k"><span>'+esc(label)+'</span><span class="'+(cls||'')+'">'+esc(val)+'</span></div>';}
 function render(j){
@@ -144,6 +248,22 @@ def create_app():  # type: ignore[no-untyped-def]
     api = FastAPI(title="qaari-upload", version="1.0.0")
     state: dict[str, Any] = {"engine": None, "warm": False, "verse_id_ok": False}
 
+    def _decode(data: bytes):  # type: ignore[no-untyped-def]
+        """Any uploaded container to 16 kHz mono float32."""
+        import io as _io
+        import librosa
+        import numpy as np
+        import soundfile as sf
+        try:
+            wave, sr = sf.read(_io.BytesIO(data), dtype="float32", always_2d=False)
+            if getattr(wave, "ndim", 1) > 1:
+                wave = wave.mean(axis=1)
+            if sr != 16000:
+                wave = librosa.resample(np.asarray(wave, dtype="float32"), orig_sr=sr, target_sr=16000)
+        except Exception:  # noqa: BLE001 - mp3/m4a go through librosa
+            wave, _ = librosa.load(_io.BytesIO(data), sr=16000, mono=True)
+        return np.asarray(wave, dtype="float32")
+
     def engine():  # type: ignore[no-untyped-def]
         if state["engine"] is None:
             from app.engine import Engine
@@ -168,7 +288,74 @@ def create_app():  # type: ignore[no-untyped-def]
     @api.get("/health")
     def health() -> dict[str, Any]:
         return {"status": "ok", "model_warm": state["warm"],
-                "auto_detect": state["verse_id_ok"], "port": PORT}
+                "detect_endpoint": "/detect", "port": PORT}
+
+    @api.get("/capability")
+    def capability():  # type: ignore[no-untyped-def]
+        """What the engine can actually judge right now, read live from the store.
+
+        Three tables generated from one source each, so this cannot drift from what was measured:
+        `tajweed_taxonomy` (the treatises' concepts and whether each is covered), `rule_catalogue`
+        (the parser's rules and the mechanism that judges each), and `launch_matrix` (per-capability
+        readiness with today's number against its target).
+        """
+        from datastore.store import connect
+        con = connect(read_only=True)
+
+        def rows(sql):  # type: ignore[no-untyped-def]
+            cur = con.execute(sql)
+            cols = [d[0] for d in cur.description]
+            return [dict(zip(cols, r)) for r in cur.fetchall()]
+
+        tax = rows("SELECT concept_id, treatise, section, name, mechanism, implementation, status, "
+                   "note FROM tajweed_taxonomy ORDER BY status, treatise, section")
+        rules = rows("SELECT rule_type, family, mechanism, ph_signature, counterfactual, "
+                     "muaalem_head, n_instances, legacy_pass_rate, status FROM rule_catalogue "
+                     "ORDER BY family, rule_type")
+        try:
+            matrix = rows("SELECT capability, family, level, detects, metric, value, target, n, "
+                          "readiness, gap FROM launch_matrix ORDER BY readiness, family, capability")
+        except Exception:  # noqa: BLE001 - the matrix is regenerated, may be absent
+            matrix = []
+        counts = {}
+        for r in tax:
+            counts[r["status"]] = counts.get(r["status"], 0) + 1
+        scoped = sum(v for k, v in counts.items() if k != "out_of_scope")
+        return JSONResponse({
+            "taxonomy": tax, "rules": rules, "matrix": matrix,
+            "summary": {
+                "concepts": len(tax), "by_status": counts,
+                "covered_pct": round(100 * counts.get("covered", 0) / scoped, 1) if scoped else None,
+                "rules_catalogued": len(rules),
+                "rule_instances_located": sum(r["n_instances"] or 0 for r in rules),
+            },
+        })
+
+    @api.post("/detect")
+    async def detect_verses(audio: UploadFile = File(...)):  # type: ignore[no-untyped-def]  # noqa: B008
+        """Transcribe the head of a recording and offer the verses it might be.
+
+        Deliberately does NOT pick one. Measured on corpus clips where the truth is known, top-1 is
+        0.88 but top-3 is 1.00 — so the honest interface is a short list to choose from, not a silent
+        guess that is wrong one time in eight.
+        """
+        data = await audio.read()
+        if not data:
+            return JSONResponse({"error": "Empty upload"}, status_code=400)
+        try:
+            wave = _decode(data)
+            from app.verse_detect import detect as detect_fn
+            t0 = time.time()
+            cands = detect_fn(wave)
+            return JSONResponse({
+                "transcript": cands[0].text if cands else "",
+                "candidates": [c.to_dict() for c in cands[:5]],
+                "audio_seconds": round(float(wave.size) / 16000, 2),
+                "elapsed_seconds": round(time.time() - t0, 2),
+            })
+        except Exception as exc:  # noqa: BLE001
+            return JSONResponse({"error": f"{type(exc).__name__}: {exc}",
+                                 "detail": traceback.format_exc()[-1200:]}, status_code=500)
 
     @api.post("/analyze")
     async def analyze(
@@ -183,26 +370,13 @@ def create_app():  # type: ignore[no-untyped-def]
         if len(data) > MAX_UPLOAD_BYTES:
             return JSONResponse({"error": "Audio file too large (50 MB limit)"}, status_code=413)
         if not surah or not ayah:
-            return JSONResponse(
-                {"error": "Give a surah and a starting ayah. Automatic verse detection is not "
-                          "enabled yet — app/verse_id.py has never been measured, and it will only "
-                          "be offered once it is."}, status_code=422)
-
-        import soundfile as sf
-        import librosa
-        import numpy as np
+            return JSONResponse({"error": "Give a surah and a starting ayah, or press Detect verses "
+                                          "to have the recording transcribed and choose from the "
+                                          "matches."}, status_code=422)
 
         t0 = time.time()
         try:
-            try:
-                wave, sr = sf.read(io.BytesIO(data), dtype="float32", always_2d=False)
-                if getattr(wave, "ndim", 1) > 1:
-                    wave = wave.mean(axis=1)
-                if sr != 16000:
-                    wave = librosa.resample(np.asarray(wave, dtype="float32"), orig_sr=sr, target_sr=16000)
-            except Exception:  # noqa: BLE001 - mp3/m4a go through librosa
-                wave, _ = librosa.load(io.BytesIO(data), sr=16000, mono=True)
-            wave = np.asarray(wave, dtype="float32")
+            wave = _decode(data)
             if wave.size < 1600:
                 return JSONResponse({"error": "Recording is shorter than 0.1 s"}, status_code=422)
 

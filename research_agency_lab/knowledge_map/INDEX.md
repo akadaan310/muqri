@@ -1,6 +1,6 @@
 # Knowledge map index (generated — edit fragments/, then run build_map.py)
 
-937 nodes · 1622 edges · fragments: 00_curriculum, 01_makharij, 02_sifaat, 03_timing, 04_waqf, 05_topology, 06_information_neural, 07_dsp_julia, 08_tajweed_rules, 09_tajweed_treatises, 10_letter_reference, core
+939 nodes · 1628 edges · fragments: 00_curriculum, 01_makharij, 02_sifaat, 03_timing, 04_waqf, 05_topology, 06_information_neural, 07_dsp_julia, 08_tajweed_rules, 09_tajweed_treatises, 10_letter_reference, core
 
 ## Tajweed phenomena → models
 
@@ -250,10 +250,10 @@
 | `phen:waqf:ikhtibari` Waqf ikhtibari (rasm test) | ijazah | missing |  |  |
 | `phen:waqf:intizari` Waqf intizari | ijazah | missing |  |  |
 | `phen:wasl:ism` al-ismu 49:11 | ijazah | partial | `code:app/tajweed_rules/parser.py` |  |
-| `concept:aqwa_al_mudud` Strength order Lāzim > Muttaṣil > 'Āriḍ > Munfaṣil > Badal |  | uncovered | `mech:-` |  |
+| `concept:aqwa_al_mudud` Strength order Lāzim > Muttaṣil > 'Āriḍ > Munfaṣil > Badal |  | covered | `mech:-` |  |
 | `concept:compound_collisions` Adjacent-letter collisions and assimilation |  | partial | `mech:segmental` |  |
 | `concept:endurance` Muscular endurance and self-correction |  | uncovered | `mech:consistency` |  |
-| `concept:ghunnah_four_levels` Marātib al-Ghunnah: Akmal > Kāmilah > Nāqiṣah > Anqaṣ |  | uncovered | `mech:durational` |  |
+| `concept:ghunnah_four_levels` Marātib al-Ghunnah: Akmal > Kāmilah > Nāqiṣah > Anqaṣ |  | covered | `mech:durational` |  |
 | `concept:ghunnah_vs_madd` 2U ghunnah ≠ 2U madd; no nasal bleed into the madd |  | partial | `mech:attribute` |  |
 | `concept:hadr_integrity` Under Ḥadr, tawassuṭ/rakhāwah must not collapse into shiddah |  | covered | `mech:tempo` |  |
 | `concept:hams_jahr` Hams vs Jahr — breath vs vocal-fold vibration |  | covered | `mech:attribute` |  |
@@ -266,10 +266,11 @@
 | `concept:istila_istifal` Isti'lā' vs Istifāl — tongue-root elevation |  | partial | `mech:attribute` |  |
 | `concept:itbaq_infitah` Iṭbāq vs Infitāḥ — trapping sound against the palate |  | covered | `mech:attribute` |  |
 | `concept:itmam_universal` Universal law of vowel perfection |  | uncovered | `mech:consistency` |  |
-| `concept:letter_strength` Composite letter strength from its sifāt |  | partial | `mech:attribute` |  |
-| `concept:madd_4_5_6` The 4, 5 and 6-count scales |  | partial | `mech:durational` |  |
+| `concept:letter_completeness` Every letter's full 5–7 classical sifāt, applied and not applied |  | covered | `mech:attribute` |  |
+| `concept:letter_strength` Composite letter strength (quwwa) from its sifāt |  | covered | `mech:attribute` |  |
+| `concept:madd_4_5_6` The 4, 5 and 6-count scales |  | covered | `mech:durational` |  |
 | `concept:madd_arid` Madd 'Āriḍ li-s-Sukoon at 2/4/6 with terminal decay |  | partial | `mech:durational` |  |
-| `concept:madd_drift` Drift error — a category shrinking over a passage through fatigue |  | uncovered | `mech:consistency` |  |
+| `concept:madd_drift` Drift error — a category shrinking over a passage through fatigue |  | covered | `mech:consistency` |  |
 | `concept:madd_tabii_2u` Madd Ṭabī'ī locked at 2 counts |  | covered | `mech:durational` |  |
 | `concept:makharij_clinicals` Per-letter articulation clinics (ء ه ع ح غ خ ق ك ج ش ي ض ل ر ط د ت ص ز س ظ ذ ث ف ب م و) |  | covered | `mech:segmental` |  |
 | `concept:metric_consonantal_envelope` Consonantal Envelope — complete closure, clean release |  | partial | `mech:attribute` |  |
@@ -278,6 +279,7 @@
 | `concept:metric_temporal_pulse` Temporal Pulse Isochrony — 1U/2U/4U/5U/6U ratios hold across tempo |  | covered | `mech:consistency` |  |
 | `concept:neutral_sukoon_zero` The neutral sukoon state as the absolute zero point |  | partial | `mech:tempo` |  |
 | `concept:physiology` Respiratory / laryngeal / supraglottal mechanics |  | out_of_scope | `mech:-` |  |
+| `concept:raa_lam_weight` Conditional tafkhīm/tarqīq of ر and of the lām of ٱللَّه |  | covered | `mech:attribute` |  |
 | `concept:shidda_rakhawa_attr` Shiddah / Tawassuṭ / Rakhāwah as a letter quality |  | covered | `mech:attribute` |  |
 | `concept:sukoon_rakhawah` Rakhāwah — sustained flow, longest sākin duration |  | covered | `mech:tempo` |  |
 | `concept:sukoon_shiddah` Shiddah — complete stop, shortest sākin duration |  | covered | `mech:tempo` |  |

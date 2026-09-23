@@ -81,28 +81,34 @@ TAXONOMY: list[tuple[str, str, str, str, str, str, str, str]] = [
      "ruleswap_gop.jl + tasawi_run.jl", "covered",
      "madd_short 93.7 % / madd_long 99.0 %; anchors measure 2.25 own-counts"),
     ("madd_4_5_6", "I", "4.3", "The 4, 5 and 6-count scales", DUR,
-     "ruleswap_gop.jl + tasawi_run.jl", "partial",
-     "detected and consistency-scored, but the ABSOLUTE scale is uncalibrated: measured 2.25 : 6.20 : "
-     "12.0 where the notation implies 2 : 4 : 6"),
+     "substrate_library/julia/madd_scale.jl", "covered",
+     "the absolute scale is FITTED: measured = −0.920 + 1.360 × nominal by Theil–Sen over 10,600 anchor "
+     "instances, recovering four of five levels within 0.15 counts (1.5→1.50, 2→2.04, 4→3.90, 4.5→4.35). "
+     "The six-count level reads 7.21 and stays flagged — madd lāzim is genuinely stretched past six in "
+     "mujawwad. The earlier 2.25 : 6.20 : 12.0 figure was keyed on phoneme RUN LENGTH, not the nominal"),
     ("ghunnah_four_levels", "I", "5.2", "Marātib al-Ghunnah: Akmal > Kāmilah > Nāqiṣah > Anqaṣ", DUR,
-     "", "uncovered",
-     "we measure ghunnah length but do not GRADE it by structural context; the four levels are "
-     "distinguishable from the phoneme string (mushaddad/idghām vs ikhfā'/iqlāb vs iẓhār vs voweled)"),
+     "app/ghunnah.py", "covered",
+     "graded by the structural context the rule-instance join names. Anchor: akmal 2.33 counts (n=25), "
+     "kāmilah 2.43 (n=18), nāqiṣah 1.41 (n=18) — nāqiṣah correctly the short one. Akmal and kāmilah "
+     "are not separated by length and should not be: the treatise separates them by oral articulation"),
     ("ghunnah_vs_madd", "I", "5.3/6.1", "2U ghunnah ≠ 2U madd; no nasal bleed into the madd", ATTR,
      "SifatGop.jl (ghonna head)", "partial",
      "the head judges nasality; the 'velum snaps shut instantly' cut-off is not measured"),
     ("madd_arid", "I", "6.2", "Madd 'Āriḍ li-s-Sukoon at 2/4/6 with terminal decay", DUR,
      "rule_catalogue", "partial", "located by the parser; not yet a tasāwī class of its own"),
     ("aqwa_al_mudud", "I", "7.1", "Strength order Lāzim > Muttaṣil > 'Āriḍ > Munfaṣil > Badal", NONE,
-     "", "uncovered",
-     "rule-resolution logic, not a measurement: when two causes collide the stronger sets the expected "
-     "duration. Needed so the engine expects the RIGHT target before judging it"),
+     "app/mudud.py", "covered",
+     "resolved before judging, so the engine grades against what actually governs: with badal (2) and "
+     "lāzim (6) on one letter, grading against badal would call a correct six-count hold a gross "
+     "over-lengthening. Six resolutions fired on a ten-ayah passage"),
     ("taswiyat_al_mudud", "I", "7.2", "Taswiyah — every instance of a madd category held identically", CONS,
      "tasawi_run.jl", "covered",
      "exactly what the CV measures; anchors more consistent in all six held classes"),
     ("madd_drift", "I", "7.2", "Drift error — a category shrinking over a passage through fatigue", CONS,
-     "", "uncovered",
-     "a TREND over verse position, not a variance; one regression over the same durations we already have"),
+     "app/mudud.py", "covered",
+     "a slope of given-counts over ayah position, which the tasāwī CV cannot see. Requires a real shift "
+     "in the median as well as a slope: on the anchor, madd tabii showed slope −0.10 with start and end "
+     "medians both 1.87, which is outliers tilting the line, not fatigue"),
     ("tafkhim_five_levels", "I/II", "3.2", "Five graded levels of tafkhīm by vowel context", ATTR,
      "SifatGop.jl (tafkheem head)", "partial",
      "the head has mofakham / moraqaq / adnā-l-mofakham (3 classes); the treatise grades 5 by whether the "
@@ -135,8 +141,10 @@ TAXONOMY: list[tuple[str, str, str, str, str, str, str, str]] = [
      "SifatGop.jl (itbaq)", "covered", "1.0 % anchor false alarm, n = 2,108 at T300"),
     ("idhlaq_ismat", "II", "2.5", "Idhlāq vs Iṣmāt — ease of production", NONE, "", "out_of_scope",
      "a lexical/morphological constraint, not an audible per-instance quality; no muaalem head"),
-    ("letter_strength", "II", "3.1", "Composite letter strength from its sifāt", ATTR,
-     "SifatGop.jl", "partial", "derivable by combining the ten head LLRs; not yet computed as one score"),
+    ("letter_strength", "II", "3.1", "Composite letter strength (quwwa) from its sifāt", ATTR,
+     "app/ghunnah.py", "covered",
+     "a letter's quwwa is the sum of the strong members it carries, judged plus inherent. Anchor: 560 "
+     "of 572 strong sifāt realised (0.979); reports which LETTERS were weak, not only which sifāt"),
     ("makharij_clinicals", "II", "4–16", "Per-letter articulation clinics (ء ه ع ح غ خ ق ك ج ش ي ض ل ر ط د ت ص ز س ظ ذ ث ف ب م و)",
      SEG, "textswap_gop.jl + datastore/letter_reference.py", "covered",
      "letter identity and its classical confusions at T300: 216,577 consonant swaps, 99.91 % detected, "

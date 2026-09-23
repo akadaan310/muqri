@@ -1,0 +1,16 @@
+[{"stream_name":"stdout","time":2.384766269,"data":"[   0.0 min] code in /kaggle/tmp/qaari; config {'reciters': ['Husary_128kbps', 'Yasser_Ad-Dussary_128kbps'], 'verses': '1:1-7', 'modes': ['studio', 'taraweeh_adapted'], 'procs': 2, 'shard_base': 0, 'shard_total': 2, 'octave': False, 'tag': 'smoke3', 'pip': 'praat-parselmouth faiss-cpu nara_wpe soxr speechbrain', 'hours': 1.0}\n"}
+,{"stream_name":"stdout","time":34.435864806,"data":"[   0.6 min] internet: OFF (kernel internet disabled; using the attached qaari-eval-deps bundle)\n"}
+,{"stream_name":"stdout","time":34.554686578,"data":"[   0.6 min] $ /usr/bin/python3 -m pip install -q --no-index --find-links /kaggle/input/qaari-eval-deps/wheels praat-parselmouth faiss-cpu nara_wpe soxr speechbrain hyperpyyaml ruamel.yaml\n"}
+,{"stream_name":"stderr","time":39.715201827,"data":"ERROR: Cannot install hyperpyyaml==1.2.3 and ruamel.yaml because these package versions have conflicting dependencies.\n"}
+,{"stream_name":"stderr","time":39.715567542,"data":"ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts\n"}
+,{"stream_name":"stdout","time":45.097278389,"data":"[   0.7 min] model snapshots copied to /root/.cache/huggingface/hub\n"}
+,{"stream_name":"stdout","time":45.098775501,"data":"[   0.7 min] started 2 benchmark processes\n"}
+,{"stream_name":"stdout","time":105.09971966,"data":"[   1.7 min] 0 rows written\n"}
+,{"stream_name":"stdout","time":105.099767091,"data":"[   1.7 min] done\n"}
+,{"stream_name":"stderr","time":107.703207162,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":107.703253874,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":108.028716664,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":108.028750479,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":108.767393489,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":110.441158935,"data":"[NbConvertApp] Writing 304080 bytes to __results__.html\n"}
+]

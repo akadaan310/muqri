@@ -166,6 +166,13 @@ def bind(parsed, phonemes: str, word_ph: list[list[int]]) -> list[BoundRule]:  #
         rt = r.rule_type
         w = r.word_index
         span = word_ph[w] if 0 <= w < len(word_ph) else None
+        fellback = span is None and bool(word_ph)
+        if fellback:
+            # The muqatta'at are spelled out as letter NAMES: the phonetizer renders الٓمٓ as one word
+            # ("alif laam meem", with its six-count madd lazim harfi) while the parser counts three, so
+            # word_index runs past word_ph. Fall back to the whole ayah rather than dropping the rule —
+            # this is what capped madd_lazim binding at 0.57.
+            span = [word_ph[0][0], word_ph[-1][1]]
         if not span or span[0] < 0 or span[1] <= span[0]:
             continue
         lo, hi = int(span[0]), int(span[1])
@@ -180,7 +187,9 @@ def bind(parsed, phonemes: str, word_ph: list[list[int]]) -> list[BoundRule]:  #
         if r.letter:
             targets = targets | {r.letter} if targets else frozenset({r.letter})
 
-        taken = used.setdefault((w, rt.value), set())
+        # Instances that fell back to the whole ayah must share one exclusion set, or each would pick
+        # the same run again (alif laam meem has two madd lazim, on different letters).
+        taken = used.setdefault((-1 if fellback else w, rt.value), set())
         idxs: list[int] = []
         if rt in FIRST_UNIT_OF_WORD:
             first = next((i for i, (_s, a, _b) in enumerate(units) if a >= lo), None)

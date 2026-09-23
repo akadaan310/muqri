@@ -111,3 +111,20 @@ def test_binding_never_raises_and_units_are_in_range(surah: int, ayah: int) -> N
         assert b.unit_indices, f"{b.rule_type} bound with no units"
         assert all(0 <= i < len(units) for i in b.unit_indices)
         assert b.mechanism in {"durational", "attribute", "segmental"}
+
+
+def test_muqattaat_bind_although_the_word_counts_disagree() -> None:
+    """الٓمٓ is spelled out as letter NAMES: "alif laam meem", six-count madd lazim harfi and all.
+
+    The phonetizer renders that as one word while the parser counts three, so word_index runs past
+    word_spans. Rules must still bind (this capped madd_lazim at 0.57 before the fallback), and the
+    two madd lazim must land on DIFFERENT runs.
+    """
+    rules, units, located = bound_for(2, 1)
+    assert len(rules) == located, "every muqatta'at rule should bind"
+    lazim = [b for b in rules if b.rule_type == "madd_lazim"]
+    assert len(lazim) >= 2
+    assert lazim[0].unit_indices != lazim[1].unit_indices
+    assert all(b.expected_counts == (6, 6) for b in lazim)
+    # the six-count madd is written as six repetitions, so the encoding matches the requirement
+    assert len(symbols(units, lazim[0])) == 6

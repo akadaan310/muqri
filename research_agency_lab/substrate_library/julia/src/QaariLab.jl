@@ -147,32 +147,40 @@ function build_bands(obs::Vector{Obs}, anchor::String, peers::Vector{String}, sp
             kb = Band[]
             krep = Any[]
             for g in groups
+                # Every candidate ruler gets its full band; the one that false-FAILs the near-gold anchor
+                # least wins (ties: lower rCV). A robust CV alone ignores the tails, and the tails are
+                # where a ruler that swallows pauses or breaths fails a master's correct madd.
                 best = nothing
                 cands = Dict{String,Any}()
                 for m in String.(g.alts)
-                    ra = robust(values_of(usable, (anchor,), key, m))
+                    avals = values_of(usable, (anchor,), key, m)
+                    ra = robust(avals)
                     ra.n >= spec.min_anchor_n || continue
-                    cands[m] = Dict("n" => ra.n, "median" => ra.median, "rcv" => rcv(ra))
-                    if best === nothing || rcv(ra) < rcv(best[2])
-                        best = (m, ra)
+                    peer_meds = Float64[]
+                    sigmas = [ra.sigma]
+                    pstats = Dict{String,Any}()
+                    for p in peers
+                        rp = robust(values_of(usable, (p,), key, m))
+                        rp.n >= spec.min_peer_n || continue
+                        push!(peer_meds, rp.median)
+                        push!(sigmas, rp.sigma)
+                        pstats[p] = Dict("n" => rp.n, "median" => rp.median, "sigma" => rp.sigma)
+                    end
+                    consensus = isempty(peer_meds) ? ra.median : median(peer_meds)
+                    lo, hi = minmax(ra.median, consensus)
+                    s = max(median(sigmas), scale_floor(m, floors), 1e-6)
+                    band = Band(m, String(g.side), lo, hi, s)
+                    afail = count(x -> zscore(band, x) > 3.0, avals) / length(avals)
+                    cands[m] = Dict("n" => ra.n, "median" => ra.median, "rcv" => rcv(ra), "anchor_fail" => afail)
+                    rank = (round(afail; digits = 3), rcv(ra))
+                    if best === nothing || rank < best[1]
+                        best = (rank, band, ra, pstats, consensus)
                     end
                 end
                 best === nothing && continue
-                m, ra = best
-                peer_meds = Float64[]
-                sigmas = [ra.sigma]
-                pstats = Dict{String,Any}()
-                for p in peers
-                    rp = robust(values_of(usable, (p,), key, m))
-                    rp.n >= spec.min_peer_n || continue
-                    push!(peer_meds, rp.median)
-                    push!(sigmas, rp.sigma)
-                    pstats[p] = Dict("n" => rp.n, "median" => rp.median, "sigma" => rp.sigma)
-                end
-                consensus = isempty(peer_meds) ? ra.median : median(peer_meds)
-                lo, hi = minmax(ra.median, consensus)
-                s = max(median(sigmas), scale_floor(m, floors), 1e-6)
-                push!(kb, Band(m, String(g.side), lo, hi, s))
+                _, band, ra, pstats, consensus = best
+                m = band.metric
+                push!(kb, band)
                 push!(krep, Dict("metric" => m, "side" => g.side, "candidates" => cands,
                                  "anchor" => Dict("n" => ra.n, "median" => ra.median, "sigma" => ra.sigma,
                                                   "p5" => ra.p5, "p25" => ra.p25, "p75" => ra.p75, "p95" => ra.p95),
@@ -219,7 +227,9 @@ end
     calibrate(paths; anchor, peers, imams, spec, taxonomy) -> Dict
 
 1. count scale: 2.0 / anchor median of madd_tabii counts (the chosen ruler), so Husary's natural madd reads 2.
-2. alignment reliability: posterior floor = max(0.2, anchor 2nd percentile); collapsed units < 40 ms.
+2. alignment reliability: posterior floor = anchor 2nd percentile of the *positive* posteriors (0 marks a
+   letter outside the model vocabulary); collapsed units < 40 ms. The old max(0.2, ·) put ~47 % of expert
+   instances under the floor: this CTC model is peaky, a forced token often sits on blank-dominated frames.
 3. bands from the anchor + all peers; leave-one-peer-out bands to score each held-out peer.
 4. category weights: maximise mean(peers) − mean(imams) subject to every LOO peer ≥ 95, with an L2
    pull toward the default weights (Optim.jl, Nelder–Mead on log-weights).
@@ -228,8 +238,9 @@ function calibrate(paths::Vector{String}; anchor::String, peers::Vector{String},
                    spec, taxonomy, target_peer::Float64 = 95.0)
     obs, rows = load_rows(paths; modes = ("studio",))
     dur = Set(String.(spec.duration_rules))
-    confs = [o.metrics["align_conf"] for o in obs if o.reciter == anchor && haskey(o.metrics, "align_conf")]
-    conf_min = isempty(confs) ? 0.2 : max(0.2, quantile(confs, 0.02))
+    confs = [o.metrics["align_conf"] for o in obs
+             if o.reciter == anchor && haskey(o.metrics, "align_conf") && o.metrics["align_conf"] > 0]
+    conf_min = isempty(confs) ? 0.2 : quantile(confs, 0.02)
     collapsed = Float64(spec.collapsed_unit_ms)
 
     bands, report = build_bands(obs, anchor, peers, spec; conf_min = conf_min)
@@ -323,5 +334,8 @@ sanitize(x::Tuple) = [sanitize(v) for v in x]
 sanitize(x) = x
 
 include("Discovery.jl")
+include("Frontier.jl")
+include("CtcGop.jl")
+include("SifatGop.jl")
 
 end # module

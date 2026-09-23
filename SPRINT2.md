@@ -1,5 +1,33 @@
 # Sprint 2 — 100 % treatise coverage, with a live upload page
 
+## Paste this to start the next session
+
+> Continuing the qaari/muqri engine. Same VM (koda-vm), repo `~/github-director/repos/muqri`, branch
+> `claude/qaari-eval-engine-btwkjt`.
+>
+> **Read `SPRINT2.md` in the repo root first** — it is the complete handover: what Sprint 1 built and
+> measured, the architecture and key files, Sprint 2's goals and KPIs, the rigor rules, every phonetic
+> fact verified against the corpus, the traps that cost time, and the compute position.
+>
+> This is **Sprint 2**, with a 5-hour window. Three goals, in this order:
+>
+> 1. **Build the upload page first, not last.** A small web service where I open a URL, drop in my own
+>    recitation file, pick the verses, and see the full report. `app/api.py` already has FastAPI
+>    `POST /analyze` but routes to the legacy pipeline — re-point it at `app/engine.py`. Give me the
+>    address early, then keep using it to evaluate the service while you build everything else.
+> 2. **Finish the sub-frame timing work (Goal B2).** The 40 ms quantisation ceiling was broken at the
+>    end of Sprint 1 — `research_agency_lab/experiments/subframe/` has the working method and the
+>    measurements. One question is open and must be settled before anything ships; the file says which.
+> 3. **Take treatise coverage from 58 % to 100 %.** Query `tajweed_taxonomy` in DuckDB for the live
+>    gap list.
+>
+> Standing rules: commit constantly and make every commit production-ready; numerics stay in Julia
+> with the numpy path pinned to it by parity test; never report a number you have not measured; verify
+> against the corpus rather than reasoning from memory. Push only on my explicit approval. $8.53 of
+> Modal budget remains — check `modal app list` before launching anything.
+
+---
+
 *Sprint 1 ended 2026-09-23 on branch `claude/qaari-eval-engine-btwkjt`, 14 commits, nothing pushed.
 Every commit is production-ready; that is a standing rule for this repo — **commit constantly, never
 batch**.*

@@ -94,21 +94,91 @@ Current: **22/38 covered (58 %), 11 partial, 3 uncovered, 2 blocked.** Query the
 - `ghunnah_vs_madd` — the velum must snap shut; the cut-off transient is not measured.
 - `madd_arid` — give it its own tasāwī class.
 
-**Blocked (2) — do not burn the sprint on these without a plan.** `harakah_isochrony` and
-`harakah_weight_independence` are unmeasurable at the model's **40 ms frame rate**: a short vowel is
-1–2 frames, so the three vowel medians all quantise to 1.0 and the spread reads exactly 0.0 for all
-41 reciters. Root cause is `add_adapter: true, adapter_stride: 2` halving a 20 ms base. Either
-implement **sub-frame onset interpolation from posterior shapes**, or mark them permanently
-out-of-scope with the reason. The same ceiling blocks the strict three-way sukoon ordering.
+**Blocked (2) — SOLVED at the end of Sprint 1; finish the job.** See the next section.
+
+### Goal B2 — sub-frame timing: the 40 ms ceiling is broken, now exploit it
+
+`research_agency_lab/experiments/subframe/` (committed). **Read `occupancy.py` first.**
+
+The two "blocked" concepts were never a coding gap. The model emits one frame per 40 ms
+(`add_adapter: true, adapter_stride: 2` halves a 20 ms base), a short vowel is 1–2 frames, so a hard
+Viterbi span can only be 1 or 2 and every duration statistic built on it quantises. The three vowel
+medians landed on the same value and the spread read exactly **0.0 for all 41 reciters** — an
+artefact, not a finding.
+
+**The fix: stop taking a hard path.** CTC forward–backward gives γ_t(s), the posterior probability
+that extended state *s* occupies frame *t*. Summed it is a fractional occupancy; its centre of mass
+is a continuous onset. Three estimators are implemented and cross-check each other:
+
+| estimator | what it gives | verdict |
+|---|---|---|
+| `expected_durations` | Σγ per symbol | **confidence mass, not acoustic time** — only 132 of 605 frames carry symbol mass, CTC is peaky |
+| `centroid_onsets` | posterior-weighted centre of occupancy | **continuous and acoustic — build on this** |
+| `peak_parabolic` | parabolic interpolation of the occupancy peak | cheap cross-check; agrees with the centroid to ~0.004 of a vowel |
+
+**Quantisation is decisively broken** (60 anchor clips):
+
+| vowel | unique values, Viterbi | unique values, centroid |
+|---|---|---|
+| fatḥah | 56 / 1245 | **1106 / 1245** |
+| ḍammah | 37 / 382 | **368 / 382** |
+| kasrah | **1 / 440** — every instance identical | **422 / 439** |
+
+#### What it already measured (bootstrap 95 % CIs, 400 clips per group)
+
+**Isochrony** — vowel duration as a fraction of that reciter's own haraka unit:
+
+| group | fatḥah | ḍammah | kasrah | spread |
+|---|---|---|---|---|
+| anchors | 0.7313 [0.7267, 0.7355] | 0.7598 [0.7512, 0.7663] | 0.7319 [0.7230, 0.7388] | 0.0284 (**3.84 %**) |
+| fast imams | 0.6207 [0.6170, 0.6237] | 0.6255 [0.6223, 0.6293] | 0.6123 [0.6043, 0.6191] | 0.0132 (2.12 %) |
+
+On the anchors **fatḥah and kasrah are statistically equal** — their CIs overlap almost exactly,
+which is isochrony holding. **Ḍammah is genuinely longer**: its CI [0.7512, 0.7663] does not overlap
+fatḥah's, so the ~3.9 % difference is real and not noise. That is a publishable observation about
+how Hafs is actually recited, and it could not be seen at all before.
+
+**Weight independence** — the treatise requires a vowel's length to be independent of whether its
+consonant is heavy; the pharyngealisation effort belongs to the consonant phase:
+
+| group | heavy-consonant vowel | light | difference |
+|---|---|---|---|
+| anchors | 0.7093 (n=1594) | 0.7389 (n=11824) | **−0.0296 (−4.0 %)** |
+| fast imams | 0.5723 (n=1728) | 0.6235 (n=12947) | **−0.0512 (−8.2 %)** |
+
+The law is **violated by everyone** — vowels on heavy letters are measurably shorter — but **anchors
+violate it roughly half as much as fast imams**. That makes weight independence a genuine mastery
+discriminator, in the direction the treatise predicts.
+
+#### What Sprint 2 must settle
+
+1. **The isochrony spread direction is counterintuitive and unresolved.** Fast imams show a *smaller*
+   spread (2.12 %) than anchors (3.84 %). The likely explanation is compression — everything is
+   driven toward a floor, so the vowels converge for the wrong reason — but that is a hypothesis, not
+   a result. Test it: normalise by something other than the reciter's own haraka, or compare spread
+   against absolute tempo. **Do not ship an isochrony score until this is settled**, or a fast imam
+   will outscore Husary on it.
+2. **Port the centroid onsets into `app/analysis.py`** behind a flag, re-run the parity test, and
+   check what else improves — sukoon three-way ordering, the madd absolute scale, and the segmentation
+   boundary error (currently up to ~1,100 frames) all rest on the same quantised onsets.
+3. **Mirror in Julia** (`substrate_library/julia/`) and cross-check, per the standing rule.
+4. Then flip `harakah_isochrony` and `harakah_weight_independence` in `tajweed_taxonomy` from
+   `blocked` to `covered`, with these numbers.
+
+**The wider prize:** continuous timing turns every per-letter duration into a real-valued measurement.
+That is what makes it possible to study how individual letters behave, how scoring responds when
+particular characteristics or rules co-occur, and where a given reciter's timing signature sits —
+none of which is possible while every duration is 1 or 2.
 
 ### Goal C — KPIs to move
 
 | KPI | now | target |
 |---|---|---|
-| treatise coverage | 58 % full / 87 % partial | **100 % full** (or explicitly out-of-scope with a reason) |
+| treatise coverage | 58 % full / 87 % partial | **100 % full** (the 2 blocked are now solvable — see Goal B2) |
 | rule-instance bind rate | 98.9 % | ≥ 99.5 % (`madd_lazim` 0.57 and `idgham_shafawi` 0.87 remain) |
 | passage accuracy on the anchor | 96.6 % | ≥ 98 % |
-| segmentation boundary error | up to ~1,100 frames | < 300 frames |
+| segmentation boundary error | up to ~1,100 frames | < 300 frames (sub-frame onsets should help) |
+| vowel-timing resolution | 1–2 frames, quantised | continuous (**done**: 1106/1245 unique) |
 | upload → report latency (one page) | — | < 10 s |
 
 ---

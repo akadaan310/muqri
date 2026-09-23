@@ -1,0 +1,52 @@
+{
+ "cap_usd": 20.0,
+ "billing_factor": 1.0,
+ "billing_factor_confirmed": true,
+ "rates": {
+  "engine_cpu2": {
+   "mean": 3.84,
+   "var": 0.36,
+   "q": 0.05
+  },
+  "muaalem_t4": {
+   "mean": 1.623323160841883,
+   "var": 0.025744985904685488,
+   "q": 0.05
+  }
+ },
+ "entries": [
+  {
+   "tag": "studio-all",
+   "workload": "engine_cpu2",
+   "rows": 37411,
+   "container_s": 143699,
+   "actual_usd": 5.68,
+   "date": "2026-09-23",
+   "note": "list price; 150 shard tasks (not dollars); run before the ledger existed"
+  },
+  {
+   "tag": "muaalem-T10-pilot",
+   "workload": "muaalem_t4",
+   "rows": 430,
+   "authorised_usd": 0.28,
+   "expected_usd": 0.13,
+   "at": "2026-09-23T14:36:38.124442+00:00"
+  },
+  {
+   "tag": "T10-gpu-pilot",
+   "workload": "muaalem_t4",
+   "rows": 430,
+   "authorised_usd": 0.19,
+   "expected_usd": 0.15,
+   "at": "2026-09-23T16:02:54.170127+00:00"
+  },
+  {
+   "tag": "T300-43reciters",
+   "workload": "muaalem_t4",
+   "rows": 12600,
+   "authorised_usd": 5.32,
+   "expected_usd": 4.16,
+   "at": "2026-09-23T18:48:33.204923+00:00"
+  }
+ ]
+}

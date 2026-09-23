@@ -1,0 +1,237 @@
+{
+ "n_rows": 15603,
+ "reciters": [
+  "Abdullah_Matroud_128kbps",
+  "Husary_128kbps",
+  "MaherAlMuaiqly128kbps",
+  "Mohammad_al_Tablaway_128kbps",
+  "Muhammad_Ayyoub_128kbps",
+  "Salah_Al_Budair_128kbps"
+ ],
+ "kinds": {
+  "consonant": {
+   "n_neg": 3960,
+   "n_pos": 786,
+   "auroc": 0.8636,
+   "tau_all": {
+    "0.01": -9.951,
+    "0.05": -5.064
+   },
+   "loo_recall@0.01": 0.186,
+   "loo_false_alarm@0.01": 0.01,
+   "loo_recall@0.05": 0.43,
+   "loo_false_alarm@0.05": 0.05,
+   "per_reciter": {
+    "Abdullah_Matroud_128kbps": {
+     "recall@0.01": 0.141,
+     "false_alarm@0.01": 0.012,
+     "recall@0.05": 0.267,
+     "false_alarm@0.05": 0.067
+    },
+    "Husary_128kbps": {
+     "recall@0.01": 0.29,
+     "false_alarm@0.01": 0.003,
+     "recall@0.05": 0.556,
+     "false_alarm@0.05": 0.036
+    },
+    "MaherAlMuaiqly128kbps": {
+     "recall@0.01": 0.248,
+     "false_alarm@0.01": 0.012,
+     "recall@0.05": 0.504,
+     "false_alarm@0.05": 0.056
+    },
+    "Mohammad_al_Tablaway_128kbps": {
+     "recall@0.01": 0.104,
+     "false_alarm@0.01": 0.012,
+     "recall@0.05": 0.333,
+     "false_alarm@0.05": 0.047
+    },
+    "Muhammad_Ayyoub_128kbps": {
+     "recall@0.01": 0.221,
+     "false_alarm@0.01": 0.005,
+     "recall@0.05": 0.507,
+     "false_alarm@0.05": 0.045
+    },
+    "Salah_Al_Budair_128kbps": {
+     "recall@0.01": 0.11,
+     "false_alarm@0.01": 0.018,
+     "recall@0.05": 0.409,
+     "false_alarm@0.05": 0.05
+    }
+   },
+   "per_swap": {
+    "ه->ح": {
+     "n": 118,
+     "recall@0.01": 0.195
+    },
+    "ت->ط": {
+     "n": 92,
+     "recall@0.01": 0.261
+    },
+    "ق->ك": {
+     "n": 85,
+     "recall@0.01": 0.024
+    },
+    "ك->ق": {
+     "n": 81,
+     "recall@0.01": 0.235
+    },
+    "د->ض": {
+     "n": 79,
+     "recall@0.01": 0.494
+    },
+    "ح->ه": {
+     "n": 58,
+     "recall@0.01": 0.017
+    },
+    "ع->ء": {
+     "n": 57,
+     "recall@0.01": 0.175
+    },
+    "س->ث": {
+     "n": 42,
+     "recall@0.01": 0.357
+    },
+    "س->ص": {
+     "n": 36,
+     "recall@0.01": 0.222
+    },
+    "ذ->ز": {
+     "n": 20,
+     "recall@0.01": 0.0
+    },
+    "ض->ظ": {
+     "n": 18,
+     "recall@0.01": 0.0
+    },
+    "ط->ت": {
+     "n": 17,
+     "recall@0.01": 0.0
+    },
+    "ذ->د": {
+     "n": 17,
+     "recall@0.01": 0.0
+    },
+    "ض->د": {
+     "n": 15,
+     "recall@0.01": 0.0
+    },
+    "خ->غ": {
+     "n": 14,
+     "recall@0.01": 0.071
+    },
+    "ص->س": {
+     "n": 14,
+     "recall@0.01": 0.0
+    },
+    "ث->س": {
+     "n": 11,
+     "recall@0.01": 0.0
+    },
+    "غ->خ": {
+     "n": 8,
+     "recall@0.01": 0.0
+    },
+    "ز->ذ": {
+     "n": 3,
+     "recall@0.01": 0.333
+    },
+    "ظ->ز": {
+     "n": 1,
+     "recall@0.01": 0.0
+    }
+   },
+   "z_auroc": 0.8233,
+   "z_loo_recall@0.01": 0.346,
+   "z_loo_false_alarm@0.01": 0.01,
+   "z_cut@0.01": 2.65,
+   "z_loo_recall@0.05": 0.495,
+   "z_loo_false_alarm@0.05": 0.052,
+   "z_cut@0.05": 1.75
+  },
+  "vowel": {
+   "n_neg": 8028,
+   "n_pos": 2829,
+   "auroc": 0.938,
+   "tau_all": {
+    "0.01": -7.672,
+    "0.05": -2.947
+   },
+   "loo_recall@0.01": 0.411,
+   "loo_false_alarm@0.01": 0.01,
+   "loo_recall@0.05": 0.684,
+   "loo_false_alarm@0.05": 0.052,
+   "per_reciter": {
+    "Abdullah_Matroud_128kbps": {
+     "recall@0.01": 0.212,
+     "false_alarm@0.01": 0.008,
+     "recall@0.05": 0.468,
+     "false_alarm@0.05": 0.074
+    },
+    "Husary_128kbps": {
+     "recall@0.01": 0.534,
+     "false_alarm@0.01": 0.004,
+     "recall@0.05": 0.787,
+     "false_alarm@0.05": 0.028
+    },
+    "MaherAlMuaiqly128kbps": {
+     "recall@0.01": 0.341,
+     "false_alarm@0.01": 0.006,
+     "recall@0.05": 0.676,
+     "false_alarm@0.05": 0.035
+    },
+    "Mohammad_al_Tablaway_128kbps": {
+     "recall@0.01": 0.451,
+     "false_alarm@0.01": 0.025,
+     "recall@0.05": 0.703,
+     "false_alarm@0.05": 0.078
+    },
+    "Muhammad_Ayyoub_128kbps": {
+     "recall@0.01": 0.655,
+     "false_alarm@0.01": 0.012,
+     "recall@0.05": 0.87,
+     "false_alarm@0.05": 0.04
+    },
+    "Salah_Al_Budair_128kbps": {
+     "recall@0.01": 0.27,
+     "false_alarm@0.01": 0.004,
+     "recall@0.05": 0.602,
+     "false_alarm@0.05": 0.057
+    }
+   },
+   "per_swap": {
+    "َ->ُ": {
+     "n": 875,
+     "recall@0.01": 0.454
+    },
+    "َ->ِ": {
+     "n": 825,
+     "recall@0.01": 0.488
+    },
+    "ِ->ُ": {
+     "n": 351,
+     "recall@0.01": 0.305
+    },
+    "ِ->َ": {
+     "n": 315,
+     "recall@0.01": 0.314
+    },
+    "ُ->ِ": {
+     "n": 233,
+     "recall@0.01": 0.296
+    },
+    "ُ->َ": {
+     "n": 230,
+     "recall@0.01": 0.335
+    }
+   },
+   "z_auroc": 0.916,
+   "z_loo_recall@0.01": 0.386,
+   "z_loo_false_alarm@0.01": 0.01,
+   "z_cut@0.01": 2.119,
+   "z_loo_recall@0.05": 0.605,
+   "z_loo_false_alarm@0.05": 0.057,
+   "z_cut@0.05": 1.499
+  }
+ }
+}

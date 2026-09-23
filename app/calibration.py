@@ -12,8 +12,12 @@ records, per rule key and metric, how the reference reciters actually measure:
     z               = distance of x outside [lo, hi] / s   (one-sided for "upper"/"lower" metrics)
 
 PASS |z| ≤ 2, WARNING 2 < |z| ≤ 3, FAIL beyond. A span whose alignment is unreliable (low CTC
-posterior, collapsed to a few frames, or no voiced core for a duration rule) is SKIPPED rather than
-failed. Rules without calibration keep the textbook validator verdict.
+posterior below the reference reciters' own 2nd percentile) is REVIEW: counted in the index at
+``REVIEW_SCORE`` rather than excluded, because a substituted letter is what drives the posterior
+down (missing-not-at-random). Aligner artefacts that experts show too (a span collapsed to a few
+frames, no voiced core found, a letter outside the model vocabulary with ``align_conf`` 0) stay
+SKIPPED and show up in ``coverage``. Rules without calibration keep the textbook
+validator verdict.
 """
 
 from __future__ import annotations
@@ -27,6 +31,9 @@ from typing import Any
 
 from app.models import RuleDiagnostic, RuleInstance, Status
 
+# Interim score of a REVIEW span: between WARNING and FAIL, until the Bayes decision layer
+# (deep-research 06 P7) turns GOP evidence into a posterior.
+REVIEW_SCORE = 0.5
 CALIBRATION_PATH = Path(__file__).resolve().parent / "data" / "calibration.json"
 Z_PASS = 2.0
 Z_WARN = 3.0
@@ -116,7 +123,7 @@ class Calibration:
 
         Shared by the live scorer and the offline re-scoring of benchmark rows (benchmarks/summarize.py).
         """
-        if status in (Status.SKIPPED.value, Status.VALID_NECESSARY_PAUSE.value):
+        if status in (Status.SKIPPED.value, Status.VALID_NECESSARY_PAUSE.value, Status.REVIEW.value):
             return None
         bands = self.rules.get(rule_key(rule_type, detail, letter)) or self.rules.get(rule_type)
         if not bands:
@@ -124,7 +131,13 @@ class Calibration:
         duration_rule = any(b.metric.endswith("counts") for b in bands)
         reason = self.unreliable(metrics, duration_rule)
         if reason:
-            return Status.SKIPPED, None, None, f"Not judged: {reason} (unreliable alignment)."
+            conf = metrics.get("align_conf", 1.0)
+            if conf <= 0.0:
+                return Status.SKIPPED, None, None, f"Not judged: {reason} (letter outside the alignment model's vocabulary)."
+            if conf >= self.reliability.get("align_conf_min", 0.0):
+                return Status.SKIPPED, None, None, f"Not judged: {reason} (alignment artefact)."
+            return Status.REVIEW, REVIEW_SCORE, None, (f"Needs review: {reason}. The audio does not follow the text "
+                                                       "well here; re-listen to this word.")
         zs = [b.z(x) for b in bands if (x := metrics.get(b.metric)) is not None and math.isfinite(x)]
         if not zs:
             return None
@@ -140,8 +153,8 @@ class Calibration:
         if res is None:
             return diag
         status, score, z, note = res
-        if status is Status.SKIPPED:
-            diag.status, diag.score, diag.feedback = status, None, note
+        if status in (Status.SKIPPED, Status.REVIEW):
+            diag.status, diag.score, diag.feedback = status, score, note
             return diag
         diag.metrics["calibrated_z"] = float(z or 0.0)
         if status is not diag.status:

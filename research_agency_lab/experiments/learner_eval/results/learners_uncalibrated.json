@@ -1,0 +1,36 @@
+{
+ "clips": 1642,
+ "analysed": 1642,
+ "failed": 0,
+ "qmb": {
+  "clips_with_substitution": 1271,
+  "clean_clips": 371,
+  "spearman_errors_vs_flags": 0.113,
+  "clip_auroc_flag_rate": 0.525,
+  "flag_rate_per_unit": {
+   "with_errors": 0.0987,
+   "clean": 0.0923
+  },
+  "substitution_recall": {
+   "consonant": {
+    "hit": 83,
+    "n": 611,
+    "recall": 0.136
+   },
+   "vowel": {
+    "hit": 155,
+    "n": 387,
+    "recall": 0.401
+   }
+  },
+  "perfection_median": 88.8
+ },
+ "master_vs_learner": {
+  "n_master_ayahs": 37411,
+  "n_learner_clips": 1642,
+  "median_master": 70.4,
+  "median_learner": 88.8,
+  "auroc_master_vs_learner": 0.111,
+  "caveat": "different texts; engine run without calibration on both sides"
+ }
+}

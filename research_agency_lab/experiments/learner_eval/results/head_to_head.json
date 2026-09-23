@@ -1,0 +1,17 @@
+{
+ "clips": 1642,
+ "gop_ctc": {
+  "gt_letter_subs": 509,
+  "recall": 0.151,
+  "reports_per_clean_clip": 0.59,
+  "reports_per_error_clip": 0.81,
+  "clip_auroc": 0.573
+ },
+ "muaalem": {
+  "gt_letter_subs": 509,
+  "recall": 0.562,
+  "reports_per_clean_clip": 1.33,
+  "reports_per_error_clip": 1.61,
+  "clip_auroc": 0.599
+ }
+}

@@ -1,0 +1,3607 @@
+{
+ "anchor": "Husary_128kbps",
+ "n_rows": 37765,
+ "count_scale_ruler": "core_counts",
+ "version": 3,
+ "peers": [
+  "Abdul_Basit_Murattal_192kbps",
+  "Alafasy_128kbps",
+  "Hudhaify_128kbps",
+  "Husary_Muallim_128kbps",
+  "Minshawy_Murattal_128kbps",
+  "Mohammad_al_Tablaway_128kbps",
+  "Muhammad_Ayyoub_128kbps"
+ ],
+ "validation": {
+  "raw_textbook": {
+   "Salah_Al_Budair_128kbps": {
+    "perfection": 55.31701874442131,
+    "sifaat": 77.15877437325905,
+    "categories": {
+     "weight": 81.33333333333334,
+     "madd": 41.558199356913185,
+     "ghunnah": 34.0344827586207,
+     "meem": 65.69999999999999,
+     "idgham": 90.9090909090909,
+     "sifaat": 77.15877437325905,
+     "wasl": 94.23076923076921,
+     "noon": 49.654629629629625,
+     "qalqalah": 72.14285714285712
+    }
+   },
+   "Muhammad_Ayyoub_128kbps": {
+    "perfection": 65.76033477806007,
+    "sifaat": 76.61458333333333,
+    "categories": {
+     "weight": 89.93377483443707,
+     "madd": 59.02815533980581,
+     "ghunnah": 41.557142857142864,
+     "meem": 65.91132075471698,
+     "idgham": 94.54545454545453,
+     "sifaat": 76.61458333333333,
+     "wasl": 94.9367088607595,
+     "noon": 46.25727272727273,
+     "qalqalah": 98.50000000000001
+    }
+   },
+   "MaherAlMuaiqly128kbps": {
+    "perfection": 59.90947116821033,
+    "sifaat": 74.32,
+    "categories": {
+     "weight": 84.10596026490066,
+     "madd": 47.81736334405145,
+     "ghunnah": 58.54444444444445,
+     "meem": 68.41666666666666,
+     "idgham": 78.18181818181817,
+     "sifaat": 74.32,
+     "wasl": 94.23076923076921,
+     "noon": 50.21009174311928,
+     "qalqalah": 79.75000000000001
+    }
+   },
+   "Abdullah_Matroud_128kbps": {
+    "perfection": 49.76638329604773,
+    "sifaat": 70.68027210884352,
+    "categories": {
+     "weight": 83.46666666666665,
+     "madd": 33.93009708737864,
+     "ghunnah": 37.35555555555556,
+     "meem": 68.08703703703704,
+     "idgham": 94.54545454545455,
+     "sifaat": 70.68027210884352,
+     "wasl": 94.30379746835443,
+     "noon": 42.41592920353983,
+     "qalqalah": 39.743589743589745
+    }
+   },
+   "Husary_128kbps": {
+    "perfection": 71.14898744657756,
+    "sifaat": 82.92202710739666,
+    "categories": {
+     "weight": 91.25415562515057,
+     "madd": 65.79469626263035,
+     "ghunnah": 52.53916931637519,
+     "meem": 67.23468100358424,
+     "idgham": 95.1937984496124,
+     "sifaat": 82.92202710739666,
+     "wasl": 99.84939529930783,
+     "qalqalah": 94.14758889430104,
+     "noon": 60.46587652439024
+    }
+   },
+   "Minshawy_Murattal_128kbps": {
+    "perfection": 61.32893365358708,
+    "sifaat": 77.19178658587904,
+    "categories": {
+     "weight": 81.8375447768419,
+     "madd": 54.501135504952515,
+     "ghunnah": 38.76642132484585,
+     "meem": 65.84778577359535,
+     "idgham": 95.7983193277311,
+     "sifaat": 77.19178658587904,
+     "wasl": 99.68614964748691,
+     "noon": 52.180511303292356,
+     "qalqalah": 70.0960827790096
+    }
+   },
+   "Husary_Muallim_128kbps": {
+    "perfection": 75.12048411663923,
+    "sifaat": 83.05773525683587,
+    "categories": {
+     "weight": 93.25336311980962,
+     "madd": 70.61007261558488,
+     "ghunnah": 58.64946193702669,
+     "meem": 75.37363131843408,
+     "idgham": 96.01731601731602,
+     "sifaat": 83.05773525683587,
+     "wasl": 99.83915653378482,
+     "qalqalah": 95.28671667069926,
+     "noon": 63.249539566099564
+    }
+   },
+   "Abdul_Basit_Murattal_192kbps": {
+    "perfection": 68.98907862220939,
+    "sifaat": 80.54631121698314,
+    "categories": {
+     "weight": 90.89747313389486,
+     "madd": 65.94329387755103,
+     "ghunnah": 38.38201352964586,
+     "meem": 67.72743138634763,
+     "idgham": 96.15062761506276,
+     "sifaat": 80.54631121698314,
+     "wasl": 99.61611410363402,
+     "noon": 51.48832587423195,
+     "qalqalah": 88.30978934324658
+    }
+   },
+   "Alafasy_128kbps": {
+    "perfection": 68.33886735597669,
+    "sifaat": 81.4688306070462,
+    "categories": {
+     "weight": 91.10401239049418,
+     "madd": 64.70673112226166,
+     "ghunnah": 38.669305748955665,
+     "meem": 71.38848910550458,
+     "idgham": 95.81589958158996,
+     "sifaat": 81.4688306070462,
+     "wasl": 99.95979670788137,
+     "qalqalah": 92.70582452691079,
+     "noon": 48.122679075444346
+    }
+   },
+   "Hudhaify_128kbps": {
+    "perfection": 69.08523896619278,
+    "sifaat": 77.6137341897888,
+    "categories": {
+     "weight": 93.80014517299782,
+     "madd": 65.19639020810828,
+     "ghunnah": 38.54458573415461,
+     "meem": 71.38103110114878,
+     "idgham": 93.61344537815125,
+     "sifaat": 77.6137341897888,
+     "wasl": 99.7681666159927,
+     "noon": 47.95403146135724,
+     "qalqalah": 99.04395331512292
+    }
+   },
+   "Mohammad_al_Tablaway_128kbps": {
+    "perfection": 58.75018676228896,
+    "sifaat": 76.33802816901407,
+    "categories": {
+     "weight": 94.17218543046357,
+     "madd": 44.50686274509803,
+     "ghunnah": 39.57777777777779,
+     "meem": 71.07142857142857,
+     "idgham": 92.72727272727273,
+     "sifaat": 76.33802816901407,
+     "wasl": 96.07594936708863,
+     "noon": 43.1963963963964,
+     "qalqalah": 82.19512195121952
+    }
+   }
+  },
+  "calibrated_in_sample": {
+   "Salah_Al_Budair_128kbps": {
+    "perfection": 81.24514307230467,
+    "sifaat": 81.87736745956077,
+    "categories": {
+     "weight": 83.08993518280268,
+     "madd": 69.92300762063324,
+     "ghunnah": 72.73116210426326,
+     "meem": 90.87678865235448,
+     "idgham": 98.0952380952381,
+     "sifaat": 81.87736745956077,
+     "wasl": 89.53488372093024,
+     "noon": 99.03659057032803,
+     "qalqalah": 99.78752506726619
+    }
+   },
+   "Muhammad_Ayyoub_128kbps": {
+    "perfection": 86.87060388470277,
+    "sifaat": 89.24856427631656,
+    "categories": {
+     "weight": 93.9163137227783,
+     "madd": 80.26784129313612,
+     "ghunnah": 85.59570217397295,
+     "meem": 100,
+     "idgham": 94.54545454545453,
+     "sifaat": 89.24856427631656,
+     "wasl": 93.65079365079364,
+     "noon": 85.93614163639623,
+     "qalqalah": 100
+    }
+   },
+   "MaherAlMuaiqly128kbps": {
+    "perfection": 84.04276600263978,
+    "sifaat": 81.95758527646873,
+    "categories": {
+     "weight": 81.63176921745328,
+     "madd": 75.22586610143811,
+     "ghunnah": 89.87516633111464,
+     "meem": 92.50755832749917,
+     "idgham": 94.54545454545453,
+     "sifaat": 81.95758527646873,
+     "wasl": 92.10526315789474,
+     "noon": 94.53901659743465,
+     "qalqalah": 88.65768072177487
+    }
+   },
+   "Abdullah_Matroud_128kbps": {
+    "perfection": 80.46462510880961,
+    "sifaat": 80.28580822737766,
+    "categories": {
+     "weight": 83.17392668446463,
+     "madd": 67.89300330640245,
+     "ghunnah": 88.06744426662362,
+     "meem": 83.33333333333334,
+     "idgham": 98.0952380952381,
+     "sifaat": 80.28580822737766,
+     "wasl": 85.93750000000001,
+     "noon": 94.65478384583265,
+     "qalqalah": 82.4060306253613
+    }
+   },
+   "Husary_128kbps": {
+    "perfection": 95.09852003052147,
+    "sifaat": 88.27157995791875,
+    "categories": {
+     "weight": 93.50852940784044,
+     "madd": 93.06441382931888,
+     "ghunnah": 97.01101550046236,
+     "meem": 95.60627165641334,
+     "idgham": 98.57707509881422,
+     "sifaat": 88.27157995791875,
+     "wasl": 99.79502462325365,
+     "qalqalah": 99.3889039740879,
+     "noon": 99.34530972867867
+    }
+   },
+   "Minshawy_Murattal_128kbps": {
+    "perfection": 87.3551022202639,
+    "sifaat": 89.48156303630738,
+    "categories": {
+     "weight": 85.7983405116625,
+     "madd": 80.96273551602084,
+     "ghunnah": 92.85321573349916,
+     "meem": 93.57645900629569,
+     "idgham": 98.61356932153392,
+     "sifaat": 89.48156303630738,
+     "wasl": 99.85120632615187,
+     "noon": 98.02045908987421,
+     "qalqalah": 97.98407626776286
+    }
+   },
+   "Husary_Muallim_128kbps": {
+    "perfection": 96.81271690768328,
+    "sifaat": 89.24598403825439,
+    "categories": {
+     "weight": 96.52246113103514,
+     "madd": 95.84465347070753,
+     "ghunnah": 94.66473738575424,
+     "meem": 98.926930621828,
+     "idgham": 97.33333333333334,
+     "sifaat": 89.24598403825439,
+     "wasl": 98.52951943370502,
+     "qalqalah": 99.6314963323489,
+     "noon": 99.20513655569637
+    }
+   },
+   "Abdul_Basit_Murattal_192kbps": {
+    "perfection": 92.70503420999088,
+    "sifaat": 90.70920477110732,
+    "categories": {
+     "weight": 93.68278039310592,
+     "madd": 89.55885719765374,
+     "ghunnah": 91.69581570424222,
+     "meem": 95.39020956392186,
+     "idgham": 97.98581560283687,
+     "sifaat": 90.70920477110732,
+     "wasl": 99.5805624255748,
+     "noon": 98.34452042384393,
+     "qalqalah": 99.77406177762555
+    }
+   },
+   "Alafasy_128kbps": {
+    "perfection": 89.76651470309841,
+    "sifaat": 91.78262514192087,
+    "categories": {
+     "weight": 96.13806504761288,
+     "madd": 82.27687374837231,
+     "ghunnah": 95.07585498433511,
+     "meem": 96.0538740515176,
+     "idgham": 98.60262008733625,
+     "sifaat": 91.78262514192087,
+     "wasl": 99.9479948603503,
+     "qalqalah": 99.0326587323725,
+     "noon": 97.27217674132811
+    }
+   },
+   "Hudhaify_128kbps": {
+    "perfection": 90.74456835423939,
+    "sifaat": 86.11306544606846,
+    "categories": {
+     "weight": 95.81555223580207,
+     "madd": 85.50966968013586,
+     "ghunnah": 91.3605626071033,
+     "meem": 94.9191901995709,
+     "idgham": 97.4891774891775,
+     "sifaat": 86.11306544606846,
+     "wasl": 99.9055888223553,
+     "noon": 94.45082328674111,
+     "qalqalah": 99.91042412707381
+    }
+   },
+   "Mohammad_al_Tablaway_128kbps": {
+    "perfection": 85.30089407100576,
+    "sifaat": 88.40504400444614,
+    "categories": {
+     "weight": 97.45341112307358,
+     "madd": 71.32050399892945,
+     "ghunnah": 85.64886724337718,
+     "idgham": 94.54545454545455,
+     "meem": 97.38989827046441,
+     "sifaat": 88.40504400444614,
+     "wasl": 93.92156862745098,
+     "qalqalah": 95.68012388489939,
+     "noon": 96.10199162869789
+    }
+   }
+  },
+  "leave_one_peer_out": {
+   "Alafasy_128kbps": {
+    "perfection": 89.5040371317605,
+    "sifaat": 91.09111888006876,
+    "categories": {
+     "weight": 96.05378007958436,
+     "madd": 81.97484737550286,
+     "ghunnah": 95.39843594809602,
+     "meem": 95.4597289798844,
+     "idgham": 98.60262008733625,
+     "sifaat": 91.09111888006876,
+     "wasl": 99.9479948603503,
+     "qalqalah": 98.98579719116589,
+     "noon": 96.54052394681972
+    }
+   },
+   "Muhammad_Ayyoub_128kbps": {
+    "perfection": 86.28348684893263,
+    "sifaat": 89.2957180125481,
+    "categories": {
+     "weight": 93.82114434095519,
+     "madd": 79.85808573501873,
+     "ghunnah": 81.47824061202444,
+     "meem": 100,
+     "idgham": 94.54545454545453,
+     "sifaat": 89.2957180125481,
+     "wasl": 93.65079365079364,
+     "noon": 84.72194964825846,
+     "qalqalah": 100
+    }
+   },
+   "Husary_Muallim_128kbps": {
+    "perfection": 97.0477334099011,
+    "sifaat": 89.43166887594558,
+    "categories": {
+     "weight": 96.66519619309179,
+     "madd": 95.96517243552358,
+     "ghunnah": 96.76329104148276,
+     "meem": 99.08516752980441,
+     "idgham": 97.33333333333334,
+     "sifaat": 89.43166887594558,
+     "wasl": 98.52951943370502,
+     "qalqalah": 99.64132201709145,
+     "noon": 99.35040471866509
+    }
+   },
+   "Minshawy_Murattal_128kbps": {
+    "perfection": 87.21622545361181,
+    "sifaat": 89.37421399947377,
+    "categories": {
+     "weight": 85.1030742451754,
+     "madd": 80.87334106855056,
+     "ghunnah": 93.32863410864944,
+     "meem": 92.33105070218231,
+     "idgham": 98.61356932153392,
+     "sifaat": 89.37421399947377,
+     "wasl": 99.85120632615187,
+     "noon": 98.22333092858656,
+     "qalqalah": 97.85381782159557
+    }
+   },
+   "Abdul_Basit_Murattal_192kbps": {
+    "perfection": 92.68637089673017,
+    "sifaat": 90.46640267864662,
+    "categories": {
+     "weight": 93.72382734080509,
+     "madd": 89.52569889616615,
+     "ghunnah": 92.12993967721039,
+     "meem": 94.18265759247417,
+     "idgham": 97.98581560283687,
+     "sifaat": 90.46640267864662,
+     "wasl": 99.5805624255748,
+     "noon": 98.36667202684546,
+     "qalqalah": 99.72643104668737
+    }
+   },
+   "Hudhaify_128kbps": {
+    "perfection": 90.01157902075586,
+    "sifaat": 85.69702476286129,
+    "categories": {
+     "weight": 95.68563052503364,
+     "madd": 85.06829255650803,
+     "ghunnah": 86.97599093995,
+     "meem": 93.65620803084809,
+     "idgham": 97.4891774891775,
+     "sifaat": 85.69702476286129,
+     "wasl": 99.9055888223553,
+     "noon": 93.33704732036165,
+     "qalqalah": 99.92174923690949
+    }
+   },
+   "Mohammad_al_Tablaway_128kbps": {
+    "perfection": 84.85771602183375,
+    "sifaat": 88.34927324306369,
+    "categories": {
+     "weight": 96.92572295501168,
+     "madd": 70.97700357627689,
+     "ghunnah": 81.34176489719228,
+     "idgham": 94.54545454545455,
+     "meem": 99.30364780473094,
+     "sifaat": 88.34927324306369,
+     "wasl": 93.92156862745098,
+     "qalqalah": 95.68012388489939,
+     "noon": 96.00666951273737
+    }
+   }
+  },
+  "weight_search": {
+   "default_weights": {
+    "weight": 0.6,
+    "madd": 1,
+    "ghunnah": 1,
+    "meem": 0.8,
+    "idgham": 0.8,
+    "sifaat": 1,
+    "wasl": 0.5,
+    "noon": 1,
+    "qalqalah": 0.8
+   },
+   "imams_mean_tuned": 89.32255743029428,
+   "weights": {
+    "weight": 0.5143668809816995,
+    "madd": 0.20655956564991426,
+    "ghunnah": 2.0303054418081796,
+    "meem": 2.397600362801719,
+    "idgham": 0.6634401093525681,
+    "sifaat": 1,
+    "wasl": 2.3879460414990796,
+    "noon": 2.2607279784241308,
+    "qalqalah": 14.949512917427807
+   },
+   "peers_min_tuned": 94.25515228126919,
+   "had_imams": true,
+   "peers_mean_tuned": 96.51909343826847,
+   "peers_mean_default": 89.9364906215692,
+   "imams_mean_default": 81.9175113945847
+  }
+ },
+ "n_observations": 1149669,
+ "count_scale": 1.0090817356205852,
+ "imams": [
+  "Abdullaah_3awwaad_Al-Juhaynee_128kbps",
+  "Abdullah_Matroud_128kbps",
+  "Abdurrahmaan_As-Sudais_192kbps",
+  "MaherAlMuaiqly128kbps",
+  "Nasser_Alqatami_128kbps",
+  "Salah_Al_Budair_128kbps",
+  "Saood_ash-Shuraym_128kbps",
+  "Yasser_Ad-Dussary_128kbps"
+ ],
+ "reliability": {
+  "align_conf_min": 0.001,
+  "align_min_ms": 40
+ },
+ "evidence": {
+  "idgham_no_ghunnah": [
+   {
+    "metric": "nasal_contrast_db",
+    "side": "upper",
+    "anchor": {
+     "median": 13.3905,
+     "sigma": 11.870436900000001,
+     "p5": -10.3265,
+     "p95": 27.447750000000003,
+     "p25": 3.4560000000000004,
+     "p75": 20.695500000000003,
+     "n": 936
+    },
+    "peer_consensus": 9.539,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 9.539,
+      "sigma": 10.836323399999998,
+      "n": 913
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 6.1825,
+      "sigma": 12.859331099999997,
+      "n": 6
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 13.243,
+      "sigma": 15.316740600000001,
+      "n": 969
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 10.7955,
+      "sigma": 10.3248264,
+      "n": 784
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 11.487,
+      "sigma": 11.9156562,
+      "n": 903
+     },
+     "Hudhaify_128kbps": {
+      "median": 8.561,
+      "sigma": 10.040167199999999,
+      "n": 983
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 1.9315,
+      "sigma": 19.0447383,
+      "n": 8
+     }
+    },
+    "candidates": {
+     "nasal_contrast_db": {
+      "median": 13.3905,
+      "rcv": 0.886481976027781,
+      "anchor_fail": 0,
+      "n": 936
+     }
+    }
+   }
+  ],
+  "rakhawah": [
+   {
+    "metric": "duration_ratio",
+    "side": "both",
+    "anchor": {
+     "median": 1.0385,
+     "sigma": 0.2957787,
+     "p5": 0.5452500000000003,
+     "p95": 4.25,
+     "p25": 0.833,
+     "p75": 1.235,
+     "n": 10222
+    },
+    "peer_consensus": 0.923,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 0.9,
+      "sigma": 0.29652000000000006,
+      "n": 9468
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 0.857,
+      "sigma": 0.32765459999999996,
+      "n": 63
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 1,
+      "sigma": 0.2965199999999999,
+      "n": 11366
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 1,
+      "sigma": 0.2965199999999999,
+      "n": 7028
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 1,
+      "sigma": 0.2965199999999999,
+      "n": 8811
+     },
+     "Hudhaify_128kbps": {
+      "median": 0.875,
+      "sigma": 0.33358500000000013,
+      "n": 8286
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 0.923,
+      "sigma": 0.2787287999999999,
+      "n": 41
+     }
+    },
+    "candidates": {
+     "duration_ratio": {
+      "median": 1.0385,
+      "rcv": 0.28481338468945594,
+      "anchor_fail": 0.07053414204656623,
+      "n": 10222
+     }
+    }
+   }
+  ],
+  "ghunnah": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "anchor": {
+     "median": 3.1725000000000003,
+     "sigma": 0.6516026999999996,
+     "p5": 0.779,
+     "p95": 4.33,
+     "p25": 2.688,
+     "p75": 3.576,
+     "n": 4996
+    },
+    "peer_consensus": 4.163,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 4.814,
+      "sigma": 0.9881529000000001,
+      "n": 4920
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 4.724,
+      "sigma": 1.9763058000000002,
+      "n": 25
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 2.8804999999999996,
+      "sigma": 0.6805133999999997,
+      "n": 5000
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 3.748,
+      "sigma": 0.9547944000000002,
+      "n": 4885
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 4.163,
+      "sigma": 1.1208456000000002,
+      "n": 4927
+     },
+     "Hudhaify_128kbps": {
+      "median": 5.169,
+      "sigma": 1.2631751999999992,
+      "n": 4915
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 2.8245,
+      "sigma": 2.2120392,
+      "n": 24
+     }
+    },
+    "candidates": {
+     "core_counts": {
+      "median": 3.1725000000000003,
+      "rcv": 0.20539092198581546,
+      "anchor_fail": 0.002201761409127302,
+      "n": 4996
+     },
+     "counts": {
+      "median": 3.345,
+      "rcv": 0.17441049327354247,
+      "anchor_fail": 0.016012810248198558,
+      "n": 4996
+     }
+    }
+   },
+   {
+    "metric": "nasal_energy_ratio_db",
+    "side": "lower",
+    "anchor": {
+     "median": 20.497999999999998,
+     "sigma": 5.0260139999999955,
+     "p5": 9.55225,
+     "p95": 27.215000000000003,
+     "p25": 16.3975,
+     "p75": 23.49425,
+     "n": 4996
+    },
+    "peer_consensus": 19.781,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 21.4815,
+      "sigma": 5.114228699999998,
+      "n": 4920
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 27.128,
+      "sigma": 7.6353899999999975,
+      "n": 25
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 18.4815,
+      "sigma": 4.4544717,
+      "n": 5000
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 19.781,
+      "sigma": 5.8710960000000005,
+      "n": 4885
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 18.615,
+      "sigma": 6.922259400000001,
+      "n": 4927
+     },
+     "Hudhaify_128kbps": {
+      "median": 25.852,
+      "sigma": 3.899237999999998,
+      "n": 4915
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 19.3885,
+      "sigma": 8.399670299999999,
+      "n": 24
+     }
+    },
+    "candidates": {
+     "nasal_contrast_db": {
+      "median": 15.177,
+      "rcv": 0.3202189365487249,
+      "anchor_fail": 0.010515672396359959,
+      "n": 4945
+     },
+     "nasal_energy_ratio_db": {
+      "median": 20.497999999999998,
+      "rcv": 0.245195336130354,
+      "anchor_fail": 0.010408326661329063,
+      "n": 4996
+     }
+    }
+   }
+  ],
+  "idgham_mutajanisayn:kamil": [
+   {
+    "metric": "releases",
+    "side": "upper",
+    "anchor": {
+     "median": 1,
+     "sigma": 0,
+     "p5": 1,
+     "p95": 2,
+     "p25": 1,
+     "p75": 1,
+     "n": 59
+    },
+    "peer_consensus": 1,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 1,
+      "sigma": 0,
+      "n": 51
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 1,
+      "sigma": 0,
+      "n": 6
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 1,
+      "sigma": 0,
+      "n": 49
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 1,
+      "sigma": 0,
+      "n": 50
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 1,
+      "sigma": 0,
+      "n": 53
+     },
+     "Hudhaify_128kbps": {
+      "median": 1,
+      "sigma": 0,
+      "n": 53
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 1,
+      "sigma": 0,
+      "n": 6
+     }
+    },
+    "candidates": {
+     "releases": {
+      "median": 1,
+      "rcv": 0,
+      "anchor_fail": 0,
+      "n": 59
+     }
+    }
+   }
+  ],
+  "tarqeeq:raa": [
+   {
+    "metric": "f2_minus_f1_hz",
+    "side": "lower",
+    "anchor": {
+     "median": 1789.506,
+     "sigma": 156.24231840000002,
+     "p5": 627.0824,
+     "p95": 1946.0857,
+     "p25": 1442.8785,
+     "p75": 1865.815,
+     "n": 2375
+    },
+    "peer_consensus": 1498.686,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 1498.686,
+      "sigma": 330.6739149000002,
+      "n": 2008
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 1660.222,
+      "sigma": 506.0136039,
+      "n": 12
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 1783.875,
+      "sigma": 192.21760739999982,
+      "n": 2483
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 1408.2440000000001,
+      "sigma": 265.36983269999985,
+      "n": 1736
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 1779.91,
+      "sigma": 245.03374980000018,
+      "n": 1965
+     },
+     "Hudhaify_128kbps": {
+      "median": 1484.9425,
+      "sigma": 223.1446434,
+      "n": 2266
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 1011.2995000000001,
+      "sigma": 417.7410825000001,
+      "n": 8
+     }
+    },
+    "candidates": {
+     "f2_minus_f1_hz": {
+      "median": 1789.506,
+      "rcv": 0.08731030709033667,
+      "anchor_fail": 0.06231578947368421,
+      "n": 2375
+     }
+    }
+   }
+  ],
+  "madd_iwad": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "anchor": {
+     "median": 1.348,
+     "sigma": 0.24759419999999988,
+     "p5": 0.998,
+     "p95": 1.8978000000000002,
+     "p25": 1.1945000000000001,
+     "p75": 1.532,
+     "n": 1082
+    },
+    "peer_consensus": 1.7995,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 2.43,
+      "sigma": 0.30393300000000006,
+      "n": 1021
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 2.159,
+      "sigma": 0.34099799999999963,
+      "n": 11
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 1.415,
+      "sigma": 0.18087719999999982,
+      "n": 1265
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 1.557,
+      "sigma": 0.24166380000000004,
+      "n": 837
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 1.638,
+      "sigma": 0.23276820000000004,
+      "n": 1017
+     },
+     "Hudhaify_128kbps": {
+      "median": 1.7995,
+      "sigma": 0.3343262999999997,
+      "n": 1100
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 1.812,
+      "sigma": 0.1971858,
+      "n": 7
+     }
+    },
+    "candidates": {
+     "core_counts": {
+      "median": 1.348,
+      "rcv": 0.18367522255192867,
+      "anchor_fail": 0.019408502772643253,
+      "n": 1082
+     },
+     "counts": {
+      "median": 3.9415,
+      "rcv": 0.29189334009894713,
+      "anchor_fail": 0.18114602587800369,
+      "n": 1082
+     }
+    }
+   }
+  ],
+  "qalqalah:kubra": [
+   {
+    "metric": "energy_rise_db",
+    "side": "lower",
+    "anchor": {
+     "median": 11.2205,
+     "sigma": 2.9229458999999998,
+     "p5": 6.667050000000001,
+     "p95": 16.5492,
+     "p25": 9.15025,
+     "p75": 13.08075,
+     "n": 584
+    },
+    "peer_consensus": 12.587,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 13.635,
+      "sigma": 5.8251354,
+      "n": 567
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 13.960999999999999,
+      "sigma": 1.9132952999999995,
+      "n": 8
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 12.044,
+      "sigma": 3.044519099999999,
+      "n": 632
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 8.556,
+      "sigma": 3.5167271999999983,
+      "n": 401
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 10.876000000000001,
+      "sigma": 3.8028689999999976,
+      "n": 504
+     },
+     "Hudhaify_128kbps": {
+      "median": 15.133,
+      "sigma": 3.2068637999999976,
+      "n": 537
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 12.587,
+      "sigma": 5.5271327999999995,
+      "n": 9
+     }
+    },
+    "candidates": {
+     "energy_rise_db": {
+      "median": 11.2205,
+      "rcv": 0.2605005035426229,
+      "anchor_fail": 0.003424657534246575,
+      "n": 584
+     }
+    }
+   }
+  ],
+  "idgham_ghunnah:kamil": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "anchor": {
+     "median": 3.468,
+     "sigma": 0.9585008999999998,
+     "p5": 1.3378500000000002,
+     "p95": 4.994149999999999,
+     "p25": 2.766,
+     "p75": 4.0725,
+     "n": 1458
+    },
+    "peer_consensus": 4.159,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 4.917999999999999,
+      "sigma": 1.4129178000000018,
+      "n": 1340
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 4.752000000000001,
+      "sigma": 2.1030680999999998,
+      "n": 14
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 3.273,
+      "sigma": 0.9236597999999996,
+      "n": 1443
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 3.7065,
+      "sigma": 1.2372297000000003,
+      "n": 1266
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 4.159,
+      "sigma": 1.2009059999999994,
+      "n": 1263
+     },
+     "Hudhaify_128kbps": {
+      "median": 4.9945,
+      "sigma": 1.6086209999999999,
+      "n": 1336
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 2.4779999999999998,
+      "sigma": 1.8317523,
+      "n": 14
+     }
+    },
+    "candidates": {
+     "core_counts": {
+      "median": 3.468,
+      "rcv": 0.27638434256055355,
+      "anchor_fail": 0.0013717421124828531,
+      "n": 1458
+     },
+     "counts": {
+      "median": 3.7350000000000003,
+      "rcv": 0.2210999196787148,
+      "anchor_fail": 0.01440329218106996,
+      "n": 1458
+     }
+    }
+   },
+   {
+    "metric": "nasal_contrast_db",
+    "side": "lower",
+    "anchor": {
+     "median": 14.907,
+     "sigma": 7.094241000000001,
+     "p5": 3.93045,
+     "p95": 25.10915,
+     "p25": 10.069,
+     "p75": 19.57775,
+     "n": 1414
+    },
+    "peer_consensus": 15.779,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 15.034,
+      "sigma": 5.1994782000000015,
+      "n": 1301
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 17.8955,
+      "sigma": 16.2648633,
+      "n": 12
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 16.72,
+      "sigma": 6.879264,
+      "n": 1399
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 13.64,
+      "sigma": 6.2795523,
+      "n": 1228
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 16.079,
+      "sigma": 6.126103200000002,
+      "n": 1227
+     },
+     "Hudhaify_128kbps": {
+      "median": 13.56,
+      "sigma": 4.868858400000001,
+      "n": 1299
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 15.779,
+      "sigma": 6.8955725999999995,
+      "n": 13
+     }
+    },
+    "candidates": {
+     "nasal_contrast_db": {
+      "median": 14.907,
+      "rcv": 0.4758999798752265,
+      "anchor_fail": 0.0021216407355021216,
+      "n": 1414
+     },
+     "nasal_energy_ratio_db": {
+      "median": 19.889499999999998,
+      "rcv": 0.3690193971693608,
+      "anchor_fail": 0.0027434842249657062,
+      "n": 1458
+     }
+    }
+   }
+  ],
+  "madd_silah_kubra": [
+   {
+    "metric": "counts",
+    "side": "both",
+    "anchor": {
+     "median": 5.677,
+     "sigma": 0.6612395999999996,
+     "p5": 4.80395,
+     "p95": 7.7997999999999985,
+     "p25": 5.2517499999999995,
+     "p75": 6.125,
+     "n": 94
+    },
+    "peer_consensus": 6.87,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 8.857,
+      "sigma": 1.1356716,
+      "n": 55
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 6,
+      "sigma": 0.8680622999999995,
+      "n": 120
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 6.87,
+      "sigma": 1.1356716,
+      "n": 47
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 6.296,
+      "sigma": 0.6864438,
+      "n": 73
+     },
+     "Hudhaify_128kbps": {
+      "median": 10.667,
+      "sigma": 1.7064725999999997,
+      "n": 121
+     }
+    },
+    "candidates": {
+     "core_counts": {
+      "median": 4.8735,
+      "rcv": 0.15712791628193282,
+      "anchor_fail": 0.0425531914893617,
+      "n": 94
+     },
+     "counts": {
+      "median": 5.677,
+      "rcv": 0.11647694204685567,
+      "anchor_fail": 0.010638297872340425,
+      "n": 94
+     }
+    }
+   }
+  ],
+  "tafkheem:lam_allah": [
+   {
+    "metric": "f2_minus_f1_hz",
+    "side": "upper",
+    "anchor": {
+     "median": 342.566,
+     "sigma": 115.86074219999998,
+     "p5": 147.5364,
+     "p95": 1729.3708999999953,
+     "p25": 272.5425,
+     "p75": 431.959,
+     "n": 1687
+    },
+    "peer_consensus": 420.046,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 420.046,
+      "sigma": 101.84572440000002,
+      "n": 1715
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 370.33299999999997,
+      "sigma": 172.71548699999997,
+      "n": 12
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 318.344,
+      "sigma": 172.5612966,
+      "n": 1917
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 523.6785,
+      "sigma": 240.80685719999994,
+      "n": 1724
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 387.466,
+      "sigma": 144.07832670000002,
+      "n": 1804
+     },
+     "Hudhaify_128kbps": {
+      "median": 548.895,
+      "sigma": 166.0697325,
+      "n": 1632
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 544.203,
+      "sigma": 236.20338419999996,
+      "n": 14
+     }
+    },
+    "candidates": {
+     "f2_minus_f1_hz": {
+      "median": 342.566,
+      "rcv": 0.3382143651150435,
+      "anchor_fail": 0.1007705986959099,
+      "n": 1687
+     }
+    }
+   }
+  ],
+  "ikhfa:heavy": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "anchor": {
+     "median": 2.263,
+     "sigma": 0.49296450000000014,
+     "p5": 1.3559,
+     "p95": 3.1939999999999995,
+     "p25": 1.915,
+     "p75": 2.59025,
+     "n": 708
+    },
+    "peer_consensus": 2.9684999999999997,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 3.564,
+      "sigma": 1.3410117000000001,
+      "n": 594
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 5.7835,
+      "sigma": 1.8903149999999997,
+      "n": 6
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 2.2015000000000002,
+      "sigma": 0.46553639999999974,
+      "n": 728
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 2.864,
+      "sigma": 1.0274418,
+      "n": 487
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 2.9684999999999997,
+      "sigma": 1.0971240000000002,
+      "n": 488
+     },
+     "Hudhaify_128kbps": {
+      "median": 4.024,
+      "sigma": 1.5982427999999997,
+      "n": 539
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 2.721,
+      "sigma": 0.8702861999999996,
+      "n": 5
+     }
+    },
+    "candidates": {
+     "core_counts": {
+      "median": 2.263,
+      "rcv": 0.21783672116659308,
+      "anchor_fail": 0,
+      "n": 708
+     },
+     "counts": {
+      "median": 2.314,
+      "rcv": 0.22296663785652554,
+      "anchor_fail": 0.0014124293785310734,
+      "n": 708
+     }
+    }
+   }
+  ],
+  "izhar_shafawi": [
+   {
+    "metric": "counts",
+    "side": "upper",
+    "anchor": {
+     "median": 1.139,
+     "sigma": 0.43588440000000006,
+     "p5": 0.39420000000000005,
+     "p95": 2.46,
+     "p25": 0.843,
+     "p75": 1.433,
+     "n": 2665
+    },
+    "peer_consensus": 1.0715,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 1.0715,
+      "sigma": 0.4306952999999998,
+      "n": 2132
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 1.159,
+      "sigma": 0.20682269999999991,
+      "n": 14
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 1.065,
+      "sigma": 0.31505249999999996,
+      "n": 3276
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 1.135,
+      "sigma": 0.570801,
+      "n": 1457
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 1.077,
+      "sigma": 0.4655363999999999,
+      "n": 1788
+     },
+     "Hudhaify_128kbps": {
+      "median": 0.933,
+      "sigma": 0.4269888,
+      "n": 1681
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 0.9864999999999999,
+      "sigma": 0.3758391000000001,
+      "n": 8
+     }
+    },
+    "candidates": {
+     "counts": {
+      "median": 1.139,
+      "rcv": 0.38269043020193155,
+      "anchor_fail": 0.05553470919324578,
+      "n": 2665
+     }
+    }
+   }
+  ],
+  "hams": [
+   {
+    "metric": "voicing_fraction",
+    "side": "upper",
+    "anchor": {
+     "median": 0.058,
+     "sigma": 0.0859908,
+     "p5": 0,
+     "p95": 1,
+     "p25": 0,
+     "p75": 0.758,
+     "n": 5515
+    },
+    "peer_consensus": 0.529,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 0.625,
+      "sigma": 0.555975,
+      "n": 5237
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 0.909,
+      "sigma": 0.13491659999999994,
+      "n": 37
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 0,
+      "sigma": 0,
+      "n": 5743
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 0.5,
+      "sigma": 0.7413,
+      "n": 3947
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 0.529,
+      "sigma": 0.6983045999999999,
+      "n": 4418
+     },
+     "Hudhaify_128kbps": {
+      "median": 0.5,
+      "sigma": 0.7413,
+      "n": 4223
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 0.8634999999999999,
+      "sigma": 0.20237490000000008,
+      "n": 26
+     }
+    },
+    "candidates": {
+     "voicing_fraction": {
+      "median": 0.058,
+      "rcv": 1.4826000000000001,
+      "anchor_fail": 0,
+      "n": 5515
+     }
+    }
+   }
+  ],
+  "tafkheem:raa": [
+   {
+    "metric": "f2_minus_f1_hz",
+    "side": "upper",
+    "anchor": {
+     "median": 418.441,
+     "sigma": 206.87607359999998,
+     "p5": 157.9755,
+     "p95": 1499.817,
+     "p25": 321.783,
+     "p75": 672.0035,
+     "n": 7751
+    },
+    "peer_consensus": 522.111,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 552.885,
+      "sigma": 227.94975,
+      "n": 7121
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 483.1205,
+      "sigma": 218.13345539999997,
+      "n": 54
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 430.234,
+      "sigma": 186.6104142,
+      "n": 8777
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 582.844,
+      "sigma": 286.07434170000005,
+      "n": 6112
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 522.111,
+      "sigma": 261.3349367999999,
+      "n": 6885
+     },
+     "Hudhaify_128kbps": {
+      "median": 583.004,
+      "sigma": 169.61981820000005,
+      "n": 7863
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 407.9365,
+      "sigma": 81.49703939999999,
+      "n": 42
+     }
+    },
+    "candidates": {
+     "f2_minus_f1_hz": {
+      "median": 418.441,
+      "rcv": 0.4943972354525489,
+      "anchor_fail": 0.08785963101535285,
+      "n": 7751
+     }
+    }
+   }
+  ],
+  "tawassut": [
+   {
+    "metric": "duration_ratio",
+    "side": "both",
+    "anchor": {
+     "median": 1.067,
+     "sigma": 0.2639027999999999,
+     "p5": 0.235,
+     "p95": 2.118,
+     "p25": 0.903,
+     "p75": 1.25,
+     "n": 9348
+    },
+    "peer_consensus": 1.067,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 1,
+      "sigma": 0.26983320000000005,
+      "n": 8116
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 1,
+      "sigma": 0.2831766,
+      "n": 48
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 1.067,
+      "sigma": 0.2431464000000002,
+      "n": 11126
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 1.1,
+      "sigma": 0.29652000000000006,
+      "n": 5575
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 1.071,
+      "sigma": 0.2994851999999999,
+      "n": 7632
+     },
+     "Hudhaify_128kbps": {
+      "median": 1,
+      "sigma": 0.32913719999999996,
+      "n": 7665
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 1.176,
+      "sigma": 0.3750977999999998,
+      "n": 25
+     }
+    },
+    "candidates": {
+     "duration_ratio": {
+      "median": 1.067,
+      "rcv": 0.2473315838800374,
+      "anchor_fail": 0.09264013692768507,
+      "n": 9348
+     }
+    }
+   }
+  ],
+  "izhar_halqi": [
+   {
+    "metric": "counts",
+    "side": "upper",
+    "anchor": {
+     "median": 1.165,
+     "sigma": 0.3454457999999998,
+     "p5": 0.499,
+     "p95": 1.8,
+     "p25": 0.906,
+     "p75": 1.37375,
+     "n": 2110
+    },
+    "peer_consensus": 1.1,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 1.092,
+      "sigma": 0.2898483,
+      "n": 2126
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 1.0695000000000001,
+      "sigma": 0.20385750000000008,
+      "n": 10
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 1.163,
+      "sigma": 0.26242020000000005,
+      "n": 2490
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 1.1195,
+      "sigma": 0.44478000000000006,
+      "n": 1554
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 1.1,
+      "sigma": 0.3306197999999998,
+      "n": 1617
+     },
+     "Hudhaify_128kbps": {
+      "median": 0.993,
+      "sigma": 0.3024503999999999,
+      "n": 2135
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 1.2265,
+      "sigma": 0.5507859,
+      "n": 6
+     }
+    },
+    "candidates": {
+     "counts": {
+      "median": 1.165,
+      "rcv": 0.29651999999999984,
+      "anchor_fail": 0.01990521327014218,
+      "n": 2110
+     }
+    }
+   }
+  ],
+  "ikhfa:light": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "anchor": {
+     "median": 2.275,
+     "sigma": 0.6078660000000001,
+     "p5": 1.3174000000000001,
+     "p95": 3.27,
+     "p25": 1.763,
+     "p75": 2.624,
+     "n": 3469
+    },
+    "peer_consensus": 2.872,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 3.5205,
+      "sigma": 1.2839315999999994,
+      "n": 2864
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 3.4855,
+      "sigma": 1.5700734,
+      "n": 22
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 2.23,
+      "sigma": 0.4759145999999999,
+      "n": 3743
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 2.724,
+      "sigma": 1.1460497999999995,
+      "n": 2209
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 2.872,
+      "sigma": 1.1979408000000002,
+      "n": 2159
+     },
+     "Hudhaify_128kbps": {
+      "median": 3.8405,
+      "sigma": 1.6582881,
+      "n": 2706
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 2.6165000000000003,
+      "sigma": 0.8717688000000003,
+      "n": 10
+     }
+    },
+    "candidates": {
+     "core_counts": {
+      "median": 2.275,
+      "rcv": 0.2671938461538462,
+      "anchor_fail": 0.0002882675122513693,
+      "n": 3469
+     },
+     "counts": {
+      "median": 2.36,
+      "rcv": 0.26573720338983037,
+      "anchor_fail": 0.0017296050735082155,
+      "n": 3469
+     }
+    }
+   }
+  ],
+  "madd_lazim:harfi": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "anchor": {
+     "median": 5.4935,
+     "sigma": 0.7286978999999997,
+     "p5": 4.6935,
+     "p95": 11.16525,
+     "p25": 5.13475,
+     "p75": 7.437,
+     "n": 46
+    },
+    "peer_consensus": 7.714,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 8.9465,
+      "sigma": 4.621264200000001,
+      "n": 18
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 6.069000000000001,
+      "sigma": 1.6983183000000002,
+      "n": 40
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 7.722,
+      "sigma": 3.3225066000000005,
+      "n": 17
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 7.714,
+      "sigma": 6.4315188,
+      "n": 20
+     },
+     "Hudhaify_128kbps": {
+      "median": 6.9185,
+      "sigma": 3.4196169000000007,
+      "n": 26
+     }
+    },
+    "candidates": {
+     "core_counts": {
+      "median": 5.4935,
+      "rcv": 0.13264729225448252,
+      "anchor_fail": 0,
+      "n": 46
+     },
+     "counts": {
+      "median": 6.0675,
+      "rcv": 0.24606150803461063,
+      "anchor_fail": 0,
+      "n": 46
+     }
+    }
+   }
+  ],
+  "idgham_mithlayn:kamil": [
+   {
+    "metric": "releases",
+    "side": "upper",
+    "anchor": {
+     "median": 1,
+     "sigma": 0,
+     "p5": 1,
+     "p95": 2,
+     "p25": 1,
+     "p75": 1,
+     "n": 17
+    },
+    "peer_consensus": 1,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 1,
+      "sigma": 0,
+      "n": 17
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 1,
+      "sigma": 0,
+      "n": 14
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 1,
+      "sigma": 0,
+      "n": 17
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 1,
+      "sigma": 0,
+      "n": 17
+     },
+     "Hudhaify_128kbps": {
+      "median": 1,
+      "sigma": 0,
+      "n": 17
+     }
+    },
+    "candidates": {
+     "releases": {
+      "median": 1,
+      "rcv": 0,
+      "anchor_fail": 0,
+      "n": 17
+     }
+    }
+   }
+  ],
+  "madd_badal": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "anchor": {
+     "median": 1.8969999999999998,
+     "sigma": 0.24537029999999996,
+     "p5": 1.40235,
+     "p95": 2.5698999999999974,
+     "p25": 1.72775,
+     "p75": 2.06,
+     "n": 170
+    },
+    "peer_consensus": 1.6455,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 1.725,
+      "sigma": 0.200151,
+      "n": 173
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 1.8205,
+      "sigma": 0.24759420000000004,
+      "n": 220
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 1.548,
+      "sigma": 0.19570320000000016,
+      "n": 115
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 1.6455,
+      "sigma": 0.2624201999999999,
+      "n": 140
+     },
+     "Hudhaify_128kbps": {
+      "median": 1.4689999999999999,
+      "sigma": 0.2149769999999997,
+      "n": 218
+     }
+    },
+    "candidates": {
+     "core_counts": {
+      "median": 1.8969999999999998,
+      "rcv": 0.12934649446494464,
+      "anchor_fail": 0.058823529411764705,
+      "n": 170
+     },
+     "counts": {
+      "median": 2.968,
+      "rcv": 0.11214410377358486,
+      "anchor_fail": 0.07058823529411765,
+      "n": 170
+     }
+    }
+   }
+  ],
+  "jahr": [
+   {
+    "metric": "voicing_fraction",
+    "side": "lower",
+    "anchor": {
+     "median": 1,
+     "sigma": 0,
+     "p5": 0.5,
+     "p95": 1,
+     "p25": 0.864,
+     "p75": 1,
+     "n": 13541
+    },
+    "peer_consensus": 1,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 1,
+      "sigma": 0,
+      "n": 12523
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 1,
+      "sigma": 0,
+      "n": 80
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 1,
+      "sigma": 0,
+      "n": 15757
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 1,
+      "sigma": 0,
+      "n": 8635
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 1,
+      "sigma": 0,
+      "n": 11054
+     },
+     "Hudhaify_128kbps": {
+      "median": 1,
+      "sigma": 0,
+      "n": 11208
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 1,
+      "sigma": 0,
+      "n": 45
+     }
+    },
+    "candidates": {
+     "voicing_fraction": {
+      "median": 1,
+      "rcv": 0,
+      "anchor_fail": 0.2384609703862344,
+      "n": 13541
+     }
+    }
+   }
+  ],
+  "safir": [
+   {
+    "metric": "safir_high_band_spike_db",
+    "side": "lower",
+    "anchor": {
+     "median": 29.5985,
+     "sigma": 4.489312799999998,
+     "p5": 21.089249999999996,
+     "p95": 36.662949999999995,
+     "p25": 26.48825,
+     "p75": 32.53675,
+     "n": 5482
+    },
+    "peer_consensus": 29.305,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 26.882,
+      "sigma": 4.963744799999998,
+      "n": 4857
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 24.8085,
+      "sigma": 5.5656804000000015,
+      "n": 14
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 29.535,
+      "sigma": 5.865165599999999,
+      "n": 7171
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 29.786,
+      "sigma": 5.669462400000002,
+      "n": 4167
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 34.1095,
+      "sigma": 6.0608688000000015,
+      "n": 1818
+     },
+     "Hudhaify_128kbps": {
+      "median": 19.02,
+      "sigma": 7.341835200000002,
+      "n": 5267
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 29.305,
+      "sigma": 7.0379021999999996,
+      "n": 11
+     }
+    },
+    "candidates": {
+     "safir_high_band_spike_db": {
+      "median": 29.5985,
+      "rcv": 0.1516736591381319,
+      "anchor_fail": 0.002006566946369938,
+      "n": 5482
+     }
+    }
+   }
+  ],
+  "madd_munfasil": [
+   {
+    "metric": "counts",
+    "side": "both",
+    "anchor": {
+     "median": 6.125,
+     "sigma": 1.1275172999999998,
+     "p5": 4.75,
+     "p95": 9.51775,
+     "p25": 5.5,
+     "p75": 7.214,
+     "n": 1976
+    },
+    "peer_consensus": 7.9585,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 9.23,
+      "sigma": 1.5270780000000017,
+      "n": 1668
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 9,
+      "sigma": 1.5026151000000008,
+      "n": 14
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 6.867,
+      "sigma": 1.1675475,
+      "n": 1988
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 7.545,
+      "sigma": 1.4826,
+      "n": 1459
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 7,
+      "sigma": 1.4826,
+      "n": 1803
+     },
+     "Hudhaify_128kbps": {
+      "median": 11.9,
+      "sigma": 2.2891344000000005,
+      "n": 2047
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 7.9585,
+      "sigma": 2.5004048999999995,
+      "n": 10
+     }
+    },
+    "candidates": {
+     "core_counts": {
+      "median": 5.262,
+      "rcv": 0.18962177879133413,
+      "anchor_fail": 0.04251012145748988,
+      "n": 1976
+     },
+     "counts": {
+      "median": 6.125,
+      "rcv": 0.18408445714285712,
+      "anchor_fail": 0.014676113360323886,
+      "n": 1976
+     }
+    }
+   }
+  ],
+  "takreer": [
+   {
+    "metric": "taps",
+    "side": "upper",
+    "anchor": {
+     "median": 0,
+     "sigma": 0,
+     "p5": 0,
+     "p95": 6,
+     "p25": 0,
+     "p75": 2,
+     "n": 2870
+    },
+    "peer_consensus": 0,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 1,
+      "sigma": 1.4826,
+      "n": 2494
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 0,
+      "sigma": 0,
+      "n": 24
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 0,
+      "sigma": 0,
+      "n": 3274
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 0,
+      "sigma": 0,
+      "n": 1966
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 0,
+      "sigma": 0,
+      "n": 2294
+     },
+     "Hudhaify_128kbps": {
+      "median": 1,
+      "sigma": 1.4826,
+      "n": 2562
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 0,
+      "sigma": 0,
+      "n": 22
+     }
+    },
+    "candidates": {
+     "taps": {
+      "median": 0,
+      "rcv": 0,
+      "anchor_fail": 0.2578397212543554,
+      "n": 2870
+     }
+    }
+   }
+  ],
+  "shiddah": [
+   {
+    "metric": "duration_ratio",
+    "side": "both",
+    "anchor": {
+     "median": 0.875,
+     "sigma": 0.23869860000000004,
+     "p5": 0.429,
+     "p95": 7,
+     "p25": 0.733,
+     "p75": 1.067,
+     "n": 1263
+    },
+    "peer_consensus": 0.75,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 0.667,
+      "sigma": 0.1808772,
+      "n": 1236
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 0.727,
+      "sigma": 0.0985929,
+      "n": 12
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 0.8,
+      "sigma": 0.17346419999999999,
+      "n": 1347
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 0.889,
+      "sigma": 0.2876243999999999,
+      "n": 908
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 0.889,
+      "sigma": 0.32320679999999996,
+      "n": 1180
+     },
+     "Hudhaify_128kbps": {
+      "median": 0.667,
+      "sigma": 0.16456859999999998,
+      "n": 1296
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 0.75,
+      "sigma": 0.17346419999999999,
+      "n": 7
+     }
+    },
+    "candidates": {
+     "duration_ratio": {
+      "median": 0.875,
+      "rcv": 0.27279840000000005,
+      "anchor_fail": 0.17973079968329375,
+      "n": 1263
+     }
+    }
+   }
+  ],
+  "qalqalah:akbar": [
+   {
+    "metric": "energy_rise_db",
+    "side": "lower",
+    "anchor": {
+     "median": 27.391,
+     "sigma": 4.013398200000001,
+     "p5": 12.516499999999997,
+     "p95": 31.441899999999997,
+     "p25": 24.294,
+     "p75": 29.3885,
+     "n": 67
+    },
+    "peer_consensus": 26.296999999999997,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 24.806,
+      "sigma": 3.964472399999999,
+      "n": 61
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 40.767,
+      "sigma": 5.455226699999995,
+      "n": 82
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 17.628,
+      "sigma": 3.8102820000000004,
+      "n": 34
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 26.296999999999997,
+      "sigma": 3.5048663999999983,
+      "n": 52
+     },
+     "Hudhaify_128kbps": {
+      "median": 30.0045,
+      "sigma": 3.4448211000000013,
+      "n": 52
+     }
+    },
+    "candidates": {
+     "energy_rise_db": {
+      "median": 27.391,
+      "rcv": 0.14652251469460775,
+      "anchor_fail": 0.05970149253731343,
+      "n": 67
+     }
+    }
+   }
+  ],
+  "tarqeeq:lam_allah": [
+   {
+    "metric": "f2_minus_f1_hz",
+    "side": "lower",
+    "anchor": {
+     "median": 936.609,
+     "sigma": 66.62507879999998,
+     "p5": 788.5416,
+     "p95": 1120.1294000000003,
+     "p25": 888.131,
+     "p75": 979.612,
+     "n": 709
+    },
+    "peer_consensus": 969.31,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 935.4390000000001,
+      "sigma": 91.83965699999982,
+      "n": 684
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 1023.947,
+      "sigma": 88.77215759999996,
+      "n": 7
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 969.31,
+      "sigma": 59.69837159999986,
+      "n": 710
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 915.543,
+      "sigma": 94.36304219999998,
+      "n": 686
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 1121.225,
+      "sigma": 83.4629670000001,
+      "n": 711
+     },
+     "Hudhaify_128kbps": {
+      "median": 1124.048,
+      "sigma": 66.79112999999992,
+      "n": 707
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 871.346,
+      "sigma": 111.84882660000004,
+      "n": 7
+     }
+    },
+    "candidates": {
+     "f2_minus_f1_hz": {
+      "median": 936.609,
+      "rcv": 0.07113435681271478,
+      "anchor_fail": 0.004231311706629055,
+      "n": 709
+     }
+    }
+   }
+  ],
+  "madd_tabii": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "anchor": {
+     "median": 1.983,
+     "sigma": 0.32320679999999996,
+     "p5": 1.441,
+     "p95": 3.5425,
+     "p25": 1.777,
+     "p75": 2.215,
+     "n": 26956
+    },
+    "peer_consensus": 1.746,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 1.848,
+      "sigma": 0.2698332000000002,
+      "n": 25417
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 1.725,
+      "sigma": 0.2683505999999997,
+      "n": 133
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 1.915,
+      "sigma": 0.2550072000000002,
+      "n": 30062
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 1.746,
+      "sigma": 0.2994851999999999,
+      "n": 19643
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 1.787,
+      "sigma": 0.28614180000000006,
+      "n": 24580
+     },
+     "Hudhaify_128kbps": {
+      "median": 1.656,
+      "sigma": 0.24907680000000004,
+      "n": 23512
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 1.6749999999999998,
+      "sigma": 0.3372914999999997,
+      "n": 94
+     }
+    },
+    "candidates": {
+     "core_counts": {
+      "median": 1.983,
+      "rcv": 0.16298880484114975,
+      "anchor_fail": 0.08335806499480636,
+      "n": 26956
+     },
+     "counts": {
+      "median": 2.25,
+      "rcv": 0.15023679999999998,
+      "anchor_fail": 0.14571894939902064,
+      "n": 26956
+     }
+    }
+   }
+  ],
+  "qalqalah:sughra": [
+   {
+    "metric": "energy_rise_db",
+    "side": "lower",
+    "anchor": {
+     "median": 13.332,
+     "sigma": 4.0593588,
+     "p5": 8.182549999999999,
+     "p95": 23.391949999999998,
+     "p25": 10.80775,
+     "p75": 16.409,
+     "n": 3072
+    },
+    "peer_consensus": 13.999,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 14.0525,
+      "sigma": 3.6464547,
+      "n": 3168
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 14.5015,
+      "sigma": 3.2209485000000004,
+      "n": 28
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 13.5635,
+      "sigma": 4.332898499999999,
+      "n": 3250
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 11.001,
+      "sigma": 3.716878199999999,
+      "n": 2051
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 13.542,
+      "sigma": 3.8970140999999994,
+      "n": 2726
+     },
+     "Hudhaify_128kbps": {
+      "median": 16.579,
+      "sigma": 3.0904797000000017,
+      "n": 3166
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 13.999,
+      "sigma": 4.091976,
+      "n": 21
+     }
+    },
+    "candidates": {
+     "energy_rise_db": {
+      "median": 13.332,
+      "rcv": 0.3044823582358236,
+      "anchor_fail": 0.0078125,
+      "n": 3072
+     }
+    }
+   }
+  ],
+  "hamzat_wasl": [
+   {
+    "metric": "gap_ms",
+    "side": "upper",
+    "anchor": {
+     "median": 0,
+     "sigma": 0,
+     "p5": 0,
+     "p95": 0,
+     "p25": 0,
+     "p75": 0,
+     "n": 10504
+    },
+    "peer_consensus": 0,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 0,
+      "sigma": 0,
+      "n": 9853
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 0,
+      "sigma": 0,
+      "n": 58
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 0,
+      "sigma": 0,
+      "n": 11893
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 0,
+      "sigma": 0,
+      "n": 8257
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 0,
+      "sigma": 0,
+      "n": 9699
+     },
+     "Hudhaify_128kbps": {
+      "median": 0,
+      "sigma": 0,
+      "n": 10015
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 0,
+      "sigma": 0,
+      "n": 46
+     }
+    },
+    "candidates": {
+     "gap_ms": {
+      "median": 0,
+      "rcv": 0,
+      "anchor_fail": 0.0012376237623762376,
+      "n": 10504
+     }
+    }
+   }
+  ],
+  "tafashhi": [
+   {
+    "metric": "tafashhi_spectral_flatness",
+    "side": "lower",
+    "anchor": {
+     "median": 0.425,
+     "sigma": 0.08154299999999999,
+     "p5": 0.24785000000000001,
+     "p95": 0.525,
+     "p25": 0.361,
+     "p75": 0.475,
+     "n": 1858
+    },
+    "peer_consensus": 0.408,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 0.422,
+      "sigma": 0.07264739999999997,
+      "n": 1958
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 0.452,
+      "sigma": 0.0526323,
+      "n": 10
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 0.408,
+      "sigma": 0.07116480000000006,
+      "n": 2018
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 0.38,
+      "sigma": 0.07857779999999999,
+      "n": 1722
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 0.346,
+      "sigma": 0.06968220000000006,
+      "n": 1562
+     },
+     "Hudhaify_128kbps": {
+      "median": 0.182,
+      "sigma": 0.0934038,
+      "n": 689
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 0.472,
+      "sigma": 0.01037820000000001,
+      "n": 5
+     }
+    },
+    "candidates": {
+     "tafashhi_spectral_flatness": {
+      "median": 0.425,
+      "rcv": 0.19186588235294116,
+      "anchor_fail": 0.016684607104413347,
+      "n": 1858
+     }
+    }
+   }
+  ],
+  "madd_silah_sughra": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "anchor": {
+     "median": 1.999,
+     "sigma": 0.3143111999999996,
+     "p5": 1.5306,
+     "p95": 2.9545999999999997,
+     "p25": 1.81,
+     "p75": 2.233,
+     "n": 517
+    },
+    "peer_consensus": 1.9129999999999998,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 1.9129999999999998,
+      "sigma": 0.27798749999999967,
+      "n": 286
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 1.966,
+      "sigma": 0.24314639999999987,
+      "n": 835
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 1.856,
+      "sigma": 0.32913719999999963,
+      "n": 171
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 1.956,
+      "sigma": 0.28021140000000005,
+      "n": 369
+     },
+     "Hudhaify_128kbps": {
+      "median": 1.567,
+      "sigma": 0.23425079999999987,
+      "n": 469
+     }
+    },
+    "candidates": {
+     "core_counts": {
+      "median": 1.999,
+      "rcv": 0.1572342171085541,
+      "anchor_fail": 0.0735009671179884,
+      "n": 517
+     },
+     "counts": {
+      "median": 2.25,
+      "rcv": 0.12585626666666655,
+      "anchor_fail": 0.08317214700193423,
+      "n": 517
+     }
+    }
+   }
+  ],
+  "idgham_shafawi": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "anchor": {
+     "median": 3.335,
+     "sigma": 1.141602,
+     "p5": 0.5700500000000002,
+     "p95": 5.22835,
+     "p25": 2.4745,
+     "p75": 4.04275,
+     "n": 834
+    },
+    "peer_consensus": 4.225,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 4.9175,
+      "sigma": 1.4232959999999992,
+      "n": 752
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 5.5585,
+      "sigma": 1.0837805999999996,
+      "n": 6
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 2.996,
+      "sigma": 0.6923742,
+      "n": 819
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 4.225,
+      "sigma": 1.682751000000001,
+      "n": 750
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 4.162,
+      "sigma": 2.1809046,
+      "n": 750
+     },
+     "Hudhaify_128kbps": {
+      "median": 5.132,
+      "sigma": 1.566366900000001,
+      "n": 746
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 1.043,
+      "sigma": 1.0837805999999996,
+      "n": 9
+     }
+    },
+    "candidates": {
+     "core_counts": {
+      "median": 3.335,
+      "rcv": 0.34230944527736135,
+      "anchor_fail": 0.0035971223021582736,
+      "n": 834
+     },
+     "counts": {
+      "median": 3.604,
+      "rcv": 0.2774732796892342,
+      "anchor_fail": 0.009592326139088728,
+      "n": 834
+     }
+    }
+   }
+  ],
+  "izhar_shafawi:before_waw_faa": [
+   {
+    "metric": "counts",
+    "side": "upper",
+    "anchor": {
+     "median": 1.054,
+     "sigma": 0.3461871,
+     "p5": 0.6469499999999999,
+     "p95": 2.2994499999999993,
+     "p25": 0.833,
+     "p75": 1.324,
+     "n": 640
+    },
+    "peer_consensus": 1.159,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 1.0895000000000001,
+      "sigma": 0.4136454000000001,
+      "n": 470
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 1.021,
+      "sigma": 0.22980299999999987,
+      "n": 762
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 1.66,
+      "sigma": 0.7249913999999997,
+      "n": 265
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 1.159,
+      "sigma": 0.6100899,
+      "n": 262
+     },
+     "Hudhaify_128kbps": {
+      "median": 1.2105000000000001,
+      "sigma": 0.6108312000000001,
+      "n": 324
+     }
+    },
+    "candidates": {
+     "counts": {
+      "median": 1.054,
+      "rcv": 0.32845075901328274,
+      "anchor_fail": 0.0125,
+      "n": 640
+     }
+    }
+   }
+  ],
+  "istitaalah": [
+   {
+    "metric": "istitaalah_duration_ratio",
+    "side": "lower",
+    "anchor": {
+     "median": 1.083,
+     "sigma": 0.3128286000000001,
+     "p5": 0.389,
+     "p95": 7.862999999999997,
+     "p25": 0.923,
+     "p75": 1.4,
+     "n": 97
+    },
+    "peer_consensus": 0.952,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 0.952,
+      "sigma": 0.3024503999999999,
+      "n": 62
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 1.133,
+      "sigma": 0.26242020000000005,
+      "n": 199
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 0.98,
+      "sigma": 0.3847347,
+      "n": 34
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 0.889,
+      "sigma": 0.3602718,
+      "n": 82
+     },
+     "Hudhaify_128kbps": {
+      "median": 0.778,
+      "sigma": 0.16456859999999998,
+      "n": 71
+     }
+    },
+    "candidates": {
+     "istitaalah_duration_ratio": {
+      "median": 1.083,
+      "rcv": 0.28885373961218846,
+      "anchor_fail": 0,
+      "n": 97
+     }
+    }
+   }
+  ],
+  "tafkheem": [
+   {
+    "metric": "f2_minus_f1_hz",
+    "side": "upper",
+    "anchor": {
+     "median": 376.661,
+     "sigma": 141.128694,
+     "p5": 151.683,
+     "p95": 1501.1100000000001,
+     "p25": 292.3945,
+     "p75": 494.00149999999996,
+     "n": 10231
+    },
+    "peer_consensus": 458.17,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 444.196,
+      "sigma": 142.9893569999999,
+      "n": 10325
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 464.554,
+      "sigma": 142.53271620000007,
+      "n": 77
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 370.286,
+      "sigma": 135.65641740000004,
+      "n": 10829
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 538.186,
+      "sigma": 248.94633120000003,
+      "n": 9361
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 458.17,
+      "sigma": 194.75730120000003,
+      "n": 10139
+     },
+     "Hudhaify_128kbps": {
+      "median": 565.9755,
+      "sigma": 136.87882110000004,
+      "n": 10290
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 425.334,
+      "sigma": 123.4279326,
+      "n": 76
+     }
+    },
+    "candidates": {
+     "f2_minus_f1_hz": {
+      "median": 376.661,
+      "rcv": 0.37468358550526865,
+      "anchor_fail": 0.12589189717525168,
+      "n": 10231
+     }
+    }
+   }
+  ],
+  "iqlab": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "anchor": {
+     "median": 2.06,
+     "sigma": 0.5255817,
+     "p5": 1.4459,
+     "p95": 3.1594999999999995,
+     "p25": 1.748,
+     "p75": 2.48025,
+     "n": 500
+    },
+    "peer_consensus": 2.689,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 2.991,
+      "sigma": 0.8539776,
+      "n": 442
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 4.19,
+      "sigma": 2.6360628000000004,
+      "n": 11
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 1.9985,
+      "sigma": 0.42624749999999995,
+      "n": 506
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 2.54,
+      "sigma": 0.770952,
+      "n": 343
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 2.498,
+      "sigma": 0.8984556000000002,
+      "n": 358
+     },
+     "Hudhaify_128kbps": {
+      "median": 3.302,
+      "sigma": 0.9888941999999997,
+      "n": 403
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 2.689,
+      "sigma": 0.5974878,
+      "n": 5
+     }
+    },
+    "candidates": {
+     "core_counts": {
+      "median": 2.06,
+      "rcv": 0.25513674757281557,
+      "anchor_fail": 0.002,
+      "n": 500
+     },
+     "counts": {
+      "median": 2.129,
+      "rcv": 0.24791244715829028,
+      "anchor_fail": 0.004,
+      "n": 500
+     }
+    }
+   }
+  ],
+  "idgham_ghunnah:naqis": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "anchor": {
+     "median": 2.616,
+     "sigma": 1.1193629999999999,
+     "p5": 0.7886,
+     "p95": 4.2943999999999996,
+     "p25": 1.915,
+     "p75": 3.38,
+     "n": 1325
+    },
+    "peer_consensus": 3.822,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 4.518,
+      "sigma": 1.4010569999999998,
+      "n": 1271
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 3.822,
+      "sigma": 0.6508614,
+      "n": 9
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 2.0780000000000003,
+      "sigma": 1.6390142999999995,
+      "n": 1312
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 3.3099999999999996,
+      "sigma": 1.1764430999999997,
+      "n": 1254
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 4.072,
+      "sigma": 1.3358225999999995,
+      "n": 1139
+     },
+     "Hudhaify_128kbps": {
+      "median": 4.6245,
+      "sigma": 1.3247030999999991,
+      "n": 1202
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 1.794,
+      "sigma": 0.8925251999999998,
+      "n": 9
+     }
+    },
+    "candidates": {
+     "core_counts": {
+      "median": 2.616,
+      "rcv": 0.4278910550458715,
+      "anchor_fail": 0,
+      "n": 1325
+     },
+     "counts": {
+      "median": 3.133,
+      "rcv": 0.28440555378231724,
+      "anchor_fail": 0.009056603773584906,
+      "n": 1325
+     }
+    }
+   },
+   {
+    "metric": "nasal_energy_ratio_db",
+    "side": "lower",
+    "anchor": {
+     "median": 14.721,
+     "sigma": 9.2751456,
+     "p5": 2.9754000000000005,
+     "p95": 25.5036,
+     "p25": 8.346,
+     "p75": 20.848,
+     "n": 1325
+    },
+    "peer_consensus": 16.862,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 20.032,
+      "sigma": 6.975632999999999,
+      "n": 1271
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 27.657,
+      "sigma": 3.9363030000000014,
+      "n": 9
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 12.387,
+      "sigma": 7.731759,
+      "n": 1312
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 15.246,
+      "sigma": 7.1691123,
+      "n": 1254
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 16.213,
+      "sigma": 7.4975082,
+      "n": 1139
+     },
+     "Hudhaify_128kbps": {
+      "median": 23.5135,
+      "sigma": 4.428526199999998,
+      "n": 1202
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 16.862,
+      "sigma": 2.2505867999999984,
+      "n": 9
+     }
+    },
+    "candidates": {
+     "nasal_contrast_db": {
+      "median": 9.673,
+      "rcv": 0.8803943347462008,
+      "anchor_fail": 0,
+      "n": 1315
+     },
+     "nasal_energy_ratio_db": {
+      "median": 14.721,
+      "rcv": 0.6300621968616262,
+      "anchor_fail": 0,
+      "n": 1325
+     }
+    }
+   }
+  ],
+  "madd_lazim:kalimi": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "anchor": {
+     "median": 8.6115,
+     "sigma": 1.4403458999999996,
+     "p5": 5.968249999999999,
+     "p95": 11.541249999999986,
+     "p25": 7.63275,
+     "p75": 9.57175,
+     "n": 78
+    },
+    "peer_consensus": 10.197,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 13.285,
+      "sigma": 3.4892991,
+      "n": 62
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 9.6425,
+      "sigma": 1.4047634999999996,
+      "n": 90
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 10.197,
+      "sigma": 1.8725238000000024,
+      "n": 53
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 9.742,
+      "sigma": 1.3002402000000008,
+      "n": 59
+     },
+     "Hudhaify_128kbps": {
+      "median": 15.813,
+      "sigma": 3.042295200000002,
+      "n": 55
+     }
+    },
+    "candidates": {
+     "core_counts": {
+      "median": 8.6115,
+      "rcv": 0.1672584218777216,
+      "anchor_fail": 0.01282051282051282,
+      "n": 78
+     },
+     "counts": {
+      "median": 9.094000000000001,
+      "rcv": 0.17786635144051008,
+      "anchor_fail": 0.01282051282051282,
+      "n": 78
+     }
+    }
+   }
+  ],
+  "ikhfa_shafawi": [
+   {
+    "metric": "counts",
+    "side": "both",
+    "anchor": {
+     "median": 3.1405000000000003,
+     "sigma": 0.9214359000000002,
+     "p5": 1.9212500000000001,
+     "p95": 4.6587499999999995,
+     "p25": 2.5205,
+     "p75": 3.743,
+     "n": 136
+    },
+    "peer_consensus": 4.507,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 4.731,
+      "sigma": 0.7160957999999994,
+      "n": 94
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 2.267,
+      "sigma": 0.23795730000000012,
+      "n": 124
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 4.497,
+      "sigma": 0.7353696000000006,
+      "n": 75
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 4.507,
+      "sigma": 1.497426,
+      "n": 44
+     },
+     "Hudhaify_128kbps": {
+      "median": 5.443,
+      "sigma": 1.6916466,
+      "n": 65
+     }
+    },
+    "candidates": {
+     "core_counts": {
+      "median": 3.018,
+      "rcv": 0.30359403578528843,
+      "anchor_fail": 0.03676470588235294,
+      "n": 136
+     },
+     "counts": {
+      "median": 3.1405000000000003,
+      "rcv": 0.2934042031523643,
+      "anchor_fail": 0.03676470588235294,
+      "n": 136
+     }
+    }
+   }
+  ],
+  "madd_muttasil": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "anchor": {
+     "median": 5.228,
+     "sigma": 0.8821469999999996,
+     "p5": 3.8476,
+     "p95": 7.3934,
+     "p25": 4.671,
+     "p75": 5.853,
+     "n": 1429
+    },
+    "peer_consensus": 6.9575,
+    "peers": {
+     "Alafasy_128kbps": {
+      "median": 8.5175,
+      "sigma": 1.5107694,
+      "n": 1334
+     },
+     "Muhammad_Ayyoub_128kbps": {
+      "median": 9.569,
+      "sigma": 2.4388769999999993,
+      "n": 11
+     },
+     "Husary_Muallim_128kbps": {
+      "median": 5.832,
+      "sigma": 0.8717688000000001,
+      "n": 1631
+     },
+     "Minshawy_Murattal_128kbps": {
+      "median": 6.5845,
+      "sigma": 1.2943097999999995,
+      "n": 1198
+     },
+     "Abdul_Basit_Murattal_192kbps": {
+      "median": 6.2195,
+      "sigma": 1.1015717999999997,
+      "n": 1528
+     },
+     "Hudhaify_128kbps": {
+      "median": 9.7415,
+      "sigma": 2.164596,
+      "n": 1346
+     },
+     "Mohammad_al_Tablaway_128kbps": {
+      "median": 6.9575,
+      "sigma": 1.4055048000000006,
+      "n": 8
+     }
+    },
+    "candidates": {
+     "core_counts": {
+      "median": 5.228,
+      "rcv": 0.16873508033664875,
+      "anchor_fail": 0.01609517144856543,
+      "n": 1429
+     },
+     "counts": {
+      "median": 6.059,
+      "rcv": 0.16492365076745347,
+      "anchor_fail": 0.0244926522043387,
+      "n": 1429
+     }
+    }
+   }
+  ]
+ },
+ "rules": {
+  "idgham_no_ghunnah": [
+   {
+    "metric": "nasal_contrast_db",
+    "side": "upper",
+    "hi": 13.3905,
+    "scale": 11.893046550000001,
+    "lo": 9.539
+   }
+  ],
+  "rakhawah": [
+   {
+    "metric": "duration_ratio",
+    "side": "both",
+    "hi": 1.0385,
+    "scale": 0.2965199999999999,
+    "lo": 0.923
+   }
+  ],
+  "ghunnah": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "hi": 4.163,
+    "scale": 1.05449925,
+    "lo": 3.1725000000000003
+   },
+   {
+    "metric": "nasal_energy_ratio_db",
+    "side": "lower",
+    "hi": 20.497999999999998,
+    "scale": 5.49266235,
+    "lo": 19.781
+   }
+  ],
+  "idgham_mutajanisayn:kamil": [
+   {
+    "metric": "releases",
+    "side": "upper",
+    "hi": 1,
+    "scale": 0.5,
+    "lo": 1
+   }
+  ],
+  "tarqeeq:raa": [
+   {
+    "metric": "f2_minus_f1_hz",
+    "side": "lower",
+    "hi": 1789.506,
+    "scale": 255.20179125,
+    "lo": 1498.686
+   }
+  ],
+  "madd_iwad": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "hi": 1.7995,
+    "scale": 0.24462899999999996,
+    "lo": 1.348
+   }
+  ],
+  "qalqalah:kubra": [
+   {
+    "metric": "energy_rise_db",
+    "side": "lower",
+    "hi": 12.587,
+    "scale": 3.3617954999999977,
+    "lo": 11.2205
+   }
+  ],
+  "madd_silah_kubra": [
+   {
+    "metric": "counts",
+    "side": "both",
+    "hi": 6.87,
+    "scale": 1.0018669499999997,
+    "lo": 5.677
+   }
+  ],
+  "idgham_ghunnah:kamil": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "hi": 4.159,
+    "scale": 1.325073750000001,
+    "lo": 3.468
+   },
+   {
+    "metric": "nasal_contrast_db",
+    "side": "lower",
+    "hi": 15.779,
+    "scale": 6.57940815,
+    "lo": 14.907
+   }
+  ],
+  "tafkheem:lam_allah": [
+   {
+    "metric": "f2_minus_f1_hz",
+    "side": "upper",
+    "hi": 420.046,
+    "scale": 169.31551455,
+    "lo": 342.566
+   }
+  ],
+  "ikhfa:heavy": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "hi": 2.9684999999999997,
+    "scale": 1.0622829,
+    "lo": 2.263
+   }
+  ],
+  "izhar_shafawi": [
+   {
+    "metric": "counts",
+    "side": "upper",
+    "hi": 1.139,
+    "scale": 0.42884204999999986,
+    "lo": 1.0715
+   }
+  ],
+  "hams": [
+   {
+    "metric": "voicing_fraction",
+    "side": "upper",
+    "hi": 0.529,
+    "scale": 0.37917495,
+    "lo": 0.058
+   }
+  ],
+  "tafkheem:raa": [
+   {
+    "metric": "f2_minus_f1_hz",
+    "side": "upper",
+    "hi": 522.111,
+    "scale": 212.50476449999996,
+    "lo": 418.441
+   }
+  ],
+  "tawassut": [
+   {
+    "metric": "duration_ratio",
+    "side": "both",
+    "hi": 1.067,
+    "scale": 0.28984830000000006,
+    "lo": 1.067
+   }
+  ],
+  "izhar_halqi": [
+   {
+    "metric": "counts",
+    "side": "upper",
+    "hi": 1.165,
+    "scale": 0.31653509999999985,
+    "lo": 1.1
+   }
+  ],
+  "ikhfa:light": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "hi": 2.872,
+    "scale": 1.1719952999999999,
+    "lo": 2.275
+   }
+  ],
+  "madd_lazim:harfi": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "hi": 7.714,
+    "scale": 3.371061750000001,
+    "lo": 5.4935
+   }
+  ],
+  "idgham_mithlayn:kamil": [
+   {
+    "metric": "releases",
+    "side": "upper",
+    "hi": 1,
+    "scale": 0.5,
+    "lo": 1
+   }
+  ],
+  "madd_badal": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "hi": 1.8969999999999998,
+    "scale": 0.23017364999999984,
+    "lo": 1.6455
+   }
+  ],
+  "jahr": [
+   {
+    "metric": "voicing_fraction",
+    "side": "lower",
+    "hi": 1,
+    "scale": 0.05,
+    "lo": 1
+   }
+  ],
+  "safir": [
+   {
+    "metric": "safir_high_band_spike_db",
+    "side": "lower",
+    "hi": 29.5985,
+    "scale": 5.767314000000001,
+    "lo": 29.305
+   }
+  ],
+  "madd_munfasil": [
+   {
+    "metric": "counts",
+    "side": "both",
+    "hi": 7.9585,
+    "scale": 1.4926075500000002,
+    "lo": 6.125
+   }
+  ],
+  "takreer": [
+   {
+    "metric": "taps",
+    "side": "upper",
+    "hi": 0,
+    "scale": 0.5,
+    "lo": 0
+   }
+  ],
+  "shiddah": [
+   {
+    "metric": "duration_ratio",
+    "side": "both",
+    "hi": 0.875,
+    "scale": 0.1771707,
+    "lo": 0.75
+   }
+  ],
+  "qalqalah:akbar": [
+   {
+    "metric": "energy_rise_db",
+    "side": "lower",
+    "hi": 27.391,
+    "scale": 3.8873771999999995,
+    "lo": 26.296999999999997
+   }
+  ],
+  "tarqeeq:lam_allah": [
+   {
+    "metric": "f2_minus_f1_hz",
+    "side": "lower",
+    "hi": 969.31,
+    "scale": 86.11756230000003,
+    "lo": 936.609
+   }
+  ],
+  "madd_tabii": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "hi": 1.983,
+    "scale": 0.27798750000000017,
+    "lo": 1.746
+   }
+  ],
+  "qalqalah:sughra": [
+   {
+    "metric": "energy_rise_db",
+    "side": "lower",
+    "hi": 13.999,
+    "scale": 3.806946149999999,
+    "lo": 13.332
+   }
+  ],
+  "hamzat_wasl": [
+   {
+    "metric": "gap_ms",
+    "side": "upper",
+    "hi": 0,
+    "scale": 15,
+    "lo": 0
+   }
+  ],
+  "tafashhi": [
+   {
+    "metric": "tafashhi_spectral_flatness",
+    "side": "lower",
+    "hi": 0.425,
+    "scale": 0.07190610000000001,
+    "lo": 0.408
+   }
+  ],
+  "madd_silah_sughra": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "hi": 1.999,
+    "scale": 0.27909944999999986,
+    "lo": 1.9129999999999998
+   }
+  ],
+  "idgham_shafawi": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "hi": 4.225,
+    "scale": 1.2824489999999997,
+    "lo": 3.335
+   }
+  ],
+  "izhar_shafawi:before_waw_faa": [
+   {
+    "metric": "counts",
+    "side": "upper",
+    "hi": 1.159,
+    "scale": 0.51186765,
+    "lo": 1.054
+   }
+  ],
+  "istitaalah": [
+   {
+    "metric": "istitaalah_duration_ratio",
+    "side": "lower",
+    "hi": 1.083,
+    "scale": 0.3076395,
+    "lo": 0.952
+   }
+  ],
+  "tafkheem": [
+   {
+    "metric": "f2_minus_f1_hz",
+    "side": "upper",
+    "hi": 458.17,
+    "scale": 141.83070510000005,
+    "lo": 376.661
+   }
+  ],
+  "iqlab": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "hi": 2.689,
+    "scale": 0.8124648,
+    "lo": 2.06
+   }
+  ],
+  "idgham_ghunnah:naqis": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "hi": 3.822,
+    "scale": 1.2505730999999995,
+    "lo": 2.616
+   },
+   {
+    "metric": "nasal_energy_ratio_db",
+    "side": "lower",
+    "hi": 16.862,
+    "scale": 7.07237265,
+    "lo": 14.721
+   }
+  ],
+  "madd_lazim:kalimi": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "hi": 10.197,
+    "scale": 1.656434850000001,
+    "lo": 8.6115
+   }
+  ],
+  "ikhfa_shafawi": [
+   {
+    "metric": "counts",
+    "side": "both",
+    "hi": 4.507,
+    "scale": 0.8284027500000004,
+    "lo": 3.1405000000000003
+   }
+  ],
+  "madd_muttasil": [
+   {
+    "metric": "core_counts",
+    "side": "both",
+    "hi": 6.9575,
+    "scale": 1.3499073,
+    "lo": 5.228
+   }
+  ]
+ },
+ "rejected_category_weights": {
+  "weight": 0.5143668809816995,
+  "madd": 0.20655956564991426,
+  "ghunnah": 2.0303054418081796,
+  "meem": 2.397600362801719,
+  "idgham": 0.6634401093525681,
+  "sifaat": 1,
+  "wasl": 2.3879460414990796,
+  "noon": 2.2607279784241308,
+  "qalqalah": 14.949512917427807
+ }
+}

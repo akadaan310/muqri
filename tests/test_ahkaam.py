@@ -5,7 +5,7 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from app.models import RuleInstance, RuleType, Status, Tareeq
+from app.models import LAHN_RULES, RuleInstance, RuleType, Status, Tareeq
 from app.quran_text import get_ayah_text
 from app.scoring import VALIDATORS, TajweedScorer
 from app.tajweed_rules import TajweedParser, parse_text
@@ -27,7 +27,8 @@ def rule_types(text: str, **kw) -> set[str]:  # type: ignore[no-untyped-def]
 
 # --------------------------------------------------------------------------- coverage
 def test_every_rule_type_has_a_validator() -> None:
-    assert set(RuleType) == set(VALIDATORS)
+    # lahn verdicts come from app/lahn (every pronounced unit), not from parsed rule instances
+    assert set(RuleType) - LAHN_RULES == set(VALIDATORS)
 
 
 def test_noon_sakinah_family() -> None:
@@ -294,7 +295,7 @@ def test_scorer_separates_perfection_and_sifaat() -> None:
     diags = [RuleDiagnostic(RuleType.MADD_TABII, "w", 0, 1, Status.PASS, "", score=1.0),
              RuleDiagnostic(RuleType.HAMS, "w", 0, 1, Status.FAIL, "", score=0.2),
              RuleDiagnostic(RuleType.MADD_ARID, "w", 0, 1, Status.VALID_NECESSARY_PAUSE, "", score=1.0)]
-    summary = TajweedScorer.summarize(diags)
+    summary = TajweedScorer().summarize(diags)
     assert summary.overall == pytest.approx(100.0)
     assert summary.sifaat == pytest.approx(20.0)
     assert summary.status_counts["VALID_NECESSARY_PAUSE"] == 1

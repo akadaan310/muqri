@@ -82,6 +82,7 @@ _NORMALIZE = str.maketrans(
 )
 # Waqf signs, rub el-hizb, sajda marks, ayah-number digits and iqlab/idgham helper marks carry
 # no articulatory information (the sakt sign is read before this is applied).
+_SEEN_OVER_SAD = re.compile("ص([\u064b-\u0652]*)" + "\u06dc")
 _DROP = re.compile(r"[\u06d6-\u06dc\u06dd\u06de\u06e2\u06e3\u06e7\u06e8\u06e9\u06ea-\u06ed٠-٩۰-۹()\[\]﴿﴾0-9]")
 _VOWEL_MARKS = frozenset({FATHA, DAMMA, KASRA, FATHATAN, DAMMATAN, KASRATAN, SHADDA, SUKUN})
 
@@ -200,6 +201,11 @@ def _tokenize_word(word: str) -> list[Cluster]:
     return clusters
 
 
+# Hamzat al-wasl read with kasra although the third letter has damma: the nouns ٱبْن ٱبْنَت ٱمْرُؤ
+# ٱمْرَأَت ٱثْنَيْن ٱثْنَتَيْن ٱسْم, and verbs whose damma is 'aarid (ٱمْشُوا۟ ٱقْضُوٓا۟ ٱبْنُوا۟ ٱئْتُوا۟).
+_WASLA_KASRA = ("ابن", "امر", "اثن", "اسم", "امشوا", "اقضوا", "ائتوا")
+
+
 def _skeleton(word: str) -> str:
     return "".join(c for c in unicodedata.normalize("NFD", word) if unicodedata.category(c) != "Mn").replace(
         ALIF_WASLA, ALIF
@@ -253,6 +259,7 @@ def _make_unit(index: int, word_index: int, base: str, marks: list[str]) -> Lett
             unit.maddah_sign = True
         elif m in (ROUNDED_ZERO, RECT_ZERO):
             unit.silent = True
+            unit.waqf_only = m == RECT_ZERO
     unit.orig_vowel = unit.vowel
     if base == ALIF_WASLA:
         unit.wasla = True
@@ -321,8 +328,12 @@ class TajweedParser:
             raw = unicodedata.normalize("NFC", ayah).translate(_NORMALIZE).split()
             ayah_words: list[_Word] = []
             for tok in raw:
-                if SAKT_MARK in tok and ayah_words:
-                    ayah_words[-1].sakt_after = True
+                if SAKT_MARK in tok and not _DROP.sub("", tok):
+                    if ayah_words:
+                        ayah_words[-1].sakt_after = True
+                elif SAKT_MARK in tok:
+                    # small high seen over ص inside a word (وَيَبْصُۜطُ 2:245, بَصْۜطَةً 7:69): read with س in Hafs
+                    tok = _SEEN_OVER_SAD.sub("س\\1", tok)
                 clean = _DROP.sub("", tok)
                 if not clean:
                     continue
@@ -409,6 +420,8 @@ class TajweedParser:
                 u.char = "ء"
                 if nxt is not None and nxt.char == "ل":
                     u.vowel = Vowel.FATHA
+                elif _skeleton(p.words[u.word_index].text).startswith(_WASLA_KASRA):
+                    u.vowel = Vowel.KASRA
                 elif third is not None and third.vowel == Vowel.DAMMA:
                     u.vowel = Vowel.DAMMA
                 else:
@@ -482,8 +495,16 @@ class TajweedParser:
         return None
 
     def _apply_waqf(self, p: ParsedText) -> None:
-        # Tanween fath + alif at the stop becomes a 2-count madd ('iwad).
         tail = p.units[-1]
+        # An alif under the rectangular zero (أَنَا۠، ٱلظُّنُونَا۠، قَوَارِيرَا۠) is read at the stop as a
+        # natural madd; the letter before it keeps its fatha (no sukun, no 'arid).
+        if tail.waqf_only and tail.char == ALIF:
+            prev = self._prev_in_word(p, tail)
+            if prev is not None and prev.vowel == Vowel.FATHA:
+                tail.silent = False
+                tail.madd_letter = True
+                return
+        # Tanween fath + alif at the stop becomes a 2-count madd ('iwad).
         if tail.silent and tail.char in (ALIF, ALIF_MAKSURA) and not tail.assimilated:
             prev = self._prev_in_word(p, tail)
             if prev is not None and prev.tanween and prev.vowel == Vowel.FATHA:
@@ -798,8 +819,8 @@ class TajweedParser:
     def _sakt_rules(self, parsed: ParsedText) -> list[RuleInstance]:
         out: list[RuleInstance] = []
         for w in parsed.words:
-            if not w.sakt_after:
-                continue
+            if not w.sakt_after or w.stop_after:
+                continue  # a full waqf at a sakt position is also valid; there is no sakt to judge
             here = [i for i in w.unit_indices if parsed.units[i].pronounced]
             after = [u.index for u in parsed.units[max(w.unit_indices) + 1:] if u.pronounced][:1]
             if not here or not after:

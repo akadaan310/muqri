@@ -22,7 +22,9 @@ from typing import Any
 
 from app.acoustic.features import AcousticContext
 from app.acoustic.tempo import TempoEstimate, estimate_tempo
-from app.aligner import Aligner, AlignmentError, HeuristicAligner, export_alignment, get_aligner
+from app.aligner import Aligner, AlignmentError, CTCForcedAligner, HeuristicAligner, export_alignment, get_aligner
+from app.lahn.detector import default_reference as default_lahn_reference
+from app.lahn.detector import lahn_diagnostics
 from app.audio import AudioSignal, load_audio
 from app.calibration import Calibration, default_calibration
 from app.fingerprint import (
@@ -63,6 +65,7 @@ class AnalysisOptions:
     stop_at_end: bool = True
     denoise: str = "auto"
     include_alignment: bool = False
+    lahn: bool = True  # letter / short-vowel substitution checks (needs app/data/lahn_reference.json)
     allow_network: bool = True
     tareeq: str = "shatibiyyah"
     mode: str = "auto"
@@ -145,6 +148,18 @@ class QaariEvaluator:
             warnings.append(f"Forced alignment failed ({exc}); used heuristic alignment")
             return HeuristicAligner().align(audio, parsed)
 
+    def _lahn(self, audio: AudioSignal, parsed: ParsedText, alignment: Alignment) -> list[RuleDiagnostic]:
+        """Letter / short-vowel substitution verdicts (lahn jali) when the CTC model has a reference."""
+        al = self._aligner
+        if not self.options.lahn or not isinstance(al, CTCForcedAligner) or not al.phonetic \
+                or not alignment.method.startswith("ctc:"):
+            return []
+        ref = default_lahn_reference()
+        if ref is None or ref.model != al.model_name:
+            return []
+        lp, frame_s = al.emissions(audio)
+        return lahn_diagnostics(lp, frame_s, al.vocab, al.blank, parsed, alignment, ref)
+
     # -- analysis -----------------------------------------------------------------------------
     def analyze_signal(self, audio: AudioSignal, text: str | list[str], *, reference: str | None = None
                        ) -> AnalysisResult:
@@ -185,6 +200,8 @@ class QaariEvaluator:
         ev = EvalContext(parsed=parsed, alignment=alignment, ctx=ctx, tempo=tempo, mode=mode, pauses=pauses,
                          local_haraka_fn=local if mode == "taraweeh_adapted" else None)
         diagnostics = self.scorer.evaluate(ev)
+        diagnostics += self._lahn(work, parsed, alignment)
+        diagnostics.sort(key=lambda d: (d.start_ms, d.end_ms))
         summary = self.scorer.summarize(diagnostics)
         fatigue = fatigue_report(ctx, pauses)
 
@@ -232,6 +249,7 @@ class QaariEvaluator:
                 "local_tempo_variability": _r(local.variability, 3),
                 "total_rules_evaluated": summary.evaluated,
                 "status_counts": summary.status_counts,
+                "coverage": summary.coverage,
                 "tempo": tempo.to_dict(),
                 "alignment": {"method": alignment.method, "mean_confidence": round(alignment.mean_confidence, 3),
                               "reliable": alignment.method != "heuristic"},

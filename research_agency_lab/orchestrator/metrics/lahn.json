@@ -1,0 +1,21 @@
+{
+ "source": "textswap_T10.json + ruleswap_T10.json (414 Modal clips) and head_to_head.json (1642 QuranMB clips)",
+ "alpha": 0.01,
+ "clips_textswap": 414,
+ "textswap_consonant_recall_1pct": 0.99724557842853,
+ "textswap_consonant_named_1pct": 0.970571180052189,
+ "textswap_vowel_recall_1pct": 0.9983698536659338,
+ "textswap_vowel_named_1pct": 0.9891576313594662,
+ "anchor_clean_flag_consonant": 0.0066,
+ "anchor_clean_flag_vowel": 0.0063,
+ "ruleswap_anchor_win": {
+  "ghunnah_drop": 0.9682539682539683,
+  "idgham_undo": 1,
+  "madd_short": 0.9459459459459459,
+  "ikhfa_izhar": 0.9166666666666666,
+  "madd_long": 0.990990990990991
+ },
+ "quranmb_clip_auroc": 0.599,
+ "quranmb_letter_sub_recall": 0.562,
+ "quranmb_reports_per_clean_clip": 1.33
+}

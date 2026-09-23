@@ -57,6 +57,9 @@ class RuleType(StrEnum):
     TAFASHHI = "tafashhi"
     ISTITAALAH = "istitaalah"
     TAKREER = "takreer"
+    # Lahn jali: the letter / short vowel itself (substitution-aware GOP, app/lahn)
+    LAHN_LETTER = "lahn_letter"
+    LAHN_HARAKAH = "lahn_harakah"
 
 
 class Tareeq(StrEnum):
@@ -101,6 +104,7 @@ IDGHAM_CLASS_RULES: frozenset[RuleType] = frozenset(
 )
 WEIGHT_RULES: frozenset[RuleType] = frozenset({RuleType.TAFKHEEM, RuleType.TARQEEQ, RuleType.JAWAZ_WAJHAYN})
 WASL_RULES: frozenset[RuleType] = frozenset({RuleType.HAMZAT_WASL, RuleType.SAKT})
+LAHN_RULES: frozenset[RuleType] = frozenset({RuleType.LAHN_LETTER, RuleType.LAHN_HARAKAH})
 SIFAAT_RULES: frozenset[RuleType] = frozenset(
     {
         RuleType.HAMS, RuleType.JAHR, RuleType.SHIDDAH, RuleType.TAWASSUT, RuleType.RAKHAWAH, RuleType.ITBAQ,
@@ -110,7 +114,9 @@ SIFAAT_RULES: frozenset[RuleType] = frozenset(
 
 
 def rule_category(rule_type: RuleType) -> str:
-    """Scoring family of a rule: madd, noon, meem, ghunnah, qalqalah, idgham, weight, wasl, sifaat."""
+    """Scoring family of a rule: madd, noon, meem, ghunnah, qalqalah, idgham, weight, wasl, lahn, sifaat."""
+    if rule_type in LAHN_RULES:
+        return "lahn"
     if rule_type in MADD_RULES:
         return "madd"
     if rule_type in NOON_RULES:
@@ -135,6 +141,10 @@ class Status(StrEnum):
     WARNING = "WARNING"
     FAIL = "FAIL"
     SKIPPED = "SKIPPED"
+    # The alignment model could not follow the audio against the text. That is itself evidence of a
+    # possible error (a substituted letter drives the CTC posterior down), so it is counted, not
+    # dropped: dropping it made wrong recitations score *higher* (MNAR bias, deep-research 06 D2).
+    REVIEW = "REVIEW"
     # A short or breath-driven stop in a live recitation (Waqf al-Dharoori), not a Tajweed error.
     VALID_NECESSARY_PAUSE = "VALID_NECESSARY_PAUSE"
 
@@ -159,6 +169,7 @@ class LetterUnit:
     sukun: bool = False
     explicit_sukun: bool = False
     silent: bool = False
+    waqf_only: bool = False  # rectangular zero (U+06E0): an alif pronounced only at a stop (أَنَا۠)
     madd_letter: bool = False
     maddah_sign: bool = False
     synthetic: bool = False

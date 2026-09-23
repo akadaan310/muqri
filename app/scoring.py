@@ -7,7 +7,9 @@ Two scores are reported:
 * **Sifaat score**: articulation qualities (Hams/Jahr, Shiddah/Rakhawah, Itbaq, Safir, …), kept
   separate because these measurements are less mature than the rule checks.
 
-``SKIPPED`` and ``VALID_NECESSARY_PAUSE`` diagnostics are excluded from both scores.
+``SKIPPED`` and ``VALID_NECESSARY_PAUSE`` diagnostics are excluded from both scores; ``REVIEW`` (low
+alignment confidence) is counted at its interim score. ``coverage`` is the judged share of the
+instances, so a high index on low coverage is visible as such.
 """
 
 from __future__ import annotations
@@ -48,11 +50,12 @@ VALIDATORS: dict[RuleType, Validator] = {
     **ghair_mutadhaddah.VALIDATORS,
 }
 
-# Relative weight of each rule family in the perfection index. Timing and nasal rules are the most
+# Relative weight of each rule family in the perfection index. Lahn jali (a wrong letter or vowel,
+# app/lahn) outranks every Tajweed rule: it changes the word. Timing and nasal rules are the most
 # reliably measured; formant-based weight judgements and boundary checks the least.
 CATEGORY_WEIGHTS: dict[str, float] = {
     "madd": 1.0, "noon": 1.0, "meem": 0.8, "ghunnah": 1.0, "qalqalah": 0.8, "idgham": 0.8, "weight": 0.6,
-    "wasl": 0.5, "sifaat": 1.0,
+    "wasl": 0.5, "lahn": 1.5, "sifaat": 1.0,
 }
 _EXCLUDED = (Status.SKIPPED, Status.VALID_NECESSARY_PAUSE)
 
@@ -64,6 +67,7 @@ class ScoreSummary:
     by_category: dict[str, float]
     status_counts: dict[str, int]
     evaluated: int
+    coverage: float | None = None  # judged / all instances except necessary pauses
 
 
 class TajweedScorer:
@@ -123,7 +127,15 @@ def summarize_diagnostics(diagnostics: list[RuleDiagnostic],
         by_category={c: round(float(np.mean(v)) * 100, 1) for c, v in per_cat.items()},
         status_counts={s.value: counts.get(s.value, 0) for s in Status},
         evaluated=sum(len(v) for c, v in per_cat.items() if c != "sifaat"),
+        coverage=_coverage(diagnostics),
     )
+
+
+def _coverage(diagnostics: list[RuleDiagnostic]) -> float | None:
+    eligible = [d for d in diagnostics if d.status is not Status.VALID_NECESSARY_PAUSE]
+    if not eligible:
+        return None
+    return round(sum(d.status is not Status.SKIPPED and d.score is not None for d in eligible) / len(eligible), 3)
 
 
 def consistency_notes(diagnostics: list[RuleDiagnostic]) -> list[str]:

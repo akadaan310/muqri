@@ -63,7 +63,8 @@ def index_dir(tmp_path):  # type: ignore[no-untyped-def]
 def test_pipeline_report_matches_spec(tmp_path, index_dir) -> None:  # type: ignore[no-untyped-def]
     wav, align = synthesize(tmp_path)
     ev = QaariEvaluator(AnalysisOptions(alignment_json=align, index_dir=index_dir, timbre_backend="mfcc",
-                                        denoise="never", mode="studio", style_weight=1.0, benchmark="hussary"))
+                                        denoise="never", mode="studio", style_weight=1.0, benchmark="hussary",
+                                        calibration=None))  # textbook verdicts: synthetic audio
     result = ev.analyze_file(wav, surah=113, ayah=2)
     report = result.report
 

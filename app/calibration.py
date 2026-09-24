@@ -8,7 +8,9 @@ records, per rule key and metric, how the reference reciters actually measure:
 
     reference hull  [lo, hi] = [min(m_H, m_C), max(m_H, m_C)]
                     m_H = Al-Hussary's median, m_C = the peers' consensus (median of their medians)
-    robust scale    s = max(1.4826 · MAD pooled over the reference reciters, floor)
+    robust scale    s = max(median over reference reciters of σ_r, floor),
+                    σ_r = max(1.4826 · MAD_r, (p95_r − p5_r) / 3.29)   (the quantile term keeps σ from
+                    collapsing on saturated or discrete metrics such as voicing ≈ 1 or tap counts)
     z               = distance of x outside [lo, hi] / s   (one-sided for "upper"/"lower" metrics)
 
 PASS |z| ≤ 2, WARNING 2 < |z| ≤ 3, FAIL beyond. A span whose alignment is unreliable (low CTC

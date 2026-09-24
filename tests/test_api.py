@@ -18,7 +18,7 @@ def test_analyze_endpoint(tmp_path) -> None:  # type: ignore[no-untyped-def]
 
     wav, align = synthesize(tmp_path)
     client = TestClient(create_app(AnalysisOptions(alignment_json=align, index_dir=None, timbre_backend="mfcc",
-                                                   denoise="never")))
+                                                   denoise="never", calibration=None)))
     assert client.get("/health").json() == {"status": "ok"}
     with wav.open("rb") as fh:
         resp = client.post("/analyze", files={"audio": ("r.wav", fh, "audio/wav")}, data={"surah": 113, "ayah": 2})

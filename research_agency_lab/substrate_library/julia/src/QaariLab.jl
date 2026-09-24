@@ -67,7 +67,7 @@ end
 struct Robust
     n::Int
     median::Float64
-    sigma::Float64   # 1.4826 · MAD
+    sigma::Float64   # max(1.4826 · MAD, (p95 − p5)/3.29)
     p5::Float64
     p25::Float64
     p75::Float64
@@ -78,7 +78,11 @@ function robust(v::AbstractVector{<:Real})
     x = filter(isfinite, Float64.(v))
     isempty(x) && return Robust(0, NaN, NaN, NaN, NaN, NaN, NaN)
     q = quantile(x, [0.05, 0.25, 0.75, 0.95])
-    Robust(length(x), median(x), MADK * mad(x; normalize = false), q...)
+    # σ: the larger of the MAD estimate and the 5–95 % quantile spread / 3.29 (both equal σ for a
+    # normal). MAD alone collapses to 0 on saturated or discrete metrics (voicing ≈ 1.0 on almost
+    # every jahr letter, tap counts of 0), which would fail the anchor on his own recordings.
+    σ = max(MADK * mad(x; normalize = false), (q[4] - q[1]) / 3.29)
+    Robust(length(x), median(x), σ, q...)
 end
 
 "Robust coefficient of variation: how noisy a ruler is relative to what it measures."

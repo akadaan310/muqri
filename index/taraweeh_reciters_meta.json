@@ -1,0 +1,77 @@
+{
+  "format": "qaari-eval-fingerprint-index/2",
+  "backend": "ecapa-voxceleb-192-v2",
+  "category": "taraweeh",
+  "dimensions": {
+    "timbre": 192,
+    "tajweed": 32,
+    "environment": 8
+  },
+  "tajweed_fields": [
+    "haraka_base_ms",
+    "hadr_to_tahqeeq_ratio",
+    "shiddah_duration_ratio",
+    "tawassut_duration_ratio",
+    "rakhawah_duration_ratio",
+    "madd_tabii_accuracy",
+    "madd_muttasil_accuracy",
+    "madd_munfasil_accuracy",
+    "madd_lazim_accuracy",
+    "ghunnah_envelope_ratio",
+    "ikhfa_formant_anticipation_score",
+    "tafkheem_f2_depression_mean",
+    "tarqeeq_f2_elevation_mean",
+    "qalqalah_sughra_burst_db",
+    "qalqalah_kubra_burst_db",
+    "qalqalah_akbar_hold_ratio",
+    "hams_hnr_db_mean",
+    "jahr_hnr_db_mean",
+    "safir_high_band_power",
+    "tafashhi_spectral_spread",
+    "istitaalah_duration_ratio",
+    "takreer_single_strike_flag",
+    "lam_allah_tafkheem_accuracy",
+    "raa_tafkheem_tarqeeq_accuracy",
+    "izhaar_halqi_cleanliness",
+    "iqlab_nasal_transition_score",
+    "idghaam_kamil_assimilation_score",
+    "idghaam_naqis_sifah_retention",
+    "waqf_madd_aaridh_extension_ratio",
+    "sakt_silence_duration_ms",
+    "is_tayyibah_qasr_flag",
+    "overall_tajweed_perfection_index"
+  ],
+  "environment_fields": [
+    "rt60_reverberation_time",
+    "snr_db",
+    "room_volume_estimate",
+    "mic_proximity_bass_boost",
+    "spectral_tilt",
+    "background_crowd_noise_level",
+    "echo_density",
+    "audio_clipping_ratio"
+  ],
+  "reciters": [
+    {
+      "reciter_id": "Yasser_Ad-Dussary_128kbps",
+      "name": "Yasser Al-Dosari",
+      "category": "taraweeh",
+      "n_segments": 1872,
+      "source": "https://everyayah.com/data/Yasser_Ad-Dussary_128kbps"
+    },
+    {
+      "reciter_id": "Nasser_Alqatami_128kbps",
+      "name": "Nasser Al-Qatami",
+      "category": "taraweeh",
+      "n_segments": 908,
+      "source": "https://everyayah.com/data/Nasser_Alqatami_128kbps"
+    },
+    {
+      "reciter_id": "Saood_ash-Shuraym_128kbps",
+      "name": "Saud Al-Shuraim",
+      "category": "taraweeh",
+      "n_segments": 273,
+      "source": "https://everyayah.com/data/Saood_ash-Shuraym_128kbps"
+    }
+  ]
+}

@@ -1,252 +1,244 @@
 # qaari-eval
 
-Deep Quranic Tajweed analysis, automated scoring and reciter fingerprinting.
+Quranic Tajweed analysis, scoring calibrated on master reciters, and reciter fingerprinting.
 
-`qaari-eval` checks how a recitation was delivered, not only which words were said. It
-force-aligns the audio to the canonical Uthmani text at letter level, derives every Tajweed rule
-that Hafs ʿan ʿĀṣim requires from the text itself, and measures each rule acoustically:
-Madd length in harakat, Ghunnah nasal resonance, the Qalqalah release burst, and the formant
-shift of heavy (Tafkheem) versus light (Tarqeeq) letters. It also places the recitation in a
-132-dimensional style + timbre space and finds the closest reciters in a FAISS index built from
-EveryAyah.com.
+`qaari-eval` checks how a recitation was delivered, not only which words were said:
+
+1. **Rules from the text.** It derives every Tajweed rule the Uthmani text requires under Hafs ʿan ʿĀṣim (Shatibiyyah or Tayyibah).
+2. **Letter timings.** It force-aligns the audio at letter level.
+3. **Acoustic measurement.** It measures each rule: Madd length, Ghunnah nasality, the Qalqalah release, formant weight for Tafkheem/Tarqeeq, and the Sifaat (Hams/Jahr, Shiddah/Rakhawah, Itbaq, Safir, Tafashhi, Istitaalah, Takreer).
+4. **Judgement.** It judges each measurement against how Sheikh Mahmoud Khalil Al-Hussary and his ijaazah peers actually recite, rather than against hand-set limits.
+5. **Live recordings.** A Taraweeh adapter handles reverberant, fast recordings.
+6. **Fingerprint.** A 232-d fingerprint places the reciter among master and Taraweeh reciters.
 
 ```
 [ audio ] + [ Uthmani text ]
       │
       ▼
- app/aligner.py        CTC forced alignment (wav2vec2 Quran phonetic model + exact Viterbi)
- app/tajweed_rules.py  Uthmani → letter units → Hafs rule instances
+ app/aligner.py            CTC forced alignment (wav2vec2 Quran phonetic model, exact Viterbi)
+ app/tajweed_rules/        parser.py (Uthmani → letter units → 38 rule types, waqf/sakt phrases)
+                           mudood_engine, noon_sakinah, meem_sakinah, qalqalah_engine,
+                           idghaam_classes, raa_lam_rules, sakt_wasl        (validators)
+ app/sifaat/               hams_jahr, sukoon_spectrum, itbaq, ghair_mutadhaddah, formants
+ app/taraweeh_adapter/     dereverb (RT60, WPE, late-reverb suppression, 120 Hz HPF),
+                           pace_normalizer (local tempo), fatigue_detector (breath pauses)
       │
       ▼
- app/acoustic/         tempo.py  madd.py  ghunnah.py  qalqalah.py  tafkheem.py  (Praat/numpy DSP)
-      │
-      ▼
- app/scoring.py        per-rule PASS / WARNING / FAIL + feedback, weighted score
- app/profiling.py      ECAPA timbre (128-d) ⊕ Tajweed style (4-d) → FAISS k-NN
+ app/scoring.py            validators → raw metrics → app/calibration.py (robust z vs. reference)
+ app/fingerprint.py        192 ECAPA timbre ⊕ 32 Tajweed ⊕ 8 environment → FAISS indices
 ```
 
 ## Install
 
 ```bash
-pip install -r requirements.txt           # core: parser, DSP, FAISS, CLI, tests
+pip install -r requirements.txt           # core: parser, DSP, FAISS, WPE, CLI, tests
 pip install --index-url https://download.pytorch.org/whl/cpu torch torchaudio
 pip install -r requirements-ml.txt        # CTC aligner + ECAPA embeddings + HTTP API
 ```
 
-The core install runs without PyTorch. Letter timings then come from a heuristic aligner and the
-report marks them as approximate. For real measurements, install the ML extras. The first run
-downloads `TBOGamer22/wav2vec2-quran-phonetics` (~360 MB) and `speechbrain/spkrec-ecapa-voxceleb`.
+The first run downloads `TBOGamer22/wav2vec2-quran-phonetics` (~360 MB) and
+`speechbrain/spkrec-ecapa-voxceleb`.
+
+The research lab (`research_agency_lab/`) additionally uses:
+- Julia ≥ 1.10 (`research_agency_lab/substrate_library/julia/Project.toml`)
+- GNU Octave with the `signal` package
+- The Kaggle CLI
 
 ## Usage
 
 ```bash
-python main.py analyze --audio user_recitation.wav --surah 113 --ayah 1
+python main.py analyze --audio user_input.wav --surah 1 --tareeq shatibiyyah \
+       --mode taraweeh_adapted --benchmark dosari
+python main.py rules --surah 1 --ayah 7          # the rules the text requires (no audio)
+python main.py serve --port 8000                  # POST /analyze
 ```
-
-This prints a report and writes `analysis_report.json`:
-
-```
-════════════════════════════════════════════════════════════════════════
- qaari-eval report — 113:1
- قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ
-════════════════════════════════════════════════════════════════════════
- Overall Tajweed score : 100.0 / 100
- Category scores       : madd 100.0, weight 100.0, qalqalah 100.0
- Base harakah          : 330.8 ms  (181.4 harakat/min)
- Rules evaluated       : 3  PASS=3 SKIPPED=1
- Alignment             : ctc:TBOGamer22/wav2vec2-quran-phonetics (confidence 0.6)
-────────────────────────────────────────────────────────────────────────
- · SKIPPED tafkheem             قُلْ              581-822   ms
-     No light reference for this vowel; Tafkheem (heavy) of ق in 'قُلْ' not scored.
- ✔ PASS    madd_tabii           أَعُوذُ          1564-2246  ms [2.1/2]
-     Excellent prolongation. Measured 682ms (2.1 counts); target 2.
- ✔ PASS    tafkheem             بِرَبِّ          2967-3288  ms
-     ر in 'بِرَبِّ' was correctly heavy (F2−F1 52 Hz).
- ✔ PASS    qalqalah             ٱلْفَلَقِ        5233-5905  ms
-     Clear acoustic release burst detected on letter Qaf (ق).
-```
-
-(This is Al-Husary's EveryAyah recording of 113:1.)
-
-Useful options:
 
 | Option | Meaning |
 |---|---|
-| `--text "…"` | Analyze any Uthmani text instead of looking up `--surah/--ayah` |
-| `--aligner auto\|ctc\|heuristic\|json` | Alignment back-end (`auto` = CTC if installed) |
-| `--alignment-json FILE` | Use letter timings from an external aligner or manual annotation |
-| `--no-stop` | The reciter continues into the next ayah (no waqf rules at the end) |
-| `--include-alignment` | Add per-letter timings to the JSON |
-| `--index-dir DIR` | Reciter index location (default `index/`) |
-| `--style-weight W` | Weight of style vs. timbre in reciter matching (default 0.6 per spec; 0 = timbre only) |
-| `--denoise auto\|always\|never` | Spectral-subtraction denoising (auto when SNR < 15 dB) |
+| `--surah S [--ayah A [--ayah-end B]]` | A whole surah, an ayah, or a range (`--text "…"` for any Uthmani text) |
+| `--tareeq shatibiyyah\|tayyibah` | Madd targets and Munfasil rules of the chosen tareeq |
+| `--mode auto\|studio\|taraweeh_adapted` | `auto` switches to the adapter when the room is reverberant |
+| `--benchmark NAME` | Compare the recitation with a reciter from the indices (e.g. `dosari`, `hussary`) |
+| `--no-sifaat` | Skip the articulation-attribute (Sifaat) analysis |
+| `--aligner`, `--alignment-json`, `--include-alignment` | Alignment back-end and letter timings |
 
-Other commands:
+The report has these fields:
+- `tajweed_perfection_index`: the Ahkaam, weighted by category.
+- `sifaat_score`: kept separate from the perfection index.
+- One diagnostic per rule, with its raw metrics and, when calibrated, its z-score.
+- Pace, acoustic environment, adapter actions, fatigue and pitch style.
+- The fingerprint, and a comparison with the requested benchmark reciter.
+
+Statuses:
+- `PASS`, `WARNING`, `FAIL`.
+- `SKIPPED`: the rule could not be measured reliably, for example because the alignment collapsed.
+- `VALID_NECESSARY_PAUSE`: a short Madd before a breath pause in Taraweeh mode.
+
+Neither of the last two counts toward the score.
+
+## Scoring: Al-Hussary as the reference scorer
+
+Textbook limits ("a natural Madd is 2 counts ± 0.25") assume a perfect ruler, but the engine's rulers are biased:
+- CTC spans absorb consonant closures.
+- The harakah is estimated from syllable spans.
+- Every acoustic metric has its own offset.
+
+Under textbook limits Al-Hussary himself scored **71**, and the limits did not separate anyone.
+
+Scoring is instead calibrated on the reference reciters (`app/data/calibration.json`, built by `research_agency_lab/substrate_library/julia/calibrate.jl`).
+
+**Anchor and peers.**
+- The anchor is Al-Hussary (`Husary_128kbps`).
+- The ijaazah peers are Al-Hussary (Muallim), Al-Minshawi, Al-Hudhaify, Abdul Basit and Alafasy.
+- Tablawi and Ayyoub are in the roster but have no Quran-MD data yet.
+
+**Ruler selection.** Each duration rule has two candidate rulers:
+- `counts`: span duration / local harakah.
+- `core_counts`: the Hilbert-envelope voiced vowel core / harakah.
+
+The calibrator keeps the ruler with the lowest robust coefficient of variation on Al-Hussary.
+
+**Reference band.** For each rule key the band is `[min(m_H, m_C), max(m_H, m_C)]`:
+- `m_H` is Al-Hussary's median.
+- `m_C` is the peers' consensus, the median of their medians.
+
+So where the peers legitimately differ, the band widens to include them.
+
+**Scale.** The scale is the median over reciters of `σ_r = max(1.4826·MAD_r, (p95_r − p5_r)/3.29)`, floored per unit. The quantile term keeps σ from collapsing on saturated or discrete metrics such as voicing ≈ 1 or tap counts.
+
+**Verdict.** `z` is the distance outside the band divided by the scale, one-sided where only one direction is an error (e.g. Izhaar may be crisp but not held).
+- PASS: z ≤ 2
+- WARNING: z ≤ 3
+- FAIL: beyond 3
+
+**Alignment reliability.** A span is SKIPPED rather than failed when:
+- its CTC posterior is below max(0.2, Al-Hussary's 2nd percentile), or
+- a unit collapsed below 40 ms (two CTC frames), or
+- a duration rule has no voiced core.
+
+This covers the collapsed Munfasil spans.
+
+**Category weights.** The weights are searched (Optim.jl) to separate peers from imams:
+- Each weight stays within ×/÷2 of its default.
+- Tuned weights are kept only if the separation gains ≥ 1 point; the 95 target is never optimised for.
+
+The first, unbounded search reached the peers' 95 target by inflating the wasl weight ×30, which lifted the imams to 95 as well. Both bounded searches since gained < 1 point, so the **default weights stand**.
+
+The live scorer and the offline re-scoring (`benchmarks/summarize.py`) share one `Calibration.judge()`. The Julia implementation reproduces the Python scores to the decimal.
+
+### Results (full-Qur'an Kaggle run, 46,285 ayah recordings)
+
+**Data.**
+- Source: Quran-MD WAVs (the EveryAyah recordings).
+- Al-Hussary: 4,053 ayahs. Peers: 1,869–4,055 each.
+- Imams: Dosari 1,872, Qatami 908, Shuraym 273.
+
+**Collection gaps.**
+- 7 of the 20 shards were lost to a model-loading race, now fixed.
+- Sudais and Juhaynee have no rows yet.
+- The `fill` run is completing both.
+
+| Reciter | Set | Raw textbook | Calibrated | Held out (LOO) | Adapted mode |
+|---|---|---|---|---|---|
+| Al-Hussary | anchor | 71.2 | **97.1** (in-sample) | — | 97.1 |
+| Al-Hussary (Muallim) | peer | 75.1 | 98.0 | 98.1 | 97.7 |
+| Abdul Basit (Murattal) | peer | 69.1 | 92.5 | 92.3 | 95.1 |
+| Al-Hudhaify | peer | 69.0 | 91.3 | 90.5 | 91.6 |
+| Alafasy | peer | 68.1 | 89.4 | 88.8 | 90.2 |
+| Al-Minshawi (Murattal) | peer | 61.3 | 86.0 | 85.7 | 91.9 |
+| Saud Al-Shuraim | imam | 69.2 | 91.1 | — | 92.3 |
+| Yasser Al-Dosari | imam | 68.2 | 88.9 | — | 89.0 |
+| Nasser Al-Qatami | imam | 64.3 | 87.3 | — | 86.9 |
+
+**Findings.**
+- **The vowel-core ruler recovers "2 harakat".**
+  - On 12,122 natural Madds, the Hilbert-envelope vowel core measures Al-Hussary's median at **1.98 counts** (`count_scale` 1.008).
+  - The raw span ruler gives 2.2–2.5 because CTC spans take in the next letter's closure; this was the "harakah inflation".
+- **Held-out peers barely move** (LOO − in-sample ≤ 0.8), so the bands are not overfit to the reciters that built them.
+- **Imams vs. peers.**
+  - The imams average 89.1 against the peers' 91.4. The separation is real but modest, and Al-Minshawi sits below the imams.
+  - The per-rule gaps (`summary.json → rule_gaps_vs_reference`, signed z from the reference band) are more informative than the single index:
+    - **Qatami and Al-Shuraim** hold Munfasil at median z ≈ −2 (about half pass), i.e. shorter than the reference, consistent with the shorter Munfasil common in Haramain Taraweeh.
+    - **Al-Hudhaify**, a peer, goes the other way (z ≈ +2.4): his Munfasil is longer.
+    - **Qatami** holds Madd ʿIwad long (z ≈ +3.9; 9 % pass).
+    - **Dosari**'s weakest rule is Muttasil, held long (z ≈ +1.3; 60 % pass).
+  - Under the earlier MAD-only scale, Dosari also appeared to fail Takreer. That was an artefact of the degenerate band the quantile term fixes.
+
+**Acceptance criteria.** All three fail; the numbers are reported as measured, not tuned.
+- Al-Hussary ≥ 98: **97.1**. This is in-sample, since his own recordings define the bands.
+- Dosari adapted ≥ 95: **89.0**.
+- Timing false positives cut ≥ 90 % by the Taraweeh adapter: **1.2 %**.
+  - The adapter was built for reverberant live audio. These imam recordings are studio-quality EveryAyah ayahs, so there is little reverberation for it to remove.
+  - It does not help here, and a real Taraweeh test needs live recordings.
+
+Run `QAARI_ACCEPTANCE=1 pytest tests/test_benchmarks.py` to reproduce this check.
+
+### Model discovery (`research_agency_lab/experiments/discovery_full.json`)
+
+- **Duration law.** Sparse regression (STLSQ with BIC) of held-sound duration on count `n` and tempo `T`:
+  - The count term dominates for every reciter, at about 335–560 ms per count.
+  - For several reciters (Alafasy, Dosari) the selected law has **no tempo term**.
+  - The per-ayah harakah estimate is therefore a weak predictor of Madd length. R² is only 0.3–0.6, so treat this as indicative.
+- **Tempo dynamics.** Three models of the harakah across a surah compete by AIC:
+  - constant
+  - linear drift
+  - a relaxation ODE, `dT/dτ = (T∞ − T)/τc`, solved with OrdinaryDiffEq and fitted by L-BFGS with ForwardDiff gradients through the solver
+  - **Result:** drift is preferred in about 40–60 % of surahs, but the median drift is ≤ 0.3 ms/min for the masters and 0.6 ms/min for Qatami. Tempo is essentially stable, with no fatigue signal yet.
+  - **Caveats:** missing ayahs, and separately recorded ayah files.
+
+## Research lab (`research_agency_lab/`)
+
+| Path | What it does |
+|---|---|
+| `substrate_library/octave/qaari_features.m` | GNU Octave + `signal`. Per diagnostic span it measures: LPC formants (order 2 + fs/1000), autocorrelation HNR and voicing (r > 0.45), cepstral F0, Hilbert vowel core, nasal band contrast, spectral-flux burst, high-frequency share. The Python `EvalContext.vowel_core_ms` is its production port and agrees within 5–15 ms. |
+| `compute_bridge/octave_bridge.py` | Runs the Octave engine over benchmark rows (`diag["octave"]`) |
+| `substrate_library/julia/` | `QaariLab`: `calibrate.jl` (bands, LOO, weights) and `discover.jl` (duration law, tempo ODE) |
+| `compute_bridge/kaggle_bridge.py` | `push-code`, `push-deps`, `launch`, `status`, `collect`. Details below the table. |
+| `experiments/` | Calibration and discovery outputs |
+
+`kaggle_bridge.py` notes:
+- Workers run sharded `run_benchmark.py` over the Quran-MD WAVs attached as inputs.
+- A private deps dataset (wheels plus model snapshots) lets them run with Kaggle internet off.
+- `--skip-done` resumes a run.
+- `--only K` relaunches a single kernel.
+
+The benchmark rows are raw: validators run with `calibration=None`, and each diagnostic keeps its metrics. So the bands can be re-estimated and everything re-scored offline without touching audio.
 
 ```bash
-python main.py rules --surah 1 --ayah 7     # list the rules the text requires (no audio)
-python main.py serve --port 8000            # POST /analyze (multipart: audio, surah, ayah | text)
-python datasets/index_reciters.py           # (re)build the reciter index from EveryAyah
+python research_agency_lab/compute_bridge/kaggle_bridge.py launch --tag full --reciters Husary_128kbps … --verses all
+python research_agency_lab/compute_bridge/kaggle_bridge.py collect --tag full --kernels 5
+julia --project=research_agency_lab/substrate_library/julia research_agency_lab/substrate_library/julia/calibrate.jl \
+      app/data/calibration.json benchmarks/results/kaggle/full/*runs_full_*.jsonl
+julia --project=research_agency_lab/substrate_library/julia research_agency_lab/substrate_library/julia/discover.jl \
+      research_agency_lab/experiments/discovery_full.json benchmarks/results/kaggle/full/*runs_full_*.jsonl
+python benchmarks/summarize.py --runs benchmarks/results/kaggle/full/*runs_full_*.jsonl
 ```
 
-## JSON report
+The collected rows are committed gzipped (`*.jsonl.gz`); `gunzip -k` them first.
 
-```json
-{
-  "recitation_summary": {
-    "overall_tajweed_score": 100.0,
-    "tempo_bpm_harakat": 181.4,
-    "base_haraka_duration_ms": 330.8,
-    "total_rules_evaluated": 3,
-    "category_scores": {"madd": 100.0, "weight": 100.0, "qalqalah": 100.0},
-    "alignment": {"method": "ctc:TBOGamer22/wav2vec2-quran-phonetics", "reliable": true},
-    "audio_quality": {"estimated_snr_db": 41.0, "clipping_ratio": 0.0, "warnings": []}
-  },
-  "detailed_rule_diagnostics": [
-    {
-      "rule_type": "madd_tabii",
-      "word": "أَعُوذُ",
-      "location": {"start_ms": 1564, "end_ms": 2246},
-      "expected_harakat": 2,
-      "measured_harakat": 2.06,
-      "status": "PASS",
-      "feedback": "Excellent prolongation. Measured 682ms (2.1 counts); target 2."
-    }
-  ],
-  "reciter_profile": {"style_vector": {"tempo_harakat_per_min": 181.4, "madd_stretch_bias": 1.03}},
-  "reciter_similarity_match": {
-    "top_matches": [
-      {"reciter_name": "Husary", "reciter_id": "Husary_128kbps", "combined_similarity_pct": 58.0,
-       "style_similarity_pct": 35.4, "timbre_similarity_pct": 58.0, "matched_traits": ["Wide melodic range"]}
-    ],
-    "index_size": 44,
-    "style_weight": 0.0
-  }
-}
-```
+## Reciter indices
 
-(The match block is real output for Husary's held-out recording of 1:7 with `--style-weight 0`.)
+`index/masterclass_reciters.faiss` and `index/taraweeh_reciters.faiss` (each with `_meta.json`) hold one 232-d fingerprint per reciter, merged over that reciter's studio-mode ayahs:
+- 192-d ECAPA timbre
+- 32 Tajweed fields in the spec order
+- 8 environment fields
 
-Statuses: `PASS`, `WARNING` (close to the target), `FAIL`, and `SKIPPED` (the analyzer could not
-measure the rule reliably). Skipped rules are excluded from the score.
-
-## How it works
-
-### Rule derivation (`app/tajweed_rules.py`)
-The parser resolves the Tanzil/Madani Uthmani orthography into letter units. It handles the
-dagger alif, small waw/yaa (silah), silent-letter marks, hamzat al-wasl, the lam of the article
-before sun letters, bare letters that imply sukun or idgham, a Madd dropped before a sakin letter
-in the next word, and the tanween-alif. It then applies Hafs (Shatibiyya) with a stop at the end
-of the ayah:
-
-* **Madd:** Tabiʿi (2), Muttasil (4–5), Munfasil (4–5), Lazim Kalimi (6), ʿArid lil-Sukun (2–6),
-  Silah Sughra.
-* **Ghunnah:** Noon/Meem mushaddadah; Noon sakinah/tanween → Ikhfa, Idgham bi-Ghunnah, Iqlab;
-  Meem sakinah → Ikhfa/Idgham Shafawi.
-* **Qalqalah:** ق ط ب ج د with sukun. Sughra mid-ayah, Kubra when stopping on the letter.
-* **Tafkheem/Tarqeeq:** isti'la letters with fathah/dammah, context rules for Raa, and the Lam of
-  the Divine Name.
-
-### Tempo (`acoustic/tempo.py`)
-`T_haraka` is the median duration of plain open short syllables that no lengthening rule touches
-(IQR outlier rejection). A Madd's length is the whole long syllable (carrier + madd letter)
-divided by `T_haraka`. A Tabiʿi syllable therefore measures 2 counts, which is how teachers
-count. The pass band is ±15 %.
-
-### Ghunnah (`acoustic/ghunnah.py`)
-Duration must be ≥ 2 harakat. Nasality is measured with the **Nasal Energy Ratio**
-`10·log10(E[150–400 Hz] / E[750–1100 Hz])`, the nasal formant against the nasal anti-formant.
-It is compared with the reciter's own open oral vowels, which cancels microphone and voice
-differences.
-
-### Qalqalah (`acoustic/qalqalah.py`)
-The detector finds the occlusion, an RMS drop of ≥ 12 dB lasting ≥ 20 ms. It then looks for a
-high-band (>1.5 kHz) spectral-flux transient and an energy rebound from 50 ms before to 60 ms
-after the release. Kubra needs a stronger rebound (≥ 10 dB) than Sughra (≥ 8 dB).
-
-### Tafkheem / Tarqeeq (`acoustic/tafkheem.py`)
-Formants come from Praat's Burg tracker via `praat-parselmouth`, with a numpy LPC fallback. They
-are measured on the vowel nucleus: the 15–75 % core of the syllable, voiced frames within 6 dB of
-its peak. The score is the relative collapse of **F2 − F1** against a light reference built from
-the same reciter's coronal/dorsal letters. The reference excludes gutturals, labials, raa and lam,
-and any letter next to a heavy one.
-
-### Reciter fingerprint (`app/profiling.py`)
-* **Timbre (128-d):** SpeechBrain ECAPA-TDNN (192-d), projected by a fixed orthonormal matrix.
-  Without SpeechBrain, a 128-d MFCC-statistics embedding is used. The index records its back-end,
-  and queries must use the same one.
-* **Style (4-d):**
-  * tempo (harakat/min)
-  * Madd stretch bias: median of measured/canonical-minimum length over non-final Madds, so it
-    does not depend on which ayah was recited
-  * pitch dynamic range: std of F0 in semitones
-  * mean nasal energy ratio
-* **Similarity:** `S = 0.6·S_style + 0.4·S_timbre`, where `S_timbre` is the cosine similarity and
-  `S_style = exp(−d²/8)` for the Euclidean distance `d` between z-normalized style vectors. FAISS
-  retrieves candidates from both spaces, and they are re-ranked exactly.
-
-## Reciter index
-
-`index/reciters_faiss.index` stores one 132-d vector per reciter (timbre ⊕ raw style) in a FAISS
-`IndexFlatIP`. `index/reciters_meta.json` holds names, the embedding back-end and the style
-statistics. The shipped index covers every distinct Hafs reciter in the EveryAyah catalogue,
-built from Al-Ikhlas and Al-Falaq with CTC alignment and ECAPA timbre: **44 reciters**
-(Ibrahim Akhdar was skipped because EveryAyah's MP3s for him failed to decode). EveryAyah hosts
-about 45 distinct Hafs reciters. To reach 100+, add other sources with
-`--extra-catalog my_sources.json`:
-
-```json
-[{"id": "reciter_x", "name": "Reciter X", "url_template": "https://host/x/{surah:03d}{ayah:03d}.mp3"}]
-```
-
-The builder downloads in parallel with retry and back-off, caches audio, and checkpoints after
-each reciter. Re-running resumes where it stopped.
-
-## Alignment JSON format
-
-```json
-{"units": [{"index": 0, "start_ms": 120, "end_ms": 260}, {"index": 1, "start_ms": 260, "end_ms": 410}]}
-```
-
-`index` counts pronounced letters in order (silent letters such as hamzat al-wasl are skipped).
-Use `"unit_index"` to address the parser's internal unit numbering directly. `main.py analyze
---include-alignment` emits this format, which also makes it convenient for hand-correction.
+Search blends timbre cosine similarity with a Tajweed style similarity, `exp(−mean z²/2)`. `--benchmark NAME` resolves spelling variants (Dossary/Dosari/Al-Dussary, Hussary/Husary, …).
 
 ## Tests
 
 ```bash
-pytest                # 52 tests: parser, madd/tempo, qalqalah, ghunnah, tafkheem, FAISS, aligner, audio, CLI, API
+pytest                                             # unit tests (synthetic audio has exact ground truth)
+QAARI_ACCEPTANCE=1 pytest tests/test_benchmarks.py # the spec's acceptance criteria on benchmarks/results/summary.json
 ```
 
-The DSP tests use Klatt-style source-filter synthesis (`tests/synth.py`) with known formants,
-nasal zeros and plosive bursts, so every assertion has an exact ground truth. The tests need only
-`requirements.txt`, not PyTorch.
+## Limitations
 
-## Validation and limitations
-
-Tested on Al-Husary's EveryAyah recordings of Al-Falaq 1–2 and Al-Fatiha 7 with CTC alignment:
-
-* Madd Tabiʿi measured 1.7–2.5 counts.
-* The Ikhfa in مِن شَرِّ measured 2.0 counts, with nasal resonance detected.
-* Both ayah-final Qalqalah Kubra were detected.
-* Every scored heavy letter (ر ط غ ض خ) was judged heavy.
-
-Known limitations:
-
-* **Phrase-final lengthening:** masters stretch the last Madd before a stop far beyond their
-  running tempo. Husary holds the Lazim in ٱلضَّآلِّينَ for ~14 short-syllable lengths.
-  Over-extension in the final word is therefore capped at `WARNING`.
-* **The CTC model** was trained on word-level audio; its card warns about full ayahs. Forced
-  alignment copes well because the target text is known, but boundaries can drift by a frame or
-  two (20 ms).
-* **Style features vary from ayah to ayah.** On 24 held-out recordings (8 reciters × Al-Fatiha
-  5–7, none of them in the index), timbre alone ranked the true reciter first 92 % of the time
-  (top-3: 96 %). With the spec's `0.6·style + 0.4·timbre` weighting that fell to 33 % (top-3:
-  50 %), because tempo and Madd bias change more between passages than between reciters. The
-  default keeps the spec's weights, which answer "whose *style* is this closest to"; use
-  `--style-weight 0` (or around 0.2) when the goal is to identify the voice.
-* **Not covered:** Madd Lazim Harfi (muqattaʿat letters), Madd Leen, Hafs's saktāt, Imalah, the
-  Tayyibah 2-count Munfasil, and Tafkheem on letters carrying kasrah. The formant thresholds are
-  set from phonetic literature and checked on a small set of recordings, not calibrated on a
-  large labelled corpus.
-* This is an educational aid and does not replace a qualified teacher (*mujawwid*).
+- **The CTC model** was trained on word-level audio. Boundaries can drift by a frame (20 ms), and some spans collapse; collapsed spans are SKIPPED, not failed.
+- **The anchor's score is in-sample.** Only the peers get held-out (LOO) validation.
+- **The Taraweeh adapter** is untested on genuine live recordings. EveryAyah imam recordings are studio-clean, and the blind RT60 estimate is biased low above 1 s.
+- **Gaps in the benchmark:**
+  - Sudais and Juhaynee are pending the `fill` run.
+  - Tablawi, Ayyoub, Budair, Matroud and Al-Muaiqly are not in Quran-MD and need an EveryAyah run.
+- **Jawaz al-wajhayn** reports the realised variant and always passes. Madd ʿArid and Leen stay on textbook limits, because 2/4/6 counts is the reciter's free choice.
+- **Educational aid.** This does not replace a qualified teacher (*mujawwid*).

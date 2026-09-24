@@ -143,8 +143,8 @@ def build_indices(rows: list[dict], index_dir: Path) -> dict[str, int]:  # type:
 
 
 def markdown(summary: dict) -> str:  # type: ignore[type-arg]
-    lines = ["# qaari-eval v2 benchmark", "", f"Verses: {summary['verses']} ayahs per reciter "
-             "(strategic set covering every rule).", "",
+    lines = ["# qaari-eval v2 benchmark", "", f"Up to {summary['verses']} ayahs per reciter "
+             "(the most complete reciter's count; see each row).", "",
              "| Reciter | Set | Raw textbook | Perfection (studio) | Perfection (adapted) | Sifaat |"
              " Timing FAILs studio → adapted | FP reduction |", "|---|---|---|---|---|---|---|---|"]
     for r in summary["reciters"]:

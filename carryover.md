@@ -85,21 +85,25 @@ Done means all of the following:
 - **Secrets.** Never write tokens into the repo.
 
 ## 6. Next steps
-1. **Collect the `full` run.** Check `status --tag full --kernels 5` until all are COMPLETE, then `collect --tag full --kernels 5`. Confirm the row counts per reciter and mode.
-   - Optionally ask the user to phone-verify Kaggle, which gives internet and makes the in-kernel Octave pass possible.
-2. **Full run: already launched** (see Current state). Anything missing can be relaunched with `--only K`.
-   - About 12.5k rows; each kernel stops cleanly at 11.5 h.
-   - Collect with `collect --tag husary-all --kernels 5`.
-3. **Reciters outside Quran-MD.** The Quran-MD peers and imams are already in the `full` run. Tablaway, Ayyoub, Budair, Matroud and Muaiqly aren't in Quran-MD: run them on the VM from EveryAyah (`benchmarks/run_benchmark.py --reciters ... --modes studio taraweeh_adapted`, strategic set).
-4. **Calibrate and discover in Julia.**
-   - `julia --project=research_agency_lab/substrate_library/julia research_agency_lab/substrate_library/julia/calibrate.jl app/data/calibration.json benchmarks/results/kaggle/*/k*_runs_*.jsonl <local rows>`
-   - `discover.jl research_agency_lab/experiments/discovery_full.json <same rows>`, which gives the tempo ODE per surah and the duration law per reciter.
-5. **Octave cross-check.** Compare `octave.core_ms` with the Python `core_ms` and the Octave formants with Praat on the full Husary set. Report the agreement as correlation and median absolute error in `research_agency_lab/experiments/`.
-6. **Summarise and test.**
-   - `python benchmarks/summarize.py --runs <all rows>`, which writes the summary and both FAISS indices.
-   - `QAARI_ACCEPTANCE=1 pytest tests/test_benchmarks.py`. Report the real numbers, pass or fail.
-   - Also make the fingerprint's style similarity use the calibrated z-scores (`app/fingerprint.py compute_tajweed_vector`). This is the last open item from the task list.
-7. **Finish.** Update the README (calibration method, lab stack, results, limitations). Run ruff, mypy and pytest, then commit and push. No PR unless asked.
+**Done (2026-09-24):**
+- **`full` run collected:** 46,285 rows, committed gzipped in `benchmarks/results/kaggle/full/`.
+- **Calibration:** `app/data/calibration.json` has 37 rule keys, a quantile-robust scale and default weights. The weight search was rejected by its own guard.
+- **Discovery:** `research_agency_lab/experiments/discovery_full.json`.
+- **Summary and indices:** `benchmarks/results/summary.json` and `.md`, plus both FAISS indices.
+- **Acceptance** (all fail, reported as measured): Husary 97.1 (in-sample), Dosari adapted 89.0, FP reduction 1.2 %.
+- **README:** rewritten for v2 with the method and results.
+- **Rejected calibration outputs:** the first run's unbounded weight search (wasl ×30) and the MAD-only scale were both rejected. See the README.
+
+**Remaining:**
+1. **Collect the `fill` run.** It was launched 2026-09-24 ~05:00 UTC with `--skip-done benchmarks/done_full.json`; Sudais, Juhaynee, Shuraym and Qatami go first. Then:
+   - `collect --tag fill --kernels 5`
+   - gzip the rows
+   - rerun `calibrate.jl`, `discover.jl` and `summarize.py` on `full` + `fill` rows together
+   - update the README tables with the new numbers
+2. **Reciters outside Quran-MD.** Tablawi, Ayyoub, Budair, Matroud and Al-Muaiqly: run on the VM from EveryAyah (`benchmarks/run_benchmark.py --reciters … --modes studio taraweeh_adapted`, strategic set or more), then re-calibrate.
+3. **Fingerprint style similarity** should use the calibrated z-scores. `app/fingerprint.py compute_tajweed_vector` still uses textbook-derived fields.
+4. **Octave cross-check at scale.** Kaggle kernels have no internet, so apt can't install Octave. Run `octave_bridge.py` on the VM over a Husary subset: rows from the gz files, audio from EveryAyah or a `kaggle datasets download` of Quran-MD part 2. Report the correlation and MAE of Octave vs Python `core_ms`, and of the formants vs Praat.
+5. **A real Taraweeh test.** The adapter's ≥ 90 % FP target can only be judged on reverberant live recordings, not EveryAyah studio ayahs. Candidates are the live files used earlier (Dosari Makkah Hud, Kurdi, Qatami 1440).
 
 ## 7. Target instance
 **acct3** (razan.ashraf.alnajjar@proton.me) is recommended.

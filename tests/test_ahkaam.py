@@ -294,7 +294,7 @@ def test_scorer_separates_perfection_and_sifaat() -> None:
     diags = [RuleDiagnostic(RuleType.MADD_TABII, "w", 0, 1, Status.PASS, "", score=1.0),
              RuleDiagnostic(RuleType.HAMS, "w", 0, 1, Status.FAIL, "", score=0.2),
              RuleDiagnostic(RuleType.MADD_ARID, "w", 0, 1, Status.VALID_NECESSARY_PAUSE, "", score=1.0)]
-    summary = TajweedScorer.summarize(diags)
+    summary = TajweedScorer().summarize(diags)
     assert summary.overall == pytest.approx(100.0)
     assert summary.sifaat == pytest.approx(20.0)
     assert summary.status_counts["VALID_NECESSARY_PAUSE"] == 1

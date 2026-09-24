@@ -1,0 +1,98 @@
+{
+  "format": "qaari-eval-fingerprint-index/2",
+  "backend": "ecapa-voxceleb-192-v2",
+  "category": "studio",
+  "dimensions": {
+    "timbre": 192,
+    "tajweed": 32,
+    "environment": 8
+  },
+  "tajweed_fields": [
+    "haraka_base_ms",
+    "hadr_to_tahqeeq_ratio",
+    "shiddah_duration_ratio",
+    "tawassut_duration_ratio",
+    "rakhawah_duration_ratio",
+    "madd_tabii_accuracy",
+    "madd_muttasil_accuracy",
+    "madd_munfasil_accuracy",
+    "madd_lazim_accuracy",
+    "ghunnah_envelope_ratio",
+    "ikhfa_formant_anticipation_score",
+    "tafkheem_f2_depression_mean",
+    "tarqeeq_f2_elevation_mean",
+    "qalqalah_sughra_burst_db",
+    "qalqalah_kubra_burst_db",
+    "qalqalah_akbar_hold_ratio",
+    "hams_hnr_db_mean",
+    "jahr_hnr_db_mean",
+    "safir_high_band_power",
+    "tafashhi_spectral_spread",
+    "istitaalah_duration_ratio",
+    "takreer_single_strike_flag",
+    "lam_allah_tafkheem_accuracy",
+    "raa_tafkheem_tarqeeq_accuracy",
+    "izhaar_halqi_cleanliness",
+    "iqlab_nasal_transition_score",
+    "idghaam_kamil_assimilation_score",
+    "idghaam_naqis_sifah_retention",
+    "waqf_madd_aaridh_extension_ratio",
+    "sakt_silence_duration_ms",
+    "is_tayyibah_qasr_flag",
+    "overall_tajweed_perfection_index"
+  ],
+  "environment_fields": [
+    "rt60_reverberation_time",
+    "snr_db",
+    "room_volume_estimate",
+    "mic_proximity_bass_boost",
+    "spectral_tilt",
+    "background_crowd_noise_level",
+    "echo_density",
+    "audio_clipping_ratio"
+  ],
+  "reciters": [
+    {
+      "reciter_id": "Husary_128kbps",
+      "name": "Mahmoud Khalil Al-Hussary",
+      "category": "studio",
+      "n_segments": 4053,
+      "source": "https://everyayah.com/data/Husary_128kbps"
+    },
+    {
+      "reciter_id": "Husary_Muallim_128kbps",
+      "name": "Al-Hussary (Muallim)",
+      "category": "studio",
+      "n_segments": 4051,
+      "source": "https://everyayah.com/data/Husary_Muallim_128kbps"
+    },
+    {
+      "reciter_id": "Minshawy_Murattal_128kbps",
+      "name": "Siddiq Al-Minshawi (Murattal)",
+      "category": "studio",
+      "n_segments": 4055,
+      "source": "https://everyayah.com/data/Minshawy_Murattal_128kbps"
+    },
+    {
+      "reciter_id": "Hudhaify_128kbps",
+      "name": "Ali Al-Hudhaify",
+      "category": "studio",
+      "n_segments": 3970,
+      "source": "https://everyayah.com/data/Hudhaify_128kbps"
+    },
+    {
+      "reciter_id": "Abdul_Basit_Murattal_192kbps",
+      "name": "Abdul Basit Abdul Samad (Murattal)",
+      "category": "studio",
+      "n_segments": 2093,
+      "source": "https://everyayah.com/data/Abdul_Basit_Murattal_192kbps"
+    },
+    {
+      "reciter_id": "Alafasy_128kbps",
+      "name": "Mishary Alafasy",
+      "category": "studio",
+      "n_segments": 1869,
+      "source": "https://everyayah.com/data/Alafasy_128kbps"
+    }
+  ]
+}

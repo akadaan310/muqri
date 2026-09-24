@@ -12,13 +12,18 @@ rules, letters and characteristics:
               percentile of the observed length among the masters' and the cohort's instances of the
               same rule
   letters     per letter: timing; identity (competitor, margin); per characteristic the expected and
-              observed class, the MARGIN (log p(expected) - log p(best other), nats; below 0 = not
+              observed class (the class heard) and the competitor (the best class other than the
+              expected one), the MARGIN (log p(expected) - log p(best other), nats; below 0 = not
               realised), whether it is scored, and its percentile among the masters' and the cohort's
               instances of the same characteristic on the same letter
 
 Every compared value also carries z_masters, a robust z against the masters' distribution
 ((x - median) / (IQR / 1.349)): percentiles saturate at the 1st / 99th level, the z does not, so a
 departure far beyond every master stays distinguishable from one just past the edge.
+
+The contract is published as a JSON Schema, app/schemas/measurements-1.schema.json, with every field
+documented; tests validate real reports against it. Adding an optional field keeps measurements/1;
+removing, renaming or changing the meaning of one makes measurements/2.
 
 Reference distributions: research_agency_lab/experiments/quran/reference_stats.json
 (datastore/reference_stats.py), masters = the anchor tier, cohort = all 41 T300 reciters.
@@ -95,8 +100,11 @@ def build(report: dict[str, Any]) -> dict[str, Any]:
                 scored = judged(head, l.get("run_length", 1), l["symbol"])
                 margin = sv.get("llr")
                 pct = _char_pct(head, l["symbol"], margin)
-                chars[head] = {"expected": sv.get("expected"), "observed": sv.get("model_best"),
-                               "margin": margin, "realised": bool(sv.get("realised")), "scored": scored, **pct}
+                # model_best is the best class OTHER than the expected one: it is what was heard
+                # only when the expected class lost
+                chars[head] = {"expected": sv.get("expected"),
+                               "observed": sv.get("expected") if sv.get("realised") else sv.get("model_best"),
+                               "competitor": sv.get("model_best"), "margin": margin, "realised": bool(sv.get("realised")), "scored": scored, **pct}
                 if scored and not sv.get("realised") and l.get("word") in failing:
                     failing[l["word"]].append(f"{lid(i)}:{head}")
             idn = l["identity"]

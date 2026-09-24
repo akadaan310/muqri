@@ -10,3 +10,4 @@ nara_wpe>=0.0.11  # Taraweeh adapter: WPE dereverberation
 
 # Tests
 pytest>=8.0
+jsonschema>=4.20  # validates measurements/1 against app/schemas

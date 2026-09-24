@@ -75,6 +75,7 @@ def _apply_wajh(verdict_lists) -> dict:  # type: ignore[type-arg,no-untyped-def]
         v.evidence = {**v.evidence, "expected": [lo, hi],
                       "wajh": "qasr (Tayyibah)" if qasr else "tawassut (Shatibiyyah)"}
     return {"munfasil": "qasr (Tayyibah), 2 counts" if qasr else "tawassut (Shatibiyyah), 4-5 counts",
+            "choice": "qasr" if qasr else "tawassut", "expected_counts": [lo, hi],
             "instances": len(vs), "median_counts": round(med, 2),
             "note": "graded for consistency with the wajh the reciter chose"}
 
@@ -249,6 +250,8 @@ class Engine:
         report = build_report(per_ayah, rule_filter)
         report["basmala"] = basmala
         report["wajh"] = wajh
+        if audio is not None:
+            report["audio_seconds"] = round(float(np.asarray(audio).size) / 16000, 2)
         from app.measurements import build as measurements
         report["measurements"] = measurements(report)
         return report

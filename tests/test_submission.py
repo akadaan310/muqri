@@ -198,3 +198,25 @@ def test_part_of_an_ayah_is_graded_with_the_ayahs_word_indices(passage, engine) 
 
     with pytest.raises(ValueError):
         engine.analyze(None, [(r["sura"], r["aya"], 0, n)], posteriors=lp)
+
+
+def test_measurements_follow_the_published_schema(passage, engine) -> None:  # type: ignore[no-untyped-def]
+    """measurements/1 is the consumer apps' API: every report must validate against the schema file
+    they are given, for one ayah, a passage, and part of an ayah."""
+    jsonschema = pytest.importorskip("jsonschema")
+    schema = json.loads((ROOT / "app/schemas/measurements-1.schema.json").read_text())
+    jsonschema.Draft202012Validator.check_schema(schema)
+    v = jsonschema.Draft202012Validator(schema)
+    lay, hus, big = passage
+    r = hus[0]
+    lp = np.fromfile(DUMP / r["file"], dtype="<f4").reshape(r["frames"], lay["columns"])
+    n = len(r["uthmani"].split())
+    for verses, post in (([(r["sura"], r["aya"])], lp), ([(x["sura"], x["aya"]) for x in hus], big),
+                         ([(r["sura"], r["aya"], 1, n - 1)], lp)):
+        m = engine.analyze(None, verses, posteriors=post)["measurements"]
+        errs = sorted(v.iter_errors(m), key=lambda e: list(e.path))
+        assert not errs, [f"{list(e.path)}: {e.message}" for e in errs[:5]]
+        # a realised characteristic was heard as the expected class
+        for l in m["letters"]:
+            for c in l["characteristics"].values():
+                assert (c["observed"] == c["expected"]) == c["realised"] or c["expected"] == c["competitor"]

@@ -97,7 +97,7 @@ def grade(units) -> list[Heaviness]:  # type: ignore[no-untyped-def]
         out.append(Heaviness(
             unit=i, letter=u.symbol, level=lvl, level_name=LEVEL_NAME[lvl], itbaq=itbaq,
             expected_class=expected,
-            heard_class=judged["model_best"] if judged else None,
+            heard_class=(judged["expected"] if judged["realised"] else judged["model_best"]) if judged else None,
             llr=judged["llr"] if judged else None,
             realised=judged["realised"] if judged else None,
             nisbi=nisbi))

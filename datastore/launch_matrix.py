@@ -232,12 +232,14 @@ def build() -> list[tuple]:  # type: ignore[type-arg]
         "hierarchy confirmed acoustically: fatha 11.74 > damma 9.99 > sukun 9.55 > kasra 4.57")
     add("itmam_vowel_perfection", "timing", "mastery",
         "every vowel fully formed and equal; ikhtilas and ishba'",
-        "rates against the reciter's own median vowel", 0.239, 0.15, 293, HOLD,
-        "an ANCHOR scores worse than a fast imam (0.239 vs 0.145), so this is not yet a quality "
-        "signal; pause-inflated durations are the suspected confound")
+        "ikhtilas rate, sub-frame onsets, 7 ladder reciters", 0.234, None, 7, HOLD,
+        "the inversion was 40 ms quantisation noise; with sub-frame onsets every reciter reads "
+        "0.20-0.25, so the rate carries no mastery signal")
     add("vowel_sequences", "timing", "mastery",
         "consecutive damma, alternating vowels, damma to sukun", "decay across the run",
-        0.533, 0.3, 43, HOLD, "collapse rate inverts on the ladder; shares the pause confound above")
+        0.457, None, 7, HOLD, "anchors collapse MORE on pause-free runs (0.457-0.534 vs "
+        "0.302-0.375); quantisation and pauses both excluded -- the criterion measures deliberate "
+        "prosodic range and needs redefining")
 
     # ---------------- not attempted ----------------
     for cap, fam, lvl, what, gap in (

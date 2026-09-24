@@ -29,7 +29,11 @@ declining run is the failure the treatise describes; scatter is not.
   inversion, and no mastery signal either. A rate relative to the reciter's own median measures the
   width of their vowel distribution, which is about the same for everyone.
 * **run collapse** -- the inversion SURVIVES sub-frame timing (anchors 0.43-0.46, fast imams
-  0.26-0.29), so quantisation is excluded as its cause. See `itmam_pause.py` for the pause test.
+  0.26-0.29), so quantisation is excluded as its cause. Pauses are excluded too (`itmam_pause.py`,
+  silence from the waveform, ~100 clips each): on runs containing NO silent frame the anchors still
+  collapse at 0.457-0.534 against 0.302-0.375 for the fast imams. Both suspects are gone. What the
+  criterion most plausibly measures is the dynamic range of deliberate recitation -- a slow reciter
+  varies vowel length more across a phrase -- which is style, not a failure of itmam.
 
 Until a signal is found these are descriptive, not scored.
 """

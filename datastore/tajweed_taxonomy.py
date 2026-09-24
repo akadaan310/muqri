@@ -171,18 +171,20 @@ TAXONOMY: list[tuple[str, str, str, str, str, str, str, str]] = [
     # ---------------- Treatise III: Itmām al-Ḥarakāt ----------------
     ("itmam_universal", "III", "1.1", "Universal law of vowel perfection", CONS,
      "app/itmam.py", "partial",
-     "built and running, but NOT trustworthy as a verdict: an anchor scores worse than a fast imam "
-     "(ikhtilas 0.239 vs 0.145). Pause-inflated durations are the suspected confound -- a teaching "
-     "reciter is 37 % silent and onset-to-onset charges a vowel for the silence after it. Ships as "
-     "descriptive with confidence unvalidated"),
+     "built and running, descriptive only. The old inversion (anchor ikhtilas 0.239 vs fast imam "
+     "0.145) was 40 ms quantisation noise: with sub-frame onsets every ladder reciter reads 0.20-0.25 "
+     "(itmam_timing.py). No inversion, but no mastery signal either -- a rate relative to one's own "
+     "median vowel measures distribution width, which everyone shares"),
     ("neutral_sukoon_zero", "III", "1.2", "The neutral sukoon state as the absolute zero point", TEMPO,
      "sukoon_timing.jl", "partial",
      "we measure sakin durations by class; 'zero point' as a reference posture is not modelled"),
     ("vowel_sequences", "III", "3.1–3.3", "Consecutive ḍammah, alternating vowels, ḍammah→sukoon", CONS,
      "app/itmam.py", "partial",
      "the three sequences are located and scored by whether the run's vowels decay across it, but "
-     "the collapse rate inverts on the ladder (anchor 0.533 vs fast imam 0.367), so it shares the "
-     "pause confound above and is descriptive until that is excluded"),
+     "the collapse rate inverts on the ladder and BOTH suspected confounds are now excluded: it "
+     "survives sub-frame timing, and on pause-free runs (silence from the waveform) anchors read "
+     "0.457-0.534 vs fast imams 0.302-0.375 (itmam_pause.py). The criterion measures the dynamic "
+     "range of deliberate recitation, not a failure; it needs a new definition, not a threshold"),
     # ---------------- Treatise IV: qirā'āt and the diagnostic matrix ----------------
     ("ten_readers", "IV", "I–III", "The ten readers' structural systematics", NONE, "", "out_of_scope",
      "the engine is Hafs 'an 'Āṣim only; other readings would need their own reference text and thresholds"),

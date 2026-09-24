@@ -514,7 +514,7 @@
     "datastore/tajweed_taxonomy.py"
    ],
    "status": "partial",
-   "note": "built and running, but NOT trustworthy as a verdict: an anchor scores worse than a fast imam (ikhtilas 0.239 vs 0.145). Pause-inflated durations are the suspected confound -- a teaching reciter is 37 % silent and onset-to-onset charges a vowel for the silence after it. Ships as descriptive with confidence unvalidated",
+   "note": "built and running, descriptive only. The old inversion (anchor ikhtilas 0.239 vs fast imam 0.145) was 40 ms quantisation noise: with sub-frame onsets every ladder reciter reads 0.20-0.25 (itmam_timing.py). No inversion, but no mastery signal either -- a rate relative to one's own median vowel measures distribution width, which everyone shares",
    "section": "1.1",
    "file": "app/itmam.py"
   },
@@ -538,7 +538,7 @@
     "datastore/tajweed_taxonomy.py"
    ],
    "status": "partial",
-   "note": "the three sequences are located and scored by whether the run's vowels decay across it, but the collapse rate inverts on the ladder (anchor 0.533 vs fast imam 0.367), so it shares the pause confound above and is descriptive until that is excluded",
+   "note": "the three sequences are located and scored by whether the run's vowels decay across it, but the collapse rate inverts on the ladder and BOTH suspected confounds are now excluded: it survives sub-frame timing, and on pause-free runs (silence from the waveform) anchors read 0.457-0.534 vs fast imams 0.302-0.375 (itmam_pause.py). The criterion measures the dynamic range of deliberate recitation, not a failure; it needs a new definition, not a threshold",
    "section": "3.1–3.3",
    "file": "app/itmam.py"
   },

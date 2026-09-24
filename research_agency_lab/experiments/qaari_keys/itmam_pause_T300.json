@@ -1,0 +1,58 @@
+{
+ "Husary_Muallim_128kbps": {
+  "runs": 339,
+  "paused": 64,
+  "collapse_all": 0.4661,
+  "collapse_clean": 0.4691,
+  "collapse_paused": 0.4531,
+  "frame_drift_median": 0.0
+ },
+ "Husary_128kbps": {
+  "runs": 331,
+  "paused": 27,
+  "collapse_all": 0.4804,
+  "collapse_clean": 0.4572,
+  "collapse_paused": 0.7407,
+  "frame_drift_median": 0.0
+ },
+ "Husary_128kbps_Mujawwad": {
+  "runs": 332,
+  "paused": 94,
+  "collapse_all": 0.5151,
+  "collapse_clean": 0.5336,
+  "collapse_paused": 0.4681,
+  "frame_drift_median": 0.0
+ },
+ "Minshawy_Mujawwad_192kbps": {
+  "runs": 305,
+  "paused": 17,
+  "collapse_all": 0.4689,
+  "collapse_clean": 0.4688,
+  "collapse_paused": 0.4706,
+  "frame_drift_median": 0.0
+ },
+ "Saood_ash-Shuraym_128kbps": {
+  "runs": 339,
+  "paused": 0,
+  "collapse_all": 0.3038,
+  "collapse_clean": 0.3038,
+  "collapse_paused": NaN,
+  "frame_drift_median": 0.0
+ },
+ "Abdurrahmaan_As-Sudais_192kbps": {
+  "runs": 339,
+  "paused": 0,
+  "collapse_all": 0.3746,
+  "collapse_clean": 0.3746,
+  "collapse_paused": NaN,
+  "frame_drift_median": 0.0
+ },
+ "MaherAlMuaiqly128kbps": {
+  "runs": 331,
+  "paused": 0,
+  "collapse_all": 0.3021,
+  "collapse_clean": 0.3021,
+  "collapse_paused": NaN,
+  "frame_drift_median": 0.0
+ }
+}

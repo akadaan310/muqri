@@ -53,6 +53,12 @@ _SCALE_PATH = ROOT / "research_agency_lab/experiments/calibration/madd_scale.jso
 WELL_FITTED_NOMINALS = (1.5, 2.0, 4.0, 4.5)
 NOMINAL_TOLERANCE = 0.75          # counts; a verdict fires only outside this band
 
+# Takrir is a characteristic the reciter must CONCEAL (ikhfa' al-takrir): a master's ر is not audibly
+# trilled, least of all at a stop. The head only says trilled / not trilled, so "not trilled" is the
+# correct outcome and was being scored as the characteristic missing -- Husary's correct Al-Kawthar
+# lost three words to it. Reported, never scored, until an over-trill measure is calibrated.
+DESCRIPTIVE_HEADS = frozenset({"tikraar"})
+
 
 def count_scale() -> tuple[float, float]:
     """(intercept, slope) of measured-against-nominal, or the identity when unfitted."""
@@ -142,6 +148,10 @@ def grade_rule(b, units: list[Unit]) -> RuleVerdict:  # type: ignore[no-untyped-
         status = "pass" if lo - NOMINAL_TOLERANCE <= got <= ceiling else \
             ("short" if got < lo else "long")
         ev = {"expected": [lo, hi], "given_counts": got, "raw_own_counts": measured}
+    elif b.mechanism == "attribute" and b.head in DESCRIPTIVE_HEADS:
+        ev = {"head": b.head, "reason": "takrir must be concealed; a trill that is not heard is the "
+                                        "correct reading, so this attribute is reported, not graded"}
+        status = "unconfirmed"
     elif b.mechanism == "attribute" and b.head:
         llrs = [u.sifat[b.head]["llr"] for u in us if b.head in u.sifat]
         if llrs:
@@ -267,6 +277,56 @@ def _strength_roll_up(ayahs: list[dict[str, Any]]) -> dict[str, Any]:
             "weakest": dict(sorted(missing.items(), key=lambda kv: -kv[1])[:5])}
 
 
+def _word_index(word_ph: list[list[int]]):  # type: ignore[no-untyped-def]
+    """Map a phoneme-string character index to the word it belongs to."""
+    def of(c: int) -> int | None:
+        for w, span in enumerate(word_ph):
+            if span and span[0] is not None and span[0] >= 0 and span[0] <= c < span[1]:
+                return w
+        return None
+    return of
+
+
+def _word_faults(ayah: dict[str, Any], words: list[str]) -> list[dict[str, Any]]:
+    """Every word of the ayah, with every fault the engine found in it."""
+    out = [{"index": i, "word": w, "faults": []} for i, w in enumerate(words)]
+    for v in ayah["rules"]:
+        if v["status"] in {"short", "long", "wrong"} and 0 <= v["word_index"] < len(out):
+            out[v["word_index"]]["faults"].append({"type": "rule", "rule": v["rule"], "status": v["status"]})
+    for l in ayah["letters"]:
+        w = l.get("word")
+        if w is None or not 0 <= w < len(out):
+            continue
+        if not l["identity"]["confirmed"]:
+            out[w]["faults"].append({"type": "letter", "letter": l["symbol"],
+                                     "heard": l["identity"]["heard_instead"]})
+        for head, sv in (l.get("sifat") or {}).items():
+            if not sv.get("realised") and head not in DESCRIPTIVE_HEADS:
+                out[w]["faults"].append({"type": "sifah", "letter": l["symbol"], "sifah": head,
+                                         "expected": sv.get("expected"), "heard": sv.get("model_best")})
+    return out
+
+
+def _word_accuracy(ayahs: list[dict[str, Any]]) -> float | None:
+    ws = [w for a in ayahs for w in a.get("words", [])]
+    return round(sum(not w["faults"] for w in ws) / len(ws), 4) if ws else None
+
+
+def _letter_accuracy(ayahs: list[dict[str, Any]]) -> float | None:
+    """Share of letter-level judgments (identity + every sifah) that were realised."""
+    n = ok = 0
+    for a in ayahs:
+        for l in a["letters"]:
+            n += 1
+            ok += bool(l["identity"]["confirmed"])
+            for head, sv in (l.get("sifat") or {}).items():
+                if head in DESCRIPTIVE_HEADS:
+                    continue
+                n += 1
+                ok += bool(sv.get("realised"))
+    return round(ok / n, 4) if n else None
+
+
 def _mastery(per_ayah: list[dict[str, Any]]) -> dict[str, Any]:
     """Cross-ayah statistics: consistency, tempo and the sukoon spectrum over the whole submission."""
     by_class: dict[str, list[float]] = {}
@@ -313,10 +373,12 @@ def build_report(per_ayah: list[dict[str, Any]], rule_filter: str | None = None)
         gh = a.get("ghunnah", [])
         all_gh.extend(gh)
         units = a["_units"]
+        word_of = _word_index(a.get("word_ph") or [])
         ayahs.append({
             "surah": a["surah"], "ayah": a["ayah"], "frames": a["frames"],
             "haraka_s": a.get("haraka_s"), "haraka_source": a.get("haraka_source", "own"),
             "letters": [{"i": u.index, "symbol": u.symbol, "kind": u.kind,
+                         "word": word_of(u.char_span[0]),
                          "onset_s": u.onset_s, "duration_s": u.duration_s,
                          "duration_counts": u.duration_counts,
                          "identity": {"gop": u.gop, "heard_instead": u.best_competitor,
@@ -328,6 +390,7 @@ def build_report(per_ayah: list[dict[str, Any]], rule_filter: str | None = None)
             "stops": [s.to_dict() for s in a.get("stops", [])],
             "heaviness": [h.to_dict() for h in a.get("heaviness", [])],
         })
+        ayahs[-1]["words"] = _word_faults(ayahs[-1], a.get("words") or [])
     errors = [v.to_dict() for v in all_v if v.status in {"short", "long", "wrong"}]
     letters = sum(len(a["letters"]) for a in ayahs)
     judgments = sum(len(l["sifat"]) + 2 for a in ayahs for l in a["letters"])
@@ -336,7 +399,12 @@ def build_report(per_ayah: list[dict[str, Any]], rule_filter: str | None = None)
         "summary": {
             "ayahs": len(ayahs), "letters": letters, "judgments": judgments,
             "rules_located": len(all_v), "errors": len(errors),
-            "accuracy": round(1 - len(errors) / len(all_v), 4) if all_v else None,
+            # the headline: a word is right only when every rule, every characteristic and every
+            # letter in it is right -- the way a teacher marks. Rule accuracy alone ignored the ~15
+            # sifat judged per letter: a careless reading with 10 lost characteristics scored 83 %.
+            "accuracy": _word_accuracy(ayahs),
+            "rule_accuracy": round(1 - len(errors) / len(all_v), 4) if all_v else None,
+            "letter_accuracy": _letter_accuracy(ayahs),
         },
         "mastery": _mastery(per_ayah),
         "by_rule": _roll_up(all_v),

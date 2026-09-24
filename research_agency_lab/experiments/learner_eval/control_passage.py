@@ -54,14 +54,16 @@ def main(surah: int, a1: int, a2: int, out: str | None = None) -> None:
             waves.append(np.pad(w, (0, r["frames"] * HOP - w.size)))
         audio = np.concatenate(waves) if waves else None
         rep = eng.analyze(audio, verses, posteriors=lp)
+        faults = [(a["ayah"], w["word"], f.get("rule") or f.get("sifah") or "letter") for a in rep["ayahs"] for w in a["words"] for f in w["faults"]]
         errs = [(e["rule"], e["word"], e["status"], (e.get("evidence") or {}).get("given_counts"))
                 for e in rep["errors"]]
-        rows[spk] = {"accuracy": rep["summary"]["accuracy"], "errors": errs,
+        rows[spk] = {"accuracy": rep["summary"]["accuracy"], "rule_accuracy": rep["summary"]["rule_accuracy"],
+                     "letter_accuracy": rep["summary"]["letter_accuracy"], "word_faults": faults, "errors": errs,
                      "tempo": rep["mastery"]["tempo_haraka_s"], "audio": audio is not None}
         for a in rep["ayahs"]:
             for v in a["rules"]:
                 tally[(v["rule"], v["word"])][v["status"]] += 1
-        print(f"{spk:42s} acc={rep['summary']['accuracy']}  tempo={rep['mastery']['tempo_haraka_s']}"
+        print(f"{spk:42s} words={rep['summary']['accuracy']} rules={rep['summary']['rule_accuracy']} faults={faults}  tempo={rep['mastery']['tempo_haraka_s']}"
               f"  audio={'y' if audio is not None else 'n'}  errors={errs}", flush=True)
     print("\nPER RULE INSTANCE (status counts over reciters)")
     for (rule, word), c in sorted(tally.items(), key=lambda kv: -sum(v for k, v in kv[1].items() if k != "pass")):

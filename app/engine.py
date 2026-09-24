@@ -184,6 +184,7 @@ class Engine:
             per_ayah.append({"surah": r.surah, "ayah": r.ayah, "frames": [t0, t1],
                              "haraka_s": round(h, 3) if h else None,
                              "haraka_source": "own" if h_own else ("borrowed" if h else None),
+                             "words": r.uthmani.split(), "word_ph": r.word_ph,
                              "verdicts": verdicts, "ghunnah": ghunnah,
                              "resolutions": resolutions, "stops": stops,
                              "heaviness": heaviness, "sequences": seqs, "_units": units})

@@ -19,14 +19,19 @@ demand on the articulators:
 Each is measured as the run's own trend: whether vowel duration decays across the sequence. A
 declining run is the failure the treatise describes; scatter is not.
 
-**These rates are NOT yet trustworthy as verdicts, and the report says so.** Measured on six ayahs
-each, Husary Muallim (an anchor) scores *worse* than Shuraym (a fast imam): ikhtilas 0.239 vs 0.145,
-alternating-run collapse 0.533 vs 0.367. An anchor ranking below a fast imam means the metric is
-measuring something other than quality. The most likely confound is pauses — Husary Muallim is a
-teaching reciter with 37 % of frames silent, and onset-to-onset duration charges a vowel for the
-silence that follows it, which inflates some vowels, raises the median, and pushes the rest below the
-truncation threshold. Excluding vowels adjacent to a detected stop is the obvious next test. Until
-that is settled these are descriptive, not scored.
+**These rates are NOT trustworthy as verdicts, and the report says so.** Measured with the real
+`analyse_clip` on 40 clips each of seven ladder reciters, in both timing modes
+(`research_agency_lab/experiments/subframe/itmam_timing.py`):
+
+* **ikhtilas** -- the old "anchor 0.239 vs fast imam 0.145" was quantisation noise. Under Viterbi
+  the fast imams scatter 0.123 / 0.302 / 0.429 because at their tempo a vowel is one frame and the
+  threshold is crossed by rounding. With sub-frame onsets every reciter reads 0.20-0.25: no
+  inversion, and no mastery signal either. A rate relative to the reciter's own median measures the
+  width of their vowel distribution, which is about the same for everyone.
+* **run collapse** -- the inversion SURVIVES sub-frame timing (anchors 0.43-0.46, fast imams
+  0.26-0.29), so quantisation is excluded as its cause. See `itmam_pause.py` for the pause test.
+
+Until a signal is found these are descriptive, not scored.
 """
 
 from __future__ import annotations
@@ -143,11 +148,11 @@ def itmam(units_by_ayah) -> dict:  # type: ignore[no-untyped-def]
         "ikhtilas_rate": round(sum(c < lo for c in allv) / len(allv), 4),
         "ishba_rate": round(sum(c > hi for c in allv) / len(allv), 4),
         "confidence": "unvalidated",
-        "note": "Descriptive only. An anchor currently scores worse than a fast imam on ikhtilas "
-                "(0.239 vs 0.145), so this is not yet a quality signal; pause-inflated durations are "
-                "the suspected confound. The isochrony spread additionally reads 0.0 here because "
-                "these durations still come from the quantised Viterbi — sub-frame onsets "
-                "(research_agency_lab/experiments/subframe) fix that and are not yet ported in.",
+        "note": "Descriptive only. With sub-frame onsets every reciter's ikhtilas rate reads "
+                "0.20-0.25, anchors and fast imams alike, so it carries no mastery signal; the "
+                "earlier inversion was 40 ms quantisation noise. Isochrony spread is reported but "
+                "must not be scored: it compresses with tempo inside one voice. The engine still "
+                "serves Viterbi durations here, because madd grading was validated on them.",
     }
 
 

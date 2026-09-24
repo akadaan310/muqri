@@ -25,7 +25,8 @@ from app.mudud import resolve
 from app.tafkhim import grade as grade_tafkhim
 from app.itmam import sequences as vowel_sequences
 from app.waqf import find_stops, madd_at_stops
-from app.submission import AyahRef, build_report, grade_rule, to_counts, walk_alignment
+from app.submission import (AyahRef, build_report, grade_rule, ph_to_uthmani, to_counts,
+                            walk_alignment)
 from app.tajweed_rules.parser import TajweedParser
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -95,7 +96,8 @@ class Engine:
             for lvl in LEVELS:
                 cols[lvl].extend([maps[lvl].get(getattr(e, lvl), 0)] * n)
         return AyahRef(surah=surah, ayah=ayah, uthmani=uthmani, phonemes=r.phonemes,
-                       word_ph=md.word_spans(uthmani, r.mappings), expected_sifat=cols)
+                       word_ph=md.word_spans(uthmani, r.mappings), expected_sifat=cols,
+                       ph_to_uth=ph_to_uthmani(uthmani, r.mappings))
 
     # -- acoustics -------------------------------------------------------------------------------
     @cached_property
@@ -185,6 +187,7 @@ class Engine:
                              "haraka_s": round(h, 3) if h else None,
                              "haraka_source": "own" if h_own else ("borrowed" if h else None),
                              "words": r.uthmani.split(), "word_ph": r.word_ph,
+                             "uthmani": r.uthmani, "ph_to_uth": r.ph_to_uth,
                              "verdicts": verdicts, "ghunnah": ghunnah,
                              "resolutions": resolutions, "stops": stops,
                              "heaviness": heaviness, "sequences": seqs, "_units": units})

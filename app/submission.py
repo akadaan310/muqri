@@ -98,6 +98,9 @@ class AyahRef:
     phonemes: str = ""
     word_ph: list[list[int]] = field(default_factory=list)
     expected_sifat: dict[str, list[int]] = field(default_factory=dict)
+    # for every character of `phonemes`, the Uthmani character that produced it (-1: none), so a
+    # judged letter can be shown -- and coloured -- in the script the reciter reads
+    ph_to_uth: list[int] = field(default_factory=list)
 
 
 @dataclass(slots=True)
@@ -277,6 +280,23 @@ def _strength_roll_up(ayahs: list[dict[str, Any]]) -> dict[str, Any]:
             "weakest": dict(sorted(missing.items(), key=lambda kv: -kv[1])[:5])}
 
 
+def ph_to_uthmani(uthmani: str, mappings: list) -> list[int]:  # type: ignore[type-arg]
+    """Invert the phonetizer's per-character mappings: phoneme index -> Uthmani character index."""
+    n = max((m.pos[1] for m in mappings if m is not None), default=0)
+    out = [-1] * n
+    for i, m in enumerate(mappings):
+        if m is not None and not getattr(m, "deleted", False):
+            for p in range(m.pos[0], m.pos[1]):
+                out[p] = i
+    return out
+
+
+def _uth_chars(ph_to_uth: list[int], span: tuple[int, int]) -> list[int]:
+    """The Uthmani characters behind one unit's phoneme span (inclusive)."""
+    return sorted({ph_to_uth[p] for p in range(span[0], span[1] + 1)
+                   if 0 <= p < len(ph_to_uth) and ph_to_uth[p] >= 0})
+
+
 def _word_index(word_ph: list[list[int]]):  # type: ignore[no-untyped-def]
     """Map a phoneme-string character index to the word it belongs to."""
     def of(c: int) -> int | None:
@@ -379,6 +399,7 @@ def build_report(per_ayah: list[dict[str, Any]], rule_filter: str | None = None)
             "haraka_s": a.get("haraka_s"), "haraka_source": a.get("haraka_source", "own"),
             "letters": [{"i": u.index, "symbol": u.symbol, "kind": u.kind,
                          "word": word_of(u.char_span[0]),
+                         "uth": _uth_chars(a.get("ph_to_uth") or [], u.char_span),
                          "onset_s": u.onset_s, "duration_s": u.duration_s,
                          "duration_counts": u.duration_counts,
                          "identity": {"gop": u.gop, "heard_instead": u.best_competitor,
@@ -391,6 +412,7 @@ def build_report(per_ayah: list[dict[str, Any]], rule_filter: str | None = None)
             "heaviness": [h.to_dict() for h in a.get("heaviness", [])],
         })
         ayahs[-1]["words"] = _word_faults(ayahs[-1], a.get("words") or [])
+        ayahs[-1]["uthmani"] = a.get("uthmani", "")
     errors = [v.to_dict() for v in all_v if v.status in {"short", "long", "wrong"}]
     letters = sum(len(a["letters"]) for a in ayahs)
     judgments = sum(len(l["sifat"]) + 2 for a in ayahs for l in a["letters"])

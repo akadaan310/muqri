@@ -79,7 +79,7 @@ PAGE = """<!doctype html>
 <h1>Qaari — recitation analysis</h1>
 <p class="sub">Upload a recitation and every letter is scored: identity, its five to seven classical
 sifāt, timing in your own counts, and every located tajweed rule graded against what it requires.
-<a href="/protocol">Recording protocol →</a></p>
+<a href="/protocol">Recording protocol →</a> · <a href="/review">Listening review →</a></p>
 
 <div class="tabs">
   <button class="on" data-t="analyse">Analyse a recitation</button>
@@ -481,6 +481,61 @@ def create_app():  # type: ignore[no-untyped-def]
         (d / f"{stamp}.report.json").write_text(_json.dumps(report, ensure_ascii=False))
         (d / f"{stamp}.scorecard.json").write_text(_json.dumps(card, ensure_ascii=False))
         return JSONResponse({"scorecard": card, "elapsed_seconds": round(time.time() - t0, 2)})
+
+    # -- the listening review --------------------------------------------------------------------
+    @api.get("/review", response_class=HTMLResponse)
+    def review_page() -> str:
+        from app.review_page import REVIEW_PAGE
+        return REVIEW_PAGE
+
+    @api.get("/review/next")
+    def review_next(limit: int = 20) -> dict[str, Any]:
+        from app import review
+        from datastore.reciter_profile import tempo_class
+        items = []
+        for c in review.queue(max(1, min(limit, 100))):
+            try:
+                c["verse_words"] = _words_of(c["surah"], c["ayah"])
+            except Exception:  # noqa: BLE001 - the claim still stands without the verse text
+                c["verse_words"] = []
+            c["tempo_class"] = tempo_class(c.get("haraka_s"))
+            items.append(c)
+        return {"items": items}
+
+    @api.post("/review/label")
+    def review_label(id: str = Form(...), verdict: str = Form(...),  # noqa: A002, B008
+                     note: str = Form("")):  # type: ignore[no-untyped-def]  # noqa: B008
+        from app import review
+        try:
+            return review.add_label(id, verdict, note)
+        except ValueError as exc:
+            return JSONResponse({"error": str(exc)}, status_code=422)
+
+    @api.get("/review/stats")
+    def review_stats() -> dict[str, Any]:
+        from app import review
+        return review.stats()
+
+    @api.get("/review/audio/{cid}")
+    def review_audio(cid: str, whole: int = 0):  # type: ignore[no-untyped-def]
+        import subprocess
+        from fastapi.responses import Response
+        from app import review
+        from datastore.review_queue import audio_path
+        c = next((x for x in review._read(review.CANDIDATES) if x["id"] == cid), None)
+        if c is None:
+            return JSONResponse({"error": "unknown candidate"}, status_code=404)
+        src = audio_path(c["speaker"], c["surah"], c["ayah"])
+        if not src.is_file():
+            return JSONResponse({"error": "audio unavailable"}, status_code=404)
+        if whole:
+            return Response(src.read_bytes(), media_type="audio/mpeg")
+        # the word with enough context either side to hear it in its place
+        lo, hi = max(0.0, c["start_s"] - 0.8), c["end_s"] + 0.8
+        run = subprocess.run(["ffmpeg", "-nostdin", "-loglevel", "error", "-ss", f"{lo:.3f}", "-i",
+                              str(src), "-t", f"{hi - lo:.3f}", "-f", "mp3", "pipe:1"],
+                             capture_output=True, timeout=30, check=False)
+        return Response(run.stdout, media_type="audio/mpeg")
 
     @api.post("/analyze")
     async def analyze(

@@ -154,3 +154,12 @@ def test_madd_iwad_binds_to_the_final_alif_not_the_muttasil() -> None:
     muttasil = [b for b in rules if b.rule_type == "madd_muttasil" and b.word_index == 9]
     assert iwad and muttasil and iwad[0].unit_indices != muttasil[0].unit_indices
     assert iwad[0].unit_indices == [len(units) - 1]
+
+
+def test_silah_binds_to_the_final_waw_not_the_tabii() -> None:
+    """يَـُٔودُهُۥ has a tabii waw and the silah waw; the silah is the last (2:255, word 45)."""
+    rules, units, _ = bound_for(2, 255)
+    tabii = [b for b in rules if b.rule_type == "madd_tabii" and b.word_index == 45]
+    silah = [b for b in rules if b.rule_type == "madd_silah_sughra" and b.word_index == 45]
+    assert tabii and silah and silah[0].unit_indices != tabii[0].unit_indices
+    assert silah[0].unit_indices[0] > tabii[0].unit_indices[0]

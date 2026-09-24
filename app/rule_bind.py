@@ -67,6 +67,7 @@ BOUNDARY = frozenset({
 # Hamzat al-wasl is DROPPED when joined, so there is no hamza to point at — the rule binds to the
 # word's first unit, which is where the hamza would have been (al-kitabu -> "l-kitaabu").
 FIRST_UNIT_OF_WORD = frozenset({RuleType.HAMZAT_WASL})
+WORD_FINAL = frozenset({RuleType.MADD_IWAD, RuleType.MADD_SILAH_SUGHRA, RuleType.MADD_SILAH_KUBRA})
 
 # A shadda letter is TWO letters — a sakin half and a voweled half — collided into one articulation,
 # so it occupies real time and the engine must expect it. The phonetizer writes that as a repeated
@@ -219,9 +220,10 @@ def bind(parsed, phonemes: str, word_ph: list[list[int]]) -> list[BoundRule]:  #
                 idxs = [first]
         if not idxs:
             continue
-        if rt is RuleType.MADD_IWAD and idxs:
-            # the alif that replaces the tanwin at a stop is the word's LAST letter; the longest run
-            # would be the muttasil alif of قَآئِمًۭا (10:12), which then answered for both
+        if rt in WORD_FINAL and idxs:
+            # the alif that replaces the tanwin at a stop, and the silah of the pronoun ha', are the
+            # word's LAST letter; the longest run would be the muttasil alif of قَآئِمًۭا (10:12) or the
+            # tabii waw of يَـُٔودُهُۥ (2:255), which then answered for both
             idxs = idxs[-1:]
         # the parser may locate several instances of the same rule in one word; keep as many units as
         # it named, preferring the longest runs (a madd is the long run, not an incidental letter)

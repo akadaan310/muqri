@@ -43,3 +43,5 @@
 {"id": "listen:ra-54-1:Minshawy_Murattal_128kbps", "verdict": "yes", "note": "round 3 listening", "reviewer": "expert", "ts": "2026-09-24T13:46:16Z"}
 {"id": "listen:ra-54-15:Husary_128kbps", "verdict": "no", "note": "round 3 listening", "reviewer": "expert", "ts": "2026-09-24T13:46:26Z"}
 {"id": "listen:ra-54-15:Minshawy_Murattal_128kbps", "verdict": "no", "note": "round 3 listening", "reviewer": "expert", "ts": "2026-09-24T13:46:31Z"}
+{"id": "listen:ra-89-4:Husary_128kbps", "verdict": "unsure", "note": "round 3 listening. Reviewer: the rā' sounds cut off -- the ayah's sound ends but the rā' is not pronounced. Engine: the final ر gets one 40 ms frame in all five clips (Husary 15 dB below the clip level)", "reviewer": "expert", "ts": "2026-09-24T14:37:04Z"}
+{"id": "listen:ra-89-4:Minshawy_Murattal_128kbps", "verdict": "unsure", "note": "round 3 listening. Reviewer: the rā' sounds cut off -- the ayah's sound ends but the rā' is not pronounced. Engine: the final ر gets one 40 ms frame in all five clips (Husary 15 dB below the clip level)", "reviewer": "expert", "ts": "2026-09-24T14:37:04Z"}

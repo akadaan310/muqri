@@ -418,6 +418,80 @@ ROUNDS: dict[int, tuple[Exercise, ...]] = {
             learn="The first long ayah in the sessions: a miss here that was caught in a short ayah points at "
                   "alignment or tempo over length, not at the letter's test."),
     ),
+    4: (
+        Exercise(
+            "r4e1", "Idghām with ghunnah, re-measured — al-Mulk 67:22", 67, (22, 22),
+            goal="Round 3 found the engine timing the vowel AFTER a merged yā' instead of the held yā', so correct "
+                 "idghāms read 'short' and a merge without ghunnah passed. Now it times the held letter "
+                 "(Husary: 2.2-3.8 counts) against the ghunnah band. The knowledge graph chose this ayah: two "
+                 "idghāms into yā' (أَفَمَن يَمْشِى, أَمَّن يَمْشِى), one into mīm (صِرَٰطٍۢ مُّسْتَقِيمٍۢ) and a "
+                 "mushaddad ghunnah, in 12 words. Take B also tests shīn made sīn, a letter not tested yet.",
+            spec="Tadwīr, one breath, stop at the end (مُّسْتَقِيمْ). أَفَمَن يَمْشِى, أَمَّن يَمْشِى and "
+                 "صِرَٰطٍۢ مُّسْتَقِيمٍۢ idghām with ghunnah · أَمَّن ghunnah on the mīm · وَجْهِهِۦٓ أَهْدَىٰٓ ṣila "
+                 "kubrā 4 and qalqalah on the jīm · أَهْدَىٰٓ أَمَّن munfaṣil 4 · مُكِبًّا عَلَىٰ and سَوِيًّا عَلَىٰ iẓhār.",
+            wajh="tawassut",
+            expect=(Expect(22, 0, "idgham_ghunnah", _nasal("idgham_ghunnah")), Expect(22, 2, "izhar_halqi"),
+                    Expect(22, 4, "madd_silah_kubra", _madd(4, 5), "declared tawassut"), Expect(22, 4, "qalqalah"),
+                    Expect(22, 5, "madd_munfasil", _madd(4, 5), "declared tawassut"),
+                    Expect(22, 6, "ghunnah", _nasal("ghunnah")),
+                    Expect(22, 6, "idgham_ghunnah", _nasal("idgham_ghunnah")), Expect(22, 8, "izhar_halqi"),
+                    Expect(22, 10, "idgham_ghunnah", _nasal("idgham_ghunnah")), Expect(22, 10, "tafkheem"),
+                    Expect(22, 11, "madd_arid_lissukun")),
+            mistakes=(Mistake(22, 0, "أَفَمَن يَمْشِى — merge the nūn into the yā' with NO ghunnah: 'afamay-yamshī'.",
+                              (Sig("rule", "idgham_ghunnah", ("short", "wrong"), -1),
+                               Sig("sifah", "ghonna", letter="ي", word_offset=1), Sig("sifah", "ghonna"))),
+                      Mistake(22, 1, "يَمْشِى — say the shīn as sīn: 'yamsī'.",
+                              (Sig("identity", letter="ش", heard=("س",)), Sig("sifah", "tafashie", letter="ش"))),
+                      Mistake(22, 6, "أَمَّن يَمْشِى — iẓhār: 'amman yamshī', the nūn clear, no merging (keep the "
+                                     "ghunnah on the mīm).",
+                              (Sig("rule", "idgham_ghunnah"), Sig("identity"))),
+                      Mistake(22, 10, "صِرَٰطٍۢ مُّسْتَقِيمٍۢ — merge the tanwīn into the mīm with NO ghunnah.",
+                              (Sig("rule", "idgham_ghunnah", ("short", "wrong"), -1),
+                               Sig("sifah", "ghonna", letter="م", word_offset=1)))),
+            controls=((22, 3), (22, 7), (22, 9)),
+            learn="If the merge without ghunnah is caught here and was missed in round 3, the binder fix is what "
+                  "changed; if the one into mīm is missed, kāmil and nāqiṣ need separate bands."),
+        Exercise(
+            "r4e2", "A long ayah with its stops named — Āyat al-Kursī 2:255", 2, (255, 255),
+            goal="The first long ayah recited the way a learner recites it: in breaths, stopping where the text "
+                 "allows. The stops are declared, so the engine expects the waqf form at each (a madd ʿāriḍ, "
+                 "no ṣila) and nothing is left to the reciter's choice. Fifty words, eleven rule kinds, a nūn "
+                 "merged with and without ghunnah, and ḥā', ʿayn and ẓā' in take B.",
+            spec="Tadwīr, six breaths, stopping ONLY at the five marked stops: ٱلْقَيُّومْ · ٱلْأَرْضْ · خَلْفَهُمْ · "
+                 "شَآءْ · حِفْظُهُمَا · and the end, ٱلْعَظِيمْ. Read through نَوْمٌۭ لَّهُۥ (idghām without ghunnah) and "
+                 "بِإِذْنِهِۦ يَعْلَمُ (ṣila) without stopping. لَآ إِلَـٰهَ munfaṣil 4 · سِنَةٌۭ وَلَا and بِشَىْءٍۢ مِّنْ "
+                 "idghām with ghunnah · مَن ذَا and عِندَهُۥٓ ikhfā' · عِندَهُۥٓ إِلَّا and عِلْمِهِۦٓ إِلَّا ṣila kubrā 4 · "
+                 "تَأْخُذُهُۥ, لَّهُۥ, بِإِذْنِهِۦ, يَـُٔودُهُۥ ṣila ṣughrā 2 · مِّنْ عِلْمِهِۦٓ iẓhār.",
+            wajh="tawassut",
+            expect=(Expect(255, 1, "madd_munfasil", _madd(4, 5), "declared tawassut"),
+                    Expect(255, 6, "madd_arid_lissukun", None, "the stop"),
+                    Expect(255, 8, "madd_silah_sughra", _madd(2)),
+                    Expect(255, 9, "idgham_ghunnah", _nasal("idgham_ghunnah")),
+                    Expect(255, 11, "idgham_no_ghunnah"), Expect(255, 12, "madd_silah_sughra", _madd(2)),
+                    Expect(255, 19, "ikhfa", _nasal("ikhfa")), Expect(255, 23, "ikhfa", _nasal("ikhfa")),
+                    Expect(255, 23, "madd_silah_kubra", _madd(4, 5), "declared tawassut"),
+                    Expect(255, 34, "idgham_ghunnah", _nasal("idgham_ghunnah")), Expect(255, 35, "izhar_halqi"),
+                    Expect(255, 36, "madd_silah_kubra", _madd(4, 5), "declared tawassut"),
+                    Expect(255, 45, "madd_silah_sughra", _madd(2)),
+                    Expect(255, 49, "madd_arid_lissukun")),
+            mistakes=(Mistake(255, 5, "ٱلْحَىُّ — say the ḥā' as hā': 'al-hayy'.",
+                              (Sig("identity", letter="ح", heard=("ه",)), Sig("sifah", "hams_or_jahr", letter="ح"))),
+                      Mistake(255, 9, "سِنَةٌۭ وَلَا — merge the tanwīn into the wāw with NO ghunnah: 'sinatuw-wa lā'.",
+                              (Sig("rule", "idgham_ghunnah", ("short", "wrong"), -1),
+                               Sig("sifah", "ghonna", letter="و", word_offset=1), Sig("sifah", "ghonna"))),
+                      Mistake(255, 22, "يَشْفَعُ — say the ʿayn as a hamza: 'yashfaʾu'.",
+                              (Sig("identity", letter="ع", heard=("ء",)),)),
+                      Mistake(255, 34, "بِشَىْءٍۢ مِّنْ — iẓhār: 'bishayʾin min', the nūn clear, no merging.",
+                              (Sig("rule", "idgham_ghunnah"), Sig("identity"),
+                               Sig("sifah", "ghonna", letter="م", word_offset=1))),
+                      Mistake(255, 49, "ٱلْعَظِيمْ — say the ẓā' as zāy: 'al-ʿazīm'.",
+                              (Sig("identity", letter="ظ", heard=("ز", "ذ")), Sig("sifah", "itbaq", letter="ظ"),
+                               Sig("sifah", "tafkheem_or_taqeeq", letter="ظ")))),
+            controls=((255, 0), (255, 15), (255, 26), (255, 41), (255, 48)),
+            stops=((255, 6), (255, 18), (255, 31), (255, 39), (255, 46)),
+            learn="Six parts in one recording: a part whose words all fail points at the stop being misplaced "
+                  "(alignment), not at the letters."),
+    ),
 }
 
 

@@ -34,3 +34,5 @@ research_agency_lab/experiments/calculus/graph/
 *.ses
 # per-verse engine records: regenerable on Modal in ~5 min; the final set is kept as clips.jsonl.gz
 research_agency_lab/experiments/profiles/*.jsonl
+# learner histories: personal, never committed
+research_agency_lab/experiments/learners/

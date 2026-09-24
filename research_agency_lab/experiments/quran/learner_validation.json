@@ -1,0 +1,50 @@
+{
+ "1|not seen": {
+  "cohort": 0.0387,
+  "observed": 0.0387,
+  "model": 0.0372,
+  "gain_vs_cohort": 0.0408
+ },
+ "1|seen": {
+  "cohort": 0.0019,
+  "observed": 0.0238,
+  "model": 0.0019,
+  "gain_vs_cohort": 0.0201
+ },
+ "3|not seen": {
+  "cohort": 0.0603,
+  "observed": 0.0603,
+  "model": 0.0512,
+  "gain_vs_cohort": 0.1513
+ },
+ "3|seen": {
+  "cohort": 0.0023,
+  "observed": 0.0104,
+  "model": 0.002,
+  "gain_vs_cohort": 0.1129
+ },
+ "10|not seen": {
+  "cohort": 0.0693,
+  "observed": 0.0693,
+  "model": 0.0505,
+  "gain_vs_cohort": 0.2711
+ },
+ "10|seen": {
+  "cohort": 0.0026,
+  "observed": 0.005,
+  "model": 0.002,
+  "gain_vs_cohort": 0.2428
+ },
+ "30|not seen": {
+  "cohort": 0.0563,
+  "observed": 0.0563,
+  "model": 0.0512,
+  "gain_vs_cohort": 0.0917
+ },
+ "30|seen": {
+  "cohort": 0.0027,
+  "observed": 0.0031,
+  "model": 0.0018,
+  "gain_vs_cohort": 0.3108
+ }
+}

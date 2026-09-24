@@ -35,6 +35,9 @@ PORT = 8088
 # every protocol take is kept: the audio, the engine's full report and the scorecard (gitignored --
 # these are a person's voice)
 PROTOCOL_DIR = Path(__file__).resolve().parents[1] / "research_agency_lab/experiments/protocol_recordings"
+# a learner's accumulated evidence, one file per learner id (gitignored: personal)
+LEARNERS_DIR = Path(__file__).resolve().parents[1] / "research_agency_lab/experiments/learners"
+LEARNER_ID = __import__("re").compile(r"[A-Za-z0-9_-]{1,64}")
 
 PAGE = """<!doctype html>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -94,6 +97,8 @@ sifāt, timing in your own counts, and every located tajweed rule graded against
     <div><label for="ayah">From ayah</label><input id="ayah" name="ayah" type="number" min="1" placeholder="41"></div>
     <div><label for="ayah_end">To ayah</label><input id="ayah_end" name="ayah_end" type="number" min="1" placeholder="optional"></div>
   </div>
+  <label for="learner">Learner id (optional — keeps your history so every recitation sharpens the picture)</label>
+  <input id="learner" name="learner" type="text" maxlength="64" placeholder="e.g. abdul">
   <button id="go" type="submit">Analyse</button>
   <button id="det" type="button" style="margin-top:8px;background:transparent;color:var(--fg);border:1px solid var(--line)">Detect verses from the audio</button>
   <div id="cands"></div>
@@ -207,9 +212,27 @@ det.onclick=async()=>{
  finally{det.disabled=false;}
 };
 function kv(label,val,cls){return '<div class="k"><span>'+esc(label)+'</span><span class="'+(cls||'')+'">'+esc(val)+'</span></div>';}
+function knowledge(k){
+ if(!k)return '';
+ const s=k.summary||{},sk=k.skills||{},pct=x=>(100*x).toFixed(1)+'%';
+ let h='<div class="card"><h3 style="margin:0 0 4px">Your Quran, from this recitation</h3>'
+  +'<p class="note" style="margin:0 0 10px">'+s.skills_measured+' skills measured, '+s.skills_inferred+' inferred from related evidence, '
+  +s.skills_prior_only+' not yet seen'+(k.recitations_so_far>1?' — '+k.recitations_so_far+' recitations so far':'')+'.</p>';
+ if(s.projected_rule_accuracy_whole_quran!=null)h+=kv('Projected rule accuracy across the whole Quran',pct(s.projected_rule_accuracy_whole_quran));
+ if((s.strengths||[]).length)h+=kv('Strengths (at the masters\' level)',s.strengths.join(', '),'ok');
+ for(const r of (s.to_work_on||[]).slice(0,8)){const d=sk[r];
+  h+=kv('Work on: '+r,pct(d.estimate)+' vs masters '+pct(d.masters??d.cohort)+' (gap '+(100*d.gap_to_masters).toFixed(1)+' pts)','warn');}
+ const p=k.path||{}; if((p.ready_to_learn||[]).length)h+=kv('Ready to learn next',p.ready_to_learn.slice(0,6).join(' → '));
+ for(const[r,v]of Object.entries(k.lengths||{}))
+  h+=kv('Your '+r.replace(/_/g,' '),v.median_counts+' counts'+(v.spread_counts!=null?' (± '+v.spread_counts+')':'')+(v.masters_median_counts!=null?'; masters '+v.masters_median_counts:''));
+ const hr=(k.projection||{}).hardest_ayahs||[];
+ if(hr.length)h+=kv('Where the Quran will test you most',hr.slice(0,5).map(a=>a.surah+':'+a.ayah+' ('+a.because.join(', ')+')').join(' · '));
+ h+='<p class="note">'+esc(k.honesty)+'</p></div>';
+ return h;
+}
 function render(j){
  const s=j.summary||{},m=j.mastery||{};
- let h='<div class="card"><h3 style="margin:0 0 10px">Summary</h3>';
+ let h=knowledge(j.knowledge)+'<div class="card"><h3 style="margin:0 0 10px">Summary</h3>';
  h+=kv('Ayahs',s.ayahs)+kv('Letters',s.letters)+kv('Judgments',s.judgments);
  h+=kv('Rules located',s.rules_located)+kv('Errors',s.errors,s.errors?'err':'ok');
  if(s.accuracy!=null)h+=kv('Accuracy',(100*s.accuracy).toFixed(1)+'%',s.accuracy>0.9?'ok':'warn');
@@ -543,12 +566,15 @@ def create_app():  # type: ignore[no-untyped-def]
         surah: int | None = Form(None),  # noqa: B008
         ayah: int | None = Form(None),  # noqa: B008
         ayah_end: int | None = Form(None),  # noqa: B008
+        learner: str | None = Form(None),  # noqa: B008
     ):  # type: ignore[no-untyped-def]
         data = await audio.read()
         if not data:
             return JSONResponse({"error": "Empty upload"}, status_code=400)
         if len(data) > MAX_UPLOAD_BYTES:
             return JSONResponse({"error": "Audio file too large (50 MB limit)"}, status_code=413)
+        if learner and not LEARNER_ID.fullmatch(learner):
+            return JSONResponse({"error": "learner id: letters, digits, - and _ only (max 64)"}, status_code=422)
         if not surah or not ayah:
             return JSONResponse({"error": "Give a surah and a starting ayah, or press Detect verses "
                                           "to have the recording transcribed and choose from the "
@@ -566,6 +592,18 @@ def create_app():  # type: ignore[no-untyped-def]
                                               "try 60 or fewer."}, status_code=422)
             report = engine().analyze(wave, verses)
             report["audio_seconds"] = round(float(wave.size) / 16000, 2)
+            # the knowledge report: this recitation plus the learner's history, projected on the Quran
+            from app.knowledge import build
+            import json as _json
+            hist_path = LEARNERS_DIR / f"{learner}.json" if learner else None
+            history = _json.loads(hist_path.read_text()) if hist_path and hist_path.is_file() else None
+            knowledge = build(report, history)
+            if hist_path:
+                LEARNERS_DIR.mkdir(parents=True, exist_ok=True)
+                hist_path.write_text(_json.dumps(knowledge.pop("history")))
+            else:
+                knowledge.pop("history")
+            report["knowledge"] = knowledge
             report["elapsed_seconds"] = round(time.time() - t0, 2)
             return JSONResponse(report)
         except AudioDecodeError as exc:

@@ -116,3 +116,67 @@ def run(chunks: int = 12, audio: bool = True) -> None:
                 n += 1
                 err += "error" in r
     print(f"{n} verse records ({err} errors) from {len(jobs)} tasks in {time.time() - t:.0f} s -> {out}")
+
+
+# ------------------------------------------------------------------ the Quran-wide inventory
+@app.function(image=image, cpu=1.0, memory=3072, timeout=1800, max_containers=60, retries=1)
+def inventory(ayahs: list[tuple[int, int]]) -> list[dict]:  # type: ignore[type-arg]
+    """Every located rule and every consonant-in-context of each ayah, by the grader's own binder."""
+    import sys
+    import warnings
+    warnings.filterwarnings("ignore")
+    sys.path.insert(0, "/root/qaari")
+    from app.engine import Engine
+    from app.mudud import resolve
+    from app.rule_bind import bind, ph_units
+
+    eng = Engine(layout={"columns": 0, "blank": 0, "levels": {}})
+    vowels, madd = set("َُِ"), set("اۥۦ")
+    out = []
+    for s, a in ayahs:
+        try:
+            r = eng.reference(s, a)
+            bounds, _ = resolve(bind(eng.parser.parse(r.uthmani), r.phonemes, r.word_ph))
+            units = ph_units(r.phonemes)
+            letters = []
+            for i, (sym, x, y) in enumerate(units):
+                if sym in vowels or sym in madd:
+                    continue
+                nxt = units[i + 1][0] if i + 1 < len(units) else None
+                ctx = ("shaddah" if y > x else "stop") if nxt is None else (
+                    "shaddah" if y > x else {"َ": "fatha", "ُ": "damma", "ِ": "kasra"}.get(nxt, "madd" if nxt in madd else "sakin"))
+                letters.append([sym, ctx])
+            out.append({"surah": s, "ayah": a, "words": len(r.uthmani.split()),
+                         "rules": [[b.rule_type, b.word_index,
+                                    list(b.expected_counts) if b.expected_counts else None] for b in bounds],
+                         "letters": letters})
+        except Exception as exc:  # noqa: BLE001
+            out.append({"surah": s, "ayah": a, "error": repr(exc)})
+    return out
+
+
+@app.local_entrypoint()
+def build_inventory(tasks: int = 60) -> None:
+    import gzip
+    import sys
+    import time
+    sys.path.insert(0, str(ROOT / "research_agency_lab/experiments/learner_eval"))
+    from quran_transcript import Aya
+    t = time.time()
+    ayahs, x = [], Aya(1, 1)
+    for _ in range(6236):
+        g = x.get()
+        ayahs.append((g.sura_idx, g.aya_idx))
+        x = x.step(1)
+    chunks = [ayahs[i::tasks] for i in range(tasks)]
+    out = ROOT / "research_agency_lab/experiments/quran/inventory.jsonl.gz"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    rows = [r for rs in inventory.map(chunks, order_outputs=False) for r in rs]
+    rows.sort(key=lambda r: (r["surah"], r["ayah"]))
+    with gzip.open(out, "wt", encoding="utf-8") as f:
+        for r in rows:
+            f.write(json.dumps(r, ensure_ascii=False) + "\n")
+    err = sum("error" in r for r in rows)
+    print(f"{len(rows)} ayahs ({err} errors), "
+          f"{sum(len(r.get('rules', [])) for r in rows)} rule instances, "
+          f"{sum(len(r.get('letters', [])) for r in rows)} consonants in {time.time() - t:.0f} s -> {out}")

@@ -252,7 +252,7 @@
 | `phen:wasl:ism` al-ismu 49:11 | ijazah | partial | `code:app/tajweed_rules/parser.py` |  |
 | `concept:aqwa_al_mudud` Strength order Lāzim > Muttaṣil > 'Āriḍ > Munfaṣil > Badal |  | covered | `mech:-` |  |
 | `concept:compound_collisions` Adjacent-letter collisions and assimilation |  | partial | `mech:segmental` |  |
-| `concept:endurance` Muscular endurance and self-correction |  | uncovered | `mech:consistency` |  |
+| `concept:endurance` Muscular endurance and self-correction |  | covered | `mech:consistency` |  |
 | `concept:ghunnah_four_levels` Marātib al-Ghunnah: Akmal > Kāmilah > Nāqiṣah > Anqaṣ |  | covered | `mech:durational` |  |
 | `concept:ghunnah_vs_madd` 2U ghunnah ≠ 2U madd; no nasal bleed into the madd |  | partial | `mech:attribute` |  |
 | `concept:hadr_integrity` Under Ḥadr, tawassuṭ/rakhāwah must not collapse into shiddah |  | covered | `mech:tempo` |  |
@@ -263,9 +263,9 @@
 | `concept:idhlaq_ismat` Idhlāq vs Iṣmāt — ease of production |  | out_of_scope | `mech:-` |  |
 | `concept:ikhtilas` Ikhtilās — vowel truncated below 1U (≈⅔U) |  | covered | `mech:durational` |  |
 | `concept:ishba` Ishbā' — vowel stretched beyond 1U into a madd |  | covered | `mech:durational` |  |
-| `concept:istila_istifal` Isti'lā' vs Istifāl — tongue-root elevation |  | partial | `mech:attribute` |  |
+| `concept:istila_istifal` Isti'lā' vs Istifāl — tongue-root elevation |  | covered | `mech:attribute` |  |
 | `concept:itbaq_infitah` Iṭbāq vs Infitāḥ — trapping sound against the palate |  | covered | `mech:attribute` |  |
-| `concept:itmam_universal` Universal law of vowel perfection |  | uncovered | `mech:consistency` |  |
+| `concept:itmam_universal` Universal law of vowel perfection |  | partial | `mech:consistency` |  |
 | `concept:letter_completeness` Every letter's full 5–7 classical sifāt, applied and not applied |  | covered | `mech:attribute` |  |
 | `concept:letter_strength` Composite letter strength (quwwa) from its sifāt |  | covered | `mech:attribute` |  |
 | `concept:madd_4_5_6` The 4, 5 and 6-count scales |  | covered | `mech:durational` |  |
@@ -284,12 +284,12 @@
 | `concept:sukoon_rakhawah` Rakhāwah — sustained flow, longest sākin duration |  | covered | `mech:tempo` |  |
 | `concept:sukoon_shiddah` Shiddah — complete stop, shortest sākin duration |  | covered | `mech:tempo` |  |
 | `concept:sukoon_tawassut` Tawassuṭ / bayniyyah (ل ن ع م ر) — medium duration |  | covered | `mech:tempo` |  |
-| `concept:tafkhim_five_levels` Five graded levels of tafkhīm by vowel context |  | partial | `mech:attribute` |  |
-| `concept:tafkhim_nisbi` Relative heaviness: isti'lā' without iṭbāq + kasrah |  | partial | `mech:attribute` |  |
+| `concept:tafkhim_five_levels` Five graded levels of tafkhīm by vowel context |  | covered | `mech:attribute` |  |
+| `concept:tafkhim_nisbi` Relative heaviness: isti'lā' without iṭbāq + kasrah |  | covered | `mech:attribute` |  |
 | `concept:taswiyat_al_mudud` Taswiyah — every instance of a madd category held identically |  | covered | `mech:consistency` |  |
 | `concept:ten_readers` The ten readers' structural systematics |  | out_of_scope | `mech:-` |  |
 | `concept:three_tempos` Taḥqīq / Tadwīr / Ḥadr baseline (≈350/250/150 ms per harakah) |  | covered | `mech:tempo` |  |
-| `concept:vowel_sequences` Consecutive ḍammah, alternating vowels, ḍammah→sukoon |  | uncovered | `mech:consistency` |  |
+| `concept:vowel_sequences` Consecutive ḍammah, alternating vowels, ḍammah→sukoon |  | partial | `mech:consistency` |  |
 | `concept:zaman_proportionality` Zamān/Harakah = K constant across tempo |  | covered | `mech:tempo` |  |
 | `fam:ghunnah` Ghunnah |  | partial |  |  |
 | `fam:idgham` Idgham |  | partial |  |  |

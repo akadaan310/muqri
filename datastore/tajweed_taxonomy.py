@@ -110,11 +110,15 @@ TAXONOMY: list[tuple[str, str, str, str, str, str, str, str]] = [
      "in the median as well as a slope: on the anchor, madd tabii showed slope −0.10 with start and end "
      "medians both 1.87, which is outliers tilting the line, not fatigue"),
     ("tafkhim_five_levels", "I/II", "3.2", "Five graded levels of tafkhīm by vowel context", ATTR,
-     "SifatGop.jl (tafkheem head)", "partial",
-     "the head has mofakham / moraqaq / adnā-l-mofakham (3 classes); the treatise grades 5 by whether the "
-     "letter carries fatḥah+alif, fatḥah, ḍammah, sukoon or kasrah"),
+     "app/tafkhim.py", "covered",
+     "the level is read off the vowel context the join supplies, and the head then says whether the "
+     "letter was heavy. The acoustic evidence confirms the hierarchy: median LLR by level on an "
+     "anchor runs fatha 11.74 > damma 9.99 > sukun 9.55 > kasra 4.57"),
     ("tafkhim_nisbi", "II", "3.2", "Relative heaviness: isti'lā' without iṭbāq + kasrah", ATTR,
-     "SifatGop.jl", "partial", "the distinction exists in the head's 'adnā' class but is not conditioned on the vowel"),
+     "app/tafkhim.py", "covered",
+     "level 5 on a non-iṭbāq letter expects the head's adnā class rather than full mufakhkham; the "
+     "four iṭbāq letters keep their weight under a kasrah and are treated separately. Level 5's LLR "
+     "of 4.57 against 11.74 at level 2 is the effect measured"),
     ("raa_lam_weight", "II", "3.2/12", "Conditional tafkhīm/tarqīq of ر and of the lām of ٱللَّه", ATTR,
      "datastore/letter_reference.py + tests/test_raa_lam_weight.py", "covered",
      "the strictest conditional rules in tajweed — 11 conditions stored as data and each pinned by a test. "
@@ -135,8 +139,9 @@ TAXONOMY: list[tuple[str, str, str, str, str, str, str, str]] = [
     ("shidda_rakhawa_attr", "II", "2.2", "Shiddah / Tawassuṭ / Rakhāwah as a letter quality", ATTR,
      "SifatGop.jl (shidda_or_rakhawa)", "covered", "three classes, 1.0 % anchor false alarm"),
     ("istila_istifal", "II", "2.3", "Isti'lā' vs Istifāl — tongue-root elevation", ATTR,
-     "SifatGop.jl (istitala)", "partial",
-     "the head covers istiṭāla (ض); isti'lā'/istifāl proper has no dedicated head and is inferred from tafkhīm"),
+     "app/tafkhim.py + letter_reference", "covered",
+     "needs no head: the seven isti'lā' letters (خصضطظغق) are inherent to the letter and stored in "
+     "letter_reference; what varies is the DEGREE, which the five levels capture"),
     ("itbaq_infitah", "II", "2.4", "Iṭbāq vs Infitāḥ — trapping sound against the palate", ATTR,
      "SifatGop.jl (itbaq)", "covered", "1.0 % anchor false alarm, n = 2,108 at T300"),
     ("idhlaq_ismat", "II", "2.5", "Idhlāq vs Iṣmāt — ease of production", NONE, "", "out_of_scope",
@@ -151,17 +156,26 @@ TAXONOMY: list[tuple[str, str, str, str, str, str, str, str]] = [
      "99.06 % NAMED; makhraj recorded per letter"),
     ("compound_collisions", "II", "17", "Adjacent-letter collisions and assimilation", SEG,
      "ruleswap_gop.jl (idgham_undo)", "partial", "idghām/shadda covered; not every collision type"),
-    ("endurance", "II", "18", "Muscular endurance and self-correction", CONS, "", "uncovered",
-     "overlaps madd_drift: degradation over a long pass"),
+    ("endurance", "II", "18", "Muscular endurance and self-correction", CONS,
+     "app/waqf.py", "covered",
+     "breath management as a trend across the passage: pause count, total pause time, and whether "
+     "stops lengthen as the reciter tires. Requires a real shift in the median, not just a slope, "
+     "for the same reason as madd drift"),
     # ---------------- Treatise III: Itmām al-Ḥarakāt ----------------
-    ("itmam_universal", "III", "1.1", "Universal law of vowel perfection", CONS, "", "uncovered",
-     "every harakah fully formed and equal; the measurement is harakah_isochrony plus ikhtilās/ishbā'"),
+    ("itmam_universal", "III", "1.1", "Universal law of vowel perfection", CONS,
+     "app/itmam.py", "partial",
+     "built and running, but NOT trustworthy as a verdict: an anchor scores worse than a fast imam "
+     "(ikhtilas 0.239 vs 0.145). Pause-inflated durations are the suspected confound -- a teaching "
+     "reciter is 37 % silent and onset-to-onset charges a vowel for the silence after it. Ships as "
+     "descriptive with confidence unvalidated"),
     ("neutral_sukoon_zero", "III", "1.2", "The neutral sukoon state as the absolute zero point", TEMPO,
      "sukoon_timing.jl", "partial",
      "we measure sakin durations by class; 'zero point' as a reference posture is not modelled"),
     ("vowel_sequences", "III", "3.1–3.3", "Consecutive ḍammah, alternating vowels, ḍammah→sukoon", CONS,
-     "", "uncovered",
-     "sequence-level vowel integrity (كُتُبُهُ, يَعِدُكُمُ, كُنتُمْ); measurable from the same durations"),
+     "app/itmam.py", "partial",
+     "the three sequences are located and scored by whether the run's vowels decay across it, but "
+     "the collapse rate inverts on the ladder (anchor 0.533 vs fast imam 0.367), so it shares the "
+     "pause confound above and is descriptive until that is excluded"),
     # ---------------- Treatise IV: qirā'āt and the diagnostic matrix ----------------
     ("ten_readers", "IV", "I–III", "The ten readers' structural systematics", NONE, "", "out_of_scope",
      "the engine is Hafs 'an 'Āṣim only; other readings would need their own reference text and thresholds"),

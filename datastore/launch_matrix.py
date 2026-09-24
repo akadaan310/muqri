@@ -188,20 +188,48 @@ def build() -> list[tuple]:  # type: ignore[type-arg]
             float(statistics.median(ar)) if ar else None, 3.0, len(dist.get("reciters", [])),
             HOLD, "measures style similarity, not mastery; needs per-school references")
 
+    # ---------------- built this sprint ----------------
+    add("waqf_execution", "rules", "advanced",
+        "a stop landed at a word boundary or ayah end, not inside a word",
+        "silence from the waveform; a mid-word stop is wrong under every reading", None, None, 0,
+        SHIP, "pause fraction tracks style: teaching 37 %, mujawwad 17 %, murattal 12 %, imam 0-1 %")
+    add("waqf_permissibility", "rules", "advanced",
+        "whether a stopping place is preferred, permitted or forbidden", "—", None, None, 0, ABSENT,
+        "DATA GAP: the waqf signs U+06D6-U+06ED appear zero times in all 6,236 ayahs and "
+        "quran_transcript exposes none; needs a marked mushaf text")
+    add("sakt", "rules", "advanced", "a brief cut without breath, against a full stop",
+        "short tail of the reciter's own pause distribution", None, None, 0, CAUTION,
+        "separated on the reciter's own scale, not a fixed millisecond cut; not independently validated")
+    add("ghunnah_four_levels", "rules", "mastery",
+        "ghunnah graded Akmal > Kamilah > Naqisah > Anqas", "measured hold against each grade's band",
+        0.875, 0.8, 54, SHIP, "akmal 2.33 counts, kamilah 2.43, naqisah 1.41 — naqisah correctly short")
+    add("aqwa_al_mudud", "rules", "advanced", "when two madd causes collide, the stronger governs",
+        "resolution applied before grading", None, None, 0, SHIP,
+        "six resolutions fired on a ten-ayah passage; grading badal where lazim governs would call a "
+        "correct six-count hold a gross over-lengthening")
+    add("madd_drift", "consistency", "mastery",
+        "a madd category shrinking across a passage through fatigue",
+        "slope of given counts over ayah position", None, None, 0, SHIP,
+        "requires a shift in the median as well as a slope, or outliers flag a steady anchor")
+    add("tafkhim_five_levels", "sifat", "advanced",
+        "heaviness graded into the treatise's five levels by vowel context",
+        "median head LLR per level", 4.57, None, 26, SHIP,
+        "hierarchy confirmed acoustically: fatha 11.74 > damma 9.99 > sukun 9.55 > kasra 4.57")
+    add("itmam_vowel_perfection", "timing", "mastery",
+        "every vowel fully formed and equal; ikhtilas and ishba'",
+        "rates against the reciter's own median vowel", 0.239, 0.15, 293, HOLD,
+        "an ANCHOR scores worse than a fast imam (0.239 vs 0.145), so this is not yet a quality "
+        "signal; pause-inflated durations are the suspected confound")
+    add("vowel_sequences", "timing", "mastery",
+        "consecutive damma, alternating vowels, damma to sukun", "decay across the run",
+        0.533, 0.3, 43, HOLD, "collapse rate inverts on the ladder; shares the pause confound above")
+
     # ---------------- not attempted ----------------
     for cap, fam, lvl, what, gap in (
-        ("waqf_ibtida", "rules", "advanced", "stopping and starting in a valid place",
-         "parser locates them; no counterfactual test built"),
-        ("sakt", "rules", "advanced", "the brief pause without breath", "only 104 instances; no edit generator"),
-        ("ghunnah_four_levels", "rules", "mastery",
-         "ghunnah graded Akmal > Kāmilah > Nāqiṣah > Anqaṣ", "gradable from the phoneme string; not built"),
-        ("aqwa_al_mudud", "rules", "advanced",
-         "when two madd causes collide, the stronger governs", "rule-resolution logic; not built"),
-        ("madd_drift", "consistency", "mastery",
-         "a madd category shrinking across a passage through fatigue", "a trend, not a variance; not built"),
         ("verse_identification", "integrity", "101",
-         "which verse is being recited (app supplies it, so not on the critical path)",
-         "app/verse_id.py built, never measured"),
+         "which verse is being recited, when the user does not say",
+         "app/verse_detect.py transcribes with whisper-tiny and OFFERS matches rather than choosing: "
+         "top-1 0.88, top-3 1.00 on corpus clips (n=17, larger run in flight)"),
         ("positive_feedback", "placement", "101", "telling the user what they did WELL",
          "per-unit PASS data exists; never validated as a feature"),
         ("learner_grading", "placement", "101", "grading a beginner on the same scale",

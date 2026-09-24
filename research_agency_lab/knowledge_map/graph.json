@@ -2310,9 +2310,10 @@
    "refs": [
     "datastore/tajweed_taxonomy.py"
    ],
-   "status": "uncovered",
-   "note": "overlaps madd_drift: degradation over a long pass",
-   "section": "18"
+   "status": "covered",
+   "note": "breath management as a trend across the passage: pause count, total pause time, and whether stops lengthen as the reciter tires. Requires a real shift in the median, not just a slope, for the same reason as madd drift",
+   "section": "18",
+   "file": "app/waqf.py"
   },
   {
    "id": "concept:ghunnah_four_levels",
@@ -2473,10 +2474,10 @@
    "refs": [
     "datastore/tajweed_taxonomy.py"
    ],
-   "status": "partial",
-   "note": "the head covers istiṭāla (ض); isti'lā'/istifāl proper has no dedicated head and is inferred from tafkhīm",
+   "status": "covered",
+   "note": "needs no head: the seven isti'lā' letters (خصضطظغق) are inherent to the letter and stored in letter_reference; what varies is the DEGREE, which the five levels capture",
    "section": "2.3",
-   "file": "SifatGop.jl (istitala)"
+   "file": "app/tafkhim.py + letter_reference"
   },
   {
    "id": "concept:itbaq_infitah",
@@ -2503,9 +2504,10 @@
    "refs": [
     "datastore/tajweed_taxonomy.py"
    ],
-   "status": "uncovered",
-   "note": "every harakah fully formed and equal; the measurement is harakah_isochrony plus ikhtilās/ishbā'",
-   "section": "1.1"
+   "status": "partial",
+   "note": "built and running, but NOT trustworthy as a verdict: an anchor scores worse than a fast imam (ikhtilas 0.239 vs 0.145). Pause-inflated durations are the suspected confound -- a teaching reciter is 37 % silent and onset-to-onset charges a vowel for the silence after it. Ships as descriptive with confidence unvalidated",
+   "section": "1.1",
+   "file": "app/itmam.py"
   },
   {
    "id": "concept:letter_completeness",
@@ -2786,10 +2788,10 @@
    "refs": [
     "datastore/tajweed_taxonomy.py"
    ],
-   "status": "partial",
-   "note": "the head has mofakham / moraqaq / adnā-l-mofakham (3 classes); the treatise grades 5 by whether the letter carries fatḥah+alif, fatḥah, ḍammah, sukoon or kasrah",
+   "status": "covered",
+   "note": "the level is read off the vowel context the join supplies, and the head then says whether the letter was heavy. The acoustic evidence confirms the hierarchy: median LLR by level on an anchor runs fatha 11.74 > damma 9.99 > sukun 9.55 > kasra 4.57",
    "section": "3.2",
-   "file": "SifatGop.jl (tafkheem head)"
+   "file": "app/tafkhim.py"
   },
   {
    "id": "concept:tafkhim_nisbi",
@@ -2801,10 +2803,10 @@
    "refs": [
     "datastore/tajweed_taxonomy.py"
    ],
-   "status": "partial",
-   "note": "the distinction exists in the head's 'adnā' class but is not conditioned on the vowel",
+   "status": "covered",
+   "note": "level 5 on a non-iṭbāq letter expects the head's adnā class rather than full mufakhkham; the four iṭbāq letters keep their weight under a kasrah and are treated separately. Level 5's LLR of 4.57 against 11.74 at level 2 is the effect measured",
    "section": "3.2",
-   "file": "SifatGop.jl"
+   "file": "app/tafkhim.py"
   },
   {
    "id": "concept:taswiyat_al_mudud",
@@ -2860,9 +2862,10 @@
    "refs": [
     "datastore/tajweed_taxonomy.py"
    ],
-   "status": "uncovered",
-   "note": "sequence-level vowel integrity (كُتُبُهُ, يَعِدُكُمُ, كُنتُمْ); measurable from the same durations",
-   "section": "3.1–3.3"
+   "status": "partial",
+   "note": "the three sequences are located and scored by whether the run's vowels decay across it, but the collapse rate inverts on the ladder (anchor 0.533 vs fast imam 0.367), so it shares the pause confound above and is descriptive until that is excluded",
+   "section": "3.1–3.3",
+   "file": "app/itmam.py"
   },
   {
    "id": "concept:zaman_proportionality",

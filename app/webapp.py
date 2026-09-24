@@ -248,28 +248,66 @@ function render(j){
 """
 
 
+class AudioDecodeError(ValueError):
+    """The upload is not audio any decoder here can read -- the user's file, not a server fault."""
+
+
+def _ffmpeg_decode(data: bytes):  # type: ignore[no-untyped-def]
+    """Any container ffmpeg understands to 16 kHz mono float32.
+
+    Input goes through a temp file, not a pipe: MP4/M4A (what phones record) usually keeps its index
+    at the END of the file, and ffmpeg cannot seek back to it on a pipe.
+    """
+    import subprocess
+    import tempfile
+
+    import numpy as np
+    with tempfile.NamedTemporaryFile(suffix=".upload") as f:
+        f.write(data)
+        f.flush()
+        try:
+            run = subprocess.run(["ffmpeg", "-nostdin", "-loglevel", "error", "-i", f.name,
+                                  "-f", "f32le", "-ac", "1", "-ar", "16000", "pipe:1"],
+                                 capture_output=True, timeout=120, check=False)
+        except FileNotFoundError as exc:
+            raise AudioDecodeError("this audio format needs ffmpeg, which is not installed on the "
+                                   "server") from exc
+    wave = np.frombuffer(run.stdout, dtype="<f4")
+    if run.returncode != 0 or wave.size == 0:
+        why = run.stderr.decode(errors="replace").strip().splitlines()
+        # ffmpeg names the temp file in its message; the user only needs the reason
+        reason = why[-1].split(": ", 1)[-1] if why else ""
+        raise AudioDecodeError("could not decode the uploaded audio"
+                               + (f" ({reason})" if reason else "") + ". Try WAV, MP3, M4A, OGG or FLAC.")
+    return wave.copy()
+
+
+def decode_upload(data: bytes):  # type: ignore[no-untyped-def]
+    """Any uploaded container to 16 kHz mono float32."""
+    import io as _io
+    import librosa
+    import numpy as np
+    import soundfile as sf
+    try:
+        wave, sr = sf.read(_io.BytesIO(data), dtype="float32", always_2d=False)
+        if getattr(wave, "ndim", 1) > 1:
+            wave = wave.mean(axis=1)
+        if sr != 16000:
+            wave = librosa.resample(np.asarray(wave, dtype="float32"), orig_sr=sr, target_sr=16000)
+    except Exception:  # noqa: BLE001
+        # libsndfile rejects AAC/M4A (what most phone recorders write, often named .wav), Opus in
+        # WebM and odd WAV codecs. librosa.load on bytes only retries libsndfile, so it cannot
+        # rescue these; ffmpeg reads them all.
+        wave = _ffmpeg_decode(data)
+    return np.asarray(wave, dtype="float32")
+
+
 def create_app():  # type: ignore[no-untyped-def]
     from fastapi import FastAPI, File, Form, UploadFile
     from fastapi.responses import HTMLResponse, JSONResponse
 
     api = FastAPI(title="qaari-upload", version="1.0.0")
     state: dict[str, Any] = {"engine": None, "warm": False, "verse_id_ok": False}
-
-    def _decode(data: bytes):  # type: ignore[no-untyped-def]
-        """Any uploaded container to 16 kHz mono float32."""
-        import io as _io
-        import librosa
-        import numpy as np
-        import soundfile as sf
-        try:
-            wave, sr = sf.read(_io.BytesIO(data), dtype="float32", always_2d=False)
-            if getattr(wave, "ndim", 1) > 1:
-                wave = wave.mean(axis=1)
-            if sr != 16000:
-                wave = librosa.resample(np.asarray(wave, dtype="float32"), orig_sr=sr, target_sr=16000)
-        except Exception:  # noqa: BLE001 - mp3/m4a go through librosa
-            wave, _ = librosa.load(_io.BytesIO(data), sr=16000, mono=True)
-        return np.asarray(wave, dtype="float32")
 
     def engine():  # type: ignore[no-untyped-def]
         if state["engine"] is None:
@@ -350,7 +388,7 @@ def create_app():  # type: ignore[no-untyped-def]
         if not data:
             return JSONResponse({"error": "Empty upload"}, status_code=400)
         try:
-            wave = _decode(data)
+            wave = decode_upload(data)
             from app.verse_detect import detect as detect_fn
             t0 = time.time()
             cands = detect_fn(wave)
@@ -360,6 +398,8 @@ def create_app():  # type: ignore[no-untyped-def]
                 "audio_seconds": round(float(wave.size) / 16000, 2),
                 "elapsed_seconds": round(time.time() - t0, 2),
             })
+        except AudioDecodeError as exc:
+            return JSONResponse({"error": str(exc)}, status_code=415)
         except Exception as exc:  # noqa: BLE001
             return JSONResponse({"error": f"{type(exc).__name__}: {exc}",
                                  "detail": traceback.format_exc()[-1200:]}, status_code=500)
@@ -383,7 +423,7 @@ def create_app():  # type: ignore[no-untyped-def]
 
         t0 = time.time()
         try:
-            wave = _decode(data)
+            wave = decode_upload(data)
             if wave.size < 1600:
                 return JSONResponse({"error": "Recording is shorter than 0.1 s"}, status_code=422)
 
@@ -395,6 +435,8 @@ def create_app():  # type: ignore[no-untyped-def]
             report["audio_seconds"] = round(float(wave.size) / 16000, 2)
             report["elapsed_seconds"] = round(time.time() - t0, 2)
             return JSONResponse(report)
+        except AudioDecodeError as exc:
+            return JSONResponse({"error": str(exc)}, status_code=415)
         except Exception as exc:  # noqa: BLE001 - the page must show why, not a blank 500
             return JSONResponse({"error": f"{type(exc).__name__}: {exc}",
                                  "detail": traceback.format_exc()[-1200:]}, status_code=500)

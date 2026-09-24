@@ -115,6 +115,7 @@ def build(report: dict[str, Any]) -> dict[str, Any]:
                 "uthmani_chars": l.get("uth", []), "run_length": l.get("run_length", 1),
                 "onset_s": round(t0 + l["onset_s"], 3), "duration_s": l["duration_s"],
                 "duration_counts": l.get("duration_counts"),
+                "edge": bool(l.get("edge")),
                 "identity": {"confirmed": idn["confirmed"], "competitor": idn["heard_instead"] or None,
                              "margin": None if idn.get("llr") is None else -idn["llr"]},
                 "characteristics": chars})
@@ -158,7 +159,14 @@ def build(report: dict[str, Any]) -> dict[str, Any]:
         "recording": {"audio_seconds": report.get("audio_seconds"), "seconds_per_count": m.get("tempo_haraka_s"),
                       "tempo_class": m.get("tempo_mode"), "wajh": report.get("wajh") or {},
                       "basmala": report.get("basmala") or {},
-                      "stops": [st for a in report.get("ayahs", []) for st in a.get("stops", [])]},
+                      "stops": [st for a in report.get("ayahs", []) for st in a.get("stops", [])],
+                      # seconds of recording before the first letter and after the last: a
+                      # recording cut inside a letter leaves that letter unmeasurable (edge)
+                      "lead_room_s": round(letters[0]["onset_s"], 3) if letters else None,
+                      "tail_room_s": round(report["audio_seconds"] - max(l["onset_s"] + l["duration_s"]
+                                                                          for l in letters), 3)
+                      if letters and report.get("audio_seconds") else None,
+                      "edge_letters": sum(l["edge"] for l in letters)},
         "summary": {
             "words": len(words), "words_all_correct": sum(w["all_correct"] for w in words),
             "letters": len(letters), "identity_not_confirmed": sum(not l["identity"]["confirmed"] for l in letters),

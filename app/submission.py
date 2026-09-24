@@ -448,6 +448,7 @@ def build_report(per_ayah: list[dict[str, Any]], rule_filter: str | None = None)
                          "duration_counts": u.duration_counts,
                          "identity": {"gop": u.gop, "heard_instead": u.best_competitor,
                                       "llr": u.competitor_llr, "confirmed": u.confirmed},
+                         "edge": u.edge,
                          "sifat": u.sifat, "strength": letter_strength(u)}
                         for u in units],
             "rules": [v.to_dict() for v in vs],

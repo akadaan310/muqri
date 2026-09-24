@@ -36,3 +36,6 @@ research_agency_lab/experiments/calculus/graph/
 research_agency_lab/experiments/profiles/*.jsonl
 # learner histories: personal, never committed
 research_agency_lab/experiments/learners/
+
+# external-dataset engine outputs: regenerable from the Modal dumps (modal_external.py::grade)
+research_agency_lab/experiments/external/*_engine.jsonl

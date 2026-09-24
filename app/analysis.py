@@ -160,6 +160,14 @@ class Unit:
     competitor_llr: float | None
     confirmed: bool
     sifat: dict[str, dict] = field(default_factory=dict)  # type: ignore[type-arg]
+    # the recording starts or ends inside this letter's test window (`margin` frames either side), so
+    # its identity and characteristics were tested partly on audio that is not there. Learner
+    # recordings are cut this tightly far more often than masters' (the last letter ends within
+    # 0.12 s of the file end in 58 % of sobolev210 learner ayahs, 2.7 % of T300 masters), and there it
+    # failed 46 % of the time against 11 % with room after it. It is REPORTED, not used to withhold a
+    # verdict: reviewers' tagged errors sit on these letters too, and excluding them traded recall
+    # for false alarms one for one (lift over chance 2.06 -> 2.02..2.13 across thresholds).
+    edge: bool = False
 
 
 def _plausible(counts: float, cap: float) -> float | None:
@@ -280,7 +288,8 @@ def analyse_clip(lp_full: npt.NDArray[np.floating], phonemes: str, vocab: dict[s
                  if haraka and i != unreliable_tail else None,
                  gop=round(float(gop), 3), best_competitor=best,
                  competitor_llr=None if lr is None else round(lr, 3),
-                 confirmed=(lr is None or lr < 0))
+                 confirmed=(lr is None or lr < 0),
+                 edge=first[a] - 1 - margin < 0 or last[b] + margin >= T)
 
         if expected_sifat and sym not in SIFAT_SKIP:
             t0s, t1s = first[a] - 1, last[b]

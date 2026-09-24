@@ -1,0 +1,209 @@
+{
+ "clips_graded": 451,
+ "clips_unmapped": 19,
+ "words": 1933,
+ "words_tagged": 47,
+ "flag_rate_untagged": 0.2534,
+ "by_tag": {
+  "any": {
+   "n": 47,
+   "recall": 0.4894,
+   "auc_min_identity_margin": 0.671,
+   "auc_min_char_margin": 0.646
+  },
+  "Letters": {
+   "n": 33,
+   "recall": 0.4242,
+   "auc_min_identity_margin": 0.64,
+   "auc_min_char_margin": 0.66
+  },
+  "Tajweed": {
+   "n": 11,
+   "recall": 0.7273,
+   "auc_min_identity_margin": 0.772,
+   "auc_min_char_margin": 0.65
+  },
+  "Wording": {
+   "n": 2,
+   "recall": 0.0,
+   "auc_min_identity_margin": 0.561,
+   "auc_min_char_margin": 0.295
+  },
+  "Tashkeel": {
+   "n": 1,
+   "recall": 1.0,
+   "auc_min_identity_margin": 0.816,
+   "auc_min_char_margin": 0.842
+  }
+ },
+ "missed": [
+  {
+   "clip": "04858ab6-4206-48e6-aee4-b8abe73600ea/chunk0",
+   "word": 1,
+   "tags": [
+    "Wording"
+   ]
+  },
+  {
+   "clip": "fc464f57-301f-4c74-ad78-2e7512ff6d10/chunk3",
+   "word": 14,
+   "tags": [
+    "Letters"
+   ]
+  },
+  {
+   "clip": "04858ab6-4206-48e6-aee4-b8abe73600ea/chunk2",
+   "word": 0,
+   "tags": [
+    "Wording"
+   ]
+  },
+  {
+   "clip": "583128bb-4e0b-4ccd-8f75-c1812b0796f3/chunk1",
+   "word": 4,
+   "tags": [
+    "Letters"
+   ]
+  },
+  {
+   "clip": "bbcedf57-fcc1-4d90-9bc9-1f039cdd73ca/chunk5",
+   "word": 3,
+   "tags": [
+    "Letters"
+   ]
+  },
+  {
+   "clip": "7f47652b-9b50-43b0-9e79-b41ca07bc4f1/chunk0",
+   "word": 4,
+   "tags": [
+    "Tajweed"
+   ]
+  },
+  {
+   "clip": "7f47652b-9b50-43b0-9e79-b41ca07bc4f1/chunk1",
+   "word": 0,
+   "tags": [
+    "Letters"
+   ]
+  },
+  {
+   "clip": "2c3c83de-30e2-4c78-a1b4-9da44ec14135/chunk1",
+   "word": 2,
+   "tags": [
+    "Letters"
+   ]
+  },
+  {
+   "clip": "98c7a442-df2b-4a09-82af-03d53a252bc2/chunk0",
+   "word": 3,
+   "tags": [
+    "Letters"
+   ]
+  },
+  {
+   "clip": "18811651-0121-4ddd-a969-e9fb295c4a18/chunk2",
+   "word": 3,
+   "tags": [
+    "Tajweed"
+   ]
+  },
+  {
+   "clip": "a270f049-b7b6-492f-9548-cb5ccbafe092/chunk10",
+   "word": 0,
+   "tags": [
+    "Letters"
+   ]
+  },
+  {
+   "clip": "fc464f57-301f-4c74-ad78-2e7512ff6d10/chunk1",
+   "word": 9,
+   "tags": [
+    "Letters"
+   ]
+  },
+  {
+   "clip": "7ca30ee3-0dff-49b5-9c40-15377a84951a/chunk7",
+   "word": 0,
+   "tags": [
+    "Letters"
+   ]
+  },
+  {
+   "clip": "2c3c83de-30e2-4c78-a1b4-9da44ec14135/chunk2",
+   "word": 1,
+   "tags": [
+    "Letters"
+   ]
+  },
+  {
+   "clip": "a270f049-b7b6-492f-9548-cb5ccbafe092/chunk8",
+   "word": 1,
+   "tags": [
+    "Letters"
+   ]
+  },
+  {
+   "clip": "c239de42-e82f-4bea-8ebd-034576b635fb/chunk0",
+   "word": 5,
+   "tags": [
+    "Letters"
+   ]
+  },
+  {
+   "clip": "c8bd67d3-a7b9-415e-ba4b-d910b79fb009/chunk15",
+   "word": 4,
+   "tags": [
+    "Letters"
+   ]
+  },
+  {
+   "clip": "2c3c83de-30e2-4c78-a1b4-9da44ec14135/chunk6",
+   "word": 5,
+   "tags": [
+    "Tajweed"
+   ]
+  },
+  {
+   "clip": "7ca30ee3-0dff-49b5-9c40-15377a84951a/chunk8",
+   "word": 1,
+   "tags": [
+    "Letters"
+   ]
+  },
+  {
+   "clip": "583128bb-4e0b-4ccd-8f75-c1812b0796f3/chunk0",
+   "word": 4,
+   "tags": [
+    "Letters"
+   ]
+  },
+  {
+   "clip": "2c3c83de-30e2-4c78-a1b4-9da44ec14135/chunk4",
+   "word": 1,
+   "tags": [
+    "Letters"
+   ]
+  },
+  {
+   "clip": "98c7a442-df2b-4a09-82af-03d53a252bc2/chunk3",
+   "word": 2,
+   "tags": [
+    "Letters"
+   ]
+  },
+  {
+   "clip": "c2eaedcd-427b-466f-8cd7-9240787659b1/chunk0",
+   "word": 3,
+   "tags": [
+    "Letters"
+   ]
+  },
+  {
+   "clip": "c2eaedcd-427b-466f-8cd7-9240787659b1/chunk2",
+   "word": 3,
+   "tags": [
+    "Letters"
+   ]
+  }
+ ]
+}

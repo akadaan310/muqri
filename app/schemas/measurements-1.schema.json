@@ -4,150 +4,561 @@
   "title": "measurements/1",
   "description": "The measurement contract: every number a consumer app needs about one recording. Numbers only -- no advice, no severity labels; the app decides what to tell the learner. Additive changes (new optional fields) keep the version; any removal, rename or change of meaning bumps it to measurements/2.",
   "type": "object",
-  "required": ["schema", "units", "recording", "summary", "words", "rules", "letters"],
+  "required": [
+    "schema",
+    "units",
+    "recording",
+    "summary",
+    "words",
+    "rules",
+    "letters"
+  ],
   "properties": {
-    "schema": {"const": "measurements/1"},
+    "schema": {
+      "const": "measurements/1"
+    },
     "units": {
       "description": "Human-readable units of the numeric fields.",
       "type": "object",
-      "required": ["counts", "margin", "percentile", "z_masters"],
-      "additionalProperties": {"type": "string"}
+      "required": [
+        "counts",
+        "margin",
+        "percentile",
+        "z_masters"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      }
     },
     "recording": {
       "type": "object",
-      "required": ["audio_seconds", "seconds_per_count", "tempo_class", "wajh", "basmala", "stops"],
+      "required": [
+        "audio_seconds",
+        "seconds_per_count",
+        "tempo_class",
+        "wajh",
+        "basmala",
+        "stops"
+      ],
       "properties": {
-        "audio_seconds": {"type": ["number", "null"], "minimum": 0, "description": "Length of the decoded recording. Null when graded from posteriors without audio."},
-        "seconds_per_count": {"type": ["number", "null"], "exclusiveMinimum": 0, "description": "The reciter's own count unit (one haraka), median over the ayahs that could measure it. Null when no ayah could."},
-        "tempo_class": {"enum": ["tahqiq", "tadwir", "hadr", null], "description": ">= 0.30 s per count tahqiq, >= 0.20 tadwir, else hadr."},
+        "audio_seconds": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "description": "Length of the decoded recording. Null when graded from posteriors without audio."
+        },
+        "seconds_per_count": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "exclusiveMinimum": 0,
+          "description": "The reciter's own count unit (one haraka), median over the ayahs that could measure it. Null when no ayah could."
+        },
+        "tempo_class": {
+          "enum": [
+            "tahqiq",
+            "tadwir",
+            "hadr",
+            null
+          ],
+          "description": ">= 0.30 s per count tahqiq, >= 0.20 tadwir, else hadr."
+        },
         "wajh": {
           "description": "The munfasil wajh inferred from all of the recording's munfasil / silah kubra instances; empty when there are none.",
           "type": "object",
           "properties": {
-            "choice": {"enum": ["qasr", "tawassut"]},
-            "expected_counts": {"$ref": "#/$defs/range"},
-            "instances": {"type": "integer", "minimum": 1},
-            "median_counts": {"type": "number"},
-            "munfasil": {"type": "string"},
-            "note": {"type": "string"}
+            "choice": {
+              "enum": [
+                "qasr",
+                "tawassut"
+              ]
+            },
+            "expected_counts": {
+              "$ref": "#/$defs/range"
+            },
+            "instances": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "median_counts": {
+              "type": "number"
+            },
+            "munfasil": {
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            }
           }
         },
         "basmala": {
           "type": "object",
-          "required": ["checked", "present"],
+          "required": [
+            "checked",
+            "present"
+          ],
           "properties": {
-            "checked": {"type": "boolean", "description": "Tested only on recordings that start at word 0 of an ayah 1 (not al-Fatihah, not at-Tawbah)."},
-            "present": {"type": "boolean"}
+            "checked": {
+              "type": "boolean",
+              "description": "Tested only on recordings that start at word 0 of an ayah 1 (not al-Fatihah, not at-Tawbah)."
+            },
+            "present": {
+              "type": "boolean"
+            }
           }
         },
-        "stops": {"type": "array", "items": {"$ref": "#/$defs/stop"}}
+        "stops": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/stop"
+          }
+        },
+        "lead_room_s": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Seconds of recording before the first letter's aligned onset."
+        },
+        "tail_room_s": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Seconds of recording after the last letter's aligned end. Null without audio."
+        },
+        "edge_letters": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Letters whose test window the recording's start or end cuts (see letter.edge)."
+        }
       }
     },
     "summary": {
       "type": "object",
-      "required": ["words", "words_all_correct", "letters", "identity_not_confirmed", "characteristics_scored",
-                   "characteristics_not_realised", "rules_scored", "rules_failed"],
-      "additionalProperties": {"type": "integer", "minimum": 0}
+      "required": [
+        "words",
+        "words_all_correct",
+        "letters",
+        "identity_not_confirmed",
+        "characteristics_scored",
+        "characteristics_not_realised",
+        "rules_scored",
+        "rules_failed"
+      ],
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
     },
     "words": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["ref", "text", "all_correct", "failing"],
+        "required": [
+          "ref",
+          "text",
+          "all_correct",
+          "failing"
+        ],
         "properties": {
-          "ref": {"type": "string", "pattern": "^[0-9]+:[0-9]+:[0-9]+$", "description": "surah:ayah:word, word 0-based in the whole ayah (also for a partial-ayah recording)."},
-          "text": {"type": "string", "description": "The word in Uthmani script."},
-          "all_correct": {"type": "boolean", "description": "Every scored judgement in the word passed: every rule, every scored characteristic, every letter identity."},
-          "failing": {"type": "array", "items": {"type": "string"}, "description": "Ids of what did not pass: a rule id, '<letter id>:<characteristic>' or '<letter id>:identity'."}
+          "ref": {
+            "type": "string",
+            "pattern": "^[0-9]+:[0-9]+:[0-9]+$",
+            "description": "surah:ayah:word, word 0-based in the whole ayah (also for a partial-ayah recording)."
+          },
+          "text": {
+            "type": "string",
+            "description": "The word in Uthmani script."
+          },
+          "all_correct": {
+            "type": "boolean",
+            "description": "Every scored judgement in the word passed: every rule, every scored characteristic, every letter identity."
+          },
+          "failing": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Ids of what did not pass: a rule id, '<letter id>:<characteristic>' or '<letter id>:identity'."
+          }
         }
       }
     },
-    "rules": {"type": "array", "items": {"$ref": "#/$defs/rule"}},
-    "letters": {"type": "array", "items": {"$ref": "#/$defs/letter"}}
+    "rules": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/rule"
+      }
+    },
+    "letters": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/letter"
+      }
+    }
   },
   "$defs": {
-    "range": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
-    "percentile": {"type": ["number", "null"], "minimum": 0, "maximum": 1, "description": "Where the value sits among the reference instances of the same rule, or the same letter x characteristic: masters = the anchor tier, cohort = 41 professional reciters. Clamped at the 1st / 99th level."},
-    "z": {"type": ["number", "null"], "description": "Robust z against the masters: (x - median) / (IQR / 1.349); unbounded where the percentile saturates."},
+    "range": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "percentile": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Where the value sits among the reference instances of the same rule, or the same letter x characteristic: masters = the anchor tier, cohort = 41 professional reciters. Clamped at the 1st / 99th level."
+    },
+    "z": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Robust z against the masters: (x - median) / (IQR / 1.349); unbounded where the percentile saturates."
+    },
     "stop": {
       "type": "object",
-      "required": ["after_unit", "start_s", "duration_s", "kind", "position", "word_index", "legitimate"],
+      "required": [
+        "after_unit",
+        "start_s",
+        "duration_s",
+        "kind",
+        "position",
+        "word_index",
+        "legitimate"
+      ],
       "properties": {
-        "after_unit": {"type": "integer"},
-        "start_s": {"type": "number"},
-        "duration_s": {"type": "number", "minimum": 0},
-        "kind": {"enum": ["waqf", "sakt"]},
-        "position": {"enum": ["ayah_end", "word_boundary", "mid_word"]},
-        "word_index": {"type": ["integer", "null"]},
-        "legitimate": {"type": "boolean"}
+        "after_unit": {
+          "type": "integer"
+        },
+        "start_s": {
+          "type": "number"
+        },
+        "duration_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "kind": {
+          "enum": [
+            "waqf",
+            "sakt"
+          ]
+        },
+        "position": {
+          "enum": [
+            "ayah_end",
+            "word_boundary",
+            "mid_word"
+          ]
+        },
+        "word_index": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "legitimate": {
+          "type": "boolean"
+        }
       }
     },
     "rule": {
       "type": "object",
-      "required": ["id", "rule", "word", "mechanism", "status", "scored", "expected_counts", "observed_counts",
-                   "observed_seconds", "deviation_counts", "percentile_masters", "percentile_cohort", "z_masters",
-                   "wajh", "tempo_allowance", "letters", "evidence_margin"],
+      "required": [
+        "id",
+        "rule",
+        "word",
+        "mechanism",
+        "status",
+        "scored",
+        "expected_counts",
+        "observed_counts",
+        "observed_seconds",
+        "deviation_counts",
+        "percentile_masters",
+        "percentile_cohort",
+        "z_masters",
+        "wajh",
+        "tempo_allowance",
+        "letters",
+        "evidence_margin"
+      ],
       "properties": {
-        "id": {"type": "string", "pattern": "^[0-9]+:[0-9]+:R[0-9]+$"},
-        "rule": {"type": "string", "description": "Rule type, e.g. madd_tabii, madd_munfasil, ghunnah, ikhfa, qalqalah, idgham_ghunnah."},
-        "word": {"type": ["integer", "null"], "description": "Word index in the whole ayah."},
-        "mechanism": {"enum": ["durational", "attribute", "segmental"]},
-        "status": {"enum": ["pass", "short", "long", "wrong", "unconfirmed", "no_evidence"],
-                   "description": "short / long: a durational rule outside its band; wrong: an attribute or letter not realised; unconfirmed: measured but not graded (borrowed count unit, descriptive attribute); no_evidence: nothing to measure."},
-        "scored": {"type": "boolean", "description": "Status is one of pass / short / long / wrong."},
-        "expected_counts": {"oneOf": [{"$ref": "#/$defs/range"}, {"type": "null"}]},
-        "observed_counts": {"type": ["number", "null"], "description": "Measured length in the reciter's own counts (durational rules)."},
-        "observed_seconds": {"type": ["number", "null"]},
-        "deviation_counts": {"type": ["number", "null"], "description": "Signed distance outside the expected band: 0 inside, negative when short."},
-        "percentile_masters": {"$ref": "#/$defs/percentile"},
-        "percentile_cohort": {"$ref": "#/$defs/percentile"},
-        "z_masters": {"$ref": "#/$defs/z"},
-        "wajh": {"type": ["string", "null"], "description": "The wajh the instance was graded against (munfasil, silah kubra)."},
-        "tempo_allowance": {"type": "boolean", "description": "Long in the reciter's counts but within the masters' length in seconds, so passed."},
-        "letters": {"type": "array", "items": {"type": "string"}},
-        "evidence_margin": {"type": ["number", "null"], "description": "Nats: the worst margin of the attribute (attribute rules) or the letter-identity margin that failed (segmental)."}
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9]+:[0-9]+:R[0-9]+$"
+        },
+        "rule": {
+          "type": "string",
+          "description": "Rule type, e.g. madd_tabii, madd_munfasil, ghunnah, ikhfa, qalqalah, idgham_ghunnah."
+        },
+        "word": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Word index in the whole ayah."
+        },
+        "mechanism": {
+          "enum": [
+            "durational",
+            "attribute",
+            "segmental"
+          ]
+        },
+        "status": {
+          "enum": [
+            "pass",
+            "short",
+            "long",
+            "wrong",
+            "unconfirmed",
+            "no_evidence"
+          ],
+          "description": "short / long: a durational rule outside its band; wrong: an attribute or letter not realised; unconfirmed: measured but not graded (borrowed count unit, descriptive attribute); no_evidence: nothing to measure."
+        },
+        "scored": {
+          "type": "boolean",
+          "description": "Status is one of pass / short / long / wrong."
+        },
+        "expected_counts": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/range"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "observed_counts": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Measured length in the reciter's own counts (durational rules)."
+        },
+        "observed_seconds": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "deviation_counts": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Signed distance outside the expected band: 0 inside, negative when short."
+        },
+        "percentile_masters": {
+          "$ref": "#/$defs/percentile"
+        },
+        "percentile_cohort": {
+          "$ref": "#/$defs/percentile"
+        },
+        "z_masters": {
+          "$ref": "#/$defs/z"
+        },
+        "wajh": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The wajh the instance was graded against (munfasil, silah kubra)."
+        },
+        "tempo_allowance": {
+          "type": "boolean",
+          "description": "Long in the reciter's counts but within the masters' length in seconds, so passed."
+        },
+        "letters": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence_margin": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Nats: the worst margin of the attribute (attribute rules) or the letter-identity margin that failed (segmental)."
+        }
       }
     },
     "characteristic": {
       "type": "object",
-      "required": ["expected", "observed", "competitor", "margin", "realised", "scored",
-                   "percentile_masters", "percentile_cohort", "z_masters"],
+      "required": [
+        "expected",
+        "observed",
+        "competitor",
+        "margin",
+        "realised",
+        "scored",
+        "percentile_masters",
+        "percentile_cohort",
+        "z_masters"
+      ],
       "properties": {
-        "expected": {"type": ["string", "null"], "description": "The class the text requires."},
-        "observed": {"type": ["string", "null"], "description": "The class heard: the expected class when realised, otherwise the competitor."},
-        "competitor": {"type": ["string", "null"], "description": "The most likely class other than the expected one."},
-        "margin": {"type": ["number", "null"], "description": "log p(expected) - log p(competitor), nats; > 0 realised."},
-        "realised": {"type": "boolean"},
-        "scored": {"type": "boolean", "description": "Whether this characteristic on this letter counts towards the grade."},
-        "percentile_masters": {"$ref": "#/$defs/percentile"},
-        "percentile_cohort": {"$ref": "#/$defs/percentile"},
-        "z_masters": {"$ref": "#/$defs/z"}
+        "expected": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The class the text requires."
+        },
+        "observed": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The class heard: the expected class when realised, otherwise the competitor."
+        },
+        "competitor": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The most likely class other than the expected one."
+        },
+        "margin": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "log p(expected) - log p(competitor), nats; > 0 realised."
+        },
+        "realised": {
+          "type": "boolean"
+        },
+        "scored": {
+          "type": "boolean",
+          "description": "Whether this characteristic on this letter counts towards the grade."
+        },
+        "percentile_masters": {
+          "$ref": "#/$defs/percentile"
+        },
+        "percentile_cohort": {
+          "$ref": "#/$defs/percentile"
+        },
+        "z_masters": {
+          "$ref": "#/$defs/z"
+        }
       }
     },
     "letter": {
       "type": "object",
-      "required": ["id", "word", "symbol", "kind", "uthmani_chars", "run_length", "onset_s", "duration_s",
-                   "duration_counts", "identity", "characteristics"],
+      "required": [
+        "id",
+        "word",
+        "symbol",
+        "kind",
+        "uthmani_chars",
+        "run_length",
+        "onset_s",
+        "duration_s",
+        "duration_counts",
+        "identity",
+        "characteristics"
+      ],
       "properties": {
-        "id": {"type": "string", "pattern": "^[0-9]+:[0-9]+:L[0-9]+$", "description": "surah:ayah:L<index in the recording's part of the ayah>."},
-        "word": {"type": ["integer", "null"], "description": "Word index in the whole ayah."},
-        "symbol": {"type": "string", "description": "The phonetic symbol (Quran phonetic script)."},
-        "kind": {"enum": ["consonant", "harakah", "madd", "ikhfa_noon", "iqlab_meem", "qalqala_release"]},
-        "uthmani_chars": {"type": "array", "items": {"type": "integer"}, "description": "Indices of the Uthmani characters of the ayah text (as recited) that produced it."},
-        "run_length": {"type": "integer", "minimum": 1},
-        "onset_s": {"type": "number", "description": "Seconds from the start of the recording."},
-        "duration_s": {"type": "number", "minimum": 0},
-        "duration_counts": {"type": ["number", "null"]},
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9]+:[0-9]+:L[0-9]+$",
+          "description": "surah:ayah:L<index in the recording's part of the ayah>."
+        },
+        "word": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Word index in the whole ayah."
+        },
+        "symbol": {
+          "type": "string",
+          "description": "The phonetic symbol (Quran phonetic script)."
+        },
+        "kind": {
+          "enum": [
+            "consonant",
+            "harakah",
+            "madd",
+            "ikhfa_noon",
+            "iqlab_meem",
+            "qalqala_release"
+          ]
+        },
+        "uthmani_chars": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "description": "Indices of the Uthmani characters of the ayah text (as recited) that produced it."
+        },
+        "run_length": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "onset_s": {
+          "type": "number",
+          "description": "Seconds from the start of the recording."
+        },
+        "duration_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "duration_counts": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
         "identity": {
           "type": "object",
-          "required": ["confirmed", "competitor", "margin"],
+          "required": [
+            "confirmed",
+            "competitor",
+            "margin"
+          ],
           "properties": {
-            "confirmed": {"type": "boolean"},
-            "competitor": {"type": ["string", "null"]},
-            "margin": {"type": ["number", "null"], "description": "Nats by which the expected letter beat its competitor."}
+            "confirmed": {
+              "type": "boolean"
+            },
+            "competitor": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "margin": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "description": "Nats by which the expected letter beat its competitor."
+            }
           }
         },
-        "characteristics": {"type": "object", "additionalProperties": {"$ref": "#/$defs/characteristic"}}
+        "characteristics": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/characteristic"
+          }
+        },
+        "edge": {
+          "type": "boolean",
+          "description": "The recording starts or ends inside this letter's test window (3 frames, 0.12 s, either side): its identity and characteristics were tested partly on audio that is not there. Reported, still graded."
+        }
       }
     }
   }

@@ -78,6 +78,27 @@ class Exercise:
     controls: tuple[tuple[int, int], ...] = field(default_factory=tuple)   # (ayah, word) kept correct in B
     b_is_correct: bool = False               # take B is a second CORRECT reading, at another speed
     b_spec: str = ""
+    # (ayah, word) where the reciter STOPS inside an ayah and resumes with the next word. A long ayah
+    # must name its stops: the reciter should not choose them, and the engine must know them, since a
+    # stop changes what the text requires (قَآئِمًۭا at a stop is madd 'iwad, not ikhfa').
+    stops: tuple[tuple[int, int], ...] = ()
+
+
+def parts(ex: Exercise) -> list[tuple[int, ...]]:
+    """The submission's verses for the engine: whole ayahs, or an ayah cut at each declared stop."""
+    from quran_transcript import Aya
+    out: list[tuple[int, ...]] = []
+    for a in range(ex.ayahs[0], ex.ayahs[1] + 1):
+        cut = sorted(w for (y, w) in ex.stops if y == a)
+        if not cut:
+            out.append((ex.surah, a))
+            continue
+        last = len(Aya(ex.surah, a).get().uthmani.split()) - 1
+        lo = 0
+        for w in [*cut, last]:
+            out.append((ex.surah, a, lo, w))
+            lo = w + 1
+    return out
 
 
 def _nasal(rule: str) -> tuple[float, float]:
@@ -363,16 +384,17 @@ ROUNDS: dict[int, tuple[Exercise, ...]] = {
                  "(18–40 words) for coverage: 11 of the 12 rule kinds we target in 27 words, with three ḍāds, "
                  "two sīns and a dāl. Does the engine hold alignment, tempo and every judgement over a "
                  "long ayah, and do the substitutions tested in the short ones behave the same here?",
-            spec="Tadwīr, in one breath if you can (otherwise pause where you normally would), stop at the end. "
-                 "ٱلْإِنسَـٰنَ ikhfā' · ٱلضُّرُّ heavy ḍād · لِجَنۢبِهِۦٓ iqlāb and ṣila kubrā 4 · قَآئِمًۭا "
-                 "muttaṣil 4 and ikhfā' · فَلَمَّا ghunnah · كَأَن لَّمْ idghām without ghunnah · يَدْعُنَآ إِلَىٰ "
+            spec="Tadwīr, in three breaths with the two stops marked in the text: stop on قَآئِمَا (madd 'iwaḍ, "
+                 "two counts) and resume with فَلَمَّا; stop on مَسَّهْ (at the ۚ) and resume with كَذَٰلِكَ; stop "
+                 "at the end. ٱلْإِنسَـٰنَ ikhfā' · ٱلضُّرُّ heavy ḍād · لِجَنۢبِهِۦٓ iqlāb and ṣila kubrā 4 · قَآئِمًۭا "
+                 "muttaṣil 4 · فَلَمَّا ghunnah · كَأَن لَّمْ idghām without ghunnah · يَدْعُنَآ إِلَىٰ "
                  "munfaṣil 4 and qalqalah on the dāl · ضُرٍّۢ مَّسَّهُۥ idghām with ghunnah · ٱلْمُسْرِفِينَ light rā'.",
             wajh="tawassut",
             expect=(Expect(12, 2, "ikhfa", _nasal("ikhfa")), Expect(12, 3, "tafkheem"), Expect(12, 3, "itbaq"),
                     Expect(12, 5, "iqlab", _nasal("iqlab")),
                     Expect(12, 5, "madd_silah_kubra", _madd(4, 5), "declared tawassut"),
                     Expect(12, 7, "izhar_halqi"), Expect(12, 9, "madd_muttasil", _madd(4, 5)),
-                    Expect(12, 9, "ikhfa", _nasal("ikhfa")), Expect(12, 10, "ghunnah", _nasal("ghunnah")),
+                    Expect(12, 9, "madd_iwad", _madd(2), "the stop"), Expect(12, 10, "ghunnah", _nasal("ghunnah")),
                     Expect(12, 15, "idgham_no_ghunnah"),
                     Expect(12, 17, "madd_munfasil", _madd(4, 5), "declared tawassut"), Expect(12, 17, "qalqalah"),
                     Expect(12, 19, "idgham_ghunnah", _madd(2)), Expect(12, 23, "tarqeeq"),
@@ -392,6 +414,7 @@ ROUNDS: dict[int, tuple[Exercise, ...]] = {
                       Mistake(12, 23, "ٱلْمُسْرِفِينَ — make the rā' heavy (it carries kasrah and must be light).",
                               (Sig("rule", "tarqeeq"), Sig("sifah", "tafkheem_or_taqeeq", letter="ر")))),
             controls=((12, 0), (12, 6), (12, 8), (12, 11), (12, 12), (12, 21), (12, 22), (12, 24), (12, 25)),
+            stops=((12, 9), (12, 20)),
             learn="The first long ayah in the sessions: a miss here that was caught in a short ayah points at "
                   "alignment or tempo over length, not at the letter's test."),
     ),
@@ -542,7 +565,8 @@ def to_json(ex: Exercise) -> dict[str, Any]:
             "expect": [{"ayah": e.ayah, "word": e.word, "rule": e.rule, "counts": e.counts, "note": e.note}
                        for e in ex.expect],
             "mistakes": [{"ayah": mk.ayah, "word": mk.word, "do": mk.do} for mk in ex.mistakes],
-            "b_is_correct": ex.b_is_correct, "b_spec": ex.b_spec}
+            "b_is_correct": ex.b_is_correct, "b_spec": ex.b_spec,
+            "stops": [{"ayah": a, "word": w} for a, w in ex.stops]}
 
 
 def tempo_pair(a: dict[str, Any], b: dict[str, Any]) -> dict[str, Any]:

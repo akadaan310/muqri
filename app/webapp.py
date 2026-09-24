@@ -577,7 +577,7 @@ def create_app():  # type: ignore[no-untyped-def]
         note: str = Form(""),  # noqa: B008 - e.g. "rescore of <stamp>": not a new recording
     ):  # type: ignore[no-untyped-def]
         import json as _json
-        from app.sessions import exercises, score
+        from app.sessions import exercises, parts, score
         ex = exercises().get(exercise)
         if ex is None or take not in ("A", "B"):
             return JSONResponse({"error": "unknown exercise or take"}, status_code=422)
@@ -589,7 +589,7 @@ def create_app():  # type: ignore[no-untyped-def]
         t0 = time.time()
         try:
             wave = decode_upload(data)
-            verses = [(ex.surah, a) for a in range(ex.ayahs[0], ex.ayahs[1] + 1)]
+            verses = parts(ex)
             report = engine().analyze(wave, verses, wajh=ex.wajh)
             report["audio_seconds"] = round(float(wave.size) / 16000, 2)
             card = score(ex, take, report["measurements"])

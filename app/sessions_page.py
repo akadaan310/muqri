@@ -17,6 +17,7 @@ SESSIONS_PAGE = """<!doctype html>
  .goal{font-size:.9rem;margin:0 0 6px} .learn{color:var(--mut);font-size:.82rem;margin:0 0 10px}
  .ar{font-size:1.45rem;line-height:2.3;direction:rtl;text-align:right;margin:8px 0}
  .ar .n{color:var(--mut);font-size:.9rem}
+ .ar .stop{font-size:.8rem;color:#b3261e;font-weight:600;white-space:nowrap}
  .ar mark{background:var(--mark);color:inherit;border-radius:4px;padding:0 3px}
  .ar sup{font-size:.7rem;color:var(--warn);font-family:ui-sans-serif,system-ui}
  .takes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
@@ -113,7 +114,8 @@ async function go(n,id){panel(false);await load(n);if(id){const e=document.getEl
 function verses(x){
   return x.verses.map(v=>'<div class="ar">'+v.words.map((w,i)=>{
       const m=x.mistakes.findIndex(k=>k.ayah==v.ayah&&k.word==i);
-      return m>=0?'<mark>'+esc(w)+'<sup>'+(m+1)+'</sup></mark>':esc(w);
+      const s=(x.stops||[]).some(k=>k.ayah==v.ayah&&k.word==i)?' <span class="stop">⏹ stop, then resume</span><br>':'';
+      return (m>=0?'<mark>'+esc(w)+'<sup>'+(m+1)+'</sup></mark>':esc(w))+s;
     }).join(' ')+' <span class="n">('+x.surah+':'+v.ayah+')</span></div>').join('');
 }
 function card(x,i,st){

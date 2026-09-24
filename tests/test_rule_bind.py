@@ -128,3 +128,29 @@ def test_muqattaat_bind_although_the_word_counts_disagree() -> None:
     assert all(b.expected_counts == (6, 6) for b in lazim)
     # the six-count madd is written as six repetitions, so the encoding matches the requirement
     assert len(symbols(units, lazim[0])) == 6
+
+
+def test_idgham_naqis_binds_to_the_held_letter_not_the_vowel_after_it() -> None:
+    """99:7 فَمَن يَعْمَلْ is "famay|yyaʿmal": the held ييي starts in فَمَن and reaches into يَعْمَلْ.
+
+    Binding only runs that START in the next word landed on the fatḥah after it, so a correct idghām
+    read ~1.2 counts ("short") and a merge with no ghunnah read the same. Found in calibration round 3.
+    """
+    for ayah in (7, 8):
+        rules, units, _ = bound_for(99, ayah)
+        naqis = [b for b in rules if b.rule_type == "idgham_ghunnah"]
+        assert len(naqis) == 2
+        assert all(symbols(units, b) == "ييي" for b in naqis)
+
+
+def test_madd_iwad_binds_to_the_final_alif_not_the_muttasil() -> None:
+    """قَآئِمًۭا at a stop has two madds: muttaṣil on the first alif, 'iwaḍ on the alif that replaces
+    the tanwīn. Keeping the longest run bound 'iwaḍ to the muttaṣil alif (10:12 cut at word 9)."""
+    u = " ".join(Aya(10, 12).get().uthmani.split()[:10])
+    r = quran_phonetizer(u, MOSHAF, remove_spaces=True)
+    rules = bind(TajweedParser().parse(u), r.phonemes, md.word_spans(u, r.mappings))
+    units = ph_units(r.phonemes)
+    iwad = [b for b in rules if b.rule_type == "madd_iwad"]
+    muttasil = [b for b in rules if b.rule_type == "madd_muttasil" and b.word_index == 9]
+    assert iwad and muttasil and iwad[0].unit_indices != muttasil[0].unit_indices
+    assert iwad[0].unit_indices == [len(units) - 1]

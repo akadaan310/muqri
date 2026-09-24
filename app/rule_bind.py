@@ -198,7 +198,9 @@ def bind(parsed, phonemes: str, word_ph: list[list[int]]) -> list[BoundRule]:  #
             if first is not None and units[first][2] < hi:
                 idxs = [first]
         for i, (sym, a, b) in enumerate(units) if not idxs else []:
-            if a < lo or b >= hi or i in taken:
+            # an assimilation's doubled run may start in the word it came from and reach across the
+            # boundary: فَمَن يَعْمَلْ is "famay|yyaʿmal", the held ييي split over the two words (99:7)
+            if (b < lo if rt in BOUNDARY else a < lo) or b >= hi or i in taken:
                 continue
             if rt in BOUNDARY:
                 # the merged letter is the doubled run (the shadda), whatever letter it landed on
@@ -217,6 +219,10 @@ def bind(parsed, phonemes: str, word_ph: list[list[int]]) -> list[BoundRule]:  #
                 idxs = [first]
         if not idxs:
             continue
+        if rt is RuleType.MADD_IWAD and idxs:
+            # the alif that replaces the tanwin at a stop is the word's LAST letter; the longest run
+            # would be the muttasil alif of قَآئِمًۭا (10:12), which then answered for both
+            idxs = idxs[-1:]
         # the parser may locate several instances of the same rule in one word; keep as many units as
         # it named, preferring the longest runs (a madd is the long run, not an incidental letter)
         want = max(1, len(r.unit_indices) // 2) if rt in DURATIONAL else len(idxs)

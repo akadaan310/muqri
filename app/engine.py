@@ -22,6 +22,8 @@ from app.analysis import analyse_clip
 from app.rule_bind import bind
 from app.ghunnah import grade_ghunnah
 from app.mudud import resolve
+from app.tafkhim import grade as grade_tafkhim
+from app.itmam import sequences as vowel_sequences
 from app.waqf import find_stops
 from app.submission import AyahRef, build_report, grade_rule, to_counts, walk_alignment
 from app.tajweed_rules.parser import TajweedParser
@@ -140,10 +142,13 @@ class Engine:
             # silence is acoustic: pass the audio segment, not the posteriors
             seg = None if audio is None else _np_slice(audio, t0, t1)
             stops = find_stops(units, r.word_ph, seg)
+            heaviness = grade_tafkhim(units)
+            seqs = vowel_sequences(units)
             harakas = [u.duration_s / u.duration_counts for u in units
                        if u.duration_counts not in (None, 0)]
             per_ayah.append({"surah": r.surah, "ayah": r.ayah, "frames": [t0, t1],
                              "haraka_s": round(float(np.median(harakas)), 3) if harakas else None,
                              "verdicts": verdicts, "ghunnah": ghunnah,
-                             "resolutions": resolutions, "stops": stops, "_units": units})
+                             "resolutions": resolutions, "stops": stops,
+                             "heaviness": heaviness, "sequences": seqs, "_units": units})
         return build_report(per_ayah, rule_filter)

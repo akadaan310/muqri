@@ -1,0 +1,1840 @@
+Loading weights:   0%|          | 0/213 [00:00<?, ?it/s]Loading weights:   0%|          | 1/213 [00:00<00:00, 7767.23it/s, Materializing param=lm_head.bias]Loading weights:   0%|          | 1/213 [00:00<00:00, 2861.05it/s, Materializing param=lm_head.bias]Loading weights:   1%|          | 2/213 [00:00<00:00, 2968.37it/s, Materializing param=lm_head.weight]Loading weights:   1%|          | 2/213 [00:00<00:00, 2454.96it/s, Materializing param=lm_head.weight]Loading weights:   1%|▏         | 3/213 [00:00<00:00, 2730.67it/s, Materializing param=wav2vec2.encoder.layer_norm.bias]Loading weights:   1%|▏         | 3/213 [00:00<00:00, 2439.02it/s, Materializing param=wav2vec2.encoder.layer_norm.bias]Loading weights:   2%|▏         | 4/213 [00:00<00:00, 1607.78it/s, Materializing param=wav2vec2.encoder.layer_norm.weight]Loading weights:   2%|▏         | 4/213 [00:00<00:00, 1479.86it/s, Materializing param=wav2vec2.encoder.layer_norm.weight]Loading weights:   2%|▏         | 5/213 [00:00<00:00, 1676.92it/s, Materializing param=wav2vec2.encoder.layers.0.attention.k_proj.bias]Loading weights:   2%|▏         | 5/213 [00:00<00:00, 1618.55it/s, Materializing param=wav2vec2.encoder.layers.0.attention.k_proj.bias]Loading weights:   3%|▎         | 6/213 [00:00<00:00, 1743.15it/s, Materializing param=wav2vec2.encoder.layers.0.attention.k_proj.weight]Loading weights:   3%|▎         | 6/213 [00:00<00:00, 1687.62it/s, Materializing param=wav2vec2.encoder.layers.0.attention.k_proj.weight]Loading weights:   3%|▎         | 7/213 [00:00<00:00, 1826.22it/s, Materializing param=wav2vec2.encoder.layers.0.attention.out_proj.bias]Loading weights:   3%|▎         | 7/213 [00:00<00:00, 1777.79it/s, Materializing param=wav2vec2.encoder.layers.0.attention.out_proj.bias]Loading weights:   4%|▍         | 8/213 [00:00<00:00, 1892.84it/s, Materializing param=wav2vec2.encoder.layers.0.attention.out_proj.weight]Loading weights:   4%|▍         | 8/213 [00:00<00:00, 1825.10it/s, Materializing param=wav2vec2.encoder.layers.0.attention.out_proj.weight]Loading weights:   4%|▍         | 9/213 [00:00<00:00, 1547.27it/s, Materializing param=wav2vec2.encoder.layers.0.attention.q_proj.bias]    Loading weights:   4%|▍         | 9/213 [00:00<00:00, 1513.58it/s, Materializing param=wav2vec2.encoder.layers.0.attention.q_proj.bias]Loading weights:   5%|▍         | 10/213 [00:00<00:00, 1569.02it/s, Materializing param=wav2vec2.encoder.layers.0.attention.q_proj.weight]Loading weights:   5%|▍         | 10/213 [00:00<00:00, 1495.94it/s, Materializing param=wav2vec2.encoder.layers.0.attention.q_proj.weight]Loading weights:   5%|▌         | 11/213 [00:00<00:00, 1571.70it/s, Materializing param=wav2vec2.encoder.layers.0.attention.v_proj.bias]  Loading weights:   5%|▌         | 11/213 [00:00<00:00, 1546.26it/s, Materializing param=wav2vec2.encoder.layers.0.attention.v_proj.bias]Loading weights:   6%|▌         | 12/213 [00:00<00:00, 1591.36it/s, Materializing param=wav2vec2.encoder.layers.0.attention.v_proj.weight]Loading weights:   6%|▌         | 12/213 [00:00<00:00, 1486.60it/s, Materializing param=wav2vec2.encoder.layers.0.attention.v_proj.weight]Loading weights:   6%|▌         | 13/213 [00:00<00:00, 1551.28it/s, Materializing param=wav2vec2.encoder.layers.0.feed_forward.intermediate_dense.bias]Loading weights:   6%|▌         | 13/213 [00:00<00:00, 1530.42it/s, Materializing param=wav2vec2.encoder.layers.0.feed_forward.intermediate_dense.bias]Loading weights:   7%|▋         | 14/213 [00:00<00:00, 1600.40it/s, Materializing param=wav2vec2.encoder.layers.0.feed_forward.intermediate_dense.weight]Loading weights:   7%|▋         | 14/213 [00:00<00:00, 1579.69it/s, Materializing param=wav2vec2.encoder.layers.0.feed_forward.intermediate_dense.weight]Loading weights:   7%|▋         | 15/213 [00:00<00:00, 1628.14it/s, Materializing param=wav2vec2.encoder.layers.0.feed_forward.output_dense.bias]        Loading weights:   7%|▋         | 15/213 [00:00<00:00, 1513.82it/s, Materializing param=wav2vec2.encoder.layers.0.feed_forward.output_dense.bias]Loading weights:   8%|▊         | 16/213 [00:00<00:00, 1555.68it/s, Materializing param=wav2vec2.encoder.layers.0.feed_forward.output_dense.weight]Loading weights:   8%|▊         | 16/213 [00:00<00:00, 1492.14it/s, Materializing param=wav2vec2.encoder.layers.0.feed_forward.output_dense.weight]Loading weights:   8%|▊         | 17/213 [00:00<00:00, 1540.96it/s, Materializing param=wav2vec2.encoder.layers.0.final_layer_norm.bias]           Loading weights:   8%|▊         | 17/213 [00:00<00:00, 1520.29it/s, Materializing param=wav2vec2.encoder.layers.0.final_layer_norm.bias]Loading weights:   8%|▊         | 18/213 [00:00<00:00, 1436.62it/s, Materializing param=wav2vec2.encoder.layers.0.final_layer_norm.weight]Loading weights:   8%|▊         | 18/213 [00:00<00:00, 1419.85it/s, Materializing param=wav2vec2.encoder.layers.0.final_layer_norm.weight]Loading weights:   9%|▉         | 19/213 [00:00<00:00, 1467.46it/s, Materializing param=wav2vec2.encoder.layers.0.layer_norm.bias]        Loading weights:   9%|▉         | 19/213 [00:00<00:00, 1452.69it/s, Materializing param=wav2vec2.encoder.layers.0.layer_norm.bias]Loading weights:   9%|▉         | 20/213 [00:00<00:00, 1424.50it/s, Materializing param=wav2vec2.encoder.layers.0.layer_norm.weight]Loading weights:   9%|▉         | 20/213 [00:00<00:00, 1345.15it/s, Materializing param=wav2vec2.encoder.layers.0.layer_norm.weight]Loading weights:  10%|▉         | 21/213 [00:00<00:00, 1343.49it/s, Materializing param=wav2vec2.encoder.layers.1.attention.k_proj.bias]Loading weights:  10%|▉         | 21/213 [00:00<00:00, 1334.19it/s, Materializing param=wav2vec2.encoder.layers.1.attention.k_proj.bias]Loading weights:  10%|█         | 22/213 [00:00<00:00, 1375.90it/s, Materializing param=wav2vec2.encoder.layers.1.attention.k_proj.weight]Loading weights:  10%|█         | 22/213 [00:00<00:00, 1366.77it/s, Materializing param=wav2vec2.encoder.layers.1.attention.k_proj.weight]Loading weights:  11%|█         | 23/213 [00:00<00:00, 1402.98it/s, Materializing param=wav2vec2.encoder.layers.1.attention.out_proj.bias]Loading weights:  11%|█         | 23/213 [00:00<00:00, 1393.30it/s, Materializing param=wav2vec2.encoder.layers.1.attention.out_proj.bias]Loading weights:  11%|█▏        | 24/213 [00:00<00:00, 1428.07it/s, Materializing param=wav2vec2.encoder.layers.1.attention.out_proj.weight]Loading weights:  11%|█▏        | 24/213 [00:00<00:00, 1418.95it/s, Materializing param=wav2vec2.encoder.layers.1.attention.out_proj.weight]Loading weights:  12%|█▏        | 25/213 [00:00<00:00, 1399.63it/s, Materializing param=wav2vec2.encoder.layers.1.attention.q_proj.bias]    Loading weights:  12%|█▏        | 25/213 [00:00<00:00, 1390.50it/s, Materializing param=wav2vec2.encoder.layers.1.attention.q_proj.bias]Loading weights:  12%|█▏        | 26/213 [00:00<00:00, 1400.81it/s, Materializing param=wav2vec2.encoder.layers.1.attention.q_proj.weight]Loading weights:  12%|█▏        | 26/213 [00:00<00:00, 1390.91it/s, Materializing param=wav2vec2.encoder.layers.1.attention.q_proj.weight]Loading weights:  13%|█▎        | 27/213 [00:00<00:00, 1425.54it/s, Materializing param=wav2vec2.encoder.layers.1.attention.v_proj.bias]  Loading weights:  13%|█▎        | 27/213 [00:00<00:00, 1417.51it/s, Materializing param=wav2vec2.encoder.layers.1.attention.v_proj.bias]Loading weights:  13%|█▎        | 28/213 [00:00<00:00, 1394.22it/s, Materializing param=wav2vec2.encoder.layers.1.attention.v_proj.weight]Loading weights:  13%|█▎        | 28/213 [00:00<00:00, 1386.02it/s, Materializing param=wav2vec2.encoder.layers.1.attention.v_proj.weight]Loading weights:  14%|█▎        | 29/213 [00:00<00:00, 1395.58it/s, Materializing param=wav2vec2.encoder.layers.1.feed_forward.intermediate_dense.bias]Loading weights:  14%|█▎        | 29/213 [00:00<00:00, 1369.24it/s, Materializing param=wav2vec2.encoder.layers.1.feed_forward.intermediate_dense.bias]Loading weights:  14%|█▍        | 30/213 [00:00<00:00, 1355.22it/s, Materializing param=wav2vec2.encoder.layers.1.feed_forward.intermediate_dense.weight]Loading weights:  14%|█▍        | 30/213 [00:00<00:00, 1347.52it/s, Materializing param=wav2vec2.encoder.layers.1.feed_forward.intermediate_dense.weight]Loading weights:  15%|█▍        | 31/213 [00:00<00:00, 1371.15it/s, Materializing param=wav2vec2.encoder.layers.1.feed_forward.output_dense.bias]        Loading weights:  15%|█▍        | 31/213 [00:00<00:00, 1363.60it/s, Materializing param=wav2vec2.encoder.layers.1.feed_forward.output_dense.bias]Loading weights:  15%|█▌        | 32/213 [00:00<00:00, 1335.94it/s, Materializing param=wav2vec2.encoder.layers.1.feed_forward.output_dense.weight]Loading weights:  15%|█▌        | 32/213 [00:00<00:00, 1327.14it/s, Materializing param=wav2vec2.encoder.layers.1.feed_forward.output_dense.weight]Loading weights:  15%|█▌        | 33/213 [00:00<00:00, 1350.77it/s, Materializing param=wav2vec2.encoder.layers.1.final_layer_norm.bias]           Loading weights:  15%|█▌        | 33/213 [00:00<00:00, 1342.67it/s, Materializing param=wav2vec2.encoder.layers.1.final_layer_norm.bias]Loading weights:  16%|█▌        | 34/213 [00:00<00:00, 1364.80it/s, Materializing param=wav2vec2.encoder.layers.1.final_layer_norm.weight]Loading weights:  16%|█▌        | 34/213 [00:00<00:00, 1356.89it/s, Materializing param=wav2vec2.encoder.layers.1.final_layer_norm.weight]Loading weights:  16%|█▋        | 35/213 [00:00<00:00, 1376.16it/s, Materializing param=wav2vec2.encoder.layers.1.layer_norm.bias]        Loading weights:  16%|█▋        | 35/213 [00:00<00:00, 1368.44it/s, Materializing param=wav2vec2.encoder.layers.1.layer_norm.bias]Loading weights:  17%|█▋        | 36/213 [00:00<00:00, 1391.04it/s, Materializing param=wav2vec2.encoder.layers.1.layer_norm.weight]Loading weights:  17%|█▋        | 36/213 [00:00<00:00, 1384.42it/s, Materializing param=wav2vec2.encoder.layers.1.layer_norm.weight]Loading weights:  17%|█▋        | 37/213 [00:00<00:00, 1388.47it/s, Materializing param=wav2vec2.encoder.layers.2.attention.k_proj.bias]Loading weights:  17%|█▋        | 37/213 [00:00<00:00, 1381.29it/s, Materializing param=wav2vec2.encoder.layers.2.attention.k_proj.bias]Loading weights:  18%|█▊        | 38/213 [00:00<00:00, 1393.37it/s, Materializing param=wav2vec2.encoder.layers.2.attention.k_proj.weight]Loading weights:  18%|█▊        | 38/213 [00:00<00:00, 1372.71it/s, Materializing param=wav2vec2.encoder.layers.2.attention.k_proj.weight]Loading weights:  18%|█▊        | 39/213 [00:00<00:00, 1392.80it/s, Materializing param=wav2vec2.encoder.layers.2.attention.out_proj.bias]Loading weights:  18%|█▊        | 39/213 [00:00<00:00, 1385.64it/s, Materializing param=wav2vec2.encoder.layers.2.attention.out_proj.bias]Loading weights:  19%|█▉        | 40/213 [00:00<00:00, 1401.08it/s, Materializing param=wav2vec2.encoder.layers.2.attention.out_proj.weight]Loading weights:  19%|█▉        | 40/213 [00:00<00:00, 1393.54it/s, Materializing param=wav2vec2.encoder.layers.2.attention.out_proj.weight]Loading weights:  19%|█▉        | 41/213 [00:00<00:00, 1412.83it/s, Materializing param=wav2vec2.encoder.layers.2.attention.q_proj.bias]    Loading weights:  19%|█▉        | 41/213 [00:00<00:00, 1405.62it/s, Materializing param=wav2vec2.encoder.layers.2.attention.q_proj.bias]Loading weights:  20%|█▉        | 42/213 [00:00<00:00, 1413.41it/s, Materializing param=wav2vec2.encoder.layers.2.attention.q_proj.weight]Loading weights:  20%|█▉        | 42/213 [00:00<00:00, 1406.57it/s, Materializing param=wav2vec2.encoder.layers.2.attention.q_proj.weight]Loading weights:  20%|██        | 43/213 [00:00<00:00, 1400.01it/s, Materializing param=wav2vec2.encoder.layers.2.attention.v_proj.bias]  Loading weights:  20%|██        | 43/213 [00:00<00:00, 1392.48it/s, Materializing param=wav2vec2.encoder.layers.2.attention.v_proj.bias]Loading weights:  21%|██        | 44/213 [00:00<00:00, 1385.51it/s, Materializing param=wav2vec2.encoder.layers.2.attention.v_proj.weight]Loading weights:  21%|██        | 44/213 [00:00<00:00, 1377.81it/s, Materializing param=wav2vec2.encoder.layers.2.attention.v_proj.weight]Loading weights:  21%|██        | 45/213 [00:00<00:00, 1396.62it/s, Materializing param=wav2vec2.encoder.layers.2.feed_forward.intermediate_dense.bias]Loading weights:  21%|██        | 45/213 [00:00<00:00, 1379.27it/s, Materializing param=wav2vec2.encoder.layers.2.feed_forward.intermediate_dense.bias]Loading weights:  22%|██▏       | 46/213 [00:00<00:00, 1396.91it/s, Materializing param=wav2vec2.encoder.layers.2.feed_forward.intermediate_dense.weight]Loading weights:  22%|██▏       | 46/213 [00:00<00:00, 1391.26it/s, Materializing param=wav2vec2.encoder.layers.2.feed_forward.intermediate_dense.weight]Loading weights:  22%|██▏       | 47/213 [00:00<00:00, 1394.86it/s, Materializing param=wav2vec2.encoder.layers.2.feed_forward.output_dense.bias]        Loading weights:  22%|██▏       | 47/213 [00:00<00:00, 1387.87it/s, Materializing param=wav2vec2.encoder.layers.2.feed_forward.output_dense.bias]Loading weights:  23%|██▎       | 48/213 [00:00<00:00, 1401.05it/s, Materializing param=wav2vec2.encoder.layers.2.feed_forward.output_dense.weight]Loading weights:  23%|██▎       | 48/213 [00:00<00:00, 1395.19it/s, Materializing param=wav2vec2.encoder.layers.2.feed_forward.output_dense.weight]Loading weights:  23%|██▎       | 49/213 [00:00<00:00, 1408.26it/s, Materializing param=wav2vec2.encoder.layers.2.final_layer_norm.bias]           Loading weights:  23%|██▎       | 49/213 [00:00<00:00, 1403.57it/s, Materializing param=wav2vec2.encoder.layers.2.final_layer_norm.bias]Loading weights:  23%|██▎       | 50/213 [00:00<00:00, 1402.58it/s, Materializing param=wav2vec2.encoder.layers.2.final_layer_norm.weight]Loading weights:  23%|██▎       | 50/213 [00:00<00:00, 1397.88it/s, Materializing param=wav2vec2.encoder.layers.2.final_layer_norm.weight]Loading weights:  24%|██▍       | 51/213 [00:00<00:00, 1412.18it/s, Materializing param=wav2vec2.encoder.layers.2.layer_norm.bias]        Loading weights:  24%|██▍       | 51/213 [00:00<00:00, 1407.39it/s, Materializing param=wav2vec2.encoder.layers.2.layer_norm.bias]Loading weights:  24%|██▍       | 52/213 [00:00<00:00, 1421.71it/s, Materializing param=wav2vec2.encoder.layers.2.layer_norm.weight]Loading weights:  24%|██▍       | 52/213 [00:00<00:00, 1416.69it/s, Materializing param=wav2vec2.encoder.layers.2.layer_norm.weight]Loading weights:  25%|██▍       | 53/213 [00:00<00:00, 1407.53it/s, Materializing param=wav2vec2.encoder.layers.3.attention.k_proj.bias]Loading weights:  25%|██▍       | 53/213 [00:00<00:00, 1389.35it/s, Materializing param=wav2vec2.encoder.layers.3.attention.k_proj.bias]Loading weights:  25%|██▌       | 54/213 [00:00<00:00, 1364.60it/s, Materializing param=wav2vec2.encoder.layers.3.attention.k_proj.weight]Loading weights:  25%|██▌       | 54/213 [00:00<00:00, 1351.27it/s, Materializing param=wav2vec2.encoder.layers.3.attention.k_proj.weight]Loading weights:  26%|██▌       | 55/213 [00:00<00:00, 1350.44it/s, Materializing param=wav2vec2.encoder.layers.3.attention.out_proj.bias]Loading weights:  26%|██▌       | 55/213 [00:00<00:00, 1345.99it/s, Materializing param=wav2vec2.encoder.layers.3.attention.out_proj.bias]Loading weights:  26%|██▋       | 56/213 [00:00<00:00, 1296.83it/s, Materializing param=wav2vec2.encoder.layers.3.attention.out_proj.weight]Loading weights:  26%|██▋       | 56/213 [00:00<00:00, 1287.81it/s, Materializing param=wav2vec2.encoder.layers.3.attention.out_proj.weight]Loading weights:  27%|██▋       | 57/213 [00:00<00:00, 1298.80it/s, Materializing param=wav2vec2.encoder.layers.3.attention.q_proj.bias]    Loading weights:  27%|██▋       | 57/213 [00:00<00:00, 1291.34it/s, Materializing param=wav2vec2.encoder.layers.3.attention.q_proj.bias]Loading weights:  27%|██▋       | 58/213 [00:00<00:00, 1286.21it/s, Materializing param=wav2vec2.encoder.layers.3.attention.q_proj.weight]Loading weights:  27%|██▋       | 58/213 [00:00<00:00, 1273.84it/s, Materializing param=wav2vec2.encoder.layers.3.attention.q_proj.weight]Loading weights:  28%|██▊       | 59/213 [00:00<00:00, 1276.89it/s, Materializing param=wav2vec2.encoder.layers.3.attention.v_proj.bias]  Loading weights:  28%|██▊       | 59/213 [00:00<00:00, 1267.36it/s, Materializing param=wav2vec2.encoder.layers.3.attention.v_proj.bias]Loading weights:  28%|██▊       | 60/213 [00:00<00:00, 1279.69it/s, Materializing param=wav2vec2.encoder.layers.3.attention.v_proj.weight]Loading weights:  28%|██▊       | 60/213 [00:00<00:00, 1276.73it/s, Materializing param=wav2vec2.encoder.layers.3.attention.v_proj.weight]Loading weights:  29%|██▊       | 61/213 [00:00<00:00, 1291.34it/s, Materializing param=wav2vec2.encoder.layers.3.feed_forward.intermediate_dense.bias]Loading weights:  29%|██▊       | 61/213 [00:00<00:00, 1287.41it/s, Materializing param=wav2vec2.encoder.layers.3.feed_forward.intermediate_dense.bias]Loading weights:  29%|██▉       | 62/213 [00:00<00:00, 1259.12it/s, Materializing param=wav2vec2.encoder.layers.3.feed_forward.intermediate_dense.weight]Loading weights:  29%|██▉       | 62/213 [00:00<00:00, 1254.04it/s, Materializing param=wav2vec2.encoder.layers.3.feed_forward.intermediate_dense.weight]Loading weights:  30%|██▉       | 63/213 [00:00<00:00, 1259.80it/s, Materializing param=wav2vec2.encoder.layers.3.feed_forward.output_dense.bias]        Loading weights:  30%|██▉       | 63/213 [00:00<00:00, 1256.32it/s, Materializing param=wav2vec2.encoder.layers.3.feed_forward.output_dense.bias]Loading weights:  30%|███       | 64/213 [00:00<00:00, 1269.14it/s, Materializing param=wav2vec2.encoder.layers.3.feed_forward.output_dense.weight]Loading weights:  30%|███       | 64/213 [00:00<00:00, 1266.35it/s, Materializing param=wav2vec2.encoder.layers.3.feed_forward.output_dense.weight]Loading weights:  31%|███       | 65/213 [00:00<00:00, 1278.12it/s, Materializing param=wav2vec2.encoder.layers.3.final_layer_norm.bias]           Loading weights:  31%|███       | 65/213 [00:00<00:00, 1274.95it/s, Materializing param=wav2vec2.encoder.layers.3.final_layer_norm.bias]Loading weights:  31%|███       | 66/213 [00:00<00:00, 1271.85it/s, Materializing param=wav2vec2.encoder.layers.3.final_layer_norm.weight]Loading weights:  31%|███       | 66/213 [00:00<00:00, 1268.81it/s, Materializing param=wav2vec2.encoder.layers.3.final_layer_norm.weight]Loading weights:  31%|███▏      | 67/213 [00:00<00:00, 1275.98it/s, Materializing param=wav2vec2.encoder.layers.3.layer_norm.bias]        Loading weights:  31%|███▏      | 67/213 [00:00<00:00, 1272.93it/s, Materializing param=wav2vec2.encoder.layers.3.layer_norm.bias]Loading weights:  32%|███▏      | 68/213 [00:00<00:00, 1284.47it/s, Materializing param=wav2vec2.encoder.layers.3.layer_norm.weight]Loading weights:  32%|███▏      | 68/213 [00:00<00:00, 1281.84it/s, Materializing param=wav2vec2.encoder.layers.3.layer_norm.weight]Loading weights:  32%|███▏      | 69/213 [00:00<00:00, 1291.02it/s, Materializing param=wav2vec2.encoder.layers.4.attention.k_proj.bias]Loading weights:  32%|███▏      | 69/213 [00:00<00:00, 1288.21it/s, Materializing param=wav2vec2.encoder.layers.4.attention.k_proj.bias]Loading weights:  33%|███▎      | 70/213 [00:00<00:00, 1299.52it/s, Materializing param=wav2vec2.encoder.layers.4.attention.k_proj.weight]Loading weights:  33%|███▎      | 70/213 [00:00<00:00, 1296.16it/s, Materializing param=wav2vec2.encoder.layers.4.attention.k_proj.weight]Loading weights:  33%|███▎      | 71/213 [00:00<00:00, 1297.87it/s, Materializing param=wav2vec2.encoder.layers.4.attention.out_proj.bias]Loading weights:  33%|███▎      | 71/213 [00:00<00:00, 1295.06it/s, Materializing param=wav2vec2.encoder.layers.4.attention.out_proj.bias]Loading weights:  34%|███▍      | 72/213 [00:00<00:00, 1301.20it/s, Materializing param=wav2vec2.encoder.layers.4.attention.out_proj.weight]Loading weights:  34%|███▍      | 72/213 [00:00<00:00, 1285.11it/s, Materializing param=wav2vec2.encoder.layers.4.attention.out_proj.weight]Loading weights:  34%|███▍      | 73/213 [00:00<00:00, 1295.28it/s, Materializing param=wav2vec2.encoder.layers.4.attention.q_proj.bias]    Loading weights:  34%|███▍      | 73/213 [00:00<00:00, 1292.70it/s, Materializing param=wav2vec2.encoder.layers.4.attention.q_proj.bias]Loading weights:  35%|███▍      | 74/213 [00:00<00:00, 1297.95it/s, Materializing param=wav2vec2.encoder.layers.4.attention.q_proj.weight]Loading weights:  35%|███▍      | 74/213 [00:00<00:00, 1292.74it/s, Materializing param=wav2vec2.encoder.layers.4.attention.q_proj.weight]Loading weights:  35%|███▌      | 75/213 [00:00<00:00, 1301.87it/s, Materializing param=wav2vec2.encoder.layers.4.attention.v_proj.bias]  Loading weights:  35%|███▌      | 75/213 [00:00<00:00, 1299.35it/s, Materializing param=wav2vec2.encoder.layers.4.attention.v_proj.bias]Loading weights:  36%|███▌      | 76/213 [00:00<00:00, 1308.40it/s, Materializing param=wav2vec2.encoder.layers.4.attention.v_proj.weight]Loading weights:  36%|███▌      | 76/213 [00:00<00:00, 1305.93it/s, Materializing param=wav2vec2.encoder.layers.4.attention.v_proj.weight]Loading weights:  36%|███▌      | 77/213 [00:00<00:00, 1311.72it/s, Materializing param=wav2vec2.encoder.layers.4.feed_forward.intermediate_dense.bias]Loading weights:  36%|███▌      | 77/213 [00:00<00:00, 1303.37it/s, Materializing param=wav2vec2.encoder.layers.4.feed_forward.intermediate_dense.bias]Loading weights:  37%|███▋      | 78/213 [00:00<00:00, 1302.56it/s, Materializing param=wav2vec2.encoder.layers.4.feed_forward.intermediate_dense.weight]Loading weights:  37%|███▋      | 78/213 [00:00<00:00, 1299.91it/s, Materializing param=wav2vec2.encoder.layers.4.feed_forward.intermediate_dense.weight]Loading weights:  37%|███▋      | 79/213 [00:00<00:00, 1307.71it/s, Materializing param=wav2vec2.encoder.layers.4.feed_forward.output_dense.bias]        Loading weights:  37%|███▋      | 79/213 [00:00<00:00, 1297.10it/s, Materializing param=wav2vec2.encoder.layers.4.feed_forward.output_dense.bias]Loading weights:  38%|███▊      | 80/213 [00:00<00:00, 1303.80it/s, Materializing param=wav2vec2.encoder.layers.4.feed_forward.output_dense.weight]Loading weights:  38%|███▊      | 80/213 [00:00<00:00, 1282.31it/s, Materializing param=wav2vec2.encoder.layers.4.feed_forward.output_dense.weight]Loading weights:  38%|███▊      | 81/213 [00:00<00:00, 1266.98it/s, Materializing param=wav2vec2.encoder.layers.4.final_layer_norm.bias]           Loading weights:  38%|███▊      | 81/213 [00:00<00:00, 1264.54it/s, Materializing param=wav2vec2.encoder.layers.4.final_layer_norm.bias]Loading weights:  38%|███▊      | 82/213 [00:00<00:00, 1272.24it/s, Materializing param=wav2vec2.encoder.layers.4.final_layer_norm.weight]Loading weights:  38%|███▊      | 82/213 [00:00<00:00, 1268.07it/s, Materializing param=wav2vec2.encoder.layers.4.final_layer_norm.weight]Loading weights:  39%|███▉      | 83/213 [00:00<00:00, 1276.78it/s, Materializing param=wav2vec2.encoder.layers.4.layer_norm.bias]        Loading weights:  39%|███▉      | 83/213 [00:00<00:00, 1274.73it/s, Materializing param=wav2vec2.encoder.layers.4.layer_norm.bias]Loading weights:  39%|███▉      | 84/213 [00:00<00:00, 1283.18it/s, Materializing param=wav2vec2.encoder.layers.4.layer_norm.weight]Loading weights:  39%|███▉      | 84/213 [00:00<00:00, 1281.39it/s, Materializing param=wav2vec2.encoder.layers.4.layer_norm.weight]Loading weights:  40%|███▉      | 85/213 [00:00<00:00, 1274.04it/s, Materializing param=wav2vec2.encoder.layers.5.attention.k_proj.bias]Loading weights:  40%|███▉      | 85/213 [00:00<00:00, 1256.85it/s, Materializing param=wav2vec2.encoder.layers.5.attention.k_proj.bias]Loading weights:  40%|████      | 86/213 [00:00<00:00, 1253.91it/s, Materializing param=wav2vec2.encoder.layers.5.attention.k_proj.weight]Loading weights:  40%|████      | 86/213 [00:00<00:00, 1251.61it/s, Materializing param=wav2vec2.encoder.layers.5.attention.k_proj.weight]Loading weights:  41%|████      | 87/213 [00:00<00:00, 1253.89it/s, Materializing param=wav2vec2.encoder.layers.5.attention.out_proj.bias]Loading weights:  41%|████      | 87/213 [00:00<00:00, 1251.77it/s, Materializing param=wav2vec2.encoder.layers.5.attention.out_proj.bias]Loading weights:  41%|████▏     | 88/213 [00:00<00:00, 1260.84it/s, Materializing param=wav2vec2.encoder.layers.5.attention.out_proj.weight]Loading weights:  41%|████▏     | 88/213 [00:00<00:00, 1258.95it/s, Materializing param=wav2vec2.encoder.layers.5.attention.out_proj.weight]Loading weights:  42%|████▏     | 89/213 [00:00<00:00, 1261.43it/s, Materializing param=wav2vec2.encoder.layers.5.attention.q_proj.bias]    Loading weights:  42%|████▏     | 89/213 [00:00<00:00, 1259.22it/s, Materializing param=wav2vec2.encoder.layers.5.attention.q_proj.bias]Loading weights:  42%|████▏     | 90/213 [00:00<00:00, 1269.00it/s, Materializing param=wav2vec2.encoder.layers.5.attention.q_proj.weight]Loading weights:  42%|████▏     | 90/213 [00:00<00:00, 1267.09it/s, Materializing param=wav2vec2.encoder.layers.5.attention.q_proj.weight]Loading weights:  43%|████▎     | 91/213 [00:00<00:00, 1270.20it/s, Materializing param=wav2vec2.encoder.layers.5.attention.v_proj.bias]  Loading weights:  43%|████▎     | 91/213 [00:00<00:00, 1266.94it/s, Materializing param=wav2vec2.encoder.layers.5.attention.v_proj.bias]Loading weights:  43%|████▎     | 92/213 [00:00<00:00, 1256.83it/s, Materializing param=wav2vec2.encoder.layers.5.attention.v_proj.weight]Loading weights:  43%|████▎     | 92/213 [00:00<00:00, 1249.69it/s, Materializing param=wav2vec2.encoder.layers.5.attention.v_proj.weight]Loading weights:  44%|████▎     | 93/213 [00:00<00:00, 1244.66it/s, Materializing param=wav2vec2.encoder.layers.5.feed_forward.intermediate_dense.bias]Loading weights:  44%|████▎     | 93/213 [00:00<00:00, 1240.03it/s, Materializing param=wav2vec2.encoder.layers.5.feed_forward.intermediate_dense.bias]Loading weights:  44%|████▍     | 94/213 [00:00<00:00, 1232.76it/s, Materializing param=wav2vec2.encoder.layers.5.feed_forward.intermediate_dense.weight]Loading weights:  44%|████▍     | 94/213 [00:00<00:00, 1228.05it/s, Materializing param=wav2vec2.encoder.layers.5.feed_forward.intermediate_dense.weight]Loading weights:  45%|████▍     | 95/213 [00:00<00:00, 1236.48it/s, Materializing param=wav2vec2.encoder.layers.5.feed_forward.output_dense.bias]        Loading weights:  45%|████▍     | 95/213 [00:00<00:00, 1234.78it/s, Materializing param=wav2vec2.encoder.layers.5.feed_forward.output_dense.bias]Loading weights:  45%|████▌     | 96/213 [00:00<00:00, 1234.56it/s, Materializing param=wav2vec2.encoder.layers.5.feed_forward.output_dense.weight]Loading weights:  45%|████▌     | 96/213 [00:00<00:00, 1232.56it/s, Materializing param=wav2vec2.encoder.layers.5.feed_forward.output_dense.weight]Loading weights:  46%|████▌     | 97/213 [00:00<00:00, 1240.71it/s, Materializing param=wav2vec2.encoder.layers.5.final_layer_norm.bias]           Loading weights:  46%|████▌     | 97/213 [00:00<00:00, 1238.23it/s, Materializing param=wav2vec2.encoder.layers.5.final_layer_norm.bias]Loading weights:  46%|████▌     | 98/213 [00:00<00:00, 1244.27it/s, Materializing param=wav2vec2.encoder.layers.5.final_layer_norm.weight]Loading weights:  46%|████▌     | 98/213 [00:00<00:00, 1241.77it/s, Materializing param=wav2vec2.encoder.layers.5.final_layer_norm.weight]Loading weights:  46%|████▋     | 99/213 [00:00<00:00, 1241.73it/s, Materializing param=wav2vec2.encoder.layers.5.layer_norm.bias]        Loading weights:  46%|████▋     | 99/213 [00:00<00:00, 1238.14it/s, Materializing param=wav2vec2.encoder.layers.5.layer_norm.bias]Loading weights:  47%|████▋     | 100/213 [00:00<00:00, 1241.57it/s, Materializing param=wav2vec2.encoder.layers.5.layer_norm.weight]Loading weights:  47%|████▋     | 100/213 [00:00<00:00, 1239.71it/s, Materializing param=wav2vec2.encoder.layers.5.layer_norm.weight]Loading weights:  47%|████▋     | 101/213 [00:00<00:00, 1247.71it/s, Materializing param=wav2vec2.encoder.layers.6.attention.k_proj.bias]Loading weights:  47%|████▋     | 101/213 [00:00<00:00, 1246.12it/s, Materializing param=wav2vec2.encoder.layers.6.attention.k_proj.bias]Loading weights:  48%|████▊     | 102/213 [00:00<00:00, 1253.84it/s, Materializing param=wav2vec2.encoder.layers.6.attention.k_proj.weight]Loading weights:  48%|████▊     | 102/213 [00:00<00:00, 1252.14it/s, Materializing param=wav2vec2.encoder.layers.6.attention.k_proj.weight]Loading weights:  48%|████▊     | 103/213 [00:00<00:00, 1258.97it/s, Materializing param=wav2vec2.encoder.layers.6.attention.out_proj.bias]Loading weights:  48%|████▊     | 103/213 [00:00<00:00, 1257.12it/s, Materializing param=wav2vec2.encoder.layers.6.attention.out_proj.bias]Loading weights:  49%|████▉     | 104/213 [00:00<00:00, 1265.12it/s, Materializing param=wav2vec2.encoder.layers.6.attention.out_proj.weight]Loading weights:  49%|████▉     | 104/213 [00:00<00:00, 1249.72it/s, Materializing param=wav2vec2.encoder.layers.6.attention.out_proj.weight]Loading weights:  49%|████▉     | 105/213 [00:00<00:00, 1257.01it/s, Materializing param=wav2vec2.encoder.layers.6.attention.q_proj.bias]    Loading weights:  49%|████▉     | 105/213 [00:00<00:00, 1255.36it/s, Materializing param=wav2vec2.encoder.layers.6.attention.q_proj.bias]Loading weights:  50%|████▉     | 106/213 [00:00<00:00, 1262.70it/s, Materializing param=wav2vec2.encoder.layers.6.attention.q_proj.weight]Loading weights:  50%|████▉     | 106/213 [00:00<00:00, 1261.05it/s, Materializing param=wav2vec2.encoder.layers.6.attention.q_proj.weight]Loading weights:  50%|█████     | 107/213 [00:00<00:00, 1267.68it/s, Materializing param=wav2vec2.encoder.layers.6.attention.v_proj.bias]  Loading weights:  50%|█████     | 107/213 [00:00<00:00, 1266.05it/s, Materializing param=wav2vec2.encoder.layers.6.attention.v_proj.bias]Loading weights:  51%|█████     | 108/213 [00:00<00:00, 1274.12it/s, Materializing param=wav2vec2.encoder.layers.6.attention.v_proj.weight]Loading weights:  51%|█████     | 108/213 [00:00<00:00, 1272.54it/s, Materializing param=wav2vec2.encoder.layers.6.attention.v_proj.weight]Loading weights:  51%|█████     | 109/213 [00:00<00:00, 1261.96it/s, Materializing param=wav2vec2.encoder.layers.6.feed_forward.intermediate_dense.bias]Loading weights:  51%|█████     | 109/213 [00:00<00:00, 1257.75it/s, Materializing param=wav2vec2.encoder.layers.6.feed_forward.intermediate_dense.bias]Loading weights:  52%|█████▏    | 110/213 [00:00<00:00, 1265.13it/s, Materializing param=wav2vec2.encoder.layers.6.feed_forward.intermediate_dense.weight]Loading weights:  52%|█████▏    | 110/213 [00:00<00:00, 1263.53it/s, Materializing param=wav2vec2.encoder.layers.6.feed_forward.intermediate_dense.weight]Loading weights:  52%|█████▏    | 111/213 [00:00<00:00, 1270.07it/s, Materializing param=wav2vec2.encoder.layers.6.feed_forward.output_dense.bias]        Loading weights:  52%|█████▏    | 111/213 [00:00<00:00, 1268.56it/s, Materializing param=wav2vec2.encoder.layers.6.feed_forward.output_dense.bias]Loading weights:  53%|█████▎    | 112/213 [00:00<00:00, 1273.02it/s, Materializing param=wav2vec2.encoder.layers.6.feed_forward.output_dense.weight]Loading weights:  53%|█████▎    | 112/213 [00:00<00:00, 1257.98it/s, Materializing param=wav2vec2.encoder.layers.6.feed_forward.output_dense.weight]Loading weights:  53%|█████▎    | 113/213 [00:00<00:00, 1260.61it/s, Materializing param=wav2vec2.encoder.layers.6.final_layer_norm.bias]           Loading weights:  53%|█████▎    | 113/213 [00:00<00:00, 1242.53it/s, Materializing param=wav2vec2.encoder.layers.6.final_layer_norm.bias]Loading weights:  54%|█████▎    | 114/213 [00:00<00:00, 1245.75it/s, Materializing param=wav2vec2.encoder.layers.6.final_layer_norm.weight]Loading weights:  54%|█████▎    | 114/213 [00:00<00:00, 1244.06it/s, Materializing param=wav2vec2.encoder.layers.6.final_layer_norm.weight]Loading weights:  54%|█████▍    | 115/213 [00:00<00:00, 1249.77it/s, Materializing param=wav2vec2.encoder.layers.6.layer_norm.bias]        Loading weights:  54%|█████▍    | 115/213 [00:00<00:00, 1248.08it/s, Materializing param=wav2vec2.encoder.layers.6.layer_norm.bias]Loading weights:  54%|█████▍    | 116/213 [00:00<00:00, 1254.72it/s, Materializing param=wav2vec2.encoder.layers.6.layer_norm.weight]Loading weights:  54%|█████▍    | 116/213 [00:00<00:00, 1250.09it/s, Materializing param=wav2vec2.encoder.layers.6.layer_norm.weight]Loading weights:  55%|█████▍    | 117/213 [00:00<00:00, 1255.77it/s, Materializing param=wav2vec2.encoder.layers.7.attention.k_proj.bias]Loading weights:  55%|█████▍    | 117/213 [00:00<00:00, 1253.53it/s, Materializing param=wav2vec2.encoder.layers.7.attention.k_proj.bias]Loading weights:  55%|█████▌    | 118/213 [00:00<00:00, 1257.31it/s, Materializing param=wav2vec2.encoder.layers.7.attention.k_proj.weight]Loading weights:  55%|█████▌    | 118/213 [00:00<00:00, 1255.09it/s, Materializing param=wav2vec2.encoder.layers.7.attention.k_proj.weight]Loading weights:  56%|█████▌    | 119/213 [00:00<00:00, 1261.09it/s, Materializing param=wav2vec2.encoder.layers.7.attention.out_proj.bias]Loading weights:  56%|█████▌    | 119/213 [00:00<00:00, 1256.18it/s, Materializing param=wav2vec2.encoder.layers.7.attention.out_proj.bias]Loading weights:  56%|█████▋    | 120/213 [00:00<00:00, 1261.84it/s, Materializing param=wav2vec2.encoder.layers.7.attention.out_proj.weight]Loading weights:  56%|█████▋    | 120/213 [00:00<00:00, 1254.32it/s, Materializing param=wav2vec2.encoder.layers.7.attention.out_proj.weight]Loading weights:  57%|█████▋    | 121/213 [00:00<00:00, 1260.58it/s, Materializing param=wav2vec2.encoder.layers.7.attention.q_proj.bias]    Loading weights:  57%|█████▋    | 121/213 [00:00<00:00, 1258.78it/s, Materializing param=wav2vec2.encoder.layers.7.attention.q_proj.bias]Loading weights:  57%|█████▋    | 122/213 [00:00<00:00, 1264.33it/s, Materializing param=wav2vec2.encoder.layers.7.attention.q_proj.weight]Loading weights:  57%|█████▋    | 122/213 [00:00<00:00, 1262.11it/s, Materializing param=wav2vec2.encoder.layers.7.attention.q_proj.weight]Loading weights:  58%|█████▊    | 123/213 [00:00<00:00, 1247.36it/s, Materializing param=wav2vec2.encoder.layers.7.attention.v_proj.bias]  Loading weights:  58%|█████▊    | 123/213 [00:00<00:00, 1244.22it/s, Materializing param=wav2vec2.encoder.layers.7.attention.v_proj.bias]Loading weights:  58%|█████▊    | 124/213 [00:00<00:00, 1250.57it/s, Materializing param=wav2vec2.encoder.layers.7.attention.v_proj.weight]Loading weights:  58%|█████▊    | 124/213 [00:00<00:00, 1244.68it/s, Materializing param=wav2vec2.encoder.layers.7.attention.v_proj.weight]Loading weights:  59%|█████▊    | 125/213 [00:00<00:00, 1251.12it/s, Materializing param=wav2vec2.encoder.layers.7.feed_forward.intermediate_dense.bias]Loading weights:  59%|█████▊    | 125/213 [00:00<00:00, 1249.75it/s, Materializing param=wav2vec2.encoder.layers.7.feed_forward.intermediate_dense.bias]Loading weights:  59%|█████▉    | 126/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.7.feed_forward.intermediate_dense.bias]Loading weights:  59%|█████▉    | 126/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.7.feed_forward.intermediate_dense.weight]Loading weights:  59%|█████▉    | 126/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.7.feed_forward.intermediate_dense.weight]Loading weights:  60%|█████▉    | 127/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.7.feed_forward.output_dense.bias]        Loading weights:  60%|█████▉    | 127/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.7.feed_forward.output_dense.bias]Loading weights:  60%|██████    | 128/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.7.feed_forward.output_dense.weight]Loading weights:  60%|██████    | 128/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.7.feed_forward.output_dense.weight]Loading weights:  61%|██████    | 129/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.7.final_layer_norm.bias]           Loading weights:  61%|██████    | 129/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.7.final_layer_norm.bias]Loading weights:  61%|██████    | 130/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.7.final_layer_norm.weight]Loading weights:  61%|██████    | 130/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.7.final_layer_norm.weight]Loading weights:  62%|██████▏   | 131/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.7.layer_norm.bias]        Loading weights:  62%|██████▏   | 131/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.7.layer_norm.bias]Loading weights:  62%|██████▏   | 132/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.7.layer_norm.weight]Loading weights:  62%|██████▏   | 132/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.7.layer_norm.weight]Loading weights:  62%|██████▏   | 133/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.attention.k_proj.bias]Loading weights:  62%|██████▏   | 133/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.attention.k_proj.bias]Loading weights:  63%|██████▎   | 134/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.attention.k_proj.weight]Loading weights:  63%|██████▎   | 134/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.attention.k_proj.weight]Loading weights:  63%|██████▎   | 135/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.attention.out_proj.bias]Loading weights:  63%|██████▎   | 135/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.attention.out_proj.bias]Loading weights:  64%|██████▍   | 136/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.attention.out_proj.weight]Loading weights:  64%|██████▍   | 136/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.attention.out_proj.weight]Loading weights:  64%|██████▍   | 137/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.attention.q_proj.bias]    Loading weights:  64%|██████▍   | 137/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.attention.q_proj.bias]Loading weights:  65%|██████▍   | 138/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.attention.q_proj.weight]Loading weights:  65%|██████▍   | 138/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.attention.q_proj.weight]Loading weights:  65%|██████▌   | 139/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.attention.v_proj.bias]  Loading weights:  65%|██████▌   | 139/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.attention.v_proj.bias]Loading weights:  66%|██████▌   | 140/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.attention.v_proj.weight]Loading weights:  66%|██████▌   | 140/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.attention.v_proj.weight]Loading weights:  66%|██████▌   | 141/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.feed_forward.intermediate_dense.bias]Loading weights:  66%|██████▌   | 141/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.feed_forward.intermediate_dense.bias]Loading weights:  67%|██████▋   | 142/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.feed_forward.intermediate_dense.weight]Loading weights:  67%|██████▋   | 142/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.feed_forward.intermediate_dense.weight]Loading weights:  67%|██████▋   | 143/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.feed_forward.output_dense.bias]        Loading weights:  67%|██████▋   | 143/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.feed_forward.output_dense.bias]Loading weights:  68%|██████▊   | 144/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.feed_forward.output_dense.weight]Loading weights:  68%|██████▊   | 144/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.feed_forward.output_dense.weight]Loading weights:  68%|██████▊   | 145/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.final_layer_norm.bias]           Loading weights:  68%|██████▊   | 145/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.final_layer_norm.bias]Loading weights:  69%|██████▊   | 146/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.final_layer_norm.weight]Loading weights:  69%|██████▊   | 146/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.final_layer_norm.weight]Loading weights:  69%|██████▉   | 147/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.layer_norm.bias]        Loading weights:  69%|██████▉   | 147/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.layer_norm.bias]Loading weights:  69%|██████▉   | 148/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.layer_norm.weight]Loading weights:  69%|██████▉   | 148/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.8.layer_norm.weight]Loading weights:  70%|██████▉   | 149/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.attention.k_proj.bias]Loading weights:  70%|██████▉   | 149/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.attention.k_proj.bias]Loading weights:  70%|███████   | 150/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.attention.k_proj.weight]Loading weights:  70%|███████   | 150/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.attention.k_proj.weight]Loading weights:  71%|███████   | 151/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.attention.out_proj.bias]Loading weights:  71%|███████   | 151/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.attention.out_proj.bias]Loading weights:  71%|███████▏  | 152/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.attention.out_proj.weight]Loading weights:  71%|███████▏  | 152/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.attention.out_proj.weight]Loading weights:  72%|███████▏  | 153/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.attention.q_proj.bias]    Loading weights:  72%|███████▏  | 153/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.attention.q_proj.bias]Loading weights:  72%|███████▏  | 154/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.attention.q_proj.weight]Loading weights:  72%|███████▏  | 154/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.attention.q_proj.weight]Loading weights:  73%|███████▎  | 155/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.attention.v_proj.bias]  Loading weights:  73%|███████▎  | 155/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.attention.v_proj.bias]Loading weights:  73%|███████▎  | 156/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.attention.v_proj.weight]Loading weights:  73%|███████▎  | 156/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.attention.v_proj.weight]Loading weights:  74%|███████▎  | 157/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.feed_forward.intermediate_dense.bias]Loading weights:  74%|███████▎  | 157/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.feed_forward.intermediate_dense.bias]Loading weights:  74%|███████▍  | 158/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.feed_forward.intermediate_dense.weight]Loading weights:  74%|███████▍  | 158/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.feed_forward.intermediate_dense.weight]Loading weights:  75%|███████▍  | 159/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.feed_forward.output_dense.bias]        Loading weights:  75%|███████▍  | 159/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.feed_forward.output_dense.bias]Loading weights:  75%|███████▌  | 160/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.feed_forward.output_dense.weight]Loading weights:  75%|███████▌  | 160/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.feed_forward.output_dense.weight]Loading weights:  76%|███████▌  | 161/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.final_layer_norm.bias]           Loading weights:  76%|███████▌  | 161/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.final_layer_norm.bias]Loading weights:  76%|███████▌  | 162/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.final_layer_norm.weight]Loading weights:  76%|███████▌  | 162/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.final_layer_norm.weight]Loading weights:  77%|███████▋  | 163/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.layer_norm.bias]        Loading weights:  77%|███████▋  | 163/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.layer_norm.bias]Loading weights:  77%|███████▋  | 164/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.layer_norm.weight]Loading weights:  77%|███████▋  | 164/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.9.layer_norm.weight]Loading weights:  77%|███████▋  | 165/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.attention.k_proj.bias]Loading weights:  77%|███████▋  | 165/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.attention.k_proj.bias]Loading weights:  78%|███████▊  | 166/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.attention.k_proj.weight]Loading weights:  78%|███████▊  | 166/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.attention.k_proj.weight]Loading weights:  78%|███████▊  | 167/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.attention.out_proj.bias]Loading weights:  78%|███████▊  | 167/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.attention.out_proj.bias]Loading weights:  79%|███████▉  | 168/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.attention.out_proj.weight]Loading weights:  79%|███████▉  | 168/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.attention.out_proj.weight]Loading weights:  79%|███████▉  | 169/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.attention.q_proj.bias]    Loading weights:  79%|███████▉  | 169/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.attention.q_proj.bias]Loading weights:  80%|███████▉  | 170/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.attention.q_proj.weight]Loading weights:  80%|███████▉  | 170/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.attention.q_proj.weight]Loading weights:  80%|████████  | 171/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.attention.v_proj.bias]  Loading weights:  80%|████████  | 171/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.attention.v_proj.bias]Loading weights:  81%|████████  | 172/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.attention.v_proj.weight]Loading weights:  81%|████████  | 172/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.attention.v_proj.weight]Loading weights:  81%|████████  | 173/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.feed_forward.intermediate_dense.bias]Loading weights:  81%|████████  | 173/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.feed_forward.intermediate_dense.bias]Loading weights:  82%|████████▏ | 174/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.feed_forward.intermediate_dense.weight]Loading weights:  82%|████████▏ | 174/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.feed_forward.intermediate_dense.weight]Loading weights:  82%|████████▏ | 175/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.feed_forward.output_dense.bias]        Loading weights:  82%|████████▏ | 175/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.feed_forward.output_dense.bias]Loading weights:  83%|████████▎ | 176/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.feed_forward.output_dense.weight]Loading weights:  83%|████████▎ | 176/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.feed_forward.output_dense.weight]Loading weights:  83%|████████▎ | 177/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.final_layer_norm.bias]           Loading weights:  83%|████████▎ | 177/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.final_layer_norm.bias]Loading weights:  84%|████████▎ | 178/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.final_layer_norm.weight]Loading weights:  84%|████████▎ | 178/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.final_layer_norm.weight]Loading weights:  84%|████████▍ | 179/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.layer_norm.bias]        Loading weights:  84%|████████▍ | 179/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.layer_norm.bias]Loading weights:  85%|████████▍ | 180/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.layer_norm.weight]Loading weights:  85%|████████▍ | 180/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.10.layer_norm.weight]Loading weights:  85%|████████▍ | 181/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.attention.k_proj.bias]Loading weights:  85%|████████▍ | 181/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.attention.k_proj.bias]Loading weights:  85%|████████▌ | 182/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.attention.k_proj.weight]Loading weights:  85%|████████▌ | 182/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.attention.k_proj.weight]Loading weights:  86%|████████▌ | 183/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.attention.out_proj.bias]Loading weights:  86%|████████▌ | 183/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.attention.out_proj.bias]Loading weights:  86%|████████▋ | 184/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.attention.out_proj.weight]Loading weights:  86%|████████▋ | 184/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.attention.out_proj.weight]Loading weights:  87%|████████▋ | 185/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.attention.q_proj.bias]    Loading weights:  87%|████████▋ | 185/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.attention.q_proj.bias]Loading weights:  87%|████████▋ | 186/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.attention.q_proj.weight]Loading weights:  87%|████████▋ | 186/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.attention.q_proj.weight]Loading weights:  88%|████████▊ | 187/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.attention.v_proj.bias]  Loading weights:  88%|████████▊ | 187/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.attention.v_proj.bias]Loading weights:  88%|████████▊ | 188/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.attention.v_proj.weight]Loading weights:  88%|████████▊ | 188/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.attention.v_proj.weight]Loading weights:  89%|████████▊ | 189/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.feed_forward.intermediate_dense.bias]Loading weights:  89%|████████▊ | 189/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.feed_forward.intermediate_dense.bias]Loading weights:  89%|████████▉ | 190/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.feed_forward.intermediate_dense.weight]Loading weights:  89%|████████▉ | 190/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.feed_forward.intermediate_dense.weight]Loading weights:  90%|████████▉ | 191/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.feed_forward.output_dense.bias]        Loading weights:  90%|████████▉ | 191/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.feed_forward.output_dense.bias]Loading weights:  90%|█████████ | 192/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.feed_forward.output_dense.weight]Loading weights:  90%|█████████ | 192/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.feed_forward.output_dense.weight]Loading weights:  91%|█████████ | 193/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.final_layer_norm.bias]           Loading weights:  91%|█████████ | 193/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.final_layer_norm.bias]Loading weights:  91%|█████████ | 194/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.final_layer_norm.weight]Loading weights:  91%|█████████ | 194/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.final_layer_norm.weight]Loading weights:  92%|█████████▏| 195/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.layer_norm.bias]        Loading weights:  92%|█████████▏| 195/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.layer_norm.bias]Loading weights:  92%|█████████▏| 196/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.layer_norm.weight]Loading weights:  92%|█████████▏| 196/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.layers.11.layer_norm.weight]Loading weights:  92%|█████████▏| 197/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.pos_conv_embed.conv.bias]   Loading weights:  92%|█████████▏| 197/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.pos_conv_embed.conv.bias]Loading weights:  93%|█████████▎| 198/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.pos_conv_embed.conv.parametrizations.weight.original0]Loading weights:  93%|█████████▎| 198/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.pos_conv_embed.conv.parametrizations.weight.original0]Loading weights:  93%|█████████▎| 199/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.pos_conv_embed.conv.parametrizations.weight.original1]Loading weights:  93%|█████████▎| 199/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.encoder.pos_conv_embed.conv.parametrizations.weight.original1]Loading weights:  94%|█████████▍| 200/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_extractor.conv_layers.0.conv.weight]                  Loading weights:  94%|█████████▍| 200/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_extractor.conv_layers.0.conv.weight]Loading weights:  94%|█████████▍| 201/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_extractor.conv_layers.0.layer_norm.bias]Loading weights:  94%|█████████▍| 201/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_extractor.conv_layers.0.layer_norm.bias]Loading weights:  95%|█████████▍| 202/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_extractor.conv_layers.0.layer_norm.weight]Loading weights:  95%|█████████▍| 202/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_extractor.conv_layers.0.layer_norm.weight]Loading weights:  95%|█████████▌| 203/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_extractor.conv_layers.1.conv.weight]      Loading weights:  95%|█████████▌| 203/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_extractor.conv_layers.1.conv.weight]Loading weights:  96%|█████████▌| 204/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_extractor.conv_layers.2.conv.weight]Loading weights:  96%|█████████▌| 204/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_extractor.conv_layers.2.conv.weight]Loading weights:  96%|█████████▌| 205/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_extractor.conv_layers.3.conv.weight]Loading weights:  96%|█████████▌| 205/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_extractor.conv_layers.3.conv.weight]Loading weights:  97%|█████████▋| 206/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_extractor.conv_layers.4.conv.weight]Loading weights:  97%|█████████▋| 206/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_extractor.conv_layers.4.conv.weight]Loading weights:  97%|█████████▋| 207/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_extractor.conv_layers.5.conv.weight]Loading weights:  97%|█████████▋| 207/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_extractor.conv_layers.5.conv.weight]Loading weights:  98%|█████████▊| 208/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_extractor.conv_layers.6.conv.weight]Loading weights:  98%|█████████▊| 208/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_extractor.conv_layers.6.conv.weight]Loading weights:  98%|█████████▊| 209/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_projection.layer_norm.bias]         Loading weights:  98%|█████████▊| 209/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_projection.layer_norm.bias]Loading weights:  99%|█████████▊| 210/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_projection.layer_norm.weight]Loading weights:  99%|█████████▊| 210/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_projection.layer_norm.weight]Loading weights:  99%|█████████▉| 211/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_projection.projection.bias]  Loading weights:  99%|█████████▉| 211/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_projection.projection.bias]Loading weights: 100%|█████████▉| 212/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_projection.projection.weight]Loading weights: 100%|█████████▉| 212/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.feature_projection.projection.weight]Loading weights: 100%|██████████| 213/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.masked_spec_embed]                   Loading weights: 100%|██████████| 213/213 [00:00<00:00, 1239.83it/s, Materializing param=wav2vec2.masked_spec_embed]Loading weights: 100%|██████████| 213/213 [00:00<00:00, 1543.81it/s, Materializing param=wav2vec2.masked_spec_embed]
+2026-09-24 05:01:49,267 Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_jit_profiling]
+2026-09-24 05:01:49,267 Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2026-09-24 05:01:49,372 Fetch hyperparams.yaml: Using symlink found at '/root/.cache/qaari-eval/ecapa/hyperparams.yaml'
+2026-09-24 05:01:49,613 Fetch embedding_model.ckpt: Using symlink found at '/root/.cache/qaari-eval/ecapa/embedding_model.ckpt'
+2026-09-24 05:01:49,613 Fetch mean_var_norm_emb.ckpt: Using symlink found at '/root/.cache/qaari-eval/ecapa/mean_var_norm_emb.ckpt'
+2026-09-24 05:01:49,614 Fetch classifier.ckpt: Using symlink found at '/root/.cache/qaari-eval/ecapa/classifier.ckpt'
+2026-09-24 05:01:49,614 Fetch label_encoder.txt: Using symlink found at '/root/.cache/qaari-eval/ecapa/label_encoder.ckpt'
+2026-09-24 05:01:49,614 Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2026-09-24 05:01:50,958 Local Quran-MD sources: {'Husary_128kbps': '/kaggle/input/datasets/husseinzahaki/quran-md-ayahs-wav-part2/husary/husary', 'Husary_Muallim_128kbps': '/kaggle/input/datasets/husseinzahaki/quran-md-ayahs-wav-part2/hussary.teacher/hussary.teacher', 'Minshawy_Murattal_128kbps': '/kaggle/input/datasets/husseinzahaki/quran-md-ayahs-wav-part2/minshawy_murattal/minshawy_murattal', 'Hudhaify_128kbps': '/kaggle/input/datasets/husseinzahaki/quran-md-ayahs-wav-part2/hudhaify/hudhaify', 'Abdul_Basit_Murattal_192kbps': '/kaggle/input/datasets/husseinzahaki/quran-md-ayahs-wav-part1/abdul_basit_murattal/abdul_basit_murattal', 'Alafasy_128kbps': '/kaggle/input/datasets/husseinzahaki/quran-md-ayahs-wav-part1/alafasy/alafasy', 'Yasser_Ad-Dussary_128kbps': '/kaggle/input/datasets/husseinzahaki/quran-md-ayahs-wav-part3/yasser_ad_dussary/yasser_ad_dussary', 'Nasser_Alqatami_128kbps': '/kaggle/input/datasets/husseinzahaki/quran-md-ayahs-wav-part3/nasser_alqatami/nasser_alqatami', 'Saood_ash-Shuraym_128kbps': '/kaggle/input/datasets/husseinzahaki/quran-md-ayahs-wav-part3/saood_ash_shuraym/saood_ash_shuraym', 'Abdurrahmaan_As-Sudais_192kbps': '/kaggle/input/datasets/husseinzahaki/quran-md-ayahs-wav-part1/abdurrahmaan_as_sudais/abdurrahmaan_as_sudais', 'Abdullaah_3awwaad_Al-Juhaynee_128kbps': '/kaggle/input/datasets/husseinzahaki/quran-md-ayahs-wav-part1/abdullaah_3awwaad_al_juhaynee/abdullaah_3awwaad_al_juhaynee'}
+2026-09-24 05:01:57,075 Abdul Rahman Al-Sudais 1:5 done
+2026-09-24 05:02:04,567 Abdul Rahman Al-Sudais 2:18 done
+2026-09-24 05:02:20,759 Abdul Rahman Al-Sudais 2:38 done
+2026-09-24 05:02:48,506 Abdul Rahman Al-Sudais 2:58 done
+2026-09-24 05:03:02,816 Abdul Rahman Al-Sudais 2:78 done
+2026-09-24 05:03:32,892 Abdul Rahman Al-Sudais 2:98 done
+2026-09-24 05:04:08,748 Abdul Rahman Al-Sudais 2:118 done
+2026-09-24 05:04:22,641 Abdul Rahman Al-Sudais 2:138 done
+2026-09-24 05:04:51,985 Abdul Rahman Al-Sudais 2:158 done
+2026-09-24 05:06:12,249 Abdul Rahman Al-Sudais 2:178 done
+2026-09-24 05:07:05,790 Abdul Rahman Al-Sudais 2:198 done
+2026-09-24 05:07:28,200 Abdul Rahman Al-Sudais 2:218 done
+2026-09-24 05:07:42,340 Abdul Rahman Al-Sudais 2:238 done
+2026-09-24 05:08:39,753 Abdul Rahman Al-Sudais 2:258 done
+2026-09-24 05:08:57,598 Abdul Rahman Al-Sudais 2:278 done
+2026-09-24 05:09:11,742 Abdul Rahman Al-Sudais 3:12 done
+2026-09-24 05:09:27,226 Abdul Rahman Al-Sudais 3:32 done
+2026-09-24 05:09:54,678 Abdul Rahman Al-Sudais 3:52 done
+2026-09-24 05:10:24,766 Abdul Rahman Al-Sudais 3:72 done
+2026-09-24 05:10:54,219 Abdul Rahman Al-Sudais 3:92 done
+2026-09-24 05:11:55,882 Abdul Rahman Al-Sudais 3:112 done
+2026-09-24 05:12:08,100 Abdul Rahman Al-Sudais 3:132 done
+2026-09-24 05:13:13,570 Abdul Rahman Al-Sudais 3:152 done
+2026-09-24 05:13:31,687 Abdul Rahman Al-Sudais 3:172 done
+2026-09-24 05:13:49,281 Abdul Rahman Al-Sudais 3:192 done
+2026-09-24 05:16:08,835 Abdul Rahman Al-Sudais 4:12 done
+2026-09-24 05:16:49,277 Abdul Rahman Al-Sudais 4:32 done
+2026-09-24 05:17:03,805 Abdul Rahman Al-Sudais 4:52 done
+2026-09-24 05:17:25,918 Abdul Rahman Al-Sudais 4:72 done
+2026-09-24 05:19:33,478 Abdul Rahman Al-Sudais 4:92 done
+2026-09-24 05:20:03,941 Abdul Rahman Al-Sudais 4:112 done
+2026-09-24 05:20:15,131 Abdul Rahman Al-Sudais 4:132 done
+2026-09-24 05:20:41,481 Abdul Rahman Al-Sudais 4:152 done
+2026-09-24 05:21:11,909 Abdul Rahman Al-Sudais 4:172 done
+2026-09-24 05:21:36,138 Abdul Rahman Al-Sudais 5:16 done
+2026-09-24 05:22:06,731 Abdul Rahman Al-Sudais 5:36 done
+2026-09-24 05:22:23,704 Abdul Rahman Al-Sudais 5:56 done
+2026-09-24 05:22:47,195 Abdul Rahman Al-Sudais 5:76 done
+2026-09-24 05:23:21,153 Abdul Rahman Al-Sudais 5:96 done
+2026-09-24 05:24:17,170 Abdul Rahman Al-Sudais 5:116 done
+2026-09-24 05:24:27,369 Abdul Rahman Al-Sudais 6:16 done
+2026-09-24 05:24:50,712 Abdul Rahman Al-Sudais 6:36 done
+2026-09-24 05:25:15,210 Abdul Rahman Al-Sudais 6:56 done
+2026-09-24 05:25:35,166 Abdul Rahman Al-Sudais 6:76 done
+2026-09-24 05:25:54,088 Abdul Rahman Al-Sudais 6:96 done
+2026-09-24 05:26:13,717 Abdul Rahman Al-Sudais 6:116 done
+2026-09-24 05:27:12,938 Abdul Rahman Al-Sudais 6:136 done
+2026-09-24 05:27:36,183 Abdul Rahman Al-Sudais 6:156 done
+2026-09-24 05:28:02,996 Abdul Rahman Al-Sudais 7:11 done
+2026-09-24 05:28:23,755 Abdul Rahman Al-Sudais 7:31 done
+2026-09-24 05:28:54,151 Abdul Rahman Al-Sudais 7:51 done
+2026-09-24 05:29:46,150 Abdul Rahman Al-Sudais 7:71 done
+2026-09-24 05:29:55,934 Abdul Rahman Al-Sudais 7:91 done
+2026-09-24 05:30:07,509 Abdul Rahman Al-Sudais 7:111 done
+2026-09-24 05:30:42,894 Abdul Rahman Al-Sudais 7:131 done
+2026-09-24 05:30:59,199 Abdul Rahman Al-Sudais 7:151 done
+2026-09-24 05:31:27,805 Abdul Rahman Al-Sudais 7:171 done
+2026-09-24 05:31:35,502 Abdul Rahman Al-Sudais 7:191 done
+2026-09-24 05:31:49,841 Abdul Rahman Al-Sudais 8:5 done
+2026-09-24 05:32:12,818 Abdul Rahman Al-Sudais 8:25 done
+2026-09-24 05:32:31,069 Abdul Rahman Al-Sudais 8:45 done
+2026-09-24 05:33:12,942 Abdul Rahman Al-Sudais 8:65 done
+2026-09-24 05:33:28,425 Abdul Rahman Al-Sudais 9:10 done
+2026-09-24 05:34:04,653 Abdul Rahman Al-Sudais 9:30 done
+2026-09-24 05:34:27,135 Abdul Rahman Al-Sudais 9:50 done
+2026-09-24 05:35:15,275 Abdul Rahman Al-Sudais 9:70 done
+2026-09-24 05:35:38,831 Abdul Rahman Al-Sudais 9:90 done
+2026-09-24 05:36:03,116 Abdul Rahman Al-Sudais 9:110 done
+2026-09-24 05:36:17,296 Abdul Rahman Al-Sudais 10:1 done
+2026-09-24 05:36:48,608 Abdul Rahman Al-Sudais 10:21 done
+2026-09-24 05:37:16,592 Abdul Rahman Al-Sudais 10:41 done
+2026-09-24 05:38:24,552 Abdul Rahman Al-Sudais 10:61 done
+2026-09-24 05:38:46,444 Abdul Rahman Al-Sudais 10:81 done
+2026-09-24 05:39:04,887 Abdul Rahman Al-Sudais 10:101 done
+2026-09-24 05:39:48,890 Abdul Rahman Al-Sudais 11:12 done
+2026-09-24 05:40:07,297 Abdul Rahman Al-Sudais 11:32 done
+2026-09-24 05:40:37,518 Abdul Rahman Al-Sudais 11:52 done
+2026-09-24 05:41:00,380 Abdul Rahman Al-Sudais 11:72 done
+2026-09-24 05:41:24,104 Abdul Rahman Al-Sudais 11:92 done
+2026-09-24 05:41:41,465 Abdul Rahman Al-Sudais 11:112 done
+2026-09-24 05:41:59,456 Abdul Rahman Al-Sudais 12:9 done
+2026-09-24 05:42:17,956 Abdul Rahman Al-Sudais 12:29 done
+2026-09-24 05:42:29,287 Abdul Rahman Al-Sudais 12:49 done
+2026-09-24 05:42:55,897 Abdul Rahman Al-Sudais 12:69 done
+2026-09-24 05:43:09,793 Abdul Rahman Al-Sudais 12:89 done
+2026-09-24 05:43:51,595 Abdul Rahman Al-Sudais 12:109 done
+2026-09-24 05:44:38,306 Abdul Rahman Al-Sudais 13:18 done
+2026-09-24 05:45:11,879 Abdul Rahman Al-Sudais 13:38 done
+2026-09-24 05:45:19,992 Abdul Rahman Al-Sudais 14:15 done
+2026-09-24 05:45:35,232 Abdul Rahman Al-Sudais 14:35 done
+2026-09-24 05:45:45,521 Abdul Rahman Al-Sudais 15:3 done
+2026-09-24 05:45:54,917 Abdul Rahman Al-Sudais 15:23 done
+2026-09-24 05:46:04,115 Abdul Rahman Al-Sudais 15:43 done
+2026-09-24 05:46:11,705 Abdul Rahman Al-Sudais 15:63 done
+2026-09-24 05:46:16,907 Abdul Rahman Al-Sudais 15:83 done
+2026-09-24 05:46:27,592 Abdul Rahman Al-Sudais 16:4 done
+2026-09-24 05:46:39,178 Abdul Rahman Al-Sudais 16:24 done
+2026-09-24 05:46:59,037 Abdul Rahman Al-Sudais 16:44 done
+2026-09-24 05:47:28,480 Abdul Rahman Al-Sudais 16:64 done
+2026-09-24 05:47:45,449 Abdul Rahman Al-Sudais 16:84 done
+2026-09-24 05:47:59,310 Abdul Rahman Al-Sudais 16:104 done
+2026-09-24 05:48:19,877 Abdul Rahman Al-Sudais 16:124 done
+2026-09-24 05:48:47,815 Abdul Rahman Al-Sudais 17:16 done
+2026-09-24 05:49:06,945 Abdul Rahman Al-Sudais 17:36 done
+2026-09-24 05:49:21,135 Abdul Rahman Al-Sudais 17:56 done
+2026-09-24 05:49:39,188 Abdul Rahman Al-Sudais 17:76 done
+2026-09-24 05:50:01,175 Abdul Rahman Al-Sudais 17:96 done
+2026-09-24 05:50:22,418 Abdul Rahman Al-Sudais 18:5 done
+2026-09-24 05:50:32,412 Abdul Rahman Al-Sudais 18:25 done
+2026-09-24 05:51:04,549 Abdul Rahman Al-Sudais 18:45 done
+2026-09-24 05:51:19,624 Abdul Rahman Al-Sudais 18:65 done
+2026-09-24 05:51:23,295 Abdul Rahman Al-Sudais 18:85 done
+2026-09-24 05:51:54,335 Abdul Rahman Al-Sudais 18:105 done
+2026-09-24 05:52:09,280 Abdul Rahman Al-Sudais 19:15 done
+2026-09-24 05:52:29,712 Abdul Rahman Al-Sudais 19:35 done
+2026-09-24 05:52:43,106 Abdul Rahman Al-Sudais 19:55 done
+2026-09-24 05:53:22,476 Abdul Rahman Al-Sudais 19:75 done
+2026-09-24 05:53:30,968 Abdul Rahman Al-Sudais 19:95 done
+2026-09-24 05:53:36,721 Abdul Rahman Al-Sudais 20:17 done
+2026-09-24 05:53:44,391 Abdul Rahman Al-Sudais 20:37 done
+2026-09-24 05:53:53,346 Abdul Rahman Al-Sudais 20:57 done
+2026-09-24 05:54:11,658 Abdul Rahman Al-Sudais 20:77 done
+2026-09-24 05:54:54,026 Abdul Rahman Al-Sudais 20:97 done
+2026-09-24 05:55:10,916 Abdul Rahman Al-Sudais 20:117 done
+2026-09-24 05:55:23,373 Abdul Rahman Al-Sudais 21:2 done
+2026-09-24 05:55:41,477 Abdul Rahman Al-Sudais 21:22 done
+2026-09-24 05:56:01,138 Abdul Rahman Al-Sudais 21:42 done
+2026-09-24 05:56:09,385 Abdul Rahman Al-Sudais 21:62 done
+2026-09-24 05:56:29,591 Abdul Rahman Al-Sudais 21:82 done
+2026-09-24 05:56:41,865 Abdul Rahman Al-Sudais 21:102 done
+2026-09-24 05:56:54,192 Abdul Rahman Al-Sudais 22:10 done
+2026-09-24 05:57:25,731 Abdul Rahman Al-Sudais 22:30 done
+2026-09-24 05:57:37,331 Abdul Rahman Al-Sudais 22:50 done
+2026-09-24 05:57:56,354 Abdul Rahman Al-Sudais 22:70 done
+2026-09-24 05:58:07,788 Abdul Rahman Al-Sudais 23:12 done
+2026-09-24 05:58:25,909 Abdul Rahman Al-Sudais 23:32 done
+2026-09-24 05:58:37,085 Abdul Rahman Al-Sudais 23:52 done
+2026-09-24 05:58:46,867 Abdul Rahman Al-Sudais 23:72 done
+2026-09-24 05:58:57,070 Abdul Rahman Al-Sudais 23:92 done
+2026-09-24 05:59:03,060 Abdul Rahman Al-Sudais 23:112 done
+2026-09-24 05:59:26,202 Abdul Rahman Al-Sudais 24:14 done
+2026-09-24 05:59:46,430 Abdul Rahman Al-Sudais 24:34 done
+2026-09-24 06:00:24,381 Abdul Rahman Al-Sudais 24:54 done
+2026-09-24 06:00:49,883 Abdul Rahman Al-Sudais 25:10 done
+2026-09-24 06:01:02,260 Abdul Rahman Al-Sudais 25:30 done
+2026-09-24 06:01:13,868 Abdul Rahman Al-Sudais 25:50 done
+2026-09-24 06:01:39,690 Abdul Rahman Al-Sudais 25:70 done
+2026-09-24 06:01:48,279 Abdul Rahman Al-Sudais 26:13 done
+2026-09-24 06:01:56,894 Abdul Rahman Al-Sudais 26:33 done
+2026-09-24 06:02:04,230 Abdul Rahman Al-Sudais 26:53 done
+2026-09-24 06:02:09,381 Abdul Rahman Al-Sudais 26:73 done
+2026-09-24 06:02:19,089 Abdul Rahman Al-Sudais 26:93 done
+2026-09-24 06:02:26,679 Abdul Rahman Al-Sudais 26:113 done
+2026-09-24 06:02:31,163 Abdul Rahman Al-Sudais 26:133 done
+2026-09-24 06:02:38,784 Abdul Rahman Al-Sudais 26:153 done
+2026-09-24 06:02:51,414 Abdul Rahman Al-Sudais 26:173 done
+2026-09-24 06:02:55,046 Abdul Rahman Al-Sudais 26:193 done
+2026-09-24 06:03:03,887 Abdul Rahman Al-Sudais 26:213 done
+2026-09-24 06:03:12,001 Abdul Rahman Al-Sudais 27:6 done
+2026-09-24 06:03:25,442 Abdul Rahman Al-Sudais 27:26 done
+2026-09-24 06:03:42,469 Abdul Rahman Al-Sudais 27:46 done
+2026-09-24 06:03:57,087 Abdul Rahman Al-Sudais 27:66 done
+2026-09-24 06:04:15,419 Abdul Rahman Al-Sudais 27:86 done
+2026-09-24 06:04:37,328 Abdul Rahman Al-Sudais 28:13 done
+2026-09-24 06:04:48,791 Abdul Rahman Al-Sudais 28:33 done
+2026-09-24 06:05:12,288 Abdul Rahman Al-Sudais 28:53 done
+2026-09-24 06:05:34,856 Abdul Rahman Al-Sudais 28:73 done
+2026-09-24 06:05:50,517 Abdul Rahman Al-Sudais 29:5 done
+2026-09-24 06:06:30,531 Abdul Rahman Al-Sudais 29:25 done
+2026-09-24 06:07:06,468 Abdul Rahman Al-Sudais 29:45 done
+2026-09-24 06:07:23,303 Abdul Rahman Al-Sudais 29:65 done
+2026-09-24 06:07:41,054 Abdul Rahman Al-Sudais 30:16 done
+2026-09-24 06:07:59,573 Abdul Rahman Al-Sudais 30:36 done
+2026-09-24 06:08:24,885 Abdul Rahman Al-Sudais 30:56 done
+2026-09-24 06:08:59,036 Abdul Rahman Al-Sudais 31:16 done
+2026-09-24 06:09:06,737 Abdul Rahman Al-Sudais 32:2 done
+2026-09-24 06:09:28,749 Abdul Rahman Al-Sudais 32:22 done
+2026-09-24 06:09:45,614 Abdul Rahman Al-Sudais 33:12 done
+2026-09-24 06:10:28,122 Abdul Rahman Al-Sudais 33:32 done
+2026-09-24 06:11:06,045 Abdul Rahman Al-Sudais 33:52 done
+2026-09-24 06:11:37,866 Abdul Rahman Al-Sudais 33:72 done
+2026-09-24 06:12:11,496 Abdul Rahman Al-Sudais 34:19 done
+2026-09-24 06:12:59,140 Abdul Rahman Al-Sudais 34:39 done
+2026-09-24 06:13:21,011 Abdul Rahman Al-Sudais 35:5 done
+2026-09-24 06:13:41,770 Abdul Rahman Al-Sudais 35:25 done
+2026-09-24 06:14:25,206 Abdul Rahman Al-Sudais 35:45 done
+2026-09-24 06:14:41,840 Abdul Rahman Al-Sudais 36:20 done
+2026-09-24 06:15:09,844 Abdul Rahman Al-Sudais 36:40 done
+2026-09-24 06:15:27,923 Abdul Rahman Al-Sudais 36:60 done
+2026-09-24 06:15:43,630 Abdul Rahman Al-Sudais 36:80 done
+2026-09-24 06:15:49,230 Abdul Rahman Al-Sudais 37:17 done
+2026-09-24 06:15:57,037 Abdul Rahman Al-Sudais 37:37 done
+2026-09-24 06:16:04,140 Abdul Rahman Al-Sudais 37:57 done
+2026-09-24 06:16:10,417 Abdul Rahman Al-Sudais 37:77 done
+2026-09-24 06:16:17,823 Abdul Rahman Al-Sudais 37:97 done
+2026-09-24 06:16:23,002 Abdul Rahman Al-Sudais 37:117 done
+2026-09-24 06:16:29,456 Abdul Rahman Al-Sudais 37:137 done
+2026-09-24 06:16:36,579 Abdul Rahman Al-Sudais 37:157 done
+2026-09-24 06:16:46,122 Abdul Rahman Al-Sudais 37:177 done
+2026-09-24 06:17:00,028 Abdul Rahman Al-Sudais 38:15 done
+2026-09-24 06:17:17,926 Abdul Rahman Al-Sudais 38:35 done
+2026-09-24 06:17:26,055 Abdul Rahman Al-Sudais 38:55 done
+2026-09-24 06:17:43,759 Abdul Rahman Al-Sudais 38:75 done
+2026-09-24 06:18:31,476 Abdul Rahman Al-Sudais 39:7 done
+2026-09-24 06:18:45,115 Abdul Rahman Al-Sudais 39:27 done
+2026-09-24 06:19:17,589 Abdul Rahman Al-Sudais 39:47 done
+2026-09-24 06:19:49,250 Abdul Rahman Al-Sudais 39:67 done
+2026-09-24 06:20:16,485 Abdul Rahman Al-Sudais 40:12 done
+2026-09-24 06:20:29,891 Abdul Rahman Al-Sudais 40:32 done
+2026-09-24 06:20:46,515 Abdul Rahman Al-Sudais 40:52 done
+2026-09-24 06:20:53,559 Abdul Rahman Al-Sudais 40:72 done
+2026-09-24 06:21:08,729 Abdul Rahman Al-Sudais 41:7 done
+2026-09-24 06:21:25,975 Abdul Rahman Al-Sudais 41:27 done
+2026-09-24 06:22:02,419 Abdul Rahman Al-Sudais 41:47 done
+2026-09-24 06:23:07,327 Abdul Rahman Al-Sudais 42:13 done
+2026-09-24 06:23:27,598 Abdul Rahman Al-Sudais 42:33 done
+2026-09-24 06:23:55,975 Abdul Rahman Al-Sudais 42:53 done
+2026-09-24 06:24:15,105 Abdul Rahman Al-Sudais 43:20 done
+2026-09-24 06:24:29,897 Abdul Rahman Al-Sudais 43:40 done
+2026-09-24 06:24:45,285 Abdul Rahman Al-Sudais 43:60 done
+2026-09-24 06:25:06,191 Abdul Rahman Al-Sudais 43:80 done
+2026-09-24 06:25:13,484 Abdul Rahman Al-Sudais 44:11 done
+2026-09-24 06:25:23,394 Abdul Rahman Al-Sudais 44:31 done
+2026-09-24 06:25:29,635 Abdul Rahman Al-Sudais 44:51 done
+2026-09-24 06:25:53,791 Abdul Rahman Al-Sudais 45:12 done
+2026-09-24 06:26:25,000 Abdul Rahman Al-Sudais 45:32 done
+2026-09-24 06:27:47,053 Abdul Rahman Al-Sudais 46:15 done
+2026-09-24 06:28:31,788 Abdul Rahman Al-Sudais 46:35 done
+2026-09-24 06:29:17,545 Abdul Rahman Al-Sudais 47:20 done
+2026-09-24 06:29:34,201 Abdul Rahman Al-Sudais 48:2 done
+2026-09-24 06:29:50,492 Abdul Rahman Al-Sudais 48:22 done
+2026-09-24 06:30:30,748 Abdul Rahman Al-Sudais 49:13 done
+2026-09-24 06:30:48,808 Abdul Rahman Al-Sudais 50:15 done
+2026-09-24 06:31:01,910 Abdul Rahman Al-Sudais 50:35 done
+2026-09-24 06:31:04,887 Abdul Rahman Al-Sudais 51:10 done
+2026-09-24 06:31:14,968 Abdul Rahman Al-Sudais 51:30 done
+2026-09-24 06:31:30,138 Abdul Rahman Al-Sudais 51:50 done
+2026-09-24 06:31:34,057 Abdul Rahman Al-Sudais 52:10 done
+2026-09-24 06:31:43,539 Abdul Rahman Al-Sudais 52:30 done
+2026-09-24 06:31:49,175 Abdul Rahman Al-Sudais 53:1 done
+2026-09-24 06:31:54,289 Abdul Rahman Al-Sudais 53:21 done
+2026-09-24 06:32:02,791 Abdul Rahman Al-Sudais 53:41 done
+2026-09-24 06:32:08,486 Abdul Rahman Al-Sudais 53:61 done
+2026-09-24 06:32:19,674 Abdul Rahman Al-Sudais 54:19 done
+2026-09-24 06:32:25,511 Abdul Rahman Al-Sudais 54:39 done
+2026-09-24 06:32:29,561 Abdul Rahman Al-Sudais 55:4 done
+2026-09-24 06:32:39,429 Abdul Rahman Al-Sudais 55:24 done
+2026-09-24 06:32:49,111 Abdul Rahman Al-Sudais 55:44 done
+2026-09-24 06:32:57,307 Abdul Rahman Al-Sudais 55:64 done
+2026-09-24 06:33:03,306 Abdul Rahman Al-Sudais 56:6 done
+2026-09-24 06:33:11,328 Abdul Rahman Al-Sudais 56:26 done
+2026-09-24 06:33:17,213 Abdul Rahman Al-Sudais 56:46 done
+2026-09-24 06:33:20,144 Abdul Rahman Al-Sudais 56:66 done
+2026-09-24 06:33:26,875 Abdul Rahman Al-Sudais 56:86 done
+2026-09-24 06:34:20,487 Abdul Rahman Al-Sudais 57:10 done
+2026-09-24 06:34:45,118 Abdul Rahman Al-Sudais 58:1 done
+2026-09-24 06:35:02,355 Abdul Rahman Al-Sudais 58:21 done
+2026-09-24 06:35:18,649 Abdul Rahman Al-Sudais 59:19 done
+2026-09-24 06:35:29,468 Abdul Rahman Al-Sudais 61:2 done
+2026-09-24 06:35:59,162 Abdul Rahman Al-Sudais 62:8 done
+2026-09-24 06:36:26,714 Abdul Rahman Al-Sudais 64:6 done
+2026-09-24 06:36:52,675 Abdul Rahman Al-Sudais 65:8 done
+2026-09-24 06:37:09,508 Abdul Rahman Al-Sudais 67:4 done
+2026-09-24 06:37:21,699 Abdul Rahman Al-Sudais 67:24 done
+2026-09-24 06:37:27,853 Abdul Rahman Al-Sudais 68:14 done
+2026-09-24 06:37:37,813 Abdul Rahman Al-Sudais 68:34 done
+2026-09-24 06:37:45,098 Abdul Rahman Al-Sudais 69:2 done
+2026-09-24 06:37:49,400 Abdul Rahman Al-Sudais 69:22 done
+2026-09-24 06:37:58,948 Abdul Rahman Al-Sudais 69:42 done
+2026-09-24 06:38:06,271 Abdul Rahman Al-Sudais 70:10 done
+2026-09-24 06:38:22,163 Abdul Rahman Al-Sudais 70:30 done
+2026-09-24 06:38:30,780 Abdul Rahman Al-Sudais 71:6 done
+2026-09-24 06:38:42,920 Abdul Rahman Al-Sudais 71:26 done
+2026-09-24 06:38:53,147 Abdul Rahman Al-Sudais 72:18 done
+2026-09-24 06:39:02,169 Abdul Rahman Al-Sudais 73:10 done
+2026-09-24 06:39:07,689 Abdul Rahman Al-Sudais 74:10 done
+2026-09-24 06:39:12,262 Abdul Rahman Al-Sudais 74:30 done
+2026-09-24 06:39:18,118 Abdul Rahman Al-Sudais 74:50 done
+2026-09-24 06:39:24,799 Abdul Rahman Al-Sudais 75:14 done
+2026-09-24 06:39:28,576 Abdul Rahman Al-Sudais 75:34 done
+2026-09-24 06:39:38,277 Abdul Rahman Al-Sudais 76:14 done
+2026-09-24 06:39:41,728 Abdul Rahman Al-Sudais 77:3 done
+2026-09-24 06:39:46,494 Abdul Rahman Al-Sudais 77:23 done
+2026-09-24 06:39:58,791 Abdul Rahman Al-Sudais 77:43 done
+2026-09-24 06:40:05,229 Abdul Rahman Al-Sudais 78:13 done
+2026-09-24 06:40:08,805 Abdul Rahman Al-Sudais 78:33 done
+2026-09-24 06:40:15,826 Abdul Rahman Al-Sudais 79:13 done
+2026-09-24 06:40:20,196 Abdul Rahman Al-Sudais 79:33 done
+2026-09-24 06:40:24,801 Abdul Rahman Al-Sudais 80:7 done
+2026-09-24 06:40:29,106 Abdul Rahman Al-Sudais 80:27 done
+2026-09-24 06:40:32,024 Abdul Rahman Al-Sudais 81:5 done
+2026-09-24 06:40:38,104 Abdul Rahman Al-Sudais 81:25 done
+2026-09-24 06:40:44,702 Abdul Rahman Al-Sudais 82:16 done
+2026-09-24 06:40:53,772 Abdul Rahman Al-Sudais 83:17 done
+2026-09-24 06:41:00,240 Abdul Rahman Al-Sudais 84:1 done
+2026-09-24 06:41:11,036 Abdul Rahman Al-Sudais 84:21 done
+2026-09-24 06:41:15,532 Abdul Rahman Al-Sudais 85:16 done
+2026-09-24 06:41:19,024 Abdul Rahman Al-Sudais 86:14 done
+2026-09-24 06:41:25,778 Abdul Rahman Al-Sudais 87:17 done
+2026-09-24 06:41:32,457 Abdul Rahman Al-Sudais 88:18 done
+2026-09-24 06:41:37,808 Abdul Rahman Al-Sudais 89:12 done
+2026-09-24 06:41:44,522 Abdul Rahman Al-Sudais 90:2 done
+2026-09-24 06:41:48,061 Abdul Rahman Al-Sudais 91:2 done
+2026-09-24 06:41:53,231 Abdul Rahman Al-Sudais 92:7 done
+2026-09-24 06:41:58,447 Abdul Rahman Al-Sudais 93:6 done
+2026-09-24 06:42:03,971 Abdul Rahman Al-Sudais 95:7 done
+2026-09-24 06:42:13,227 Abdul Rahman Al-Sudais 96:19 done
+2026-09-24 06:42:23,433 Abdul Rahman Al-Sudais 99:7 done
+2026-09-24 06:42:30,026 Abdul Rahman Al-Sudais 101:8 done
+2026-09-24 06:42:34,686 Abdul Rahman Al-Sudais 104:6 done
+2026-09-24 06:42:41,676 Abdul Rahman Al-Sudais 108:1 done
+2026-09-24 06:42:48,015 Abdul Rahman Al-Sudais 112:4 done
+2026-09-24 06:42:57,296 Abdullah Al-Juhany 2:2 done
+2026-09-24 06:43:48,031 Abdullah Al-Juhany 2:22 done
+2026-09-24 06:43:57,978 Abdullah Al-Juhany 2:42 done
+2026-09-24 06:44:42,369 Abdullah Al-Juhany 2:62 done
+2026-09-24 06:45:02,821 Abdullah Al-Juhany 2:82 done
+2026-09-24 06:46:59,043 Abdullah Al-Juhany 2:102 done
+2026-09-24 06:47:13,961 Abdullah Al-Juhany 2:122 done
+2026-09-24 06:47:48,686 Abdullah Al-Juhany 2:142 done
+2026-09-24 06:47:58,632 Abdullah Al-Juhany 2:162 done
+2026-09-24 06:48:26,455 Abdullah Al-Juhany 2:182 done
+2026-09-24 06:48:39,812 Abdullah Al-Juhany 2:202 done
+2026-09-24 06:49:23,316 Abdullah Al-Juhany 2:222 done
+2026-09-24 06:49:32,723 Abdullah Al-Juhany 2:242 done
+2026-09-24 06:50:09,005 Abdullah Al-Juhany 2:262 done
+2026-09-24 06:54:37,549 Abdullah Al-Juhany 2:282 done
+2026-09-24 06:54:55,494 Abdullah Al-Juhany 3:16 done
+2026-09-24 06:55:39,580 Abdullah Al-Juhany 3:36 done
+2026-09-24 06:55:58,307 Abdullah Al-Juhany 3:56 done
+2026-09-24 06:56:08,248 Abdullah Al-Juhany 3:76 done
+2026-09-24 06:56:24,858 Abdullah Al-Juhany 3:96 done
+2026-09-24 06:56:49,483 Abdullah Al-Juhany 3:116 done
+2026-09-24 06:57:15,304 Abdullah Al-Juhany 3:136 done
+2026-09-24 06:58:01,954 Abdullah Al-Juhany 3:156 done
+2026-09-24 06:58:27,136 Abdullah Al-Juhany 3:176 done
+2026-09-24 06:58:36,267 Abdullah Al-Juhany 3:196 done
+2026-09-24 06:59:01,771 Abdullah Al-Juhany 4:16 done
+2026-09-24 07:00:09,932 Abdullah Al-Juhany 4:36 done
+2026-09-24 07:00:57,885 Abdullah Al-Juhany 4:56 done
+2026-09-24 07:01:39,870 Abdullah Al-Juhany 4:76 done
+2026-09-24 07:01:50,694 Abdullah Al-Juhany 4:96 done
+2026-09-24 07:02:22,898 Abdullah Al-Juhany 4:116 done
+2026-09-24 07:03:27,279 Abdullah Al-Juhany 4:136 done
+2026-09-24 07:03:35,288 Abdullah Al-Juhany 4:156 done
+2026-09-24 07:04:56,441 Abdullah Al-Juhany 4:176 done
+2026-09-24 07:05:35,162 Abdullah Al-Juhany 5:20 done
+2026-09-24 07:06:07,932 Abdullah Al-Juhany 5:40 done
+2026-09-24 07:07:15,763 Abdullah Al-Juhany 5:60 done
+2026-09-24 07:07:50,952 Abdullah Al-Juhany 5:80 done
+2026-09-24 07:08:09,143 Abdullah Al-Juhany 5:100 done
+2026-09-24 07:08:28,664 Abdullah Al-Juhany 5:120 done
+2026-09-24 07:08:52,960 Abdullah Al-Juhany 6:20 done
+2026-09-24 07:09:09,930 Abdullah Al-Juhany 6:40 done
+2026-09-24 07:09:45,478 Abdullah Al-Juhany 6:60 done
+2026-09-24 07:10:31,270 Abdullah Al-Juhany 6:80 done
+2026-09-24 07:10:53,733 Abdullah Al-Juhany 6:100 done
+2026-09-24 07:11:10,073 Abdullah Al-Juhany 6:120 done
+2026-09-24 07:11:40,882 Abdullah Al-Juhany 6:140 done
+2026-09-24 07:12:09,052 Abdullah Al-Juhany 6:160 done
+2026-09-24 07:12:15,655 Abdullah Al-Juhany 7:15 done
+2026-09-24 07:12:48,911 Abdullah Al-Juhany 7:35 done
+2026-09-24 07:13:02,592 Abdullah Al-Juhany 7:55 done
+2026-09-24 07:13:38,945 Abdullah Al-Juhany 7:75 done
+2026-09-24 07:14:22,445 Abdullah Al-Juhany 7:95 done
+2026-09-24 07:14:38,118 Abdullah Al-Juhany 7:115 done
+2026-09-24 07:14:52,601 Abdullah Al-Juhany 7:135 done
+2026-09-24 07:16:02,005 Abdullah Al-Juhany 7:155 done
+2026-09-24 07:16:21,172 Abdullah Al-Juhany 7:175 done
+2026-09-24 07:16:58,344 Abdullah Al-Juhany 7:195 done
+2026-09-24 07:17:18,676 Abdullah Al-Juhany 8:9 done
+2026-09-24 07:17:46,384 Abdullah Al-Juhany 8:29 done
+2026-09-24 07:18:13,652 Abdullah Al-Juhany 8:49 done
+2026-09-24 07:18:32,094 Abdullah Al-Juhany 8:69 done
+2026-09-24 07:18:52,490 Abdullah Al-Juhany 9:14 done
+2026-09-24 07:19:40,365 Abdullah Al-Juhany 9:34 done
+2026-09-24 07:20:12,671 Abdullah Al-Juhany 9:54 done
+2026-09-24 07:21:11,424 Abdullah Al-Juhany 9:74 done
+2026-09-24 07:21:58,634 Abdullah Al-Juhany 9:94 done
+2026-09-24 07:22:34,952 Abdullah Al-Juhany 9:114 done
+2026-09-24 07:23:16,856 Abdullah Al-Juhany 10:5 done
+2026-09-24 07:23:44,200 Abdullah Al-Juhany 10:25 done
+2026-09-24 07:24:11,025 Abdullah Al-Juhany 10:45 done
+2026-09-24 07:24:25,212 Abdullah Al-Juhany 10:65 done
+2026-09-24 07:24:36,978 Abdullah Al-Juhany 10:85 done
+2026-09-24 07:24:48,271 Abdullah Al-Juhany 10:105 done
+2026-09-24 07:25:04,193 Abdullah Al-Juhany 11:16 done
+2026-09-24 07:25:21,220 Abdullah Al-Juhany 11:36 done
+2026-09-24 07:25:55,722 Abdullah Al-Juhany 11:56 done
+2026-09-24 07:26:18,885 Abdullah Al-Juhany 11:76 done
+2026-09-24 07:26:29,873 Abdullah Al-Juhany 11:96 done
+2026-09-24 07:27:11,831 Abdullah Al-Juhany 11:116 done
+2026-09-24 07:27:30,590 Abdullah Al-Juhany 12:13 done
+2026-09-24 07:27:49,662 Abdullah Al-Juhany 12:33 done
+2026-09-24 07:28:10,890 Abdullah Al-Juhany 12:53 done
+2026-09-24 07:28:24,726 Abdullah Al-Juhany 12:73 done
+2026-09-24 07:28:41,139 Abdullah Al-Juhany 12:93 done
+2026-09-24 07:29:25,703 Abdullah Al-Juhany 13:2 done
+2026-09-24 07:30:01,090 Abdullah Al-Juhany 13:22 done
+2026-09-24 07:30:22,934 Abdullah Al-Juhany 13:42 done
+2026-09-24 07:30:38,940 Abdullah Al-Juhany 14:19 done
+2026-09-24 07:30:52,932 Abdullah Al-Juhany 14:39 done
+2026-09-24 07:31:04,217 Abdullah Al-Juhany 15:7 done
+2026-09-24 07:31:16,504 Abdullah Al-Juhany 15:27 done
+2026-09-24 07:31:31,277 Abdullah Al-Juhany 15:47 done
+2026-09-24 07:31:37,908 Abdullah Al-Juhany 15:67 done
+2026-09-24 07:31:47,187 Abdullah Al-Juhany 15:87 done
+2026-09-24 07:31:58,696 Abdullah Al-Juhany 16:8 done
+2026-09-24 07:32:27,345 Abdullah Al-Juhany 16:28 done
+2026-09-24 07:33:00,137 Abdullah Al-Juhany 16:48 done
+2026-09-24 07:33:13,710 Abdullah Al-Juhany 16:68 done
+2026-09-24 07:33:26,758 Abdullah Al-Juhany 16:88 done
+2026-09-24 07:33:44,353 Abdullah Al-Juhany 16:108 done
+2026-09-24 07:33:56,931 Abdullah Al-Juhany 16:128 done
+2026-09-24 07:34:15,239 Abdullah Al-Juhany 17:20 done
+2026-09-24 07:34:35,649 Abdullah Al-Juhany 17:40 done
+2026-09-24 07:35:08,420 Abdullah Al-Juhany 17:60 done
+2026-09-24 07:35:27,254 Abdullah Al-Juhany 17:80 done
+2026-09-24 07:35:51,629 Abdullah Al-Juhany 17:100 done
+2026-09-24 07:36:02,281 Abdullah Al-Juhany 18:9 done
+2026-09-24 07:36:55,996 Abdullah Al-Juhany 18:29 done
+2026-09-24 07:37:38,833 Abdullah Al-Juhany 18:49 done
+2026-09-24 07:37:49,085 Abdullah Al-Juhany 18:69 done
+2026-09-24 07:37:54,904 Abdullah Al-Juhany 18:89 done
+2026-09-24 07:38:18,340 Abdullah Al-Juhany 18:109 done
+2026-09-24 07:38:30,433 Abdullah Al-Juhany 19:19 done
+2026-09-24 07:38:45,917 Abdullah Al-Juhany 19:39 done
+2026-09-24 07:39:00,711 Abdullah Al-Juhany 19:59 done
+2026-09-24 07:39:10,201 Abdullah Al-Juhany 19:79 done
+2026-09-24 07:39:11,960 Abdullah Al-Juhany 20:1 done
+2026-09-24 07:39:21,161 Abdullah Al-Juhany 20:21 done
+2026-09-24 07:39:25,100 Abdullah Al-Juhany 20:41 done
+2026-09-24 07:39:48,364 Abdullah Al-Juhany 20:61 done
+2026-09-24 07:40:10,509 Abdullah Al-Juhany 20:81 done
+2026-09-24 07:40:23,244 Abdullah Al-Juhany 20:101 done
+2026-09-24 07:40:52,753 Abdullah Al-Juhany 20:121 done
+2026-09-24 07:41:02,952 Abdullah Al-Juhany 21:6 done
+2026-09-24 07:41:15,812 Abdullah Al-Juhany 21:26 done
+2026-09-24 07:41:33,491 Abdullah Al-Juhany 21:46 done
+2026-09-24 07:41:44,925 Abdullah Al-Juhany 21:66 done
+2026-09-24 07:41:54,501 Abdullah Al-Juhany 21:86 done
+2026-09-24 07:42:02,098 Abdullah Al-Juhany 21:106 done
+2026-09-24 07:42:31,079 Abdullah Al-Juhany 22:14 done
+2026-09-24 07:43:03,871 Abdullah Al-Juhany 22:34 done
+2026-09-24 07:43:32,983 Abdullah Al-Juhany 22:54 done
+2026-09-24 07:43:46,308 Abdullah Al-Juhany 22:74 done
+2026-09-24 07:43:55,624 Abdullah Al-Juhany 23:16 done
+2026-09-24 07:44:00,748 Abdullah Al-Juhany 23:36 done
+2026-09-24 07:44:09,478 Abdullah Al-Juhany 23:56 done
+2026-09-24 07:44:21,307 Abdullah Al-Juhany 23:76 done
+2026-09-24 07:44:31,377 Abdullah Al-Juhany 23:96 done
+2026-09-24 07:44:44,243 Abdullah Al-Juhany 23:116 done
+2026-09-24 07:44:55,611 Abdullah Al-Juhany 24:18 done
+2026-09-24 07:45:19,813 Abdullah Al-Juhany 24:38 done
+2026-09-24 07:46:59,968 Abdullah Al-Juhany 24:58 done
+2026-09-24 07:47:16,325 Abdullah Al-Juhany 25:14 done
+2026-09-24 07:47:40,208 Abdullah Al-Juhany 25:34 done
+2026-09-24 07:47:57,380 Abdullah Al-Juhany 25:54 done
+2026-09-24 07:48:18,262 Abdullah Al-Juhany 25:74 done
+2026-09-24 07:48:26,206 Abdullah Al-Juhany 26:17 done
+2026-09-24 07:48:31,181 Abdullah Al-Juhany 26:37 done
+2026-09-24 07:48:39,138 Abdullah Al-Juhany 26:57 done
+2026-09-24 07:48:47,530 Abdullah Al-Juhany 26:77 done
+2026-09-24 07:48:59,932 Abdullah Al-Juhany 26:97 done
+2026-09-24 07:49:05,464 Abdullah Al-Juhany 26:117 done
+2026-09-24 07:49:10,394 Abdullah Al-Juhany 26:137 done
+2026-09-24 07:49:15,009 Abdullah Al-Juhany 26:157 done
+2026-09-24 07:49:22,618 Abdullah Al-Juhany 26:177 done
+2026-09-24 07:49:38,412 Abdullah Al-Juhany 26:197 done
+2026-09-24 07:49:42,479 Abdullah Al-Juhany 26:217 done
+2026-09-24 07:50:15,587 Abdullah Al-Juhany 27:10 done
+2026-09-24 07:50:27,005 Abdullah Al-Juhany 27:30 done
+2026-09-24 07:50:34,531 Abdullah Al-Juhany 27:50 done
+2026-09-24 07:50:45,272 Abdullah Al-Juhany 27:70 done
+2026-09-24 07:51:04,126 Abdullah Al-Juhany 27:90 done
+2026-09-24 07:51:13,974 Abdullah Al-Juhany 28:17 done
+2026-09-24 07:51:42,060 Abdullah Al-Juhany 28:37 done
+2026-09-24 07:52:20,693 Abdullah Al-Juhany 28:57 done
+2026-09-24 07:52:55,734 Abdullah Al-Juhany 28:77 done
+2026-09-24 07:53:08,036 Abdullah Al-Juhany 29:9 done
+2026-09-24 07:53:40,893 Abdullah Al-Juhany 29:29 done
+2026-09-24 07:53:59,943 Abdullah Al-Juhany 29:49 done
+2026-09-24 07:54:19,137 Abdullah Al-Juhany 29:69 done
+2026-09-24 07:54:37,391 Abdullah Al-Juhany 30:20 done
+2026-09-24 07:55:16,978 Abdullah Al-Juhany 30:40 done
+2026-09-24 07:55:35,490 Abdullah Al-Juhany 30:60 done
+2026-09-24 07:56:11,314 Abdullah Al-Juhany 31:20 done
+2026-09-24 07:56:18,964 Abdullah Al-Juhany 32:6 done
+2026-09-24 07:56:38,367 Abdullah Al-Juhany 32:26 done
+2026-09-24 07:56:54,379 Abdullah Al-Juhany 33:16 done
+2026-09-24 07:57:24,151 Abdullah Al-Juhany 33:36 done
+2026-09-24 07:57:48,512 Abdullah Al-Juhany 33:56 done
+2026-09-24 07:58:28,467 Abdullah Al-Juhany 34:3 done
+2026-09-24 07:58:59,452 Abdullah Al-Juhany 34:23 done
+2026-09-24 08:00:01,864 Abdullah Al-Juhany 34:43 done
+2026-09-24 08:00:28,739 Abdullah Al-Juhany 35:9 done
+2026-09-24 08:01:05,241 Abdullah Al-Juhany 35:29 done
+2026-09-24 08:01:10,982 Abdullah Al-Juhany 36:4 done
+2026-09-24 08:01:17,216 Abdullah Al-Juhany 36:24 done
+2026-09-24 08:01:23,643 Abdullah Al-Juhany 36:44 done
+2026-09-24 08:01:33,018 Abdullah Al-Juhany 36:64 done
+2026-09-24 08:01:40,630 Abdullah Al-Juhany 37:1 done
+2026-09-24 08:01:51,517 Abdullah Al-Juhany 37:21 done
+2026-09-24 08:01:57,603 Abdullah Al-Juhany 37:41 done
+2026-09-24 08:02:04,877 Abdullah Al-Juhany 37:61 done
+2026-09-24 08:02:08,780 Abdullah Al-Juhany 37:81 done
+2026-09-24 08:02:13,167 Abdullah Al-Juhany 37:101 done
+2026-09-24 08:02:18,948 Abdullah Al-Juhany 37:121 done
+2026-09-24 08:02:23,582 Abdullah Al-Juhany 37:141 done
+2026-09-24 08:02:27,141 Abdullah Al-Juhany 37:161 done
+2026-09-24 08:02:31,371 Abdullah Al-Juhany 37:181 done
+2026-09-24 08:02:38,241 Abdullah Al-Juhany 38:19 done
+2026-09-24 08:02:48,203 Abdullah Al-Juhany 38:39 done
+2026-09-24 08:03:02,863 Abdullah Al-Juhany 38:59 done
+2026-09-24 08:03:09,303 Abdullah Al-Juhany 38:79 done
+2026-09-24 08:03:17,530 Abdullah Al-Juhany 39:11 done
+2026-09-24 08:03:30,596 Abdullah Al-Juhany 39:31 done
+2026-09-24 08:03:55,060 Abdullah Al-Juhany 39:51 done
+2026-09-24 08:05:06,916 Abdullah Al-Juhany 39:71 done
+2026-09-24 08:05:30,069 Abdullah Al-Juhany 40:16 done
+2026-09-24 08:05:41,026 Abdullah Al-Juhany 40:36 done
+2026-09-24 08:06:20,149 Abdullah Al-Juhany 40:56 done
+2026-09-24 08:06:33,584 Abdullah Al-Juhany 40:76 done
+2026-09-24 08:07:00,965 Abdullah Al-Juhany 41:11 done
+2026-09-24 08:07:24,502 Abdullah Al-Juhany 41:31 done
+2026-09-24 08:07:51,140 Abdullah Al-Juhany 41:51 done
+2026-09-24 08:08:07,916 Abdullah Al-Juhany 42:17 done
+2026-09-24 08:08:22,434 Abdullah Al-Juhany 42:37 done
+2026-09-24 08:08:33,892 Abdullah Al-Juhany 43:4 done
+2026-09-24 08:09:00,759 Abdullah Al-Juhany 43:24 done
+2026-09-24 08:09:08,532 Abdullah Al-Juhany 43:44 done
+2026-09-24 08:09:20,877 Abdullah Al-Juhany 43:64 done
+2026-09-24 08:09:34,857 Abdullah Al-Juhany 43:84 done
+2026-09-24 08:09:44,676 Abdullah Al-Juhany 44:15 done
+2026-09-24 08:09:53,505 Abdullah Al-Juhany 44:35 done
+2026-09-24 08:10:01,495 Abdullah Al-Juhany 44:55 done
+2026-09-24 08:10:25,042 Abdullah Al-Juhany 45:16 done
+2026-09-24 08:10:34,948 Abdullah Al-Juhany 45:36 done
+2026-09-24 08:10:49,680 Abdullah Al-Juhany 46:19 done
+2026-09-24 08:11:58,639 Abdullah Al-Juhany 47:4 done
+2026-09-24 08:12:07,733 Abdullah Al-Juhany 47:24 done
+2026-09-24 08:12:51,670 Abdullah Al-Juhany 48:6 done
+2026-09-24 08:13:42,770 Abdullah Al-Juhany 48:26 done
+2026-09-24 08:14:07,414 Abdullah Al-Juhany 49:17 done
+2026-09-24 08:14:20,862 Abdullah Al-Juhany 50:19 done
+2026-09-24 08:14:33,564 Abdullah Al-Juhany 50:39 done
+2026-09-24 08:14:41,691 Abdullah Al-Juhany 51:14 done
+2026-09-24 08:14:47,467 Abdullah Al-Juhany 51:34 done
+2026-09-24 08:14:52,969 Abdullah Al-Juhany 51:54 done
+2026-09-24 08:15:02,263 Abdullah Al-Juhany 52:14 done
+2026-09-24 08:15:11,650 Abdullah Al-Juhany 52:34 done
+2026-09-24 08:15:15,553 Abdullah Al-Juhany 53:5 done
+2026-09-24 08:15:22,336 Abdullah Al-Juhany 53:25 done
+2026-09-24 08:15:29,923 Abdullah Al-Juhany 53:45 done
+2026-09-24 08:15:41,022 Abdullah Al-Juhany 54:3 done
+2026-09-24 08:15:45,600 Abdullah Al-Juhany 54:23 done
+2026-09-24 08:16:02,381 Abdullah Al-Juhany 54:43 done
+2026-09-24 08:16:07,261 Abdullah Al-Juhany 55:8 done
+2026-09-24 08:16:14,898 Abdullah Al-Juhany 55:28 done
+2026-09-24 08:16:17,626 Abdullah Al-Juhany 55:48 done
+2026-09-24 08:16:26,113 Abdullah Al-Juhany 55:68 done
+2026-09-24 08:16:30,057 Abdullah Al-Juhany 56:10 done
+2026-09-24 08:16:35,179 Abdullah Al-Juhany 56:30 done
+2026-09-24 08:16:43,345 Abdullah Al-Juhany 56:50 done
+2026-09-24 08:16:52,987 Abdullah Al-Juhany 56:70 done
+2026-09-24 08:17:01,033 Abdullah Al-Juhany 56:90 done
+2026-09-24 08:17:42,052 Abdullah Al-Juhany 57:14 done
+2026-09-24 08:18:27,227 Abdullah Al-Juhany 58:5 done
+2026-09-24 08:18:47,772 Abdullah Al-Juhany 59:3 done
+2026-09-24 08:19:23,220 Abdullah Al-Juhany 59:23 done
+2026-09-24 08:20:22,936 Abdullah Al-Juhany 61:6 done
+2026-09-24 08:20:51,828 Abdullah Al-Juhany 63:1 done
+2026-09-24 08:21:07,378 Abdullah Al-Juhany 64:10 done
+2026-09-24 08:21:53,756 Abdullah Al-Juhany 65:12 done
+2026-09-24 08:22:14,166 Abdullah Al-Juhany 67:8 done
+2026-09-24 08:22:32,514 Abdullah Al-Juhany 67:28 done
+2026-09-24 08:22:35,074 Abdullah Al-Juhany 68:18 done
+2026-09-24 08:22:41,199 Abdullah Al-Juhany 68:38 done
+2026-09-24 08:22:52,336 Abdullah Al-Juhany 69:6 done
+2026-09-24 08:22:58,209 Abdullah Al-Juhany 69:26 done
+2026-09-24 08:23:04,424 Abdullah Al-Juhany 69:46 done
+2026-09-24 08:23:13,966 Abdullah Al-Juhany 70:14 done
+2026-09-24 08:23:21,155 Abdullah Al-Juhany 70:34 done
+2026-09-24 08:23:29,654 Abdullah Al-Juhany 71:10 done
+2026-09-24 08:23:39,769 Abdullah Al-Juhany 72:2 done
+2026-09-24 08:23:54,260 Abdullah Al-Juhany 72:22 done
+2026-09-24 08:24:07,428 Abdullah Al-Juhany 73:14 done
+2026-09-24 08:24:11,764 Abdullah Al-Juhany 74:14 done
+2026-09-24 08:24:15,472 Abdullah Al-Juhany 74:34 done
+2026-09-24 08:24:20,232 Abdullah Al-Juhany 74:54 done
+2026-09-24 08:24:27,049 Abdullah Al-Juhany 75:18 done
+2026-09-24 08:24:36,463 Abdullah Al-Juhany 75:38 done
+2026-09-24 08:24:47,580 Abdullah Al-Juhany 76:18 done
+2026-09-24 08:24:52,572 Abdullah Al-Juhany 77:7 done
+2026-09-24 08:25:11,235 Abdullah Al-Juhany 77:27 done
+2026-09-24 08:25:18,476 Abdullah Al-Juhany 77:47 done
+2026-09-24 08:25:24,257 Abdullah Al-Juhany 78:17 done
+2026-09-24 08:25:36,191 Abdullah Al-Juhany 78:37 done
+2026-09-24 08:25:42,515 Abdullah Al-Juhany 79:17 done
+2026-09-24 08:25:45,249 Abdullah Al-Juhany 79:37 done
+2026-09-24 08:25:50,862 Abdullah Al-Juhany 80:11 done
+2026-09-24 08:25:55,441 Abdullah Al-Juhany 80:31 done
+2026-09-24 08:26:00,920 Abdullah Al-Juhany 81:9 done
+2026-09-24 08:26:14,524 Abdullah Al-Juhany 81:29 done
+2026-09-24 08:26:18,007 Abdullah Al-Juhany 83:1 done
+2026-09-24 08:26:22,919 Abdullah Al-Juhany 83:21 done
+2026-09-24 08:26:27,110 Abdullah Al-Juhany 84:5 done
+2026-09-24 08:26:38,110 Abdullah Al-Juhany 84:25 done
+2026-09-24 08:26:46,075 Abdullah Al-Juhany 85:20 done
+2026-09-24 08:26:51,411 Abdullah Al-Juhany 87:1 done
+2026-09-24 08:26:58,556 Abdullah Al-Juhany 88:2 done
+2026-09-24 08:27:04,931 Abdullah Al-Juhany 88:22 done
+2026-09-24 08:27:18,373 Abdullah Al-Juhany 89:16 done
+2026-09-24 08:27:23,264 Abdullah Al-Juhany 90:6 done
+2026-09-24 08:27:27,311 Abdullah Al-Juhany 91:6 done
+2026-09-24 08:27:33,965 Abdullah Al-Juhany 92:11 done
+2026-09-24 08:27:41,776 Abdullah Al-Juhany 93:10 done
+2026-09-24 08:27:45,784 Abdullah Al-Juhany 96:3 done
+2026-09-24 08:28:02,959 Abdullah Al-Juhany 97:4 done
+2026-09-24 08:28:07,730 Abdullah Al-Juhany 100:3 done
+2026-09-24 08:28:12,044 Abdullah Al-Juhany 102:1 done
+2026-09-24 08:28:20,364 Abdullah Al-Juhany 105:1 done
+2026-09-24 08:28:25,025 Abdullah Al-Juhany 109:2 done
+2026-09-24 08:28:33,974 Abdullah Al-Juhany 113:4 done
+2026-09-24 08:28:50,157 Saud Al-Shuraim 2:6 done
+2026-09-24 08:29:42,335 Saud Al-Shuraim 2:26 done
+2026-09-24 08:29:54,095 Saud Al-Shuraim 2:46 done
+2026-09-24 08:30:09,573 Saud Al-Shuraim 2:66 done
+2026-09-24 08:30:29,230 Saud Al-Shuraim 2:86 done
+2026-09-24 08:30:52,376 Saud Al-Shuraim 2:106 done
+2026-09-24 08:31:35,788 Saud Al-Shuraim 2:126 done
+2026-09-24 08:31:58,657 Saud Al-Shuraim 2:146 done
+2026-09-24 08:32:12,886 Saud Al-Shuraim 2:166 done
+2026-09-24 08:32:36,223 Saud Al-Shuraim 2:186 done
+2026-09-24 08:32:52,885 Saud Al-Shuraim 2:206 done
+2026-09-24 08:33:14,415 Saud Al-Shuraim 2:226 done
+2026-09-24 08:34:37,246 Saud Al-Shuraim 2:246 done
+2026-09-24 08:35:35,830 Saud Al-Shuraim 2:266 done
+2026-09-24 08:36:48,377 Saud Al-Shuraim 2:286 done
+2026-09-24 08:37:29,592 Saud Al-Shuraim 3:20 done
+2026-09-24 08:37:48,172 Saud Al-Shuraim 3:40 done
+2026-09-24 08:37:55,259 Saud Al-Shuraim 3:60 done
+2026-09-24 08:38:13,665 Saud Al-Shuraim 3:80 done
+2026-09-24 08:38:32,859 Saud Al-Shuraim 3:100 done
+2026-09-24 08:39:01,118 Saud Al-Shuraim 3:120 done
+2026-09-24 08:39:32,101 Saud Al-Shuraim 3:140 done
+2026-09-24 08:39:51,616 Saud Al-Shuraim 3:160 done
+2026-09-24 08:40:29,655 Saud Al-Shuraim 3:180 done
+2026-09-24 08:40:49,045 Saud Al-Shuraim 3:200 done
+2026-09-24 08:41:14,177 Saud Al-Shuraim 4:20 done
+2026-09-24 08:41:31,526 Saud Al-Shuraim 4:40 done
+2026-09-24 08:42:07,114 Saud Al-Shuraim 4:60 done
+2026-09-24 08:42:20,549 Saud Al-Shuraim 4:80 done
+2026-09-24 08:43:01,967 Saud Al-Shuraim 4:100 done
+2026-09-24 08:43:11,131 Saud Al-Shuraim 4:120 done
+2026-09-24 08:43:54,806 Saud Al-Shuraim 4:140 done
+2026-09-24 08:44:12,889 Saud Al-Shuraim 4:160 done
+2026-09-24 08:44:55,160 Saud Al-Shuraim 5:4 done
+2026-09-24 08:45:16,151 Saud Al-Shuraim 5:24 done
+2026-09-24 08:46:30,364 Saud Al-Shuraim 5:44 done
+2026-09-24 08:47:49,668 Saud Al-Shuraim 5:64 done
+2026-09-24 08:48:07,024 Saud Al-Shuraim 5:84 done
+2026-09-24 08:48:41,796 Saud Al-Shuraim 5:104 done
+2026-09-24 08:48:53,561 Saud Al-Shuraim 6:4 done
+2026-09-24 08:49:05,498 Saud Al-Shuraim 6:24 done
+2026-09-24 08:49:32,368 Saud Al-Shuraim 6:44 done
+2026-09-24 08:49:44,782 Saud Al-Shuraim 6:64 done
+2026-09-24 08:50:17,952 Saud Al-Shuraim 6:84 done
+2026-09-24 08:50:41,043 Saud Al-Shuraim 6:104 done
+2026-09-24 08:51:20,772 Saud Al-Shuraim 6:124 done
+2026-09-24 08:52:24,033 Saud Al-Shuraim 6:144 done
+2026-09-24 08:53:01,554 Saud Al-Shuraim 6:164 done
+2026-09-24 08:53:23,436 Saud Al-Shuraim 7:19 done
+2026-09-24 08:53:41,223 Saud Al-Shuraim 7:39 done
+2026-09-24 08:54:03,197 Saud Al-Shuraim 7:59 done
+2026-09-24 08:54:22,371 Saud Al-Shuraim 7:79 done
+2026-09-24 08:54:34,560 Saud Al-Shuraim 7:99 done
+2026-09-24 08:54:40,358 Saud Al-Shuraim 7:119 done
+2026-09-24 08:54:52,528 Saud Al-Shuraim 7:139 done
+2026-09-24 08:55:03,692 Saud Al-Shuraim 7:159 done
+2026-09-24 08:55:52,780 Saud Al-Shuraim 7:179 done
+2026-09-24 08:56:00,793 Saud Al-Shuraim 7:199 done
+2026-09-24 08:56:22,196 Saud Al-Shuraim 8:13 done
+2026-09-24 08:56:38,108 Saud Al-Shuraim 8:33 done
+2026-09-24 08:57:01,046 Saud Al-Shuraim 8:53 done
+2026-09-24 08:57:20,512 Saud Al-Shuraim 8:73 done
+2026-09-24 08:57:52,508 Saud Al-Shuraim 9:18 done
+2026-09-24 08:58:28,246 Saud Al-Shuraim 9:38 done
+2026-09-24 08:58:47,087 Saud Al-Shuraim 9:58 done
+2026-09-24 08:59:00,406 Saud Al-Shuraim 9:78 done
+2026-09-24 08:59:27,350 Saud Al-Shuraim 9:98 done
+2026-09-24 09:00:07,089 Saud Al-Shuraim 9:118 done
+2026-09-24 09:00:28,562 Saud Al-Shuraim 10:9 done
+2026-09-24 09:00:41,683 Saud Al-Shuraim 10:29 done
+2026-09-24 09:01:10,786 Saud Al-Shuraim 10:49 done
+2026-09-24 09:01:20,152 Saud Al-Shuraim 10:69 done
+2026-09-24 09:01:37,246 Saud Al-Shuraim 10:89 done
+2026-09-24 09:01:51,068 Saud Al-Shuraim 10:109 done
+2026-09-24 09:02:20,558 Saud Al-Shuraim 11:20 done
+2026-09-24 09:02:56,978 Saud Al-Shuraim 11:40 done
+2026-09-24 09:03:21,016 Saud Al-Shuraim 11:60 done
+2026-09-24 09:03:30,443 Saud Al-Shuraim 11:80 done
+2026-09-24 09:03:44,696 Saud Al-Shuraim 11:100 done
+2026-09-24 09:04:11,886 Saud Al-Shuraim 11:120 done
+2026-09-24 09:04:36,249 Saud Al-Shuraim 12:17 done
+2026-09-24 09:05:13,696 Saud Al-Shuraim 12:37 done
+2026-09-24 09:05:23,191 Saud Al-Shuraim 12:57 done
+2026-09-24 09:05:48,662 Saud Al-Shuraim 12:77 done
+2026-09-24 09:05:59,537 Saud Al-Shuraim 12:97 done
+2026-09-24 09:06:28,205 Saud Al-Shuraim 13:6 done
+2026-09-24 09:07:08,438 Saud Al-Shuraim 13:26 done
+2026-09-24 09:07:33,453 Saud Al-Shuraim 14:3 done
+2026-09-24 09:08:03,365 Saud Al-Shuraim 14:23 done
+2026-09-24 09:08:17,047 Saud Al-Shuraim 14:43 done
+2026-09-24 09:08:26,825 Saud Al-Shuraim 15:11 done
+2026-09-24 09:08:33,599 Saud Al-Shuraim 15:31 done
+2026-09-24 09:08:39,067 Saud Al-Shuraim 15:51 done
+2026-09-24 09:08:47,017 Saud Al-Shuraim 15:71 done
+2026-09-24 09:08:52,029 Saud Al-Shuraim 15:91 done
+2026-09-24 09:09:14,077 Saud Al-Shuraim 16:12 done
+2026-09-24 09:09:37,890 Saud Al-Shuraim 16:32 done
+2026-09-24 09:09:52,340 Saud Al-Shuraim 16:52 done
+2026-09-24 09:10:24,805 Saud Al-Shuraim 16:72 done
+2026-09-24 09:11:11,462 Saud Al-Shuraim 16:92 done
+2026-09-24 09:11:45,005 Saud Al-Shuraim 16:112 done
+2026-09-24 09:12:02,984 Saud Al-Shuraim 17:4 done
+2026-09-24 09:12:16,926 Saud Al-Shuraim 17:24 done
+2026-09-24 09:12:45,753 Saud Al-Shuraim 17:44 done
+2026-09-24 09:13:11,199 Saud Al-Shuraim 17:64 done
+2026-09-24 09:13:22,506 Saud Al-Shuraim 17:84 done
+2026-09-24 09:13:41,874 Saud Al-Shuraim 17:104 done
+2026-09-24 09:13:55,634 Saud Al-Shuraim 18:13 done
+2026-09-24 09:14:08,463 Saud Al-Shuraim 18:33 done
+2026-09-24 09:14:21,430 Saud Al-Shuraim 18:53 done
+2026-09-24 09:14:31,482 Saud Al-Shuraim 18:73 done
+2026-09-24 09:14:44,748 Saud Al-Shuraim 18:93 done
+2026-09-24 09:14:51,606 Saud Al-Shuraim 19:3 done
+2026-09-24 09:15:08,374 Saud Al-Shuraim 19:23 done
+2026-09-24 09:15:23,676 Saud Al-Shuraim 19:43 done
+2026-09-24 09:15:33,519 Saud Al-Shuraim 19:63 done
+2026-09-24 09:15:44,304 Saud Al-Shuraim 19:83 done
+2026-09-24 09:15:49,029 Saud Al-Shuraim 20:5 done
+2026-09-24 09:15:52,945 Saud Al-Shuraim 20:25 done
+2026-09-24 09:16:03,855 Saud Al-Shuraim 20:45 done
+2026-09-24 09:16:14,837 Saud Al-Shuraim 20:65 done
+2026-09-24 09:16:23,897 Saud Al-Shuraim 20:85 done
+2026-09-24 09:16:32,867 Saud Al-Shuraim 20:105 done
+2026-09-24 09:16:41,237 Saud Al-Shuraim 20:125 done
+2026-09-24 09:16:51,823 Saud Al-Shuraim 21:10 done
+2026-09-24 09:17:15,484 Saud Al-Shuraim 21:30 done
+2026-09-24 09:17:28,263 Saud Al-Shuraim 21:50 done
+2026-09-24 09:17:35,902 Saud Al-Shuraim 21:70 done
+2026-09-24 09:18:00,947 Saud Al-Shuraim 21:90 done
+2026-09-24 09:18:09,642 Saud Al-Shuraim 21:110 done
+2026-09-24 09:19:00,415 Saud Al-Shuraim 22:18 done
+2026-09-24 09:19:13,259 Saud Al-Shuraim 22:38 done
+2026-09-24 09:19:33,029 Saud Al-Shuraim 22:58 done
+2026-09-24 09:20:34,974 Saud Al-Shuraim 22:78 done
+2026-09-24 09:20:50,511 Saud Al-Shuraim 23:20 done
+2026-09-24 09:20:58,498 Saud Al-Shuraim 23:40 done
+2026-09-24 09:21:09,719 Saud Al-Shuraim 23:60 done
+2026-09-24 09:21:21,423 Saud Al-Shuraim 23:80 done
+2026-09-24 09:21:46,933 Saud Al-Shuraim 23:100 done
+2026-09-24 09:22:25,234 Saud Al-Shuraim 24:2 done
+2026-09-24 09:22:55,907 Saud Al-Shuraim 24:22 done
+2026-09-24 09:23:03,339 Saud Al-Shuraim 24:42 done
+2026-09-24 09:24:07,406 Saud Al-Shuraim 24:62 done
+2026-09-24 09:24:38,644 Saud Al-Shuraim 25:18 done
+2026-09-24 09:24:49,215 Saud Al-Shuraim 25:38 done
+2026-09-24 09:25:04,071 Saud Al-Shuraim 25:58 done
+2026-09-24 09:25:14,235 Saud Al-Shuraim 26:1 done
+2026-09-24 09:25:27,087 Saud Al-Shuraim 26:21 done
+2026-09-24 09:25:42,586 Saud Al-Shuraim 26:41 done
+2026-09-24 09:26:06,637 Saud Al-Shuraim 26:61 done
+2026-09-24 09:26:11,659 Saud Al-Shuraim 26:81 done
+2026-09-24 09:26:15,417 Saud Al-Shuraim 26:101 done
+2026-09-24 09:26:24,627 Saud Al-Shuraim 26:121 done
+2026-09-24 09:26:29,268 Saud Al-Shuraim 26:141 done
+2026-09-24 09:26:34,744 Saud Al-Shuraim 26:161 done
+2026-09-24 09:26:41,444 Saud Al-Shuraim 26:181 done
+2026-09-24 09:26:48,410 Saud Al-Shuraim 26:201 done
+2026-09-24 09:26:56,570 Saud Al-Shuraim 26:221 done
+2026-09-24 09:27:13,797 Saud Al-Shuraim 27:14 done
+2026-09-24 09:27:31,152 Saud Al-Shuraim 27:34 done
+2026-09-24 09:27:41,008 Saud Al-Shuraim 27:54 done
+2026-09-24 09:27:51,142 Saud Al-Shuraim 27:74 done
+2026-09-24 09:28:00,578 Saud Al-Shuraim 28:1 done
+2026-09-24 09:28:14,378 Saud Al-Shuraim 28:21 done
+2026-09-24 09:28:25,879 Saud Al-Shuraim 28:41 done
+2026-09-24 09:28:47,393 Saud Al-Shuraim 28:61 done
+2026-09-24 09:29:09,175 Saud Al-Shuraim 28:81 done
+2026-09-24 09:29:25,785 Saud Al-Shuraim 29:13 done
+2026-09-24 09:29:55,273 Saud Al-Shuraim 29:33 done
+2026-09-24 09:30:15,759 Saud Al-Shuraim 29:53 done
+2026-09-24 09:30:30,859 Saud Al-Shuraim 30:4 done
+2026-09-24 09:31:01,076 Saud Al-Shuraim 30:24 done
+2026-09-24 09:31:12,332 Saud Al-Shuraim 30:44 done
+2026-09-24 09:31:23,145 Saud Al-Shuraim 31:4 done
+2026-09-24 09:31:31,778 Saud Al-Shuraim 31:24 done
+2026-09-24 09:31:49,806 Saud Al-Shuraim 32:10 done
+2026-09-24 09:32:00,408 Saud Al-Shuraim 32:30 done
+2026-09-24 09:32:31,797 Saud Al-Shuraim 33:20 done
+2026-09-24 09:32:52,694 Saud Al-Shuraim 33:40 done
+2026-09-24 09:33:18,526 Saud Al-Shuraim 33:60 done
+2026-09-24 09:33:37,101 Saud Al-Shuraim 34:7 done
+2026-09-24 09:33:52,540 Saud Al-Shuraim 34:27 done
+2026-09-24 09:34:09,834 Saud Al-Shuraim 34:47 done
+2026-09-24 09:34:42,945 Saud Al-Shuraim 35:13 done
+2026-09-24 09:34:59,548 Saud Al-Shuraim 35:33 done
+2026-09-24 09:35:12,585 Saud Al-Shuraim 36:8 done
+2026-09-24 09:35:30,594 Saud Al-Shuraim 36:28 done
+2026-09-24 09:35:39,256 Saud Al-Shuraim 36:48 done
+2026-09-24 09:35:48,011 Saud Al-Shuraim 36:68 done
+2026-09-24 09:35:55,957 Saud Al-Shuraim 37:5 done
+2026-09-24 09:36:00,041 Saud Al-Shuraim 37:25 done
+2026-09-24 09:36:06,714 Saud Al-Shuraim 37:45 done
+2026-09-24 09:36:13,859 Saud Al-Shuraim 37:65 done
+2026-09-24 09:36:20,408 Saud Al-Shuraim 37:85 done
+2026-09-24 09:36:30,116 Saud Al-Shuraim 37:105 done
+2026-09-24 09:36:36,738 Saud Al-Shuraim 37:125 done
+2026-09-24 09:36:43,764 Saud Al-Shuraim 37:145 done
+2026-09-24 09:36:51,424 Saud Al-Shuraim 37:165 done
+2026-09-24 09:37:01,772 Saud Al-Shuraim 38:3 done
+2026-09-24 09:37:19,416 Saud Al-Shuraim 38:23 done
+2026-09-24 09:37:31,922 Saud Al-Shuraim 38:43 done
+2026-09-24 09:37:39,747 Saud Al-Shuraim 38:63 done
+2026-09-24 09:37:45,176 Saud Al-Shuraim 38:83 done
+2026-09-24 09:38:11,648 Saud Al-Shuraim 39:15 done
+2026-09-24 09:38:26,335 Saud Al-Shuraim 39:35 done
+2026-09-24 09:38:44,669 Saud Al-Shuraim 39:55 done
+2026-09-24 09:39:12,455 Saud Al-Shuraim 39:75 done
+2026-09-24 09:39:29,989 Saud Al-Shuraim 40:20 done
+2026-09-24 09:39:58,747 Saud Al-Shuraim 40:40 done
+2026-09-24 09:40:15,060 Saud Al-Shuraim 40:60 done
+2026-09-24 09:40:30,349 Saud Al-Shuraim 40:80 done
+2026-09-24 09:41:01,929 Saud Al-Shuraim 41:15 done
+2026-09-24 09:41:14,509 Saud Al-Shuraim 41:35 done
+2026-09-24 09:41:19,324 Saud Al-Shuraim 42:1 done
+2026-09-24 09:41:44,711 Saud Al-Shuraim 42:21 done
+2026-09-24 09:41:55,679 Saud Al-Shuraim 42:41 done
+2026-09-24 09:42:04,357 Saud Al-Shuraim 43:8 done
+2026-09-24 09:42:15,629 Saud Al-Shuraim 43:28 done
+2026-09-24 09:42:34,362 Saud Al-Shuraim 43:48 done
+2026-09-24 09:42:43,152 Saud Al-Shuraim 43:68 done
+2026-09-24 09:42:53,839 Saud Al-Shuraim 43:88 done
+2026-09-24 09:43:08,022 Saud Al-Shuraim 44:19 done
+2026-09-24 09:43:19,662 Saud Al-Shuraim 44:39 done
+2026-09-24 09:43:26,969 Saud Al-Shuraim 44:59 done
+2026-09-24 09:43:37,627 Saud Al-Shuraim 45:20 done
+2026-09-24 09:43:59,040 Saud Al-Shuraim 46:3 done
+2026-09-24 09:44:14,832 Saud Al-Shuraim 46:23 done
+2026-09-24 09:44:22,705 Saud Al-Shuraim 47:8 done
+2026-09-24 09:44:34,985 Saud Al-Shuraim 47:28 done
+2026-09-24 09:45:11,127 Saud Al-Shuraim 48:10 done
+2026-09-24 09:45:28,583 Saud Al-Shuraim 49:1 done
+2026-09-24 09:45:36,744 Saud Al-Shuraim 50:3 done
+2026-09-24 09:45:42,872 Saud Al-Shuraim 50:23 done
+2026-09-24 09:45:49,917 Saud Al-Shuraim 50:43 done
+2026-09-24 09:45:54,460 Saud Al-Shuraim 51:18 done
+2026-09-24 09:46:03,537 Saud Al-Shuraim 51:38 done
+2026-09-24 09:46:10,137 Saud Al-Shuraim 51:58 done
+2026-09-24 09:46:19,032 Saud Al-Shuraim 52:18 done
+2026-09-24 09:46:33,607 Saud Al-Shuraim 52:38 done
+2026-09-24 09:46:38,939 Saud Al-Shuraim 53:9 done
+2026-09-24 09:46:49,547 Saud Al-Shuraim 53:29 done
+2026-09-24 09:46:54,030 Saud Al-Shuraim 53:49 done
+2026-09-24 09:47:04,856 Saud Al-Shuraim 54:7 done
+2026-09-24 09:47:13,533 Saud Al-Shuraim 54:27 done
+2026-09-24 09:47:19,722 Saud Al-Shuraim 54:47 done
+2026-09-24 09:47:24,688 Saud Al-Shuraim 55:12 done
+2026-09-24 09:47:31,222 Saud Al-Shuraim 55:32 done
+2026-09-24 09:47:38,468 Saud Al-Shuraim 55:52 done
+2026-09-24 09:47:44,984 Saud Al-Shuraim 55:72 done
+2026-09-24 09:47:49,594 Saud Al-Shuraim 56:14 done
+2026-09-24 09:47:54,623 Saud Al-Shuraim 56:34 done
+2026-09-24 09:48:00,206 Saud Al-Shuraim 56:54 done
+2026-09-24 09:48:06,133 Saud Al-Shuraim 56:74 done
+2026-09-24 09:48:09,584 Saud Al-Shuraim 56:94 done
+2026-09-24 09:48:24,843 Saud Al-Shuraim 57:18 done
+2026-09-24 09:48:50,510 Saud Al-Shuraim 58:9 done
+2026-09-24 09:49:39,679 Saud Al-Shuraim 59:7 done
+2026-09-24 09:49:54,824 Saud Al-Shuraim 60:3 done
+2026-09-24 09:50:07,526 Saud Al-Shuraim 61:10 done
+2026-09-24 09:50:25,161 Saud Al-Shuraim 63:5 done
+2026-09-24 09:50:48,778 Saud Al-Shuraim 64:14 done
+2026-09-24 09:51:19,539 Saud Al-Shuraim 66:4 done
+2026-09-24 09:51:31,595 Saud Al-Shuraim 67:12 done
+2026-09-24 09:51:37,505 Saud Al-Shuraim 68:2 done
+2026-09-24 09:51:44,437 Saud Al-Shuraim 68:22 done
+2026-09-24 09:51:55,130 Saud Al-Shuraim 68:42 done
+2026-09-24 09:52:02,429 Saud Al-Shuraim 69:10 done
+2026-09-24 09:52:05,408 Saud Al-Shuraim 69:30 done
+2026-09-24 09:52:11,184 Saud Al-Shuraim 69:50 done
+2026-09-24 09:52:14,111 Saud Al-Shuraim 70:18 done
+2026-09-24 09:52:22,066 Saud Al-Shuraim 70:38 done
+2026-09-24 09:52:26,693 Saud Al-Shuraim 71:14 done
+2026-09-24 09:52:40,401 Saud Al-Shuraim 72:6 done
+2026-09-24 09:52:47,682 Saud Al-Shuraim 72:26 done
+2026-09-24 09:52:59,443 Saud Al-Shuraim 73:18 done
+2026-09-24 09:53:03,610 Saud Al-Shuraim 74:18 done
+2026-09-24 09:53:08,618 Saud Al-Shuraim 74:38 done
+2026-09-24 09:53:13,824 Saud Al-Shuraim 75:2 done
+2026-09-24 09:53:18,249 Saud Al-Shuraim 75:22 done
+2026-09-24 09:53:32,387 Saud Al-Shuraim 76:2 done
+2026-09-24 09:53:42,977 Saud Al-Shuraim 76:22 done
+2026-09-24 09:53:46,096 Saud Al-Shuraim 77:11 done
+2026-09-24 09:53:52,206 Saud Al-Shuraim 77:31 done
+2026-09-24 09:53:58,312 Saud Al-Shuraim 78:1 done
+2026-09-24 09:54:04,017 Saud Al-Shuraim 78:21 done
+2026-09-24 09:54:07,610 Saud Al-Shuraim 79:1 done
+2026-09-24 09:54:10,647 Saud Al-Shuraim 79:21 done
+2026-09-24 09:54:15,796 Saud Al-Shuraim 79:41 done
+2026-09-24 09:54:18,769 Saud Al-Shuraim 80:15 done
+2026-09-24 09:54:22,732 Saud Al-Shuraim 80:35 done
+2026-09-24 09:54:27,418 Saud Al-Shuraim 81:13 done
+2026-09-24 09:54:31,222 Saud Al-Shuraim 82:4 done
+2026-09-24 09:54:33,923 Saud Al-Shuraim 83:5 done
+2026-09-24 09:54:38,738 Saud Al-Shuraim 83:25 done
+2026-09-24 09:54:44,273 Saud Al-Shuraim 84:9 done
+2026-09-24 09:54:48,112 Saud Al-Shuraim 85:4 done
+2026-09-24 09:54:51,455 Saud Al-Shuraim 86:2 done
+2026-09-24 09:54:56,228 Saud Al-Shuraim 87:5 done
+2026-09-24 09:55:01,518 Saud Al-Shuraim 88:6 done
+2026-09-24 09:55:07,751 Saud Al-Shuraim 88:26 done
+2026-09-24 09:55:12,979 Saud Al-Shuraim 89:20 done
+2026-09-24 09:55:16,574 Saud Al-Shuraim 90:10 done
+2026-09-24 09:55:20,604 Saud Al-Shuraim 91:10 done
+2026-09-24 09:55:23,938 Saud Al-Shuraim 92:15 done
+2026-09-24 09:55:27,338 Saud Al-Shuraim 94:3 done
+2026-09-24 09:55:30,249 Saud Al-Shuraim 96:7 done
+2026-09-24 09:55:34,014 Saud Al-Shuraim 98:3 done
+2026-09-24 09:55:39,620 Saud Al-Shuraim 100:7 done
+2026-09-24 09:55:44,686 Saud Al-Shuraim 102:5 done
+2026-09-24 09:55:51,308 Saud Al-Shuraim 105:5 done
+2026-09-24 09:55:55,899 Saud Al-Shuraim 109:6 done
+2026-09-24 09:56:00,285 Saud Al-Shuraim 114:3 done
+2026-09-24 09:56:25,256 Nasser Al-Qatami 2:10 done
+2026-09-24 09:57:24,574 Nasser Al-Qatami 2:30 done
+2026-09-24 09:57:46,814 Nasser Al-Qatami 2:50 done
+2026-09-24 09:58:15,116 Nasser Al-Qatami 2:70 done
+2026-09-24 09:59:27,058 Nasser Al-Qatami 2:90 done
+2026-09-24 09:59:56,900 Nasser Al-Qatami 2:110 done
+2026-09-24 10:00:23,120 Nasser Al-Qatami 2:130 done
+2026-09-24 10:01:10,473 Nasser Al-Qatami 2:150 done
+2026-09-24 10:01:44,351 Nasser Al-Qatami 2:170 done
+2026-09-24 10:02:02,835 Nasser Al-Qatami 2:190 done
+2026-09-24 10:02:27,736 Nasser Al-Qatami 2:210 done
+2026-09-24 10:03:36,095 Nasser Al-Qatami 2:230 done
+2026-09-24 10:04:14,874 Nasser Al-Qatami 2:250 done
+2026-09-24 10:04:43,424 Nasser Al-Qatami 2:270 done
+2026-09-24 10:05:20,291 Nasser Al-Qatami 3:4 done
+2026-09-24 10:05:48,393 Nasser Al-Qatami 3:24 done
+2026-09-24 10:06:23,674 Nasser Al-Qatami 3:44 done
+2026-09-24 10:07:21,973 Nasser Al-Qatami 3:64 done
+2026-09-24 10:08:16,949 Nasser Al-Qatami 3:84 done
+2026-09-24 10:09:03,083 Nasser Al-Qatami 3:104 done
+2026-09-24 10:09:34,752 Nasser Al-Qatami 3:124 done
+2026-09-24 10:10:20,484 Nasser Al-Qatami 3:144 done
+2026-09-24 10:11:04,361 Nasser Al-Qatami 3:164 done
+2026-09-24 10:11:31,456 Nasser Al-Qatami 3:184 done
+2026-09-24 10:12:00,920 Nasser Al-Qatami 4:4 done
+2026-09-24 10:13:25,804 Nasser Al-Qatami 4:24 done
+2026-09-24 10:13:51,109 Nasser Al-Qatami 4:44 done
+2026-09-24 10:14:45,404 Nasser Al-Qatami 4:64 done
+2026-09-24 10:15:26,498 Nasser Al-Qatami 4:84 done
+2026-09-24 10:16:08,603 Nasser Al-Qatami 4:104 done
+2026-09-24 10:16:40,857 Nasser Al-Qatami 4:124 done
+2026-09-24 10:17:13,772 Nasser Al-Qatami 4:144 done
+2026-09-24 10:17:34,225 Nasser Al-Qatami 4:164 done
+2026-09-24 10:18:21,159 Nasser Al-Qatami 5:8 done
+2026-09-24 10:18:46,969 Nasser Al-Qatami 5:28 done
+2026-09-24 10:21:02,019 Nasser Al-Qatami 5:48 done
+2026-09-24 10:21:57,453 Nasser Al-Qatami 5:68 done
+2026-09-24 10:22:18,413 Nasser Al-Qatami 5:88 done
+2026-09-24 10:22:58,416 Nasser Al-Qatami 5:108 done
+2026-09-24 10:23:20,347 Nasser Al-Qatami 6:8 done
+2026-09-24 10:24:17,060 Nasser Al-Qatami 6:28 done
+2026-09-24 10:24:53,854 Nasser Al-Qatami 6:48 done
+2026-09-24 10:25:27,147 Nasser Al-Qatami 6:68 done
+2026-09-24 10:25:51,302 Nasser Al-Qatami 6:88 done
+2026-09-24 10:26:47,749 Nasser Al-Qatami 6:108 done
+2026-09-24 10:27:57,317 Nasser Al-Qatami 6:128 done
+2026-09-24 10:29:14,211 Nasser Al-Qatami 6:148 done
+2026-09-24 10:29:36,789 Nasser Al-Qatami 7:3 done
+2026-09-24 10:30:02,979 Nasser Al-Qatami 7:23 done
+2026-09-24 10:32:01,571 Nasser Al-Qatami 7:43 done
+2026-09-24 10:32:27,232 Nasser Al-Qatami 7:63 done
+2026-09-24 10:32:40,627 Nasser Al-Qatami 7:83 done
+2026-09-24 10:33:08,984 Nasser Al-Qatami 7:103 done
+2026-09-24 10:33:38,568 Nasser Al-Qatami 7:123 done
+2026-09-24 10:35:04,028 Nasser Al-Qatami 7:143 done
+2026-09-24 10:35:47,965 Nasser Al-Qatami 7:163 done
+2026-09-24 10:35:55,070 Nasser Al-Qatami 7:183 done
+2026-09-24 10:36:41,260 Nasser Al-Qatami 7:203 done
+2026-09-24 10:37:23,889 Nasser Al-Qatami 8:17 done
+2026-09-24 10:38:02,252 Nasser Al-Qatami 8:37 done
+2026-09-24 10:38:23,851 Nasser Al-Qatami 8:57 done
+2026-09-24 10:38:52,364 Nasser Al-Qatami 9:2 done
+2026-09-24 10:39:15,582 Nasser Al-Qatami 9:22 done
+2026-09-24 10:40:13,197 Nasser Al-Qatami 9:42 done
+2026-09-24 10:40:43,505 Nasser Al-Qatami 9:62 done
+2026-09-24 10:41:06,662 Nasser Al-Qatami 9:82 done
+2026-09-24 10:41:33,579 Nasser Al-Qatami 9:102 done
+2026-09-24 10:42:27,371 Nasser Al-Qatami 9:122 done
+2026-09-24 10:42:58,166 Nasser Al-Qatami 10:13 done
+2026-09-24 10:43:14,171 Nasser Al-Qatami 10:33 done
+2026-09-24 10:43:43,598 Nasser Al-Qatami 10:53 done
+2026-09-24 10:44:17,420 Nasser Al-Qatami 10:73 done
+2026-09-24 10:44:59,788 Nasser Al-Qatami 10:93 done
+2026-09-24 10:45:11,818 Nasser Al-Qatami 11:4 done
+2026-09-24 10:45:33,485 Nasser Al-Qatami 11:24 done
+2026-09-24 10:46:09,181 Nasser Al-Qatami 11:44 done
+2026-09-24 10:46:54,390 Nasser Al-Qatami 11:64 done
+2026-09-24 10:47:50,195 Nasser Al-Qatami 11:84 done
+2026-09-24 10:48:00,416 Nasser Al-Qatami 11:104 done
+2026-09-24 10:48:14,418 Nasser Al-Qatami 12:1 done
+2026-09-24 10:49:42,973 Nasser Al-Qatami 12:21 done
+2026-09-24 10:50:13,281 Nasser Al-Qatami 12:41 done
+2026-09-24 10:50:22,685 Nasser Al-Qatami 12:61 done
+2026-09-24 10:50:54,222 Nasser Al-Qatami 12:81 done
+2026-09-24 10:51:32,875 Nasser Al-Qatami 12:101 done
+2026-09-24 10:52:02,131 Nasser Al-Qatami 13:10 done
+2026-09-24 10:52:49,593 Nasser Al-Qatami 13:30 done
+2026-09-24 10:53:14,459 Nasser Al-Qatami 14:7 done
+2026-09-24 10:53:47,596 Nasser Al-Qatami 14:27 done
+2026-09-24 10:54:22,378 Nasser Al-Qatami 14:47 done
+2026-09-24 10:54:41,613 Nasser Al-Qatami 15:15 done
+2026-09-24 10:54:51,261 Nasser Al-Qatami 15:35 done
+2026-09-24 10:55:03,167 Nasser Al-Qatami 15:55 done
+2026-09-24 10:55:14,854 Nasser Al-Qatami 15:75 done
+2026-09-24 10:55:24,333 Nasser Al-Qatami 15:95 done
+2026-09-24 10:55:35,573 Nasser Al-Qatami 16:16 done
+2026-09-24 10:56:23,668 Nasser Al-Qatami 16:36 done
+2026-09-24 10:56:48,974 Nasser Al-Qatami 16:56 done
+2026-09-24 10:57:42,251 Nasser Al-Qatami 16:76 done
+2026-09-24 10:58:30,842 Nasser Al-Qatami 16:96 done
+2026-09-24 10:59:06,820 Nasser Al-Qatami 16:116 done
+2026-09-24 10:59:25,487 Nasser Al-Qatami 17:8 done
+2026-09-24 10:59:51,977 Nasser Al-Qatami 17:28 done
+2026-09-24 11:00:07,852 Nasser Al-Qatami 17:48 done
+2026-09-24 11:00:36,537 Nasser Al-Qatami 17:68 done
+2026-09-24 11:01:19,102 Nasser Al-Qatami 17:88 done
+2026-09-24 11:01:32,445 Nasser Al-Qatami 17:108 done
+2026-09-24 11:02:32,344 Nasser Al-Qatami 18:17 done
+2026-09-24 11:03:09,600 Nasser Al-Qatami 18:37 done
+2026-09-24 11:04:03,480 Nasser Al-Qatami 18:57 done
+2026-09-24 11:04:50,129 Nasser Al-Qatami 18:77 done
+2026-09-24 11:04:59,527 Nasser Al-Qatami 18:97 done
+2026-09-24 11:05:20,170 Nasser Al-Qatami 19:7 done
+2026-09-24 11:05:32,981 Nasser Al-Qatami 19:27 done
+2026-09-24 11:05:46,764 Nasser Al-Qatami 19:47 done
+2026-09-24 11:06:01,862 Nasser Al-Qatami 19:67 done
+2026-09-24 11:06:14,127 Nasser Al-Qatami 19:87 done
+2026-09-24 11:06:18,775 Nasser Al-Qatami 20:9 done
+2026-09-24 11:06:24,550 Nasser Al-Qatami 20:29 done
+2026-09-24 11:06:30,333 Nasser Al-Qatami 20:49 done
+2026-09-24 11:06:51,567 Nasser Al-Qatami 20:69 done
+2026-09-24 11:07:33,090 Nasser Al-Qatami 20:89 done
+2026-09-24 11:07:56,900 Nasser Al-Qatami 20:109 done
+2026-09-24 11:08:09,880 Nasser Al-Qatami 20:129 done
+2026-09-24 11:08:21,304 Nasser Al-Qatami 21:14 done
+2026-09-24 11:08:38,282 Nasser Al-Qatami 21:34 done
+2026-09-24 11:08:53,037 Nasser Al-Qatami 21:54 done
+2026-09-24 11:09:22,764 Nasser Al-Qatami 21:74 done
+2026-09-24 11:09:51,765 Nasser Al-Qatami 21:94 done
+2026-09-24 11:10:31,013 Nasser Al-Qatami 22:2 done
+2026-09-24 11:10:58,371 Nasser Al-Qatami 22:22 done
+2026-09-24 11:11:12,758 Nasser Al-Qatami 22:42 done
+2026-09-24 11:12:01,896 Nasser Al-Qatami 22:62 done
+2026-09-24 11:12:07,576 Nasser Al-Qatami 23:4 done
+2026-09-24 11:13:05,120 Nasser Al-Qatami 23:24 done
+2026-09-24 11:13:52,107 Nasser Al-Qatami 23:44 done
+2026-09-24 11:14:09,043 Nasser Al-Qatami 23:64 done
+2026-09-24 11:14:20,906 Nasser Al-Qatami 23:84 done
+2026-09-24 11:14:39,542 Nasser Al-Qatami 23:104 done
+2026-09-24 11:15:22,117 Nasser Al-Qatami 24:6 done
+2026-09-24 11:16:21,796 Nasser Al-Qatami 24:26 done
+2026-09-24 11:16:47,737 Nasser Al-Qatami 24:46 done
+2026-09-24 11:17:28,944 Nasser Al-Qatami 25:2 done
+2026-09-24 11:18:17,692 Nasser Al-Qatami 25:22 done
+2026-09-24 11:18:47,921 Nasser Al-Qatami 25:42 done
+2026-09-24 11:19:03,855 Nasser Al-Qatami 25:62 done
+2026-09-24 11:19:22,665 Nasser Al-Qatami 26:5 done
+2026-09-24 11:19:30,297 Nasser Al-Qatami 26:25 done
+2026-09-24 11:19:42,305 Nasser Al-Qatami 26:45 done
+2026-09-24 11:19:54,157 Nasser Al-Qatami 26:65 done
+2026-09-24 11:20:04,389 Nasser Al-Qatami 26:85 done
+2026-09-24 11:20:12,780 Nasser Al-Qatami 26:105 done
+2026-09-24 11:20:20,318 Nasser Al-Qatami 26:125 done
+2026-09-24 11:20:32,884 Nasser Al-Qatami 26:145 done
+2026-09-24 11:20:39,485 Nasser Al-Qatami 26:165 done
+2026-09-24 11:20:48,762 Nasser Al-Qatami 26:185 done
+2026-09-24 11:20:57,116 Nasser Al-Qatami 26:205 done
+2026-09-24 11:21:05,752 Nasser Al-Qatami 26:225 done
+2026-09-24 11:21:43,507 Nasser Al-Qatami 27:18 done
+2026-09-24 11:21:58,490 Nasser Al-Qatami 27:38 done
+2026-09-24 11:22:13,286 Nasser Al-Qatami 27:58 done
+2026-09-24 11:22:23,957 Nasser Al-Qatami 27:78 done
+2026-09-24 11:22:49,236 Nasser Al-Qatami 28:5 done
+2026-09-24 11:23:43,108 Nasser Al-Qatami 28:25 done
+2026-09-24 11:24:15,187 Nasser Al-Qatami 28:45 done
+2026-09-24 11:24:25,465 Nasser Al-Qatami 28:65 done
+2026-09-24 11:24:58,763 Nasser Al-Qatami 28:85 done
+2026-09-24 11:25:46,492 Nasser Al-Qatami 29:17 done
+2026-09-24 11:25:59,210 Nasser Al-Qatami 29:37 done
+2026-09-24 11:26:13,033 Nasser Al-Qatami 29:57 done
+2026-09-24 11:26:55,236 Nasser Al-Qatami 30:8 done
+2026-09-24 11:27:54,881 Nasser Al-Qatami 30:28 done
+2026-09-24 11:28:53,433 Nasser Al-Qatami 30:48 done
+2026-09-24 11:29:06,391 Nasser Al-Qatami 31:8 done
+2026-09-24 11:29:24,151 Nasser Al-Qatami 31:28 done
+2026-09-24 11:30:08,607 Nasser Al-Qatami 32:14 done
+2026-09-24 11:30:59,140 Nasser Al-Qatami 33:4 done
+2026-09-24 11:31:30,549 Nasser Al-Qatami 33:24 done
+2026-09-24 11:31:53,298 Nasser Al-Qatami 33:44 done
+2026-09-24 11:32:04,860 Nasser Al-Qatami 33:64 done
+2026-09-24 11:32:21,659 Nasser Al-Qatami 34:11 done
+2026-09-24 11:33:20,585 Nasser Al-Qatami 34:31 done
+2026-09-24 11:33:32,924 Nasser Al-Qatami 34:51 done
+2026-09-24 11:33:40,440 Nasser Al-Qatami 35:17 done
+2026-09-24 11:34:44,208 Nasser Al-Qatami 35:37 done
+2026-09-24 11:35:05,042 Nasser Al-Qatami 36:12 done
+2026-09-24 11:35:15,820 Nasser Al-Qatami 36:32 done
+2026-09-24 11:35:46,321 Nasser Al-Qatami 36:52 done
+2026-09-24 11:35:57,609 Nasser Al-Qatami 36:72 done
+2026-09-24 11:36:03,943 Nasser Al-Qatami 37:9 done
+2026-09-24 11:36:09,993 Nasser Al-Qatami 37:29 done
+2026-09-24 11:36:18,756 Nasser Al-Qatami 37:49 done
+2026-09-24 11:36:33,958 Nasser Al-Qatami 37:69 done
+2026-09-24 11:36:39,704 Nasser Al-Qatami 37:89 done
+2026-09-24 11:36:45,950 Nasser Al-Qatami 37:109 done
+2026-09-24 11:36:52,339 Nasser Al-Qatami 37:129 done
+2026-09-24 11:37:01,027 Nasser Al-Qatami 37:149 done
+2026-09-24 11:37:08,839 Nasser Al-Qatami 37:169 done
+2026-09-24 11:37:26,816 Nasser Al-Qatami 38:7 done
+2026-09-24 11:37:56,009 Nasser Al-Qatami 38:27 done
+2026-09-24 11:38:06,427 Nasser Al-Qatami 38:47 done
+2026-09-24 11:38:14,027 Nasser Al-Qatami 38:67 done
+2026-09-24 11:38:22,281 Nasser Al-Qatami 38:87 done
+2026-09-24 11:38:58,396 Nasser Al-Qatami 39:19 done
+2026-09-24 11:39:11,342 Nasser Al-Qatami 39:39 done
+2026-09-24 11:39:27,565 Nasser Al-Qatami 39:59 done
+2026-09-24 11:39:42,832 Nasser Al-Qatami 40:4 done
+2026-09-24 11:39:54,405 Nasser Al-Qatami 40:24 done
+2026-09-24 11:40:19,983 Nasser Al-Qatami 40:44 done
+2026-09-24 11:41:07,377 Nasser Al-Qatami 40:64 done
+2026-09-24 11:41:39,230 Nasser Al-Qatami 40:84 done
+2026-09-24 11:41:51,428 Nasser Al-Qatami 41:19 done
+2026-09-24 11:42:34,111 Nasser Al-Qatami 41:39 done
+2026-09-24 11:43:19,835 Nasser Al-Qatami 42:5 done
+2026-09-24 11:43:34,367 Nasser Al-Qatami 42:25 done
+2026-09-24 11:44:25,146 Nasser Al-Qatami 42:45 done
+2026-09-24 11:44:40,140 Nasser Al-Qatami 43:12 done
+2026-09-24 11:45:24,360 Nasser Al-Qatami 43:32 done
+2026-09-24 11:45:47,178 Nasser Al-Qatami 43:52 done
+2026-09-24 11:46:00,024 Nasser Al-Qatami 43:72 done
+2026-09-24 11:46:13,239 Nasser Al-Qatami 44:3 done
+2026-09-24 11:46:25,467 Nasser Al-Qatami 44:23 done
+2026-09-24 11:46:34,674 Nasser Al-Qatami 44:43 done
+2026-09-24 11:46:49,368 Nasser Al-Qatami 45:4 done
+2026-09-24 11:47:14,518 Nasser Al-Qatami 45:24 done
+2026-09-24 11:47:40,633 Nasser Al-Qatami 46:7 done
+2026-09-24 11:48:03,133 Nasser Al-Qatami 46:27 done
+2026-09-24 11:48:56,022 Nasser Al-Qatami 47:12 done
+2026-09-24 11:49:41,141 Nasser Al-Qatami 47:32 done
+2026-09-24 11:50:05,564 Nasser Al-Qatami 48:14 done
+2026-09-24 11:50:20,137 Nasser Al-Qatami 49:5 done
+2026-09-24 11:50:41,709 Nasser Al-Qatami 50:7 done
+2026-09-24 11:51:07,529 Nasser Al-Qatami 50:27 done
+2026-09-24 11:51:11,169 Nasser Al-Qatami 51:2 done
+2026-09-24 11:51:18,093 Nasser Al-Qatami 51:22 done
+2026-09-24 11:51:27,930 Nasser Al-Qatami 51:42 done
+2026-09-24 11:51:33,145 Nasser Al-Qatami 52:2 done
+2026-09-24 11:51:44,518 Nasser Al-Qatami 52:22 done
+2026-09-24 11:51:56,227 Nasser Al-Qatami 52:42 done
+2026-09-24 11:52:01,606 Nasser Al-Qatami 53:13 done
+2026-09-24 11:52:06,739 Nasser Al-Qatami 53:33 done
+2026-09-24 11:52:10,229 Nasser Al-Qatami 53:53 done
+2026-09-24 11:52:20,911 Nasser Al-Qatami 54:11 done
+2026-09-24 11:52:33,875 Nasser Al-Qatami 54:31 done
+2026-09-24 11:52:43,073 Nasser Al-Qatami 54:51 done
+2026-09-24 11:52:52,090 Nasser Al-Qatami 55:16 done
+2026-09-24 11:53:02,640 Nasser Al-Qatami 55:36 done
+2026-09-24 11:53:26,191 Nasser Al-Qatami 55:56 done
+2026-09-24 11:53:39,430 Nasser Al-Qatami 55:76 done
+2026-09-24 11:53:48,681 Nasser Al-Qatami 56:18 done
+2026-09-24 11:53:52,651 Nasser Al-Qatami 56:38 done
+2026-09-24 11:54:00,361 Nasser Al-Qatami 56:58 done
+2026-09-24 11:54:07,308 Nasser Al-Qatami 56:78 done
+2026-09-24 11:54:24,560 Nasser Al-Qatami 57:2 done
+2026-09-24 11:55:12,723 Nasser Al-Qatami 57:22 done
+2026-09-24 11:55:48,371 Nasser Al-Qatami 58:13 done
+2026-09-24 11:56:52,545 Nasser Al-Qatami 59:11 done
+2026-09-24 11:57:17,085 Nasser Al-Qatami 60:7 done
+2026-09-24 11:58:57,279 Nasser Al-Qatami 61:14 done
+2026-09-24 11:59:38,127 Nasser Al-Qatami 63:9 done
+2026-09-24 11:59:57,797 Nasser Al-Qatami 64:18 done
+2026-09-24 12:01:27,229 Nasser Al-Qatami 66:8 done
+2026-09-24 12:01:45,094 Nasser Al-Qatami 67:16 done
+2026-09-24 12:01:50,070 Nasser Al-Qatami 68:6 done
+2026-09-24 12:02:03,314 Nasser Al-Qatami 68:26 done
+2026-09-24 12:02:15,814 Nasser Al-Qatami 68:46 done
+2026-09-24 12:02:25,271 Nasser Al-Qatami 69:14 done
+2026-09-24 12:02:36,433 Nasser Al-Qatami 69:34 done
+2026-09-24 12:02:41,688 Nasser Al-Qatami 70:2 done
+2026-09-24 12:02:45,488 Nasser Al-Qatami 70:22 done
+2026-09-24 12:03:02,867 Nasser Al-Qatami 70:42 done
+2026-09-24 12:03:11,860 Nasser Al-Qatami 71:18 done
+2026-09-24 12:03:26,650 Nasser Al-Qatami 72:10 done
+2026-09-24 12:03:31,879 Nasser Al-Qatami 73:2 done
+2026-09-24 12:03:35,213 Nasser Al-Qatami 74:2 done
+2026-09-24 12:03:38,792 Nasser Al-Qatami 74:22 done
+2026-09-24 12:03:43,397 Nasser Al-Qatami 74:42 done
+2026-09-24 12:03:48,564 Nasser Al-Qatami 75:6 done
+2026-09-24 12:04:03,410 Nasser Al-Qatami 75:26 done
+2026-09-24 12:04:15,844 Nasser Al-Qatami 76:6 done
+2026-09-24 12:04:27,321 Nasser Al-Qatami 76:26 done
+2026-09-24 12:04:34,370 Nasser Al-Qatami 77:15 done
+2026-09-24 12:04:42,951 Nasser Al-Qatami 77:35 done
+2026-09-24 12:04:50,613 Nasser Al-Qatami 78:5 done
+2026-09-24 12:04:59,052 Nasser Al-Qatami 78:25 done
+2026-09-24 12:05:03,267 Nasser Al-Qatami 79:5 done
+2026-09-24 12:05:11,035 Nasser Al-Qatami 79:25 done
+2026-09-24 12:05:27,001 Nasser Al-Qatami 79:45 done
+2026-09-24 12:05:35,088 Nasser Al-Qatami 80:19 done
+2026-09-24 12:05:43,381 Nasser Al-Qatami 80:39 done
+2026-09-24 12:05:47,239 Nasser Al-Qatami 81:17 done
+2026-09-24 12:05:59,037 Nasser Al-Qatami 82:8 done
+2026-09-24 12:06:04,965 Nasser Al-Qatami 83:9 done
+2026-09-24 12:06:18,480 Nasser Al-Qatami 83:29 done
+2026-09-24 12:06:37,796 Nasser Al-Qatami 84:13 done
+2026-09-24 12:06:51,726 Nasser Al-Qatami 85:8 done
+2026-09-24 12:07:00,053 Nasser Al-Qatami 86:6 done
+2026-09-24 12:07:06,739 Nasser Al-Qatami 87:9 done
+2026-09-24 12:07:10,592 Nasser Al-Qatami 88:10 done
+2026-09-24 12:07:13,857 Nasser Al-Qatami 89:4 done
+2026-09-24 12:07:22,617 Nasser Al-Qatami 89:24 done
+2026-09-24 12:07:30,269 Nasser Al-Qatami 90:14 done
+2026-09-24 12:07:52,473 Nasser Al-Qatami 91:14 done
+2026-09-24 12:08:01,789 Nasser Al-Qatami 92:19 done
+2026-09-24 12:08:08,428 Nasser Al-Qatami 94:7 done
+2026-09-24 12:08:14,929 Nasser Al-Qatami 96:11 done
+2026-09-24 12:08:30,603 Nasser Al-Qatami 98:7 done
+2026-09-24 12:08:43,444 Nasser Al-Qatami 100:11 done
+2026-09-24 12:08:45,641 Nasser Al-Qatami 103:1 done
+2026-09-24 12:08:58,750 Nasser Al-Qatami 106:4 done
+2026-09-24 12:09:06,698 Nasser Al-Qatami 111:1 done
+2026-09-24 12:09:14,028 Husary_Muallim_128kbps 2:282 studio failed: Audio longer than 180s; segment it first (see app.segmenter)
+2026-09-24 12:09:21,038 Husary_Muallim_128kbps 2:282 taraweeh_adapted failed: Audio longer than 180s; segment it first (see app.segmenter)
+2026-09-24 12:09:21,039 Al-Hussary (Muallim) 2:282 done
+2026-09-24 12:10:20,619 Abdul Basit Abdul Samad (Murattal) 6:112 done
+2026-09-24 12:10:47,148 Abdul Basit Abdul Samad (Murattal) 6:132 done
+2026-09-24 12:12:27,892 Abdul Basit Abdul Samad (Murattal) 6:152 done
+2026-09-24 12:12:52,199 Abdul Basit Abdul Samad (Murattal) 7:7 done
+2026-09-24 12:14:33,871 Abdul Basit Abdul Samad (Murattal) 7:27 done
+2026-09-24 12:15:06,482 Abdul Basit Abdul Samad (Murattal) 7:47 done
+2026-09-24 12:15:34,178 Abdul Basit Abdul Samad (Murattal) 7:67 done
+2026-09-24 12:16:36,849 Abdul Basit Abdul Samad (Murattal) 7:87 done
+2026-09-24 12:16:51,493 Abdul Basit Abdul Samad (Murattal) 7:107 done
+2026-09-24 12:17:58,929 Abdul Basit Abdul Samad (Murattal) 7:127 done
+2026-09-24 12:18:38,360 Abdul Basit Abdul Samad (Murattal) 7:147 done
+2026-09-24 12:19:33,651 Abdul Basit Abdul Samad (Murattal) 7:167 done
+2026-09-24 12:21:34,677 Abdul Basit Abdul Samad (Murattal) 7:187 done
+2026-09-24 12:22:15,524 Abdul Basit Abdul Samad (Murattal) 8:1 done
+2026-09-24 12:22:28,184 Abdul Basit Abdul Samad (Murattal) 8:21 done
+2026-09-24 12:24:04,467 Abdul Basit Abdul Samad (Murattal) 8:41 done
+2026-09-24 12:24:28,209 Abdul Basit Abdul Samad (Murattal) 8:61 done
+2026-09-24 12:25:04,940 Abdul Basit Abdul Samad (Murattal) 9:6 done
+2026-09-24 12:25:45,735 Abdul Basit Abdul Samad (Murattal) 9:26 done
+2026-09-24 12:26:14,830 Abdul Basit Abdul Samad (Murattal) 9:46 done
+2026-09-24 12:26:58,967 Abdul Basit Abdul Samad (Murattal) 9:66 done
+2026-09-24 12:27:31,685 Abdul Basit Abdul Samad (Murattal) 9:86 done
+2026-09-24 12:27:56,624 Abdul Basit Abdul Samad (Murattal) 9:106 done
+2026-09-24 12:28:26,370 Abdul Basit Abdul Samad (Murattal) 9:126 done
+2026-09-24 12:28:50,473 Abdul Basit Abdul Samad (Murattal) 10:17 done
+2026-09-24 12:29:26,480 Abdul Basit Abdul Samad (Murattal) 10:37 done
+2026-09-24 12:30:00,301 Abdul Basit Abdul Samad (Murattal) 10:57 done
+2026-09-24 12:30:25,294 Abdul Basit Abdul Samad (Murattal) 10:77 done
+2026-09-24 12:30:39,106 Abdul Basit Abdul Samad (Murattal) 10:97 done
+2026-09-24 12:31:28,498 Abdul Basit Abdul Samad (Murattal) 11:8 done
+2026-09-24 12:32:24,793 Abdul Basit Abdul Samad (Murattal) 11:28 done
+2026-09-24 12:33:10,774 Abdul Basit Abdul Samad (Murattal) 11:48 done
+2026-09-24 12:33:30,905 Abdul Basit Abdul Samad (Murattal) 11:68 done
+2026-09-24 12:34:41,772 Abdul Basit Abdul Samad (Murattal) 11:88 done
+2026-09-24 12:35:13,502 Abdul Basit Abdul Samad (Murattal) 11:108 done
+2026-09-24 12:35:46,545 Abdul Basit Abdul Samad (Murattal) 12:5 done
+2026-09-24 12:36:31,766 Abdul Basit Abdul Samad (Murattal) 12:25 done
+2026-09-24 12:36:52,539 Abdul Basit Abdul Samad (Murattal) 12:45 done
+2026-09-24 12:37:45,806 Abdul Basit Abdul Samad (Murattal) 12:65 done
+2026-09-24 12:38:02,116 Abdul Basit Abdul Samad (Murattal) 12:85 done
+2026-09-24 12:38:20,194 Abdul Basit Abdul Samad (Murattal) 12:105 done
+2026-09-24 12:39:10,745 Abdul Basit Abdul Samad (Murattal) 13:14 done
+2026-09-24 12:39:32,714 Abdul Basit Abdul Samad (Murattal) 13:34 done
+2026-09-24 12:40:33,180 Abdul Basit Abdul Samad (Murattal) 14:11 done
+2026-09-24 12:41:29,541 Abdul Basit Abdul Samad (Murattal) 14:31 done
+2026-09-24 12:41:46,743 Abdul Basit Abdul Samad (Murattal) 14:51 done
+2026-09-24 12:42:08,055 Abdul Basit Abdul Samad (Murattal) 15:19 done
+2026-09-24 12:42:27,964 Abdul Basit Abdul Samad (Murattal) 15:39 done
+2026-09-24 12:42:40,422 Abdul Basit Abdul Samad (Murattal) 15:59 done
+2026-09-24 12:42:52,991 Abdul Basit Abdul Samad (Murattal) 15:79 done
+2026-09-24 12:43:00,864 Abdul Basit Abdul Samad (Murattal) 15:99 done
+2026-09-24 12:43:18,036 Abdul Basit Abdul Samad (Murattal) 16:20 done
+2026-09-24 12:43:39,208 Abdul Basit Abdul Samad (Murattal) 16:40 done
+2026-09-24 12:44:03,864 Abdul Basit Abdul Samad (Murattal) 16:60 done
+2026-09-24 12:45:38,702 Abdul Basit Abdul Samad (Murattal) 16:80 done
+2026-09-24 12:45:58,474 Abdul Basit Abdul Samad (Murattal) 16:100 done
+2026-09-24 12:46:25,961 Abdul Basit Abdul Samad (Murattal) 16:120 done
+2026-09-24 12:47:51,232 Abdul Basit Abdul Samad (Murattal) 17:12 done
+2026-09-24 12:48:10,124 Abdul Basit Abdul Samad (Murattal) 17:32 done
+2026-09-24 12:48:32,222 Abdul Basit Abdul Samad (Murattal) 17:52 done
+2026-09-24 12:48:53,648 Abdul Basit Abdul Samad (Murattal) 17:72 done
+2026-09-24 12:49:20,990 Abdul Basit Abdul Samad (Murattal) 17:92 done
+2026-09-24 12:49:44,850 Abdul Basit Abdul Samad (Murattal) 18:1 done
+2026-09-24 12:51:22,722 Abdul Basit Abdul Samad (Murattal) 18:21 done
+2026-09-24 12:51:40,399 Abdul Basit Abdul Samad (Murattal) 18:41 done
+2026-09-24 12:52:05,663 Abdul Basit Abdul Samad (Murattal) 18:61 done
+2026-09-24 12:52:30,166 Abdul Basit Abdul Samad (Murattal) 18:81 done
+2026-09-24 12:52:56,850 Abdul Basit Abdul Samad (Murattal) 18:101 done
+2026-09-24 12:53:24,044 Abdul Basit Abdul Samad (Murattal) 19:11 done
+2026-09-24 12:53:50,019 Abdul Basit Abdul Samad (Murattal) 19:31 done
+2026-09-24 12:54:15,678 Abdul Basit Abdul Samad (Murattal) 19:51 done
+2026-09-24 12:54:38,797 Abdul Basit Abdul Samad (Murattal) 19:71 done
+2026-09-24 12:54:47,938 Abdul Basit Abdul Samad (Murattal) 19:91 done
+2026-09-24 12:54:57,302 Abdul Basit Abdul Samad (Murattal) 20:13 done
+2026-09-24 12:55:03,762 Abdul Basit Abdul Samad (Murattal) 20:33 done
+2026-09-24 12:55:53,617 Abdul Basit Abdul Samad (Murattal) 20:53 done
+2026-09-24 12:56:34,478 Abdul Basit Abdul Samad (Murattal) 20:73 done
+2026-09-24 12:56:43,714 Abdul Basit Abdul Samad (Murattal) 20:93 done
+2026-09-24 12:57:27,445 Abdul Basit Abdul Samad (Murattal) 20:113 done
+2026-09-24 12:57:58,340 Abdul Basit Abdul Samad (Murattal) 20:133 done
+2026-09-24 12:58:23,729 Abdul Basit Abdul Samad (Murattal) 21:18 done
+2026-09-24 12:58:37,916 Abdul Basit Abdul Samad (Murattal) 21:38 done
+2026-09-24 12:58:54,747 Abdul Basit Abdul Samad (Murattal) 21:58 done
+2026-09-24 12:59:27,495 Abdul Basit Abdul Samad (Murattal) 21:78 done
+2026-09-24 12:59:56,787 Abdul Basit Abdul Samad (Murattal) 21:98 done
+2026-09-24 13:00:30,102 Abdul Basit Abdul Samad (Murattal) 22:6 done
+2026-09-24 13:01:18,138 Abdul Basit Abdul Samad (Murattal) 22:26 done
+2026-09-24 13:02:14,887 Abdul Basit Abdul Samad (Murattal) 22:46 done
+2026-09-24 13:02:43,489 Abdul Basit Abdul Samad (Murattal) 22:66 done
+2026-09-24 13:02:55,594 Abdul Basit Abdul Samad (Murattal) 23:8 done
+2026-09-24 13:03:25,017 Abdul Basit Abdul Samad (Murattal) 23:28 done
+2026-09-24 13:03:33,964 Abdul Basit Abdul Samad (Murattal) 23:48 done
+2026-09-24 13:03:55,453 Abdul Basit Abdul Samad (Murattal) 23:68 done
+2026-09-24 13:04:19,867 Abdul Basit Abdul Samad (Murattal) 23:88 done
+2026-09-24 13:04:29,990 Abdul Basit Abdul Samad (Murattal) 23:108 done
+2026-09-24 13:04:47,628 Abdul Basit Abdul Samad (Murattal) 24:10 done
+2026-09-24 13:05:13,296 Abdul Basit Abdul Samad (Murattal) 24:30 done
+2026-09-24 13:05:41,595 Abdul Basit Abdul Samad (Murattal) 24:50 done
+2026-09-24 13:06:02,618 Abdul Basit Abdul Samad (Murattal) 25:6 done
+2026-09-24 13:06:18,361 Abdul Basit Abdul Samad (Murattal) 25:26 done
+2026-09-24 13:06:29,061 Abdul Basit Abdul Samad (Murattal) 25:46 done
+2026-09-24 13:06:40,528 Abdul Basit Abdul Samad (Murattal) 25:66 done
+2026-09-24 13:06:49,695 Abdul Basit Abdul Samad (Murattal) 26:9 done
+2026-09-24 13:07:02,702 Abdul Basit Abdul Samad (Murattal) 26:29 done
+2026-09-24 13:07:51,056 Abdul Basit Abdul Samad (Murattal) 26:49 done
+2026-09-24 13:07:57,745 Abdul Basit Abdul Samad (Murattal) 26:69 done
+2026-09-24 13:08:08,284 Abdul Basit Abdul Samad (Murattal) 26:89 done
+2026-09-24 13:08:27,721 Abdul Basit Abdul Samad (Murattal) 26:109 done
+2026-09-24 13:08:38,499 Abdul Basit Abdul Samad (Murattal) 26:129 done
+2026-09-24 13:08:50,099 Abdul Basit Abdul Samad (Murattal) 26:149 done
+2026-09-24 13:09:00,972 Abdul Basit Abdul Samad (Murattal) 26:169 done
+2026-09-24 13:09:23,408 Abdul Basit Abdul Samad (Murattal) 26:189 done
+2026-09-24 13:09:31,725 Abdul Basit Abdul Samad (Murattal) 26:209 done
+2026-09-24 13:09:39,161 Abdul Basit Abdul Samad (Murattal) 27:2 done
+2026-09-24 13:10:10,617 Abdul Basit Abdul Samad (Murattal) 27:22 done
+2026-09-24 13:10:49,633 Abdul Basit Abdul Samad (Murattal) 27:42 done
+2026-09-24 13:11:36,030 Abdul Basit Abdul Samad (Murattal) 27:62 done
+2026-09-24 13:12:42,375 Abdul Basit Abdul Samad (Murattal) 27:82 done
+2026-09-24 13:13:28,446 Abdul Basit Abdul Samad (Murattal) 28:9 done
+2026-09-24 13:14:57,264 Abdul Basit Abdul Samad (Murattal) 28:29 done
+2026-09-24 13:15:26,692 Abdul Basit Abdul Samad (Murattal) 28:49 done
+2026-09-24 13:15:42,198 Abdul Basit Abdul Samad (Murattal) 28:69 done
+2026-09-24 13:15:52,956 Abdul Basit Abdul Samad (Murattal) 29:1 done
+2026-09-24 13:16:14,485 Abdul Basit Abdul Samad (Murattal) 29:21 done
+2026-09-24 13:17:06,382 Abdul Basit Abdul Samad (Murattal) 29:41 done
+2026-09-24 13:17:42,293 Abdul Basit Abdul Samad (Murattal) 29:61 done
+2026-09-24 13:17:53,712 Abdul Basit Abdul Samad (Murattal) 30:12 done
+2026-09-24 13:18:16,465 Abdul Basit Abdul Samad (Murattal) 30:32 done
+2026-09-24 13:18:37,489 Abdul Basit Abdul Samad (Murattal) 30:52 done
+2026-09-24 13:19:09,172 Abdul Basit Abdul Samad (Murattal) 31:12 done
+2026-09-24 13:19:53,988 Abdul Basit Abdul Samad (Murattal) 31:32 done
+2026-09-24 13:20:12,278 Abdul Basit Abdul Samad (Murattal) 32:18 done
+2026-09-24 13:20:27,827 Abdul Basit Abdul Samad (Murattal) 33:8 done
+2026-09-24 13:21:08,139 Abdul Basit Abdul Samad (Murattal) 33:28 done
+2026-09-24 13:21:27,275 Abdul Basit Abdul Samad (Murattal) 33:48 done
+2026-09-24 13:21:42,206 Abdul Basit Abdul Samad (Murattal) 33:68 done
+2026-09-24 13:22:23,794 Abdul Basit Abdul Samad (Murattal) 34:15 done
+2026-09-24 13:22:38,509 Abdul Basit Abdul Samad (Murattal) 34:35 done
+2026-09-24 13:23:30,206 Abdul Basit Abdul Samad (Murattal) 35:1 done
+2026-09-24 13:23:35,381 Abdul Basit Abdul Samad (Murattal) 35:21 done
+2026-09-24 13:24:16,429 Abdul Basit Abdul Samad (Murattal) 35:41 done
+2026-09-24 13:24:27,585 Abdul Basit Abdul Samad (Murattal) 36:16 done
+2026-09-24 13:24:49,805 Abdul Basit Abdul Samad (Murattal) 36:36 done
+2026-09-24 13:25:00,368 Abdul Basit Abdul Samad (Murattal) 36:56 done
+2026-09-24 13:25:15,779 Abdul Basit Abdul Samad (Murattal) 36:76 done
+2026-09-24 13:25:22,075 Abdul Basit Abdul Samad (Murattal) 37:13 done
+2026-09-24 13:25:32,207 Abdul Basit Abdul Samad (Murattal) 37:33 done
+2026-09-24 13:25:47,615 Abdul Basit Abdul Samad (Murattal) 37:53 done
+2026-09-24 13:25:57,650 Abdul Basit Abdul Samad (Murattal) 37:73 done
+2026-09-24 13:26:06,336 Abdul Basit Abdul Samad (Murattal) 37:93 done
+2026-09-24 13:26:28,673 Abdul Basit Abdul Samad (Murattal) 37:113 done
+2026-09-24 13:26:37,262 Abdul Basit Abdul Samad (Murattal) 37:133 done
+2026-09-24 13:26:43,311 Abdul Basit Abdul Samad (Murattal) 37:153 done
+2026-09-24 13:26:52,218 Abdul Basit Abdul Samad (Murattal) 37:173 done
+2026-09-24 13:27:02,958 Abdul Basit Abdul Samad (Murattal) 38:11 done
+2026-09-24 13:27:14,802 Abdul Basit Abdul Samad (Murattal) 38:31 done
+2026-09-24 13:27:32,584 Abdul Basit Abdul Samad (Murattal) 38:51 done
+2026-09-24 13:27:55,493 Abdul Basit Abdul Samad (Murattal) 38:71 done
+2026-09-24 13:29:30,962 Abdul Basit Abdul Samad (Murattal) 39:3 done
+2026-09-24 13:30:57,772 Abdul Basit Abdul Samad (Murattal) 39:23 done
+2026-09-24 13:31:27,674 Abdul Basit Abdul Samad (Murattal) 39:43 done
+2026-09-24 13:31:55,722 Abdul Basit Abdul Samad (Murattal) 39:63 done
+2026-09-24 13:32:45,700 Abdul Basit Abdul Samad (Murattal) 40:8 done
+2026-09-24 13:34:22,654 Abdul Basit Abdul Samad (Murattal) 40:28 done
+2026-09-24 13:34:50,052 Abdul Basit Abdul Samad (Murattal) 40:48 done
+2026-09-24 13:35:16,122 Abdul Basit Abdul Samad (Murattal) 40:68 done
+2026-09-24 13:35:35,230 Abdul Basit Abdul Samad (Murattal) 41:3 done
+2026-09-24 13:36:02,808 Abdul Basit Abdul Samad (Murattal) 41:23 done
+2026-09-24 13:36:35,543 Abdul Basit Abdul Samad (Murattal) 41:43 done
+2026-09-24 13:37:11,806 Abdul Basit Abdul Samad (Murattal) 42:9 done
+2026-09-24 13:37:53,143 Abdul Basit Abdul Samad (Murattal) 42:29 done
+2026-09-24 13:38:38,096 Abdul Basit Abdul Samad (Murattal) 42:49 done
+2026-09-24 13:38:56,662 Abdul Basit Abdul Samad (Murattal) 43:16 done
+2026-09-24 13:39:18,996 Abdul Basit Abdul Samad (Murattal) 43:36 done
+2026-09-24 13:39:31,159 Abdul Basit Abdul Samad (Murattal) 43:56 done
+2026-09-24 13:39:45,023 Abdul Basit Abdul Samad (Murattal) 43:76 done
+2026-09-24 13:40:05,013 Abdul Basit Abdul Samad (Murattal) 44:7 done
+2026-09-24 13:40:15,710 Abdul Basit Abdul Samad (Murattal) 44:27 done
+2026-09-24 13:40:27,392 Abdul Basit Abdul Samad (Murattal) 44:47 done
+2026-09-24 13:41:01,250 Abdul Basit Abdul Samad (Murattal) 45:8 done
+2026-09-24 13:41:38,383 Abdul Basit Abdul Samad (Murattal) 45:28 done
+2026-09-24 13:42:25,214 Abdul Basit Abdul Samad (Murattal) 46:11 done
+2026-09-24 13:42:57,510 Abdul Basit Abdul Samad (Murattal) 46:31 done
+2026-09-24 13:44:01,542 Abdul Basit Abdul Samad (Murattal) 47:16 done
+2026-09-24 13:44:37,912 Abdul Basit Abdul Samad (Murattal) 47:36 done
+2026-09-24 13:45:19,766 Abdul Basit Abdul Samad (Murattal) 48:18 done
+2026-09-24 13:46:43,383 Abdul Basit Abdul Samad (Murattal) 49:9 done
+2026-09-24 13:47:05,169 Abdul Basit Abdul Samad (Murattal) 50:11 done
+2026-09-24 13:47:16,615 Abdul Basit Abdul Samad (Murattal) 50:31 done
+2026-09-24 13:47:23,267 Abdul Basit Abdul Samad (Murattal) 51:6 done
+2026-09-24 13:47:37,723 Abdul Basit Abdul Samad (Murattal) 51:26 done
+2026-09-24 13:47:55,147 Abdul Basit Abdul Samad (Murattal) 51:46 done
+2026-09-24 13:48:00,799 Abdul Basit Abdul Samad (Murattal) 52:6 done
+2026-09-24 13:48:18,757 Abdul Basit Abdul Samad (Murattal) 52:26 done
+2026-09-24 13:48:35,129 Abdul Basit Abdul Samad (Murattal) 52:46 done
+2026-09-24 13:48:42,278 Abdul Basit Abdul Samad (Murattal) 53:17 done
+2026-09-24 13:48:50,032 Abdul Basit Abdul Samad (Murattal) 53:37 done
+2026-09-24 13:48:55,272 Abdul Basit Abdul Samad (Murattal) 53:57 done
+2026-09-24 13:49:11,224 Abdul Basit Abdul Samad (Murattal) 54:15 done
+2026-09-24 13:49:28,731 Abdul Basit Abdul Samad (Murattal) 54:35 done
+2026-09-24 13:49:41,498 Abdul Basit Abdul Samad (Murattal) 54:55 done
+2026-09-24 13:49:50,095 Abdul Basit Abdul Samad (Murattal) 55:20 done
+2026-09-24 13:50:01,970 Abdul Basit Abdul Samad (Murattal) 55:40 done
+2026-09-24 13:50:12,955 Abdul Basit Abdul Samad (Murattal) 55:60 done
+2026-09-24 13:50:19,552 Abdul Basit Abdul Samad (Murattal) 56:2 done
+2026-09-24 13:50:23,854 Abdul Basit Abdul Samad (Murattal) 56:22 done
+2026-09-24 13:50:30,232 Abdul Basit Abdul Samad (Murattal) 56:42 done
+2026-09-24 13:50:43,344 Abdul Basit Abdul Samad (Murattal) 56:62 done
+2026-09-24 13:50:53,882 Abdul Basit Abdul Samad (Murattal) 56:82 done
+2026-09-24 13:51:18,187 Abdul Basit Abdul Samad (Murattal) 57:6 done
+2026-09-24 13:51:58,257 Abdul Basit Abdul Samad (Murattal) 57:26 done
+2026-09-24 13:52:35,246 Abdul Basit Abdul Samad (Murattal) 58:17 done
+2026-09-24 13:52:57,903 Abdul Basit Abdul Samad (Murattal) 59:15 done
+2026-09-24 13:53:57,183 Abdul Basit Abdul Samad (Murattal) 60:11 done
+2026-09-24 13:54:17,323 Abdul Basit Abdul Samad (Murattal) 62:4 done
+2026-09-24 13:54:42,712 Abdul Basit Abdul Samad (Murattal) 64:2 done
+2026-09-24 13:56:05,199 Abdul Basit Abdul Samad (Murattal) 65:4 done
+2026-09-24 13:57:06,564 Abdul Basit Abdul Samad (Murattal) 66:12 done
+2026-09-24 13:57:41,487 Abdul Basit Abdul Samad (Murattal) 67:20 done
+2026-09-24 13:57:50,775 Abdul Basit Abdul Samad (Murattal) 68:10 done
+2026-09-24 13:58:02,939 Abdul Basit Abdul Samad (Murattal) 68:30 done
+2026-09-24 13:58:13,482 Abdul Basit Abdul Samad (Murattal) 68:50 done
+2026-09-24 13:58:28,891 Abdul Basit Abdul Samad (Murattal) 69:18 done
+2026-09-24 13:58:38,280 Abdul Basit Abdul Samad (Murattal) 69:38 done
+2026-09-24 13:58:47,482 Abdul Basit Abdul Samad (Murattal) 70:6 done
+2026-09-24 13:58:57,423 Abdul Basit Abdul Samad (Murattal) 70:26 done
+2026-09-24 13:59:11,174 Abdul Basit Abdul Samad (Murattal) 71:2 done
+2026-09-24 13:59:20,137 Abdul Basit Abdul Samad (Murattal) 71:22 done
+2026-09-24 13:59:50,729 Abdul Basit Abdul Samad (Murattal) 72:14 done
+2026-09-24 14:00:05,485 Abdul Basit Abdul Samad (Murattal) 73:6 done
+2026-09-24 14:00:13,882 Abdul Basit Abdul Samad (Murattal) 74:6 done
+2026-09-24 14:00:18,982 Abdul Basit Abdul Samad (Murattal) 74:26 done
+2026-09-24 14:00:28,954 Abdul Basit Abdul Samad (Murattal) 74:46 done
+2026-09-24 14:00:41,131 Abdul Basit Abdul Samad (Murattal) 75:10 done
+2026-09-24 14:00:50,322 Abdul Basit Abdul Samad (Murattal) 75:30 done
+2026-09-24 14:01:07,168 Abdul Basit Abdul Samad (Murattal) 76:10 done
+2026-09-24 14:01:35,238 Abdul Basit Abdul Samad (Murattal) 76:30 done
+2026-09-24 14:01:45,039 Abdul Basit Abdul Samad (Murattal) 77:19 done
+2026-09-24 14:01:56,470 Abdul Basit Abdul Samad (Murattal) 77:39 done
+2026-09-24 14:02:03,384 Abdul Basit Abdul Samad (Murattal) 78:9 done
+2026-09-24 14:02:13,759 Abdul Basit Abdul Samad (Murattal) 78:29 done
+2026-09-24 14:02:20,481 Abdul Basit Abdul Samad (Murattal) 79:9 done
+2026-09-24 14:02:29,436 Abdul Basit Abdul Samad (Murattal) 79:29 done
+2026-09-24 14:02:37,737 Abdul Basit Abdul Samad (Murattal) 80:3 done
+2026-09-24 14:02:47,152 Abdul Basit Abdul Samad (Murattal) 80:23 done
+2026-09-24 14:02:52,884 Abdul Basit Abdul Samad (Murattal) 81:1 done
+2026-09-24 14:02:59,984 Abdul Basit Abdul Samad (Murattal) 81:21 done
+2026-09-24 14:03:06,254 Abdul Basit Abdul Samad (Murattal) 82:12 done
+2026-09-24 14:03:21,676 Abdul Basit Abdul Samad (Murattal) 83:13 done
+2026-09-24 14:03:31,205 Abdul Basit Abdul Samad (Murattal) 83:33 done
+2026-09-24 14:03:35,935 Abdul Basit Abdul Samad (Murattal) 84:17 done
+2026-09-24 14:03:43,315 Abdul Basit Abdul Samad (Murattal) 85:12 done
+2026-09-24 14:03:53,382 Abdul Basit Abdul Samad (Murattal) 86:10 done
+2026-09-24 14:04:03,600 Abdul Basit Abdul Samad (Murattal) 87:13 done
+2026-09-24 14:04:10,955 Abdul Basit Abdul Samad (Murattal) 88:14 done
+2026-09-24 14:04:19,994 Abdul Basit Abdul Samad (Murattal) 89:8 done
+2026-09-24 14:04:32,126 Abdul Basit Abdul Samad (Murattal) 89:28 done
+2026-09-24 14:04:40,834 Abdul Basit Abdul Samad (Murattal) 90:18 done
+2026-09-24 14:04:49,988 Abdul Basit Abdul Samad (Murattal) 92:3 done
+2026-09-24 14:04:55,121 Abdul Basit Abdul Samad (Murattal) 93:2 done
+2026-09-24 14:05:01,308 Abdul Basit Abdul Samad (Murattal) 95:3 done
+2026-09-24 14:05:17,765 Abdul Basit Abdul Samad (Murattal) 96:15 done
+2026-09-24 14:05:25,747 Abdul Basit Abdul Samad (Murattal) 99:3 done
+2026-09-24 14:05:36,045 Abdul Basit Abdul Samad (Murattal) 101:4 done
+2026-09-24 14:05:44,075 Abdul Basit Abdul Samad (Murattal) 104:2 done
+2026-09-24 14:05:50,148 Abdul Basit Abdul Samad (Murattal) 107:4 done
+2026-09-24 14:05:57,956 Abdul Basit Abdul Samad (Murattal) 111:5 done
+2026-09-24 14:06:08,499 Mishary Alafasy 1:5 done
+2026-09-24 14:06:19,266 Mishary Alafasy 2:18 done
+2026-09-24 14:06:48,937 Mishary Alafasy 2:38 done
+2026-09-24 14:07:29,668 Mishary Alafasy 2:58 done
+2026-09-24 14:07:49,781 Mishary Alafasy 2:78 done
+2026-09-24 14:08:17,281 Mishary Alafasy 2:98 done
+2026-09-24 14:09:08,743 Mishary Alafasy 2:118 done
+2026-09-24 14:09:29,582 Mishary Alafasy 2:138 done
+2026-09-24 14:10:10,164 Mishary Alafasy 2:158 done
+2026-09-24 14:11:22,388 Mishary Alafasy 2:178 done
+2026-09-24 14:12:22,131 Mishary Alafasy 2:198 done
+2026-09-24 14:12:53,588 Mishary Alafasy 2:218 done
+2026-09-24 14:13:06,807 Mishary Alafasy 2:238 done
+2026-09-24 14:14:18,026 Mishary Alafasy 2:258 done
+2026-09-24 14:14:40,291 Mishary Alafasy 2:278 done
+2026-09-24 14:14:58,409 Mishary Alafasy 3:12 done
+2026-09-24 14:15:23,712 Mishary Alafasy 3:32 done
+2026-09-24 14:16:13,550 Mishary Alafasy 3:52 done
+2026-09-24 14:16:52,419 Mishary Alafasy 3:72 done
+2026-09-24 14:17:34,680 Mishary Alafasy 3:92 done
+2026-09-24 14:18:58,817 Mishary Alafasy 3:112 done
+2026-09-24 14:19:09,686 Mishary Alafasy 3:132 done
+2026-09-24 14:20:44,510 Mishary Alafasy 3:152 done
+2026-09-24 14:21:14,999 Mishary Alafasy 3:172 done
+2026-09-24 14:21:42,563 Mishary Alafasy 3:192 done
+2026-09-24 14:25:03,321 Mishary Alafasy 4:12 done
+2026-09-24 14:25:54,907 Mishary Alafasy 4:32 done
+2026-09-24 14:26:16,301 Mishary Alafasy 4:52 done
+2026-09-24 14:26:45,093 Mishary Alafasy 4:72 done
+2026-09-24 14:29:19,108 Mishary Alafasy 4:92 done
+2026-09-24 14:30:00,530 Mishary Alafasy 4:112 done
+2026-09-24 14:30:14,921 Mishary Alafasy 4:132 done
+2026-09-24 14:30:51,517 Mishary Alafasy 4:152 done
+2026-09-24 14:31:34,262 Mishary Alafasy 4:172 done
+2026-09-24 14:32:13,907 Mishary Alafasy 5:16 done
+2026-09-24 14:32:54,770 Mishary Alafasy 5:36 done
+2026-09-24 14:33:15,539 Mishary Alafasy 5:56 done
+2026-09-24 14:33:39,813 Mishary Alafasy 5:76 done
+2026-09-24 14:34:18,296 Mishary Alafasy 5:96 done
+2026-09-24 14:35:45,625 Mishary Alafasy 5:116 done
+2026-09-24 14:36:05,020 Mishary Alafasy 6:16 done
+2026-09-24 14:36:33,459 Mishary Alafasy 6:36 done
+2026-09-24 14:37:18,876 Mishary Alafasy 6:56 done
+2026-09-24 14:37:54,209 Mishary Alafasy 6:76 done
+2026-09-24 14:38:19,846 Mishary Alafasy 6:96 done
+2026-09-24 14:39:03,236 Mishary Alafasy 6:116 done
+2026-09-24 14:40:14,610 Mishary Alafasy 6:136 done
+2026-09-24 14:40:58,932 Mishary Alafasy 6:156 done
+2026-09-24 14:41:42,326 Mishary Alafasy 7:11 done
+2026-09-24 14:42:13,953 Mishary Alafasy 7:31 done
+2026-09-24 14:43:02,032 Mishary Alafasy 7:51 done
+2026-09-24 14:44:28,813 Mishary Alafasy 7:71 done
+2026-09-24 14:44:41,174 Mishary Alafasy 7:91 done
+2026-09-24 14:44:58,814 Mishary Alafasy 7:111 done
+2026-09-24 14:46:00,458 Mishary Alafasy 7:131 done
+2026-09-24 14:46:19,967 Mishary Alafasy 7:151 done
+2026-09-24 14:47:22,945 Mishary Alafasy 7:171 done
+2026-09-24 14:47:35,751 Mishary Alafasy 7:191 done
+2026-09-24 14:48:02,863 Mishary Alafasy 8:5 done
+2026-09-24 14:48:39,704 Mishary Alafasy 8:25 done
+2026-09-24 14:49:12,758 Mishary Alafasy 8:45 done
+2026-09-24 14:50:35,245 Mishary Alafasy 8:65 done
+2026-09-24 14:50:59,334 Mishary Alafasy 9:10 done
+2026-09-24 14:51:59,713 Mishary Alafasy 9:30 done
+2026-09-24 14:52:40,852 Mishary Alafasy 9:50 done
+2026-09-24 14:53:56,598 Mishary Alafasy 9:70 done
+2026-09-24 14:54:37,312 Mishary Alafasy 9:90 done
+2026-09-24 14:55:16,172 Mishary Alafasy 9:110 done
+2026-09-24 14:55:35,457 Mishary Alafasy 10:1 done
+2026-09-24 14:56:40,295 Mishary Alafasy 10:21 done
+2026-09-24 14:57:26,597 Mishary Alafasy 10:41 done
+2026-09-24 14:59:08,038 Mishary Alafasy 10:61 done
+2026-09-24 14:59:44,036 Mishary Alafasy 10:81 done
+2026-09-24 15:00:10,831 Mishary Alafasy 10:101 done
+2026-09-24 15:01:35,865 Mishary Alafasy 11:12 done
+2026-09-24 15:02:11,484 Mishary Alafasy 11:32 done
+2026-09-24 15:03:06,616 Mishary Alafasy 11:52 done
+2026-09-24 15:03:37,263 Mishary Alafasy 11:72 done
+2026-09-24 15:04:15,511 Mishary Alafasy 11:92 done
+2026-09-24 15:04:41,332 Mishary Alafasy 11:112 done
+2026-09-24 15:05:20,776 Mishary Alafasy 12:9 done
+2026-09-24 15:05:45,445 Mishary Alafasy 12:29 done
+2026-09-24 15:06:08,274 Mishary Alafasy 12:49 done
+2026-09-24 15:06:44,966 Mishary Alafasy 12:69 done
+2026-09-24 15:07:04,507 Mishary Alafasy 12:89 done
+2026-09-24 15:08:08,364 Mishary Alafasy 12:109 done
+2026-09-24 15:09:16,592 Mishary Alafasy 13:18 done
+2026-09-24 15:10:07,223 Mishary Alafasy 13:38 done
+2026-09-24 15:10:17,828 Mishary Alafasy 14:15 done
+2026-09-24 15:10:42,258 Mishary Alafasy 14:35 done
+2026-09-24 15:10:55,693 Mishary Alafasy 15:3 done
+2026-09-24 15:11:07,463 Mishary Alafasy 15:23 done
+2026-09-24 15:11:18,185 Mishary Alafasy 15:43 done
+2026-09-24 15:11:30,195 Mishary Alafasy 15:63 done
+2026-09-24 15:11:38,037 Mishary Alafasy 15:83 done
+2026-09-24 15:11:54,623 Mishary Alafasy 16:4 done
+2026-09-24 15:12:17,435 Mishary Alafasy 16:24 done
+2026-09-24 15:12:49,636 Mishary Alafasy 16:44 done
+2026-09-24 15:13:26,856 Mishary Alafasy 16:64 done
+2026-09-24 15:13:55,005 Mishary Alafasy 16:84 done
+2026-09-24 15:14:15,406 Mishary Alafasy 16:104 done
+2026-09-24 15:14:49,115 Mishary Alafasy 16:124 done
+2026-09-24 15:15:24,356 Mishary Alafasy 17:16 done
+2026-09-24 15:15:49,648 Mishary Alafasy 17:36 done
+2026-09-24 15:16:10,639 Mishary Alafasy 17:56 done
+2026-09-24 15:16:33,625 Mishary Alafasy 17:76 done
+2026-09-24 15:16:56,220 Mishary Alafasy 17:96 done
+2026-09-24 15:17:26,219 Mishary Alafasy 18:5 done
+2026-09-24 15:17:39,335 Mishary Alafasy 18:25 done
+2026-09-24 15:18:32,380 Mishary Alafasy 18:45 done
+2026-09-24 15:18:59,361 Mishary Alafasy 18:65 done
+2026-09-24 15:19:03,128 Mishary Alafasy 18:85 done
+2026-09-24 15:19:39,881 Mishary Alafasy 18:105 done
+2026-09-24 15:19:53,775 Mishary Alafasy 19:15 done
+2026-09-24 15:20:30,097 Mishary Alafasy 19:35 done
+2026-09-24 15:20:49,405 Mishary Alafasy 19:55 done
+2026-09-24 15:21:50,406 Mishary Alafasy 19:75 done
+2026-09-24 15:22:01,181 Mishary Alafasy 19:95 done
+2026-09-24 15:22:08,476 Mishary Alafasy 20:17 done
+2026-09-24 15:22:18,650 Mishary Alafasy 20:37 done
+2026-09-24 15:22:30,448 Mishary Alafasy 20:57 done
+2026-09-24 15:23:09,655 Mishary Alafasy 20:77 done
+2026-09-24 15:24:22,225 Mishary Alafasy 20:97 done
+2026-09-24 15:24:46,527 Mishary Alafasy 20:117 done
+2026-09-24 15:25:07,078 Mishary Alafasy 21:2 done
+2026-09-24 15:25:30,632 Mishary Alafasy 21:22 done
+2026-09-24 15:25:59,864 Mishary Alafasy 21:42 done
+2026-09-24 15:26:16,789 Mishary Alafasy 21:62 done
+2026-09-24 15:26:42,287 Mishary Alafasy 21:82 done
+2026-09-24 15:26:55,945 Mishary Alafasy 21:102 done
+2026-09-24 15:27:14,594 Mishary Alafasy 22:10 done
+2026-09-24 15:28:00,562 Mishary Alafasy 22:30 done
+2026-09-24 15:28:20,288 Mishary Alafasy 22:50 done
+2026-09-24 15:28:53,761 Mishary Alafasy 22:70 done
+2026-09-24 15:29:10,474 Mishary Alafasy 23:12 done
+2026-09-24 15:29:35,685 Mishary Alafasy 23:32 done
+2026-09-24 15:29:57,534 Mishary Alafasy 23:52 done
+2026-09-24 15:30:15,062 Mishary Alafasy 23:72 done
+2026-09-24 15:30:28,530 Mishary Alafasy 23:92 done
+2026-09-24 15:30:38,292 Mishary Alafasy 23:112 done
+2026-09-24 15:31:08,007 Mishary Alafasy 24:14 done
+2026-09-24 15:31:47,770 Mishary Alafasy 24:34 done
+2026-09-24 15:32:41,189 Mishary Alafasy 24:54 done
+2026-09-24 15:33:22,163 Mishary Alafasy 25:10 done
+2026-09-24 15:33:37,809 Mishary Alafasy 25:30 done
+2026-09-24 15:33:59,054 Mishary Alafasy 25:50 done
+2026-09-24 15:34:42,626 Mishary Alafasy 25:70 done
+2026-09-24 15:34:57,809 Mishary Alafasy 26:13 done
+2026-09-24 15:35:11,752 Mishary Alafasy 26:33 done
+2026-09-24 15:35:24,508 Mishary Alafasy 26:53 done
+2026-09-24 15:35:34,339 Mishary Alafasy 26:73 done
+2026-09-24 15:35:49,811 Mishary Alafasy 26:93 done
+2026-09-24 15:36:00,576 Mishary Alafasy 26:113 done
+2026-09-24 15:36:10,292 Mishary Alafasy 26:133 done
+2026-09-24 15:36:25,057 Mishary Alafasy 26:153 done
+2026-09-24 15:36:43,725 Mishary Alafasy 26:173 done
+2026-09-24 15:36:51,463 Mishary Alafasy 26:193 done
+2026-09-24 15:37:05,220 Mishary Alafasy 26:213 done
+2026-09-24 15:37:18,668 Mishary Alafasy 27:6 done
+2026-09-24 15:37:35,825 Mishary Alafasy 27:26 done
+2026-09-24 15:37:59,024 Mishary Alafasy 27:46 done
+2026-09-24 15:38:19,579 Mishary Alafasy 27:66 done
+2026-09-24 15:38:48,730 Mishary Alafasy 27:86 done
+2026-09-24 15:39:35,869 Mishary Alafasy 28:13 done
+2026-09-24 15:39:53,075 Mishary Alafasy 28:33 done
+2026-09-24 15:40:29,557 Mishary Alafasy 28:53 done
+2026-09-24 15:41:01,707 Mishary Alafasy 28:73 done
+2026-09-24 15:41:27,261 Mishary Alafasy 29:5 done
+2026-09-24 15:42:39,526 Mishary Alafasy 29:25 done
+2026-09-24 15:43:15,340 Mishary Alafasy 29:45 done
+2026-09-24 15:43:37,100 Mishary Alafasy 29:65 done
+2026-09-24 15:44:01,434 Mishary Alafasy 30:16 done
+2026-09-24 15:44:34,245 Mishary Alafasy 30:36 done
+2026-09-24 15:45:06,024 Mishary Alafasy 30:56 done
+2026-09-24 15:45:48,355 Mishary Alafasy 31:16 done
+2026-09-24 15:45:59,072 Mishary Alafasy 32:2 done
+2026-09-24 15:46:23,943 Mishary Alafasy 32:22 done
+2026-09-24 15:46:41,736 Mishary Alafasy 33:12 done
+2026-09-24 15:47:09,410 Mishary Alafasy 33:32 done
+2026-09-24 15:47:40,274 Mishary Alafasy 33:52 done
+2026-09-24 15:48:14,701 Mishary Alafasy 33:72 done
+2026-09-24 15:48:43,345 Mishary Alafasy 34:19 done
+2026-09-24 15:49:14,758 Mishary Alafasy 34:39 done
+2026-09-24 15:49:38,114 Mishary Alafasy 35:5 done
+2026-09-24 15:50:10,018 Mishary Alafasy 35:25 done
+2026-09-24 15:50:55,372 Mishary Alafasy 35:45 done
+2026-09-24 15:51:13,147 Mishary Alafasy 36:20 done
+2026-09-24 15:51:40,588 Mishary Alafasy 36:40 done
+2026-09-24 15:52:03,545 Mishary Alafasy 36:60 done
+2026-09-24 15:52:33,588 Mishary Alafasy 36:80 done
+2026-09-24 15:52:43,786 Mishary Alafasy 37:17 done
+2026-09-24 15:52:54,258 Mishary Alafasy 37:37 done
+2026-09-24 15:53:06,202 Mishary Alafasy 37:57 done
+2026-09-24 15:53:12,528 Mishary Alafasy 37:77 done
+2026-09-24 15:53:22,729 Mishary Alafasy 37:97 done
+2026-09-24 15:53:29,030 Mishary Alafasy 37:117 done
+2026-09-24 15:53:38,418 Mishary Alafasy 37:137 done
+2026-09-24 15:53:46,471 Mishary Alafasy 37:157 done
+2026-09-24 15:53:55,677 Mishary Alafasy 37:177 done
+2026-09-24 15:54:18,916 Mishary Alafasy 38:15 done
+2026-09-24 15:54:37,545 Mishary Alafasy 38:35 done
+2026-09-24 15:54:48,719 Mishary Alafasy 38:55 done
+2026-09-24 15:55:08,289 Mishary Alafasy 38:75 done
+2026-09-24 15:56:13,840 Mishary Alafasy 39:7 done
+2026-09-24 15:56:27,085 Mishary Alafasy 39:27 done
+2026-09-24 15:57:07,047 Mishary Alafasy 39:47 done
+2026-09-24 15:57:40,981 Mishary Alafasy 39:67 done
+2026-09-24 15:58:04,968 Mishary Alafasy 40:12 done
+2026-09-24 15:58:16,410 Mishary Alafasy 40:32 done
+2026-09-24 15:58:37,021 Mishary Alafasy 40:52 done
+2026-09-24 15:58:43,929 Mishary Alafasy 40:72 done
+2026-09-24 15:58:57,766 Mishary Alafasy 41:7 done
+2026-09-24 15:59:19,219 Mishary Alafasy 41:27 done
+2026-09-24 16:00:14,209 Mishary Alafasy 41:47 done
+2026-09-24 16:01:27,395 Mishary Alafasy 42:13 done
+2026-09-24 16:01:49,793 Mishary Alafasy 42:33 done
+2026-09-24 16:02:13,468 Mishary Alafasy 42:53 done
+2026-09-24 16:02:33,756 Mishary Alafasy 43:20 done
+2026-09-24 16:02:50,340 Mishary Alafasy 43:40 done
+2026-09-24 16:03:09,623 Mishary Alafasy 43:60 done
+2026-09-24 16:03:30,637 Mishary Alafasy 43:80 done
+2026-09-24 16:03:44,328 Mishary Alafasy 44:11 done
+2026-09-24 16:04:00,009 Mishary Alafasy 44:31 done
+2026-09-24 16:04:11,189 Mishary Alafasy 44:51 done
+2026-09-24 16:04:34,607 Mishary Alafasy 45:12 done
+2026-09-24 16:05:13,139 Mishary Alafasy 45:32 done
+2026-09-24 16:06:48,858 Mishary Alafasy 46:15 done
+2026-09-24 16:07:36,147 Mishary Alafasy 46:35 done
+2026-09-24 16:08:27,152 Mishary Alafasy 47:20 done
+2026-09-24 16:08:46,464 Mishary Alafasy 48:2 done
+2026-09-24 16:09:06,598 Mishary Alafasy 48:22 done
+2026-09-24 16:09:55,978 Mishary Alafasy 49:13 done
+2026-09-24 16:10:13,651 Mishary Alafasy 50:15 done
+2026-09-24 16:10:28,204 Mishary Alafasy 50:35 done
+2026-09-24 16:10:34,941 Mishary Alafasy 51:10 done
+2026-09-24 16:10:48,920 Mishary Alafasy 51:30 done
+2026-09-24 16:11:06,886 Mishary Alafasy 51:50 done
+2026-09-24 16:11:11,424 Mishary Alafasy 52:10 done
+2026-09-24 16:11:22,180 Mishary Alafasy 52:30 done
+2026-09-24 16:11:26,028 Mishary Alafasy 53:1 done
+2026-09-24 16:11:33,724 Mishary Alafasy 53:21 done
+2026-09-24 16:11:41,894 Mishary Alafasy 53:41 done
+2026-09-24 16:11:48,963 Mishary Alafasy 53:61 done
+2026-09-24 16:12:07,395 Mishary Alafasy 54:19 done
+2026-09-24 16:12:11,059 Mishary Alafasy 54:39 done
+2026-09-24 16:12:18,093 Mishary Alafasy 55:4 done
+2026-09-24 16:12:28,843 Mishary Alafasy 55:24 done
+2026-09-24 16:12:39,505 Mishary Alafasy 55:44 done
+2026-09-24 16:12:49,938 Mishary Alafasy 55:64 done
+2026-09-24 16:13:00,193 Mishary Alafasy 56:6 done
+2026-09-24 16:13:08,478 Mishary Alafasy 56:26 done
+2026-09-24 16:13:19,689 Mishary Alafasy 56:46 done
+2026-09-24 16:13:24,780 Mishary Alafasy 56:66 done
+2026-09-24 16:13:38,753 Mishary Alafasy 56:86 done
+2026-09-24 16:14:51,391 Mishary Alafasy 57:10 done
+2026-09-24 16:15:15,620 Mishary Alafasy 58:1 done
+2026-09-24 16:15:30,185 Mishary Alafasy 58:21 done
+2026-09-24 16:15:50,240 Mishary Alafasy 59:19 done
+2026-09-24 16:16:02,155 Mishary Alafasy 61:2 done
+2026-09-24 16:16:30,925 Mishary Alafasy 62:8 done
+2026-09-24 16:17:06,310 Mishary Alafasy 64:6 done
+2026-09-24 16:17:32,482 Mishary Alafasy 65:8 done
+2026-09-24 16:17:50,457 Mishary Alafasy 67:4 done
+2026-09-24 16:18:00,815 Mishary Alafasy 67:24 done
+2026-09-24 16:18:07,751 Mishary Alafasy 68:14 done
+2026-09-24 16:18:19,228 Mishary Alafasy 68:34 done
+2026-09-24 16:18:25,307 Mishary Alafasy 69:2 done
+2026-09-24 16:18:28,755 Mishary Alafasy 69:22 done
+2026-09-24 16:18:35,978 Mishary Alafasy 69:42 done
+2026-09-24 16:18:39,812 Mishary Alafasy 70:10 done
+2026-09-24 16:18:50,779 Mishary Alafasy 70:30 done
+2026-09-24 16:18:57,227 Mishary Alafasy 71:6 done
+2026-09-24 16:19:04,278 Mishary Alafasy 71:26 done
+2026-09-24 16:19:10,788 Mishary Alafasy 72:18 done
+2026-09-24 16:19:16,948 Mishary Alafasy 73:10 done
+2026-09-24 16:19:21,920 Mishary Alafasy 74:10 done
+2026-09-24 16:19:24,702 Mishary Alafasy 74:30 done
+2026-09-24 16:19:30,541 Mishary Alafasy 74:50 done
+2026-09-24 16:19:35,021 Mishary Alafasy 75:14 done
+2026-09-24 16:19:37,420 Mishary Alafasy 75:34 done
+2026-09-24 16:19:43,675 Mishary Alafasy 76:14 done
+2026-09-24 16:19:46,693 Mishary Alafasy 77:3 done
+2026-09-24 16:19:50,847 Mishary Alafasy 77:23 done
+2026-09-24 16:19:58,988 Mishary Alafasy 77:43 done
+2026-09-24 16:20:03,623 Mishary Alafasy 78:13 done
+2026-09-24 16:20:06,452 Mishary Alafasy 78:33 done
+2026-09-24 16:20:11,467 Mishary Alafasy 79:13 done
+2026-09-24 16:20:14,867 Mishary Alafasy 79:33 done
+2026-09-24 16:20:18,661 Mishary Alafasy 80:7 done
+2026-09-24 16:20:22,531 Mishary Alafasy 80:27 done
+2026-09-24 16:20:24,832 Mishary Alafasy 81:5 done
+2026-09-24 16:20:28,292 Mishary Alafasy 81:25 done
+2026-09-24 16:20:33,539 Mishary Alafasy 82:16 done
+2026-09-24 16:20:42,618 Mishary Alafasy 83:17 done
+2026-09-24 16:20:47,430 Mishary Alafasy 84:1 done
+2026-09-24 16:20:54,042 Mishary Alafasy 84:21 done
+2026-09-24 16:20:58,114 Mishary Alafasy 85:16 done
+2026-09-24 16:21:00,251 Mishary Alafasy 86:14 done
+2026-09-24 16:21:04,257 Mishary Alafasy 87:17 done
+2026-09-24 16:21:09,376 Mishary Alafasy 88:18 done
+2026-09-24 16:21:13,730 Mishary Alafasy 89:12 done
+2026-09-24 16:21:18,544 Mishary Alafasy 90:2 done
+2026-09-24 16:21:21,714 Mishary Alafasy 91:2 done
+2026-09-24 16:21:25,071 Mishary Alafasy 92:7 done
+2026-09-24 16:21:29,740 Mishary Alafasy 93:6 done
+2026-09-24 16:21:34,666 Mishary Alafasy 95:7 done
+2026-09-24 16:21:40,103 Mishary Alafasy 96:19 done
+2026-09-24 16:21:46,403 Mishary Alafasy 99:7 done
+2026-09-24 16:21:50,984 Mishary Alafasy 101:8 done
+2026-09-24 16:21:54,125 Mishary Alafasy 104:6 done
+2026-09-24 16:22:00,295 Mishary Alafasy 108:1 done
+2026-09-24 16:22:04,320 Mishary Alafasy 112:4 done
+2026-09-24 16:22:04,321 Wrote 3652 rows to /kaggle/working/runs_fill_004.jsonl

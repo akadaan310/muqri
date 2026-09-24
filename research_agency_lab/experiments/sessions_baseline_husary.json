@@ -1,0 +1,632 @@
+{
+ "r1e1": {
+  "reciter": "Husary_128kbps (EveryAyah)",
+  "A": {
+   "exercise": "r1e1",
+   "take": "A",
+   "wajh": {
+    "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+    "choice": "tawassut",
+    "expected_counts": [
+     4.0,
+     5.0
+    ],
+    "source": "declared",
+    "instances": 1,
+    "median_counts": 4.07,
+    "note": "graded for consistency with the wajh the reciter chose"
+   },
+   "tempo": {
+    "seconds_per_count": 0.32,
+    "class": "tahqiq",
+    "ok": false
+   },
+   "expectations": [
+    {
+     "ayah": 32,
+     "word": 0,
+     "text": "وَإِذَا",
+     "rule": "madd_tabii",
+     "expected_counts": [
+      1.25,
+      2.75
+     ],
+     "measured": 1.96,
+     "status": "pass",
+     "z_masters": 0.176,
+     "verdict": "ok",
+     "note": ""
+    },
+    {
+     "ayah": 32,
+     "word": 2,
+     "text": "قَالُوٓا۟",
+     "rule": "madd_munfasil",
+     "expected_counts": [
+      3.25,
+      5.75
+     ],
+     "measured": 4.07,
+     "status": "pass",
+     "z_masters": -0.053,
+     "verdict": "ok",
+     "note": "declared tawassut"
+    },
+    {
+     "ayah": 32,
+     "word": 3,
+     "text": "إِنَّ",
+     "rule": "ghunnah",
+     "expected_counts": [
+      1.25,
+      2.75
+     ],
+     "measured": 2.97,
+     "status": "long",
+     "z_masters": 1.379,
+     "verdict": "long",
+     "note": ""
+    },
+    {
+     "ayah": 32,
+     "word": 4,
+     "text": "هَـٰٓؤُلَآءِ",
+     "rule": "madd_muttasil",
+     "expected_counts": [
+      3.25,
+      5.75
+     ],
+     "measured": 5.64,
+     "status": "pass",
+     "z_masters": 1.903,
+     "verdict": "ok",
+     "note": ""
+    },
+    {
+     "ayah": 32,
+     "word": 4,
+     "text": "هَـٰٓؤُلَآءِ",
+     "rule": "madd_muttasil",
+     "expected_counts": [
+      3.25,
+      5.75
+     ],
+     "measured": 4.72,
+     "status": "pass",
+     "z_masters": 0.468,
+     "verdict": "ok",
+     "note": ""
+    },
+    {
+     "ayah": 32,
+     "word": 5,
+     "text": "لَضَآلُّونَ",
+     "rule": "madd_lazim",
+     "expected_counts": [
+      5.0,
+      7.75
+     ],
+     "measured": 6.65,
+     "status": "pass",
+     "z_masters": -0.314,
+     "verdict": "ok",
+     "note": "Husary holds it ~7 counts"
+    }
+   ],
+   "met": 5,
+   "false_alarms": [
+    {
+     "ayah": 32,
+     "word": 3,
+     "text": "إِنَّ",
+     "failing": [
+      "83:32:R5"
+     ],
+     "control": false
+    }
+   ]
+  },
+  "B_on_correct_audio": {
+   "exercise": "r1e1",
+   "take": "B",
+   "wajh": {
+    "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+    "choice": "tawassut",
+    "expected_counts": [
+     4.0,
+     5.0
+    ],
+    "source": "declared",
+    "instances": 1,
+    "median_counts": 4.07,
+    "note": "graded for consistency with the wajh the reciter chose"
+   },
+   "tempo": {
+    "seconds_per_count": 0.32,
+    "class": "tahqiq",
+    "ok": false
+   },
+   "mistakes": [
+    {
+     "ayah": 32,
+     "word": 2,
+     "text": "قَالُوٓا۟",
+     "do": "قَالُوٓا۟ إِنَّ — munfasil at 2 counts (qasr), though you declared 4.",
+     "verdict": "missed",
+     "evidence": [],
+     "engine_failing": []
+    },
+    {
+     "ayah": 32,
+     "word": 3,
+     "text": "إِنَّ",
+     "do": "إِنَّ — drop the ghunnah: a short plain nūn, no nasal hold.",
+     "verdict": "flagged, other reason",
+     "evidence": [],
+     "engine_failing": [
+      "83:32:R5"
+     ]
+    },
+    {
+     "ayah": 32,
+     "word": 4,
+     "text": "هَـٰٓؤُلَآءِ",
+     "do": "هَـٰٓؤُلَآءِ — both madds at 2 counts.",
+     "verdict": "missed",
+     "evidence": [],
+     "engine_failing": []
+    },
+    {
+     "ayah": 32,
+     "word": 5,
+     "text": "لَضَآلُّونَ",
+     "do": "لَضَآلُّونَ — the lazim at 2 counts instead of 6.",
+     "verdict": "missed",
+     "evidence": [],
+     "engine_failing": []
+    }
+   ],
+   "caught": 0,
+   "false_alarms": []
+  }
+ },
+ "r1e2": {
+  "reciter": "Husary_128kbps (EveryAyah)",
+  "A": {
+   "exercise": "r1e2",
+   "take": "A",
+   "wajh": {
+    "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+    "choice": "tawassut",
+    "expected_counts": [
+     4.0,
+     5.0
+    ],
+    "source": "declared",
+    "instances": 1,
+    "median_counts": 4.54,
+    "note": "graded for consistency with the wajh the reciter chose"
+   },
+   "tempo": {
+    "seconds_per_count": 0.32,
+    "class": "tahqiq",
+    "ok": false
+   },
+   "expectations": [
+    {
+     "ayah": 39,
+     "word": 0,
+     "text": "فَيَوْمَئِذٍۢ",
+     "rule": "idgham_no_ghunnah",
+     "expected_counts": null,
+     "measured": null,
+     "status": "pass",
+     "z_masters": null,
+     "verdict": "ok",
+     "note": ""
+    },
+    {
+     "ayah": 39,
+     "word": 3,
+     "text": "عَن",
+     "rule": "ikhfa",
+     "expected_counts": [
+      1.25,
+      2.75
+     ],
+     "measured": 2.24,
+     "status": "pass",
+     "z_masters": -0.85,
+     "verdict": "ok",
+     "note": ""
+    },
+    {
+     "ayah": 39,
+     "word": 4,
+     "text": "ذَنۢبِهِۦٓ",
+     "rule": "iqlab",
+     "expected_counts": [
+      1.25,
+      2.75
+     ],
+     "measured": null,
+     "status": "pass",
+     "z_masters": null,
+     "verdict": "ok, length not measured",
+     "note": ""
+    },
+    {
+     "ayah": 39,
+     "word": 4,
+     "text": "ذَنۢبِهِۦٓ",
+     "rule": "madd_silah_kubra",
+     "expected_counts": [
+      3.25,
+      5.75
+     ],
+     "measured": 4.54,
+     "status": "pass",
+     "z_masters": 0.343,
+     "verdict": "ok",
+     "note": "declared tawassut"
+    },
+    {
+     "ayah": 39,
+     "word": 5,
+     "text": "إِنسٌۭ",
+     "rule": "ikhfa",
+     "expected_counts": [
+      1.25,
+      2.75
+     ],
+     "measured": 2.6,
+     "status": "pass",
+     "z_masters": 0.48,
+     "verdict": "ok",
+     "note": ""
+    },
+    {
+     "ayah": 39,
+     "word": 5,
+     "text": "إِنسٌۭ",
+     "rule": "idgham_ghunnah",
+     "expected_counts": [
+      1.25,
+      2.75
+     ],
+     "measured": 1.32,
+     "status": "pass",
+     "z_masters": -0.305,
+     "verdict": "ok",
+     "note": ""
+    },
+    {
+     "ayah": 39,
+     "word": 7,
+     "text": "جَآنٌّۭ",
+     "rule": "ghunnah",
+     "expected_counts": [
+      1.25,
+      2.75
+     ],
+     "measured": null,
+     "status": "no_evidence",
+     "z_masters": null,
+     "verdict": "no_evidence",
+     "note": ""
+    },
+    {
+     "ayah": 39,
+     "word": 7,
+     "text": "جَآنٌّۭ",
+     "rule": "madd_lazim",
+     "expected_counts": [
+      5.0,
+      7.75
+     ],
+     "measured": 6.19,
+     "status": "pass",
+     "z_masters": -0.661,
+     "verdict": "ok",
+     "note": ""
+    }
+   ],
+   "met": 6,
+   "false_alarms": []
+  },
+  "B_on_correct_audio": {
+   "exercise": "r1e2",
+   "take": "B",
+   "wajh": {
+    "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+    "choice": "tawassut",
+    "expected_counts": [
+     4.0,
+     5.0
+    ],
+    "source": "declared",
+    "instances": 1,
+    "median_counts": 4.54,
+    "note": "graded for consistency with the wajh the reciter chose"
+   },
+   "tempo": {
+    "seconds_per_count": 0.32,
+    "class": "tahqiq",
+    "ok": false
+   },
+   "mistakes": [
+    {
+     "ayah": 39,
+     "word": 3,
+     "text": "عَن",
+     "do": "عَن ذَنۢبِهِۦٓ — iẓhār: a clear nūn, tongue on the gum, no hiding, no nasal hold.",
+     "verdict": "missed",
+     "evidence": [],
+     "engine_failing": []
+    },
+    {
+     "ayah": 39,
+     "word": 4,
+     "text": "ذَنۢبِهِۦٓ",
+     "do": "ذَنۢبِهِۦٓ — no iqlab: a clear nūn before the bā', no meem.",
+     "verdict": "missed",
+     "evidence": [],
+     "engine_failing": []
+    },
+    {
+     "ayah": 39,
+     "word": 5,
+     "text": "إِنسٌۭ",
+     "do": "إِنسٌ وَلَا — iẓhār of the tanwīn: 'insun walā', the nūn clear, no merging.",
+     "verdict": "missed",
+     "evidence": [],
+     "engine_failing": []
+    },
+    {
+     "ayah": 39,
+     "word": 7,
+     "text": "جَآنٌّۭ",
+     "do": "جَآنٌّ — keep the 6-count madd, but cut the shaddah ghunnah to a short plain nūn.",
+     "verdict": "missed",
+     "evidence": [],
+     "engine_failing": []
+    }
+   ],
+   "caught": 0,
+   "false_alarms": []
+  }
+ },
+ "r1e3": {
+  "reciter": "Husary_128kbps (EveryAyah)",
+  "A": {
+   "exercise": "r1e3",
+   "take": "A",
+   "wajh": {
+    "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+    "choice": "tawassut",
+    "expected_counts": [
+     4.0,
+     5.0
+    ],
+    "source": "declared",
+    "instances": 1,
+    "median_counts": 4.05,
+    "note": "graded for consistency with the wajh the reciter chose"
+   },
+   "tempo": {
+    "seconds_per_count": 0.32,
+    "class": "tahqiq",
+    "ok": false
+   },
+   "expectations": [
+    {
+     "ayah": 1,
+     "word": 0,
+     "text": "وَٱلسَّمَآءِ",
+     "rule": "madd_muttasil",
+     "expected_counts": [
+      3.25,
+      5.75
+     ],
+     "measured": 4.54,
+     "status": "pass",
+     "z_masters": 0.187,
+     "verdict": "ok",
+     "note": ""
+    },
+    {
+     "ayah": 1,
+     "word": 1,
+     "text": "وَٱلطَّارِقِ",
+     "rule": "qalqalah",
+     "expected_counts": null,
+     "measured": null,
+     "status": "pass",
+     "z_masters": null,
+     "verdict": "ok",
+     "note": ""
+    },
+    {
+     "ayah": 1,
+     "word": 1,
+     "text": "وَٱلطَّارِقِ",
+     "rule": "tarqeeq",
+     "expected_counts": null,
+     "measured": null,
+     "status": "pass",
+     "z_masters": null,
+     "verdict": "ok",
+     "note": ""
+    },
+    {
+     "ayah": 1,
+     "word": 1,
+     "text": "وَٱلطَّارِقِ",
+     "rule": "tafkheem",
+     "expected_counts": null,
+     "measured": null,
+     "status": "pass",
+     "z_masters": null,
+     "verdict": "ok",
+     "note": ""
+    },
+    {
+     "ayah": 2,
+     "word": 0,
+     "text": "وَمَآ",
+     "rule": "madd_munfasil",
+     "expected_counts": [
+      3.25,
+      5.75
+     ],
+     "measured": 4.05,
+     "status": "pass",
+     "z_masters": -0.063,
+     "verdict": "ok",
+     "note": "declared tawassut"
+    },
+    {
+     "ayah": 2,
+     "word": 3,
+     "text": "ٱلطَّارِقُ",
+     "rule": "qalqalah",
+     "expected_counts": null,
+     "measured": null,
+     "status": "pass",
+     "z_masters": null,
+     "verdict": "ok",
+     "note": ""
+    },
+    {
+     "ayah": 2,
+     "word": 3,
+     "text": "ٱلطَّارِقُ",
+     "rule": "itbaq",
+     "expected_counts": null,
+     "measured": null,
+     "status": "pass",
+     "z_masters": null,
+     "verdict": "ok",
+     "note": ""
+    },
+    {
+     "ayah": 3,
+     "word": 1,
+     "text": "ٱلثَّاقِبُ",
+     "rule": "qalqalah",
+     "expected_counts": null,
+     "measured": null,
+     "status": "pass",
+     "z_masters": null,
+     "verdict": "ok",
+     "note": ""
+    }
+   ],
+   "met": 8,
+   "false_alarms": [
+    {
+     "ayah": 1,
+     "word": 1,
+     "text": "وَٱلطَّارِقِ",
+     "failing": [
+      "86:1:L17:tafkheem_or_taqeeq"
+     ],
+     "control": false
+    },
+    {
+     "ayah": 2,
+     "word": 0,
+     "text": "وَمَآ",
+     "failing": [
+      "86:2:L1:identity"
+     ],
+     "control": false
+    },
+    {
+     "ayah": 2,
+     "word": 3,
+     "text": "ٱلطَّارِقُ",
+     "failing": [
+      "86:2:L22:tafkheem_or_taqeeq"
+     ],
+     "control": false
+    }
+   ]
+  },
+  "B_on_correct_audio": {
+   "exercise": "r1e3",
+   "take": "B",
+   "wajh": {
+    "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+    "choice": "tawassut",
+    "expected_counts": [
+     4.0,
+     5.0
+    ],
+    "source": "declared",
+    "instances": 1,
+    "median_counts": 4.05,
+    "note": "graded for consistency with the wajh the reciter chose"
+   },
+   "tempo": {
+    "seconds_per_count": 0.32,
+    "class": "tahqiq",
+    "ok": false
+   },
+   "mistakes": [
+    {
+     "ayah": 1,
+     "word": 1,
+     "text": "وَٱلطَّارِقِ",
+     "do": "وَٱلطَّارِقِ — stop dead on the qāf: no echo, no qalqalah.",
+     "verdict": "flagged, other reason",
+     "evidence": [],
+     "engine_failing": [
+      "86:1:L17:tafkheem_or_taqeeq"
+     ]
+    },
+    {
+     "ayah": 1,
+     "word": 0,
+     "text": "وَٱلسَّمَآءِ",
+     "do": "وَٱلسَّمَآءِ — make the sīn heavy, like ṣād.",
+     "verdict": "missed",
+     "evidence": [],
+     "engine_failing": []
+    },
+    {
+     "ayah": 2,
+     "word": 3,
+     "text": "ٱلطَّارِقُ",
+     "do": "ٱلطَّارِقُ — make the ṭā' light, like tā'.",
+     "verdict": "flagged, other reason",
+     "evidence": [],
+     "engine_failing": [
+      "86:2:L22:tafkheem_or_taqeeq"
+     ]
+    },
+    {
+     "ayah": 3,
+     "word": 1,
+     "text": "ٱلثَّاقِبُ",
+     "do": "ٱلثَّاقِبُ — say the thā' as sīn.",
+     "verdict": "missed",
+     "evidence": [],
+     "engine_failing": []
+    }
+   ],
+   "caught": 0,
+   "false_alarms": [
+    {
+     "ayah": 2,
+     "word": 0,
+     "text": "وَمَآ",
+     "failing": [
+      "86:2:L1:identity"
+     ],
+     "control": false
+    }
+   ]
+  }
+ }
+}

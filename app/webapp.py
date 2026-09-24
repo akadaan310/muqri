@@ -35,6 +35,10 @@ PORT = 8088
 # every protocol take is kept: the audio, the engine's full report and the scorecard (gitignored --
 # these are a person's voice)
 PROTOCOL_DIR = Path(__file__).resolve().parents[1] / "research_agency_lab/experiments/protocol_recordings"
+# calibration-session takes: audio + full report + score per take (gitignored); scores alone are
+# appended to SESSIONS_LOG, which is committed
+SESSIONS_DIR = Path(__file__).resolve().parents[1] / "research_agency_lab/experiments/session_recordings"
+SESSIONS_LOG = Path(__file__).resolve().parents[1] / "research_agency_lab/experiments/sessions_results.jsonl"
 # a learner's accumulated evidence, one file per learner id (gitignored: personal)
 LEARNERS_DIR = Path(__file__).resolve().parents[1] / "research_agency_lab/experiments/learners"
 LEARNER_ID = __import__("re").compile(r"[A-Za-z0-9_-]{1,64}")
@@ -82,7 +86,7 @@ PAGE = """<!doctype html>
 <h1>Qaari — recitation analysis</h1>
 <p class="sub">Upload a recitation and every letter is scored: identity, its five to seven classical
 sifāt, timing in your own counts, and every located tajweed rule graded against what it requires.
-<a href="/protocol">Recording protocol →</a> · <a href="/review">Listening review →</a></p>
+<a href="/sessions">Calibration sessions →</a> · <a href="/protocol">Recording protocol →</a> · <a href="/review">Listening review →</a></p>
 
 <div class="tabs">
   <button class="on" data-t="analyse">Analyse a recitation</button>
@@ -523,6 +527,74 @@ def create_app():  # type: ignore[no-untyped-def]
         (d / f"{stamp}.report.json").write_text(_json.dumps(report, ensure_ascii=False))
         (d / f"{stamp}.scorecard.json").write_text(_json.dumps(card, ensure_ascii=False))
         return JSONResponse({"scorecard": card, "elapsed_seconds": round(time.time() - t0, 2)})
+
+    # -- calibration sessions: spec'd and scripted takes, scored number by number -----------------
+    @api.get("/sessions", response_class=HTMLResponse)
+    def sessions_page() -> str:
+        from app.sessions_page import SESSIONS_PAGE
+        return SESSIONS_PAGE
+
+    @api.get("/sessions/rounds")
+    def sessions_rounds() -> dict[str, Any]:
+        from app.sessions import ROUNDS
+        return {"rounds": sorted(ROUNDS)}
+
+    @api.get("/sessions/round/{n}")
+    def sessions_round(n: int) -> Any:
+        import json as _json
+        from app.sessions import ROUNDS, to_json
+        if n not in ROUNDS:
+            return JSONResponse({"error": f"no round {n}"}, status_code=404)
+        exs = []
+        status: dict[str, Any] = {}
+        for ex in ROUNDS[n]:
+            d = to_json(ex)
+            d["verses"] = [{"ayah": a, "words": _words_of(ex.surah, a)} for a in range(ex.ayahs[0], ex.ayahs[1] + 1)]
+            exs.append(d)
+            for take in ("A", "B"):
+                cards = sorted((SESSIONS_DIR / ex.id / take).glob("*.score.json")) if SESSIONS_DIR.is_dir() else []
+                if cards:
+                    status.setdefault(ex.id, {})[take] = {"n": len(cards), "last": _json.loads(cards[-1].read_text())}
+        return {"round": n, "exercises": exs, "status": status}
+
+    @api.post("/sessions/submit")
+    async def sessions_submit(
+        audio: UploadFile = File(...),  # noqa: B008
+        exercise: str = Form(...),  # noqa: B008
+        take: str = Form(...),  # noqa: B008
+    ):  # type: ignore[no-untyped-def]
+        import json as _json
+        from app.sessions import exercises, score
+        ex = exercises().get(exercise)
+        if ex is None or take not in ("A", "B"):
+            return JSONResponse({"error": "unknown exercise or take"}, status_code=422)
+        data = await audio.read()
+        if not data:
+            return JSONResponse({"error": "Empty upload"}, status_code=400)
+        if len(data) > MAX_UPLOAD_BYTES:
+            return JSONResponse({"error": "Audio file too large (50 MB limit)"}, status_code=413)
+        t0 = time.time()
+        try:
+            wave = decode_upload(data)
+            verses = [(ex.surah, a) for a in range(ex.ayahs[0], ex.ayahs[1] + 1)]
+            report = engine().analyze(wave, verses, wajh=ex.wajh)
+            report["audio_seconds"] = round(float(wave.size) / 16000, 2)
+            card = score(ex, take, report["measurements"])
+        except AudioDecodeError as exc:
+            return JSONResponse({"error": str(exc)}, status_code=415)
+        except Exception as exc:  # noqa: BLE001
+            return JSONResponse({"error": f"{type(exc).__name__}: {exc}",
+                                 "detail": traceback.format_exc()[-1200:]}, status_code=500)
+        stamp = time.strftime("%Y%m%d-%H%M%S")
+        d = SESSIONS_DIR / ex.id / take
+        d.mkdir(parents=True, exist_ok=True)
+        ext = Path(audio.filename or "take").suffix.lower() or ".bin"
+        (d / f"{stamp}{ext}").write_bytes(data)
+        (d / f"{stamp}.report.json").write_text(_json.dumps(report, ensure_ascii=False))
+        (d / f"{stamp}.score.json").write_text(_json.dumps(card, ensure_ascii=False))
+        with SESSIONS_LOG.open("a") as fh:        # the numbers only, committed; audio stays local
+            fh.write(_json.dumps({"stamp": stamp, **card}, ensure_ascii=False) + "\n")
+        return JSONResponse({"score": card, "elapsed_seconds": round(time.time() - t0, 2)})
 
     # -- the listening review --------------------------------------------------------------------
     @api.get("/review", response_class=HTMLResponse)

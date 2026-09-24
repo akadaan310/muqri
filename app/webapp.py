@@ -32,6 +32,9 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 MAX_UPLOAD_BYTES = 50 * 1024 * 1024
 PORT = 8088
+# every protocol take is kept: the audio, the engine's full report and the scorecard (gitignored --
+# these are a person's voice)
+PROTOCOL_DIR = Path(__file__).resolve().parents[1] / "research_agency_lab/experiments/protocol_recordings"
 
 PAGE = """<!doctype html>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -75,7 +78,8 @@ PAGE = """<!doctype html>
 <div class="wrap">
 <h1>Qaari — recitation analysis</h1>
 <p class="sub">Upload a recitation and every letter is scored: identity, its five to seven classical
-sifāt, timing in your own counts, and every located tajweed rule graded against what it requires.</p>
+sifāt, timing in your own counts, and every located tajweed rule graded against what it requires.
+<a href="/protocol">Recording protocol →</a></p>
 
 <div class="tabs">
   <button class="on" data-t="analyse">Analyse a recitation</button>
@@ -403,6 +407,80 @@ def create_app():  # type: ignore[no-untyped-def]
         except Exception as exc:  # noqa: BLE001
             return JSONResponse({"error": f"{type(exc).__name__}: {exc}",
                                  "detail": traceback.format_exc()[-1200:]}, status_code=500)
+
+    # -- the recording protocol ------------------------------------------------------------------
+    def _words_of(surah: int, ayah: int) -> list[str]:
+        Aya = engine()._phonetizer[0]
+        return Aya(surah, ayah).get().uthmani.split()
+
+    def _resolved() -> dict[str, list[dict[str, Any]]]:
+        if "protocol" not in state:
+            from app.protocol import resolve
+            state["protocol"] = resolve(_words_of)
+        return state["protocol"]
+
+    @api.get("/protocol", response_class=HTMLResponse)
+    def protocol_page() -> str:
+        from app.protocol_page import PROTOCOL_PAGE
+        return PROTOCOL_PAGE
+
+    @api.get("/protocol/tests")
+    def protocol_tests() -> dict[str, Any]:
+        from app.protocol import TESTS
+        res = _resolved()
+        return {"tests": [{"id": t.id, "title": t.title, "surah": t.surah, "focus": t.focus,
+                           "correct_note": t.correct_note, "b_is_correct": t.b_is_correct,
+                           "b_note": t.b_note, "mistakes": res[t.id],
+                           "verses": [{"ayah": a, "words": _words_of(t.surah, a)}
+                                      for a in range(t.ayahs[0], t.ayahs[1] + 1)]}
+                          for t in TESTS]}
+
+    @api.get("/protocol/status")
+    def protocol_status() -> dict[str, Any]:
+        import json as _json
+        out: dict[str, Any] = {}
+        for d in sorted(PROTOCOL_DIR.glob("t*/*")) if PROTOCOL_DIR.is_dir() else []:
+            cards = sorted(d.glob("*.scorecard.json"))
+            if cards:
+                out.setdefault(d.parent.name, {})[d.name] = {
+                    "n": len(cards), "last": _json.loads(cards[-1].read_text())}
+        return out
+
+    @api.post("/protocol/submit")
+    async def protocol_submit(
+        audio: UploadFile = File(...),  # noqa: B008
+        test_id: str = Form(...),  # noqa: B008
+        take: str = Form(...),  # noqa: B008
+    ):  # type: ignore[no-untyped-def]
+        import json as _json
+        from app.protocol import TESTS, scorecard
+        test = next((t for t in TESTS if t.id == test_id), None)
+        if test is None or take not in ("correct", "mistakes"):
+            return JSONResponse({"error": "unknown test or take"}, status_code=422)
+        data = await audio.read()
+        if not data:
+            return JSONResponse({"error": "Empty upload"}, status_code=400)
+        if len(data) > MAX_UPLOAD_BYTES:
+            return JSONResponse({"error": "Audio file too large (50 MB limit)"}, status_code=413)
+        t0 = time.time()
+        try:
+            wave = decode_upload(data)
+            verses = [(test.surah, a) for a in range(test.ayahs[0], test.ayahs[1] + 1)]
+            report = engine().analyze(wave, verses)
+            card = scorecard(test, take, report, _resolved()[test.id])
+        except AudioDecodeError as exc:
+            return JSONResponse({"error": str(exc)}, status_code=415)
+        except Exception as exc:  # noqa: BLE001
+            return JSONResponse({"error": f"{type(exc).__name__}: {exc}",
+                                 "detail": traceback.format_exc()[-1200:]}, status_code=500)
+        stamp = time.strftime("%Y%m%d-%H%M%S")
+        d = PROTOCOL_DIR / test.id / take
+        d.mkdir(parents=True, exist_ok=True)
+        ext = Path(audio.filename or "take").suffix.lower() or ".bin"
+        (d / f"{stamp}{ext}").write_bytes(data)
+        (d / f"{stamp}.report.json").write_text(_json.dumps(report, ensure_ascii=False))
+        (d / f"{stamp}.scorecard.json").write_text(_json.dumps(card, ensure_ascii=False))
+        return JSONResponse({"scorecard": card, "elapsed_seconds": round(time.time() - t0, 2)})
 
     @api.post("/analyze")
     async def analyze(

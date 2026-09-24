@@ -13,6 +13,12 @@ What one call produces for one ayah:
 
 `ctc_log_likelihood` in `app/lahn/gop.py` already implements the CTC forward and is reused; the
 Viterbi alignment needed for timing did not exist in Python and is added here.
+
+**Timing has two modes.** The model emits one frame per 40 ms and a short vowel is one or two frames,
+so a Viterbi onset quantises every duration to a whole frame. `timing="centroid"` instead takes each
+unit's onset as the posterior-weighted centre of its CTC occupancy (forward-backward), which is
+continuous: on 60 anchor clips unique fatha durations went from 56/1245 to 1106/1245. Viterbi stays
+the default until the centroid path is mirrored in Julia and pinned by parity test.
 """
 
 from __future__ import annotations
@@ -88,6 +94,54 @@ def ctc_viterbi(lp: npt.NDArray[np.floating], seq: list[int], blank: int
     return score, first, last
 
 
+def ctc_occupancy(lp: npt.NDArray[np.floating], seq: list[int], blank: int
+                  ) -> npt.NDArray[np.floating]:
+    """Posterior probability that each symbol of `seq` occupies each frame: a T x len(seq) matrix.
+
+    CTC forward-backward in log space over the blank-interleaved sequence; the occupancy of symbol k
+    is gamma at extended state 2k+1. Mirrors `CtcGop.ctc_occupancy`.
+    """
+    T, L = lp.shape[0], len(seq)
+    if L == 0:
+        return np.zeros((T, 0))
+    S = 2 * L + 1
+    ext = np.array([blank if s % 2 == 0 else seq[s // 2] for s in range(S)])
+    skip = np.zeros(S, dtype=bool)
+    skip[2:] = (ext[2:] != blank) & (ext[2:] != ext[:-2])
+    e = lp[:, ext]
+    a = np.full((T, S), NEG)
+    a[0, :min(2, S)] = e[0, :min(2, S)]
+    for t in range(1, T):
+        p = a[t - 1]
+        one = np.concatenate(([NEG], p[:-1]))
+        two = np.where(skip, np.concatenate(([NEG, NEG], p[:-2])), NEG)
+        a[t] = np.logaddexp(np.logaddexp(p, one), two) + e[t]
+    b = np.full((T, S), NEG)
+    b[T - 1, max(0, S - 2):] = 0.0
+    for t in range(T - 2, -1, -1):
+        n = b[t + 1] + e[t + 1]
+        one = np.concatenate((n[1:], [NEG]))
+        two = np.concatenate((np.where(skip, n, NEG)[2:], [NEG, NEG]))
+        b[t] = np.logaddexp(np.logaddexp(n, one), two)
+    log_z = np.logaddexp(a[T - 1, S - 1], a[T - 1, S - 2]) if S > 1 else a[T - 1, S - 1]
+    return np.exp(np.clip(a[:, 1::2] + b[:, 1::2] - log_z, -60.0, 0.0))
+
+
+def centroid_onsets(lp: npt.NDArray[np.floating], seq: list[int], blank: int
+                    ) -> npt.NDArray[np.floating]:
+    """Continuous onset of every symbol, in 1-based frames to match `ctc_viterbi`'s `first`.
+
+    The centre of mass of the symbol's occupancy. CTC is peaky, so the centre sits where the model
+    commits to the symbol; consecutive centres give the interval between articulations with no 40 ms
+    quantisation. A symbol with no occupancy mass (only possible on a degenerate clip) is NaN.
+    """
+    g = ctc_occupancy(lp, seq, blank)
+    mass = g.sum(axis=0)
+    t = np.arange(1, lp.shape[0] + 1, dtype=float)
+    with np.errstate(invalid="ignore", divide="ignore"):
+        return np.where(mass > 1e-12, (g * t[:, None]).sum(axis=0) / mass, np.nan)
+
+
 @dataclass(slots=True)
 class Unit:
     """One phoneme run and everything the acoustic model says about it."""
@@ -130,12 +184,17 @@ def _pooled(x: npt.NDArray[np.floating]) -> npt.NDArray[np.floating]:
 def analyse_clip(lp_full: npt.NDArray[np.floating], phonemes: str, vocab: dict[str, int], blank: int,
                  ph_first: int, ph_width: int, sifat_blocks: dict[str, tuple[int, int, list[str]]],
                  expected_sifat: dict[str, list[int]] | None = None,
-                 ctx: int = 2, margin: int = 3) -> list[Unit]:
+                 ctx: int = 2, margin: int = 3, timing: str = "viterbi") -> list[Unit]:
     """Everything the engine knows about every unit of one ayah.
 
     `lp_full` is the T x C log-posterior matrix of all levels; `ph_first`/`ph_width` locate the
     phoneme block within it and `sifat_blocks` the attribute heads (from the dump's layout.json).
+    `timing` is "viterbi" (whole frames) or "centroid" (continuous; see the module docstring). Only
+    onsets and durations change with it: `frames`, the sifat windows and the GOP contexts stay on the
+    Viterbi path, which is what they were validated on.
     """
+    if timing not in ("viterbi", "centroid"):
+        raise ValueError(f"timing must be 'viterbi' or 'centroid', not {timing!r}")
     lp = lp_full[:, ph_first:ph_first + ph_width]
     units = ph_units(phonemes)
     nu = len(units)
@@ -144,9 +203,14 @@ def analyse_clip(lp_full: npt.NDArray[np.floating], phonemes: str, vocab: dict[s
     seq = [vocab[c] for c in phonemes]
     _score, first, last = ctc_viterbi(lp, seq, blank)
     T = lp.shape[0]
+    start: list[float] = [float(f) for f in first]
+    if timing == "centroid":
+        cen = centroid_onsets(lp, seq, blank)
+        # fall back per symbol, never per clip, so one degenerate symbol cannot unset the rest
+        start = [float(c) if np.isfinite(c) else f for c, f in zip(cen, start)]
 
-    def onset(i: int) -> int:
-        return first[units[i][1]]
+    def onset(i: int) -> float:
+        return start[units[i][1]]
 
     def dur(i: int) -> float:
         end = onset(i + 1) if i < nu - 1 else last[units[i][2]] + 1

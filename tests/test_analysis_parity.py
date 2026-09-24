@@ -99,3 +99,35 @@ def test_matches_the_julia_reference_exactly() -> None:
         else:
             assert abs(p.duration_counts - (j["duration_counts"] or 0)) < 1e-6
     assert suppressed <= 3, f"{suppressed} units suppressed; the guards should be rare"
+
+
+def test_centroid_timing_is_continuous_and_leaves_everything_else_alone() -> None:
+    """`timing="centroid"` must break the 40 ms quantisation and change nothing but timing.
+
+    Under Viterbi every onset is a whole frame, so a one-frame vowel and a 1.4-frame vowel read the
+    same. The centroid is continuous. Identity, sifat and frames are validated on the Viterbi path
+    and must be identical in both modes.
+    """
+    raw, rec, vocab, blocks, ph, blank, sif = load_clip()
+    vit = analyse_clip(raw, rec["ref_ph"], vocab, blank, ph["first"], ph["width"], blocks, sif)
+    cen = analyse_clip(raw, rec["ref_ph"], vocab, blank, ph["first"], ph["width"], blocks, sif,
+                       timing="centroid")
+    assert len(vit) == len(cen)
+    for v, c in zip(vit, cen):
+        assert (v.symbol, v.frames, v.best_competitor, v.gop, v.sifat) == \
+               (c.symbol, c.frames, c.best_competitor, c.gop, c.sifat)
+    from app.analysis import FRAME_S  # noqa: PLC0415
+
+    body = cen[:-1]                        # the tail runs to a Viterbi end, not a centroid
+    assert all(c.duration_s > 0 for c in body), "centroid onsets must advance"
+    off_grid = [c for c in body if abs(c.duration_s / FRAME_S - round(c.duration_s / FRAME_S)) > 0.02]
+    assert len(off_grid) > 0.8 * len(body), "centroid durations should not sit on the 40 ms grid"
+    assert all(abs(c.onset_s - v.onset_s) < 3 * FRAME_S for v, c in zip(vit, cen)), \
+        "a centroid should sit within a few frames of the Viterbi onset"
+
+
+def test_unknown_timing_mode_is_refused() -> None:
+    raw, rec, vocab, blocks, ph, blank, sif = load_clip()
+    with pytest.raises(ValueError):
+        analyse_clip(raw, rec["ref_ph"], vocab, blank, ph["first"], ph["width"], blocks, sif,
+                     timing="cubic")

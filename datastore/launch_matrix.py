@@ -73,6 +73,7 @@ def build() -> list[tuple]:  # type: ignore[type-arg]
     cov, qc = load("letter_coverage"), load("qc")
     cal = json.loads((METRICS / "calibration.json").read_text()) if (METRICS / "calibration.json").is_file() else {}
     dist = load("distance")
+    sft = load("subframe_tempo")        # sub-frame isochrony / weight tests (tempo_test.py summary)
     rows: list[tuple] = []
 
     def add(cap, fam, lvl, detects, metric, value, target, n, readiness, gap):  # type: ignore[no-untyped-def]
@@ -152,10 +153,24 @@ def build() -> list[tuple]:  # type: ignore[type-arg]
         add("ishba", "timing", "advanced", "vowel stretched into an unwritten madd",
             "median rate over reciters", round(statistics.median([r["ishba_rate"] for r in rr]), 4),
             0.05, len(rr), CAUTION, "no ground truth yet — rate is descriptive, not validated")
+    if sft:
+        iso, wt = sft["isochrony"], sft["weight"]
         add("harakah_isochrony", "timing", "mastery",
             "fatḥah, kasrah and ḍammah all exactly one count",
-            "spread of the three vowel medians", 0.0, 0.05, len(rr), BLOCKED,
-            "40 ms frames: all three medians quantise to 1.0, spread reads 0.0 for every reciter")
+            "Spearman(tempo, spread) across reciters", iso["spearman_tempo_spread"], None,
+            len(iso["per_reciter"]), HOLD,
+            f"measurable with sub-frame onsets, but the spread compresses with tempo inside one voice "
+            f"(+{100 * iso['within_slow_minus_fast']:.1f} pp slow vs fast, p = {iso['p']}) and ranks "
+            f"nobody between voices -- a fast imam would outscore Husary")
+        gaps = {k: v["gap"] for k, v in wt["per_reciter"].items()}
+        add("harakah_weight_independence", "timing", "mastery",
+            "a vowel's length does not depend on its consonant's weight",
+            "median heavy-minus-light vowel gap over reciters", round(statistics.median(gaps.values()), 4),
+            None, len(gaps), CAUTION,
+            f"a stable trait of the voice (within-reciter tempo effect {100 * wt['within_slow_minus_fast']:+.2f} pp, "
+            f"CI spans 0); Husary Mujawwad {100 * gaps.get('Husary_128kbps_Mujawwad', 0):+.1f} % vs "
+            f"Shuraym {100 * gaps.get('Saood_ash-Shuraym_128kbps', 0):+.1f} %. No ground truth; "
+            f"how many vowels one submission needs is not yet measured")
 
     # ---------------- integrity and placement ----------------
     if cov:

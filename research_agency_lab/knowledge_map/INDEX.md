@@ -258,8 +258,8 @@
 | `concept:hadr_integrity` Under Ḥadr, tawassuṭ/rakhāwah must not collapse into shiddah |  | covered | `mech:tempo` |  |
 | `concept:hams_jahr` Hams vs Jahr — breath vs vocal-fold vibration |  | covered | `mech:attribute` |  |
 | `concept:harakah_anatomy` Fatḥah / Kasrah / Ḍammah articulatory posture |  | partial | `mech:spectral` |  |
-| `concept:harakah_isochrony` Zamān(Fatḥah) = Zamān(Kasrah) = Zamān(Ḍammah) |  | blocked | `mech:consistency` |  |
-| `concept:harakah_weight_independence` Vowel length independent of the consonant's weight |  | blocked | `mech:consistency` |  |
+| `concept:harakah_isochrony` Zamān(Fatḥah) = Zamān(Kasrah) = Zamān(Ḍammah) |  | partial | `mech:consistency` |  |
+| `concept:harakah_weight_independence` Vowel length independent of the consonant's weight |  | covered | `mech:consistency` |  |
 | `concept:idhlaq_ismat` Idhlāq vs Iṣmāt — ease of production |  | out_of_scope | `mech:-` |  |
 | `concept:ikhtilas` Ikhtilās — vowel truncated below 1U (≈⅔U) |  | covered | `mech:durational` |  |
 | `concept:ishba` Ishbā' — vowel stretched beyond 1U into a madd |  | covered | `mech:durational` |  |

@@ -17,6 +17,7 @@ Stage 1 caches per-clip vowel measurements (`extract`), stage 2 analyses them (`
     python tempo_test.py analyse OUT.jsonl
     python tempo_test.py null OUT.jsonl [permutations]
     python tempo_test.py weight OUT.jsonl
+    python tempo_test.py summary OUT.jsonl RESULT.json [permutations]   # what the launch matrix reads
 """
 import json
 import sys
@@ -144,6 +145,9 @@ def analyse(path):
     lo, hi = np.percentile(boot, [2.5, 97.5])
     print(f"  slow-minus-fast spread, median over {len(diffs)} reciters = {100 * np.median(diffs):+.2f} pp"
           f"  95% CI [{100 * lo:+.2f}, {100 * hi:+.2f}]  ({int((diffs > 0).sum())}/{len(diffs)} positive)")
+    return {"spearman_tempo_spread": round(rho, 4),
+            "per_reciter": {spk: {"haraka_s": round(h, 4), "spread": round(float(sp), 4)}
+                            for h, sp, spk, _t in rows}}
 
 
 def equalised_spread(parts, rng, reps=40):
@@ -195,6 +199,9 @@ def null_test(path, perms=200):
     pval = (1 + sum(abs(x) >= abs(obs) for x in null)) / (1 + perms)
     print(f"  permutation null (random terciles): median {100 * np.median(null):+.2f} pp, "
           f"95% [{100 * np.percentile(null, 2.5):+.2f}, {100 * np.percentile(null, 97.5):+.2f}]  p = {pval:.3f}")
+    return {"within_slow_minus_fast": round(obs, 4), "positive": int(sum(x > 0 for x in d)), "reciters": len(d),
+            "null_95": [round(float(np.percentile(null, 2.5)), 4), round(float(np.percentile(null, 97.5)), 4)],
+            "p": round(pval, 4), "permutations": perms}
 
 
 def weight_test(path):
@@ -243,11 +250,27 @@ def weight_test(path):
     lo, hi = np.percentile(boot, [2.5, 97.5])
     print(f"WITHIN RECITER slow-minus-fast gap: median {100 * np.median(d):+.2f} pp "
           f"95% CI [{100 * lo:+.2f}, {100 * hi:+.2f}]  ({int((d > 0).sum())}/{len(d)} positive)")
+    return {"spearman_tempo_gap": round(rho, 4),
+            "within_slow_minus_fast": round(float(np.median(d)), 4),
+            "within_ci95": [round(float(lo), 4), round(float(hi), 4)],
+            "positive": int((d > 0).sum()), "reciters": len(d),
+            "per_reciter": {spk: {"haraka_s": round(h, 4), "gap": round(float(g), 4)}
+                            for h, g, spk, _t in rows}}
+
+
+def summary(path, out, perms=200):
+    """Everything the launch matrix and the tracker read, in one file."""
+    res = {"source": "research_agency_lab/experiments/subframe/tempo_test.py", "timing": "centroid",
+           "isochrony": {**analyse(path), **null_test(path, perms)}, "weight": weight_test(path)}
+    with open(out, "w") as f:
+        json.dump(res, f, indent=1, ensure_ascii=False)
 
 
 if __name__ == "__main__":
     if sys.argv[1] == "extract":
         extract(sys.argv[2], *(int(a) for a in sys.argv[3:]))
+    elif sys.argv[1] == "summary":
+        summary(sys.argv[2], sys.argv[3], *(int(a) for a in sys.argv[4:]))
     elif sys.argv[1] == "weight":
         weight_test(sys.argv[2])
     elif sys.argv[1] == "null":

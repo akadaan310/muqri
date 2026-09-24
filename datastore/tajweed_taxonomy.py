@@ -56,13 +56,20 @@ TAXONOMY: list[tuple[str, str, str, str, str, str, str, str]] = [
      "the phoneme head distinguishes the three vowels and letter_report.jl confirms every expected "
      "vowel is recorded (id_vowel = 1.0000 for all 41 reciters, every tempo); F1/F2 purity is not wired"),
     ("harakah_isochrony", "I", "2.2", "Zamān(Fatḥah) = Zamān(Kasrah) = Zamān(Ḍammah)", CONS,
-     "harakat_timing.jl", "blocked",
-     "BUILT AND RUN, but not measurable at the model's 40 ms frame rate: a short vowel is 1–2 frames, so "
-     "the per-vowel medians all quantise to exactly 1.0 and the isochrony spread is 0.0 for all 41 "
-     "reciters. Needs sub-frame onset estimation or a finer-rate alignment, not more data"),
+     "research_agency_lab/experiments/subframe/tempo_test.py", "partial",
+     "MEASURABLE since sub-frame (centroid) onsets broke the 40 ms quantisation, and measured: on the "
+     "anchors fatha and kasra are equal while damma is ~3.9 % longer (bootstrap CIs disjoint). But the "
+     "SPREAD must not be scored: inside one voice it compresses with tempo (equal-n slow-minus-fast "
+     "+1.7 pp, 31/41 reciters, permutation p = 0.01) and between voices it carries no signal "
+     "(Spearman with tempo +0.04; Sudais 5.2 % vs Husary Mujawwad 3.1 %). Per-vowel medians are "
+     "reported descriptively; no isochrony verdict"),
     ("harakah_weight_independence", "I", "2.2", "Vowel length independent of the consonant's weight", CONS,
-     "harakat_timing.jl", "blocked",
-     "same 40 ms quantisation: heavy-vs-light vowel bias reads exactly 0.0 for every reciter"),
+     "research_agency_lab/experiments/subframe/tempo_test.py", "covered",
+     "centroid onsets, 41 reciters x 150 clips: every reciter shortens vowels on heavy letters, but it "
+     "is a trait of the voice, not of tempo -- the same reciter's slow and fast ayahs do not differ "
+     "(-0.55 pp, CI [-3.34, +0.66]). The three Husary recordings violate least (-1.6, -2.8, -5.7 %) "
+     "against -6 to -10 % for the fast imams; slowness alone does not explain it (Abdul Basit "
+     "Mujawwad -7.3 %). Result file qaari_keys/subframe_tempo_T300.json"),
     ("ikhtilas", "I", "2.3", "Ikhtilās — vowel truncated below 1U (≈⅔U)", DUR,
      "harakat_timing.jl", "covered",
      "measured as the short tail of the vowel-duration distribution: anchors 5.18 %, others 4.54 %"),

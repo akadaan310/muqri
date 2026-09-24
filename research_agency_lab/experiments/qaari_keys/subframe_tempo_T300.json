@@ -1,0 +1,358 @@
+{
+ "source": "research_agency_lab/experiments/subframe/tempo_test.py",
+ "timing": "centroid",
+ "isochrony": {
+  "spearman_tempo_spread": 0.0361,
+  "per_reciter": {
+   "Abdul_Basit_Mujawwad_128kbps": {
+    "haraka_s": 0.3594,
+    "spread": 0.0482
+   },
+   "Abdul_Basit_Murattal_192kbps": {
+    "haraka_s": 0.2391,
+    "spread": 0.0451
+   },
+   "Abdullah_Basfar_192kbps": {
+    "haraka_s": 0.2072,
+    "spread": 0.0581
+   },
+   "Abdullah_Matroud_128kbps": {
+    "haraka_s": 0.2403,
+    "spread": 0.0516
+   },
+   "Abdurrahmaan_As-Sudais_192kbps": {
+    "haraka_s": 0.1871,
+    "spread": 0.0523
+   },
+   "Abu_Bakr_Ash-Shaatree_128kbps": {
+    "haraka_s": 0.1998,
+    "spread": 0.029
+   },
+   "Ahmed_Neana_128kbps": {
+    "haraka_s": 0.2193,
+    "spread": 0.0372
+   },
+   "Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net": {
+    "haraka_s": 0.199,
+    "spread": 0.0509
+   },
+   "Akram_AlAlaqimy_128kbps": {
+    "haraka_s": 0.2156,
+    "spread": 0.0503
+   },
+   "Alafasy_128kbps": {
+    "haraka_s": 0.2146,
+    "spread": 0.0471
+   },
+   "Ali_Hajjaj_AlSuesy_128kbps": {
+    "haraka_s": 0.23,
+    "spread": 0.0329
+   },
+   "Ali_Jaber_64kbps": {
+    "haraka_s": 0.2201,
+    "spread": 0.0537
+   },
+   "Ayman_Sowaid_64kbps": {
+    "haraka_s": 0.2742,
+    "spread": 0.0582
+   },
+   "Fares_Abbad_64kbps": {
+    "haraka_s": 0.1934,
+    "spread": 0.022
+   },
+   "Ghamadi_40kbps": {
+    "haraka_s": 0.198,
+    "spread": 0.0093
+   },
+   "Hani_Rifai_192kbps": {
+    "haraka_s": 0.201,
+    "spread": 0.0577
+   },
+   "Hudhaify_128kbps": {
+    "haraka_s": 0.1992,
+    "spread": 0.0443
+   },
+   "Husary_128kbps": {
+    "haraka_s": 0.3219,
+    "spread": 0.0527
+   },
+   "Husary_128kbps_Mujawwad": {
+    "haraka_s": 0.3963,
+    "spread": 0.031
+   },
+   "Husary_Muallim_128kbps": {
+    "haraka_s": 0.2798,
+    "spread": 0.0422
+   },
+   "Karim_Mansoori_40kbps": {
+    "haraka_s": 0.3445,
+    "spread": 0.0129
+   },
+   "Khaalid_Abdullaah_al-Qahtaanee_192kbps": {
+    "haraka_s": 0.2006,
+    "spread": 0.0215
+   },
+   "MaherAlMuaiqly128kbps": {
+    "haraka_s": 0.16,
+    "spread": 0.0268
+   },
+   "Minshawy_Mujawwad_192kbps": {
+    "haraka_s": 0.3632,
+    "spread": 0.034
+   },
+   "Minshawy_Murattal_128kbps": {
+    "haraka_s": 0.2333,
+    "spread": 0.0684
+   },
+   "Mohammad_al_Tablaway_128kbps": {
+    "haraka_s": 0.2227,
+    "spread": 0.0576
+   },
+   "Muhammad_AbdulKareem_128kbps": {
+    "haraka_s": 0.1857,
+    "spread": 0.0349
+   },
+   "Muhammad_Ayyoub_128kbps": {
+    "haraka_s": 0.2033,
+    "spread": 0.0453
+   },
+   "Muhammad_Jibreel_128kbps": {
+    "haraka_s": 0.2191,
+    "spread": 0.0373
+   },
+   "Muhsin_Al_Qasim_192kbps": {
+    "haraka_s": 0.1871,
+    "spread": 0.0706
+   },
+   "Mustafa_Ismail_48kbps": {
+    "haraka_s": 0.2426,
+    "spread": 0.0588
+   },
+   "Nasser_Alqatami_128kbps": {
+    "haraka_s": 0.1871,
+    "spread": 0.062
+   },
+   "Sahl_Yassin_128kbps": {
+    "haraka_s": 0.199,
+    "spread": 0.0558
+   },
+   "Salaah_AbdulRahman_Bukhatir_128kbps": {
+    "haraka_s": 0.1912,
+    "spread": 0.0471
+   },
+   "Salah_Al_Budair_128kbps": {
+    "haraka_s": 0.178,
+    "spread": 0.0497
+   },
+   "Saood_ash-Shuraym_128kbps": {
+    "haraka_s": 0.1601,
+    "spread": 0.0146
+   },
+   "Yaser_Salamah_128kbps": {
+    "haraka_s": 0.1984,
+    "spread": 0.0684
+   },
+   "Yasser_Ad-Dussary_128kbps": {
+    "haraka_s": 0.1966,
+    "spread": 0.0483
+   },
+   "aziz_alili_128kbps": {
+    "haraka_s": 0.217,
+    "spread": 0.0445
+   },
+   "khalefa_al_tunaiji_64kbps": {
+    "haraka_s": 0.201,
+    "spread": 0.0358
+   },
+   "mahmoud_ali_al_banna_32kbps": {
+    "haraka_s": 0.211,
+    "spread": 0.044
+   }
+  },
+  "within_slow_minus_fast": 0.017,
+  "positive": 31,
+  "reciters": 41,
+  "null_95": [
+   -0.0097,
+   0.0115
+  ],
+  "p": 0.01,
+  "permutations": 200
+ },
+ "weight": {
+  "spearman_tempo_gap": 0.4389,
+  "within_slow_minus_fast": -0.0055,
+  "within_ci95": [
+   -0.0334,
+   0.0066
+  ],
+  "positive": 20,
+  "reciters": 41,
+  "per_reciter": {
+   "Abdul_Basit_Mujawwad_128kbps": {
+    "haraka_s": 0.3594,
+    "gap": -0.0733
+   },
+   "Abdul_Basit_Murattal_192kbps": {
+    "haraka_s": 0.2391,
+    "gap": -0.0592
+   },
+   "Abdullah_Basfar_192kbps": {
+    "haraka_s": 0.2072,
+    "gap": -0.0653
+   },
+   "Abdullah_Matroud_128kbps": {
+    "haraka_s": 0.2403,
+    "gap": -0.0702
+   },
+   "Abdurrahmaan_As-Sudais_192kbps": {
+    "haraka_s": 0.1871,
+    "gap": -0.0596
+   },
+   "Abu_Bakr_Ash-Shaatree_128kbps": {
+    "haraka_s": 0.1998,
+    "gap": -0.0625
+   },
+   "Ahmed_Neana_128kbps": {
+    "haraka_s": 0.2193,
+    "gap": -0.0881
+   },
+   "Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net": {
+    "haraka_s": 0.199,
+    "gap": -0.0749
+   },
+   "Akram_AlAlaqimy_128kbps": {
+    "haraka_s": 0.2156,
+    "gap": -0.0471
+   },
+   "Alafasy_128kbps": {
+    "haraka_s": 0.2146,
+    "gap": -0.0384
+   },
+   "Ali_Hajjaj_AlSuesy_128kbps": {
+    "haraka_s": 0.23,
+    "gap": -0.0648
+   },
+   "Ali_Jaber_64kbps": {
+    "haraka_s": 0.2201,
+    "gap": -0.0404
+   },
+   "Ayman_Sowaid_64kbps": {
+    "haraka_s": 0.2742,
+    "gap": -0.0618
+   },
+   "Fares_Abbad_64kbps": {
+    "haraka_s": 0.1934,
+    "gap": -0.0716
+   },
+   "Ghamadi_40kbps": {
+    "haraka_s": 0.198,
+    "gap": -0.0876
+   },
+   "Hani_Rifai_192kbps": {
+    "haraka_s": 0.201,
+    "gap": -0.063
+   },
+   "Hudhaify_128kbps": {
+    "haraka_s": 0.1992,
+    "gap": -0.0481
+   },
+   "Husary_128kbps": {
+    "haraka_s": 0.3219,
+    "gap": -0.0281
+   },
+   "Husary_128kbps_Mujawwad": {
+    "haraka_s": 0.3963,
+    "gap": -0.0162
+   },
+   "Husary_Muallim_128kbps": {
+    "haraka_s": 0.2798,
+    "gap": -0.0572
+   },
+   "Karim_Mansoori_40kbps": {
+    "haraka_s": 0.3445,
+    "gap": -0.0723
+   },
+   "Khaalid_Abdullaah_al-Qahtaanee_192kbps": {
+    "haraka_s": 0.2006,
+    "gap": -0.0726
+   },
+   "MaherAlMuaiqly128kbps": {
+    "haraka_s": 0.16,
+    "gap": -0.1011
+   },
+   "Minshawy_Mujawwad_192kbps": {
+    "haraka_s": 0.3632,
+    "gap": -0.0574
+   },
+   "Minshawy_Murattal_128kbps": {
+    "haraka_s": 0.2333,
+    "gap": -0.0581
+   },
+   "Mohammad_al_Tablaway_128kbps": {
+    "haraka_s": 0.2227,
+    "gap": -0.0582
+   },
+   "Muhammad_AbdulKareem_128kbps": {
+    "haraka_s": 0.1857,
+    "gap": -0.0695
+   },
+   "Muhammad_Ayyoub_128kbps": {
+    "haraka_s": 0.2033,
+    "gap": -0.0722
+   },
+   "Muhammad_Jibreel_128kbps": {
+    "haraka_s": 0.2191,
+    "gap": -0.0495
+   },
+   "Muhsin_Al_Qasim_192kbps": {
+    "haraka_s": 0.1871,
+    "gap": -0.0656
+   },
+   "Mustafa_Ismail_48kbps": {
+    "haraka_s": 0.2426,
+    "gap": -0.0803
+   },
+   "Nasser_Alqatami_128kbps": {
+    "haraka_s": 0.1871,
+    "gap": -0.0651
+   },
+   "Sahl_Yassin_128kbps": {
+    "haraka_s": 0.199,
+    "gap": -0.075
+   },
+   "Salaah_AbdulRahman_Bukhatir_128kbps": {
+    "haraka_s": 0.1912,
+    "gap": -0.0632
+   },
+   "Salah_Al_Budair_128kbps": {
+    "haraka_s": 0.178,
+    "gap": -0.075
+   },
+   "Saood_ash-Shuraym_128kbps": {
+    "haraka_s": 0.1601,
+    "gap": -0.0746
+   },
+   "Yaser_Salamah_128kbps": {
+    "haraka_s": 0.1984,
+    "gap": -0.0739
+   },
+   "Yasser_Ad-Dussary_128kbps": {
+    "haraka_s": 0.1966,
+    "gap": -0.0727
+   },
+   "aziz_alili_128kbps": {
+    "haraka_s": 0.217,
+    "gap": -0.0447
+   },
+   "khalefa_al_tunaiji_64kbps": {
+    "haraka_s": 0.201,
+    "gap": -0.0642
+   },
+   "mahmoud_ali_al_banna_32kbps": {
+    "haraka_s": 0.211,
+    "gap": -0.0382
+   }
+  }
+ }
+}

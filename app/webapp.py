@@ -8,8 +8,15 @@ this is where a real recording, recorded by a real person, goes through the same
 The acoustic model is 2.4 GB and takes ~40 s to load, so it is warmed at startup rather than on the
 first upload — otherwise the first request looks broken. `GET /health` reports whether it is warm.
 
-Inference is local CPU (4 cores, no GPU): fp32 RTF ~0.52, so one verse is a few seconds and a page of
-recitation is one to two minutes. The page says so rather than appearing to hang.
+Inference is local CPU (4 cores, no GPU).
+
+A warning about latency numbers measured on this box: it is shared. At the time of writing the load
+average was 43 on 4 cores — three Julia jobs and two Python jobs from an unrelated project — so the
+engine measured RTF ~2 per verse and adding threads made it *slower* (RTF 3.65 at one thread, 22.79
+at four), which is thread thrashing under ~10x oversubscription, not a property of the model. The
+same model measured RTF 0.52 when the box was quiet. Profile again on an idle box before drawing any
+conclusion about speed; the analysis itself is free either way (0.26 s per verse, RTF 0.02) and
+essentially all the time is in the acoustic model.
 """
 
 # No ``from __future__ import annotations`` here. FastAPI resolves endpoint annotations at runtime,

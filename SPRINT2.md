@@ -258,6 +258,20 @@ none of which is possible while every duration is 1 or 2.
 
 ---
 
+## Measuring anything on this box
+
+**It is shared and frequently loaded.** Observed load average **43 on 4 cores** — three Julia
+processes from `~/quran-calligraphy/math` plus `eval_htr.py` and `run_experiments.py`, none of them
+this project's. Every latency figure taken under that is meaningless: the engine measured RTF ~2 per
+verse, and raising torch threads 1 → 4 made it *slower* (RTF 3.65 → 22.79), which is thrashing at
+~10x oversubscription, not model behaviour. The same model measured RTF 0.52 on a quiet box.
+
+Check `uptime` before timing anything, and re-profile when load is under ~4. Accuracy measurements
+are unaffected — contention only slows them.
+
+Where the time actually goes, profiled: **analysis is free** (0.26 s per verse, RTF 0.02) and
+essentially all of it is the acoustic model's forward pass.
+
 ## Compute
 
 - **Modal** (`source ~/qaari_creds.sh; export MODAL_PROFILE=akadaan310`): **$8.53 of the $20 work cap

@@ -1,0 +1,73 @@
+545592 consonant units, 41 reciters
+formal context (28, 22), 205 concepts
+jahr ∩ shadid = {ءبجدطق}   qalqalah = {بجدطق}   difference = {ء}
+
+OFF-TARGET CHARACTERISTICS (top 30 by rate x sqrt n)
+ر shaddah     tikraar: [مكرر]->[لا تكرار]                               n=2562  rate=0.999  anchor=1.0    fast=0.999  phenomenon-like
+ش shaddah     tafashie: [متفشي]->[لا تفشي]                              n=1045  rate=1.0    anchor=1.0    fast=1.0    phenomenon-like
+ر stop        tikraar: [مكرر]->[لا تكرار]                               n=915   rate=0.99   anchor=1.0    fast=0.994  phenomenon-like
+ر fatha       tafkheem_or_taqeeq: [مفخم]->[مرقق]                        n=9964  rate=0.064  anchor=0.062  fast=0.065  mixed
+ن sakin       ghonna: [مغن]->[لا غنة]                                   n=5660  rate=0.079  anchor=0.084  fast=0.084  mixed
+ش stop        tafashie: [متفشي]->[لا تفشي]                              n=41    rate=0.927  anchor=1.0    fast=0.952  undetermined
+ط sakin       qalqla: [مقلقل]->[لا قلقلة]                               n=830   rate=0.186  anchor=0.107  fast=0.185  mistake-like
+ق shaddah     tafkheem_or_taqeeq: [أدنى المفخم]->[مفخم]                 n=470   rate=0.238  anchor=0.258  fast=0.261  mixed
+ط damma       qalqla: [لا قلقلة]->[مقلقل]                               n=162   rate=0.383  anchor=0.25   fast=0.44   undetermined
+ن sakin       shidda_or_rakhawa: [بين الشدة والرخاوة]->[رخو]            n=5660  rate=0.055  anchor=0.051  fast=0.057  mixed
+ر fatha       tikraar: [مكرر]->[لا تكرار]                               n=9964  rate=0.041  anchor=0.04   fast=0.043  mixed
+ت kasra       shidda_or_rakhawa: [شديد]->[رخو]                          n=4952  rate=0.053  anchor=0.03   fast=0.053  mistake-like
+ق shaddah     qalqla: [لا قلقلة]->[مقلقل]                               n=1144  rate=0.103  anchor=0.1    fast=0.115  mixed
+ل shaddah     tafkheem_or_taqeeq: [مفخم]->[مرقق]                        n=4714  rate=0.05   anchor=0.037  fast=0.051  mixed
+ه stop        hams_or_jahr: [همس]->[جهر]                                n=286   rate=0.171  anchor=0.19   fast=0.158  mixed
+ر damma       tafkheem_or_taqeeq: [مفخم]->[مرقق]                        n=4495  rate=0.041  anchor=0.048  fast=0.041  mixed
+ر damma       tikraar: [مكرر]->[لا تكرار]                               n=4495  rate=0.036  anchor=0.038  fast=0.038  mixed
+ر kasra       tikraar: [مكرر]->[لا تكرار]                               n=5447  rate=0.028  anchor=0.022  fast=0.029  mixed
+خ shaddah     tafkheem_or_taqeeq: [مفخم]->[مرقق]                        n=525   rate=0.086  anchor=0.077  fast=0.084  mixed
+ن kasra       ghonna: [مغن]->[لا غنة]                                   n=4853  rate=0.026  anchor=0.023  fast=0.028  mixed
+د sakin       qalqla: [مقلقل]->[لا قلقلة]                               n=2418  rate=0.036  anchor=0.011  fast=0.031  mistake-like
+ت kasra       hams_or_jahr: [همس]->[جهر]                                n=4952  rate=0.025  anchor=0.003  fast=0.029  mixed
+ب sakin       qalqla: [مقلقل]->[لا قلقلة]                               n=2954  rate=0.03   anchor=0.005  fast=0.03   mistake-like
+ب shaddah     qalqla: [مقلقل]->[لا قلقلة]                               n=41    rate=0.244  anchor=0.0    fast=0.238  undetermined
+ط kasra       tafkheem_or_taqeeq: [مفخم]->[مرقق]                        n=755   rate=0.056  anchor=0.055  fast=0.058  mixed
+ل stop        ghonna: [لا غنة]->[مغن]                                   n=119   rate=0.134  anchor=0.0    fast=0.129  undetermined
+ص fatha       tafkheem_or_taqeeq: [مفخم]->[مرقق]                        n=1881  rate=0.033  anchor=0.022  fast=0.034  mistake-like
+ط kasra       qalqla: [لا قلقلة]->[مقلقل]                               n=755   rate=0.05   anchor=0.055  fast=0.051  mixed
+ج shaddah     qalqla: [لا قلقلة]->[مقلقل]                               n=804   rate=0.049  anchor=0.052  fast=0.048  mixed
+ه fatha       hams_or_jahr: [همس]->[جهر]                                n=5726  rate=0.018  anchor=0.002  fast=0.018  mixed
+
+RULES: istitalah heard off ض (the voiced hold)   base rate 0.0002
+  hams_or_jahr=[جهر] ∧ shidda_or_rakhawa=[رخو] ∧ tafkheem_or_taqeeq=[مفخم] support=9598    conf=0.006  lift=35.9   MI=0.0005
+  hams_or_jahr=[جهر] ∧ istitala=[لا إستطالة] ∧ itbaq=[مطبق]              support=7003    conf=0.008  lift=45.1   MI=0.0005
+  istitala=[لا إستطالة] ∧ itbaq=[مطبق] ∧ safeer=[لا صفير]                support=7003    conf=0.008  lift=45.1   MI=0.0005
+  hams_or_jahr=[جهر] ∧ itbaq=[مطبق] ∧ shidda_or_rakhawa=[رخو]            support=7061    conf=0.007  lift=41.48  MI=0.0004
+  itbaq=[مطبق] ∧ safeer=[لا صفير] ∧ shidda_or_rakhawa=[رخو]              support=7061    conf=0.007  lift=41.48  MI=0.0004
+  safeer=[لا صفير] ∧ shidda_or_rakhawa=[رخو] ∧ tafkheem_or_taqeeq=[مفخم] support=15741   conf=0.004  lift=21.89  MI=0.0004
+  istitala=[لا إستطالة] ∧ itbaq=[مطبق] ∧ shidda_or_rakhawa=[رخو]         support=7997    conf=0.006  lift=36.63  MI=0.0004
+  ghonna=[لا غنة] ∧ hams_or_jahr=[جهر] ∧ itbaq=[مطبق]                    support=11427   conf=0.005  lift=27.64  MI=0.0004
+  ghonna=[لا غنة] ∧ itbaq=[مطبق] ∧ safeer=[لا صفير]                      support=11427   conf=0.005  lift=27.64  MI=0.0004
+  hams_or_jahr=[جهر] ∧ itbaq=[مطبق]                                      support=11427   conf=0.005  lift=27.64  MI=0.0004
+
+RULES: tafashshi heard off ش   base rate 0.0001
+  hams_or_jahr=[همس] ∧ itbaq=[منفتح] ∧ safeer=[صفير]                     support=12200   conf=0.003  lift=33.13  MI=0.0003
+  hams_or_jahr=[همس] ∧ safeer=[صفير] ∧ tafkheem_or_taqeeq=[مرقق]         support=12200   conf=0.003  lift=33.13  MI=0.0003
+  ghonna=[لا غنة] ∧ itbaq=[منفتح] ∧ safeer=[صفير]                        support=16178   conf=0.002  lift=24.98  MI=0.0003
+  ghonna=[لا غنة] ∧ safeer=[صفير] ∧ tafkheem_or_taqeeq=[مرقق]            support=16178   conf=0.002  lift=24.98  MI=0.0003
+  istitala=[لا إستطالة] ∧ itbaq=[منفتح] ∧ safeer=[صفير]                  support=16178   conf=0.002  lift=24.98  MI=0.0003
+  istitala=[لا إستطالة] ∧ safeer=[صفير] ∧ tafkheem_or_taqeeq=[مرقق]      support=16178   conf=0.002  lift=24.98  MI=0.0003
+  itbaq=[منفتح] ∧ safeer=[صفير]                                          support=16178   conf=0.002  lift=24.98  MI=0.0003
+  itbaq=[منفتح] ∧ safeer=[صفير] ∧ shidda_or_rakhawa=[رخو]                support=16178   conf=0.002  lift=24.98  MI=0.0003
+  itbaq=[منفتح] ∧ safeer=[صفير] ∧ tafashie=[لا تفشي]                     support=16178   conf=0.002  lift=24.98  MI=0.0003
+  itbaq=[منفتح] ∧ safeer=[صفير] ∧ tafkheem_or_taqeeq=[مرقق]              support=16178   conf=0.002  lift=24.98  MI=0.0003
+
+COUPLING (partial correlation beyond letter x context), strongest pairs
+  istitala [مستطيل]  ~  itbaq [منفتح]                                   -0.319
+  ghonna [مغن]  ~  shidda_or_rakhawa [شديد]                             -0.256
+  safeer [صفير]  ~  tafashie [متفشي]                                    -0.214
+  ghonna [مغن]  ~  hams_or_jahr [همس]                                   -0.213
+  hams_or_jahr [همس]  ~  shidda_or_rakhawa [شديد]                       -0.14
+  itbaq [منفتح]  ~  tafkheem_or_taqeeq [مفخم]                           -0.131
+  safeer [صفير]  ~  shidda_or_rakhawa [شديد]                            -0.112
+  hams_or_jahr [همس]  ~  safeer [صفير]                                  0.095
+  istitala [مستطيل]  ~  shidda_or_rakhawa [شديد]                        -0.094
+  itbaq [منفتح]  ~  safeer [صفير]                                       -0.087
+
+-> research_agency_lab/experiments/calculus/data/calculus_T300.json

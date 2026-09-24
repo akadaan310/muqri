@@ -1,0 +1,69 @@
+1380 features (letter x context x characteristic) measured on >= 20 of 41 reciters
+universal core (every reciter always): 646 features; masters' core: 735; held by every master but a recurrent departure for >= 3 others: 0
+
+EXPECTATIONS THE MASTERS OVERRULE (masters' median realisation < 0.5)
+   ر shaddah tikraar                            masters realise 0.0
+   ر stop tikraar                               masters realise 0.0
+   ش shaddah tafashie                           masters realise 0.0
+
+WHAT THE MASTERS DO MORE FULLY (Cliff's delta of graded realisation, masters vs the rest)
+   ي fatha tafkheem_or_taqeeq                   delta 0.731   masters 1.0 vs 0.999
+   ء kasra itbaq                                delta 0.709   masters 1.0 vs 1.0
+   ص kasra ghonna                               delta 0.702   masters 1.0 vs 1.0
+   ء kasra istitala                             delta 0.692   masters 1.0 vs 1.0
+   ر stop tafkheem_or_taqeeq                    delta 0.681   masters 0.993 vs 0.949
+   ق shaddah tafashie                           delta 0.679   masters 1.0 vs 1.0
+   ء kasra tafkheem_or_taqeeq                   delta 0.665   masters 1.0 vs 0.999
+   ض sakin shidda_or_rakhawa                    delta 0.665   masters 1.0 vs 0.995
+   ق shaddah tikraar                            delta 0.661   masters 1.0 vs 1.0
+   خ damma shidda_or_rakhawa                    delta 0.654   masters 0.998 vs 0.981
+   غ damma hams_or_jahr                         delta 0.648   masters 1.0 vs 1.0
+   ث kasra ghonna                               delta 0.643   masters 1.0 vs 1.0
+   ء kasra qalqla                               delta 0.637   masters 1.0 vs 1.0
+   ث sakin tafashie                             delta 0.637   masters 0.999 vs 0.999
+   ظ sakin tikraar                              delta 0.637   masters 0.998 vs 0.996
+   ق shaddah ghonna                             delta 0.637   masters 1.0 vs 1.0
+   ق shaddah itbaq                              delta 0.631   masters 1.0 vs 0.999
+   ش kasra tikraar                              delta 0.63   masters 1.0 vs 1.0
+   غ damma itbaq                                delta 0.63   masters 1.0 vs 1.0
+   د shaddah tikraar                            delta 0.626   masters 1.0 vs 1.0
+
+FEATURES THAT CARRY TIER (I(tier; departs), bits)
+   ح shaddah hams_or_jahr                      0.115   departs for 2 reciters
+   ح shaddah shidda_or_rakhawa                 0.115   departs for 2 reciters
+   ز sakin safeer                              0.114   departs for 2 reciters
+   ق shaddah tafkheem_or_taqeeq                0.1   departs for 4 reciters
+   ظ fatha istitala                            0.1   departs for 4 reciters
+   ق shaddah qalqla                            0.074   departs for 3 reciters
+   ظ sakin istitala                            0.07   departs for 2 reciters
+   ز shaddah safeer                            0.067   departs for 3 reciters
+   ث kasra safeer                              0.055   departs for 1 reciters
+   ج sakin qalqla                              0.055   departs for 1 reciters
+   ز fatha safeer                              0.055   departs for 1 reciters
+   ز kasra safeer                              0.055   departs for 1 reciters
+   ط sakin itbaq                               0.055   departs for 1 reciters
+   ح fatha hams_or_jahr                        0.051   departs for 1 reciters
+   ح fatha shidda_or_rakhawa                   0.051   departs for 1 reciters
+
+DEPARTURES THAT TRAVEL TOGETHER (same verse; PMI bits, support >= 25 verses)
+   م kasra ghonna                     + م kasra shidda_or_rakhawa          PMI 7.09  n=40
+   ق kasra qalqla                     + ق kasra tafkheem_or_taqeeq         PMI 6.85  n=45
+   ر sakin shidda_or_rakhawa          + ر sakin tikraar                    PMI 6.72  n=37
+   م shaddah ghonna                   + م shaddah shidda_or_rakhawa        PMI 6.47  n=26
+   ق shaddah qalqla                   + ق shaddah tafkheem_or_taqeeq       PMI 6.25  n=74
+   ن shaddah ghonna                   + ن shaddah shidda_or_rakhawa        PMI 6.25  n=59
+   ه fatha hams_or_jahr               + ه fatha shidda_or_rakhawa          PMI 6.02  n=41
+   ت damma shidda_or_rakhawa          + ص fatha tafkheem_or_taqeeq         PMI 5.98  n=35
+   ه kasra hams_or_jahr               + ه kasra shidda_or_rakhawa          PMI 5.95  n=38
+   ه damma hams_or_jahr               + ه damma tafkheem_or_taqeeq         PMI 5.94  n=28
+   ن kasra ghonna                     + ن kasra shidda_or_rakhawa          PMI 5.78  n=90
+   ر kasra shidda_or_rakhawa          + ر kasra tikraar                    PMI 5.47  n=25
+   ر kasra tafkheem_or_taqeeq         + ر kasra tikraar                    PMI 5.42  n=53
+   ف fatha hams_or_jahr               + ف fatha shidda_or_rakhawa          PMI 5.34  n=101
+   ر damma shidda_or_rakhawa          + ر damma tikraar                    PMI 5.34  n=30
+
+NEIGHBOURHOODS (kNN k=4 on 877 shared features; label propagation)
+   {Abdul(s), Abdullah(f), Abdurrahmaan(i), Abu(f), Ahmed(f), Akram(f), Alafasy(s), Ali(f), Ali(f), Ayman(f), Ghamadi(f), Hudhaify(s), Husary(a), Husary(a), Husary(a), Minshawy(s), Mohammad(s), Muhammad(s), Nasser(i), Sahl(f), Yaser(f), Yasser(i), aziz(f), mahmoud(s)}
+   {Abdul(s), Abdullah(i), Ahmed(f), Fares(f), Hani(f), Karim(f), Khaalid(f), MaherAlMuaiqly128kbps(i), Minshawy(s), Muhammad(f), Muhammad(f), Muhsin(f), Mustafa(s), Salaah(f), Salah(i), Saood(i), khalefa(f)}
+
+-> research_agency_lab/experiments/calculus/data/reciter_sets_T300.json

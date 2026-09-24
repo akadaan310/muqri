@@ -35,7 +35,9 @@ function load(dir)
     n = h.n
     rd(f, T, cols) = (x = Vector{T}(undef, n * cols); read!(joinpath(dir, f), x); permutedims(reshape(x, cols, n)))
     nclass = sum(length(c) for c in h.head_classes)
-    return (h = h, meta = rd("meta.i32", Int32, 6), probs = rd("probs.f32", Float32, nclass),
+    # letters as characters: Arabic letters are two bytes each, so the header string cannot be indexed
+    return (h = h, letters = collect(String(h.letters)), meta = rd("meta.i32", Int32, 6),
+            probs = rd("probs.f32", Float32, nclass),
             expect = rd("expect.i32", Int32, length(h.heads)), speaker = vec(rd("speaker.i32", Int32, 1)))
 end
 
@@ -51,10 +53,13 @@ end
 
 context(meta, i) = meta[i, 2] >= 2 ? "shaddah" : (meta[i, 5] == 1 ? "stop" : CONTEXTS[meta[i, 3]])
 
+"""JSON has no NaN: an unmeasured rate is written as null."""
+nn(x) = x isa AbstractFloat && isnan(x) ? nothing : x
+
 # ---------------------------------------------------------------- 1. canon
 """For each letter and head, the distribution of the class the phonetizer expects (all contexts)."""
 function canon(D)
-    L, H = length(D.h.letters), length(D.h.heads)
+    L, H = length(D.letters), length(D.h.heads)
     counts = [zeros(Int, length(D.h.head_classes[k])) for _ in 1:L, k in 1:H]
     for i in 1:size(D.meta, 1), k in 1:H
         e = D.expect[i, k]
@@ -69,7 +74,7 @@ letter's occurrences (context-dependent classes -- a ر that is heavy here and l
 both)."""
 function formal_context(D, counts; share = 0.05)
     attrs = [(k, c) for k in eachindex(D.h.heads) for c in eachindex(D.h.head_classes[k])]
-    L = length(D.h.letters)
+    L = length(D.letters)
     I = falses(L, length(attrs))
     for l in 1:L, (j, (k, c)) in enumerate(attrs)
         tot = sum(counts[l, k])
@@ -127,14 +132,14 @@ function residuals(D; min_n = 40)
         n = tot[(l, ctx, k, e)]
         sum(n) >= min_n || continue
         rate(sel) = (a = sum(hits[sel]); b = sum(n[sel]); b > 0 ? a / b : NaN)
-        bytier = Dict(t => rate([tiers[s] == t for s in 1:S]) for t in ("anchor", "studio", "imam", "fast"))
+        bytier = Dict(t => nn(rate([tiers[s] == t for s in 1:S])) for t in ("anchor", "studio", "imam", "fast"))
         per = [n[s] >= 5 ? hits[s] / n[s] : NaN for s in 1:S]
         good = filter(!isnan, per)
         masters = [per[s] for s in 1:S if tiers[s] in ("anchor", "studio") && !isnan(per[s])]
-        push!(out, (letter = string(D.h.letters[l + 1]), context = ctx, head = D.h.heads[k],
+        push!(out, (letter = string(D.letters[l + 1]), context = ctx, head = D.h.heads[k],
                     expected = D.h.head_classes[k][e + 1], heard = D.h.head_classes[k][heard + 1],
                     n = sum(n), rate = sum(hits) / sum(n), by_tier = bytier,
-                    masters_rate = isempty(masters) ? NaN : median(masters),
+                    masters_rate = isempty(masters) ? nothing : median(masters),
                     reciters_over_30pct = count(>(0.3), good), reciters_measured = length(good)))
     end
     sort!(out, by = r -> -r.rate * sqrt(r.n))
@@ -145,7 +150,7 @@ end
 looks like a characteristic of recitation; one that rises toward the fast tier looks like a slip."""
 function classify(r)
     m, f = r.by_tier["anchor"], r.by_tier["fast"]
-    (isnan(m) || isnan(f)) && return "undetermined"
+    (m === nothing || f === nothing || r.masters_rate === nothing) && return "undetermined"
     r.masters_rate >= 0.3 && f <= 1.3 * m && return "phenomenon-like"
     f >= 1.5 * max(m, 0.02) && return "mistake-like"
     return "mixed"
@@ -225,7 +230,7 @@ function main(dir, out)
     jid = findfirst(==(("hams_or_jahr", "[جهر]")), [(D.h.heads[k], D.h.head_classes[k][c]) for (k, c) in attrs])
     sid = findfirst(==(("shidda_or_rakhawa", "[شديد]")), [(D.h.heads[k], D.h.head_classes[k][c]) for (k, c) in attrs])
     qid = findfirst(==(("qalqla", "[مقلقل]")), [(D.h.heads[k], D.h.head_classes[k][c]) for (k, c) in attrs])
-    L(ls) = join(string.(D.h.letters[ls]))
+    L(ls) = join(string.(D.letters[ls]))
     js = extent(I, [jid, sid]); qs = extent(I, [qid])
     println("jahr ∩ shadid = {", L(js), "}   qalqalah = {", L(qs), "}   difference = {", L(setdiff(js, qs)), "}")
 
@@ -234,15 +239,16 @@ function main(dir, out)
     for r in res[1:min(30, length(res))]
         println(rpad("$(r.letter) $(r.context)", 14), rpad("$(r.head): $(r.expected)->$(r.heard)", 58),
                 "n=", rpad(r.n, 6), "rate=", rpad(round(r.rate; digits = 3), 7),
-                "anchor=", rpad(round(r.by_tier["anchor"]; digits = 3), 7), "fast=", rpad(round(r.by_tier["fast"]; digits = 3), 7),
+                "anchor=", rpad(something(r.by_tier["anchor"], NaN) |> x -> round(x; digits = 3), 7),
+                "fast=", rpad(something(r.by_tier["fast"], NaN) |> x -> round(x; digits = 3), 7),
                 classify(r))
     end
 
     cols = head_cols(D.h)
     ist = findfirst(==("istitala"), D.h.heads)
     taf = findfirst(==("tafashie"), D.h.heads)
-    dad = findfirst(==('ض'), collect(D.h.letters)) - 1
-    shin = findfirst(==('ش'), collect(D.h.letters)) - 1
+    dad = findfirst(==('ض'), D.letters) - 1
+    shin = findfirst(==('ش'), D.letters) - 1
     hold = rules(D, I, attrs, i -> D.meta[i, 1] != dad && argmax(@view D.probs[i, cols[ist]]) == 1)
     spread = rules(D, I, attrs, i -> D.meta[i, 1] != shin && argmax(@view D.probs[i, cols[taf]]) == 1)
     for (name, r) in (("istitalah heard off ض (the voiced hold)", hold), ("tafashshi heard off ش", spread))
@@ -263,7 +269,7 @@ function main(dir, out)
 
     open(out, "w") do io
         JSON3.write(io, (n = size(D.meta, 1), attributes = aname.(attrs),
-                         letters = string.(collect(D.h.letters)),
+                         letters = string.(D.letters),
                          formal_context = [findall(I[l, :]) for l in axes(I, 1)],
                          concepts = [(extent = L(e), intent = aname.(attrs[b])) for (e, b) in C],
                          qalqalah_theorem = (jahr_and_shadid = L(js), qalqalah = L(qs), exception = L(setdiff(js, qs))),

@@ -27,3 +27,5 @@ benchmarks/results/modal/
 research_agency_lab/experiments/protocol_recordings/
 # calculus-of-characteristics unit arrays (regenerable, ~100 MB)
 research_agency_lab/experiments/calculus/data/
+# the recitation graph database and its CSVs (regenerable: datastore.recitation_graph build)
+research_agency_lab/experiments/calculus/graph/

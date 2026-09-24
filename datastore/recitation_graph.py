@@ -1,0 +1,146 @@
+#!/usr/bin/env python3
+"""The recitation graph: reciters, letters, characteristics and what connects them, queryable in Cypher.
+
+Built from the calculus of characteristics (substrate_library/julia/calculus.jl) and the reciter sets
+(reciter_sets.jl). Nodes and relationships:
+
+    (:Reciter {name, tier})              41 T300 reciters; tier = anchor / studio / imam / fast
+    (:Letter {char})                     the 28 letters
+    (:Characteristic {head, class})      the 22 head classes (ghunnah [مغن], qalqalah [مقلقل], ...)
+    (:Feature {id, letter, context, head, overruled})
+                                         one characteristic of one letter in one context
+    (:Community {id})                    reciter neighbourhoods (label propagation on kNN)
+
+    (Letter)-[:HAS]->(Characteristic)                the canonical formal context (the books)
+    (Feature)-[:OF_LETTER]->(Letter)
+    (Reciter)-[:REALISES {rate, graded}]->(Feature)  hit rate and graded (soft) realisation
+    (Feature)-[:TRAVELS_WITH {pmi, verses}]->(Feature)
+                                                     departures co-occurring in the same verse
+    (Reciter)-[:NEAR {similarity}]->(Reciter)        k nearest neighbours
+    (Reciter)-[:IN_COMMUNITY]->(Community)
+
+It is written twice: into an embedded Kùzu database (Cypher, queried below and from the app), and as
+Neo4j bulk-import CSVs plus a LOAD CSV script (`neo4j/`), so the same graph loads into Neo4j unchanged.
+
+    .venv/bin/python -m datastore.recitation_graph build
+    .venv/bin/python -m datastore.recitation_graph query "MATCH ... RETURN ..."
+"""
+
+from __future__ import annotations
+
+import csv
+import json
+import shutil
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+DATA = ROOT / "research_agency_lab/experiments/calculus/data"
+GRAPH_DIR = ROOT / "research_agency_lab/experiments/calculus/graph"
+KUZU = GRAPH_DIR / "recitation.kuzu"
+NEO = GRAPH_DIR / "neo4j"
+
+SCHEMA = [
+    "CREATE NODE TABLE Reciter(name STRING, tier STRING, PRIMARY KEY(name))",
+    "CREATE NODE TABLE Letter(ch STRING, PRIMARY KEY(ch))",
+    "CREATE NODE TABLE Characteristic(id STRING, head STRING, cls STRING, PRIMARY KEY(id))",
+    "CREATE NODE TABLE Feature(id STRING, letter STRING, context STRING, head STRING, overruled BOOLEAN, PRIMARY KEY(id))",
+    "CREATE NODE TABLE Community(id INT64, PRIMARY KEY(id))",
+    "CREATE REL TABLE HAS(FROM Letter TO Characteristic)",
+    "CREATE REL TABLE OF_LETTER(FROM Feature TO Letter)",
+    "CREATE REL TABLE REALISES(FROM Reciter TO Feature, rate DOUBLE, graded DOUBLE)",
+    "CREATE REL TABLE TRAVELS_WITH(FROM Feature TO Feature, pmi DOUBLE, verses INT64)",
+    "CREATE REL TABLE NEAR(FROM Reciter TO Reciter, similarity DOUBLE)",
+    "CREATE REL TABLE IN_COMMUNITY(FROM Reciter TO Community)",
+]
+
+
+def _tables() -> dict[str, list[list]]:  # type: ignore[type-arg]
+    calc = json.loads((DATA / "calculus_T300.json").read_text())
+    sets = json.loads((DATA / "reciter_sets_T300.json").read_text())
+    overruled = {x["feature"] for x in sets["overruled_expectations"]}
+    t: dict[str, list[list]] = {k: [] for k in ("Reciter", "Letter", "Characteristic", "Feature", "Community",  # type: ignore[type-arg]
+                                                  "HAS", "OF_LETTER", "REALISES", "TRAVELS_WITH", "NEAR",
+                                                  "IN_COMMUNITY")}
+    t["Reciter"] = [[r, tier] for r, tier in zip(sets["reciters"], sets["tiers"])]
+    t["Letter"] = [[c] for c in calc["letters"]]
+    t["Characteristic"] = [[a, a.split("=")[0], a.split("=")[1]] for a in calc["attributes"]]
+    for l, attrs in zip(calc["letters"], calc["formal_context"]):
+        t["HAS"] += [[l, calc["attributes"][j - 1]] for j in attrs]
+    for f in sets["features"]:
+        letter, ctx, head = f.split(" ")
+        t["Feature"].append([f, letter, ctx, head, f in overruled])
+        t["OF_LETTER"].append([f, letter])
+    for r, rates, graded in zip(sets["reciters"], sets["rates"], sets["graded"]):
+        t["REALISES"] += [[r, f, x, g] for f, x, g in zip(sets["features"], rates, graded) if x is not None]
+    t["TRAVELS_WITH"] = [[c["a"], c["b"], round(c["pmi"], 4), c["together"]] for c in sets["companions"]]
+    S = len(sets["reciters"])
+    knn = sets["knn"]                     # Julia writes a matrix flat, column-major: W[i, j] = knn[j*S + i]
+    for i in range(S):
+        for j in range(S):
+            w = knn[j * S + i] if not isinstance(knn[0], list) else knn[i][j]
+            if w and i != j:
+                t["NEAR"].append([sets["reciters"][i], sets["reciters"][j], round(w, 4)])
+    for k, c in enumerate(sets["communities"]):
+        t["Community"].append([k])
+        t["IN_COMMUNITY"] += [[m, k] for m in c["members"]]
+    return t
+
+
+def build() -> None:
+    import kuzu
+    t = _tables()
+    GRAPH_DIR.mkdir(parents=True, exist_ok=True)
+    NEO.mkdir(parents=True, exist_ok=True)
+    for name, rows in t.items():                    # one CSV per table: Kùzu COPY and Neo4j LOAD CSV
+        with open(NEO / f"{name}.csv", "w", newline="") as f:
+            csv.writer(f).writerows(rows)
+    if KUZU.exists():
+        shutil.rmtree(KUZU) if KUZU.is_dir() else KUZU.unlink()
+    db = kuzu.Database(str(KUZU))
+    con = kuzu.Connection(db)
+    for q in SCHEMA:
+        con.execute(q)
+    for name in t:
+        con.execute(f"COPY {name} FROM '{NEO / (name + '.csv')}' (header=false)")
+    (NEO / "import.cypher").write_text(NEO4J_IMPORT)
+    print("graph:", {k: len(v) for k, v in t.items()}, "->", KUZU)
+
+
+def query(q: str) -> list[list]:  # type: ignore[type-arg]
+    import kuzu
+    con = kuzu.Connection(kuzu.Database(str(KUZU), read_only=True))
+    res = con.execute(q)
+    rows = []
+    while res.has_next():
+        rows.append(res.get_next())
+    return rows
+
+
+NEO4J_IMPORT = """// Load the recitation graph into Neo4j: copy neo4j/*.csv into the server's import directory.
+LOAD CSV FROM 'file:///Reciter.csv' AS r CREATE (:Reciter {name: r[0], tier: r[1]});
+LOAD CSV FROM 'file:///Letter.csv' AS r CREATE (:Letter {ch: r[0]});
+LOAD CSV FROM 'file:///Characteristic.csv' AS r CREATE (:Characteristic {id: r[0], head: r[1], cls: r[2]});
+LOAD CSV FROM 'file:///Feature.csv' AS r CREATE (:Feature {id: r[0], letter: r[1], context: r[2], head: r[3], overruled: r[4] = 'True'});
+LOAD CSV FROM 'file:///Community.csv' AS r CREATE (:Community {id: toInteger(r[0])});
+CREATE INDEX FOR (n:Reciter) ON (n.name); CREATE INDEX FOR (n:Letter) ON (n.ch);
+CREATE INDEX FOR (n:Characteristic) ON (n.id); CREATE INDEX FOR (n:Feature) ON (n.id);
+LOAD CSV FROM 'file:///HAS.csv' AS r MATCH (a:Letter {ch: r[0]}), (b:Characteristic {id: r[1]}) CREATE (a)-[:HAS]->(b);
+LOAD CSV FROM 'file:///OF_LETTER.csv' AS r MATCH (a:Feature {id: r[0]}), (b:Letter {ch: r[1]}) CREATE (a)-[:OF_LETTER]->(b);
+LOAD CSV FROM 'file:///REALISES.csv' AS r MATCH (a:Reciter {name: r[0]}), (b:Feature {id: r[1]})
+  CREATE (a)-[:REALISES {rate: toFloat(r[2]), graded: toFloat(r[3])}]->(b);
+LOAD CSV FROM 'file:///TRAVELS_WITH.csv' AS r MATCH (a:Feature {id: r[0]}), (b:Feature {id: r[1]})
+  CREATE (a)-[:TRAVELS_WITH {pmi: toFloat(r[2]), verses: toInteger(r[3])}]->(b);
+LOAD CSV FROM 'file:///NEAR.csv' AS r MATCH (a:Reciter {name: r[0]}), (b:Reciter {name: r[1]})
+  CREATE (a)-[:NEAR {similarity: toFloat(r[2])}]->(b);
+LOAD CSV FROM 'file:///IN_COMMUNITY.csv' AS r MATCH (a:Reciter {name: r[0]}), (b:Community {id: toInteger(r[1])})
+  CREATE (a)-[:IN_COMMUNITY]->(b);
+"""
+
+
+if __name__ == "__main__":
+    if sys.argv[1:2] == ["build"]:
+        build()
+    elif sys.argv[1:2] == ["query"]:
+        for row in query(sys.argv[2]):
+            print(row)

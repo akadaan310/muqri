@@ -106,6 +106,67 @@ def mine_all(per: int = 4, procs: int = 3) -> None:
         print(f"  {n:5d}  {k[0]:15s} {k[1]}")
 
 
+
+# ------------------------------------------------------------------ findings from other measurements
+def unit_candidates(findings: list[dict]) -> int:  # type: ignore[type-arg]
+    """Turn measurement findings (anatomy, calculus) into reviewable candidates.
+
+    Each finding names a clip id, the consonant's span (t0, t1), the letter, and its detector / claim /
+    magnitude / kind. The engine is run on the clip once, so the candidate carries the same verse,
+    timeline and focus letters as the engine's own findings, and lands in the same queue.
+    """
+    import librosa
+    import numpy as np
+
+    from app.review import _cid
+    _init()
+    idx = {}
+    for line in open(DUMP / "index.jsonl"):
+        r = json.loads(line)
+        if "file" in r:
+            idx[r["id"]] = r
+    seen = {json.loads(line)["id"] for line in open(CANDIDATES)} if CANDIDATES.is_file() else set()
+    by_clip = collections.defaultdict(list)
+    for f in findings:
+        by_clip[f["clip"]].append(f)
+    new = 0
+    with open(CANDIDATES, "a") as out:
+        for clip, fs in by_clip.items():
+            r = idx[clip]
+            lp = np.fromfile(DUMP / r["file"], dtype="<f4").reshape(r["frames"], _lay["columns"])  # type: ignore[index]
+            p = audio_path(r["speaker"], r["sura"], r["aya"])
+            w = librosa.load(str(p), sr=SR, mono=True)[0][: r["frames"] * HOP]
+            rep = _eng.analyze(np.pad(w, (0, r["frames"] * HOP - w.size)), [(r["sura"], r["aya"])],  # type: ignore[union-attr]
+                               posteriors=lp)
+            a = rep["ayahs"][0]
+            t0a = a["frames"][0] * 0.04
+            words = {x["index"]: x["word"] for x in a["words"]}
+            timeline = [[round(t0a + l["onset_s"], 3), round(t0a + l["onset_s"] + l["duration_s"], 3), l.get("uth", [])]
+                        for l in a["letters"] if l.get("uth")]
+            for f in fs:
+                # the engine letter whose onset is nearest the finding's, of the same letter
+                cands = [(abs(t0a + l["onset_s"] - f["t0"]), l) for l in a["letters"] if l["symbol"] == f["letter"]]
+                if not cands:
+                    continue
+                d, l = min(cands, key=lambda x: x[0])
+                if d > 0.12:
+                    continue
+                cid = _cid(r["speaker"], r["sura"], r["aya"], f["detector"], l["i"])
+                if cid in seen:
+                    continue
+                seen.add(cid)
+                c = {"source": "everyayah", "speaker": r["speaker"], "surah": r["sura"], "ayah": r["aya"],
+                     "audio_url": None, "haraka_s": a.get("haraka_s"), "uthmani": a.get("uthmani", ""),
+                     "timeline": timeline, "kind": f["kind"], "detector": f["detector"],
+                     "word_index": l.get("word"), "word": words.get(l.get("word"), ""),
+                     "claim": f["claim"], "magnitude": f["magnitude"], "severity": f.get("severity", "moderate"),
+                     "start_s": round(t0a + l["onset_s"], 3), "end_s": round(t0a + l["onset_s"] + l["duration_s"], 3),
+                     "letter": l["symbol"], "focus": l.get("uth", []), "id": cid}
+                out.write(json.dumps(c, ensure_ascii=False) + "\n")
+                new += 1
+    return new
+
+
 if __name__ == "__main__":
     if sys.argv[1:2] == ["mine"]:
         mine_all(*(int(a) for a in sys.argv[2:]))

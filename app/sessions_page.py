@@ -28,6 +28,8 @@ SESSIONS_PAGE = """<!doctype html>
  button{padding:9px 12px;border:0;border-radius:8px;background:var(--fg);color:var(--bg);font:600 .9rem inherit;cursor:pointer;margin:8px 6px 0 0}
  button.rec{background:var(--bad);color:#fff}
  input[type=file]{font-size:.85rem;margin-top:8px;max-width:100%}
+ .phone{display:inline-block;padding:9px 12px;border-radius:8px;background:var(--bad);color:#fff;font:600 .9rem inherit;cursor:pointer;margin:8px 6px 0 0}
+ .phone input{display:none}
  .st{font-size:.85rem;color:var(--mut);margin-top:8px;min-height:1.2em}
  .ok{color:var(--ok)} .bad{color:var(--bad)} .warn{color:var(--warn)}
  .tbl{overflow-x:auto} table{width:100%;border-collapse:collapse;font-size:.82rem;margin-top:6px}
@@ -41,11 +43,17 @@ SESSIONS_PAGE = """<!doctype html>
 length and characteristic inside the stated range. <b>Take B</b>, same speed, perfect except the numbered mistakes. Every take
 is scored against what it should produce: expectations met, mistakes caught with the right kind, and anything flagged that you
 did not do. Round <select id="round" onchange="load()"></select> · <a href="/">analyser</a> · <a href="/protocol">protocol</a></p>
+<p id="micnote" class="learn" style="display:none;border:1px solid var(--line);border-radius:8px;padding:8px 10px">
+In-page recording needs a secure (https) page, and this one is plain http. Use <b>● Record with phone</b>: it opens
+your phone's voice recorder, and the recording is uploaded and scored when you finish. Or <b>Choose File</b> to upload one.</p>
 <div id="ex">Loading…</div>
 </div>
 <script>
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let EX=[];
+// browsers expose the microphone only to https pages (or localhost); over plain http the in-page
+// recorder cannot exist, so the phone's own recorder is offered instead (file input with capture)
+const MIC=!!(navigator.mediaDevices&&navigator.mediaDevices.getUserMedia&&window.MediaRecorder);
 async function load(){
   const sel=document.getElementById('round');
   const r=await fetch('/sessions/rounds').then(r=>r.json());
@@ -71,7 +79,8 @@ function card(x,i,st){
 function take(x,k,h,body,st){
   const id=x.id+'-'+k;
   return '<div class="take"><h3>'+h+(st?' <span class="done">✓ '+st.n+' saved</span>':'')+'</h3>'+body
-   +'<button class="rec" id="r-'+id+'" onclick="rec(\\''+x.id+'\\',\\''+k+'\\')">● Record</button>'
+   +(MIC?'<button class="rec" id="r-'+id+'" onclick="rec(\\''+x.id+'\\',\\''+k+'\\')">● Record</button>':'')
+   +'<label class="phone"><input type="file" accept="audio/*" capture onchange="up(\\''+x.id+'\\',\\''+k+'\\',this.files[0])">● Record with phone</label>'
    +'<input type="file" accept="audio/*" onchange="up(\\''+x.id+'\\',\\''+k+'\\',this.files[0])">'
    +'<div class="st" id="s-'+id+'">'+(st&&st.last?summ(st.last):'')+'</div><div class="tbl" id="o-'+id+'">'+(st&&st.last?detail(st.last):'')+'</div></div>';
 }
@@ -116,6 +125,7 @@ async function up(t,k,f){
     s.innerHTML=summ(j.score)+' <span class="mut">('+j.elapsed_seconds+' s)</span>';o.innerHTML=detail(j.score);
   }catch(e){s.innerHTML='<span class="bad">'+esc(e.message)+'</span>';}
 }
+if(!MIC)document.getElementById('micnote').style.display='block';
 load();
 </script></body></html>
 """

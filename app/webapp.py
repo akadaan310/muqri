@@ -24,6 +24,7 @@ essentially all the time is in the acoustic model.
 # "is not fully defined". app/api.py carries the same warning; it cost a debugging round to rediscover.
 
 import io
+import os
 import time
 import traceback
 from pathlib import Path
@@ -723,7 +724,11 @@ def create_app():  # type: ignore[no-untyped-def]
 
 def main() -> int:
     import uvicorn
-    uvicorn.run(create_app(), host="0.0.0.0", port=PORT, log_level="info")  # noqa: S104
+    # QAARI_SSL_CERT / QAARI_SSL_KEY serve the same port over https: browsers give the microphone
+    # (in-page recording) only to secure pages
+    cert, key = os.environ.get("QAARI_SSL_CERT"), os.environ.get("QAARI_SSL_KEY")
+    tls = {"ssl_certfile": cert, "ssl_keyfile": key} if cert and key else {}
+    uvicorn.run(create_app(), host="0.0.0.0", port=PORT, log_level="info", **tls)  # noqa: S104
     return 0
 
 

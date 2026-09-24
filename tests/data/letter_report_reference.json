@@ -990,8 +990,8 @@
             "duration_s": 0.32,
             "identity": {
                 "confirmed": true,
-                "best_competitor": "∅",
-                "competitor_llr": -14.048,
+                "best_competitor": "",
+                "competitor_llr": null,
                 "gop": 0
             },
             "characteristics": {
@@ -3949,8 +3949,8 @@
             "duration_s": 0.36,
             "identity": {
                 "confirmed": true,
-                "best_competitor": "∅",
-                "competitor_llr": -14.937,
+                "best_competitor": "",
+                "competitor_llr": null,
                 "gop": 0
             },
             "characteristics": {

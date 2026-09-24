@@ -60,6 +60,25 @@ NOMINAL_TOLERANCE = 0.75          # counts; a verdict fires only outside this ba
 DESCRIPTIVE_HEADS = frozenset({"tikraar"})
 
 
+def judged(head: str, run_length: int, symbol: str = "") -> bool:
+    """Whether a head's verdict on this letter counts as a fault.
+
+    * A doubled letter (shaddah) is held twice as long, and the shiddah/rakhawah head reads that hold
+      as flow: Bukhatir's رَبُّ was called rakhw, and a certified reviewer rejected it -- "it sounds
+      held because of the shaddah".
+    * Istitalah as a RULE is the ض's alone. When the head hears it on another letter -- the doubled or
+      sakin ب of رَبُّ above all, and د -- it is not an error but a latent characteristic a certified
+      reviewer recognised: the sound keeps flowing and builds against the closure before the
+      release, where ت ك ق ط simply stop. It is recorded as a phenomenon (app/review.py, "voiced
+      hold"), never scored as a fault.
+    """
+    if head in DESCRIPTIVE_HEADS:
+        return False
+    if head == "istitala" and symbol and symbol != "ض":
+        return False
+    return not (head == "shidda_or_rakhawa" and run_length >= 2)
+
+
 def count_scale() -> tuple[float, float]:
     """(intercept, slope) of measured-against-nominal, or the identity when unfitted."""
     try:
@@ -82,6 +101,16 @@ def six_count_ceiling() -> float:
         return float(d["implied_counts"]) * (1 + float(d["cv"]))
     except Exception:  # noqa: BLE001 - unfitted deployment: fall back to the nominal band
         return 6.0 + NOMINAL_TOLERANCE
+
+
+def anchor_count_s() -> float:
+    """One count at the anchors' pace, in seconds: the median haraka of the Husary recordings."""
+    try:
+        d = json.loads((ROOT / "research_agency_lab/experiments/qaari_keys/sukoon_T300.json").read_text())
+        hs = [r["haraka_s"] for r in d["reciters"] if r.get("anchor")]
+        return float(statistics.median(hs)) if hs else 0.30
+    except Exception:  # noqa: BLE001 - an unmeasured deployment falls back to a murattal count
+        return 0.30
 
 
 def to_counts(measured: float) -> float:
@@ -151,6 +180,17 @@ def grade_rule(b, units: list[Unit]) -> RuleVerdict:  # type: ignore[no-untyped-
         status = "pass" if lo - NOMINAL_TOLERANCE <= got <= ceiling else \
             ("short" if got < lo else "long")
         ev = {"expected": [lo, hi], "given_counts": got, "raw_own_counts": measured}
+        # At hadr the count unit is short, so a ghunnah or madd of normal duration reads as many of the
+        # reciter's own counts: Ghamdi's idgham ghunnah read 3.9 counts in 0.63 s, and a certified
+        # reviewer ruled "it's allowed at this speed". "Too long" therefore also needs the length to
+        # be long in time, against the anchors' count unit. Dossary's 9.5 counts in 1.9 s -- which the
+        # reviewer confirmed -- still fires. "Too short" stays relative: speed never excuses a clipped
+        # madd.
+        secs = sum(u.duration_s for u in us)
+        if status == "long" and secs <= ceiling * anchor_count_s():
+            status = "pass"
+            ev["tempo_allowance"] = {"seconds": round(secs, 2),
+                                     "anchor_limit_s": round(ceiling * anchor_count_s(), 2)}
     elif b.mechanism == "attribute" and b.head in DESCRIPTIVE_HEADS:
         ev = {"head": b.head, "reason": "takrir must be concealed; a trill that is not heard is the "
                                         "correct reading, so this attribute is reported, not graded"}
@@ -321,7 +361,7 @@ def _word_faults(ayah: dict[str, Any], words: list[str]) -> list[dict[str, Any]]
             out[w]["faults"].append({"type": "letter", "letter": l["symbol"],
                                      "heard": l["identity"]["heard_instead"]})
         for head, sv in (l.get("sifat") or {}).items():
-            if not sv.get("realised") and head not in DESCRIPTIVE_HEADS:
+            if not sv.get("realised") and judged(head, l.get("run_length", 1), l["symbol"]):
                 out[w]["faults"].append({"type": "sifah", "letter": l["symbol"], "sifah": head,
                                          "expected": sv.get("expected"), "heard": sv.get("model_best")})
     return out
@@ -340,7 +380,7 @@ def _letter_accuracy(ayahs: list[dict[str, Any]]) -> float | None:
             n += 1
             ok += bool(l["identity"]["confirmed"])
             for head, sv in (l.get("sifat") or {}).items():
-                if head in DESCRIPTIVE_HEADS:
+                if not judged(head, l.get("run_length", 1), l["symbol"]):
                     continue
                 n += 1
                 ok += bool(sv.get("realised"))
@@ -397,7 +437,7 @@ def build_report(per_ayah: list[dict[str, Any]], rule_filter: str | None = None)
         ayahs.append({
             "surah": a["surah"], "ayah": a["ayah"], "frames": a["frames"],
             "haraka_s": a.get("haraka_s"), "haraka_source": a.get("haraka_source", "own"),
-            "letters": [{"i": u.index, "symbol": u.symbol, "kind": u.kind,
+            "letters": [{"i": u.index, "symbol": u.symbol, "kind": u.kind, "run_length": u.run_length,
                          "word": word_of(u.char_span[0]),
                          "uth": _uth_chars(a.get("ph_to_uth") or [], u.char_span),
                          "onset_s": u.onset_s, "duration_s": u.duration_s,

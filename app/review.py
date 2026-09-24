@@ -33,6 +33,8 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
+from app.submission import judged
+
 ROOT = Path(__file__).resolve().parents[1]
 REVIEW_DIR = ROOT / "research_agency_lab/experiments/review"
 CANDIDATES = REVIEW_DIR / "candidates.jsonl"
@@ -53,6 +55,10 @@ HEAD_NAMES = {
     "safeer": "ṣafīr (whistle)", "tafashie": "tafashshī (spread of shīn)",
     "istitala": "istiṭālah (the ḍād's extension)", "tikraar": "takrīr (trill)",
 }
+
+
+HEAVY_HEADS = frozenset({"itbaq", "tafkheem_or_taqeeq"})
+LIGHT = frozenset({"[منفتح]", "[مرقق]"})
 
 
 def _cid(*parts: Any) -> str:
@@ -138,15 +144,51 @@ def mine(report: dict[str, Any], speaker: str, source: str = "everyayah",
             s, e = round(t0 + l["onset_s"], 3), round(t0 + l["onset_s"] + l["duration_s"], 3)
             idn = l["identity"]
             if not idn["confirmed"] and (idn.get("llr") or 0) >= MIN_IDENTITY_NATS:
-                heard = "nothing (dropped)" if idn["heard_instead"] == "∅" else idn["heard_instead"]
+                # "dropped" only on strong evidence; below it the letter is there but under-articulated
+                # (the reviewer on Muhsin's ع: "it's there, but needs more بينية ... to produce Ayn")
+                if idn["heard_instead"] == "∅":
+                    claim = (f"the {l['symbol']} is dropped" if idn["llr"] >= 6
+                             else f"the {l['symbol']} is weakly articulated — barely produced")
+                else:
+                    claim = f"the {l['symbol']} sounds like {idn['heard_instead']}"
                 out.append({**base, "kind": "letter", "detector": f"letter:{l['symbol']}",
                             "word_index": w, "word": words.get(w, ""),
-                            "claim": f"the {l['symbol']} sounds like {heard}",
+                            "claim": claim,
                             "magnitude": round(idn["llr"], 2), "severity": _severity(idn["llr"], 2.0, 6.0),
                             "start_s": s, "end_s": e, "letter": l["symbol"], "focus": l.get("uth", []),
                             "id": _cid(speaker, a["surah"], a["ayah"], "id", i)})
+            nxt = letters[i + 1] if i + 1 < len(letters) else None
             for head, sv in (l.get("sifat") or {}).items():
-                if head == "tikraar" or sv.get("realised") or -sv["llr"] < MIN_SIFAH_NATS:
+                # the voiced hold on ب / د: a latent characteristic to confirm by ear, not a mistake
+                if (head == "istitala" and l["symbol"] != "ض" and not sv.get("realised")
+                        and -sv["llr"] >= MIN_SIFAH_NATS):
+                    ctx = "with shaddah" if l.get("run_length", 1) >= 2 else (
+                        "sakin" if nxt is None or nxt["kind"] != "harakah" else "voweled")
+                    out.append({**base, "kind": "phenomenon", "detector": f"latent:voiced_hold:{l['symbol']}",
+                                "word_index": w, "word": words.get(w, ""),
+                                "claim": f"voiced hold on the {l['symbol']} ({ctx}): the sound keeps flowing and "
+                                         "builds against the closure before the release. Not a mistake — "
+                                         "is the effect there?",
+                                "magnitude": round(-sv["llr"], 2), "severity": "phenomenon",
+                                "start_s": s, "end_s": e, "letter": l["symbol"], "focus": l.get("uth", []),
+                                "context": ctx, "id": _cid(speaker, a["surah"], a["ayah"], "hold", i)})
+                    continue
+                if (not judged(head, l.get("run_length", 1), l["symbol"]) or sv.get("realised")
+                        or -sv["llr"] < MIN_SIFAH_NATS):
+                    continue
+                # Heaviness heard on a LIGHT letter that carries a vowel is the vowel being coloured,
+                # not the letter: "that effect is itmam al-harakat ... the reciter adding heavy deep
+                # resonance into the dhamma" (certified reviewer, Matroud's رَبُّ).
+                if (head in HEAVY_HEADS and sv["expected"] in LIGHT and nxt is not None
+                        and nxt["kind"] == "harakah"):
+                    out.append({**base, "kind": "characteristic", "detector": "itmam:heavy_vowel",
+                                "word_index": w, "word": words.get(w, ""),
+                                "claim": f"the vowel after the {l['symbol']} is coloured heavy — "
+                                         "itmām al-ḥarakāt: the ḥarakah must stay pure and light here",
+                                "magnitude": round(-sv["llr"], 2), "severity": _severity(-sv["llr"], 2.0, 6.0),
+                                "start_s": s, "end_s": round(t0 + nxt["onset_s"] + nxt["duration_s"], 3),
+                                "letter": l["symbol"], "focus": l.get("uth", []) + nxt.get("uth", []),
+                                "id": _cid(speaker, a["surah"], a["ayah"], "itmam", i)})
                     continue
                 out.append({**base, "kind": "characteristic", "detector": f"sifah:{head}",
                             "word_index": w, "word": words.get(w, ""),
@@ -155,7 +197,9 @@ def mine(report: dict[str, Any], speaker: str, source: str = "everyayah",
                             "magnitude": round(-sv["llr"], 2), "severity": _severity(-sv["llr"], 2.0, 6.0),
                             "start_s": s, "end_s": e, "letter": l["symbol"], "focus": l.get("uth", []),
                             "id": _cid(speaker, a["surah"], a["ayah"], "sf", i, head)})
-    return out
+    # two heads (itbaq, tafkhim) can both hear the same coloured vowel: one finding, not two
+    seen: set[str] = set()
+    return [c for c in out if not (c["id"] in seen or seen.add(c["id"]))]  # type: ignore[func-returns-value]
 
 
 # ------------------------------------------------------------------ the queue and the labels

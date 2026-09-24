@@ -255,7 +255,13 @@ def analyse_clip(lp_full: npt.NDArray[np.floating], phonemes: str, vocab: dict[s
         for q in CONFUSIONS.get(sym, []):
             if q in vocab:
                 alts.append((q, ctc_log_likelihood(x, [*left, *([vocab[q]] * n), *right], blank) - ref))
-        if sym in DELETABLE:
+        # The ي / و of a madd leen (sakin after fatha: بَيْن، يَوْم) is a glide into the vowel, not a
+        # consonant with a closure; testing it against deletion called Husary's leen in ٱلْمَغْرِبَيْنِ
+        # "dropped" -- a certified reviewer rejected it. Neither glide has a classical confusion, so a
+        # leen unit carries no identity test at all. Mirrors CtcGop.gop_sf.
+        leen = (sym in "يو" and i > 0 and units[i - 1][0] == "َ"
+                and (i == nu - 1 or units[i + 1][0] not in SHORT_V))
+        if sym in DELETABLE and not leen:
             alts.append(("∅", ctc_log_likelihood(x, [*left, *right], blank) - ref))
         if alts:
             lrs = [v for _q, v in alts]

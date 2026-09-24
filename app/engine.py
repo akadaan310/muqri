@@ -18,7 +18,7 @@ from typing import Any
 
 import numpy as np
 
-from app.analysis import analyse_clip
+from app.analysis import analyse_clip, ctc_viterbi
 from app.rule_bind import bind
 from app.ghunnah import grade_ghunnah
 from app.mudud import resolve
@@ -152,6 +152,10 @@ class Engine:
 
         refs = [self.reference(s, a) for s, a in verses]
         spans = walk_alignment(lp, refs, vocab, blank, ph["first"], ph["width"])
+        basmala = self._basmala(lp, refs, spans, vocab, blank, ph["first"], ph["width"])
+        if basmala["present"]:
+            spans = basmala.pop("_spans")
+        basmala.pop("_spans", None)
 
         # Pass 1: units per ayah. An ayah too short to measure its own count unit (الٓمٓ has no
         # vowelled letters at all) borrows the unit measured on the rest of the submission, so its
@@ -191,4 +195,36 @@ class Engine:
                              "verdicts": verdicts, "ghunnah": ghunnah,
                              "resolutions": resolutions, "stops": stops,
                              "heaviness": heaviness, "sequences": seqs, "_units": units})
-        return build_report(per_ayah, rule_filter)
+        report = build_report(per_ayah, rule_filter)
+        report["basmala"] = basmala
+        return report
+
+    # Recordings of a surah's first ayah often open with the basmala (in T300, 60 of 766 verse-1 clips,
+    # all from four reciters). Graded as part of the ayah, its بِسْمِ was heard as the ayah's first
+    # vowels -- a certified reviewer caught it. The two readings are tested against the audio: if
+    # "basmala + ayah" explains the opening far better than the ayah alone, the basmala is aligned
+    # and cut off before grading. Measured separation is wide (LR +362 with it, -540 without; only 3
+    # of 766 fall within +-20 nats).
+    BASMALA_LR = 20.0
+
+    def _basmala(self, lp, refs, spans, vocab, blank, first, width) -> dict[str, Any]:  # type: ignore[no-untyped-def]
+        from app.lahn.gop import ctc_log_likelihood
+        out: dict[str, Any] = {"checked": False, "present": False}
+        if not refs or refs[0].ayah != 1 or refs[0].surah in (1, 9) or not spans:
+            return out
+        bas = self.reference(1, 1)
+        region = lp[:spans[0][1], first:first + width]
+        seq = [vocab[c] for c in refs[0].phonemes]
+        lr = ctc_log_likelihood(region, [vocab[c] for c in bas.phonemes] + seq, blank) \
+            - ctc_log_likelihood(region, seq, blank)
+        out.update(checked=True, log_likelihood_ratio=round(float(lr), 1) if np.isfinite(lr) else None)
+        if np.isfinite(lr) and lr > self.BASMALA_LR:
+            # one joint alignment of basmala + ayah over the opening: the cut is where the basmala's
+            # last phoneme ends. (Aligning them as separate ayahs let a short ayah like نٓ slide back
+            # onto the ن of ٱلرَّحْمَـٰنِ.)
+            nb = len(bas.phonemes)
+            _s, f_, l_ = ctc_viterbi(region, [vocab[c] for c in bas.phonemes] + seq, blank)
+            cut = int(l_[nb - 1])
+            new = [(max(cut, spans[0][0]), spans[0][1]), *spans[1:]]
+            out.update(present=True, end_s=round(cut * 0.04, 2), _spans=new)
+        return out

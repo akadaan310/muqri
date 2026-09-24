@@ -200,7 +200,11 @@ function gop_sf(lp::AbstractMatrix{Float32}, ph::AbstractString, vocab::Dict{Cha
             haskey(vocab, q) || continue
             push!(alts, (string(q), ctc_forward(X, vcat(left, fill(vocab[q], n), right), blank) - ref))
         end
-        if y in deletable
+        # the ي / و of a madd leen (sakin after fatha) is a glide, not a consonant that can be dropped:
+        # a certified reviewer rejected "dropped" on Husary's leen in ٱلْمَغْرِبَيْنِ
+        leen = y in ('ي', 'و') && i > 1 && units[i-1][1] == FATHA &&
+               (i == length(units) || !(units[i+1][1] in (FATHA, DAMMA, KASRA)))
+        if y in deletable && !leen
             push!(alts, ("∅", ctc_forward(X, vcat(left, right), blank) - ref))
         end
         if isempty(alts)

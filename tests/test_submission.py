@@ -220,3 +220,30 @@ def test_measurements_follow_the_published_schema(passage, engine) -> None:  # t
         for l in m["letters"]:
             for c in l["characteristics"].values():
                 assert (c["observed"] == c["expected"]) == c["realised"] or c["expected"] == c["competitor"]
+
+
+def test_a_declared_wajh_is_graded_as_declared(engine) -> None:  # type: ignore[no-untyped-def]
+    """An app declares the munfasil length its learner follows. Inferred from the recording alone, a
+    munfasil read short on purpose is taken for the qasr wajh and passes; declared, it is graded."""
+    lay = json.loads((DUMP / "layout.json").read_text())
+    for line in (DUMP / "index.jsonl").open():
+        r = json.loads(line)
+        if r.get("speaker") != "Husary_128kbps" or "file" not in r:
+            continue
+        lp = np.fromfile(DUMP / r["file"], dtype="<f4").reshape(r["frames"], lay["columns"])
+        rep = engine.analyze(None, [(r["sura"], r["aya"])], posteriors=lp)
+        mun = [x for x in rep["measurements"]["rules"] if x["rule"] == "madd_munfasil"
+               and x["observed_counts"] and x["observed_counts"] >= 3.5]
+        if mun:
+            break
+    else:
+        pytest.skip("no tawassut munfasil in the Husary clips present")
+    assert rep["wajh"]["source"] == "inferred" and rep["wajh"]["choice"] == "tawassut"
+    as_qasr = engine.analyze(None, [(r["sura"], r["aya"])], posteriors=lp, wajh="qasr")
+    got = {x["id"]: x for x in as_qasr["measurements"]["rules"]}
+    assert as_qasr["wajh"]["source"] == "declared"
+    assert all(got[m["id"]]["status"] == "long" and got[m["id"]]["deviation_counts"] > 0 for m in mun)
+    as_taw = engine.analyze(None, [(r["sura"], r["aya"])], posteriors=lp, wajh="tawassut")
+    assert [x["status"] for x in as_taw["measurements"]["rules"]] == [x["status"] for x in rep["measurements"]["rules"]]
+    with pytest.raises(ValueError):
+        engine.analyze(None, [(r["sura"], r["aya"])], posteriors=lp, wajh="madd")

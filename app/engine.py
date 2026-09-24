@@ -57,15 +57,18 @@ WAJH_RULES = ("madd_munfasil", "madd_silah_kubra")
 QASR_MAX_COUNTS = 3.0          # the gap between the two modes: 1.8-2.2 vs 3.2+
 
 
-def _apply_wajh(verdict_lists) -> dict:  # type: ignore[type-arg,no-untyped-def]
+def _apply_wajh(verdict_lists, declared: str | None = None) -> dict:  # type: ignore[type-arg,no-untyped-def]
+    """Grade munfasil / silah kubra against one wajh: the one the app DECLARES (the learner's chosen
+    path), or else the one inferred from the recording. Inference alone cannot catch a munfasil read
+    short on purpose -- a single qasr-length instance is read as the qasr wajh and passes."""
     from app.submission import NOMINAL_TOLERANCE
     vs = [v for vl in verdict_lists for v in vl
           if v.rule in WAJH_RULES and v.evidence.get("given_counts") is not None]
     if not vs:
-        return {}
+        return {"declared": declared} if declared else {}
     counts = [v.evidence["given_counts"] for v in vs]
     med = float(np.median(counts))
-    qasr = med <= QASR_MAX_COUNTS
+    qasr = (declared == "qasr") if declared else med <= QASR_MAX_COUNTS
     lo, hi = (2.0, 2.0) if qasr else (4.0, 5.0)
     for v in vs:
         got = v.evidence["given_counts"]
@@ -76,6 +79,7 @@ def _apply_wajh(verdict_lists) -> dict:  # type: ignore[type-arg,no-untyped-def]
                       "wajh": "qasr (Tayyibah)" if qasr else "tawassut (Shatibiyyah)"}
     return {"munfasil": "qasr (Tayyibah), 2 counts" if qasr else "tawassut (Shatibiyyah), 4-5 counts",
             "choice": "qasr" if qasr else "tawassut", "expected_counts": [lo, hi],
+            "source": "declared" if declared else "inferred",
             "instances": len(vs), "median_counts": round(med, 2),
             "note": "graded for consistency with the wajh the reciter chose"}
 
@@ -178,14 +182,16 @@ class Engine:
 
     # -- the call --------------------------------------------------------------------------------
     def analyze(self, audio, verses: list[tuple[int, ...]], *,  # type: ignore[no-untyped-def]
-                rule_filter: str | None = None, posteriors: np.ndarray | None = None
-                ) -> dict[str, Any]:
+                rule_filter: str | None = None, posteriors: np.ndarray | None = None,
+                wajh: str | None = None) -> dict[str, Any]:
         """Score a submission covering `verses`, in order, against the audio.
 
         Each verse is (surah, ayah) or (surah, ayah, first_word, last_word) for part of an ayah
         (0-based, inclusive; reported word indices stay those of the whole ayah).
 
         `rule_filter` restricts the report to one rule family, for rule-practice submissions.
+        `wajh` ("qasr" | "tawassut") declares the munfasil length the learner follows; without it the
+        wajh is inferred from the recording.
         """
         lp = posteriors if posteriors is not None else self.posteriors(audio)
         audio = audio if isinstance(audio, __import__("numpy").ndarray) else None
@@ -246,10 +252,12 @@ class Engine:
                              "verdicts": verdicts, "ghunnah": ghunnah,
                              "resolutions": resolutions, "stops": stops,
                              "heaviness": heaviness, "sequences": seqs, "_units": units})
-        wajh = _apply_wajh([a["verdicts"] for a in per_ayah])
+        if wajh not in (None, "qasr", "tawassut"):
+            raise ValueError(f"wajh must be 'qasr' or 'tawassut', not {wajh!r}")
+        wajh_report = _apply_wajh([a["verdicts"] for a in per_ayah], wajh)
         report = build_report(per_ayah, rule_filter)
         report["basmala"] = basmala
-        report["wajh"] = wajh
+        report["wajh"] = wajh_report
         if audio is not None:
             report["audio_seconds"] = round(float(np.asarray(audio).size) / 16000, 2)
         from app.measurements import build as measurements

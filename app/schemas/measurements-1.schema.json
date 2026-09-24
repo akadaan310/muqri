@@ -91,6 +91,19 @@
             },
             "note": {
               "type": "string"
+            },
+            "source": {
+              "enum": [
+                "declared",
+                "inferred"
+              ],
+              "description": "declared: graded against the wajh the app passed; inferred: from the recording's own instances."
+            },
+            "declared": {
+              "enum": [
+                "qasr",
+                "tawassut"
+              ]
             }
           }
         },

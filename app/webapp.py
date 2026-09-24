@@ -588,6 +588,7 @@ def create_app():  # type: ignore[no-untyped-def]
         learner: str | None = Form(None),  # noqa: B008
         word: int | None = Form(None),  # noqa: B008
         word_end: int | None = Form(None),  # noqa: B008
+        wajh: str | None = Form(None),  # noqa: B008 - "qasr" | "tawassut": the learner's declared munfasil
     ):  # type: ignore[no-untyped-def]
         data = await audio.read()
         if not data:
@@ -621,7 +622,7 @@ def create_app():  # type: ignore[no-untyped-def]
             if len(verses) > 60:
                 return JSONResponse({"error": f"{len(verses)} ayahs is beyond this box's CPU budget; "
                                               "try 60 or fewer."}, status_code=422)
-            report = engine().analyze(wave, verses)
+            report = engine().analyze(wave, verses, wajh=wajh or None)
             report["audio_seconds"] = round(float(wave.size) / 16000, 2)
             # the knowledge report: this recitation plus the learner's history, projected on the Quran
             from app.knowledge import build

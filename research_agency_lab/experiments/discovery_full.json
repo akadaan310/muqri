@@ -1,0 +1,436 @@
+{
+    "Alafasy_128kbps": {
+        "duration_law_span": {
+            "n": 15410,
+            "median_haraka_ms": 220.087,
+            "lambda": 40,
+            "implied_counts_scale": 0.4243415904877819,
+            "bic": 185857.23036544278,
+            "metric": "duration_ms",
+            "T_unit": "100 ms",
+            "terms_ms": {
+                "1": -551.4482741264865,
+                "T": 89.3400997625318,
+                "n": 518.655264846911
+            },
+            "r2": 0.4045543220644602,
+            "ms_per_count_at_median_T": 518.655264846911,
+            "overhead_ms_at_median_T": -354.8223287621231,
+            "reciter": "Alafasy_128kbps"
+        },
+        "tempo_dynamics": {
+            "pooled": {
+            },
+            "per_surah": {
+            },
+            "model": "dT/dτ = κ(T∞ − T) + φ",
+            "reciter": "Alafasy_128kbps"
+        },
+        "duration_law_core": {
+            "n": 15406,
+            "median_haraka_ms": 220.087,
+            "lambda": 80,
+            "implied_counts_scale": 0.5003049050808392,
+            "bic": 181195.24751621825,
+            "metric": "core_ms",
+            "T_unit": "100 ms",
+            "terms_ms": {
+                "1": -287.229471769057,
+                "n": 439.90574100895196
+            },
+            "r2": 0.3975175738795256,
+            "ms_per_count_at_median_T": 439.90574100895196,
+            "overhead_ms_at_median_T": -287.229471769057,
+            "reciter": "Alafasy_128kbps"
+        }
+    },
+    "Saood_ash-Shuraym_128kbps": {
+        "duration_law_span": {
+            "n": 2254,
+            "median_haraka_ms": 160.184,
+            "lambda": 0,
+            "implied_counts_scale": 1.1103222997408377,
+            "bic": 24845.22541871694,
+            "metric": "duration_ms",
+            "T_unit": "100 ms",
+            "terms_ms": {
+                "1": -1267.8828623903826,
+                "T": 1692.5293329735496,
+                "T²": -516.6594178827462,
+                "n·T²": 261.9906664931912,
+                "n·T": -821.3349714543763,
+                "n": 787.6756366412475
+            },
+            "r2": 0.15650104485061656,
+            "ms_per_count_at_median_T": 144.2680202292513,
+            "overhead_ms_at_median_T": 117.58637470551889,
+            "reciter": "Saood_ash-Shuraym_128kbps"
+        },
+        "tempo_dynamics": {
+            "pooled": {
+            },
+            "per_surah": {
+            },
+            "model": "dT/dτ = κ(T∞ − T) + φ",
+            "reciter": "Saood_ash-Shuraym_128kbps"
+        },
+        "duration_law_core": {
+            "n": 2253,
+            "median_haraka_ms": 160.184,
+            "lambda": 0,
+            "implied_counts_scale": 1.4232228534854734,
+            "bic": 23605.291377289028,
+            "metric": "core_ms",
+            "T_unit": "100 ms",
+            "terms_ms": {
+                "1": -1298.016845744589,
+                "T": 1779.5363791781767,
+                "T²": -560.5326480362475,
+                "n·T²": 280.5481624869322,
+                "n·T": -864.0049444513512,
+                "n": 776.6917550415651
+            },
+            "r2": 0.17852445964545482,
+            "ms_per_count_at_median_T": 112.55018819274107,
+            "overhead_ms_at_median_T": 114.2498149344176,
+            "reciter": "Saood_ash-Shuraym_128kbps"
+        }
+    },
+    "Husary_128kbps": {
+        "duration_law_span": {
+            "n": 34088,
+            "median_haraka_ms": 320.127,
+            "lambda": 0,
+            "implied_counts_scale": 0.7841646762904694,
+            "bic": 421030.84453257424,
+            "metric": "duration_ms",
+            "T_unit": "100 ms",
+            "terms_ms": {
+                "1": -2008.0064801793,
+                "T": 1118.444655163879,
+                "T²": -144.62680626034938,
+                "n·T²": 40.229632123295595,
+                "n·T": -274.5520340929899,
+                "n": 874.8762118109041
+            },
+            "r2": 0.2699806971943536,
+            "ms_per_count_at_median_T": 408.239505908857,
+            "overhead_ms_at_median_T": 90.28258500133302,
+            "reciter": "Husary_128kbps"
+        },
+        "tempo_dynamics": {
+            "pooled": {
+            },
+            "per_surah": {
+            },
+            "model": "dT/dτ = κ(T∞ − T) + φ",
+            "reciter": "Husary_128kbps"
+        },
+        "duration_law_core": {
+            "n": 34082,
+            "median_haraka_ms": 320.127,
+            "lambda": 0,
+            "implied_counts_scale": 0.9551648646363653,
+            "bic": 382304.8966743119,
+            "metric": "core_ms",
+            "T_unit": "100 ms",
+            "terms_ms": {
+                "1": -2345.587583342791,
+                "T": 1336.3314263523944,
+                "T²": -183.04931139336057,
+                "n·T²": 59.59340823208508,
+                "n·T": -407.0480701732033,
+                "n": 1027.5034636667804
+            },
+            "r2": 0.44764181667981606,
+            "ms_per_count_at_median_T": 335.1536597002796,
+            "overhead_ms_at_median_T": 56.457053185087034,
+            "reciter": "Husary_128kbps"
+        }
+    },
+    "Husary_Muallim_128kbps": {
+        "duration_law_span": {
+            "n": 35455,
+            "median_haraka_ms": 280.287,
+            "lambda": 40,
+            "implied_counts_scale": 0.615871141146912,
+            "bic": 485949.56455925823,
+            "metric": "duration_ms",
+            "T_unit": "100 ms",
+            "terms_ms": {
+                "1": -1172.519155873984,
+                "T": 661.3192445027883,
+                "T²": -89.38085676772415,
+                "n": 455.10656576314454
+            },
+            "r2": 0.09696306800446264,
+            "ms_per_count_at_median_T": 455.10656576314454,
+            "overhead_ms_at_median_T": -21.11046744456121,
+            "reciter": "Husary_Muallim_128kbps"
+        },
+        "tempo_dynamics": {
+            "pooled": {
+            },
+            "per_surah": {
+            },
+            "model": "dT/dτ = κ(T∞ − T) + φ",
+            "reciter": "Husary_Muallim_128kbps"
+        },
+        "duration_law_core": {
+            "n": 35443,
+            "median_haraka_ms": 280.287,
+            "lambda": 0,
+            "implied_counts_scale": 0.7279017513668307,
+            "bic": 385904.81746893574,
+            "metric": "core_ms",
+            "T_unit": "100 ms",
+            "terms_ms": {
+                "1": -1531.8555641287755,
+                "T": 819.3850477709208,
+                "T²": -121.040857857359,
+                "n·T²": 34.19852808792831,
+                "n·T": -190.290983621034,
+                "n": 649.7560907265632
+            },
+            "r2": 0.5694471059824631,
+            "ms_per_count_at_median_T": 385.06158210731877,
+            "overhead_ms_at_median_T": -186.1324865537149,
+            "reciter": "Husary_Muallim_128kbps"
+        }
+    },
+    "Abdul_Basit_Murattal_192kbps": {
+        "duration_law_span": {
+            "n": 18362,
+            "median_haraka_ms": 240.21,
+            "lambda": 20,
+            "implied_counts_scale": 0.6265483077132912,
+            "bic": 221168.7520860363,
+            "metric": "duration_ms",
+            "T_unit": "100 ms",
+            "terms_ms": {
+                "1": -333.645922234051,
+                "T²": 47.89862635210023,
+                "n·T": -26.09588192678751,
+                "n": 446.07115817973374
+            },
+            "r2": 0.30475826409630846,
+            "ms_per_count_at_median_T": 383.38624020339745,
+            "overhead_ms_at_median_T": -57.26680505938231,
+            "reciter": "Abdul_Basit_Murattal_192kbps"
+        },
+        "tempo_dynamics": {
+            "pooled": {
+            },
+            "per_surah": {
+            },
+            "model": "dT/dτ = κ(T∞ − T) + φ",
+            "reciter": "Abdul_Basit_Murattal_192kbps"
+        },
+        "duration_law_core": {
+            "n": 18361,
+            "median_haraka_ms": 240.21,
+            "lambda": 5,
+            "implied_counts_scale": 0.6942316856127387,
+            "bic": 209940.68739207156,
+            "metric": "core_ms",
+            "T_unit": "100 ms",
+            "terms_ms": {
+                "1": -220.0455666998446,
+                "T": -116.54944206454721,
+                "T²": 67.15783594153237,
+                "n·T": -27.540167715220345,
+                "n": 412.16264440487953
+            },
+            "r2": 0.39640247207070334,
+            "ms_per_count_at_median_T": 346.00840753614875,
+            "overhead_ms_at_median_T": -112.5025993075198,
+            "reciter": "Abdul_Basit_Murattal_192kbps"
+        }
+    },
+    "Hudhaify_128kbps": {
+        "duration_law_span": {
+            "n": 33359,
+            "median_haraka_ms": 200.087,
+            "lambda": 2,
+            "implied_counts_scale": 0.3158584891032402,
+            "bic": 408781.1474812027,
+            "metric": "duration_ms",
+            "T_unit": "100 ms",
+            "terms_ms": {
+                "1": -492.8569955285477,
+                "T": -140.1914892290791,
+                "T²": 38.58145238107237,
+                "n": 633.4703891228972
+            },
+            "r2": 0.4749341110519313,
+            "ms_per_count_at_median_T": 633.4703891228972,
+            "overhead_ms_at_median_T": -618.9018384014582,
+            "reciter": "Hudhaify_128kbps"
+        },
+        "tempo_dynamics": {
+            "pooled": {
+            },
+            "per_surah": {
+            },
+            "model": "dT/dτ = κ(T∞ − T) + φ",
+            "reciter": "Hudhaify_128kbps"
+        },
+        "duration_law_core": {
+            "n": 33359,
+            "median_haraka_ms": 200.087,
+            "lambda": 20,
+            "implied_counts_scale": 0.35844496705343637,
+            "bic": 393927.44609821244,
+            "metric": "core_ms",
+            "T_unit": "100 ms",
+            "terms_ms": {
+                "1": -471.10794619381375,
+                "T": -132.69279041989796,
+                "T²": 36.8734911724863,
+                "n": 558.2084235825562
+            },
+            "r2": 0.5231601283440797,
+            "ms_per_count_at_median_T": 558.2084235825562,
+            "overhead_ms_at_median_T": -588.986657412504,
+            "reciter": "Hudhaify_128kbps"
+        }
+    },
+    "Minshawy_Murattal_128kbps": {
+        "duration_law_span": {
+            "n": 30631,
+            "median_haraka_ms": 220.201,
+            "lambda": 20,
+            "implied_counts_scale": 0.5511371796975583,
+            "bic": 365613.759050681,
+            "metric": "duration_ms",
+            "T_unit": "100 ms",
+            "terms_ms": {
+                "1": 48.27624460462931,
+                "T": -261.1277848562989,
+                "T²": 79.97674376771332,
+                "n": 399.539367169599
+            },
+            "r2": 0.32383729841272013,
+            "ms_per_count_at_median_T": 399.539367169599,
+            "overhead_ms_at_median_T": -138.93467165513277,
+            "reciter": "Minshawy_Murattal_128kbps"
+        },
+        "tempo_dynamics": {
+            "pooled": {
+            },
+            "per_surah": {
+            },
+            "model": "dT/dτ = κ(T∞ − T) + φ",
+            "reciter": "Minshawy_Murattal_128kbps"
+        },
+        "duration_law_core": {
+            "n": 30629,
+            "median_haraka_ms": 220.201,
+            "lambda": 20,
+            "implied_counts_scale": 0.6354498393794623,
+            "bic": 345551.3017219374,
+            "metric": "core_ms",
+            "T_unit": "100 ms",
+            "terms_ms": {
+                "1": 75.97919783563081,
+                "T": -300.58501598646893,
+                "T²": 84.93032362179295,
+                "n": 346.5277451561456
+            },
+            "r2": 0.41017460911219084,
+            "ms_per_count_at_median_T": 346.5277451561456,
+            "overhead_ms_at_median_T": -174.09777997814422,
+            "reciter": "Minshawy_Murattal_128kbps"
+        }
+    },
+    "Nasser_Alqatami_128kbps": {
+        "duration_law_span": {
+            "n": 8242,
+            "median_haraka_ms": 190.153,
+            "lambda": 80,
+            "implied_counts_scale": 0.8501167233870675,
+            "bic": 103582.25057411674,
+            "metric": "duration_ms",
+            "T_unit": "100 ms",
+            "terms_ms": {
+                "1": 433.3193168406133,
+                "T": -119.7231266887578,
+                "n·T": 117.63090555562322
+            },
+            "r2": 0.08019269690707842,
+            "ms_per_count_at_median_T": 223.6786958411842,
+            "overhead_ms_at_median_T": 205.66219974813967,
+            "reciter": "Nasser_Alqatami_128kbps"
+        },
+        "tempo_dynamics": {
+            "pooled": {
+            },
+            "per_surah": {
+            },
+            "model": "dT/dτ = κ(T∞ − T) + φ",
+            "reciter": "Nasser_Alqatami_128kbps"
+        },
+        "duration_law_core": {
+            "n": 8239,
+            "median_haraka_ms": 190.153,
+            "lambda": 80,
+            "implied_counts_scale": 1.0843695603107848,
+            "bic": 99548.21803919197,
+            "metric": "core_ms",
+            "T_unit": "100 ms",
+            "terms_ms": {
+                "1": 413.5369754727508,
+                "T": -113.13503499791885,
+                "n·T": 92.21948278531498
+            },
+            "r2": 0.07905985550856975,
+            "ms_per_count_at_median_T": 175.35811310076,
+            "overhead_ms_at_median_T": 198.40731237315816,
+            "reciter": "Nasser_Alqatami_128kbps"
+        }
+    },
+    "Yasser_Ad-Dussary_128kbps": {
+        "duration_law_span": {
+            "n": 15340,
+            "median_haraka_ms": 200.11,
+            "lambda": 40,
+            "implied_counts_scale": 0.4321928973898035,
+            "bic": 186506.02930676963,
+            "metric": "duration_ms",
+            "T_unit": "100 ms",
+            "terms_ms": {
+                "1": -351.7941187473518,
+                "n": 463.0108481850334
+            },
+            "r2": 0.30199061351034684,
+            "ms_per_count_at_median_T": 463.0108481850334,
+            "overhead_ms_at_median_T": -351.7941187473518,
+            "reciter": "Yasser_Ad-Dussary_128kbps"
+        },
+        "tempo_dynamics": {
+            "pooled": {
+            },
+            "per_surah": {
+            },
+            "model": "dT/dτ = κ(T∞ − T) + φ",
+            "reciter": "Yasser_Ad-Dussary_128kbps"
+        },
+        "duration_law_core": {
+            "n": 15338,
+            "median_haraka_ms": 200.11,
+            "lambda": 40,
+            "implied_counts_scale": 0.4827773270439123,
+            "bic": 179225.90927314587,
+            "metric": "core_ms",
+            "T_unit": "100 ms",
+            "terms_ms": {
+                "1": -336.5579403334121,
+                "n": 414.4975101156697
+            },
+            "r2": 0.35754825314581284,
+            "ms_per_count_at_median_T": 414.4975101156697,
+            "overhead_ms_at_median_T": -336.5579403334121,
+            "reciter": "Yasser_Ad-Dussary_128kbps"
+        }
+    }
+}

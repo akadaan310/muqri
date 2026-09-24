@@ -178,8 +178,12 @@ class RuleVerdict:
 # 0.77 -> 0.94 (idgham shafawi), 0.81 -> 0.91 (ikhfa shafawi), and every clipped take is "short".
 # Iqlab's meem is held like ikhfa shafawi's (the same symbol) and takes its band.
 NASAL_FLOOR = 2.0
+# Idgham bi-ghunnah is the same akmal hold as a mushaddad ghunnah and takes its band: bound to the
+# held letter (not the vowel after it, as before the binder fix), Husary's juz' 30 reads median 2.51
+# counts into ي, 2.70 into و, 2.60 into م, 5th percentile 2.18-2.32
+# (research_agency_lab/experiments/idgham/remeasure.py).
 NASAL_BAND_OF = {"ghunnah": "ghunnah", "ikhfa": "ikhfa", "ikhfa_shafawi": "ikhfa_shafawi",
-                 "idgham_shafawi": "idgham_shafawi", "iqlab": "ikhfa_shafawi"}
+                 "idgham_shafawi": "idgham_shafawi", "iqlab": "ikhfa_shafawi", "idgham_ghunnah": "ghunnah"}
 _REFERENCE = Path(__file__).resolve().parents[1] / "research_agency_lab/experiments/quran/reference_stats.json"
 
 

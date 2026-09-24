@@ -104,6 +104,6 @@ behind consumer learning apps: **the engine measures; the apps decide what to te
   - never report a number you haven't measured;
   - beat a baseline before making a claim;
   - no advice text in engine output;
-  - push only when the owner approves.
+  - commit and push every working commit (see AGENTS.md §7).
 - Start by proposing: what you want to explore, why it matters (research, the apps, or synthesis), what data and
   tools here you'd use, what you'd measure, and what baseline it must beat.

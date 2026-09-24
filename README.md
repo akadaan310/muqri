@@ -1,4 +1,55 @@
-# qaari-eval
+# muqri
+
+A measuring instrument for Quran recitation (Ḥafṣ ʿan ʿĀṣim). Send it a recording and the verses recited;
+it returns, for every letter, characteristic (ṣifah) and tajwīd rule, what was realised and how it
+compares with 41 master reciters. **The engine measures; the apps decide** what to tell a learner.
+
+AI agents: start with [`AGENTS.md`](AGENTS.md). It covers the service, the computation layer by layer,
+rule coverage with reliability, the calibration rounds and the working rules.
+
+## The service (muaalem engine, live)
+
+```bash
+.venv/bin/python -m app.webapp        # http://localhost:8088 — /analyze, /detect, /capability,
+                                      # /sessions (calibration rounds), /review (expert listening)
+```
+
+* **Acoustic model**: multi-level CTC (muaalem) over 40 ms frames. It emits phonemes plus ten
+  characteristic heads: ghunnah, hams/jahr, shiddah/rakhāwah, tafkhīm/tarqīq, qalqalah, iṭbāq, ṣafīr,
+  tafashshī, istiṭālah and takrīr.
+* **Text side**:
+  * The `quran_transcript` phonemizer gives the exact expected phonemes, with lengths.
+  * The Tajweed parser locates 40 rule types, 1.16 M instances across the Qur'an.
+  * `app/rule_bind.py` ties each rule to the sounds that realise it.
+* **Per recording**:
+  * letter timings (sub-frame);
+  * letter identity against its classical confusions;
+  * each characteristic's margin;
+  * every madd / ghunnah / idghām / ikhfāʾ length in the reciter's own count unit;
+  * stops, basmala and wajh.
+* **Comparison**: every number is placed against the masters (percentile, robust z) in the
+  `measurements/1` report (`app/schemas/measurements-1.schema.json`).
+* **Rules covered**:
+  * all ten mudūd;
+  * nūn sākinah / tanwīn (iẓhār, ikhfāʾ, idghām with and without ghunnah, iqlāb);
+  * mīm sākinah (three rules);
+  * ghunnah mushaddadah;
+  * qalqalah;
+  * idghām mithlayn / mutajānisayn / mutaqāribayn;
+  * rāʾ tafkhīm / tarqīq;
+  * hamzat al-waṣl, sakt and stops;
+  * the ten ṣifāt;
+  * laḥn jalī (wrong letter, wrong vowel).
+* **Reliability**: `GET /capability` serves each capability's reliability live. See `AGENTS.md` §4 for
+  what ships and what is still on caution or hold.
+* **Calibration rounds** (`/sessions`): a certified reciter records each exercise twice, once correct
+  and once with dictated mistakes. Over rounds 1–4 the engine went to 41/48 dictated mistakes caught and
+  145/155 expectations met on the correct takes (`AGENTS.md` §5).
+
+The rest of this README documents the earlier **qaari-eval v2** pipeline (wav2vec2 aligner + DSP
+validators). It is kept for the CLI, the benchmark runs and its calibration on the full-Qur'an Kaggle run.
+
+# qaari-eval (legacy pipeline)
 
 Quranic Tajweed analysis, scoring calibrated on master reciters, and reciter fingerprinting.
 

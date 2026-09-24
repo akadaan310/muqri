@@ -130,6 +130,9 @@ class AyahRef:
     # for every character of `phonemes`, the Uthmani character that produced it (-1: none), so a
     # judged letter can be shown -- and coloured -- in the script the reciter reads
     ph_to_uth: list[int] = field(default_factory=list)
+    # a submission may cover part of an ayah: word indices here are local to the slice, and
+    # word_offset is the index of its first word in the whole ayah
+    word_offset: int = 0
 
 
 @dataclass(slots=True)
@@ -436,6 +439,7 @@ def build_report(per_ayah: list[dict[str, Any]], rule_filter: str | None = None)
         word_of = _word_index(a.get("word_ph") or [])
         ayahs.append({
             "surah": a["surah"], "ayah": a["ayah"], "frames": a["frames"],
+            "word_offset": a.get("word_offset", 0),
             "haraka_s": a.get("haraka_s"), "haraka_source": a.get("haraka_source", "own"),
             "letters": [{"i": u.index, "symbol": u.symbol, "kind": u.kind, "run_length": u.run_length,
                          "word": word_of(u.char_span[0]),

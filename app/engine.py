@@ -116,10 +116,23 @@ class Engine:
         from research_agency_lab.experiments.learner_eval.sifat_ref import class_maps  # noqa: PLC0415
         return class_maps()
 
-    def reference(self, surah: int, ayah: int) -> AyahRef:
-        """Everything the engine needs to know about what *should* be recited."""
+    def reference(self, surah: int, ayah: int, words: tuple[int, int] | None = None) -> AyahRef:
+        """Everything the engine needs to know about what *should* be recited.
+
+        `words` (first, last; 0-based, inclusive) restricts it to part of the ayah. The slice is
+        phonetised on its own, because that is what a reader who starts or stops there must say:
+        hamzat al-wasl read at the start, the waqf form of the last word at the end.
+        """
         Aya, phonetize, moshaf, md = self._phonetizer
         uthmani = Aya(surah, ayah).get().uthmani
+        offset = 0
+        if words is not None:
+            ws = uthmani.split()
+            w0, w1 = words
+            if not 0 <= w0 <= w1 < len(ws):
+                raise ValueError(f"{surah}:{ayah} has {len(ws)} words; asked for {w0}..{w1}")
+            if (w0, w1) != (0, len(ws) - 1):
+                uthmani, offset = " ".join(ws[w0:w1 + 1]), w0
         r = phonetize(uthmani, moshaf, remove_spaces=True)
         from research_agency_lab.experiments.learner_eval.sifat_ref import LEVELS  # noqa: PLC0415
         maps = self._sifat_maps
@@ -130,7 +143,7 @@ class Engine:
                 cols[lvl].extend([maps[lvl].get(getattr(e, lvl), 0)] * n)
         return AyahRef(surah=surah, ayah=ayah, uthmani=uthmani, phonemes=r.phonemes,
                        word_ph=md.word_spans(uthmani, r.mappings), expected_sifat=cols,
-                       ph_to_uth=ph_to_uthmani(uthmani, r.mappings))
+                       ph_to_uth=ph_to_uthmani(uthmani, r.mappings), word_offset=offset)
 
     # -- acoustics -------------------------------------------------------------------------------
     @cached_property
@@ -163,10 +176,13 @@ class Engine:
         return {"columns": c0, "blank": 0, "levels": levels}
 
     # -- the call --------------------------------------------------------------------------------
-    def analyze(self, audio, verses: list[tuple[int, int]], *,  # type: ignore[no-untyped-def]
+    def analyze(self, audio, verses: list[tuple[int, ...]], *,  # type: ignore[no-untyped-def]
                 rule_filter: str | None = None, posteriors: np.ndarray | None = None
                 ) -> dict[str, Any]:
         """Score a submission covering `verses`, in order, against the audio.
+
+        Each verse is (surah, ayah) or (surah, ayah, first_word, last_word) for part of an ayah
+        (0-based, inclusive; reported word indices stay those of the whole ayah).
 
         `rule_filter` restricts the report to one rule family, for rule-practice submissions.
         """
@@ -183,7 +199,7 @@ class Engine:
         vocab = {t: i for i, t in enumerate(ph["vocab"]) if len(t) == 1}
         blank = lay["blank"]
 
-        refs = [self.reference(s, a) for s, a in verses]
+        refs = [self.reference(v[0], v[1], (v[2], v[3]) if len(v) > 2 else None) for v in verses]
         spans = walk_alignment(lp, refs, vocab, blank, ph["first"], ph["width"])
         basmala = self._basmala(lp, refs, spans, vocab, blank, ph["first"], ph["width"])
         if basmala["present"]:
@@ -221,6 +237,7 @@ class Engine:
             seqs = vowel_sequences(units)
             h = _haraka_of(units)
             per_ayah.append({"surah": r.surah, "ayah": r.ayah, "frames": [t0, t1],
+                             "word_offset": r.word_offset,
                              "haraka_s": round(h, 3) if h else None,
                              "haraka_source": "own" if h_own else ("borrowed" if h else None),
                              "words": r.uthmani.split(), "word_ph": r.word_ph,
@@ -247,7 +264,7 @@ class Engine:
     def _basmala(self, lp, refs, spans, vocab, blank, first, width) -> dict[str, Any]:  # type: ignore[no-untyped-def]
         from app.lahn.gop import ctc_log_likelihood
         out: dict[str, Any] = {"checked": False, "present": False}
-        if not refs or refs[0].ayah != 1 or refs[0].surah in (1, 9) or not spans:
+        if not refs or refs[0].ayah != 1 or refs[0].word_offset or refs[0].surah in (1, 9) or not spans:
             return out
         bas = self.reference(1, 1)
         region = lp[:spans[0][1], first:first + width]

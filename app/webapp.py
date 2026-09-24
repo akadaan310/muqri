@@ -586,6 +586,8 @@ def create_app():  # type: ignore[no-untyped-def]
         ayah: int | None = Form(None),  # noqa: B008
         ayah_end: int | None = Form(None),  # noqa: B008
         learner: str | None = Form(None),  # noqa: B008
+        word: int | None = Form(None),  # noqa: B008
+        word_end: int | None = Form(None),  # noqa: B008
     ):  # type: ignore[no-untyped-def]
         data = await audio.read()
         if not data:
@@ -605,7 +607,17 @@ def create_app():  # type: ignore[no-untyped-def]
             if wave.size < 1600:
                 return JSONResponse({"error": "Recording is shorter than 0.1 s"}, status_code=422)
 
-            verses = [(int(surah), a) for a in range(int(ayah), int(ayah_end or ayah) + 1)]
+            verses: list[tuple[int, ...]] = [(int(surah), a) for a in range(int(ayah), int(ayah_end or ayah) + 1)]
+            # part of an ayah: `word` (1-based) is where the first ayah starts, `word_end` where the
+            # last one ends; the engine counts from 0
+            if word or word_end:
+                n_last = len(engine().reference(verses[-1][0], verses[-1][1]).uthmani.split())
+                if len(verses) == 1:
+                    verses = [(*verses[0], int(word or 1) - 1, int(word_end or n_last) - 1)]
+                else:
+                    n_first = len(engine().reference(*verses[0]).uthmani.split())
+                    verses[0] = (*verses[0], int(word or 1) - 1, n_first - 1)
+                    verses[-1] = (*verses[-1], 0, int(word_end or n_last) - 1)
             if len(verses) > 60:
                 return JSONResponse({"error": f"{len(verses)} ayahs is beyond this box's CPU budget; "
                                               "try 60 or fewer."}, status_code=422)
@@ -627,6 +639,8 @@ def create_app():  # type: ignore[no-untyped-def]
             return JSONResponse(report)
         except AudioDecodeError as exc:
             return JSONResponse({"error": str(exc)}, status_code=415)
+        except ValueError as exc:     # a word range outside the ayah
+            return JSONResponse({"error": str(exc)}, status_code=422)
         except Exception as exc:  # noqa: BLE001 - the page must show why, not a blank 500
             return JSONResponse({"error": f"{type(exc).__name__}: {exc}",
                                  "detail": traceback.format_exc()[-1200:]}, status_code=500)

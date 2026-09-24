@@ -84,6 +84,8 @@ def build(report: dict[str, Any]) -> dict[str, Any]:
     words, rules, letters = [], [], []
     for a in report.get("ayahs", []):
         s, y = a["surah"], a["ayah"]
+        off = a.get("word_offset", 0)      # a partial-ayah submission: word indices of the whole ayah
+        wabs = lambda w: None if w is None else w + off  # noqa: E731
         t0 = a["frames"][0] * 0.04
         failing: dict[int, list[str]] = {w["index"]: [] for w in a.get("words", [])}
         lid = lambda i: f"{s}:{y}:L{i}"  # noqa: E731
@@ -101,7 +103,7 @@ def build(report: dict[str, Any]) -> dict[str, Any]:
             if not idn["confirmed"] and l.get("word") in failing:
                 failing[l["word"]].append(f"{lid(i)}:identity")
             letters.append({
-                "id": lid(i), "word": l.get("word"), "symbol": l["symbol"], "kind": l["kind"],
+                "id": lid(i), "word": wabs(l.get("word")), "symbol": l["symbol"], "kind": l["kind"],
                 "uthmani_chars": l.get("uth", []), "run_length": l.get("run_length", 1),
                 "onset_s": round(t0 + l["onset_s"], 3), "duration_s": l["duration_s"],
                 "duration_counts": l.get("duration_counts"),
@@ -125,7 +127,7 @@ def build(report: dict[str, Any]) -> dict[str, Any]:
                 {"percentile_masters": None, "percentile_cohort": None, "z_masters": None}
             rid = f"{s}:{y}:R{j}"
             rules.append({
-                "id": rid, "rule": v["rule"], "word": v["word_index"], "mechanism": v["mechanism"],
+                "id": rid, "rule": v["rule"], "word": wabs(v["word_index"]), "mechanism": v["mechanism"],
                 "status": v["status"], "scored": scored,
                 "expected_counts": exp, "observed_counts": counts, "observed_seconds": secs,
                 "deviation_counts": dev, **pct,
@@ -136,7 +138,7 @@ def build(report: dict[str, Any]) -> dict[str, Any]:
                 failing[v["word_index"]].append(rid)
         for w in a.get("words", []):
             fails = failing.get(w["index"], [])
-            words.append({"ref": f"{s}:{y}:{w['index']}", "text": w["word"], "all_correct": not fails,
+            words.append({"ref": f"{s}:{y}:{w['index'] + off}", "text": w["word"], "all_correct": not fails,
                           "failing": fails})
     m = report.get("mastery") or {}
     scored_chars = [c for l in letters for c in l["characteristics"].values() if c["scored"]]

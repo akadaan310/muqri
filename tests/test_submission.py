@@ -170,3 +170,31 @@ def test_letter_strength_reports_quwwa(passage, engine) -> None:  # type: ignore
     assert any(s["expected"] for s in per_letter), "some letters must carry strong sifat"
     for s in per_letter:
         assert s["realised"] <= s["expected"]
+
+
+def test_part_of_an_ayah_is_graded_with_the_ayahs_word_indices(passage, engine) -> None:  # type: ignore[no-untyped-def]
+    """A learner may recite any stretch of words. Cut a master's recording where a word starts and
+    grade the rest as a slice: the words keep their places in the ayah, and the slice grades as
+    cleanly as the whole."""
+    lay, hus, _big = passage
+    r = max(hus, key=lambda x: len(x["uthmani"].split()))
+    n = len(r["uthmani"].split())
+    lp = np.fromfile(DUMP / r["file"], dtype="<f4").reshape(r["frames"], lay["columns"])
+    whole = engine.analyze(None, [(r["sura"], r["aya"])], posteriors=lp)
+    same = engine.analyze(None, [(r["sura"], r["aya"], 0, n - 1)], posteriors=lp)
+    assert same["measurements"]["words"] == whole["measurements"]["words"], "the full range is the ayah"
+
+    w0 = n // 2
+    onset = min(l["onset_s"] for l in whole["measurements"]["letters"] if l["word"] == w0)
+    cut = lp[max(0, int(onset / 0.04) - 3):]
+    part = engine.analyze(None, [(r["sura"], r["aya"], w0, n - 1)], posteriors=cut)
+    m = part["measurements"]
+    assert [w["ref"] for w in m["words"]] == [f"{r['sura']}:{r['aya']}:{i}" for i in range(w0, n)]
+    assert all(l["word"] >= w0 for l in m["letters"] if l["word"] is not None)
+    assert part["ayahs"][0]["word_offset"] == w0
+    ok_whole = whole["measurements"]["summary"]["words_all_correct"] / len(whole["measurements"]["words"])
+    ok_part = m["summary"]["words_all_correct"] / len(m["words"])
+    assert ok_part >= ok_whole - 0.25, (ok_part, ok_whole)
+
+    with pytest.raises(ValueError):
+        engine.analyze(None, [(r["sura"], r["aya"], 0, n)], posteriors=lp)

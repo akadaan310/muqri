@@ -212,16 +212,35 @@ det.onclick=async()=>{
  finally{det.disabled=false;}
 };
 function kv(label,val,cls){return '<div class="k"><span>'+esc(label)+'</span><span class="'+(cls||'')+'">'+esc(val)+'</span></div>';}
+function measures(m){
+ if(!m)return '';
+ const s=m.summary,r=m.recording||{};
+ let h='<div class="card"><h3 style="margin:0 0 10px">Measurements</h3>';
+ h+=kv('Words with every judgement passing',s.words_all_correct+' / '+s.words,s.words_all_correct==s.words?'ok':'warn');
+ h+=kv('Characteristics not realised',s.characteristics_not_realised+' / '+s.characteristics_scored,s.characteristics_not_realised?'warn':'ok');
+ h+=kv('Letters whose identity is not confirmed',s.identity_not_confirmed+' / '+s.letters,s.identity_not_confirmed?'warn':'ok');
+ h+=kv('Rules failed',s.rules_failed+' / '+s.rules_scored,s.rules_failed?'warn':'ok');
+ if(r.seconds_per_count)h+=kv('Tempo',r.seconds_per_count+' s per count ('+r.tempo_class+')');
+ const L={},R={};m.letters.forEach(l=>L[l.id]=l);m.rules.forEach(x=>R[x.id]=x);
+ h+='<table><tr><th>Word</th><th>Measurement</th><th>Expected</th><th>Observed</th><th>Margin / deviation</th><th>Masters pct</th><th>z</th></tr>';
+ for(const w of m.words){ if(w.all_correct)continue;
+  for(const f of w.failing){ let row;
+   if(f.includes(':R')){const x=R[f];row=['rule '+x.rule,(x.expected_counts||[]).join('–')||'—',x.observed_counts??x.status,x.deviation_counts??'—',x.percentile_masters??'—',x.z_masters??'—'];}
+   else{const i=f.lastIndexOf(':'),l=L[f.slice(0,i)],k=f.slice(i+1);
+    if(k=='identity')row=[l.symbol+' identity',l.symbol,l.identity.competitor||'—',l.identity.margin,'—','—'];
+    else{const c=l.characteristics[k];row=[l.symbol+' '+k,c.expected,c.observed,c.margin,c.percentile_masters??'—',c.z_masters??'—'];}}
+   h+='<tr><td class="ar">'+esc(w.text)+'</td>'+row.map(v=>'<td>'+esc(v)+'</td>').join('')+'</tr>';}}
+ h+='</table></div>';
+ return h;
+}
 function knowledge(k){
  if(!k)return '';
  const s=k.summary||{},sk=k.skills||{},pct=x=>(100*x).toFixed(1)+'%';
- let h='<div class="card"><h3 style="margin:0 0 4px">Your Quran, from this recitation</h3>'
+ let h='<div class="card"><h3 style="margin:0 0 4px">Skill estimates (learner model)</h3>'
   +'<p class="note" style="margin:0 0 10px">'+s.skills_measured+' skills measured, '+s.skills_inferred+' inferred from related evidence, '
   +s.skills_prior_only+' not yet seen'+(k.recitations_so_far>1?' — '+k.recitations_so_far+' recitations so far':'')+'.</p>';
- if(s.projected_rule_accuracy_whole_quran!=null)h+=kv('Projected rule accuracy across the whole Quran',pct(s.projected_rule_accuracy_whole_quran));
- if((s.strengths||[]).length)h+=kv('Strengths (at the masters\' level)',s.strengths.join(', '),'ok');
- for(const r of (s.to_work_on||[]).slice(0,8)){const d=sk[r];
-  h+=kv('Work on: '+r,pct(d.estimate)+' vs masters '+pct(d.masters??d.cohort)+' (gap '+(100*d.gap_to_masters).toFixed(1)+' pts)','warn');}
+ for(const[r,d]of Object.entries(sk).filter(([,d])=>d.basis=='measured').sort((a,b)=>b[1].gap_to_masters-a[1].gap_to_masters).slice(0,10))
+  h+=kv(r+' ('+d.basis+')',pct(d.estimate)+' ['+pct(d.interval90[0])+'–'+pct(d.interval90[1])+'] · masters '+pct(d.masters??d.cohort)+' · gap '+(100*d.gap_to_masters).toFixed(1)+' pts',d.interval_below_masters?'warn':'');
  const p=k.path||{}; if((p.ready_to_learn||[]).length)h+=kv('Ready to learn next',p.ready_to_learn.slice(0,6).join(' → '));
  for(const[r,v]of Object.entries(k.lengths||{}))
   h+=kv('Your '+r.replace(/_/g,' '),v.median_counts+' counts'+(v.spread_counts!=null?' (± '+v.spread_counts+')':'')+(v.masters_median_counts!=null?'; masters '+v.masters_median_counts:''));
@@ -232,7 +251,7 @@ function knowledge(k){
 }
 function render(j){
  const s=j.summary||{},m=j.mastery||{};
- let h=knowledge(j.knowledge)+'<div class="card"><h3 style="margin:0 0 10px">Summary</h3>';
+ let h=measures(j.measurements)+knowledge(j.knowledge)+'<div class="card"><h3 style="margin:0 0 10px">Summary</h3>';
  h+=kv('Ayahs',s.ayahs)+kv('Letters',s.letters)+kv('Judgments',s.judgments);
  h+=kv('Rules located',s.rules_located)+kv('Errors',s.errors,s.errors?'err':'ok');
  if(s.accuracy!=null)h+=kv('Accuracy',(100*s.accuracy).toFixed(1)+'%',s.accuracy>0.9?'ok':'warn');

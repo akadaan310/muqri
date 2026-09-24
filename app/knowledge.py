@@ -7,8 +7,6 @@ build on -- not a list of hints, but the learner's whole state, stated with its 
                 prior), evidence, and how the learner stands against the masters and the cohort
                 (app/learner.py; leave-one-reciter-out: beats the cohort mean on rules the learner
                 has NOT yet recited by 4.7 % from one verse, 16.6 % from three, 27.7 % from ten)
-  strengths     skills measured above the masters' own rate -- the mastery the learner did not know
-                they have
   lengths       the learner's own count for each madd type, how consistently they hold it, and the
                 masters' count beside it -- calibration is the reciter's, consistency is the standard
   projection    every rule instance in all 6,236 ayahs scored with the learner's skills: expected
@@ -38,10 +36,7 @@ STRUCTURES = ROOT / "research_agency_lab/experiments/calculus/structures_T300.js
 RULE_LAYER = ROOT / "research_agency_lab/experiments/calculus/rule_layer_T300.json"
 HELD = 0.9
 LEARNER_FLOOR_SD = 1.0      # log-odds; the learner-population prior (see CohortModel.posterior)
-# a gap must be real AND worth working on: statistically below the masters (the 90 % interval's upper
-# end under their rate) and at least two points below them -- a careful reading otherwise listed
-# gaps of 0.003, which are the masters' own calibration, not work
-MIN_GAP = 0.02
+
 
 
 @lru_cache(maxsize=1)
@@ -129,18 +124,13 @@ def build(report: dict[str, Any], history: dict[str, Any] | None = None) -> dict
         d["cohort"] = round(float(1 / (1 + 2.718281828 ** -model.mu[idx[s]])), 4)
         d["masters"] = round(masters["rates"][s], 4) if s in masters["rates"] else None
 
-    strengths = sorted((s for s, d in skills.items() if d["basis"] == "measured" and d["masters"] is not None
-                        and d["interval90"][0] >= d["masters"] - 0.02 and d["evidence"][1] >= 2),
-                       key=lambda s: -skills[s]["evidence"][1])
-    # to work on: measured AND confidently below the masters -- the 90 % interval's upper end under the
-    # masters' own rate. The gap is the magnitude of the work, not a pass/fail.
-    to_work_on = []
+    # numbers only: the gap to the masters and whether the 90 % interval lies entirely below / above
+    # their rate. What to recommend, and in what order, is the consumer's decision.
     for s, d in skills.items():
         ref = d["masters"] if d["masters"] is not None else d["cohort"]
-        if d["basis"] == "measured" and d["interval90"][1] < ref and ref - d["estimate"] >= MIN_GAP:
-            d["gap_to_masters"] = round(ref - d["estimate"], 4)
-            to_work_on.append(s)
-    to_work_on.sort(key=lambda s: -skills[s]["gap_to_masters"])
+        d["gap_to_masters"] = round(ref - d["estimate"], 4)
+        d["interval_below_masters"] = d["interval90"][1] < ref
+        d["interval_above_masters"] = d["interval90"][0] > ref
 
     lengths = {}
     for ru, xs in h["lengths"].items():
@@ -173,7 +163,6 @@ def build(report: dict[str, Any], history: dict[str, Any] | None = None) -> dict
             "skills_inferred": sum(d["basis"] == "inferred" for d in skills.values()),
             "skills_prior_only": sum(d["basis"] == "prior" for d in skills.values()),
             "projected_rule_accuracy_whole_quran": proj["expected_rule_accuracy"],
-            "strengths": strengths, "to_work_on": to_work_on,
         },
         "skills": skills,
         "lengths": lengths,

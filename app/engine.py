@@ -232,6 +232,8 @@ class Engine:
         report = build_report(per_ayah, rule_filter)
         report["basmala"] = basmala
         report["wajh"] = wajh
+        from app.measurements import build as measurements
+        report["measurements"] = measurements(report)
         return report
 
     # Recordings of a surah's first ayah often open with the basmala (in T300, 60 of 766 verse-1 clips,

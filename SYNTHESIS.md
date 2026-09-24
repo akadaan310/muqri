@@ -103,3 +103,47 @@ duration + F0 curve (+ energy)** in, mel out, then a vocoder trained for sustain
 
 Compute: Modal. The pilot is sized to a few GPU-hours; the full run is sized after the pilot's
 learning curve is measured.
+
+## Status at pause (2026-09-24) — paused to return to detection
+
+**Pilot built and measured.** Coverage-selected hour (`datasets/qaari_keys/synth_select.jl`), cut at
+Husary's own pauses by `obadx/recitation-segmenter-v2` with the ayah's words assigned to the pieces
+by a DP over the engine's CTC likelihoods (`modal_synth.py::prep`); 259 pieces / 47.8 min trained.
+Matcha-TTS on the 42 QPS symbols, 128-band 44.1 kHz mels, BigVGAN-v2 44 kHz vocoder, H100, 75 min
+(epoch 824, ~7.4k steps).
+
+Held-out passages (12, 186 words, 1,309 letters), graded by the engine:
+
+| | letters failing identity | words fully correct | characteristics not realised |
+|---|---|---|---|
+| real Husary | 0.5 % | 89.8 % | 0.2 % |
+| epoch 524 | 19.7 % | 12.9 % | 8.8 % |
+| epoch 824 | 9.5 % | 38.2 % | 5.1 % |
+
+A master's ear (the user): intelligible, recognisably Husary, "sounds like an alien" -- choppy.
+
+**Where the choppiness comes from (measured).**
+- Not mainly the vocoder: Husary's real 17:109-110 through BigVGAN-v2 keeps voicing breaks 0.85 -> 0.83
+  per s and spectral flux; the user hears it "crisp and clear, a little choppy" -- a small ceiling to
+  fix later by fine-tuning the vocoder on Husary.
+- The acoustic model's pitch: frame-to-frame wobble 0.106 semitones vs Husary's 0.067 (+58 %).
+- Sampling settings (3 held-out passages, `voice_metrics.py`): lower temperature steadies the pitch
+  (wobble 0.080-0.085 at t=0.2-0.4 vs 0.096-0.099 at 0.667; real 0.071); 64 steps at t=0.4 gives the most
+  fully correct words (24/55 vs 16-22; real 50/55); letter failures stay ~12 % at every setting --
+  sampling does not fix the model, training does.
+- The model was still improving steeply when the budget ended (errors halved in the last 25 min).
+
+**Ready, not run:** resuming from epoch 824 with mels precomputed beside every wav
+(`_cache_mels`, loader patched) -- the pilot H100 ran ~1.6 steps/s waiting on STFTs.
+
+**Next round, in order of payoff:** precomputed mels + longer training on all 43 h of Husary;
+pause symbols from the segmenter so it learns his waqf rhythm; explicit F0 (pitch predictor + pitch-
+conditioned decoder, the singing-synthesis approach) against the wobble; an NSF-style vocoder or
+BigVGAN fine-tuned on Husary; pre-train on muaalem's ~848 h of masters then fine-tune per voice
+(and the multi-reciter model). Costs: ~$4.60 per H100-hour all-in; the pilot hour's prep ~$0.30.
+
+**Spend:** Modal metered $24.18 of the $30 this month (synthesis $8.11 of it); $5.82 left.
+
+**Engine findings from this track:** alignment of one long ayah recording (> ~30 s) smears -- a fatha
+stretched over a 4 s pause in 27:36; stop detection found no word-boundary stop in several long ayahs
+Husary breathes in; the engine flags ~10 % of Husary's own words (word accuracy 0.888 on 296 verses).

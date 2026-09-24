@@ -82,9 +82,17 @@ def _patch_matcha() -> None:
     dm = base.parent / "data" / "text_mel_datamodule.py"
     src = dm.read_text()
     assert "audio, sr = ta.load(filepath)" in src
-    dm.write_text(src.replace("audio, sr = ta.load(filepath)",
-                              "import soundfile as _sf; _y, sr = _sf.read(filepath, dtype='float32', always_2d=True); "
-                              "audio = torch.from_numpy(_y.T.copy())"))
+    src = src.replace("audio, sr = ta.load(filepath)",
+                      "import soundfile as _sf; _y, sr = _sf.read(filepath, dtype='float32', always_2d=True); "
+                      "audio = torch.from_numpy(_y.T.copy())")
+    # a mel precomputed next to the wav (train_matcha writes them) is read instead of recomputed: the
+    # pilot run spent the H100 waiting on STFTs (~1.6 steps/s)
+    old = "    def get_mel(self, filepath):\n"
+    assert old in src
+    src = src.replace(old, old + "        if __import__('os').path.exists(filepath + '.mel.pt'):\n"
+                      "            return normalize(torch.load(filepath + '.mel.pt'), self.data_parameters['mel_mean'], "
+                      "self.data_parameters['mel_std'])\n")
+    dm.write_text(src)
     cl = base / "cleaners.py"
     cl.write_text(cl.read_text() + '\n\ndef qps_cleaners(text):\n    """QPS is already phonetic: no cleaning."""\n    return text\n')
 
@@ -287,7 +295,7 @@ def prep(shards: int = 4) -> None:
 
 
 # --------------------------------------------------------------------------------------------- train
-@app.function(image=train_image, gpu="H100", timeout=24 * 3600, volumes={"/vol": vol}, cpu=12.0, memory=65536)
+@app.function(image=train_image, gpu="H100", timeout=24 * 3600, volumes={"/vol": vol}, cpu=8.0, memory=32768)
 def train_matcha(hours: float, batch: int, resume: bool) -> str:
     import os
     import subprocess
@@ -301,9 +309,10 @@ def train_matcha(hours: float, batch: int, resume: bool) -> str:
     stats = work / "stats.json"
     common = [f"data.train_filelist_path={work}/train.txt", f"data.valid_filelist_path={work}/test.txt",
               "data.cleaners=[qps_cleaners]", "data.add_blank=True", "data.n_spks=1",
-              *(f"data.{k}={v}" for k, v in MEL.items()), f"data.batch_size={batch}", "data.num_workers=10"]
+              *(f"data.{k}={v}" for k, v in MEL.items()), f"data.batch_size={batch}", "data.num_workers=6"]
     if not stats.exists():
         stats.write_text(json.dumps(_mel_stats(work / "train.txt")))
+    _cache_mels([work / "train.txt", work / "test.txt"])
     st = json.loads(stats.read_text())
     from matcha.text.symbols import symbols
     cfg = [*common, f"data.data_statistics.mel_mean={st['mel_mean']}", f"data.data_statistics.mel_std={st['mel_std']}",
@@ -327,6 +336,26 @@ def train_matcha(hours: float, batch: int, resume: bool) -> str:
     proc.wait()
     vol.commit()
     return "".join(tail)
+
+
+def _cache_mels(filelists: list[Path]) -> None:
+    """Every training / validation mel once, beside its wav (raw log-mel; the loader normalises)."""
+    import soundfile as sf
+    import torch
+    from matcha.utils.audio import mel_spectrogram
+    n = 0
+    for fl in filelists:
+        for line in fl.read_text().splitlines():
+            wav = line.split("|")[0]
+            if not line.strip() or Path(wav + ".mel.pt").exists():
+                continue
+            y, _ = sf.read(wav, dtype="float32")
+            m = mel_spectrogram(torch.from_numpy(y)[None], MEL["n_fft"], MEL["n_feats"], SR, MEL["hop_length"],
+                                MEL["win_length"], MEL["f_min"], MEL["f_max"], center=False).squeeze()
+            torch.save(m.clone(), wav + ".mel.pt")
+            n += 1
+    vol.commit()
+    print(f"cached {n} mels", flush=True)
 
 
 def _mel_stats(filelist: Path) -> dict[str, float]:
@@ -355,6 +384,16 @@ def train(hours: float = 2.5, batch: int = 16, resume: bool = False) -> None:
 
 # --------------------------------------------------------------------------------------------- synth
 AYAH_GAP_S = 0.8          # silence between synthesized ayahs of a passage
+
+
+@app.function(image=train_image, gpu="T4", timeout=3600, volumes={"/vol": vol}, cpu=4.0, memory=16384)
+def synth_grid(passages: list[dict], ckpt: str, configs: list[list[float]]) -> list[dict]:  # type: ignore[type-arg]
+    """The same passages under several (n_timesteps, temperature) settings, one container."""
+    out = []
+    for steps, temp in configs:
+        for r in synth_passages.local(passages, ckpt, int(steps), float(temp)):
+            out.append({**r, "name": f"{r['name']}_n{int(steps)}_t{temp}"})
+    return out
 
 
 @app.function(image=train_image, gpu="T4", timeout=3600, volumes={"/vol": vol}, cpu=4.0, memory=16384)
@@ -443,3 +482,25 @@ def synth(out: str = "research_agency_lab/experiments/synthesis/pilot/samples", 
             y, _ = librosa.load(io.BytesIO(data), sr=SR, mono=True)
             parts += [y, np.zeros(int(AYAH_GAP_S * SR), dtype=np.float32)]
         sf.write(d / f"{p['name']}_REAL.wav", np.concatenate(parts[:-1]), SR, subtype="PCM_16")
+
+
+@app.local_entrypoint()
+def grid(ckpt: str = "/vol/synth/matcha/run/checkpoints/checkpoint_epoch=824.ckpt",
+         out: str = "research_agency_lab/experiments/synthesis/pilot/grid", n: int = 3) -> None:
+    """Inference settings on a few held-out passages: which sampling makes the voice steadiest."""
+    import sys
+    sys.path.insert(0, str(ROOT / "research_agency_lab/experiments/learner_eval"))
+    from muaalem_eval import MOSHAF
+    from quran_transcript import Aya, quran_phonetizer
+    pilot = json.loads((SYN / "pilot.json").read_text())
+    ps = sorted(pilot["test"]["passages"], key=lambda p: -p["ayahs"])[:n]
+    passages = [{"name": f"test_{p['surah']:03d}_{p['from_ayah']:03d}-{p['to_ayah']:03d}",
+                 "ayahs": [{"surah": p["surah"], "ayah": a, "text": quran_phonetizer(
+                     Aya(p["surah"], a).get().uthmani, MOSHAF, remove_spaces=False).phonemes}
+                     for a in range(p["from_ayah"], p["to_ayah"] + 1)]} for p in ps]
+    configs = [[32, 0.667], [32, 0.4], [32, 0.2], [64, 0.667], [64, 0.4], [64, 0.2]]
+    d = ROOT / out
+    d.mkdir(parents=True, exist_ok=True)
+    for r in synth_grid.remote(passages, ckpt, configs):
+        (d / f"{r['name']}.wav").write_bytes(r["wav"])
+    print("wrote", len(list(d.glob("*.wav"))), "files to", d)

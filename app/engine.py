@@ -22,10 +22,18 @@ from app.analysis import analyse_clip
 from app.rule_bind import bind
 from app.ghunnah import grade_ghunnah
 from app.mudud import resolve
+from app.waqf import find_stops
 from app.submission import AyahRef, build_report, grade_rule, to_counts, walk_alignment
 from app.tajweed_rules.parser import TajweedParser
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def _np_slice(wave, t0: int, t1: int, frame_s: float = 0.04, sr: int = 16000):  # type: ignore[no-untyped-def]
+    """The waveform samples belonging to a frame span."""
+    import numpy as np
+    w = np.asarray(wave)
+    return w[int(t0 * frame_s * sr):int(t1 * frame_s * sr)]
 LEARNER = ROOT / "research_agency_lab/experiments/learner_eval"
 
 
@@ -104,6 +112,7 @@ class Engine:
         `rule_filter` restricts the report to one rule family, for rule-practice submissions.
         """
         lp = posteriors if posteriors is not None else self.posteriors(audio)
+        audio = audio if isinstance(audio, __import__("numpy").ndarray) else None
         lay = self._layout
         if lay is None:
             raise RuntimeError("no layout: pass one to Engine() or let posteriors() build it")
@@ -128,10 +137,13 @@ class Engine:
             bounds, resolutions = resolve(bind(parsed, r.phonemes, r.word_ph))
             verdicts = [grade_rule(b, units) for b in bounds]
             ghunnah = [g for g in (grade_ghunnah(b, units, to_counts) for b in bounds) if g]
+            # silence is acoustic: pass the audio segment, not the posteriors
+            seg = None if audio is None else _np_slice(audio, t0, t1)
+            stops = find_stops(units, r.word_ph, seg)
             harakas = [u.duration_s / u.duration_counts for u in units
                        if u.duration_counts not in (None, 0)]
             per_ayah.append({"surah": r.surah, "ayah": r.ayah, "frames": [t0, t1],
                              "haraka_s": round(float(np.median(harakas)), 3) if harakas else None,
                              "verdicts": verdicts, "ghunnah": ghunnah,
-                             "resolutions": resolutions, "_units": units})
+                             "resolutions": resolutions, "stops": stops, "_units": units})
         return build_report(per_ayah, rule_filter)

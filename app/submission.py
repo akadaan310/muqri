@@ -32,9 +32,10 @@ import numpy as np
 from app.analysis import FRAME_S, Unit, analyse_clip, ctc_viterbi
 from app.ghunnah import grade_ghunnah, letter_strength
 from app.mudud import drift
+from app.waqf import endurance, roll_up as waqf_roll_up
 from app.rule_bind import ph_units
 
-SCHEMA_VERSION = "1.3"
+SCHEMA_VERSION = "1.4"
 ROOT = Path(__file__).resolve().parents[1]
 # how much audio one ayah may consume, as a multiple of its phoneme count, when walking a long
 # recording: generous enough for the slowest mujawwad, tight enough to stay linear
@@ -300,6 +301,7 @@ def build_report(per_ayah: list[dict[str, Any]], rule_filter: str | None = None)
                         for u in units],
             "rules": [v.to_dict() for v in vs],
             "ghunnah": [g.to_dict() for g in gh],
+            "stops": [s.to_dict() for s in a.get("stops", [])],
         })
     errors = [v.to_dict() for v in all_v if v.status in {"short", "long", "wrong"}]
     letters = sum(len(a["letters"]) for a in ayahs)
@@ -315,6 +317,8 @@ def build_report(per_ayah: list[dict[str, Any]], rule_filter: str | None = None)
         "by_rule": _roll_up(all_v),
         "ghunnah_grades": _ghunnah_roll_up(all_gh),
         "madd_drift": drift([a["verdicts"] for a in per_ayah]),
+        "waqf": waqf_roll_up([a.get("stops", []) for a in per_ayah]),
+        "endurance": endurance([a.get("stops", []) for a in per_ayah]),
         "resolutions": [{"governing": r.governing, "overridden": r.overridden,
                          "expected_counts": list(r.expected_counts) if r.expected_counts else None}
                         for a in per_ayah for r in a.get("resolutions", [])],

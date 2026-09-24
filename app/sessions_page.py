@@ -97,7 +97,33 @@ function detail(c){
   }else{
     h+='<table><tr><th>#</th><th>word</th><th>result</th><th>engine evidence</th></tr>'+c.mistakes.map((m,i)=>'<tr><td>'+(i+1)+'</td><td class="arw">'+esc(m.text)+'</td><td class="'+(m.verdict=='caught'?'ok':m.verdict=='missed'?'bad':'warn')+'">'+esc(m.verdict)+'</td><td>'+esc((m.evidence.length?m.evidence:m.engine_failing).join('; '))+'</td></tr>').join('')+'</table>';
   }
+  if(c.letter_matrix)h+=matrix(c.letter_matrix);
   if(c.false_alarms.length)h+='<details><summary>'+c.false_alarms.length+' word(s) flagged that the script left alone</summary><table>'+c.false_alarms.map(a=>'<tr><td class="arw">'+esc(a.text)+'</td><td>'+esc(a.failing.join('; '))+'</td></tr>').join('')+'</table></details>';
+  return h;
+}
+// only what the engine measures: makhraj (the identity test) and the characteristics it has a head for
+const COLS=[['hams_jahr','hams / jahr'],['shiddah_rakhawah','shiddah / rakhawah'],['istila_istifal','isti\'la / istifal'],
+ ['itbaq_infitah','itbaq / infitah'],['safir','safir'],['qalqalah','qalqalah'],['tafashshi','tafashshi'],['istitalah','istitalah'],['ghunnah','ghunnah']];
+const AR={'[همس]':'hams','[جهر]':'jahr','[شديد]':'shiddah','[رخو]':'rakhawah','[بين بين]':'tawassut','[مفخم]':'heavy','[مرقق]':'light',
+ '[مطبق]':'itbaq','[منفتح]':'infitah','[صفير]':'safir','[لا صفير]':'no safir','[مقلقل]':'qalqalah','[لا قلقلة]':'no qalqalah','[مغن]':'ghunnah','[لا غنة]':'no ghunnah'};
+function heard(x){return AR[x]||x||'';}
+function mcell(v){
+  if(!v||!v.measured||!v.scored)return '<td></td>';
+  return v.realised?'<td class="ok">✓ '+esc(v.value)+'<br><span class="mut">'+v.margin+'</span></td>'
+                   :'<td class="bad">✗ heard '+esc(heard(v.observed))+'<br><span class="mut">'+v.margin+'</span></td>';
+}
+function matrix(M){
+  const S=M.summary, g=Object.keys(S), lab=k=>k.startsWith('held')?'held (saakin / shaddah / stop)':k;
+  let h='<details><summary>Letter matrix — makhraj and characteristics ('+S.all.letters+' letters)</summary><div class="tbl"><table><tr><th>accuracy</th>'+g.map(k=>'<th>'+esc(lab(k))+'</th>').join('')+'</tr>'
+   +'<tr><td>makhraj</td>'+g.map(k=>'<td>'+(S[k].makhraj_confirmed==null?'':Math.round(100*S[k].makhraj_confirmed)+'%')+'</td>').join('')+'</tr>';
+  const names=COLS.map(c=>c[0]).filter(n=>g.some(k=>S[k].sifat[n]));
+  h+=names.map(n=>'<tr><td>'+esc(COLS.find(c=>c[0]==n)[1])+'</td>'+g.map(k=>{const x=S[k].sifat[n];return '<td>'+(x?Math.round(100*x.realised)+'% <span class="mut">('+x.n+')</span>':'')+'</td>';}).join('')+'</tr>').join('')+'</table>';
+  const cols=COLS.filter(c=>names.includes(c[0]));
+  h+='<table><tr><th>letter</th><th>context</th><th>makhraj</th>'+cols.map(c=>'<th>'+c[1]+'</th>').join('')+'</tr>'+M.letters.map(r=>{
+    const by={};r.sifat.forEach(s=>by[s.sifah]=s);
+    const mk=r.makhraj, mc=mk.margin==null?'<td></td>':'<td class="'+(mk.confirmed?'ok':'bad')+'" title="'+esc(mk.region)+'">'+(mk.confirmed?'✓':'✗ heard '+esc(mk.competitor))+'<br><span class="mut">'+mk.margin+(mk.confirmed&&mk.competitor?' vs '+esc(mk.competitor):'')+'</span></td>';
+    return '<tr><td class="arw">'+esc(r.letter)+'</td><td>'+esc(r.context)+'</td>'+mc+cols.map(c=>mcell(by[c[0]])).join('')+'</tr>';}).join('')+'</table></div>'
+   +'<p class="mut">Numbers are the engine\'s confidence margin (higher = clearer). Makhraj: the letter against the nearest letter it could be confused with.</p></details>';
   return h;
 }
 let media=null,chunks=[],recKey=null;

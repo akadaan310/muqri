@@ -77,6 +77,12 @@ class Exercise:
     controls: tuple[tuple[int, int], ...] = field(default_factory=tuple)   # (ayah, word) kept correct in B
 
 
+def _nasal(rule: str) -> tuple[float, float]:
+    """A nasal hold is expected in the engine's calibrated band (app/submission.nasal_band)."""
+    from app.submission import nasal_band
+    return nasal_band(rule) or (2.0, 4.8)
+
+
 def _madd(n: float, hi: float | None = None) -> tuple[float, float]:
     """n counts (or n..hi, e.g. tawassut's 4-5), with TOL either side."""
     return (n - TOL, (hi or n) + TOL)
@@ -95,7 +101,7 @@ ROUNDS: dict[int, tuple[Exercise, ...]] = {
             wajh="tawassut",
             expect=(Expect(32, 0, "madd_tabii", _madd(2)),
                     Expect(32, 2, "madd_munfasil", _madd(4, 5), "declared tawassut"),
-                    Expect(32, 3, "ghunnah", _madd(2)),
+                    Expect(32, 3, "ghunnah", _nasal("ghunnah")),
                     Expect(32, 4, "madd_muttasil", _madd(4, 5)),
                     Expect(32, 5, "madd_lazim", (5.0, 7.75), "Husary holds it ~7 counts")),
             mistakes=(Mistake(32, 2, "قَالُوٓا۟ إِنَّ — munfasil at 2 counts (qasr), though you declared 4.",
@@ -121,12 +127,12 @@ ROUNDS: dict[int, tuple[Exercise, ...]] = {
                  "ذَنۢبِهِۦٓ إِنسٌ ṣila kubrā 4 · جَآنٌّ lazim 6.",
             wajh="tawassut",
             expect=(Expect(39, 0, "idgham_no_ghunnah"),
-                    Expect(39, 3, "ikhfa", _madd(2)),
-                    Expect(39, 4, "iqlab", _madd(2)),
+                    Expect(39, 3, "ikhfa", _nasal("ikhfa")),
+                    Expect(39, 4, "iqlab", _nasal("iqlab")),
                     Expect(39, 4, "madd_silah_kubra", _madd(4, 5), "declared tawassut"),
-                    Expect(39, 5, "ikhfa", _madd(2)),
+                    Expect(39, 5, "ikhfa", _nasal("ikhfa")),
                     Expect(39, 5, "idgham_ghunnah", _madd(2)),
-                    Expect(39, 7, "ghunnah", _madd(2)),
+                    Expect(39, 7, "ghunnah", _nasal("ghunnah")),
                     Expect(39, 7, "madd_lazim", (5.0, 7.75))),
             mistakes=(Mistake(39, 3, "عَن ذَنۢبِهِۦٓ — iẓhār: a clear nūn, tongue on the gum, no hiding, no nasal hold.",
                               (Sig("rule", "ikhfa"), Sig("sifah", "ghonna"), Sig("identity", heard=("ن",)))),
@@ -162,7 +168,9 @@ ROUNDS: dict[int, tuple[Exercise, ...]] = {
                               (Sig("identity", letter="ط", heard=("ت",)), Sig("rule", "itbaq"),
                                Sig("sifah", "itbaq", letter="ط"), Sig("sifah", "tafkheem_or_taqeeq", letter="ط"))),
                       Mistake(3, 1, "ٱلثَّاقِبُ — say the thā' as sīn.",
-                              (Sig("identity", letter="ث", heard=("س",)),))),
+                              (Sig("identity", letter="ث", heard=("س",)),
+                               # the whistle of sin heard on the tha' (round 1: safir margin 7.2 -> -0.2)
+                               Sig("sifah", "safeer", letter="ث")))),
             controls=((2, 1), (3, 0)),
             learn="Letter substitutions are tested only against each letter's classical confusions; a miss "
                   "on sīn->ṣād or thā'->sīn says the confusion is heard but not decided, and the margin "
@@ -247,6 +255,8 @@ def score(ex: Exercise, take: str, m: dict[str, Any]) -> dict[str, Any]:
         out["mistakes"] = rows
         out["caught"] = sum(r["verdict"] == "caught" for r in rows)
         scripted = {(mk.ayah, mk.word) for mk in ex.mistakes}
+    from app.letter_matrix import build as letter_matrix
+    out["letter_matrix"] = letter_matrix(m)
     out["false_alarms"] = [{"ayah": a, "word": w, "text": v["text"], "failing": v["failing"],
                             "control": (a, w) in ex.controls}
                            for (a, w), v in sorted(flagged.items()) if (a, w) not in scripted]

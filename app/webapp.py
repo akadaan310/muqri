@@ -563,6 +563,7 @@ def create_app():  # type: ignore[no-untyped-def]
         audio: UploadFile = File(...),  # noqa: B008
         exercise: str = Form(...),  # noqa: B008
         take: str = Form(...),  # noqa: B008
+        note: str = Form(""),  # noqa: B008 - e.g. "rescore of <stamp>": not a new recording
     ):  # type: ignore[no-untyped-def]
         import json as _json
         from app.sessions import exercises, score
@@ -594,7 +595,7 @@ def create_app():  # type: ignore[no-untyped-def]
         (d / f"{stamp}.report.json").write_text(_json.dumps(report, ensure_ascii=False))
         (d / f"{stamp}.score.json").write_text(_json.dumps(card, ensure_ascii=False))
         with SESSIONS_LOG.open("a") as fh:        # the numbers only, committed; audio stays local
-            fh.write(_json.dumps({"stamp": stamp, **card}, ensure_ascii=False) + "\n")
+            fh.write(_json.dumps({"stamp": stamp, "note": note, **card}, ensure_ascii=False) + "\n")
         return JSONResponse({"score": card, "elapsed_seconds": round(time.time() - t0, 2)})
 
     # -- the listening review --------------------------------------------------------------------

@@ -1,0 +1,10401 @@
+[
+ {
+  "surah": 2,
+  "ayah": 15,
+  "split": "train",
+  "passage": "2:15-15",
+  "seconds": 13.558,
+  "segments": [
+   {
+    "file": "wavs/002015_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 13.558,
+    "text": "ءَللَااهُ يَستَهزِءُ بِهِم وَيَمُددُهُم فِۦۦ طُغيَاانِهِم يَعمَهُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    1.13,
+    12.79,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 7,
+   "letters": 56,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 238,
+   "characteristics_not_realised": 0,
+   "rules_scored": 19,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 2,
+  "ayah": 256,
+  "split": "train",
+  "passage": "2:256-256",
+  "seconds": 30.665,
+  "segments": [
+   {
+    "file": "wavs/002256_0.wav",
+    "words": [
+     0,
+     8
+    ],
+    "seconds": 10.75,
+    "text": "لَاااا ءِكرَااهَ فِ ددِۦۦنِ قَتتَبَييَنَ ررُشدُ مِنَ لغَيي"
+   },
+   {
+    "file": "wavs/002256_1.wav",
+    "words": [
+     9,
+     20
+    ],
+    "seconds": 14.085,
+    "text": "فَمَيييَكفُر بِططَااغُۥۥتِ وَيُءمِ۾۾۾بِللَااهِ فَقَدِ ستَمسَكَ بِلعُروَتِ لوُثقَاا لَ ںںںفِصَاامَ لَهَاا"
+   },
+   {
+    "file": "wavs/002256_2.wav",
+    "words": [
+     21,
+     23
+    ],
+    "seconds": 5.83,
+    "text": "وَللَااهُ سَمِۦۦعُن عَلِۦۦۦۦم"
+   }
+  ],
+  "intervals": [
+   [
+    0.49,
+    5.43,
+    0,
+    3
+   ],
+   [
+    6.79,
+    10.05,
+    4,
+    8
+   ],
+   [
+    11.45,
+    23.725,
+    9,
+    20
+   ],
+   [
+    25.945,
+    29.965,
+    21,
+    23
+   ]
+  ],
+  "engine_stops": 2,
+  "summary": {
+   "words": 24,
+   "words_all_correct": 20,
+   "letters": 144,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 581,
+   "characteristics_not_realised": 2,
+   "rules_scored": 64,
+   "rules_failed": 3
+  },
+  "seconds_per_count": 0.2
+ },
+ {
+  "surah": 4,
+  "ayah": 21,
+  "split": "train",
+  "passage": "4:21-21",
+  "seconds": 22.1,
+  "segments": [
+   {
+    "file": "wavs/004021_0.wav",
+    "words": [
+     0,
+     10
+    ],
+    "seconds": 22.1,
+    "text": "وَكَيفَ تَءخُذُۥۥنَهُۥۥ وَقَدڇ ءَفضَاا بَعضُكُم ءِلَاا بَعضِوووَءَخَذنَ مِںںںكُممممِۦۦثَااقَن غَلِۦۦظَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.39,
+    20.025,
+    0,
+    10
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 11,
+   "words_all_correct": 9,
+   "letters": 81,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 336,
+   "characteristics_not_realised": 0,
+   "rules_scored": 33,
+   "rules_failed": 2
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 4,
+  "ayah": 168,
+  "split": "train",
+  "passage": "4:168-168",
+  "seconds": 14.524,
+  "segments": [
+   {
+    "file": "wavs/004168_0.wav",
+    "words": [
+     0,
+     11
+    ],
+    "seconds": 14.524,
+    "text": "ءِننننَ للَذِۦۦنَ كَفَرُۥۥ وَظَلَمُۥۥ لَم يَكُنِ للَااهُ لِيَغفِرَ لَهُم وَلَاا لِيَهدِيَهُم طَرِۦۦقَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.49,
+    13.11,
+    0,
+    11
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 12,
+   "words_all_correct": 12,
+   "letters": 80,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 309,
+   "characteristics_not_realised": 0,
+   "rules_scored": 24,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.241
+ },
+ {
+  "surah": 7,
+  "ayah": 14,
+  "split": "train",
+  "passage": "7:12-15",
+  "seconds": 10.867,
+  "segments": [
+   {
+    "file": "wavs/007014_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 10.867,
+    "text": "قَاالَ ءَںںںظِرنِۦۦۦۦ ءِلَاا يَومِ يُبڇعَثُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.47,
+    9.81,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 4,
+   "letters": 34,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 143,
+   "characteristics_not_realised": 1,
+   "rules_scored": 12,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 7,
+  "ayah": 132,
+  "split": "train",
+  "passage": "7:132-132",
+  "seconds": 19.853,
+  "segments": [
+   {
+    "file": "wavs/007132_0.wav",
+    "words": [
+     0,
+     11
+    ],
+    "seconds": 19.853,
+    "text": "وَقَاالُۥۥ مَهمَاا تَءتِنَاا بِهِۦۦ مِن ءَاايَتِللِتَسحَرَنَاا بِهَاا فَمَاا نَحنُ لَكَ بِمُءمِنِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.81,
+    17.45,
+    0,
+    11
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 12,
+   "words_all_correct": 11,
+   "letters": 79,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 303,
+   "characteristics_not_realised": 2,
+   "rules_scored": 21,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 7,
+  "ayah": 199,
+  "split": "train",
+  "passage": "7:199-199",
+  "seconds": 11.912,
+  "segments": [
+   {
+    "file": "wavs/007199_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 11.912,
+    "text": "خُذِ لعَفوَ وَءمُر بِلعُرفِ وَءَعرِض عَنِ لجَااهِلِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.83,
+    10.55,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 7,
+   "letters": 46,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 217,
+   "characteristics_not_realised": 0,
+   "rules_scored": 25,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 10,
+  "ayah": 56,
+  "split": "train",
+  "passage": "10:56-59",
+  "seconds": 9.247,
+  "segments": [
+   {
+    "file": "wavs/010056_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 9.247,
+    "text": "هُوَ يُحيِۦۦ وَيُمِۦۦتُ وَءِلَيهِ تُرجَعُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.23,
+    7.71,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 5,
+   "letters": 37,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 152,
+   "characteristics_not_realised": 0,
+   "rules_scored": 10,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 11,
+  "ayah": 41,
+  "split": "train",
+  "passage": "11:41-43",
+  "seconds": 19.357,
+  "segments": [
+   {
+    "file": "wavs/011041_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 9.53,
+    "text": "وَقَاالَ ركَبُۥۥ فِۦۦهَاا بِسمِ للَااهِ مَجڇر۪ــهَاا وَمُرسَااهَاا"
+   },
+   {
+    "file": "wavs/011041_1.wav",
+    "words": [
+     7,
+     10
+    ],
+    "seconds": 9.827,
+    "text": "ءِننننَ رَببِۦۦ لَغَفُۥۥرُررَحِۦۦۦۦم"
+   }
+  ],
+  "intervals": [
+   [
+    0.91,
+    8.83,
+    0,
+    6
+   ],
+   [
+    10.23,
+    16.45,
+    7,
+    10
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 11,
+   "words_all_correct": 9,
+   "letters": 74,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 283,
+   "characteristics_not_realised": 1,
+   "rules_scored": 33,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 12,
+  "ayah": 10,
+  "split": "train",
+  "passage": "12:9-11",
+  "seconds": 28.787,
+  "segments": [
+   {
+    "file": "wavs/012010_0.wav",
+    "words": [
+     0,
+     15
+    ],
+    "seconds": 28.787,
+    "text": "قَاالَ قَااااءِلُممممِنهُم لَاا تَقڇتُلُۥۥ يُۥۥسُفَ وَءَلقُۥۥهُ فِۦۦ غَيَاابَتِ لجُببِ يَلتَقِطڇهُ بَعضُ سسَييَاارَتِ ءِںںںكُںںںتُم فَااعِلِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.59,
+    25.465,
+    0,
+    15
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 16,
+   "words_all_correct": 15,
+   "letters": 107,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 435,
+   "characteristics_not_realised": 1,
+   "rules_scored": 37,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 15,
+  "ayah": 44,
+  "split": "train",
+  "passage": "15:44-44",
+  "seconds": 14.211,
+  "segments": [
+   {
+    "file": "wavs/015044_0.wav",
+    "words": [
+     0,
+     7
+    ],
+    "seconds": 14.211,
+    "text": "لَهَاا سَبڇعَتُ ءَبڇوَاابِللِكُللِ بَاابِممممِنهُم جُزءُممممَقڇسُۥۥۥۥم"
+   }
+  ],
+  "intervals": [
+   [
+    0.03,
+    12.89,
+    0,
+    7
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 8,
+   "words_all_correct": 7,
+   "letters": 52,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 228,
+   "characteristics_not_realised": 0,
+   "rules_scored": 17,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 17,
+  "ayah": 103,
+  "split": "train",
+  "passage": "17:103-103",
+  "seconds": 13.087,
+  "segments": [
+   {
+    "file": "wavs/017103_0.wav",
+    "words": [
+     0,
+     8
+    ],
+    "seconds": 13.087,
+    "text": "فَءَرَاادَ ءَيييَستَفِززَهُممممِنَ لءَرضِ فَءَغرَقڇنَااهُ وَمَممممَعَهُۥۥ جَمِۦۦعَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.91,
+    11.77,
+    0,
+    8
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 9,
+   "words_all_correct": 9,
+   "letters": 65,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 261,
+   "characteristics_not_realised": 0,
+   "rules_scored": 22,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 18,
+  "ayah": 4,
+  "split": "train",
+  "passage": "18:1-6",
+  "seconds": 8.411,
+  "segments": [
+   {
+    "file": "wavs/018004_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 8.411,
+    "text": "وَيُںںںذِرَ للَذِۦۦنَ قَاالُ تتَخَذَ للَااهُ وَلَدَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.07,
+    7.41,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 5,
+   "letters": 39,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 140,
+   "characteristics_not_realised": 1,
+   "rules_scored": 10,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 18,
+  "ayah": 32,
+  "split": "train",
+  "passage": "18:32-38",
+  "seconds": 28.16,
+  "segments": [
+   {
+    "file": "wavs/018032_0.wav",
+    "words": [
+     0,
+     13
+    ],
+    "seconds": 28.16,
+    "text": "وَضرِبڇ لَهُممممَثَلَررَجُلَينِ جَعَلنَاا لِءَحَدِهِمَاا جَننننَتَينِ مِن ءَعنَاابِوووَحَفَفنَااهُمَاا بِنَخلِوووَجَعَلنَاا بَينَهُمَاا زَرعَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.09,
+    26.285,
+    0,
+    13
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 14,
+   "words_all_correct": 14,
+   "letters": 115,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 476,
+   "characteristics_not_realised": 0,
+   "rules_scored": 40,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 18,
+  "ayah": 36,
+  "split": "train",
+  "passage": "18:32-38",
+  "seconds": 26.776,
+  "segments": [
+   {
+    "file": "wavs/018036_0.wav",
+    "words": [
+     0,
+     11
+    ],
+    "seconds": 26.776,
+    "text": "وَمَاااا ءَظُننننُ سسَااعَتَ قَااااءِمَتَوووَلَءِررُدِتتُ ءِلَاا رَببِۦۦ لَءَجِدَننننَ خَيرَممممِنهَاا مُںںںقَلَبَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.57,
+    24.205,
+    0,
+    11
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 12,
+   "words_all_correct": 11,
+   "letters": 80,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 295,
+   "characteristics_not_realised": 1,
+   "rules_scored": 26,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 18,
+  "ayah": 104,
+  "split": "train",
+  "passage": "18:104-104",
+  "seconds": 12.826,
+  "segments": [
+   {
+    "file": "wavs/018104_0.wav",
+    "words": [
+     0,
+     10
+    ],
+    "seconds": 12.826,
+    "text": "ءَللَذِۦۦنَ ضَللَ سَعيُهُم فِ لحَيَااتِ ددُنيَاا وَهُم يَحسَبُۥۥنَ ءَننننَهُم يُحسِنُۥۥنَ صُنعَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.21,
+    11.27,
+    0,
+    10
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 11,
+   "words_all_correct": 11,
+   "letters": 75,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 309,
+   "characteristics_not_realised": 0,
+   "rules_scored": 28,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 19,
+  "ayah": 4,
+  "split": "train",
+  "passage": "19:1-7",
+  "seconds": 17.371,
+  "segments": [
+   {
+    "file": "wavs/019004_0.wav",
+    "words": [
+     0,
+     13
+    ],
+    "seconds": 17.371,
+    "text": "قَاالَ رَببِ ءِننننِۦۦ وَهَنَ لعَظمُ مِننننِۦۦ وَشتَعَلَ ررَءسُ شَيبَوووَلَم ءَكُ۾۾۾بِدُعَااااءِكَ رَببِ شَقِييَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.43,
+    15.93,
+    0,
+    13
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 14,
+   "words_all_correct": 13,
+   "letters": 82,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 328,
+   "characteristics_not_realised": 0,
+   "rules_scored": 28,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 19,
+  "ayah": 16,
+  "split": "train",
+  "passage": "19:16-16",
+  "seconds": 12.121,
+  "segments": [
+   {
+    "file": "wavs/019016_0.wav",
+    "words": [
+     0,
+     9
+    ],
+    "seconds": 12.121,
+    "text": "وَذكُر فِ لكِتَاابِ مَريَمَ ءِذِ ںںںتَبَذَت مِن ءَهلِهَاا مَكَاانَںںںشَرقِييَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.51,
+    10.61,
+    0,
+    9
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 10,
+   "words_all_correct": 10,
+   "letters": 62,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 269,
+   "characteristics_not_realised": 0,
+   "rules_scored": 27,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.241
+ },
+ {
+  "surah": 19,
+  "ayah": 42,
+  "split": "train",
+  "passage": "19:42-42",
+  "seconds": 15.229,
+  "segments": [
+   {
+    "file": "wavs/019042_0.wav",
+    "words": [
+     0,
+     14
+    ],
+    "seconds": 15.229,
+    "text": "ءِذ قَاالَ لِءَبِۦۦهِ يَااااءَبَتِ لِمَ تَعبُدُ مَاا لَاا يَسمَعُ وَلَاا يُبڇصِرُ وَلَاا يُغنِۦۦ عَںںںكَ شَيءَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.13,
+    14.01,
+    0,
+    14
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 15,
+   "words_all_correct": 15,
+   "letters": 85,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 335,
+   "characteristics_not_realised": 0,
+   "rules_scored": 26,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.241
+ },
+ {
+  "surah": 20,
+  "ayah": 32,
+  "split": "train",
+  "passage": "20:31-32",
+  "seconds": 6.087,
+  "segments": [
+   {
+    "file": "wavs/020032_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 6.087,
+    "text": "وَءَشرِكهُ فِۦۦۦۦ ءَمرِۦۦ"
+   }
+  ],
+  "intervals": [
+   [
+    0.41,
+    5.27,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 19,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 80,
+   "characteristics_not_realised": 0,
+   "rules_scored": 9,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 21,
+  "ayah": 78,
+  "split": "train",
+  "passage": "21:78-78",
+  "seconds": 20.556,
+  "segments": [
+   {
+    "file": "wavs/021078_0.wav",
+    "words": [
+     0,
+     13
+    ],
+    "seconds": 20.556,
+    "text": "وَدَااوُۥۥدَ وَسُلَيمَاانَ ءِذ يَحكُمَاانِ فِ لحَرثِ ءِذ نَفَشَت فِۦۦهِ غَنَمُ لقَومِ وَكُننننَاا لِحُكمِهِم شَااهِدِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.25,
+    19.31,
+    0,
+    13
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 14,
+   "words_all_correct": 14,
+   "letters": 96,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 399,
+   "characteristics_not_realised": 0,
+   "rules_scored": 37,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 25,
+  "ayah": 51,
+  "split": "train",
+  "passage": "25:51-51",
+  "seconds": 10.553,
+  "segments": [
+   {
+    "file": "wavs/025051_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 10.553,
+    "text": "وَلَو شِءنَاا لَبَعَثنَاا فِۦۦ كُللِ قَريَتِننننَذِۦۦرَاا"
+   }
+  ],
+  "intervals": [
+   [
+    1.07,
+    9.07,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 6,
+   "letters": 43,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 166,
+   "characteristics_not_realised": 1,
+   "rules_scored": 15,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 27,
+  "ayah": 34,
+  "split": "train",
+  "passage": "27:33-36",
+  "seconds": 31.53,
+  "segments": [
+   {
+    "file": "wavs/027034_0.wav",
+    "words": [
+     0,
+     10
+    ],
+    "seconds": 21.875,
+    "text": "قَاالَت ءِننننَ لمُلُۥۥكَ ءِذَاا دَخَلُۥۥ قَريَتَن ءَفسَدُۥۥهَاا وَجَعَلُۥۥۥۥ ءَعِززَتَ ءَهلِهَاااا ءَذِللَه"
+   },
+   {
+    "file": "wavs/027034_1.wav",
+    "words": [
+     11,
+     12
+    ],
+    "seconds": 9.655,
+    "text": "وَكَذَاالِكَ يَفعَلُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.41,
+    20.865,
+    0,
+    10
+   ],
+   [
+    22.885,
+    28.605,
+    11,
+    12
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 13,
+   "words_all_correct": 12,
+   "letters": 102,
+   "identity_not_confirmed": 1,
+   "characteristics_scored": 396,
+   "characteristics_not_realised": 1,
+   "rules_scored": 32,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 29,
+  "ayah": 37,
+  "split": "train",
+  "passage": "29:36-38",
+  "seconds": 14.002,
+  "segments": [
+   {
+    "file": "wavs/029037_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 14.002,
+    "text": "فَكَذذَبُۥۥهُ فَءَخَذَتهُمُ ررَجڇفَتُ فَءَصبَحُۥۥ فِۦۦ دَاارِهِم جَااثِمِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.95,
+    12.17,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 7,
+   "letters": 62,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 246,
+   "characteristics_not_realised": 0,
+   "rules_scored": 16,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 33,
+  "ayah": 9,
+  "split": "train",
+  "passage": "33:9-11",
+  "seconds": 29.309,
+  "segments": [
+   {
+    "file": "wavs/033009_0.wav",
+    "words": [
+     0,
+     15
+    ],
+    "seconds": 21.297,
+    "text": "يَااااءَييُهَ للَذِۦۦنَ ءَاامَنُ ذكُرُۥۥ نِعمَتَ للَااهِ عَلَيكُم ءِذ جَااااءَتكُم جُنُۥۥدُںںںفَءَرسَلنَاا عَلَيهِم رِۦۦحَوووَجُنُۥۥدَللَم تَرَوهَاا"
+   },
+   {
+    "file": "wavs/033009_1.wav",
+    "words": [
+     16,
+     20
+    ],
+    "seconds": 8.012,
+    "text": "وَكَاانَ للَااهُ بِمَاا تَعمَلُۥۥنَ بَصِۦۦرَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.67,
+    19.63,
+    0,
+    15
+   ],
+   [
+    22.965,
+    27.705,
+    16,
+    20
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 21,
+   "words_all_correct": 21,
+   "letters": 148,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 577,
+   "characteristics_not_realised": 0,
+   "rules_scored": 53,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.2
+ },
+ {
+  "surah": 36,
+  "ayah": 2,
+  "split": "train",
+  "passage": "36:2-8",
+  "seconds": 5.224,
+  "segments": [
+   {
+    "file": "wavs/036002_0.wav",
+    "words": [
+     0,
+     1
+    ],
+    "seconds": 5.224,
+    "text": "وَلقُرءَاانِ لحَكِۦۦۦۦم"
+   }
+  ],
+  "intervals": [
+   [
+    0.33,
+    4.19,
+    0,
+    1
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 2,
+   "words_all_correct": 2,
+   "letters": 18,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 80,
+   "characteristics_not_realised": 0,
+   "rules_scored": 12,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.2
+ },
+ {
+  "surah": 36,
+  "ayah": 6,
+  "split": "train",
+  "passage": "36:2-8",
+  "seconds": 15.229,
+  "segments": [
+   {
+    "file": "wavs/036006_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 15.229,
+    "text": "لِتُںںںذِرَ قَومَممممَاااا ءُںںںذِرَ ءَاابَااااءُهُم فَهُم غَاافِلُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.53,
+    12.93,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 7,
+   "letters": 49,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 197,
+   "characteristics_not_realised": 0,
+   "rules_scored": 14,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 36,
+  "ayah": 51,
+  "split": "train",
+  "passage": "36:51-55",
+  "seconds": 16.483,
+  "segments": [
+   {
+    "file": "wavs/036051_0.wav",
+    "words": [
+     0,
+     9
+    ],
+    "seconds": 16.483,
+    "text": "وَنُفِخَ فِ صصُۥۥرِ فَءِذَاا هُممممِنَ لءَجڇدَااثِ ءِلَاا رَببِهِم يَںںںسِلُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.59,
+    13.53,
+    0,
+    9
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 10,
+   "words_all_correct": 10,
+   "letters": 59,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 236,
+   "characteristics_not_realised": 0,
+   "rules_scored": 20,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 36,
+  "ayah": 55,
+  "split": "train",
+  "passage": "36:51-55",
+  "seconds": 14.002,
+  "segments": [
+   {
+    "file": "wavs/036055_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 14.002,
+    "text": "ءِننننَ ءَصحَاابَ لجَننننَتِ ليَومَ فِۦۦ شُغُلِںںںفَااكِهُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    1.09,
+    12.41,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 7,
+   "letters": 44,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 181,
+   "characteristics_not_realised": 0,
+   "rules_scored": 19,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 38,
+  "ayah": 6,
+  "split": "train",
+  "passage": "38:6-13",
+  "seconds": 25.809,
+  "segments": [
+   {
+    "file": "wavs/038006_0.wav",
+    "words": [
+     0,
+     7
+    ],
+    "seconds": 14.54,
+    "text": "وَںںںطَلَقَ لمَلَءُ مِنهُم ءَنِ مشُۥۥ وَصبِرُۥۥ عَلَاااا ءَاالِهَتِكُم"
+   },
+   {
+    "file": "wavs/038006_1.wav",
+    "words": [
+     8,
+     11
+    ],
+    "seconds": 11.269,
+    "text": "ءِننننَ هَااذَاا لَشَيءُيييُرَاااادڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.07,
+    13.57,
+    0,
+    7
+   ],
+   [
+    15.51,
+    23.165,
+    8,
+    11
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 12,
+   "words_all_correct": 11,
+   "letters": 79,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 325,
+   "characteristics_not_realised": 1,
+   "rules_scored": 31,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.36
+ },
+ {
+  "surah": 38,
+  "ayah": 10,
+  "split": "train",
+  "passage": "38:6-13",
+  "seconds": 23.51,
+  "segments": [
+   {
+    "file": "wavs/038010_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 12.63,
+    "text": "ءَم لَهُممممُلكُ سسَمَااوَااتِ وَلءَرضِ وَمَاا بَينَهُمَاا"
+   },
+   {
+    "file": "wavs/038010_1.wav",
+    "words": [
+     7,
+     9
+    ],
+    "seconds": 10.88,
+    "text": "فَليَرتَقُۥۥ فِ لءَسبَاااابڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.75,
+    11.75,
+    0,
+    6
+   ],
+   [
+    13.51,
+    19.79,
+    7,
+    9
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 10,
+   "words_all_correct": 9,
+   "letters": 67,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 287,
+   "characteristics_not_realised": 0,
+   "rules_scored": 33,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.36
+ },
+ {
+  "surah": 38,
+  "ayah": 21,
+  "split": "train",
+  "passage": "38:21-21",
+  "seconds": 12.199,
+  "segments": [
+   {
+    "file": "wavs/038021_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 12.199,
+    "text": "وَهَل ءَتَااكَ نَبَءُ لخَصمِ ءِذ تَسَووَرُ لمِحرَاااابڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.29,
+    10.11,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 6,
+   "letters": 44,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 199,
+   "characteristics_not_realised": 1,
+   "rules_scored": 22,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 41,
+  "ayah": 44,
+  "split": "train",
+  "passage": "41:44-44",
+  "seconds": 61.649,
+  "segments": [
+   {
+    "file": "wavs/041044_0.wav",
+    "words": [
+     0,
+     7
+    ],
+    "seconds": 15.51,
+    "text": "وَلَو جَعَلنَااهُ قُرءَاانَن ءَعجَمِييَللَقَاالُۥۥ لَولَاا فُصصِلَت ءَاايَااتُه"
+   },
+   {
+    "file": "wavs/041044_1.wav",
+    "words": [
+     8,
+     9
+    ],
+    "seconds": 6.945,
+    "text": "ءَٲعجَمِييُوووَعَرَبِيي"
+   },
+   {
+    "file": "wavs/041044_2.wav",
+    "words": [
+     10,
+     15
+    ],
+    "seconds": 11.18,
+    "text": "قُل هُوَ لِللَذِۦۦنَ ءَاامَنُۥۥ هُدَوووَشِفَااااء"
+   },
+   {
+    "file": "wavs/041044_3.wav",
+    "words": [
+     16,
+     24
+    ],
+    "seconds": 16.035,
+    "text": "وَللَذِۦۦنَ لَاا يُءمِنُۥۥنَ فِۦۦۦۦ ءَااذَاانِهِم وَقڇرُوووَهُوَ عَلَيهِم عَمَاا"
+   },
+   {
+    "file": "wavs/041044_4.wav",
+    "words": [
+     25,
+     29
+    ],
+    "seconds": 11.979,
+    "text": "ءُلَااااءِكَ يُنَاادَونَ مِممممَكَاانِ۾۾۾بَعِۦۦۦۦدڇ"
+   }
+  ],
+  "intervals": [
+   [
+    1.01,
+    14.73,
+    0,
+    7
+   ],
+   [
+    16.29,
+    21.105,
+    8,
+    9
+   ],
+   [
+    23.805,
+    32.705,
+    10,
+    15
+   ],
+   [
+    34.565,
+    48.8,
+    16,
+    24
+   ],
+   [
+    50.54,
+    60.915,
+    25,
+    29
+   ]
+  ],
+  "engine_stops": 3,
+  "summary": {
+   "words": 30,
+   "words_all_correct": 25,
+   "letters": 220,
+   "identity_not_confirmed": 6,
+   "characteristics_scored": 866,
+   "characteristics_not_realised": 5,
+   "rules_scored": 61,
+   "rules_failed": 4
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 47,
+  "ayah": 37,
+  "split": "train",
+  "passage": "47:37-37",
+  "seconds": 14.472,
+  "segments": [
+   {
+    "file": "wavs/047037_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 14.472,
+    "text": "ءِيييَسءَلكُمُۥۥهَاا فَيُحفِكُم تَبڇخَلُۥۥ وَيُخرِجڇ ءَضغَاانَكُم"
+   }
+  ],
+  "intervals": [
+   [
+    0.93,
+    13.09,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 6,
+   "letters": 55,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 248,
+   "characteristics_not_realised": 0,
+   "rules_scored": 23,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 52,
+  "ayah": 24,
+  "split": "train",
+  "passage": "52:24-24",
+  "seconds": 14.08,
+  "segments": [
+   {
+    "file": "wavs/052024_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 14.08,
+    "text": "وَيَطُۥۥفُ عَلَيهِم غِلمَاانُللَهُم كَءَننننَهُم لُءلُءُممممَكنُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.29,
+    11.93,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 5,
+   "letters": 53,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 229,
+   "characteristics_not_realised": 1,
+   "rules_scored": 17,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 52,
+  "ayah": 37,
+  "split": "train",
+  "passage": "52:34-38",
+  "seconds": 13.923,
+  "segments": [
+   {
+    "file": "wavs/052037_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 13.923,
+    "text": "ءَم عِںںںدَهُم خَزَااااءِنُ رَببِكَ ءَم هُمُ لمُصَيطِرُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.29,
+    6.61,
+    0,
+    3
+   ],
+   [
+    8.19,
+    12.83,
+    4,
+    6
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 7,
+   "letters": 45,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 198,
+   "characteristics_not_realised": 0,
+   "rules_scored": 18,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 52,
+  "ayah": 48,
+  "split": "train",
+  "passage": "52:48-48",
+  "error": "LibsndfileError: Unspecified internal error."
+ },
+ {
+  "surah": 53,
+  "ayah": 16,
+  "split": "train",
+  "passage": "53:15-16",
+  "seconds": 7.105,
+  "segments": [
+   {
+    "file": "wavs/053016_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 7.105,
+    "text": "ءِذ يَغشَ سسِدڇرَتَ مَاا يَغشَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.77,
+    6.39,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 5,
+   "letters": 25,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 111,
+   "characteristics_not_realised": 0,
+   "rules_scored": 13,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.36
+ },
+ {
+  "surah": 68,
+  "ayah": 22,
+  "split": "train",
+  "passage": "68:22-22",
+  "seconds": 13.453,
+  "segments": [
+   {
+    "file": "wavs/068022_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 13.453,
+    "text": "ءَنِ غدُۥۥ عَلَاا حَرثِكُم ءِںںںكُںںںتُم صَاارِمِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.51,
+    11.29,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 5,
+   "letters": 39,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 166,
+   "characteristics_not_realised": 1,
+   "rules_scored": 17,
+   "rules_failed": 2
+  },
+  "seconds_per_count": 0.3
+ },
+ {
+  "surah": 69,
+  "ayah": 28,
+  "split": "train",
+  "passage": "69:28-35",
+  "seconds": 7.889,
+  "segments": [
+   {
+    "file": "wavs/069028_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 7.889,
+    "text": "مَاااا ءَغنَاا عَننننِۦۦ مَاالِيَه"
+   }
+  ],
+  "intervals": [
+   [
+    0.47,
+    6.49,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 4,
+   "letters": 22,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 79,
+   "characteristics_not_realised": 0,
+   "rules_scored": 9,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 69,
+  "ayah": 32,
+  "split": "train",
+  "passage": "69:28-35",
+  "seconds": 11.337,
+  "segments": [
+   {
+    "file": "wavs/069032_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 11.337,
+    "text": "ثُممممَ فِۦۦ سِلسِلَتِںںںذَرعُهَاا سَبڇعُۥۥنَ ذِرَااعَںںںفَسلُكُۥۥۥۥه"
+   }
+  ],
+  "intervals": [
+   [
+    0.07,
+    10.55,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 7,
+   "letters": 51,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 213,
+   "characteristics_not_realised": 0,
+   "rules_scored": 23,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 74,
+  "ayah": 33,
+  "split": "train",
+  "passage": "74:33-35",
+  "seconds": 3.37,
+  "segments": [
+   {
+    "file": "wavs/074033_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 3.37,
+    "text": "وَللَيلِ ءِذ ءَدڇبَر"
+   }
+  ],
+  "intervals": [
+   [
+    0.53,
+    2.69,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 17,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 87,
+   "characteristics_not_realised": 0,
+   "rules_scored": 8,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.239
+ },
+ {
+  "surah": 74,
+  "ayah": 51,
+  "split": "train",
+  "passage": "74:50-51",
+  "seconds": 3.84,
+  "segments": [
+   {
+    "file": "wavs/074051_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 3.84,
+    "text": "فَررَت مِںںںقَسوَرَه"
+   }
+  ],
+  "intervals": [
+   [
+    0.07,
+    3.01,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 2,
+   "letters": 16,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 78,
+   "characteristics_not_realised": 1,
+   "rules_scored": 11,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 75,
+  "ayah": 30,
+  "split": "train",
+  "passage": "75:27-37",
+  "seconds": 7.497,
+  "segments": [
+   {
+    "file": "wavs/075030_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 7.497,
+    "text": "ءِلَاا رَببِكَ يَومَءِذِنِ لمَسَااااقڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.27,
+    6.77,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 4,
+   "letters": 30,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 127,
+   "characteristics_not_realised": 0,
+   "rules_scored": 11,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.3
+ },
+ {
+  "surah": 75,
+  "ayah": 34,
+  "split": "train",
+  "passage": "75:27-37",
+  "seconds": 5.146,
+  "segments": [
+   {
+    "file": "wavs/075034_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 5.146,
+    "text": "ءَولَاا لَكَ فَءَولَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.87,
+    4.39,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 18,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 72,
+   "characteristics_not_realised": 0,
+   "rules_scored": 5,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 76,
+  "ayah": 1,
+  "split": "train",
+  "passage": "76:1-4",
+  "seconds": 14.994,
+  "segments": [
+   {
+    "file": "wavs/076001_0.wav",
+    "words": [
+     0,
+     10
+    ],
+    "seconds": 14.994,
+    "text": "هَل ءَتَاا عَلَ لءِںںںسَاانِ حِۦۦنُممممِنَ ددَهرِ لَم يَكُںںںشَيءَممممَذكُۥۥرَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.41,
+    13.57,
+    0,
+    10
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 11,
+   "words_all_correct": 10,
+   "letters": 57,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 235,
+   "characteristics_not_realised": 1,
+   "rules_scored": 25,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 76,
+  "ayah": 13,
+  "split": "train",
+  "passage": "76:13-16",
+  "seconds": 18.521,
+  "segments": [
+   {
+    "file": "wavs/076013_0.wav",
+    "words": [
+     0,
+     9
+    ],
+    "seconds": 18.521,
+    "text": "مُتتَكِءِۦۦنَ فِۦۦهَاا عَلَ لءَرَااااءِكِ لَاا يَرَونَ فِۦۦهَاا شَمسَوووَلَاا زَمهَرِۦۦرَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.41,
+    16.65,
+    0,
+    9
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 10,
+   "words_all_correct": 8,
+   "letters": 68,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 246,
+   "characteristics_not_realised": 1,
+   "rules_scored": 25,
+   "rules_failed": 3
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 77,
+  "ayah": 32,
+  "split": "train",
+  "passage": "77:32-33",
+  "seconds": 9.247,
+  "segments": [
+   {
+    "file": "wavs/077032_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 9.247,
+    "text": "ءِننننَهَاا تَرمِۦۦ بِشَرَرِںںںكَلقَصر"
+   }
+  ],
+  "intervals": [
+   [
+    0.27,
+    7.73,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 4,
+   "letters": 29,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 126,
+   "characteristics_not_realised": 0,
+   "rules_scored": 19,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 80,
+  "ayah": 14,
+  "split": "train",
+  "passage": "80:14-15",
+  "seconds": 6.087,
+  "segments": [
+   {
+    "file": "wavs/080014_0.wav",
+    "words": [
+     0,
+     1
+    ],
+    "seconds": 6.087,
+    "text": "مَرفُۥۥعَتِممممُطَههَرَه"
+   }
+  ],
+  "intervals": [
+   [
+    0.07,
+    5.19,
+    0,
+    1
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 2,
+   "words_all_correct": 1,
+   "letters": 19,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 78,
+   "characteristics_not_realised": 0,
+   "rules_scored": 11,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.34
+ },
+ {
+  "surah": 82,
+  "ayah": 4,
+  "split": "train",
+  "passage": "82:4-5",
+  "seconds": 5.407,
+  "segments": [
+   {
+    "file": "wavs/082004_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 5.407,
+    "text": "وَءِذَ لقُبُۥۥرُ بُعثِرَت"
+   }
+  ],
+  "intervals": [
+   [
+    0.19,
+    4.27,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 22,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 96,
+   "characteristics_not_realised": 0,
+   "rules_scored": 11,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 83,
+  "ayah": 12,
+  "split": "train",
+  "passage": "83:10-14",
+  "seconds": 12.539,
+  "segments": [
+   {
+    "file": "wavs/083012_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 12.539,
+    "text": "وَمَاا يُكَذذِبُ بِهِۦۦۦۦ ءِللَاا كُللُ مُعتَدِن ءَثِۦۦۦۦم"
+   }
+  ],
+  "intervals": [
+   [
+    0.23,
+    11.47,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 7,
+   "letters": 41,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 157,
+   "characteristics_not_realised": 0,
+   "rules_scored": 7,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 88,
+  "ayah": 6,
+  "split": "train",
+  "passage": "88:6-6",
+  "seconds": 10.475,
+  "segments": [
+   {
+    "file": "wavs/088006_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 10.475,
+    "text": "لَيسَ لَهُم طَعَاامُن ءِللَاا مِںںںضَرِۦۦۦۦع"
+   }
+  ],
+  "intervals": [
+   [
+    0.59,
+    9.15,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 6,
+   "letters": 32,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 135,
+   "characteristics_not_realised": 0,
+   "rules_scored": 15,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 88,
+  "ayah": 17,
+  "split": "train",
+  "passage": "88:14-22",
+  "seconds": 10.632,
+  "segments": [
+   {
+    "file": "wavs/088017_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 10.632,
+    "text": "ءَفَلَاا يَںںںظُرُۥۥنَ ءِلَ لءِبِلِ كَيفَ خُلِقَت"
+   }
+  ],
+  "intervals": [
+   [
+    0.69,
+    9.37,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 5,
+   "letters": 40,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 167,
+   "characteristics_not_realised": 1,
+   "rules_scored": 15,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 88,
+  "ayah": 21,
+  "split": "train",
+  "passage": "88:14-22",
+  "seconds": 10.266,
+  "segments": [
+   {
+    "file": "wavs/088021_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 10.266,
+    "text": "فَذَككِر ءِننننَمَاااا ءَںںںتَ مُذَككِر"
+   }
+  ],
+  "intervals": [
+   [
+    0.43,
+    8.85,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 4,
+   "letters": 26,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 108,
+   "characteristics_not_realised": 0,
+   "rules_scored": 8,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.36
+ },
+ {
+  "surah": 89,
+  "ayah": 4,
+  "split": "train",
+  "passage": "89:2-9",
+  "seconds": 5.59,
+  "segments": [
+   {
+    "file": "wavs/089004_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 5.59,
+    "text": "وَللَيلِ ءِذَاا يَسر"
+   }
+  ],
+  "intervals": [
+   [
+    0.05,
+    3.91,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 2,
+   "letters": 16,
+   "identity_not_confirmed": 1,
+   "characteristics_scored": 71,
+   "characteristics_not_realised": 1,
+   "rules_scored": 9,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 89,
+  "ayah": 8,
+  "split": "train",
+  "passage": "89:2-9",
+  "seconds": 10.58,
+  "segments": [
+   {
+    "file": "wavs/089008_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 10.58,
+    "text": "ءَللَتِۦۦ لَم يُخلَقڇ مِثلُهَاا فِ لبِلَاااادڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.25,
+    9.43,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 6,
+   "letters": 35,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 159,
+   "characteristics_not_realised": 0,
+   "rules_scored": 13,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 90,
+  "ayah": 14,
+  "split": "train",
+  "passage": "90:14-14",
+  "seconds": 10.136,
+  "segments": [
+   {
+    "file": "wavs/090014_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 10.136,
+    "text": "ءَو ءِطڇعَاامُںںںفِۦۦ يَومِںںںذِۦۦ مَسغَبَه"
+   }
+  ],
+  "intervals": [
+   [
+    0.83,
+    9.05,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 6,
+   "letters": 33,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 150,
+   "characteristics_not_realised": 0,
+   "rules_scored": 16,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 96,
+  "ayah": 19,
+  "split": "train",
+  "passage": "96:18-19",
+  "seconds": 8.307,
+  "segments": [
+   {
+    "file": "wavs/096019_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 8.307,
+    "text": "كَللَاا لَاا تُطِعهُ وَسجُدڇ وَقڇتَرِبڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.51,
+    7.37,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 5,
+   "letters": 32,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 151,
+   "characteristics_not_realised": 0,
+   "rules_scored": 12,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 111,
+  "ayah": 1,
+  "split": "train",
+  "passage": "111:1-2",
+  "seconds": 9.613,
+  "segments": [
+   {
+    "file": "wavs/111001_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 9.613,
+    "text": "تَببَت يَدَاااا ءَبِۦۦ لَهَبِوووَتَببڇ"
+   }
+  ],
+  "intervals": [
+   [
+    1.01,
+    8.81,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 5,
+   "letters": 27,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 109,
+   "characteristics_not_realised": 0,
+   "rules_scored": 6,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 14,
+  "ayah": 1,
+  "split": "test",
+  "passage": "14:1-1",
+  "seconds": 30.302,
+  "segments": [
+   {
+    "file": "wavs/014001_0.wav",
+    "words": [
+     0,
+     0
+    ],
+    "seconds": 6.11,
+    "text": "ءَلِف لَاااااام رَاا"
+   },
+   {
+    "file": "wavs/014001_1.wav",
+    "words": [
+     1,
+     15
+    ],
+    "seconds": 24.192,
+    "text": "كِتَاابُن ءَںںںزَلنَااهُ ءِلَيكَ لِتُخرِجَ ننننَااسَ مِنَ ظظُلُمَااتِ ءِلَ ننننُۥۥرِ بِءِذنِ رَببِهِم ءِلَاا صِرَااطِ لعَزِۦۦزِ لحَمِۦۦۦۦدڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.37,
+    5.27,
+    0,
+    0
+   ],
+   [
+    6.95,
+    27.445,
+    1,
+    15
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 16,
+   "words_all_correct": 10,
+   "letters": 116,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 467,
+   "characteristics_not_realised": 2,
+   "rules_scored": 23,
+   "rules_failed": 4
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 18,
+  "ayah": 99,
+  "split": "test",
+  "passage": "18:99-100",
+  "seconds": 13.322,
+  "segments": [
+   {
+    "file": "wavs/018099_0.wav",
+    "words": [
+     0,
+     10
+    ],
+    "seconds": 13.322,
+    "text": "وَتَرَكنَاا بَعضَهُم يَومَءِذِيييَمُۥۥجُ فِۦۦ بَعضِوووَنُفِخَ فِ صصُۥۥرِ فَجَمَعنَااهُم جَمعَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.09,
+    6.07,
+    0,
+    5
+   ],
+   [
+    7.61,
+    12.15,
+    6,
+    10
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 11,
+   "words_all_correct": 10,
+   "letters": 76,
+   "identity_not_confirmed": 2,
+   "characteristics_scored": 311,
+   "characteristics_not_realised": 0,
+   "rules_scored": 29,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 38,
+  "ayah": 56,
+  "split": "test",
+  "passage": "38:56-58",
+  "seconds": 7.758,
+  "segments": [
+   {
+    "file": "wavs/038056_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 7.758,
+    "text": "جَهَننننَمَ يَصلَونَهَاا فَبِءسَ لمِهَاااادڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.19,
+    6.01,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 4,
+   "letters": 34,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 151,
+   "characteristics_not_realised": 0,
+   "rules_scored": 13,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.2
+ },
+ {
+  "surah": 54,
+  "ayah": 16,
+  "split": "test",
+  "passage": "54:16-17",
+  "seconds": 7.027,
+  "segments": [
+   {
+    "file": "wavs/054016_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 7.027,
+    "text": "فَكَيفَ كَاانَ عَذَاابِۦۦ وَنُذُر"
+   }
+  ],
+  "intervals": [
+   [
+    0.51,
+    5.71,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 4,
+   "letters": 27,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 104,
+   "characteristics_not_realised": 0,
+   "rules_scored": 7,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 77,
+  "ayah": 31,
+  "split": "test",
+  "passage": "77:30-31",
+  "seconds": 9.221,
+  "segments": [
+   {
+    "file": "wavs/077031_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 9.221,
+    "text": "لَاا ظَلِۦۦلِوووَلَاا يُغنِۦۦ مِنَ للَهَبڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.31,
+    7.75,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 5,
+   "letters": 31,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 118,
+   "characteristics_not_realised": 0,
+   "rules_scored": 11,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 2,
+  "ayah": 243,
+  "split": "train",
+  "passage": "2:243-245",
+  "seconds": 45.553,
+  "segments": [
+   {
+    "file": "wavs/002243_0.wav",
+    "words": [
+     0,
+     16
+    ],
+    "seconds": 25.175,
+    "text": "ءَلَم تَرَ ءِلَ للَذِۦۦنَ خَرَجُۥۥ مِںںںدِيَاارِهِم وَهُم ءُلُۥۥفُن حَذَرَ لمَوتِ فَقَاالَ لَهُمُ للَااهُ مُۥۥتُۥۥ ثُممممَ ءَحيَااهُم"
+   },
+   {
+    "file": "wavs/002243_1.wav",
+    "words": [
+     17,
+     27
+    ],
+    "seconds": 20.378,
+    "text": "ءِننننَ للَااهَ لَذُۥۥ فَضلِن عَلَ ننننَااسِ وَلَااكِننننَ ءَكثَرَ ننننَااسِ لَاا يَشكُرُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.73,
+    23.925,
+    0,
+    16
+   ],
+   [
+    26.425,
+    44.42,
+    17,
+    27
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 28,
+   "words_all_correct": 25,
+   "letters": 164,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 640,
+   "characteristics_not_realised": 1,
+   "rules_scored": 58,
+   "rules_failed": 2
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 3,
+  "ayah": 2,
+  "split": "train",
+  "passage": "3:2-4",
+  "seconds": 14.237,
+  "segments": [
+   {
+    "file": "wavs/003002_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 14.237,
+    "text": "ءَللَااهُ لَاااا ءِلَااهَ ءِللَاا هُوَ لحَييُ لقَييُۥۥۥۥم"
+   }
+  ],
+  "intervals": [
+   [
+    1.09,
+    12.43,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 7,
+   "letters": 38,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 140,
+   "characteristics_not_realised": 0,
+   "rules_scored": 12,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 4,
+  "ayah": 30,
+  "split": "train",
+  "passage": "4:30-30",
+  "seconds": 16.666,
+  "segments": [
+   {
+    "file": "wavs/004030_0.wav",
+    "words": [
+     0,
+     12
+    ],
+    "seconds": 16.666,
+    "text": "وَمَيييَفعَل ذَاالِكَ عُدڇوَاانَوووَظُلمَںںںفَسَوفَ نُصلِۦۦهِ نَاارَوووَكَاانَ ذَاالِكَ عَلَ للَااهِ يَسِۦۦرَاا"
+   }
+  ],
+  "intervals": [
+   [
+    1.03,
+    9.87,
+    0,
+    7
+   ],
+   [
+    11.11,
+    14.95,
+    8,
+    12
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 13,
+   "words_all_correct": 11,
+   "letters": 85,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 331,
+   "characteristics_not_realised": 1,
+   "rules_scored": 31,
+   "rules_failed": 2
+  },
+  "seconds_per_count": 0.2
+ },
+ {
+  "surah": 6,
+  "ayah": 144,
+  "split": "train",
+  "passage": "6:144-144",
+  "seconds": 79.203,
+  "segments": [
+   {
+    "file": "wavs/006144_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 10.19,
+    "text": "وَمِنَ لءِبِلِ ثنَينِ وَمِنَ لبَقَرِ ثنَييين"
+   },
+   {
+    "file": "wavs/006144_1.wav",
+    "words": [
+     6,
+     15
+    ],
+    "seconds": 24.145,
+    "text": "قُل ءَااااااذذَكَرَينِ حَررَمَ ءَمِ لءُںںںثَيَينِ ءَممممَ شتَمَلَت عَلَيهِ ءَرحَاامُ لءُںںںثَيَييين"
+   },
+   {
+    "file": "wavs/006144_2.wav",
+    "words": [
+     16,
+     22
+    ],
+    "seconds": 14.875,
+    "text": "ءَم كُںںںتُم شُهَدَااااءَ ءِذ وَصصَااكُمُ للَااهُ بِهَااذَاا"
+   },
+   {
+    "file": "wavs/006144_3.wav",
+    "words": [
+     23,
+     33
+    ],
+    "seconds": 16.525,
+    "text": "فَمَن ءَظلَمُ مِممممَنِ فتَرَاا عَلَ للَااهِ كَذِبَللِيُضِللَ ننننَااسَ بِغَيرِ عِلم"
+   },
+   {
+    "file": "wavs/006144_4.wav",
+    "words": [
+     34,
+     39
+    ],
+    "seconds": 13.468,
+    "text": "ءِننننَ للَااهَ لَاا يَهدِ لقَومَ ظظَاالِمِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.23,
+    8.77,
+    0,
+    5
+   ],
+   [
+    11.61,
+    32.825,
+    6,
+    15
+   ],
+   [
+    35.845,
+    47.64,
+    16,
+    22
+   ],
+   [
+    50.78,
+    64.735,
+    23,
+    33
+   ],
+   [
+    66.735,
+    76.775,
+    34,
+    39
+   ]
+  ],
+  "engine_stops": 2,
+  "summary": {
+   "words": 40,
+   "words_all_correct": 33,
+   "letters": 252,
+   "identity_not_confirmed": 4,
+   "characteristics_scored": 1065,
+   "characteristics_not_realised": 5,
+   "rules_scored": 105,
+   "rules_failed": 5
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 7,
+  "ayah": 15,
+  "split": "train",
+  "passage": "7:12-15",
+  "seconds": 9.378,
+  "segments": [
+   {
+    "file": "wavs/007015_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 9.378,
+    "text": "قَاالَ ءِننننَكَ مِنَ لمُںںںظَرِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.45,
+    6.83,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 3,
+   "letters": 25,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 102,
+   "characteristics_not_realised": 1,
+   "rules_scored": 11,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 7,
+  "ayah": 163,
+  "split": "train",
+  "passage": "7:163-163",
+  "seconds": 28.029,
+  "segments": [
+   {
+    "file": "wavs/007163_0.wav",
+    "words": [
+     0,
+     21
+    ],
+    "seconds": 19.417,
+    "text": "وَسءَلهُم عَنِ لقَريَتِ للَتِۦۦ كَاانَت حَااضِرَتَ لبَحرِ ءِذ يَعدُۥۥنَ فِ سسَبڇتِ ءِذ تَءتِۦۦهِم حِۦۦتَاانُهُم يَومَ سَبڇتِهِم شُررَعَوووَيَومَ لَاا يَسبِتُۥۥنَ لَاا تَءتِۦۦهِم"
+   },
+   {
+    "file": "wavs/007163_1.wav",
+    "words": [
+     22,
+     26
+    ],
+    "seconds": 8.612,
+    "text": "كَذَاالِكَ نَبڇلُۥۥهُ۾۾۾بِمَاا كَاانُۥۥ يَفسُقُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.35,
+    17.83,
+    0,
+    21
+   ],
+   [
+    21.005,
+    27.005,
+    22,
+    26
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 27,
+   "words_all_correct": 27,
+   "letters": 180,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 764,
+   "characteristics_not_realised": 0,
+   "rules_scored": 71,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.16
+ },
+ {
+  "surah": 10,
+  "ayah": 50,
+  "split": "train",
+  "passage": "10:50-52",
+  "seconds": 20.398,
+  "segments": [
+   {
+    "file": "wavs/010050_0.wav",
+    "words": [
+     0,
+     11
+    ],
+    "seconds": 20.398,
+    "text": "قُل ءَرَءَيتُم ءِن ءَتَااكُم عَذَاابُهُۥۥ بَيَااتَن ءَو نَهَاارَممممَااذَاا يَستَعجِلُ مِنهُ لمُجڇرِمُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.69,
+    17.31,
+    0,
+    11
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 12,
+   "words_all_correct": 12,
+   "letters": 84,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 359,
+   "characteristics_not_realised": 0,
+   "rules_scored": 33,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 10,
+  "ayah": 57,
+  "split": "train",
+  "passage": "10:56-59",
+  "seconds": 30.276,
+  "segments": [
+   {
+    "file": "wavs/010057_0.wav",
+    "words": [
+     0,
+     13
+    ],
+    "seconds": 30.276,
+    "text": "يَااااءَييُهَ ننننَااسُ قَدڇ جَااااءَتكُممممَوعِظَتُممممِررَببِكُم وَشِفَااااءُللِمَاا فِ صصُدُۥۥرِ وَهُدَوووَرَحمَتُللِلمُءمِنِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    1.11,
+    26.645,
+    0,
+    13
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 14,
+   "words_all_correct": 12,
+   "letters": 94,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 374,
+   "characteristics_not_realised": 0,
+   "rules_scored": 37,
+   "rules_failed": 2
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 11,
+  "ayah": 42,
+  "split": "train",
+  "passage": "11:41-43",
+  "seconds": 23.876,
+  "segments": [
+   {
+    "file": "wavs/011042_0.wav",
+    "words": [
+     0,
+     17
+    ],
+    "seconds": 20.125,
+    "text": "وَهِيَ تَجڇرِۦۦ بِهِم فِۦۦ مَوجِںںںكَلجِبَاالِ وَنَاادَاا نُۥۥحُنِ بڇنَهُۥۥ وَكَاانَ فِۦۦ مَعزِلِيييَاابُنَييَ ركَممممَعَنَاا وَلَاا تَكُممممَع"
+   },
+   {
+    "file": "wavs/011042_1.wav",
+    "words": [
+     18,
+     18
+    ],
+    "seconds": 3.751,
+    "text": "ءَلكَاافِرِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.27,
+    20.025,
+    0,
+    17
+   ],
+   [
+    20.225,
+    21.865,
+    18,
+    18
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 19,
+   "words_all_correct": 19,
+   "letters": 118,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 459,
+   "characteristics_not_realised": 0,
+   "rules_scored": 40,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 12,
+  "ayah": 11,
+  "split": "train",
+  "passage": "12:9-11",
+  "seconds": 21.708,
+  "segments": [
+   {
+    "file": "wavs/012011_0.wav",
+    "words": [
+     0,
+     10
+    ],
+    "seconds": 21.708,
+    "text": "قَاالُۥۥ يَااااءَبَاانَاا مَاا لَكَ لَاا تَءمَننننَاا عَلَاا يُۥۥسُفَ وَءِننننَاا لَهُۥۥ لَنَااصِحُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    2.31,
+    19.99,
+    0,
+    10
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 11,
+   "words_all_correct": 11,
+   "letters": 70,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 230,
+   "characteristics_not_realised": 0,
+   "rules_scored": 17,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 15,
+  "ayah": 49,
+  "split": "train",
+  "passage": "15:49-49",
+  "seconds": 14.289,
+  "segments": [
+   {
+    "file": "wavs/015049_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 14.289,
+    "text": "نَببِء عِبَاادِۦۦۦۦ ءَننننِۦۦۦۦ ءَنَ لغَفُۥۥرُ ررَحِۦۦۦۦم"
+   }
+  ],
+  "intervals": [
+   [
+    1.43,
+    13.41,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 5,
+   "letters": 36,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 133,
+   "characteristics_not_realised": 0,
+   "rules_scored": 12,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 18,
+  "ayah": 1,
+  "split": "train",
+  "passage": "18:1-6",
+  "seconds": 16.144,
+  "segments": [
+   {
+    "file": "wavs/018001_0.wav",
+    "words": [
+     0,
+     10
+    ],
+    "seconds": 16.144,
+    "text": "ءَلحَمدُ لِللَااهِ للَذِۦۦۦۦ ءَںںںزَلَ عَلَاا عَبڇدِهِ لكِتَاابَ وَلَم يَجڇعَللَهُۥۥ عِوَجَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.35,
+    13.69,
+    0,
+    10
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 11,
+   "words_all_correct": 11,
+   "letters": 71,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 292,
+   "characteristics_not_realised": 0,
+   "rules_scored": 18,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 18,
+  "ayah": 5,
+  "split": "train",
+  "passage": "18:1-6",
+  "seconds": 25.6,
+  "segments": [
+   {
+    "file": "wavs/018005_0.wav",
+    "words": [
+     0,
+     11
+    ],
+    "seconds": 17.76,
+    "text": "مَاا لَهُ۾۾۾بِهِۦۦ مِن عِلمِوووَلَاا لِءَاابَااااءِهِم كَبُرَت كَلِمَتَںںںتَخرُجُ مِن ءَفوَااهِهِم"
+   },
+   {
+    "file": "wavs/018005_1.wav",
+    "words": [
+     12,
+     15
+    ],
+    "seconds": 7.84,
+    "text": "ءِيييَقُۥۥلُۥۥنَ ءِللَاا كَذِبَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.15,
+    8.83,
+    0,
+    6
+   ],
+   [
+    10.21,
+    16.81,
+    7,
+    11
+   ],
+   [
+    18.71,
+    23.985,
+    12,
+    15
+   ]
+  ],
+  "engine_stops": 2,
+  "summary": {
+   "words": 16,
+   "words_all_correct": 14,
+   "letters": 100,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 395,
+   "characteristics_not_realised": 1,
+   "rules_scored": 28,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 18,
+  "ayah": 33,
+  "split": "train",
+  "passage": "18:32-38",
+  "seconds": 23.484,
+  "segments": [
+   {
+    "file": "wavs/018033_0.wav",
+    "words": [
+     0,
+     7
+    ],
+    "seconds": 13.84,
+    "text": "كِلتَ لجَننننَتَينِ ءَااتَت ءُكُلَهَاا وَلَم تَظلِممممِنهُ شَيءَاا"
+   },
+   {
+    "file": "wavs/018033_1.wav",
+    "words": [
+     8,
+     10
+    ],
+    "seconds": 9.644,
+    "text": "وَفَججَرنَاا خِلَاالَهُمَاا نَهَرَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.85,
+    13.11,
+    0,
+    7
+   ],
+   [
+    14.57,
+    21.045,
+    8,
+    10
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 11,
+   "words_all_correct": 10,
+   "letters": 79,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 324,
+   "characteristics_not_realised": 1,
+   "rules_scored": 28,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 18,
+  "ayah": 37,
+  "split": "train",
+  "passage": "18:32-38",
+  "seconds": 29.179,
+  "segments": [
+   {
+    "file": "wavs/018037_0.wav",
+    "words": [
+     0,
+     15
+    ],
+    "seconds": 29.179,
+    "text": "قَاالَ لَهُۥۥ صَااحِبُهُۥۥ وَهُوَ يُحَااوِرُهُۥۥۥۥ ءَكَفَرتَ بِللَذِۦۦ خَلَقَكَ مِںںںتُرَاابِںںںثُممممَ مِننننُطڇفَتِںںںثُممممَ سَووَااكَ رَجُلَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.99,
+    27.205,
+    0,
+    15
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 16,
+   "words_all_correct": 14,
+   "letters": 106,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 400,
+   "characteristics_not_realised": 1,
+   "rules_scored": 29,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 19,
+  "ayah": 1,
+  "split": "train",
+  "passage": "19:1-7",
+  "seconds": 13.401,
+  "segments": [
+   {
+    "file": "wavs/019001_0.wav",
+    "words": [
+     0,
+     0
+    ],
+    "seconds": 13.401,
+    "text": "كَااااااف هَاا يَاا عَيييييںںںصَاااااادڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.61,
+    12.09,
+    0,
+    0
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 1,
+   "words_all_correct": 1,
+   "letters": 19,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 78,
+   "characteristics_not_realised": 0,
+   "rules_scored": 3,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.16
+ },
+ {
+  "surah": 19,
+  "ayah": 5,
+  "split": "train",
+  "passage": "19:1-7",
+  "seconds": 18.051,
+  "segments": [
+   {
+    "file": "wavs/019005_0.wav",
+    "words": [
+     0,
+     12
+    ],
+    "seconds": 18.051,
+    "text": "وَءِننننِۦۦ خِفتُ لمَوَاالِيَ مِوووَرَااااءِۦۦ وَكَاانَتِ مرَءَتِۦۦ عَااقِرَںںںفَهَبڇ لِۦۦ مِللَدُںںںكَ وَلِييَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.41,
+    16.33,
+    0,
+    12
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 13,
+   "words_all_correct": 12,
+   "letters": 82,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 314,
+   "characteristics_not_realised": 1,
+   "rules_scored": 23,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.241
+ },
+ {
+  "surah": 19,
+  "ayah": 23,
+  "split": "train",
+  "passage": "19:23-23",
+  "seconds": 18.442,
+  "segments": [
+   {
+    "file": "wavs/019023_0.wav",
+    "words": [
+     0,
+     12
+    ],
+    "seconds": 18.442,
+    "text": "فَءَجَااااءَهَ لمَخَااضُ ءِلَاا جِذعِ ننننَخلَتِ قَاالَت يَاالَيتَنِۦۦ مِتتُ قَبڇلَ هَااذَاا وَكُںںںتُ نَسيَممممَںںںسِييَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.25,
+    16.91,
+    0,
+    12
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 13,
+   "words_all_correct": 11,
+   "letters": 89,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 355,
+   "characteristics_not_realised": 2,
+   "rules_scored": 34,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.241
+ },
+ {
+  "surah": 20,
+  "ayah": 24,
+  "split": "train",
+  "passage": "20:24-25",
+  "seconds": 8.072,
+  "segments": [
+   {
+    "file": "wavs/020024_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 8.072,
+    "text": "ءِذهَبڇ ءِلَاا فِرعَونَ ءِننننَهُۥۥ طَغَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.29,
+    7.01,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 5,
+   "letters": 32,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 135,
+   "characteristics_not_realised": 0,
+   "rules_scored": 14,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 20,
+  "ayah": 41,
+  "split": "train",
+  "passage": "20:41-42",
+  "seconds": 4.807,
+  "segments": [
+   {
+    "file": "wavs/020041_0.wav",
+    "words": [
+     0,
+     1
+    ],
+    "seconds": 4.807,
+    "text": "وَصطَنَعتُكَ لِنَفسِۦۦ"
+   }
+  ],
+  "intervals": [
+   [
+    0.05,
+    4.09,
+    0,
+    1
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 2,
+   "words_all_correct": 2,
+   "letters": 20,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 88,
+   "characteristics_not_realised": 0,
+   "rules_scored": 11,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 23,
+  "ayah": 57,
+  "split": "train",
+  "passage": "23:57-57",
+  "seconds": 10.736,
+  "segments": [
+   {
+    "file": "wavs/023057_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 10.736,
+    "text": "ءِننننَ للَذِۦۦنَ هُممممِن خَشيَتِ رَببِهِممممُشفِقُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.05,
+    9.35,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 7,
+   "letters": 38,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 155,
+   "characteristics_not_realised": 0,
+   "rules_scored": 16,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 26,
+  "ayah": 63,
+  "split": "train",
+  "passage": "26:63-63",
+  "seconds": 27.585,
+  "segments": [
+   {
+    "file": "wavs/026063_0.wav",
+    "words": [
+     0,
+     12
+    ],
+    "seconds": 27.585,
+    "text": "فَءَوحَينَاااا ءِلَاا مُۥۥسَاااا ءَنِ ضرِببِعَصَااكَ لبَحرَ فَںںںفَلَقَ فَكَاانَ كُللُ فِرقِںںںكَططَودِ لعَظِۦۦۦۦم"
+   }
+  ],
+  "intervals": [
+   [
+    0.57,
+    25.025,
+    0,
+    12
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 13,
+   "words_all_correct": 12,
+   "letters": 84,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 348,
+   "characteristics_not_realised": 1,
+   "rules_scored": 41,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 27,
+  "ayah": 35,
+  "split": "train",
+  "passage": "27:33-36",
+  "seconds": 23.118,
+  "segments": [
+   {
+    "file": "wavs/027035_0.wav",
+    "words": [
+     0,
+     7
+    ],
+    "seconds": 23.118,
+    "text": "وَءِننننِۦۦ مُرسِلَتُن ءِلَيهِ۾۾۾بِهَدِييَتِںںںفَنَااظِرَتُ۾۾۾بِمَ يَرجِعُ لمُرسَلُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.05,
+    18.81,
+    0,
+    7
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 8,
+   "words_all_correct": 7,
+   "letters": 69,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 299,
+   "characteristics_not_realised": 1,
+   "rules_scored": 25,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 29,
+  "ayah": 38,
+  "split": "train",
+  "passage": "29:36-38",
+  "seconds": 27.664,
+  "segments": [
+   {
+    "file": "wavs/029038_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 10.8,
+    "text": "وَعَاادَوووَثَمُۥۥدَ وَقَتتَبَييَنَ لَكُممممِممممَسَااكِنِهِم"
+   },
+   {
+    "file": "wavs/029038_1.wav",
+    "words": [
+     7,
+     15
+    ],
+    "seconds": 16.864,
+    "text": "وَزَييَنَ لَهُمُ ششَيطَاانُ ءَعمَاالَهُم فَصَددَهُم عَنِ سسَبِۦۦلِ وَكَاانُۥۥ مُستَبڇصِرِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.15,
+    9.89,
+    0,
+    6
+   ],
+   [
+    11.71,
+    26.025,
+    7,
+    15
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 16,
+   "words_all_correct": 15,
+   "letters": 120,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 471,
+   "characteristics_not_realised": 1,
+   "rules_scored": 38,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 33,
+  "ayah": 10,
+  "split": "train",
+  "passage": "33:9-11",
+  "seconds": 28.056,
+  "segments": [
+   {
+    "file": "wavs/033010_0.wav",
+    "words": [
+     0,
+     15
+    ],
+    "seconds": 28.056,
+    "text": "ءِذ جَااااءُۥۥكُممممِںںںفَوقِكُم وَمِن ءَسفَلَ مِںںںكُم وَءِذ زَااغَتِ لءَبڇصَاارُ وَبَلَغَتِ لقُلُۥۥبُ لحَنَااجِرَ وَتَظُننننُۥۥنَ بِللَااهِ ظظُنُۥۥنَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.41,
+    20.025,
+    0,
+    15
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 16,
+   "words_all_correct": 13,
+   "letters": 116,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 474,
+   "characteristics_not_realised": 2,
+   "rules_scored": 49,
+   "rules_failed": 2
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 36,
+  "ayah": 3,
+  "split": "train",
+  "passage": "36:2-8",
+  "seconds": 5.538,
+  "segments": [
+   {
+    "file": "wavs/036003_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 5.538,
+    "text": "ءِننننَكَ لَمِنَ لمُرسَلِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.01,
+    4.69,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 22,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 95,
+   "characteristics_not_realised": 0,
+   "rules_scored": 9,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.239
+ },
+ {
+  "surah": 36,
+  "ayah": 7,
+  "split": "train",
+  "passage": "36:2-8",
+  "seconds": 11.259,
+  "segments": [
+   {
+    "file": "wavs/036007_0.wav",
+    "words": [
+     0,
+     7
+    ],
+    "seconds": 11.259,
+    "text": "لَقَدڇ حَققَ لقَولُ عَلَاااا ءَكثَرِهِم فَهُم لَاا يُءمِنُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.63,
+    10.17,
+    0,
+    7
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 8,
+   "words_all_correct": 8,
+   "letters": 48,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 215,
+   "characteristics_not_realised": 0,
+   "rules_scored": 17,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 36,
+  "ayah": 52,
+  "split": "train",
+  "passage": "36:51-55",
+  "seconds": 23.484,
+  "segments": [
+   {
+    "file": "wavs/036052_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 10.77,
+    "text": "قَاالُۥۥ يَااوَيلَنَاا مَ۾۾۾بَعَثَنَاا مِممممَرقَدِنَاا"
+   },
+   {
+    "file": "wavs/036052_1.wav",
+    "words": [
+     6,
+     11
+    ],
+    "seconds": 12.714,
+    "text": "هَااذَاا مَاا وَعَدَ ررَحمَاانُ وَصَدَقَ لمُرسَلُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.21,
+    9.43,
+    0,
+    5
+   ],
+   [
+    12.11,
+    20.025,
+    6,
+    11
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 12,
+   "words_all_correct": 11,
+   "letters": 82,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 309,
+   "characteristics_not_realised": 0,
+   "rules_scored": 35,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 36,
+  "ayah": 64,
+  "split": "train",
+  "passage": "36:64-64",
+  "seconds": 10.397,
+  "segments": [
+   {
+    "file": "wavs/036064_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 10.397,
+    "text": "ءِصلَوهَ ليَومَ بِمَاا كُںںںتُم تَكفُرُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.33,
+    8.53,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 5,
+   "letters": 34,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 159,
+   "characteristics_not_realised": 0,
+   "rules_scored": 17,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.3
+ },
+ {
+  "surah": 38,
+  "ayah": 7,
+  "split": "train",
+  "passage": "38:6-13",
+  "seconds": 18.521,
+  "segments": [
+   {
+    "file": "wavs/038007_0.wav",
+    "words": [
+     0,
+     9
+    ],
+    "seconds": 18.521,
+    "text": "مَاا سَمِعنَاا بِهَااذَاا فِ لمِللَتِ لءَااخِرَتِ ءِن هَااذَاااا ءِللَ ختِلَااااقڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.19,
+    16.47,
+    0,
+    9
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 10,
+   "words_all_correct": 10,
+   "letters": 59,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 230,
+   "characteristics_not_realised": 0,
+   "rules_scored": 22,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 38,
+  "ayah": 11,
+  "split": "train",
+  "passage": "38:6-13",
+  "seconds": 14.916,
+  "segments": [
+   {
+    "file": "wavs/038011_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 14.916,
+    "text": "جُںںںدُممممَاا هُنَاالِكَ مَهزُۥۥمُممممِنَ لءَحزَاااابڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.05,
+    11.63,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 6,
+   "letters": 38,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 157,
+   "characteristics_not_realised": 0,
+   "rules_scored": 17,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 38,
+  "ayah": 44,
+  "split": "train",
+  "passage": "38:44-44",
+  "seconds": 30.067,
+  "segments": [
+   {
+    "file": "wavs/038044_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 10.67,
+    "text": "وَخُذ بِيَدِكَ ضِغثَںںںفَضرِببِهِۦۦ وَلَاا تَحنَث"
+   },
+   {
+    "file": "wavs/038044_1.wav",
+    "words": [
+     7,
+     9
+    ],
+    "seconds": 7.91,
+    "text": "ءِننننَاا وَجَدڇنَااهُ صَاابِرَاا"
+   },
+   {
+    "file": "wavs/038044_2.wav",
+    "words": [
+     10,
+     13
+    ],
+    "seconds": 11.487,
+    "text": "نِعمَ لعَبڇدُ ءِننننَهُۥۥۥۥ ءَووَاااابڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.23,
+    9.79,
+    0,
+    6
+   ],
+   [
+    11.55,
+    17.69,
+    7,
+    9
+   ],
+   [
+    19.47,
+    28.625,
+    10,
+    13
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 14,
+   "words_all_correct": 10,
+   "letters": 89,
+   "identity_not_confirmed": 1,
+   "characteristics_scored": 380,
+   "characteristics_not_realised": 3,
+   "rules_scored": 38,
+   "rules_failed": 4
+  },
+  "seconds_per_count": 0.36
+ },
+ {
+  "surah": 42,
+  "ayah": 2,
+  "split": "train",
+  "passage": "42:2-2",
+  "seconds": 13.166,
+  "segments": [
+   {
+    "file": "wavs/042002_0.wav",
+    "words": [
+     0,
+     0
+    ],
+    "seconds": 13.166,
+    "text": "عَيييييںںںسِۦۦۦۦۦۦںںںقَااااااف"
+   }
+  ],
+  "intervals": [
+   [
+    0.09,
+    11.71,
+    0,
+    0
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 1,
+   "words_all_correct": 1,
+   "letters": 12,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 53,
+   "characteristics_not_realised": 0,
+   "rules_scored": 1,
+   "rules_failed": 0
+  },
+  "seconds_per_count": null
+ },
+ {
+  "surah": 51,
+  "ayah": 29,
+  "split": "train",
+  "passage": "51:29-29",
+  "seconds": 19.749,
+  "segments": [
+   {
+    "file": "wavs/051029_0.wav",
+    "words": [
+     0,
+     8
+    ],
+    "seconds": 19.749,
+    "text": "فَءَقڇبَلَتِ مرَءَتُهُۥۥ فِۦۦ صَررَتِںںںفَصَككَت وَجڇهَهَاا وَقَاالَت عَجُۥۥزُن عَقِۦۦۦۦم"
+   }
+  ],
+  "intervals": [
+   [
+    0.11,
+    18.21,
+    0,
+    8
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 9,
+   "words_all_correct": 8,
+   "letters": 70,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 293,
+   "characteristics_not_realised": 1,
+   "rules_scored": 26,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 52,
+  "ayah": 34,
+  "split": "train",
+  "passage": "52:34-38",
+  "seconds": 13.479,
+  "segments": [
+   {
+    "file": "wavs/052034_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 13.479,
+    "text": "فَليَءتُۥۥ بِحَدِۦۦثِممممِثلِهِۦۦۦۦ ءِںںںكَاانُۥۥ صَاادِقِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.45,
+    12.39,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 5,
+   "letters": 44,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 166,
+   "characteristics_not_realised": 0,
+   "rules_scored": 15,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 52,
+  "ayah": 38,
+  "split": "train",
+  "passage": "52:34-38",
+  "seconds": 19.409,
+  "segments": [
+   {
+    "file": "wavs/052038_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 8.53,
+    "text": "ءَم لَهُم سُللَمُيييَستَمِعُۥۥنَ فِۦۦۦۦه"
+   },
+   {
+    "file": "wavs/052038_1.wav",
+    "words": [
+     5,
+     8
+    ],
+    "seconds": 10.879,
+    "text": "فَليَءتِ مُستَمِعُهُ۾۾۾بِسُلطَاانِممممُبِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.19,
+    7.29,
+    0,
+    4
+   ],
+   [
+    9.77,
+    18.27,
+    5,
+    8
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 9,
+   "words_all_correct": 7,
+   "letters": 67,
+   "identity_not_confirmed": 1,
+   "characteristics_scored": 284,
+   "characteristics_not_realised": 0,
+   "rules_scored": 23,
+   "rules_failed": 2
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 53,
+  "ayah": 9,
+  "split": "train",
+  "passage": "53:9-10",
+  "seconds": 7.21,
+  "segments": [
+   {
+    "file": "wavs/053009_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 7.21,
+    "text": "فَكَاانَ قَاابَ قَوسَينِ ءَو ءَدڇنَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.25,
+    6.47,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 5,
+   "letters": 30,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 128,
+   "characteristics_not_realised": 0,
+   "rules_scored": 12,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 53,
+  "ayah": 33,
+  "split": "train",
+  "passage": "53:33-34",
+  "seconds": 6.531,
+  "segments": [
+   {
+    "file": "wavs/053033_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 6.531,
+    "text": "ءَفَرَءَيتَ للَذِۦۦ تَوَللَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.49,
+    5.21,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 23,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 86,
+   "characteristics_not_realised": 0,
+   "rules_scored": 5,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.3
+ },
+ {
+  "surah": 68,
+  "ayah": 48,
+  "split": "train",
+  "passage": "68:48-48",
+  "seconds": 18.103,
+  "segments": [
+   {
+    "file": "wavs/068048_0.wav",
+    "words": [
+     0,
+     10
+    ],
+    "seconds": 18.103,
+    "text": "فَصبِر لِحُكمِ رَببِكَ وَلَاا تَكُںںںكَصَااحِبِ لحُۥۥتِ ءِذ نَاادَاا وَهُوَ مَكظُۥۥۥۥم"
+   }
+  ],
+  "intervals": [
+   [
+    0.53,
+    16.23,
+    0,
+    10
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 11,
+   "words_all_correct": 11,
+   "letters": 66,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 270,
+   "characteristics_not_realised": 0,
+   "rules_scored": 29,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 69,
+  "ayah": 29,
+  "split": "train",
+  "passage": "69:28-35",
+  "seconds": 5.825,
+  "segments": [
+   {
+    "file": "wavs/069029_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 5.825,
+    "text": "هَلَكَ عَننننِۦۦ سُلطَاانِيَه"
+   }
+  ],
+  "intervals": [
+   [
+    0.23,
+    4.53,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 22,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 87,
+   "characteristics_not_realised": 0,
+   "rules_scored": 10,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 69,
+  "ayah": 33,
+  "split": "train",
+  "passage": "69:28-35",
+  "seconds": 8.568,
+  "segments": [
+   {
+    "file": "wavs/069033_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 8.568,
+    "text": "ءِننننَهُۥۥ كَاانَ لَاا يُءمِنُ بِللَااهِ لعَظِۦۦۦۦم"
+   }
+  ],
+  "intervals": [
+   [
+    0.15,
+    7.73,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 6,
+   "letters": 36,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 134,
+   "characteristics_not_realised": 0,
+   "rules_scored": 10,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 74,
+  "ayah": 34,
+  "split": "train",
+  "passage": "74:33-35",
+  "seconds": 5.172,
+  "segments": [
+   {
+    "file": "wavs/074034_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 5.172,
+    "text": "وَصصُبڇحِ ءِذَاااا ءَسفَر"
+   }
+  ],
+  "intervals": [
+   [
+    0.37,
+    4.17,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 19,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 87,
+   "characteristics_not_realised": 0,
+   "rules_scored": 11,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 75,
+  "ayah": 27,
+  "split": "train",
+  "passage": "75:27-37",
+  "seconds": 7.915,
+  "segments": [
+   {
+    "file": "wavs/075027_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 7.915,
+    "text": "وَقِۦۦلَ مَنۜ رَااااقڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.81,
+    2.75,
+    0,
+    1
+   ],
+   [
+    3.97,
+    6.09,
+    2,
+    2
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 1,
+   "letters": 16,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 72,
+   "characteristics_not_realised": 5,
+   "rules_scored": 5,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 75,
+  "ayah": 31,
+  "split": "train",
+  "passage": "75:27-37",
+  "seconds": 5.773,
+  "segments": [
+   {
+    "file": "wavs/075031_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 5.773,
+    "text": "فَلَاا صَددَقَ وَلَاا صَللَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.63,
+    5.07,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 4,
+   "letters": 21,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 70,
+   "characteristics_not_realised": 0,
+   "rules_scored": 9,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 75,
+  "ayah": 35,
+  "split": "train",
+  "passage": "75:27-37",
+  "seconds": 6.975,
+  "segments": [
+   {
+    "file": "wavs/075035_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 6.975,
+    "text": "ثُممممَ ءَولَاا لَكَ فَءَولَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.29,
+    5.19,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 4,
+   "letters": 22,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 87,
+   "characteristics_not_realised": 0,
+   "rules_scored": 6,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 76,
+  "ayah": 2,
+  "split": "train",
+  "passage": "76:1-4",
+  "seconds": 19.958,
+  "segments": [
+   {
+    "file": "wavs/076002_0.wav",
+    "words": [
+     0,
+     9
+    ],
+    "seconds": 19.958,
+    "text": "ءِننننَاا خَلَقڇنَ لءِںںںسَاانَ مِننننُطڇفَتِن ءَمشَااجِننننَبڇتَلِۦۦهِ فَجَعَلنَااهُ سَمِۦۦعَ۾۾۾بَصِۦۦرَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.09,
+    17.09,
+    0,
+    9
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 10,
+   "words_all_correct": 9,
+   "letters": 80,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 331,
+   "characteristics_not_realised": 1,
+   "rules_scored": 28,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 76,
+  "ayah": 14,
+  "split": "train",
+  "passage": "76:13-16",
+  "seconds": 15.256,
+  "segments": [
+   {
+    "file": "wavs/076014_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 15.256,
+    "text": "وَدَاانِيَتَن عَلَيهِم ظِلَاالُهَاا وَذُللِلَت قُطُۥۥفُهَاا تَذلِۦۦلَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.05,
+    12.67,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 6,
+   "letters": 58,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 223,
+   "characteristics_not_realised": 0,
+   "rules_scored": 17,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 77,
+  "ayah": 33,
+  "split": "train",
+  "passage": "77:32-33",
+  "seconds": 7.184,
+  "segments": [
+   {
+    "file": "wavs/077033_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 7.184,
+    "text": "كَءَننننَهُۥۥ جِمَاالَتُںںںصُفر"
+   }
+  ],
+  "intervals": [
+   [
+    0.25,
+    5.83,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 2,
+   "letters": 23,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 94,
+   "characteristics_not_realised": 1,
+   "rules_scored": 11,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 80,
+  "ayah": 15,
+  "split": "train",
+  "passage": "80:14-15",
+  "seconds": 4.127,
+  "segments": [
+   {
+    "file": "wavs/080015_0.wav",
+    "words": [
+     0,
+     1
+    ],
+    "seconds": 4.127,
+    "text": "بِءَيدِۦۦ سَفَرَه"
+   }
+  ],
+  "intervals": [
+   [
+    0.09,
+    3.25,
+    0,
+    1
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 2,
+   "words_all_correct": 2,
+   "letters": 15,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 64,
+   "characteristics_not_realised": 0,
+   "rules_scored": 7,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 82,
+  "ayah": 5,
+  "split": "train",
+  "passage": "82:4-5",
+  "seconds": 8.673,
+  "segments": [
+   {
+    "file": "wavs/082005_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 8.673,
+    "text": "عَلِمَت نَفسُممممَاا قَددَمَت وَءَخخَرَت"
+   }
+  ],
+  "intervals": [
+   [
+    0.25,
+    7.59,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 5,
+   "letters": 31,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 133,
+   "characteristics_not_realised": 0,
+   "rules_scored": 14,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 83,
+  "ayah": 13,
+  "split": "train",
+  "passage": "83:10-14",
+  "seconds": 15.151,
+  "segments": [
+   {
+    "file": "wavs/083013_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 15.151,
+    "text": "ءِذَاا تُتلَاا عَلَيهِ ءَاايَااتُنَاا قَاالَ ءَسَااطِۦۦرُ لءَووَلِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.29,
+    13.09,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 7,
+   "letters": 53,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 191,
+   "characteristics_not_realised": 0,
+   "rules_scored": 18,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 88,
+  "ayah": 14,
+  "split": "train",
+  "passage": "88:14-22",
+  "seconds": 7.001,
+  "segments": [
+   {
+    "file": "wavs/088014_0.wav",
+    "words": [
+     0,
+     1
+    ],
+    "seconds": 7.001,
+    "text": "وَءَكوَاابُممممَوضُۥۥعَه"
+   }
+  ],
+  "intervals": [
+   [
+    0.33,
+    5.65,
+    0,
+    1
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 2,
+   "words_all_correct": 1,
+   "letters": 19,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 80,
+   "characteristics_not_realised": 0,
+   "rules_scored": 11,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 88,
+  "ayah": 18,
+  "split": "train",
+  "passage": "88:14-22",
+  "seconds": 8.568,
+  "segments": [
+   {
+    "file": "wavs/088018_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 8.568,
+    "text": "وَءِلَ سسَمَااااءِ كَيفَ رُفِعَت"
+   }
+  ],
+  "intervals": [
+   [
+    1.05,
+    7.31,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 4,
+   "letters": 25,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 103,
+   "characteristics_not_realised": 0,
+   "rules_scored": 8,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 88,
+  "ayah": 22,
+  "split": "train",
+  "passage": "88:14-22",
+  "seconds": 7.445,
+  "segments": [
+   {
+    "file": "wavs/088022_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 7.445,
+    "text": "لَستَ عَلَيهِ۾۾۾بِمُصَيطِر"
+   }
+  ],
+  "intervals": [
+   [
+    0.47,
+    6.17,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 23,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 111,
+   "characteristics_not_realised": 0,
+   "rules_scored": 13,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 89,
+  "ayah": 5,
+  "split": "train",
+  "passage": "89:2-9",
+  "seconds": 8.229,
+  "segments": [
+   {
+    "file": "wavs/089005_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 8.229,
+    "text": "هَل فِۦۦ ذَاالِكَ قَسَمُللِذِۦۦ حِجڇر"
+   }
+  ],
+  "intervals": [
+   [
+    0.15,
+    6.59,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 6,
+   "letters": 29,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 119,
+   "characteristics_not_realised": 0,
+   "rules_scored": 11,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 89,
+  "ayah": 9,
+  "split": "train",
+  "passage": "89:2-9",
+  "seconds": 10.658,
+  "segments": [
+   {
+    "file": "wavs/089009_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 10.658,
+    "text": "وَثَمُۥۥدَ للَذِۦۦنَ جَاابُ صصَخرَ بِلوَاااادڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.35,
+    9.39,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 5,
+   "letters": 34,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 134,
+   "characteristics_not_realised": 0,
+   "rules_scored": 16,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 91,
+  "ayah": 11,
+  "split": "train",
+  "passage": "91:11-12",
+  "seconds": 7.706,
+  "segments": [
+   {
+    "file": "wavs/091011_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 7.706,
+    "text": "كَذذَبَت ثَمُۥۥدُ بِطَغوَااهَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.65,
+    6.47,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 25,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 95,
+   "characteristics_not_realised": 0,
+   "rules_scored": 8,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.339
+ },
+ {
+  "surah": 106,
+  "ayah": 1,
+  "split": "train",
+  "passage": "106:1-2",
+  "seconds": 5.825,
+  "segments": [
+   {
+    "file": "wavs/106001_0.wav",
+    "words": [
+     0,
+     1
+    ],
+    "seconds": 5.825,
+    "text": "لِءِۦۦلَاافِ قُرَيييش"
+   }
+  ],
+  "intervals": [
+   [
+    0.41,
+    4.95,
+    0,
+    1
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 2,
+   "words_all_correct": 1,
+   "letters": 16,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 63,
+   "characteristics_not_realised": 1,
+   "rules_scored": 9,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.299
+ },
+ {
+  "surah": 111,
+  "ayah": 2,
+  "split": "train",
+  "passage": "111:1-2",
+  "seconds": 10.188,
+  "segments": [
+   {
+    "file": "wavs/111002_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 10.188,
+    "text": "مَاااا ءَغنَاا عَنهُ مَاالُهُۥۥ وَمَاا كَسَبڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.39,
+    9.25,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 6,
+   "letters": 33,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 128,
+   "characteristics_not_realised": 0,
+   "rules_scored": 10,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 15,
+  "ayah": 65,
+  "split": "test",
+  "passage": "15:65-65",
+  "seconds": 23.876,
+  "segments": [
+   {
+    "file": "wavs/015065_0.wav",
+    "words": [
+     0,
+     13
+    ],
+    "seconds": 23.876,
+    "text": "فَءَسرِ بِءَهلِكَ بِقِطڇعِممممِنَ للَيلِ وَتتَبِع ءَدڇبَاارَهُم وَلَاا يَلتَفِت مِںںںكُم ءَحَدُوووَمضُۥۥ حَيثُ تُءمَرُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    1.03,
+    22.345,
+    0,
+    13
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 14,
+   "words_all_correct": 12,
+   "letters": 97,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 436,
+   "characteristics_not_realised": 1,
+   "rules_scored": 35,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 18,
+  "ayah": 100,
+  "split": "test",
+  "passage": "18:99-100",
+  "seconds": 9.848,
+  "segments": [
+   {
+    "file": "wavs/018100_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 9.848,
+    "text": "وَعَرَضنَاا جَهَننننَمَ يَومَءِذِللِلكَاافِرِۦۦنَ عَرضَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.39,
+    7.49,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 5,
+   "letters": 46,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 184,
+   "characteristics_not_realised": 0,
+   "rules_scored": 19,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.2
+ },
+ {
+  "surah": 38,
+  "ayah": 57,
+  "split": "test",
+  "passage": "38:56-58",
+  "seconds": 7.915,
+  "segments": [
+   {
+    "file": "wavs/038057_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 7.915,
+    "text": "هَااذَاا فَليَذُۥۥقُۥۥهُ حَمِۦۦمُوووَغَسسَااااقڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.39,
+    6.85,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 4,
+   "letters": 35,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 126,
+   "characteristics_not_realised": 0,
+   "rules_scored": 13,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.2
+ },
+ {
+  "surah": 54,
+  "ayah": 17,
+  "split": "test",
+  "passage": "54:16-17",
+  "seconds": 13.349,
+  "segments": [
+   {
+    "file": "wavs/054017_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 13.349,
+    "text": "وَلَقَدڇ يَسسَرنَ لقُرءَاانَ لِذذِكرِ فَهَل مِممممُددَكِر"
+   }
+  ],
+  "intervals": [
+   [
+    0.61,
+    11.63,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 6,
+   "letters": 45,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 204,
+   "characteristics_not_realised": 0,
+   "rules_scored": 22,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.339
+ },
+ {
+  "surah": 2,
+  "ayah": 244,
+  "split": "train",
+  "passage": "2:243-245",
+  "seconds": 17.735,
+  "segments": [
+   {
+    "file": "wavs/002244_0.wav",
+    "words": [
+     0,
+     8
+    ],
+    "seconds": 17.735,
+    "text": "وَقَااتِلُۥۥ فِۦۦ سَبِۦۦلِ للَااهِ وَعلَمُۥۥۥۥ ءَننننَ للَااهَ سَمِۦۦعُن عَلِۦۦۦۦم"
+   }
+  ],
+  "intervals": [
+   [
+    0.53,
+    16.55,
+    0,
+    8
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 9,
+   "words_all_correct": 8,
+   "letters": 56,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 197,
+   "characteristics_not_realised": 0,
+   "rules_scored": 19,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.364
+ },
+ {
+  "surah": 3,
+  "ayah": 3,
+  "split": "train",
+  "passage": "3:2-4",
+  "seconds": 21.42,
+  "segments": [
+   {
+    "file": "wavs/003003_0.wav",
+    "words": [
+     0,
+     10
+    ],
+    "seconds": 21.42,
+    "text": "نَززَلَ عَلَيكَ لكِتَاابَ بِلحَققِ مُصَددِقَللِمَاا بَينَ يَدَيهِ وَءَںںںزَلَ تتَورَااتَ وَلءِںںںجِۦۦۦۦل"
+   }
+  ],
+  "intervals": [
+   [
+    0.73,
+    19.73,
+    0,
+    10
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 11,
+   "words_all_correct": 11,
+   "letters": 80,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 337,
+   "characteristics_not_realised": 0,
+   "rules_scored": 32,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 4,
+  "ayah": 63,
+  "split": "train",
+  "passage": "4:63-63",
+  "seconds": 23.902,
+  "segments": [
+   {
+    "file": "wavs/004063_0.wav",
+    "words": [
+     0,
+     15
+    ],
+    "seconds": 23.902,
+    "text": "ءُلَااااءِكَ للَذِۦۦنَ يَعلَمُ للَااهُ مَاا فِۦۦ قُلُۥۥبِهِم فَءَعرِض عَنهُم وَعِظهُم وَقُللَهُم فِۦۦۦۦ ءَںںںفُسِهِم قَولَ۾۾۾بَلِۦۦغَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.33,
+    22.305,
+    0,
+    15
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 16,
+   "words_all_correct": 15,
+   "letters": 102,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 420,
+   "characteristics_not_realised": 1,
+   "rules_scored": 36,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 7,
+  "ayah": 12,
+  "split": "train",
+  "passage": "7:12-15",
+  "seconds": 23.484,
+  "segments": [
+   {
+    "file": "wavs/007012_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 7.05,
+    "text": "قَاالَ مَاا مَنَعَكَ ءَللَاا تَسجُدَ ءِذ ءَمَرتُك"
+   },
+   {
+    "file": "wavs/007012_1.wav",
+    "words": [
+     7,
+     16
+    ],
+    "seconds": 16.434,
+    "text": "قَاالَ ءَنَ خَيرُممممِنهُ خَلَقڇتَنِۦۦ مِننننَاارِوووَخَلَقڇتَهُۥۥ مِںںںطِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.23,
+    6.03,
+    0,
+    6
+   ],
+   [
+    8.07,
+    20.025,
+    7,
+    16
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 17,
+   "words_all_correct": 15,
+   "letters": 97,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 395,
+   "characteristics_not_realised": 1,
+   "rules_scored": 32,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.241
+ },
+ {
+  "surah": 7,
+  "ayah": 68,
+  "split": "train",
+  "passage": "7:68-69",
+  "seconds": 12.722,
+  "segments": [
+   {
+    "file": "wavs/007068_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 12.722,
+    "text": "ءُبَللِغُكُم رِسَاالَااتِ رَببِۦۦ وَءَنَ لَكُم نَااصِحُن ءَمِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.09,
+    11.47,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 7,
+   "letters": 51,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 198,
+   "characteristics_not_realised": 0,
+   "rules_scored": 13,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 7,
+  "ayah": 175,
+  "split": "train",
+  "passage": "7:175-176",
+  "seconds": 21.107,
+  "segments": [
+   {
+    "file": "wavs/007175_0.wav",
+    "words": [
+     0,
+     12
+    ],
+    "seconds": 21.107,
+    "text": "وَتلُ عَلَيهِم نَبَءَ للَذِۦۦۦۦ ءَااتَينَااهُ ءَاايَااتِنَاا فَںںںسَلَخَ مِنهَاا فَءَتبَعَهُ ششَيطَاانُ فَكَاانَ مِنَ لغَااوِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    1.01,
+    20.025,
+    0,
+    12
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 13,
+   "words_all_correct": 12,
+   "letters": 99,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 389,
+   "characteristics_not_realised": 1,
+   "rules_scored": 34,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 10,
+  "ayah": 51,
+  "split": "train",
+  "passage": "10:50-52",
+  "seconds": 25.078,
+  "segments": [
+   {
+    "file": "wavs/010051_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 10.14,
+    "text": "ءَثُممممَ ءِذَاا مَاا وَقَعَ ءَاامَںںںتُ۾۾۾بِه"
+   },
+   {
+    "file": "wavs/010051_1.wav",
+    "words": [
+     6,
+     10
+    ],
+    "seconds": 14.938,
+    "text": "ءَاااااالءَاانَ وَقَدڇ كُںںںتُ۾۾۾بِهِۦۦ تَستَعجِلُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.73,
+    8.73,
+    0,
+    5
+   ],
+   [
+    11.55,
+    23.565,
+    6,
+    10
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 11,
+   "words_all_correct": 8,
+   "letters": 72,
+   "identity_not_confirmed": 1,
+   "characteristics_scored": 291,
+   "characteristics_not_realised": 0,
+   "rules_scored": 21,
+   "rules_failed": 3
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 10,
+  "ayah": 58,
+  "split": "train",
+  "passage": "10:56-59",
+  "seconds": 17.528,
+  "segments": [
+   {
+    "file": "wavs/010058_0.wav",
+    "words": [
+     0,
+     9
+    ],
+    "seconds": 17.528,
+    "text": "قُل بِفَضلِ للَااهِ وَبِرَحمَتِهِۦۦ فَبِذَاالِكَ فَليَفرَحُۥۥ هُوَ خَيرُممممِممممَاا يَجڇمَعُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.29,
+    16.01,
+    0,
+    9
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 10,
+   "words_all_correct": 10,
+   "letters": 75,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 310,
+   "characteristics_not_realised": 0,
+   "rules_scored": 28,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 11,
+  "ayah": 43,
+  "split": "train",
+  "passage": "11:41-43",
+  "seconds": 31.687,
+  "segments": [
+   {
+    "file": "wavs/011043_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 11.8,
+    "text": "قَاالَ سَءَااوِۦۦۦۦ ءِلَاا جَبَلِيييَعصِمُنِۦۦ مِنَ لمَااااء"
+   },
+   {
+    "file": "wavs/011043_1.wav",
+    "words": [
+     7,
+     16
+    ],
+    "seconds": 9.235,
+    "text": "قَاالَ لَاا عَااصِمَ ليَومَ مِن ءَمرِ للَااهِ ءِللَاا مَررَحِم"
+   },
+   {
+    "file": "wavs/011043_2.wav",
+    "words": [
+     17,
+     22
+    ],
+    "seconds": 10.652,
+    "text": "وَحَاالَ بَينَهُمَ لمَوجُ فَكَاانَ مِنَ لمُغرَقِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.65,
+    10.93,
+    0,
+    6
+   ],
+   [
+    12.67,
+    20.445,
+    7,
+    16
+   ],
+   [
+    21.625,
+    29.385,
+    17,
+    22
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 23,
+   "words_all_correct": 20,
+   "letters": 134,
+   "identity_not_confirmed": 2,
+   "characteristics_scored": 524,
+   "characteristics_not_realised": 0,
+   "rules_scored": 48,
+   "rules_failed": 3
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 12,
+  "ayah": 75,
+  "split": "train",
+  "passage": "12:75-75",
+  "seconds": 19.827,
+  "segments": [
+   {
+    "file": "wavs/012075_0.wav",
+    "words": [
+     0,
+     7
+    ],
+    "seconds": 12.72,
+    "text": "قَاالُۥۥ جَزَااااءُهُۥۥ مَوووُجِدَ فِۦۦ رَحلِهِۦۦ فَهُوَ جَزَااااءُه"
+   },
+   {
+    "file": "wavs/012075_1.wav",
+    "words": [
+     8,
+     10
+    ],
+    "seconds": 7.107,
+    "text": "كَذَاالِكَ نَجڇزِ ظظَاالِمِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    1.33,
+    11.99,
+    0,
+    7
+   ],
+   [
+    13.45,
+    18.23,
+    8,
+    10
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 11,
+   "words_all_correct": 10,
+   "letters": 75,
+   "identity_not_confirmed": 3,
+   "characteristics_scored": 270,
+   "characteristics_not_realised": 0,
+   "rules_scored": 21,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 15,
+  "ayah": 94,
+  "split": "train",
+  "passage": "15:94-94",
+  "seconds": 10.815,
+  "segments": [
+   {
+    "file": "wavs/015094_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 10.815,
+    "text": "فَصدَع بِمَاا تُءمَرُ وَءَعرِض عَنِ لمُشرِكِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.15,
+    9.55,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 6,
+   "letters": 40,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 185,
+   "characteristics_not_realised": 0,
+   "rules_scored": 22,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 18,
+  "ayah": 2,
+  "split": "train",
+  "passage": "18:1-6",
+  "seconds": 22.126,
+  "segments": [
+   {
+    "file": "wavs/018002_0.wav",
+    "words": [
+     0,
+     14
+    ],
+    "seconds": 22.126,
+    "text": "قَييِمَللِيُںںںذِرَ بَءسَںںںشَدِۦۦدَممممِللَدُنهُ وَيُبَششِرَ لمُءمِنِۦۦنَ للَذِۦۦنَ يَعمَلُۥۥنَ صصَاالِحَااتِ ءَننننَ لَهُم ءَجڇرَن حَسَنَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.03,
+    20.025,
+    0,
+    14
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 15,
+   "words_all_correct": 12,
+   "letters": 108,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 438,
+   "characteristics_not_realised": 3,
+   "rules_scored": 34,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.281
+ },
+ {
+  "surah": 18,
+  "ayah": 6,
+  "split": "train",
+  "passage": "18:1-6",
+  "seconds": 17.267,
+  "segments": [
+   {
+    "file": "wavs/018006_0.wav",
+    "words": [
+     0,
+     10
+    ],
+    "seconds": 17.267,
+    "text": "فَلَعَللَكَ بَااخِعُننننَفسَكَ عَلَاااا ءَااثَاارِهِم ءِللَم يُءمِنُۥۥ بِهَااذَ لحَدِۦۦثِ ءَسَفَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.67,
+    15.49,
+    0,
+    10
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 11,
+   "words_all_correct": 11,
+   "letters": 75,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 285,
+   "characteristics_not_realised": 0,
+   "rules_scored": 18,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 18,
+  "ayah": 34,
+  "split": "train",
+  "passage": "18:32-38",
+  "seconds": 23.615,
+  "segments": [
+   {
+    "file": "wavs/018034_0.wav",
+    "words": [
+     0,
+     12
+    ],
+    "seconds": 23.615,
+    "text": "وَكَاانَ لَهُۥۥ ثَمَرُںںںفَقَاالَ لِصَااحِبِهِۦۦ وَهُوَ يُحَااوِرُهُۥۥۥۥ ءَنَ ءَكثَرُ مِںںںكَ مَاالَوووَءَعَززُ نَفَرَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.39,
+    21.185,
+    0,
+    12
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 13,
+   "words_all_correct": 11,
+   "letters": 92,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 340,
+   "characteristics_not_realised": 1,
+   "rules_scored": 21,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 18,
+  "ayah": 38,
+  "split": "train",
+  "passage": "18:32-38",
+  "seconds": 15.386,
+  "segments": [
+   {
+    "file": "wavs/018038_0.wav",
+    "words": [
+     0,
+     7
+    ],
+    "seconds": 15.386,
+    "text": "لَااكِننننَ هُوَ للَااهُ رَببِۦۦ وَلَاااا ءُشرِكُ بِرَببِۦۦۦۦ ءَحَدَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.31,
+    13.73,
+    0,
+    7
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 8,
+   "words_all_correct": 7,
+   "letters": 47,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 164,
+   "characteristics_not_realised": 0,
+   "rules_scored": 13,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 19,
+  "ayah": 2,
+  "split": "train",
+  "passage": "19:1-7",
+  "seconds": 6.896,
+  "segments": [
+   {
+    "file": "wavs/019002_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 6.896,
+    "text": "ذِكرُ رَحمَتِ رَببِكَ عَبڇدَهُۥۥ زَكَرِييَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.71,
+    5.79,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 5,
+   "letters": 36,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 150,
+   "characteristics_not_realised": 0,
+   "rules_scored": 11,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 19,
+  "ayah": 6,
+  "split": "train",
+  "passage": "19:1-7",
+  "seconds": 11.494,
+  "segments": [
+   {
+    "file": "wavs/019006_0.wav",
+    "words": [
+     0,
+     7
+    ],
+    "seconds": 11.494,
+    "text": "يَرِثُنِۦۦ وَيَرِثُ مِن ءَاالِ يَعقُۥۥبَ وَجڇعَلهُ رَببِ رَضِييَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.49,
+    6.11,
+    0,
+    4
+   ],
+   [
+    7.35,
+    10.43,
+    5,
+    7
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 8,
+   "words_all_correct": 7,
+   "letters": 53,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 215,
+   "characteristics_not_realised": 1,
+   "rules_scored": 15,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 19,
+  "ayah": 24,
+  "split": "train",
+  "passage": "19:24-24",
+  "seconds": 13.74,
+  "segments": [
+   {
+    "file": "wavs/019024_0.wav",
+    "words": [
+     0,
+     9
+    ],
+    "seconds": 13.74,
+    "text": "فَنَاادَااهَاا مِںںںتَحتِهَاااا ءَللَاا تَحزَنِۦۦ قَدڇ جَعَلَ رَببُكِ تَحتَكِ سَرِييَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.83,
+    12.51,
+    0,
+    9
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 10,
+   "words_all_correct": 10,
+   "letters": 65,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 252,
+   "characteristics_not_realised": 0,
+   "rules_scored": 19,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 20,
+  "ayah": 25,
+  "split": "train",
+  "passage": "20:24-25",
+  "seconds": 6.348,
+  "segments": [
+   {
+    "file": "wavs/020025_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 6.348,
+    "text": "قَاالَ رَببِ شرَح لِۦۦ صَدڇرِۦۦ"
+   }
+  ],
+  "intervals": [
+   [
+    0.67,
+    5.39,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 5,
+   "letters": 23,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 95,
+   "characteristics_not_realised": 0,
+   "rules_scored": 16,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.3
+ },
+ {
+  "surah": 20,
+  "ayah": 42,
+  "split": "train",
+  "passage": "20:41-42",
+  "seconds": 9.561,
+  "segments": [
+   {
+    "file": "wavs/020042_0.wav",
+    "words": [
+     0,
+     7
+    ],
+    "seconds": 9.561,
+    "text": "ءِذهَبڇ ءَںںںتَ وَءَخُۥۥكَ بِءَاايَااتِۦۦ وَلَاا تَنِيَاا فِۦۦ ذِكرِۦۦ"
+   }
+  ],
+  "intervals": [
+   [
+    0.31,
+    8.59,
+    0,
+    7
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 8,
+   "words_all_correct": 8,
+   "letters": 53,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 199,
+   "characteristics_not_realised": 0,
+   "rules_scored": 15,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.2
+ },
+ {
+  "surah": 23,
+  "ayah": 75,
+  "split": "train",
+  "passage": "23:75-75",
+  "seconds": 18.991,
+  "segments": [
+   {
+    "file": "wavs/023075_0.wav",
+    "words": [
+     0,
+     10
+    ],
+    "seconds": 18.991,
+    "text": "وَلَو رَحِمنَااهُم وَكَشَفنَاا مَاا بِهِممممِںںںضُررِللَلَججُۥۥ فِۦۦ طُغيَاانِهِم يَعمَهُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.95,
+    16.37,
+    0,
+    10
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 11,
+   "words_all_correct": 11,
+   "letters": 70,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 284,
+   "characteristics_not_realised": 0,
+   "rules_scored": 27,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 26,
+  "ayah": 94,
+  "split": "train",
+  "passage": "26:94-94",
+  "seconds": 10.24,
+  "segments": [
+   {
+    "file": "wavs/026094_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 10.24,
+    "text": "فَكُبڇكِبُۥۥ فِۦۦهَاا هُم وَلغَااوُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.59,
+    8.71,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 3,
+   "letters": 30,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 120,
+   "characteristics_not_realised": 0,
+   "rules_scored": 10,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 27,
+  "ayah": 36,
+  "split": "train",
+  "passage": "27:33-36",
+  "seconds": 60.421,
+  "segments": [
+   {
+    "file": "wavs/027036_0.wav",
+    "words": [
+     0,
+     10
+    ],
+    "seconds": 29.765,
+    "text": "فَلَممممَاا جَااااءَ سُلَيمَاانَ قَاالَ ءَتُمِددُۥۥنَنِ بِمَاالِںںںفَمَاااا ءَااتَاانِيَ للَااهُ خَيرُممممِممممَاا"
+   },
+   {
+    "file": "wavs/027036_1.wav",
+    "words": [
+     11,
+     15
+    ],
+    "seconds": 30.656,
+    "text": "ءَااتَااكُ۾۾۾بَل ءَںںںتُ۾۾۾بِهَدِييَتِكُم تَفرَحُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.81,
+    27.625,
+    0,
+    10
+   ],
+   [
+    31.905,
+    57.0,
+    11,
+    15
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 16,
+   "words_all_correct": 15,
+   "letters": 118,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 446,
+   "characteristics_not_realised": 0,
+   "rules_scored": 33,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 30,
+  "ayah": 54,
+  "split": "train",
+  "passage": "30:54-55",
+  "seconds": 53.864,
+  "segments": [
+   {
+    "file": "wavs/030054_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 17.36,
+    "text": "ءَللَااهُ للَذِۦۦ خَلَقَكُممممِںںںضَعفِںںںثُممممَ جَعَل"
+   },
+   {
+    "file": "wavs/030054_1.wav",
+    "words": [
+     7,
+     17
+    ],
+    "seconds": 20.875,
+    "text": "مِ۾۾۾بَعدِ ضَعفِںںںقُووَتَںںںثُممممَ جَعَلَ مِ۾۾۾بَعدِ قُووَتِںںںضَعفَوووَشَيبَه"
+   },
+   {
+    "file": "wavs/030054_2.wav",
+    "words": [
+     18,
+     23
+    ],
+    "seconds": 15.63,
+    "text": "يَخلُقُ مَاا يَشَااااءُ وَهُوَ لعَلِۦۦمُ لقَدِۦۦۦۦر"
+   }
+  ],
+  "intervals": [
+   [
+    1.07,
+    16.15,
+    0,
+    6
+   ],
+   [
+    18.57,
+    37.045,
+    7,
+    17
+   ],
+   [
+    39.425,
+    43.94,
+    18,
+    20
+   ],
+   [
+    45.88,
+    51.34,
+    21,
+    23
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 24,
+   "words_all_correct": 16,
+   "letters": 137,
+   "identity_not_confirmed": 1,
+   "characteristics_scored": 579,
+   "characteristics_not_realised": 4,
+   "rules_scored": 55,
+   "rules_failed": 5
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 33,
+  "ayah": 11,
+  "split": "train",
+  "passage": "33:9-11",
+  "seconds": 9.012,
+  "segments": [
+   {
+    "file": "wavs/033011_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 9.012,
+    "text": "هُنَاالِكَ بڇتُلِيَ لمُءمِنُۥۥنَ وَزُلزِلُۥۥ زِلزَاالَںںںشَدِۦۦدَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.07,
+    7.55,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 5,
+   "letters": 55,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 223,
+   "characteristics_not_realised": 1,
+   "rules_scored": 18,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.2
+ },
+ {
+  "surah": 36,
+  "ayah": 4,
+  "split": "train",
+  "passage": "36:2-8",
+  "seconds": 6.713,
+  "segments": [
+   {
+    "file": "wavs/036004_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 6.713,
+    "text": "عَلَاا صِرَااطِممممُستَقِۦۦۦۦم"
+   }
+  ],
+  "intervals": [
+   [
+    0.57,
+    5.67,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 2,
+   "letters": 21,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 79,
+   "characteristics_not_realised": 1,
+   "rules_scored": 9,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 36,
+  "ayah": 8,
+  "split": "train",
+  "passage": "36:2-8",
+  "seconds": 17.371,
+  "segments": [
+   {
+    "file": "wavs/036008_0.wav",
+    "words": [
+     0,
+     9
+    ],
+    "seconds": 17.371,
+    "text": "ءِننننَاا جَعَلنَاا فِۦۦۦۦ ءَعنَااقِهِم ءَغلَاالَںںںفَهِيَ ءِلَ لءَذقَاانِ فَهُممممُقڇمَحُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.57,
+    14.81,
+    0,
+    9
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 10,
+   "words_all_correct": 9,
+   "letters": 69,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 285,
+   "characteristics_not_realised": 1,
+   "rules_scored": 24,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 36,
+  "ayah": 53,
+  "split": "train",
+  "passage": "36:51-55",
+  "seconds": 18.887,
+  "segments": [
+   {
+    "file": "wavs/036053_0.wav",
+    "words": [
+     0,
+     9
+    ],
+    "seconds": 18.887,
+    "text": "ءِںںںكَاانَت ءِللَاا صَيحَتَوووَااحِدَتَںںںفَءِذَاا هُم جَمِۦۦعُللَدَينَاا مُحضَرُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    1.05,
+    16.75,
+    0,
+    9
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 10,
+   "words_all_correct": 9,
+   "letters": 65,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 260,
+   "characteristics_not_realised": 0,
+   "rules_scored": 26,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 37,
+  "ayah": 87,
+  "split": "train",
+  "passage": "37:87-88",
+  "seconds": 9.665,
+  "segments": [
+   {
+    "file": "wavs/037087_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 9.665,
+    "text": "فَمَاا ظَننننُكُ۾۾۾بِرَببِ لعَاالَمِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.45,
+    8.45,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 4,
+   "letters": 28,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 109,
+   "characteristics_not_realised": 0,
+   "rules_scored": 10,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 38,
+  "ayah": 8,
+  "split": "train",
+  "passage": "38:6-13",
+  "seconds": 28.761,
+  "segments": [
+   {
+    "file": "wavs/038008_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 10.98,
+    "text": "ءَءُںںںزِلَ عَلَيهِ ذذِكرُ مِ۾۾۾بَينِنَاا"
+   },
+   {
+    "file": "wavs/038008_1.wav",
+    "words": [
+     5,
+     14
+    ],
+    "seconds": 17.781,
+    "text": "بَل هُم فِۦۦ شَككِممممِںںںذِكرِۦۦ بَللَممممَاا يَذُۥۥقُۥۥ عَذَاااابڇ"
+   }
+  ],
+  "intervals": [
+   [
+    1.87,
+    9.99,
+    0,
+    4
+   ],
+   [
+    11.97,
+    19.03,
+    5,
+    10
+   ],
+   [
+    20.625,
+    27.645,
+    11,
+    14
+   ]
+  ],
+  "engine_stops": 2,
+  "summary": {
+   "words": 15,
+   "words_all_correct": 13,
+   "letters": 76,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 312,
+   "characteristics_not_realised": 0,
+   "rules_scored": 31,
+   "rules_failed": 2
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 38,
+  "ayah": 12,
+  "split": "train",
+  "passage": "38:6-13",
+  "seconds": 15.647,
+  "segments": [
+   {
+    "file": "wavs/038012_0.wav",
+    "words": [
+     0,
+     7
+    ],
+    "seconds": 15.647,
+    "text": "كَذذَبَت قَبڇلَهُم قَومُ نُۥۥحِوووَعَاادُوووَفِرعَونُ ذُ لءَوتَاااادڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.17,
+    14.19,
+    0,
+    7
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 8,
+   "words_all_correct": 8,
+   "letters": 54,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 245,
+   "characteristics_not_realised": 0,
+   "rules_scored": 24,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 38,
+  "ayah": 63,
+  "split": "train",
+  "passage": "38:63-63",
+  "seconds": 10.736,
+  "segments": [
+   {
+    "file": "wavs/038063_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 10.736,
+    "text": "ءَتتَخَذنَااهُم سِخرِييَن ءَم زَااغَت عَنهُمُ لءَبڇصَاااار"
+   }
+  ],
+  "intervals": [
+   [
+    0.13,
+    8.19,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 6,
+   "letters": 46,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 214,
+   "characteristics_not_realised": 0,
+   "rules_scored": 27,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 42,
+  "ayah": 33,
+  "split": "train",
+  "passage": "42:33-33",
+  "seconds": 23.902,
+  "segments": [
+   {
+    "file": "wavs/042033_0.wav",
+    "words": [
+     0,
+     7
+    ],
+    "seconds": 10.34,
+    "text": "ءِيييَشَء يُسكِنِ ررِۦۦحَ فَيَظلَلنَ رَوَااكِدَ عَلَاا ظَهرِه"
+   },
+   {
+    "file": "wavs/042033_1.wav",
+    "words": [
+     8,
+     14
+    ],
+    "seconds": 13.562,
+    "text": "ءِننننَ فِۦۦ ذَاالِكَ لَءَاايَااتِللِكُللِ صَببَاارِںںںشَكُۥۥۥۥر"
+   }
+  ],
+  "intervals": [
+   [
+    0.03,
+    9.39,
+    0,
+    7
+   ],
+   [
+    11.29,
+    22.325,
+    8,
+    14
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 15,
+   "words_all_correct": 13,
+   "letters": 95,
+   "identity_not_confirmed": 1,
+   "characteristics_scored": 361,
+   "characteristics_not_realised": 1,
+   "rules_scored": 37,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 51,
+  "ayah": 53,
+  "split": "train",
+  "passage": "51:53-53",
+  "seconds": 10.475,
+  "segments": [
+   {
+    "file": "wavs/051053_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 10.475,
+    "text": "ءَتَوَااصَو بِهِۦۦ بَل هُم قَومُںںںطَااغُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.91,
+    2.93,
+    0,
+    1
+   ],
+   [
+    4.33,
+    9.09,
+    2,
+    5
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 4,
+   "letters": 34,
+   "identity_not_confirmed": 1,
+   "characteristics_scored": 143,
+   "characteristics_not_realised": 1,
+   "rules_scored": 17,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 52,
+  "ayah": 35,
+  "split": "train",
+  "passage": "52:34-38",
+  "seconds": 10.527,
+  "segments": [
+   {
+    "file": "wavs/052035_0.wav",
+    "words": [
+     0,
+     7
+    ],
+    "seconds": 10.527,
+    "text": "ءَم خُلِقُۥۥ مِن غَيرِ شَيءِن ءَم هُمُ لخَاالِقُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.65,
+    9.43,
+    0,
+    7
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 8,
+   "words_all_correct": 8,
+   "letters": 41,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 184,
+   "characteristics_not_realised": 0,
+   "rules_scored": 18,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 52,
+  "ayah": 40,
+  "split": "train",
+  "passage": "52:40-40",
+  "seconds": 13.296,
+  "segments": [
+   {
+    "file": "wavs/052040_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 13.296,
+    "text": "ءَم تَسءَلُهُم ءَجڇرَںںںفَهُممممِممممَغرَمِممممُثقَلُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.21,
+    11.33,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 6,
+   "letters": 42,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 196,
+   "characteristics_not_realised": 1,
+   "rules_scored": 18,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 53,
+  "ayah": 10,
+  "split": "train",
+  "passage": "53:9-10",
+  "seconds": 9.927,
+  "segments": [
+   {
+    "file": "wavs/053010_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 9.927,
+    "text": "فَءَوحَاااا ءِلَاا عَبڇدِهِۦۦ مَاااا ءَوحَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.73,
+    9.21,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 5,
+   "letters": 31,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 120,
+   "characteristics_not_realised": 0,
+   "rules_scored": 9,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 53,
+  "ayah": 34,
+  "split": "train",
+  "passage": "53:33-34",
+  "seconds": 6.844,
+  "segments": [
+   {
+    "file": "wavs/053034_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 6.844,
+    "text": "وَءَعطَاا قَلِۦۦلَوووَءَكدَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.23,
+    5.73,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 2,
+   "letters": 23,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 87,
+   "characteristics_not_realised": 1,
+   "rules_scored": 10,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 69,
+  "ayah": 21,
+  "split": "train",
+  "passage": "69:21-22",
+  "seconds": 5.433,
+  "segments": [
+   {
+    "file": "wavs/069021_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 5.433,
+    "text": "فَهُوَ فِۦۦ عِۦۦشَتِررَااضِيَه"
+   }
+  ],
+  "intervals": [
+   [
+    0.53,
+    4.49,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 3,
+   "letters": 24,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 88,
+   "characteristics_not_realised": 1,
+   "rules_scored": 8,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 69,
+  "ayah": 30,
+  "split": "train",
+  "passage": "69:28-35",
+  "seconds": 5.46,
+  "segments": [
+   {
+    "file": "wavs/069030_0.wav",
+    "words": [
+     0,
+     1
+    ],
+    "seconds": 5.46,
+    "text": "خُذُۥۥهُ فَغُللُۥۥۥۥه"
+   }
+  ],
+  "intervals": [
+   [
+    0.59,
+    4.19,
+    0,
+    1
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 2,
+   "words_all_correct": 2,
+   "letters": 15,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 55,
+   "characteristics_not_realised": 0,
+   "rules_scored": 6,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.3
+ },
+ {
+  "surah": 69,
+  "ayah": 34,
+  "split": "train",
+  "passage": "69:28-35",
+  "seconds": 8.281,
+  "segments": [
+   {
+    "file": "wavs/069034_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 8.281,
+    "text": "وَلَاا يَحُضضُ عَلَاا طَعَاامِ لمِسكِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.85,
+    7.29,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 5,
+   "letters": 31,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 120,
+   "characteristics_not_realised": 0,
+   "rules_scored": 14,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.221
+ },
+ {
+  "surah": 74,
+  "ayah": 35,
+  "split": "train",
+  "passage": "74:33-35",
+  "seconds": 4.441,
+  "segments": [
+   {
+    "file": "wavs/074035_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 4.441,
+    "text": "ءِننننَهَاا لَءِحدَ لكُبَر"
+   }
+  ],
+  "intervals": [
+   [
+    0.39,
+    3.51,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 20,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 87,
+   "characteristics_not_realised": 0,
+   "rules_scored": 9,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 75,
+  "ayah": 28,
+  "split": "train",
+  "passage": "75:27-37",
+  "seconds": 7.079,
+  "segments": [
+   {
+    "file": "wavs/075028_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 7.079,
+    "text": "وَظَننننَ ءَننننَهُ لفِرَااااقڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.45,
+    6.33,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 2,
+   "letters": 20,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 86,
+   "characteristics_not_realised": 2,
+   "rules_scored": 10,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 75,
+  "ayah": 32,
+  "split": "train",
+  "passage": "75:27-37",
+  "seconds": 6.478,
+  "segments": [
+   {
+    "file": "wavs/075032_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 6.478,
+    "text": "وَلَااكِںںںكَذذَبَ وَتَوَللَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.47,
+    5.55,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 23,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 85,
+   "characteristics_not_realised": 0,
+   "rules_scored": 2,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 75,
+  "ayah": 36,
+  "split": "train",
+  "passage": "75:27-37",
+  "seconds": 8.751,
+  "segments": [
+   {
+    "file": "wavs/075036_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 8.751,
+    "text": "ءَيَحسَبُ لءِںںںسَاانُ ءَيييُترَكَ سُدَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.73,
+    7.77,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 5,
+   "letters": 32,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 134,
+   "characteristics_not_realised": 0,
+   "rules_scored": 14,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 76,
+  "ayah": 3,
+  "split": "train",
+  "passage": "76:1-4",
+  "seconds": 14.759,
+  "segments": [
+   {
+    "file": "wavs/076003_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 14.759,
+    "text": "ءِننننَاا هَدَينَااهُ سسَبِۦۦلَ ءِممممَاا شَااكِرَوووَءِممممَاا كَفُۥۥرَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.41,
+    13.05,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 6,
+   "letters": 49,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 163,
+   "characteristics_not_realised": 0,
+   "rules_scored": 18,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 76,
+  "ayah": 15,
+  "split": "train",
+  "passage": "76:13-16",
+  "seconds": 18.469,
+  "segments": [
+   {
+    "file": "wavs/076015_0.wav",
+    "words": [
+     0,
+     7
+    ],
+    "seconds": 18.469,
+    "text": "وَيُطَاافُ عَلَيهِ۾۾۾بِءَاانِيَتِممممِںںںفِضضَتِوووَءَكوَاابِںںںكَاانَت قَوَاارِۦۦرَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.03,
+    17.01,
+    0,
+    7
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 8,
+   "words_all_correct": 8,
+   "letters": 65,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 251,
+   "characteristics_not_realised": 0,
+   "rules_scored": 24,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.338
+ },
+ {
+  "surah": 79,
+  "ayah": 2,
+  "split": "train",
+  "passage": "79:2-3",
+  "seconds": 6.583,
+  "segments": [
+   {
+    "file": "wavs/079002_0.wav",
+    "words": [
+     0,
+     1
+    ],
+    "seconds": 6.583,
+    "text": "وَننننَااشِطَااتِ نَشطَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.63,
+    5.51,
+    0,
+    1
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 2,
+   "words_all_correct": 2,
+   "letters": 18,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 63,
+   "characteristics_not_realised": 0,
+   "rules_scored": 12,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 81,
+  "ayah": 13,
+  "split": "train",
+  "passage": "81:13-14",
+  "seconds": 5.695,
+  "segments": [
+   {
+    "file": "wavs/081013_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 5.695,
+    "text": "وَءِذَ لجَننننَتُ ءُزلِفَت"
+   }
+  ],
+  "intervals": [
+   [
+    0.23,
+    4.69,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 21,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 95,
+   "characteristics_not_realised": 0,
+   "rules_scored": 9,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 83,
+  "ayah": 10,
+  "split": "train",
+  "passage": "83:10-14",
+  "seconds": 10.397,
+  "segments": [
+   {
+    "file": "wavs/083010_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 10.397,
+    "text": "وَيلُيييَومَءِذِللِلمُكَذذِبِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.01,
+    7.79,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 2,
+   "letters": 27,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 117,
+   "characteristics_not_realised": 0,
+   "rules_scored": 9,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 83,
+  "ayah": 14,
+  "split": "train",
+  "passage": "83:10-14",
+  "seconds": 14.498,
+  "segments": [
+   {
+    "file": "wavs/083014_0.wav",
+    "words": [
+     0,
+     7
+    ],
+    "seconds": 14.498,
+    "text": "كَللَاا بَلۜ رَاانَ عَلَاا قُلُۥۥبِهِممممَاا كَاانُۥۥ يَكسِبُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.39,
+    2.41,
+    0,
+    1
+   ],
+   [
+    3.37,
+    13.45,
+    2,
+    7
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 8,
+   "words_all_correct": 7,
+   "letters": 46,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 166,
+   "characteristics_not_realised": 1,
+   "rules_scored": 16,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 88,
+  "ayah": 15,
+  "split": "train",
+  "passage": "88:14-22",
+  "seconds": 6.191,
+  "segments": [
+   {
+    "file": "wavs/088015_0.wav",
+    "words": [
+     0,
+     1
+    ],
+    "seconds": 6.191,
+    "text": "وَنَمَاارِقُ مَصفُۥۥفَه"
+   }
+  ],
+  "intervals": [
+   [
+    0.27,
+    4.81,
+    0,
+    1
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 2,
+   "words_all_correct": 2,
+   "letters": 20,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 80,
+   "characteristics_not_realised": 0,
+   "rules_scored": 9,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.338
+ },
+ {
+  "surah": 88,
+  "ayah": 19,
+  "split": "train",
+  "passage": "88:14-22",
+  "seconds": 7.053,
+  "segments": [
+   {
+    "file": "wavs/088019_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 7.053,
+    "text": "وَءِلَ لجِبَاالِ كَيفَ نُصِبَت"
+   }
+  ],
+  "intervals": [
+   [
+    0.37,
+    5.63,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 4,
+   "letters": 26,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 112,
+   "characteristics_not_realised": 0,
+   "rules_scored": 9,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.36
+ },
+ {
+  "surah": 89,
+  "ayah": 2,
+  "split": "train",
+  "passage": "89:2-9",
+  "seconds": 5.172,
+  "segments": [
+   {
+    "file": "wavs/089002_0.wav",
+    "words": [
+     0,
+     1
+    ],
+    "seconds": 5.172,
+    "text": "وَلَيَاالِن عَشر"
+   }
+  ],
+  "intervals": [
+   [
+    0.53,
+    3.53,
+    0,
+    1
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 2,
+   "words_all_correct": 2,
+   "letters": 14,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 64,
+   "characteristics_not_realised": 0,
+   "rules_scored": 7,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.36
+ },
+ {
+  "surah": 89,
+  "ayah": 6,
+  "split": "train",
+  "passage": "89:2-9",
+  "seconds": 10.083,
+  "segments": [
+   {
+    "file": "wavs/089006_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 10.083,
+    "text": "ءَلَم تَرَ كَيفَ فَعَلَ رَببُكَ بِعَاااادڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.75,
+    8.39,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 6,
+   "letters": 33,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 143,
+   "characteristics_not_realised": 0,
+   "rules_scored": 7,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 89,
+  "ayah": 29,
+  "split": "train",
+  "passage": "89:29-30",
+  "seconds": 5.851,
+  "segments": [
+   {
+    "file": "wavs/089029_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 5.851,
+    "text": "فَدڇخُلِۦۦ فِۦۦ عِبَاادِۦۦ"
+   }
+  ],
+  "intervals": [
+   [
+    0.03,
+    4.59,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 20,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 72,
+   "characteristics_not_realised": 0,
+   "rules_scored": 6,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.2
+ },
+ {
+  "surah": 91,
+  "ayah": 12,
+  "split": "train",
+  "passage": "91:11-12",
+  "seconds": 6.06,
+  "segments": [
+   {
+    "file": "wavs/091012_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 6.06,
+    "text": "ءِذِ ۾۾۾بَعَثَ ءَشقَااهَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.05,
+    4.85,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 20,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 79,
+   "characteristics_not_realised": 0,
+   "rules_scored": 7,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 106,
+  "ayah": 2,
+  "split": "train",
+  "passage": "106:1-2",
+  "seconds": 10.919,
+  "segments": [
+   {
+    "file": "wavs/106002_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 10.919,
+    "text": "ءِۦۦلَاافِهِم رِحلَتَ ششِتَااااءِ وَصصَيييف"
+   }
+  ],
+  "intervals": [
+   [
+    0.39,
+    9.89,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 3,
+   "letters": 31,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 125,
+   "characteristics_not_realised": 1,
+   "rules_scored": 17,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.339
+ },
+ {
+  "surah": 2,
+  "ayah": 51,
+  "split": "test",
+  "passage": "2:51-51",
+  "seconds": 24.007,
+  "segments": [
+   {
+    "file": "wavs/002051_0.wav",
+    "words": [
+     0,
+     11
+    ],
+    "seconds": 24.007,
+    "text": "وَءِذ وَااعَدڇنَاا مُۥۥسَاااا ءَربَعِۦۦنَ لَيلَتَںںںثُممممَ تتَخَذتُمُ لعِجڇلَ مِ۾۾۾بَعدِهِۦۦ وَءَںںںتُم ظَاالِمُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.77,
+    22.725,
+    0,
+    11
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 12,
+   "words_all_correct": 12,
+   "letters": 87,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 371,
+   "characteristics_not_realised": 0,
+   "rules_scored": 32,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 17,
+  "ayah": 109,
+  "split": "test",
+  "passage": "17:109-110",
+  "seconds": 10.057,
+  "segments": [
+   {
+    "file": "wavs/017109_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 10.057,
+    "text": "وَيَخِررُۥۥنَ لِلءَذقَاانِ يَبڇكُۥۥنَ وَيَزِۦۦدُهُم خُشُۥۥعَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.69,
+    8.63,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 5,
+   "letters": 51,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 199,
+   "characteristics_not_realised": 0,
+   "rules_scored": 16,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 18,
+  "ayah": 107,
+  "split": "test",
+  "passage": "18:107-108",
+  "seconds": 12.251,
+  "segments": [
+   {
+    "file": "wavs/018107_0.wav",
+    "words": [
+     0,
+     9
+    ],
+    "seconds": 12.251,
+    "text": "ءِننننَ للَذِۦۦنَ ءَاامَنُۥۥ وَعَمِلُ صصَاالِحَااتِ كَاانَت لَهُم جَننننَااتُ لفِردَوسِ نُزُلَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.07,
+    11.23,
+    0,
+    9
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 10,
+   "words_all_correct": 10,
+   "letters": 71,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 268,
+   "characteristics_not_realised": 0,
+   "rules_scored": 26,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.2
+ },
+ {
+  "surah": 38,
+  "ayah": 58,
+  "split": "test",
+  "passage": "38:56-58",
+  "seconds": 8.255,
+  "segments": [
+   {
+    "file": "wavs/038058_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 8.255,
+    "text": "وَءَااخَرُ مِںںںشَكلِهِۦۦۦۦ ءَزوَااااجڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.35,
+    6.89,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 3,
+   "letters": 28,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 119,
+   "characteristics_not_realised": 0,
+   "rules_scored": 13,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.2
+ },
+ {
+  "surah": 60,
+  "ayah": 2,
+  "split": "test",
+  "passage": "60:2-2",
+  "seconds": 22.753,
+  "segments": [
+   {
+    "file": "wavs/060002_0.wav",
+    "words": [
+     0,
+     12
+    ],
+    "seconds": 22.753,
+    "text": "ءِيييَثقَفُۥۥكُم يَكُۥۥنُۥۥ لَكُم ءَعدَااااءَوووَيَبڇسُطُۥۥۥۥ ءِلَيكُم ءَيدِيَهُم وَءَلسِنَتَهُ۾۾۾بِسسُۥۥۥۥءِ وَوَددُۥۥ لَو تَكفُرُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    1.11,
+    20.025,
+    0,
+    12
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 13,
+   "words_all_correct": 13,
+   "letters": 103,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 435,
+   "characteristics_not_realised": 0,
+   "rules_scored": 38,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 2,
+  "ayah": 245,
+  "split": "train",
+  "passage": "2:243-245",
+  "seconds": 32.728,
+  "segments": [
+   {
+    "file": "wavs/002245_0.wav",
+    "words": [
+     0,
+     10
+    ],
+    "seconds": 20.787,
+    "text": "مَںںںذَ للَذِۦۦ يُقڇرِضُ للَااهَ قَرضَن حَسَنَںںںفَيُضَااعِفَهُۥۥ لَهُۥۥۥۥ ءَضعَاافَںںںكَثِۦۦرَه"
+   },
+   {
+    "file": "wavs/002245_1.wav",
+    "words": [
+     11,
+     15
+    ],
+    "seconds": 11.941,
+    "text": "وَللَااهُ يَقڇبِضُ وَيَبڇسُطُ وَءِلَيهِ تُرجَعُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.95,
+    19.85,
+    0,
+    10
+   ],
+   [
+    21.725,
+    31.765,
+    11,
+    15
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 16,
+   "words_all_correct": 13,
+   "letters": 116,
+   "identity_not_confirmed": 1,
+   "characteristics_scored": 486,
+   "characteristics_not_realised": 1,
+   "rules_scored": 47,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 3,
+  "ayah": 4,
+  "split": "train",
+  "passage": "3:2-4",
+  "seconds": 37.956,
+  "segments": [
+   {
+    "file": "wavs/003004_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 12.41,
+    "text": "مِںںںقَبڇلُ هُدَللِننننَااسِ وَءَںںںزَلَ لفُرقَاااان"
+   },
+   {
+    "file": "wavs/003004_1.wav",
+    "words": [
+     6,
+     13
+    ],
+    "seconds": 15.555,
+    "text": "ءِننننَ للَذِۦۦنَ كَفَرُۥۥ بِءَاايَااتِ للَااهِ لَهُم عَذَاابُںںںشَدِۦۦۦۦدڇ"
+   },
+   {
+    "file": "wavs/003004_2.wav",
+    "words": [
+     14,
+     17
+    ],
+    "seconds": 9.991,
+    "text": "وَللَااهُ عَزِۦۦزُںںںذُ ںںںتِقَاااام"
+   }
+  ],
+  "intervals": [
+   [
+    0.05,
+    11.07,
+    0,
+    5
+   ],
+   [
+    13.75,
+    27.245,
+    6,
+    13
+   ],
+   [
+    28.685,
+    36.305,
+    14,
+    17
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 18,
+   "words_all_correct": 14,
+   "letters": 115,
+   "identity_not_confirmed": 2,
+   "characteristics_scored": 444,
+   "characteristics_not_realised": 4,
+   "rules_scored": 41,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 4,
+  "ayah": 112,
+  "split": "train",
+  "passage": "4:112-112",
+  "seconds": 26.044,
+  "segments": [
+   {
+    "file": "wavs/004112_0.wav",
+    "words": [
+     0,
+     13
+    ],
+    "seconds": 26.044,
+    "text": "وَمَيييَكسِبڇ خَطِۦۦۦۦءَتَن ءَو ءِثمَںںںثُممممَ يَرمِ بِهِۦۦ بَرِۦۦۦۦءَںںںفَقَدِ حتَمَلَ بُهتَاانَوووَءِثمَممممُبِۦۦنَاا"
+   }
+  ],
+  "intervals": [
+   [
+    1.61,
+    24.085,
+    0,
+    13
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 14,
+   "words_all_correct": 10,
+   "letters": 88,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 370,
+   "characteristics_not_realised": 3,
+   "rules_scored": 31,
+   "rules_failed": 4
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 7,
+  "ayah": 13,
+  "split": "train",
+  "passage": "7:12-15",
+  "seconds": 17.554,
+  "segments": [
+   {
+    "file": "wavs/007013_0.wav",
+    "words": [
+     0,
+     12
+    ],
+    "seconds": 17.554,
+    "text": "قَاالَ فَهبِطڇ مِنهَاا فَمَاا يَكُۥۥنُ لَكَ ءَںںںتَتَكَببَرَ فِۦۦهَاا فَخرُجڇ ءِننننَكَ مِنَ صصَااغِرِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.39,
+    15.47,
+    0,
+    12
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 13,
+   "words_all_correct": 11,
+   "letters": 79,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 316,
+   "characteristics_not_realised": 2,
+   "rules_scored": 26,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 7,
+  "ayah": 69,
+  "split": "train",
+  "passage": "7:68-69",
+  "seconds": 54.073,
+  "segments": [
+   {
+    "file": "wavs/007069_0.wav",
+    "words": [
+     0,
+     9
+    ],
+    "seconds": 18.55,
+    "text": "ءَوَعَجِبڇتُم ءَںںںجَااااءَكُم ذِكرُممممِررَببِكُم عَلَاا رَجُلِممممِںںںكُم لِيُںںںذِرَكُم"
+   },
+   {
+    "file": "wavs/007069_1.wav",
+    "words": [
+     10,
+     21
+    ],
+    "seconds": 20.072,
+    "text": "وَذكُرُۥۥۥۥ ءِذ جَعَلَكُم خُلَفَااااءَ مِ۾۾۾بَعدِ قَومِ نُۥۥحِوووَزَاادَكُم فِ لخَلقِ بَسطَه"
+   },
+   {
+    "file": "wavs/007069_2.wav",
+    "words": [
+     22,
+     26
+    ],
+    "seconds": 15.451,
+    "text": "فَذكُرُۥۥۥۥ ءَاالَااااءَ للَااهِ لَعَللَكُم تُفلِحُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.43,
+    17.29,
+    0,
+    9
+   ],
+   [
+    19.81,
+    37.005,
+    10,
+    21
+   ],
+   [
+    40.24,
+    52.5,
+    22,
+    26
+   ]
+  ],
+  "engine_stops": 2,
+  "summary": {
+   "words": 27,
+   "words_all_correct": 25,
+   "letters": 179,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 764,
+   "characteristics_not_realised": 1,
+   "rules_scored": 64,
+   "rules_failed": 2
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 7,
+  "ayah": 176,
+  "split": "train",
+  "passage": "7:175-176",
+  "seconds": 45.923,
+  "segments": [
+   {
+    "file": "wavs/007176_0.wav",
+    "words": [
+     0,
+     9
+    ],
+    "seconds": 15.97,
+    "text": "وَلَو شِءنَاا لَرَفَعنَااهُ بِهَاا وَلَااكِننننَهُۥۥۥۥ ءَخلَدَ ءِلَ لءَرضِ وَتتَبَعَ هَوَااااه"
+   },
+   {
+    "file": "wavs/007176_1.wav",
+    "words": [
+     10,
+     25
+    ],
+    "seconds": 20.385,
+    "text": "فَمَثَلُهُۥۥ كَمَثَلِ لكَلبِ ءِںںںتَحمِل عَلَيهِ يَلهَث ءَو تَترُكهُ يَلهَذذَاالِكَ مَثَلُ لقَومِ للَذِۦۦنَ كَذذَبُۥۥ بِءَاايَااتِنَاا"
+   },
+   {
+    "file": "wavs/007176_2.wav",
+    "words": [
+     26,
+     29
+    ],
+    "seconds": 9.568,
+    "text": "فَقڇصُصِ لقَصَصَ لَعَللَهُم يَتَفَككَرُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    1.29,
+    14.99,
+    0,
+    9
+   ],
+   [
+    16.95,
+    34.625,
+    10,
+    25
+   ],
+   [
+    38.085,
+    44.76,
+    26,
+    29
+   ]
+  ],
+  "engine_stops": 2,
+  "summary": {
+   "words": 30,
+   "words_all_correct": 27,
+   "letters": 217,
+   "identity_not_confirmed": 1,
+   "characteristics_scored": 905,
+   "characteristics_not_realised": 1,
+   "rules_scored": 74,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 10,
+  "ayah": 52,
+  "split": "train",
+  "passage": "10:50-52",
+  "seconds": 19.304,
+  "segments": [
+   {
+    "file": "wavs/010052_0.wav",
+    "words": [
+     0,
+     12
+    ],
+    "seconds": 19.304,
+    "text": "ثُممممَ قِۦۦلَ لِللَذِۦۦنَ ظَلَمُۥۥ ذُۥۥقُۥۥ عَذَاابَ لخُلدِ هَل تُجڇزَونَ ءِللَاا بِمَاا كُںںںتُم تَكسِبُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.35,
+    17.29,
+    0,
+    12
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 13,
+   "words_all_correct": 12,
+   "letters": 81,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 324,
+   "characteristics_not_realised": 0,
+   "rules_scored": 29,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 10,
+  "ayah": 59,
+  "split": "train",
+  "passage": "10:56-59",
+  "seconds": 36.362,
+  "segments": [
+   {
+    "file": "wavs/010059_0.wav",
+    "words": [
+     0,
+     15
+    ],
+    "seconds": 28.385,
+    "text": "قُل ءَرَءَيتُممممَاااا ءَںںںزَلَ للَااهُ لَكُممممِررِزقِںںںفَجَعَلتُممممِنهُ حَرَاامَوووَحَلَاالَںںںقُل ءَااااااللَااهُ ءَذِنَ لَكُم"
+   },
+   {
+    "file": "wavs/010059_1.wav",
+    "words": [
+     16,
+     19
+    ],
+    "seconds": 7.977,
+    "text": "ءَم عَلَ للَااهِ تَفتَرُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    1.35,
+    27.205,
+    0,
+    15
+   ],
+   [
+    29.565,
+    34.905,
+    16,
+    19
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 20,
+   "words_all_correct": 18,
+   "letters": 113,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 461,
+   "characteristics_not_realised": 1,
+   "rules_scored": 40,
+   "rules_failed": 2
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 12,
+  "ayah": 9,
+  "split": "train",
+  "passage": "12:9-11",
+  "seconds": 24.163,
+  "segments": [
+   {
+    "file": "wavs/012009_0.wav",
+    "words": [
+     0,
+     13
+    ],
+    "seconds": 24.163,
+    "text": "ءُقڇتُلُۥۥ يُۥۥسُفَ ءَوِ طڇرَحُۥۥهُ ءَرضَيييَخلُ لَكُم وَجڇهُ ءَبِۦۦكُم وَتَكُۥۥنُۥۥ مِ۾۾۾بَعدِهِۦۦ قَومَںںںصَاالِحِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    1.73,
+    22.085,
+    0,
+    13
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 14,
+   "words_all_correct": 13,
+   "letters": 94,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 398,
+   "characteristics_not_realised": 1,
+   "rules_scored": 34,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 15,
+  "ayah": 33,
+  "split": "train",
+  "passage": "15:33-33",
+  "seconds": 16.144,
+  "segments": [
+   {
+    "file": "wavs/015033_0.wav",
+    "words": [
+     0,
+     10
+    ],
+    "seconds": 16.144,
+    "text": "قَاالَ لَم ءَكُللِءَسجُدَ لِبَشَرِن خَلَقڇتَهُۥۥ مِںںںصَلصَاالِممممِن حَمَءِممممَسنُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.39,
+    14.89,
+    0,
+    10
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 11,
+   "words_all_correct": 10,
+   "letters": 68,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 292,
+   "characteristics_not_realised": 0,
+   "rules_scored": 27,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 17,
+  "ayah": 24,
+  "split": "train",
+  "passage": "17:24-24",
+  "seconds": 19.67,
+  "segments": [
+   {
+    "file": "wavs/017024_0.wav",
+    "words": [
+     0,
+     11
+    ],
+    "seconds": 19.67,
+    "text": "وَخفِض لَهُمَاا جَنَااحَ ذذُللِ مِنَ ررَحمَتِ وَقُررَببِ رحَمهُمَاا كَمَاا رَببَيَاانِۦۦ صَغِۦۦرَاا"
+   }
+  ],
+  "intervals": [
+   [
+    1.15,
+    17.73,
+    0,
+    11
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 12,
+   "words_all_correct": 12,
+   "letters": 75,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 283,
+   "characteristics_not_realised": 0,
+   "rules_scored": 31,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 18,
+  "ayah": 3,
+  "split": "train",
+  "passage": "18:1-6",
+  "seconds": 6.139,
+  "segments": [
+   {
+    "file": "wavs/018003_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 6.139,
+    "text": "مَااكِثِۦۦنَ فِۦۦهِ ءَبَدَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.01,
+    3.67,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 2,
+   "letters": 22,
+   "identity_not_confirmed": 1,
+   "characteristics_scored": 72,
+   "characteristics_not_realised": 1,
+   "rules_scored": 4,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.241
+ },
+ {
+  "surah": 18,
+  "ayah": 25,
+  "split": "train",
+  "passage": "18:25-25",
+  "seconds": 14.341,
+  "segments": [
+   {
+    "file": "wavs/018025_0.wav",
+    "words": [
+     0,
+     7
+    ],
+    "seconds": 14.341,
+    "text": "وَلَبِثُۥۥ فِۦۦ كَهفِهِم ثَلَااثَ مِءَتِںںںسِنِۦۦنَ وَزدَاادُۥۥ تِسعَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.05,
+    12.47,
+    0,
+    7
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 8,
+   "words_all_correct": 8,
+   "letters": 56,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 215,
+   "characteristics_not_realised": 0,
+   "rules_scored": 18,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.339
+ },
+ {
+  "surah": 18,
+  "ayah": 35,
+  "split": "train",
+  "passage": "18:32-38",
+  "seconds": 22.57,
+  "segments": [
+   {
+    "file": "wavs/018035_0.wav",
+    "words": [
+     0,
+     11
+    ],
+    "seconds": 22.57,
+    "text": "وَدَخَلَ جَننننَتَهُۥۥ وَهُوَ ظَاالِمُللِنَفسِهِۦۦ قَاالَ مَاااا ءَظُننننُ ءَںںںتَبِۦۦدَ هَااذِهِۦۦۦۦ ءَبَدَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.23,
+    20.025,
+    0,
+    11
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 12,
+   "words_all_correct": 10,
+   "letters": 79,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 284,
+   "characteristics_not_realised": 0,
+   "rules_scored": 20,
+   "rules_failed": 2
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 18,
+  "ayah": 83,
+  "split": "train",
+  "passage": "18:83-83",
+  "seconds": 12.199,
+  "segments": [
+   {
+    "file": "wavs/018083_0.wav",
+    "words": [
+     0,
+     8
+    ],
+    "seconds": 12.199,
+    "text": "وَيَسءَلُۥۥنَكَ عَںںںذِ لقَرنَينِ قُل سَءَتلُۥۥ عَلَيكُممممِنهُ ذِكرَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.83,
+    5.57,
+    0,
+    3
+   ],
+   [
+    6.79,
+    10.89,
+    4,
+    8
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 9,
+   "words_all_correct": 7,
+   "letters": 57,
+   "identity_not_confirmed": 1,
+   "characteristics_scored": 254,
+   "characteristics_not_realised": 1,
+   "rules_scored": 28,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.2
+ },
+ {
+  "surah": 19,
+  "ayah": 3,
+  "split": "train",
+  "passage": "19:1-7",
+  "seconds": 7.523,
+  "segments": [
+   {
+    "file": "wavs/019003_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 7.523,
+    "text": "ءِذ نَاادَاا رَببَهُۥۥ نِدَااااءَن خَفِييَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.17,
+    6.49,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 5,
+   "letters": 31,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 110,
+   "characteristics_not_realised": 0,
+   "rules_scored": 9,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.241
+ },
+ {
+  "surah": 19,
+  "ayah": 7,
+  "split": "train",
+  "passage": "19:1-7",
+  "seconds": 17.58,
+  "segments": [
+   {
+    "file": "wavs/019007_0.wav",
+    "words": [
+     0,
+     11
+    ],
+    "seconds": 17.58,
+    "text": "يَاازَكَرِييَاااا ءِننننَاا نُبَششِرُكَ بِغُلَاامِنِ سمُهُۥۥ يَحيَاا لَم نَجڇعَللَهُۥۥ مِںںںقَبڇلُ سَمِييَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.49,
+    15.21,
+    0,
+    11
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 12,
+   "words_all_correct": 9,
+   "letters": 80,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 314,
+   "characteristics_not_realised": 1,
+   "rules_scored": 25,
+   "rules_failed": 3
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 19,
+  "ayah": 39,
+  "split": "train",
+  "passage": "19:39-39",
+  "seconds": 13.61,
+  "segments": [
+   {
+    "file": "wavs/019039_0.wav",
+    "words": [
+     0,
+     11
+    ],
+    "seconds": 13.61,
+    "text": "وَءَںںںذِرهُم يَومَ لحَسرَتِ ءِذ قُضِيَ لءَمرُ وَهُم فِۦۦ غَفلَتِوووَهُم لَاا يُءمِنُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.31,
+    12.59,
+    0,
+    11
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 12,
+   "words_all_correct": 12,
+   "letters": 71,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 327,
+   "characteristics_not_realised": 0,
+   "rules_scored": 31,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 20,
+  "ayah": 31,
+  "split": "train",
+  "passage": "20:31-32",
+  "seconds": 5.695,
+  "segments": [
+   {
+    "file": "wavs/020031_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 5.695,
+    "text": "ءُشدُدڇ بِهِۦۦۦۦ ءَزرِۦۦ"
+   }
+  ],
+  "intervals": [
+   [
+    0.27,
+    4.87,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 18,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 80,
+   "characteristics_not_realised": 0,
+   "rules_scored": 9,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.3
+ },
+ {
+  "surah": 20,
+  "ayah": 64,
+  "split": "train",
+  "passage": "20:64-64",
+  "seconds": 14.446,
+  "segments": [
+   {
+    "file": "wavs/020064_0.wav",
+    "words": [
+     0,
+     9
+    ],
+    "seconds": 14.446,
+    "text": "فَءَجڇمِعُۥۥ كَيدَكُم ثُممممَ ءتُۥۥ صَففَوووَقَدڇ ءَفلَحَ ليَومَ مَنِ ستَعلَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.25,
+    7.05,
+    0,
+    4
+   ],
+   [
+    8.47,
+    13.19,
+    5,
+    9
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 10,
+   "words_all_correct": 8,
+   "letters": 61,
+   "identity_not_confirmed": 1,
+   "characteristics_scored": 277,
+   "characteristics_not_realised": 0,
+   "rules_scored": 27,
+   "rules_failed": 2
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 23,
+  "ayah": 118,
+  "split": "train",
+  "passage": "23:118-118",
+  "seconds": 12.617,
+  "segments": [
+   {
+    "file": "wavs/023118_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 12.617,
+    "text": "وَقُررَببِ غفِر وَرحَم وَءَںںںتَ خَيرُ ررَااحِمِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.63,
+    10.93,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 7,
+   "letters": 39,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 172,
+   "characteristics_not_realised": 0,
+   "rules_scored": 22,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.36
+ },
+ {
+  "surah": 27,
+  "ayah": 33,
+  "split": "train",
+  "passage": "27:33-36",
+  "seconds": 26.802,
+  "segments": [
+   {
+    "file": "wavs/027033_0.wav",
+    "words": [
+     0,
+     11
+    ],
+    "seconds": 26.802,
+    "text": "قَاالُۥۥ نَحنُ ءُلُۥۥ قُووَتِوووَءُلُۥۥ بَءسِںںںشَدِۦۦدِوووَلءَمرُ ءِلَيكِ فَںںںظُرِۦۦ مَااذَاا تَءمُرِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.41,
+    22.865,
+    0,
+    11
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 12,
+   "words_all_correct": 11,
+   "letters": 80,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 315,
+   "characteristics_not_realised": 1,
+   "rules_scored": 31,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 29,
+  "ayah": 36,
+  "split": "train",
+  "passage": "29:36-38",
+  "seconds": 21.42,
+  "segments": [
+   {
+    "file": "wavs/029036_0.wav",
+    "words": [
+     0,
+     15
+    ],
+    "seconds": 21.42,
+    "text": "وَءِلَاا مَدڇيَنَ ءَخَااهُم شُعَيبَںںںفَقَاالَ يَااقَومِ عبُدُ للَااهَ وَرجُ ليَومَ لءَااخِرَ وَلَاا تَعثَو فِ لءَرضِ مُفسِدِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.59,
+    19.91,
+    0,
+    15
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 16,
+   "words_all_correct": 16,
+   "letters": 103,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 447,
+   "characteristics_not_realised": 0,
+   "rules_scored": 49,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 30,
+  "ayah": 55,
+  "split": "train",
+  "passage": "30:54-55",
+  "seconds": 22.204,
+  "segments": [
+   {
+    "file": "wavs/030055_0.wav",
+    "words": [
+     0,
+     8
+    ],
+    "seconds": 13.3,
+    "text": "وَيَومَ تَقُۥۥمُ سسَااعَتُ يُقڇسِمُ لمُجڇرِمُۥۥنَ مَاا لَبِثُۥۥ غَيرَ سَااعَه"
+   },
+   {
+    "file": "wavs/030055_1.wav",
+    "words": [
+     9,
+     11
+    ],
+    "seconds": 8.904,
+    "text": "كَذَاالِكَ كَاانُۥۥ يُءفَكُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.07,
+    12.11,
+    0,
+    8
+   ],
+   [
+    14.49,
+    20.685,
+    9,
+    11
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 12,
+   "words_all_correct": 11,
+   "letters": 88,
+   "identity_not_confirmed": 2,
+   "characteristics_scored": 350,
+   "characteristics_not_realised": 2,
+   "rules_scored": 28,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 35,
+  "ayah": 16,
+  "split": "train",
+  "passage": "35:16-16",
+  "seconds": 11.833,
+  "segments": [
+   {
+    "file": "wavs/035016_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 11.833,
+    "text": "ءِيييَشَء يُذهِبڇكُم وَيَءتِ بِخَلقِںںںجَدِۦۦۦۦدڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.87,
+    10.81,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 5,
+   "letters": 39,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 190,
+   "characteristics_not_realised": 0,
+   "rules_scored": 12,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.338
+ },
+ {
+  "surah": 36,
+  "ayah": 5,
+  "split": "train",
+  "passage": "36:2-8",
+  "seconds": 7.915,
+  "segments": [
+   {
+    "file": "wavs/036005_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 7.915,
+    "text": "تَںںںزِۦۦلَ لعَزِۦۦزِ ررَحِۦۦۦۦم"
+   }
+  ],
+  "intervals": [
+   [
+    0.23,
+    5.47,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 22,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 86,
+   "characteristics_not_realised": 0,
+   "rules_scored": 11,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.22
+ },
+ {
+  "surah": 36,
+  "ayah": 35,
+  "split": "train",
+  "passage": "36:35-35",
+  "seconds": 18.103,
+  "segments": [
+   {
+    "file": "wavs/036035_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 10.04,
+    "text": "لِيَءكُلُۥۥ مِںںںثَمَرِهِۦۦ وَمَاا عَمِلَتهُ ءَيدِۦۦهِم"
+   },
+   {
+    "file": "wavs/036035_1.wav",
+    "words": [
+     6,
+     7
+    ],
+    "seconds": 8.063,
+    "text": "ءَفَلَاا يَشكُرُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.01,
+    8.51,
+    0,
+    5
+   ],
+   [
+    11.57,
+    15.79,
+    6,
+    7
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 8,
+   "words_all_correct": 7,
+   "letters": 61,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 247,
+   "characteristics_not_realised": 1,
+   "rules_scored": 17,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.279
+ },
+ {
+  "surah": 36,
+  "ayah": 54,
+  "split": "train",
+  "passage": "36:51-55",
+  "seconds": 18.887,
+  "segments": [
+   {
+    "file": "wavs/036054_0.wav",
+    "words": [
+     0,
+     10
+    ],
+    "seconds": 18.887,
+    "text": "فَليَومَ لَاا تُظلَمُ نَفسُںںںشَيءَوووَلَاا تُجڇزَونَ ءِللَاا مَاا كُںںںتُم تَعمَلُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    1.11,
+    17.01,
+    0,
+    10
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 11,
+   "words_all_correct": 10,
+   "letters": 66,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 292,
+   "characteristics_not_realised": 0,
+   "rules_scored": 28,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 37,
+  "ayah": 88,
+  "split": "train",
+  "passage": "37:87-88",
+  "seconds": 8.438,
+  "segments": [
+   {
+    "file": "wavs/037088_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 8.438,
+    "text": "فَنَظَرَ نَظرَتَںںںفِ ننننُجُۥۥۥۥم"
+   }
+  ],
+  "intervals": [
+   [
+    0.61,
+    7.21,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 4,
+   "letters": 24,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 102,
+   "characteristics_not_realised": 0,
+   "rules_scored": 10,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 38,
+  "ayah": 9,
+  "split": "train",
+  "passage": "38:6-13",
+  "seconds": 15.987,
+  "segments": [
+   {
+    "file": "wavs/038009_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 15.987,
+    "text": "ءَم عِںںںدَهُم خَزَااااءِنُ رَحمَتِ رَببِكَ لعَزِۦۦزِ لوَههَاااابڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.63,
+    14.31,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 7,
+   "letters": 49,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 213,
+   "characteristics_not_realised": 0,
+   "rules_scored": 20,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.361
+ },
+ {
+  "surah": 38,
+  "ayah": 13,
+  "split": "train",
+  "passage": "38:6-13",
+  "seconds": 19.644,
+  "segments": [
+   {
+    "file": "wavs/038013_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 10.7,
+    "text": "وَثَمُۥۥدُ وَقَومُ لُۥۥطِوووَءَصحَاابُ لءَيكَه"
+   },
+   {
+    "file": "wavs/038013_1.wav",
+    "words": [
+     5,
+     6
+    ],
+    "seconds": 8.944,
+    "text": "ءُلَااااءِكَ لءَحزَاااابڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.43,
+    9.53,
+    0,
+    4
+   ],
+   [
+    11.87,
+    18.05,
+    5,
+    6
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 6,
+   "letters": 57,
+   "identity_not_confirmed": 2,
+   "characteristics_scored": 239,
+   "characteristics_not_realised": 1,
+   "rules_scored": 23,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 40,
+  "ayah": 79,
+  "split": "train",
+  "passage": "40:79-79",
+  "seconds": 12.095,
+  "segments": [
+   {
+    "file": "wavs/040079_0.wav",
+    "words": [
+     0,
+     8
+    ],
+    "seconds": 12.095,
+    "text": "ءَللَااهُ للَذِۦۦ جَعَلَ لَكُمُ لءَنعَاامَ لِتَركَبُۥۥ مِنهَاا وَمِنهَاا تَءكُلُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    1.09,
+    10.99,
+    0,
+    8
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 9,
+   "words_all_correct": 9,
+   "letters": 66,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 262,
+   "characteristics_not_realised": 0,
+   "rules_scored": 17,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.2
+ },
+ {
+  "surah": 43,
+  "ayah": 89,
+  "split": "train",
+  "passage": "43:89-89",
+  "seconds": 14.237,
+  "segments": [
+   {
+    "file": "wavs/043089_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 14.237,
+    "text": "فَصفَح عَنهُم وَقُل سَلَاامُںںںفَسَوفَ يَعلَمُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.33,
+    6.81,
+    0,
+    3
+   ],
+   [
+    8.29,
+    12.85,
+    4,
+    5
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 5,
+   "letters": 41,
+   "identity_not_confirmed": 2,
+   "characteristics_scored": 191,
+   "characteristics_not_realised": 2,
+   "rules_scored": 20,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.36
+ },
+ {
+  "surah": 51,
+  "ayah": 59,
+  "split": "train",
+  "passage": "51:59-59",
+  "seconds": 12.983,
+  "segments": [
+   {
+    "file": "wavs/051059_0.wav",
+    "words": [
+     0,
+     8
+    ],
+    "seconds": 12.983,
+    "text": "فَءِننننَ لِللَذِۦۦنَ ظَلَمُۥۥ ذَنُۥۥبَممممِثلَ ذَنُۥۥبِ ءَصحَاابِهِم فَلَاا يَستَعجِلُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.09,
+    11.71,
+    0,
+    8
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 9,
+   "words_all_correct": 9,
+   "letters": 69,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 269,
+   "characteristics_not_realised": 0,
+   "rules_scored": 22,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.241
+ },
+ {
+  "surah": 52,
+  "ayah": 36,
+  "split": "train",
+  "passage": "52:34-38",
+  "seconds": 12.016,
+  "segments": [
+   {
+    "file": "wavs/052036_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 12.016,
+    "text": "ءَم خَلَقُ سسَمَااوَااتِ وَلءَرضَ بَللَاا يُۥۥقِنُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.49,
+    5.33,
+    0,
+    3
+   ],
+   [
+    6.63,
+    10.73,
+    4,
+    6
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 7,
+   "letters": 41,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 159,
+   "characteristics_not_realised": 0,
+   "rules_scored": 18,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 52,
+  "ayah": 45,
+  "split": "train",
+  "passage": "52:45-45",
+  "seconds": 13.819,
+  "segments": [
+   {
+    "file": "wavs/052045_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 13.819,
+    "text": "فَذَرهُم حَتتَاا يُلَااقُۥۥ يَومَهُمُ للَذِۦۦ فِۦۦهِ يُصعَقُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.17,
+    11.07,
+    0,
+    6
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 7,
+   "letters": 49,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 190,
+   "characteristics_not_realised": 0,
+   "rules_scored": 18,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 53,
+  "ayah": 15,
+  "split": "train",
+  "passage": "53:15-16",
+  "seconds": 8.02,
+  "segments": [
+   {
+    "file": "wavs/053015_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 8.02,
+    "text": "عِںںںدَهَاا جَننننَتُ لمَءوَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.47,
+    6.05,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 21,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 86,
+   "characteristics_not_realised": 0,
+   "rules_scored": 6,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.3
+ },
+ {
+  "surah": 55,
+  "ayah": 9,
+  "split": "train",
+  "passage": "55:9-9",
+  "seconds": 11.259,
+  "segments": [
+   {
+    "file": "wavs/055009_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 11.259,
+    "text": "وَءَقِۦۦمُ لوَزنَ بِلقِسطِ وَلَاا تُخسِرُ لمِۦۦزَاااان"
+   }
+  ],
+  "intervals": [
+   [
+    0.23,
+    10.11,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 6,
+   "letters": 43,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 184,
+   "characteristics_not_realised": 0,
+   "rules_scored": 23,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 69,
+  "ayah": 22,
+  "split": "train",
+  "passage": "69:21-22",
+  "seconds": 5.094,
+  "segments": [
+   {
+    "file": "wavs/069022_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 5.094,
+    "text": "فِۦۦ جَننننَتِن عَاالِيَه"
+   }
+  ],
+  "intervals": [
+   [
+    0.39,
+    4.15,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 18,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 71,
+   "characteristics_not_realised": 0,
+   "rules_scored": 6,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.241
+ },
+ {
+  "surah": 69,
+  "ayah": 31,
+  "split": "train",
+  "passage": "69:28-35",
+  "seconds": 6.034,
+  "segments": [
+   {
+    "file": "wavs/069031_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 6.034,
+    "text": "ثُممممَ لجَحِۦۦمَ صَللُۥۥۥۥه"
+   }
+  ],
+  "intervals": [
+   [
+    0.13,
+    4.95,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 18,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 70,
+   "characteristics_not_realised": 0,
+   "rules_scored": 11,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 69,
+  "ayah": 35,
+  "split": "train",
+  "passage": "69:28-35",
+  "seconds": 7.184,
+  "segments": [
+   {
+    "file": "wavs/069035_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 7.184,
+    "text": "فَلَيسَ لَهُ ليَومَ هَااهُنَاا حَمِۦۦۦۦم"
+   }
+  ],
+  "intervals": [
+   [
+    0.27,
+    6.33,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 5,
+   "letters": 31,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 128,
+   "characteristics_not_realised": 0,
+   "rules_scored": 11,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.241
+ },
+ {
+  "surah": 74,
+  "ayah": 50,
+  "split": "train",
+  "passage": "74:50-51",
+  "seconds": 6.217,
+  "segments": [
+   {
+    "file": "wavs/074050_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 6.217,
+    "text": "كَءَننننَهُم حُمُرُممممُستَںںںفِرَه"
+   }
+  ],
+  "intervals": [
+   [
+    0.05,
+    5.23,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 26,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 117,
+   "characteristics_not_realised": 0,
+   "rules_scored": 11,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 75,
+  "ayah": 29,
+  "split": "train",
+  "passage": "75:27-37",
+  "seconds": 6.635,
+  "segments": [
+   {
+    "file": "wavs/075029_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 6.635,
+    "text": "وَلتَففَتِ سسَااقُ بِسسَااااقڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.33,
+    5.79,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 21,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 85,
+   "characteristics_not_realised": 0,
+   "rules_scored": 11,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 75,
+  "ayah": 33,
+  "split": "train",
+  "passage": "75:27-37",
+  "seconds": 9.326,
+  "segments": [
+   {
+    "file": "wavs/075033_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 9.326,
+    "text": "ثُممممَ ذَهَبَ ءِلَاااا ءَهلِهِۦۦ يَتَمَططَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.77,
+    8.59,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 5,
+   "letters": 32,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 118,
+   "characteristics_not_realised": 0,
+   "rules_scored": 7,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.3
+ },
+ {
+  "surah": 75,
+  "ayah": 37,
+  "split": "train",
+  "passage": "75:27-37",
+  "seconds": 8.542,
+  "segments": [
+   {
+    "file": "wavs/075037_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 8.542,
+    "text": "ءَلَم يَكُ نُطڇفَتَممممِممممَنِييِيييُمنَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.25,
+    8.09,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 5,
+   "letters": 31,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 132,
+   "characteristics_not_realised": 1,
+   "rules_scored": 6,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 76,
+  "ayah": 4,
+  "split": "train",
+  "passage": "76:1-4",
+  "seconds": 16.144,
+  "segments": [
+   {
+    "file": "wavs/076004_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 16.144,
+    "text": "ءِننننَاااا ءَعتَدڇنَاا لِلكَاافِرِۦۦنَ سَلَااسِلَ وَءَغلَاالَوووَسَعِۦۦرَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.03,
+    13.79,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 5,
+   "letters": 57,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 214,
+   "characteristics_not_realised": 0,
+   "rules_scored": 20,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.28
+ },
+ {
+  "surah": 76,
+  "ayah": 16,
+  "split": "train",
+  "passage": "76:13-16",
+  "seconds": 12.643,
+  "segments": [
+   {
+    "file": "wavs/076016_0.wav",
+    "words": [
+     0,
+     4
+    ],
+    "seconds": 12.643,
+    "text": "قَوَاارِۦۦرَ مِںںںفِضضَتِںںںقَددَرُۥۥهَاا تَقڇدِۦۦرَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.27,
+    10.29,
+    0,
+    4
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 5,
+   "words_all_correct": 3,
+   "letters": 40,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 149,
+   "characteristics_not_realised": 3,
+   "rules_scored": 16,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.364
+ },
+ {
+  "surah": 79,
+  "ayah": 3,
+  "split": "train",
+  "passage": "79:2-3",
+  "seconds": 6.531,
+  "segments": [
+   {
+    "file": "wavs/079003_0.wav",
+    "words": [
+     0,
+     1
+    ],
+    "seconds": 6.531,
+    "text": "وَسسَاابِحَااتِ سَبڇحَاا"
+   }
+  ],
+  "intervals": [
+   [
+    1.03,
+    5.19,
+    0,
+    1
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 2,
+   "words_all_correct": 2,
+   "letters": 19,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 71,
+   "characteristics_not_realised": 0,
+   "rules_scored": 6,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 81,
+  "ayah": 14,
+  "split": "train",
+  "passage": "81:13-14",
+  "seconds": 8.438,
+  "segments": [
+   {
+    "file": "wavs/081014_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 8.438,
+    "text": "عَلِمَت نَفسُممممَاااا ءَحضَرَت"
+   }
+  ],
+  "intervals": [
+   [
+    0.07,
+    6.41,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 4,
+   "letters": 23,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 104,
+   "characteristics_not_realised": 0,
+   "rules_scored": 14,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.36
+ },
+ {
+  "surah": 83,
+  "ayah": 11,
+  "split": "train",
+  "passage": "83:10-14",
+  "seconds": 9.378,
+  "segments": [
+   {
+    "file": "wavs/083011_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 9.378,
+    "text": "ءَللَذِۦۦنَ يُكَذذِبُۥۥنَ بِيَومِ ددِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.29,
+    8.29,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 4,
+   "letters": 31,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 117,
+   "characteristics_not_realised": 0,
+   "rules_scored": 6,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 83,
+  "ayah": 36,
+  "split": "train",
+  "passage": "83:36-36",
+  "seconds": 10.945,
+  "segments": [
+   {
+    "file": "wavs/083036_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 10.945,
+    "text": "هَل ثُووِبَ لكُففَاارُ مَاا كَاانُۥۥ يَفعَلُۥۥۥۥن"
+   }
+  ],
+  "intervals": [
+   [
+    0.05,
+    9.87,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 6,
+   "letters": 35,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 134,
+   "characteristics_not_realised": 0,
+   "rules_scored": 13,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 88,
+  "ayah": 16,
+  "split": "train",
+  "passage": "88:14-22",
+  "seconds": 7.027,
+  "segments": [
+   {
+    "file": "wavs/088016_0.wav",
+    "words": [
+     0,
+     1
+    ],
+    "seconds": 7.027,
+    "text": "وَزَرَاابِييُ مَبڇثُۥۥثَه"
+   }
+  ],
+  "intervals": [
+   [
+    0.35,
+    5.43,
+    0,
+    1
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 2,
+   "words_all_correct": 2,
+   "letters": 21,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 87,
+   "characteristics_not_realised": 0,
+   "rules_scored": 7,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.362
+ },
+ {
+  "surah": 88,
+  "ayah": 20,
+  "split": "train",
+  "passage": "88:14-22",
+  "seconds": 7.497,
+  "segments": [
+   {
+    "file": "wavs/088020_0.wav",
+    "words": [
+     0,
+     3
+    ],
+    "seconds": 7.497,
+    "text": "وَءِلَ لءَرضِ كَيفَ سُطِحَت"
+   }
+  ],
+  "intervals": [
+   [
+    0.99,
+    6.03,
+    0,
+    3
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 4,
+   "words_all_correct": 4,
+   "letters": 24,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 113,
+   "characteristics_not_realised": 0,
+   "rules_scored": 11,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.36
+ },
+ {
+  "surah": 89,
+  "ayah": 3,
+  "split": "train",
+  "passage": "89:2-9",
+  "seconds": 4.963,
+  "segments": [
+   {
+    "file": "wavs/089003_0.wav",
+    "words": [
+     0,
+     1
+    ],
+    "seconds": 4.963,
+    "text": "وَششَفعِ وَلوَتر"
+   }
+  ],
+  "intervals": [
+   [
+    0.01,
+    3.29,
+    0,
+    1
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 2,
+   "words_all_correct": 1,
+   "letters": 14,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 71,
+   "characteristics_not_realised": 1,
+   "rules_scored": 11,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.36
+ },
+ {
+  "surah": 89,
+  "ayah": 7,
+  "split": "train",
+  "passage": "89:2-9",
+  "seconds": 6.06,
+  "segments": [
+   {
+    "file": "wavs/089007_0.wav",
+    "words": [
+     0,
+     2
+    ],
+    "seconds": 6.06,
+    "text": "ءِرَمَ ذَااتِ لعِمَاااادڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.05,
+    4.83,
+    0,
+    2
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 3,
+   "words_all_correct": 3,
+   "letters": 19,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 80,
+   "characteristics_not_realised": 0,
+   "rules_scored": 7,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 89,
+  "ayah": 30,
+  "split": "train",
+  "passage": "89:29-30",
+  "seconds": 6.896,
+  "segments": [
+   {
+    "file": "wavs/089030_0.wav",
+    "words": [
+     0,
+     1
+    ],
+    "seconds": 6.896,
+    "text": "وَدڇخُلِۦۦ جَننننَتِۦۦ"
+   }
+  ],
+  "intervals": [
+   [
+    0.01,
+    4.81,
+    0,
+    1
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 2,
+   "words_all_correct": 1,
+   "letters": 16,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 63,
+   "characteristics_not_realised": 0,
+   "rules_scored": 5,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.364
+ },
+ {
+  "surah": 96,
+  "ayah": 18,
+  "split": "train",
+  "passage": "96:18-19",
+  "seconds": 5.329,
+  "segments": [
+   {
+    "file": "wavs/096018_0.wav",
+    "words": [
+     0,
+     1
+    ],
+    "seconds": 5.329,
+    "text": "سَنَدڇعُ ززَبَاانِيَه"
+   }
+  ],
+  "intervals": [
+   [
+    0.31,
+    4.09,
+    0,
+    1
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 2,
+   "words_all_correct": 2,
+   "letters": 18,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 79,
+   "characteristics_not_realised": 0,
+   "rules_scored": 7,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.32
+ },
+ {
+  "surah": 110,
+  "ayah": 3,
+  "split": "train",
+  "passage": "110:3-3",
+  "seconds": 16.065,
+  "segments": [
+   {
+    "file": "wavs/110003_0.wav",
+    "words": [
+     0,
+     6
+    ],
+    "seconds": 16.065,
+    "text": "فَسَببِح بِحَمدِ رَببِكَ وَستَغفِرهُ ءِننننَهُۥۥ كَاانَ تَووَاابَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.31,
+    7.41,
+    0,
+    3
+   ],
+   [
+    8.83,
+    14.91,
+    4,
+    6
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 7,
+   "words_all_correct": 5,
+   "letters": 51,
+   "identity_not_confirmed": 1,
+   "characteristics_scored": 204,
+   "characteristics_not_realised": 0,
+   "rules_scored": 18,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.36
+ },
+ {
+  "surah": 11,
+  "ayah": 13,
+  "split": "test",
+  "passage": "11:13-13",
+  "seconds": 21.368,
+  "segments": [
+   {
+    "file": "wavs/011013_0.wav",
+    "words": [
+     0,
+     17
+    ],
+    "seconds": 21.368,
+    "text": "ءَم يَقُۥۥلُۥۥنَ فتَرَااهُ قُل فَءتُۥۥ بِعَشرِ سُوَرِممممِثلِهِۦۦ مُفتَرَيَااتِوووَدڇعُۥۥ مَنِ ستَطَعتُممممِںںںدُۥۥنِ للَااهِ ءِںںںكُںںںتُم صَاادِقِۦۦۦۦن"
+   }
+  ],
+  "intervals": [
+   [
+    0.31,
+    18.11,
+    0,
+    17
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 18,
+   "words_all_correct": 17,
+   "letters": 113,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 465,
+   "characteristics_not_realised": 0,
+   "rules_scored": 51,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.2
+ },
+ {
+  "surah": 17,
+  "ayah": 110,
+  "split": "test",
+  "passage": "17:109-110",
+  "seconds": 26.802,
+  "segments": [
+   {
+    "file": "wavs/017110_0.wav",
+    "words": [
+     0,
+     11
+    ],
+    "seconds": 13.46,
+    "text": "قُلِ دڇعُ للَااهَ ءَوِ دڇعُ ررَحمَاانَ ءَييَممممَاا تَدڇعُۥۥ فَلَهُ لءَسمَااااءُ لحُسنَاا"
+   },
+   {
+    "file": "wavs/017110_1.wav",
+    "words": [
+     12,
+     21
+    ],
+    "seconds": 13.342,
+    "text": "وَلَاا تَجڇهَر بِصَلَااتِكَ وَلَاا تُخَاافِت بِهَاا وَبڇتَغِ بَينَ ذَاالِكَ سَبِۦۦلَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.45,
+    12.71,
+    0,
+    11
+   ],
+   [
+    14.21,
+    24.785,
+    12,
+    21
+   ]
+  ],
+  "engine_stops": 1,
+  "summary": {
+   "words": 22,
+   "words_all_correct": 21,
+   "letters": 134,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 548,
+   "characteristics_not_realised": 0,
+   "rules_scored": 52,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.24
+ },
+ {
+  "surah": 18,
+  "ayah": 108,
+  "split": "test",
+  "passage": "18:107-108",
+  "seconds": 8.62,
+  "segments": [
+   {
+    "file": "wavs/018108_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 8.62,
+    "text": "خَاالِدِۦۦنَ فِۦۦهَاا لَاا يَبڇغُۥۥنَ عَنهَاا حِوَلَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.43,
+    6.27,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 6,
+   "letters": 41,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 144,
+   "characteristics_not_realised": 0,
+   "rules_scored": 11,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.16
+ },
+ {
+  "surah": 48,
+  "ayah": 18,
+  "split": "test",
+  "passage": "48:18-18",
+  "seconds": 22.674,
+  "segments": [
+   {
+    "file": "wavs/048018_0.wav",
+    "words": [
+     0,
+     18
+    ],
+    "seconds": 22.674,
+    "text": "لَقَدڇ رَضِيَ للَااهُ عَنِ لمُءمِنِۦۦنَ ءِذ يُبَاايِعُۥۥنَكَ تَحتَ ششَجَرَتِ فَعَلِمَ مَاا فِۦۦ قُلُۥۥبِهِم فَءَںںںزَلَ سسَكِۦۦنَتَ عَلَيهِم وَءَثَاابَهُم فَتحَںںںقَرِۦۦبَاا"
+   }
+  ],
+  "intervals": [
+   [
+    0.65,
+    20.025,
+    0,
+    18
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 19,
+   "words_all_correct": 18,
+   "letters": 138,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 556,
+   "characteristics_not_realised": 1,
+   "rules_scored": 39,
+   "rules_failed": 1
+  },
+  "seconds_per_count": 0.2
+ },
+ {
+  "surah": 77,
+  "ayah": 30,
+  "split": "test",
+  "passage": "77:30-31",
+  "seconds": 11.207,
+  "segments": [
+   {
+    "file": "wavs/077030_0.wav",
+    "words": [
+     0,
+     5
+    ],
+    "seconds": 11.207,
+    "text": "ءِںںںطَلِقُۥۥۥۥ ءِلَاا ظِللِںںںذِۦۦ ثَلَااثِ شُعَبڇ"
+   }
+  ],
+  "intervals": [
+   [
+    0.41,
+    10.13,
+    0,
+    5
+   ]
+  ],
+  "engine_stops": 0,
+  "summary": {
+   "words": 6,
+   "words_all_correct": 5,
+   "letters": 36,
+   "identity_not_confirmed": 0,
+   "characteristics_scored": 141,
+   "characteristics_not_realised": 1,
+   "rules_scored": 11,
+   "rules_failed": 0
+  },
+  "seconds_per_count": 0.339
+ }
+]

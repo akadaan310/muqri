@@ -1,0 +1,640 @@
+{
+    "unit_estimator": "verse geometric mean",
+    "z_threshold": 2.5,
+    "one_sided_rules": [
+        "madd_arid_lissukun"
+    ],
+    "multilevel_rules": [
+        "madd_arid_lissukun",
+        "madd_leen"
+    ],
+    "norms": [
+        {
+            "sd_log": 0.38841056654843903,
+            "rule": "ghunnah",
+            "stretch": 2.746240959205303,
+            "level": 2,
+            "n": 3458
+        },
+        {
+            "sd_log": 0.7094906016183783,
+            "rule": "idgham_ghunnah",
+            "stretch": 1.0909663471093944,
+            "level": 2,
+            "n": 2954
+        },
+        {
+            "sd_log": 0.2706983829925076,
+            "rule": "idgham_shafawi",
+            "stretch": 2.877415067071708,
+            "level": 2,
+            "n": 623
+        },
+        {
+            "sd_log": 0.2558305216697082,
+            "rule": "ikhfa",
+            "stretch": 2.7662676436833458,
+            "level": 2,
+            "n": 3648
+        },
+        {
+            "sd_log": 0.23572783645441342,
+            "rule": "ikhfa_shafawi",
+            "stretch": 2.5796161611437896,
+            "level": 2,
+            "n": 448
+        },
+        {
+            "sd_log": 0.27355265939155016,
+            "rule": "iqlab",
+            "stretch": 2.5642097062563938,
+            "level": 2,
+            "n": 499
+        },
+        {
+            "sd_log": 0.09722046670115941,
+            "rule": "madd_arid_lissukun",
+            "stretch": 1.8233159112802422,
+            "level": 2,
+            "n": 527
+        },
+        {
+            "sd_log": 0.12745063415267666,
+            "rule": "madd_arid_lissukun",
+            "stretch": 2.499233119582353,
+            "level": 4,
+            "n": 1361
+        },
+        {
+            "sd_log": 0.2383893886523265,
+            "rule": "madd_arid_lissukun",
+            "stretch": 4.5225244520895265,
+            "level": 6,
+            "n": 831
+        },
+        {
+            "sd_log": 0.20845377652446218,
+            "rule": "madd_badal",
+            "stretch": 1.4369325622804598,
+            "level": 2,
+            "n": 888
+        },
+        {
+            "sd_log": 0.27332515146070363,
+            "rule": "madd_lazim",
+            "stretch": 9.455429395472253,
+            "level": 6,
+            "n": 420
+        },
+        {
+            "sd_log": 0.26125874365087287,
+            "rule": "madd_leen",
+            "stretch": 1.0997970797308632,
+            "level": 2,
+            "n": 104
+        },
+        {
+            "sd_log": 0.1114995904058099,
+            "rule": "madd_leen",
+            "stretch": 2.4140370025136195,
+            "level": 4,
+            "n": 47
+        },
+        {
+            "sd_log": 0.15212336890344505,
+            "rule": "madd_leen",
+            "stretch": 4.131590093084096,
+            "level": 6,
+            "n": 31
+        },
+        {
+            "sd_log": 0.23155051569225382,
+            "rule": "madd_munfasil",
+            "stretch": 1.6094289725147273,
+            "level": 2,
+            "n": 1186
+        },
+        {
+            "sd_log": 0.3912336286366203,
+            "rule": "madd_munfasil",
+            "stretch": 4.987227766771484,
+            "level": 4.5,
+            "n": 972
+        },
+        {
+            "sd_log": 0.3871301029773393,
+            "rule": "madd_muttasil",
+            "stretch": 5.462132249764833,
+            "level": 4.5,
+            "n": 2014
+        },
+        {
+            "sd_log": 0.16692796772842794,
+            "rule": "madd_silah_kubra",
+            "stretch": 1.6408177420511947,
+            "level": 2,
+            "n": 223
+        },
+        {
+            "sd_log": 0.21225580658565515,
+            "rule": "madd_silah_kubra",
+            "stretch": 4.5792618764912305,
+            "level": 4.5,
+            "n": 133
+        },
+        {
+            "sd_log": 0.2211220616137315,
+            "rule": "madd_silah_sughra",
+            "stretch": 1.3701005920748361,
+            "level": 2,
+            "n": 1045
+        },
+        {
+            "sd_log": 0.2622154558046361,
+            "rule": "madd_tabii",
+            "stretch": 1.3561642452216012,
+            "level": 2,
+            "n": 22029
+        },
+        {
+            "sd_log": 0.28487265368377723,
+            "rule": "tawassut",
+            "stretch": 0.9980334037626304,
+            "level": 1.5,
+            "n": 7821
+        }
+    ],
+    "U0": 0.21019620992826746,
+    "evenness": [
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.20127395806218018,
+            "reciter": "Muhsin_Al_Qasim_192kbps"
+        },
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.22669264197642097,
+            "reciter": "aziz_alili_128kbps"
+        },
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.22670353285075687,
+            "reciter": "Ali_Jaber_64kbps"
+        },
+        {
+            "tier": "imam",
+            "tabii_sd_log": 0.22800575915528204,
+            "reciter": "Saood_ash-Shuraym_128kbps"
+        },
+        {
+            "tier": "imam",
+            "tabii_sd_log": 0.23450417499372891,
+            "reciter": "Abdullah_Matroud_128kbps"
+        },
+        {
+            "tier": "studio",
+            "tabii_sd_log": 0.2599860018849786,
+            "reciter": "Abdul_Basit_Murattal_192kbps"
+        },
+        {
+            "tier": "studio",
+            "tabii_sd_log": 0.26940325833214207,
+            "reciter": "Minshawy_Murattal_128kbps"
+        },
+        {
+            "tier": "imam",
+            "tabii_sd_log": 0.27231077978106705,
+            "reciter": "Salah_Al_Budair_128kbps"
+        },
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.274768201950338,
+            "reciter": "Muhammad_Jibreel_128kbps"
+        },
+        {
+            "tier": "studio",
+            "tabii_sd_log": 0.2759535014527934,
+            "reciter": "mahmoud_ali_al_banna_32kbps"
+        },
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.2762803679641214,
+            "reciter": "Muhammad_AbdulKareem_128kbps"
+        },
+        {
+            "tier": "anchor",
+            "tabii_sd_log": 0.2800086554999716,
+            "reciter": "Husary_128kbps"
+        },
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.29007339398592147,
+            "reciter": "Ali_Hajjaj_AlSuesy_128kbps"
+        },
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.30275313641945983,
+            "reciter": "Hani_Rifai_192kbps"
+        },
+        {
+            "tier": "imam",
+            "tabii_sd_log": 0.3052464498082087,
+            "reciter": "Abdurrahmaan_As-Sudais_192kbps"
+        },
+        {
+            "tier": "studio",
+            "tabii_sd_log": 0.30921897757184164,
+            "reciter": "Minshawy_Mujawwad_192kbps"
+        },
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.31229369996310397,
+            "reciter": "Salaah_AbdulRahman_Bukhatir_128kbps"
+        },
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.31578476589604565,
+            "reciter": "Karim_Mansoori_40kbps"
+        },
+        {
+            "tier": "studio",
+            "tabii_sd_log": 0.3175618861160394,
+            "reciter": "Abdul_Basit_Mujawwad_128kbps"
+        },
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.32008363673778495,
+            "reciter": "Akram_AlAlaqimy_128kbps"
+        },
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.32826817653373663,
+            "reciter": "Fares_Abbad_64kbps"
+        },
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.32935902958330904,
+            "reciter": "Ahmed_Neana_128kbps"
+        },
+        {
+            "tier": "studio",
+            "tabii_sd_log": 0.329899788765695,
+            "reciter": "Mohammad_al_Tablaway_128kbps"
+        },
+        {
+            "tier": "anchor",
+            "tabii_sd_log": 0.3308872527902489,
+            "reciter": "Husary_128kbps_Mujawwad"
+        },
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.33188392240774794,
+            "reciter": "Abdullah_Basfar_192kbps"
+        },
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.3336077598619186,
+            "reciter": "Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net"
+        },
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.33566517084840447,
+            "reciter": "khalefa_al_tunaiji_64kbps"
+        },
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.3357701001673202,
+            "reciter": "Ghamadi_40kbps"
+        },
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.3363700027081155,
+            "reciter": "Sahl_Yassin_128kbps"
+        },
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.3504665619035488,
+            "reciter": "Ayman_Sowaid_64kbps"
+        },
+        {
+            "tier": "studio",
+            "tabii_sd_log": 0.3538447554199243,
+            "reciter": "Muhammad_Ayyoub_128kbps"
+        },
+        {
+            "tier": "studio",
+            "tabii_sd_log": 0.35691195812421644,
+            "reciter": "Mustafa_Ismail_48kbps"
+        },
+        {
+            "tier": "studio",
+            "tabii_sd_log": 0.3719655374498832,
+            "reciter": "Alafasy_128kbps"
+        },
+        {
+            "tier": "imam",
+            "tabii_sd_log": 0.3746491850424348,
+            "reciter": "MaherAlMuaiqly128kbps"
+        },
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.3760193013029055,
+            "reciter": "Yaser_Salamah_128kbps"
+        },
+        {
+            "tier": "imam",
+            "tabii_sd_log": 0.3781373505238122,
+            "reciter": "Yasser_Ad-Dussary_128kbps"
+        },
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.3850018191488844,
+            "reciter": "Abu_Bakr_Ash-Shaatree_128kbps"
+        },
+        {
+            "tier": "fast",
+            "tabii_sd_log": 0.39040496734711216,
+            "reciter": "Khaalid_Abdullaah_al-Qahtaanee_192kbps"
+        },
+        {
+            "tier": "studio",
+            "tabii_sd_log": 0.39512728586607143,
+            "reciter": "Hudhaify_128kbps"
+        },
+        {
+            "tier": "imam",
+            "tabii_sd_log": 0.42104276677320024,
+            "reciter": "Nasser_Alqatami_128kbps"
+        },
+        {
+            "tier": "anchor",
+            "tabii_sd_log": 0.42398675421628185,
+            "reciter": "Husary_Muallim_128kbps"
+        }
+    ],
+    "fixed_levels": {
+        "madd_badal": 2,
+        "ghunnah": 2,
+        "madd_lazim": 6,
+        "madd_tabii": 2,
+        "madd_iwad": 2,
+        "madd_silah_sughra": 2,
+        "ikhfa": 2,
+        "idgham_shafawi": 2,
+        "idgham_ghunnah": 2,
+        "tawassut": 1.5,
+        "iqlab": 2,
+        "ikhfa_shafawi": 2,
+        "madd_muttasil": 4.5
+    },
+    "tempo_norms": [
+        {
+            "n": 3696,
+            "sd_low": 0.5098331186312856,
+            "b": -0.03408893176696209,
+            "rule": "ghunnah",
+            "a": 0.9936332301257657,
+            "level": 2,
+            "sd": 0.40989072372337493
+        },
+        {
+            "n": 3166,
+            "sd_low": 0.632314449116707,
+            "b": 0.1418883457560938,
+            "rule": "idgham_ghunnah",
+            "a": 0.2666847529015633,
+            "level": 2,
+            "sd": 0.7120247095750558
+        },
+        {
+            "n": 668,
+            "sd_low": 0.26076412621295625,
+            "b": 0.041639835647139155,
+            "rule": "idgham_shafawi",
+            "a": 1.0664882233518969,
+            "level": 2,
+            "sd": 0.2947048782702189
+        },
+        {
+            "n": 3910,
+            "sd_low": 0.2527408757905499,
+            "b": 0.08857526804448533,
+            "rule": "ikhfa",
+            "a": 1.0433556034978462,
+            "level": 2,
+            "sd": 0.279603838124775
+        },
+        {
+            "n": 480,
+            "sd_low": 0.3124595070434902,
+            "b": 0.013374000640448799,
+            "rule": "ikhfa_shafawi",
+            "a": 0.9778276343639293,
+            "level": 2,
+            "sd": 0.30715960679824217
+        },
+        {
+            "n": 535,
+            "sd_low": 0.2704259964967465,
+            "b": 0.2013855623939524,
+            "rule": "iqlab",
+            "a": 0.975793448400131,
+            "level": 2,
+            "sd": 0.30831863591208
+        },
+        {
+            "n": 540,
+            "sd_low": 0.12656401735200368,
+            "b": 0.031617327585112834,
+            "rule": "madd_arid_lissukun",
+            "a": 0.5845675626870851,
+            "level": 2,
+            "sd": 0.10549754652895058
+        },
+        {
+            "n": 1543,
+            "sd_low": 0.13618576385998815,
+            "b": 0.06194390890048999,
+            "rule": "madd_arid_lissukun",
+            "a": 0.934264190062515,
+            "level": 4,
+            "sd": 0.1504015010529705
+        },
+        {
+            "n": 838,
+            "sd_low": 0.19868750585972406,
+            "b": 0.09691989394212991,
+            "rule": "madd_arid_lissukun",
+            "a": 1.54065684462481,
+            "level": 6,
+            "sd": 0.26404002406246657
+        },
+        {
+            "n": 952,
+            "sd_low": 0.12482476979877796,
+            "b": 0.20550369342563984,
+            "rule": "madd_badal",
+            "a": 0.3788637656877269,
+            "level": 2,
+            "sd": 0.2080444217692538
+        },
+        {
+            "n": 450,
+            "sd_low": 0.3715368284405191,
+            "b": -0.7227838869687524,
+            "rule": "madd_lazim",
+            "a": 2.232693309702569,
+            "level": 6,
+            "sd": 0.30203452798934294
+        },
+        {
+            "n": 109,
+            "sd_low": 0.18976146484574863,
+            "b": 0.3343764430879018,
+            "rule": "madd_leen",
+            "a": 0.15565265538653364,
+            "level": 2,
+            "sd": 0.2466121628041032
+        },
+        {
+            "n": 55,
+            "sd_low": 0.14531377627091546,
+            "b": 0.30736279330617206,
+            "rule": "madd_leen",
+            "a": 0.8762172425753103,
+            "level": 4,
+            "sd": 0.165421936292372
+        },
+        {
+            "n": 31,
+            "sd_low": 0.1188739467717494,
+            "b": 0.09263186565799786,
+            "rule": "madd_leen",
+            "a": 1.4192361852359858,
+            "level": 6,
+            "sd": 0.1401512304305672
+        },
+        {
+            "n": 1329,
+            "sd_low": 0.1529047833652544,
+            "b": -0.040983535135926126,
+            "rule": "madd_munfasil",
+            "a": 0.5277800974936361,
+            "level": 2,
+            "sd": 0.2711694452044775
+        },
+        {
+            "n": 983,
+            "sd_low": 0.3308497623718673,
+            "b": -0.2717322115006612,
+            "rule": "madd_munfasil",
+            "a": 1.676735674758324,
+            "level": 4.5,
+            "sd": 0.4391164441805416
+        },
+        {
+            "n": 2156,
+            "sd_low": 0.5204523753285099,
+            "b": -0.27456164315887194,
+            "rule": "madd_muttasil",
+            "a": 1.647158749839013,
+            "level": 4.5,
+            "sd": 0.4021146933599452
+        },
+        {
+            "n": 247,
+            "sd_low": 0.13239794863088872,
+            "b": -0.3028522268740575,
+            "rule": "madd_silah_kubra",
+            "a": 0.5093266342838585,
+            "level": 2,
+            "sd": 0.19336573541875787
+        },
+        {
+            "n": 135,
+            "sd_low": 0.23241985949691832,
+            "b": 0.08163752632685377,
+            "rule": "madd_silah_kubra",
+            "a": 1.5286546272568424,
+            "level": 4.5,
+            "sd": 0.2593424425559906
+        },
+        {
+            "n": 1119,
+            "sd_low": 0.16928512723623998,
+            "b": 0.31498832737948046,
+            "rule": "madd_silah_sughra",
+            "a": 0.3286671703423553,
+            "level": 2,
+            "sd": 0.22426104676814895
+        },
+        {
+            "n": 23587,
+            "sd_low": 0.15054915458206417,
+            "b": 0.22784264154989103,
+            "rule": "madd_tabii",
+            "a": 0.33609866936643734,
+            "level": 2,
+            "sd": 0.2648819399319843
+        },
+        {
+            "n": 8381,
+            "sd_low": 0.3825225334302034,
+            "b": 0.025112432929635057,
+            "rule": "tawassut",
+            "a": -0.03471815596261084,
+            "level": 1.5,
+            "sd": 0.28565298833622604
+        }
+    ],
+    "reference_reciters": [
+        "Abdul_Basit_Murattal_192kbps",
+        "Abdullah_Matroud_128kbps",
+        "Abdurrahmaan_As-Sudais_192kbps",
+        "Ali_Hajjaj_AlSuesy_128kbps",
+        "Ali_Jaber_64kbps",
+        "Hani_Rifai_192kbps",
+        "Husary_128kbps",
+        "Minshawy_Murattal_128kbps",
+        "Muhammad_AbdulKareem_128kbps",
+        "Muhammad_Jibreel_128kbps",
+        "Muhsin_Al_Qasim_192kbps",
+        "Salah_Al_Budair_128kbps",
+        "Saood_ash-Shuraym_128kbps",
+        "aziz_alili_128kbps",
+        "mahmoud_ali_al_banna_32kbps"
+    ],
+    "estimators": [
+        {
+            "name": "verse median",
+            "corr_tempo_stretch": 0.8613091747265004,
+            "within_reciter_sd_log": 0.32558996329602513
+        },
+        {
+            "name": "verse geometric mean",
+            "corr_tempo_stretch": 0.915824657179122,
+            "within_reciter_sd_log": 0.32228140293478613
+        },
+        {
+            "name": "local k=3",
+            "corr_tempo_stretch": 0.8969156054581994,
+            "within_reciter_sd_log": 0.3319368860405811
+        },
+        {
+            "name": "local k=5",
+            "corr_tempo_stretch": 0.891328497205765,
+            "within_reciter_sd_log": 0.32724956292749907
+        },
+        {
+            "name": "local k=7",
+            "corr_tempo_stretch": 0.8739915428025625,
+            "within_reciter_sd_log": 0.32750815165347374
+        },
+        {
+            "name": "local k=9",
+            "corr_tempo_stretch": 0.8721035495469798,
+            "within_reciter_sd_log": 0.32699481845467687
+        }
+    ],
+    "sd_floor_multilevel": 0.2648819399319843
+}

@@ -142,6 +142,8 @@ def build(report: dict[str, Any]) -> dict[str, Any]:
                 "deviation_counts": dev, **pct,
                 "wajh": ev.get("wajh"), "tempo_allowance": "tempo_allowance" in ev,
                 "letters": [lid(u) for u in v.get("units", [])],
+                # the timing calculus: this stretching against the masters at the reciter's own tempo
+                "stretch": v.get("stretch"),
                 "evidence_margin": ev.get("llr")})
             if v["status"] in {"short", "long", "wrong"} and v["word_index"] in failing:
                 failing[v["word_index"]].append(rid)
@@ -160,6 +162,9 @@ def build(report: dict[str, Any]) -> dict[str, Any]:
                       "tempo_class": m.get("tempo_mode"), "wajh": report.get("wajh") or {},
                       "basmala": report.get("basmala") or {},
                       "stops": [st for a in report.get("ayahs", []) for st in a.get("stops", [])],
+                      # the reciter's own count unit (seconds of a plain voweled letter), continuous
+                      "unit_s": (report.get("stretch") or {}).get("unit_s"),
+                      "unit_by_ayah_s": (report.get("stretch") or {}).get("unit_by_ayah"),
                       # seconds of recording before the first letter and after the last: a
                       # recording cut inside a letter leaves that letter unmeasurable (edge)
                       "lead_room_s": round(letters[0]["onset_s"], 3) if letters else None,

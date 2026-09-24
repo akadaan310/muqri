@@ -1,0 +1,114 @@
+144965 stretching instances, 41 reciters
+
+1. unit estimators on 62144 madd tabii (lower spread = more even; corr ~ 0 = tempo-free)
+   seconds, no unit:            within-reciter sd(log) 0.3329
+   verse median                within-reciter sd(log) 0.3256   corr(tempo, stretch) 0.861
+   verse geometric mean        within-reciter sd(log) 0.3223   corr(tempo, stretch) 0.916
+   local k=3                   within-reciter sd(log) 0.3319   corr(tempo, stretch) 0.897
+   local k=5                   within-reciter sd(log) 0.3272   corr(tempo, stretch) 0.891
+   local k=7                   within-reciter sd(log) 0.3275   corr(tempo, stretch) 0.874
+   local k=9                   within-reciter sd(log) 0.327   corr(tempo, stretch) 0.872
+   -> verse geometric mean
+
+3. evenness of the tabii (sd of log stretch within the reciter), most even first:
+   Muhsin_Al_Qasim_192kbps                     0.201  fast
+   aziz_alili_128kbps                          0.227  fast
+   Ali_Jaber_64kbps                            0.227  fast
+   Saood_ash-Shuraym_128kbps                   0.228  imam
+   Abdullah_Matroud_128kbps                    0.235  imam
+   Abdul_Basit_Murattal_192kbps                0.26  studio
+   Minshawy_Murattal_128kbps                   0.269  studio
+   Salah_Al_Budair_128kbps                     0.272  imam
+   Muhammad_Jibreel_128kbps                    0.275  fast
+   mahmoud_ali_al_banna_32kbps                 0.276  studio
+
+2. norms (the 15 most even reciters): rule, level -> typical stretch in units, within-reciter spread
+   ghunnah             2.0   stretch 2.76  sd(log) 0.389  n 3696
+   idgham_ghunnah      2.0   stretch 1.09  sd(log) 0.711  n 3166
+   idgham_shafawi      2.0   stretch 2.9  sd(log) 0.265  n 668
+   ikhfa               2.0   stretch 2.81  sd(log) 0.254  n 3910
+   ikhfa_shafawi       2.0   stretch 2.66  sd(log) 0.231  n 480
+   iqlab               2.0   stretch 2.65  sd(log) 0.267  n 535
+   madd_arid_lissukun  2.0   stretch 1.82  sd(log) 0.097  n 540
+   madd_arid_lissukun  4.0   stretch 2.49  sd(log) 0.128  n 1543
+   madd_arid_lissukun  6.0   stretch 4.5  sd(log) 0.238  n 838
+   madd_badal          2.0   stretch 1.43  sd(log) 0.204  n 952
+   madd_lazim          6.0   stretch 9.48  sd(log) 0.269  n 450
+   madd_leen           2.0   stretch 1.11  sd(log) 0.256  n 109
+   madd_leen           4.0   stretch 2.34  sd(log) 0.11  n 55
+   madd_leen           6.0   stretch 4.13  sd(log) 0.152  n 31
+   madd_munfasil       2.0   stretch 1.59  sd(log) 0.231  n 1329
+   madd_munfasil       4.5   stretch 5.01  sd(log) 0.4  n 983
+   madd_muttasil       4.5   stretch 5.48  sd(log) 0.392  n 2156
+   madd_silah_kubra    2.0   stretch 1.64  sd(log) 0.171  n 247
+   madd_silah_kubra    4.5   stretch 4.58  sd(log) 0.212  n 135
+   madd_silah_sughra   2.0   stretch 1.37  sd(log) 0.219  n 1119
+   madd_tabii          2.0   stretch 1.35  sd(log) 0.263  n 23587
+   tawassut            1.5   stretch 1.0  sd(log) 0.284  n 8381
+
+2b. tempo-aware norms: log stretch = a + b log(unit / 0.21 s); residual sd (all human spread)
+   ghunnah             2.0   stretch at U0 2.7  tempo slope -0.03  sd 0.41  sd below 0.51  n 3696.0
+   idgham_ghunnah      2.0   stretch at U0 1.31  tempo slope 0.14  sd 0.712  sd below 0.632  n 3166.0
+   idgham_shafawi      2.0   stretch at U0 2.91  tempo slope 0.04  sd 0.295  sd below 0.261  n 668.0
+   ikhfa               2.0   stretch at U0 2.84  tempo slope 0.09  sd 0.28  sd below 0.253  n 3910.0
+   ikhfa_shafawi       2.0   stretch at U0 2.66  tempo slope 0.01  sd 0.307  sd below 0.312  n 480.0
+   iqlab               2.0   stretch at U0 2.65  tempo slope 0.2  sd 0.308  sd below 0.27  n 535.0
+   madd_arid_lissukun  2.0   stretch at U0 1.79  tempo slope 0.03  sd 0.105  sd below 0.127  n 540.0
+   madd_arid_lissukun  4.0   stretch at U0 2.55  tempo slope 0.06  sd 0.15  sd below 0.136  n 1543.0
+   madd_arid_lissukun  6.0   stretch at U0 4.67  tempo slope 0.1  sd 0.264  sd below 0.199  n 838.0
+   madd_badal          2.0   stretch at U0 1.46  tempo slope 0.21  sd 0.208  sd below 0.125  n 952.0
+   madd_lazim          6.0   stretch at U0 9.32  tempo slope -0.72  sd 0.302  sd below 0.372  n 450.0
+   madd_leen           2.0   stretch at U0 1.17  tempo slope 0.33  sd 0.247  sd below 0.19  n 109.0
+   madd_leen           4.0   stretch at U0 2.4  tempo slope 0.31  sd 0.165  sd below 0.145  n 55.0
+   madd_leen           6.0   stretch at U0 4.13  tempo slope 0.09  sd 0.14  sd below 0.119  n 31.0
+   madd_munfasil       2.0   stretch at U0 1.7  tempo slope -0.04  sd 0.271  sd below 0.153  n 1329.0
+   madd_munfasil       4.5   stretch at U0 5.35  tempo slope -0.27  sd 0.439  sd below 0.331  n 983.0
+   madd_muttasil       4.5   stretch at U0 5.19  tempo slope -0.27  sd 0.402  sd below 0.52  n 2156.0
+   madd_silah_kubra    2.0   stretch at U0 1.66  tempo slope -0.3  sd 0.193  sd below 0.132  n 247.0
+   madd_silah_kubra    4.5   stretch at U0 4.61  tempo slope 0.08  sd 0.259  sd below 0.232  n 135.0
+   madd_silah_sughra   2.0   stretch at U0 1.39  tempo slope 0.31  sd 0.224  sd below 0.169  n 1119.0
+   madd_tabii          2.0   stretch at U0 1.4  tempo slope 0.23  sd 0.265  sd below 0.151  n 23587.0
+   tawassut            1.5   stretch at U0 0.97  tempo slope 0.03  sd 0.286  sd below 0.383  n 8381.0
+
+2c. multiples of the reciter's own tabii (median over reciters, with the reciters' IQR):
+   ghunnah             2.0   x tabii 2.22  (1.86-2.55)   nominal ratio 1.0   reciters 41
+   idgham_ghunnah      2.0   x tabii 0.83  (0.8-0.87)   nominal ratio 1.0   reciters 41
+   idgham_shafawi      2.0   x tabii 2.27  (1.83-2.52)   nominal ratio 1.0   reciters 41
+   ikhfa               2.0   x tabii 2.26  (1.89-2.56)   nominal ratio 1.0   reciters 41
+   ikhfa_shafawi       2.0   x tabii 2.07  (1.68-2.59)   nominal ratio 1.0   reciters 41
+   iqlab               2.0   x tabii 2.13  (1.72-2.58)   nominal ratio 1.0   reciters 40
+   madd_arid_lissukun  2.0   x tabii 1.36  (1.31-1.4)   nominal ratio 1.0   reciters 17
+   madd_arid_lissukun  4.0   x tabii 2.01  (1.88-2.18)   nominal ratio 2.0   reciters 31
+   madd_arid_lissukun  6.0   x tabii 3.49  (3.1-4.52)   nominal ratio 3.0   reciters 36
+   madd_badal          2.0   x tabii 1.06  (1.04-1.08)   nominal ratio 1.0   reciters 41
+   madd_lazim          6.0   x tabii 7.92  (6.17-9.06)   nominal ratio 3.0   reciters 41
+   madd_leen           2.0   x tabii 0.82  (0.77-0.85)   nominal ratio 1.0   reciters 41
+   madd_leen           4.0   x tabii 1.69  (1.63-1.99)   nominal ratio 2.0   reciters 7
+   madd_leen           6.0   x tabii 3.78  (3.16-4.6)   nominal ratio 3.0   reciters 20
+   madd_munfasil       2.0   x tabii 1.15  (1.11-1.48)   nominal ratio 1.0   reciters 23
+   madd_munfasil       4.5   x tabii 4.21  (3.49-5.66)   nominal ratio 2.25   reciters 40
+   madd_muttasil       4.5   x tabii 4.26  (4.06-5.52)   nominal ratio 2.25   reciters 41
+   madd_silah_kubra    2.0   x tabii 1.2  (1.15-1.43)   nominal ratio 1.0   reciters 27
+   madd_silah_kubra    4.5   x tabii 3.7  (3.15-4.9)   nominal ratio 2.25   reciters 25
+   madd_silah_sughra   2.0   x tabii 1.01  (0.99-1.04)   nominal ratio 1.0   reciters 41
+   tawassut            1.5   x tabii 0.76  (0.72-0.77)   nominal ratio 0.75   reciters 41
+
+4. leave-one-reciter-out: share flagged (|z| > 2.5) vs the current windows
+   ghunnah              n 9699   flagged now 0.232  calculus 0.029  tempo-aware 0.028
+   idgham_ghunnah       n 8384   flagged now 0.307  calculus 0.015  tempo-aware 0.014
+   idgham_shafawi       n 1767   flagged now 0.215  calculus 0.051  tempo-aware 0.04
+   ikhfa                n 10359  flagged now 0.198  calculus 0.068  tempo-aware 0.053
+   ikhfa_shafawi        n 1268   flagged now 0.187  calculus 0.088  tempo-aware 0.029
+   iqlab                n 1409   flagged now 0.172  calculus 0.048  tempo-aware 0.03
+   madd_arid_lissukun   n 7783   flagged now 0.001  calculus 0.132  tempo-aware 0.001
+   madd_badal           n 2496   flagged now 0.01  calculus 0.021  tempo-aware 0.027
+   madd_lazim           n 1206   flagged now 0.077  calculus 0.068  tempo-aware 0.038
+   madd_leen            n 529    flagged now 0.006  calculus 0.163  tempo-aware 0.038
+   madd_munfasil        n 6078   flagged now 0.218  calculus 0.058  tempo-aware 0.051
+   madd_muttasil        n 5674   flagged now 0.176  calculus 0.052  tempo-aware 0.022
+   madd_silah_kubra     n 1012   flagged now 0.166  calculus 0.141  tempo-aware 0.09
+   madd_silah_sughra    n 2973   flagged now 0.016  calculus 0.046  tempo-aware 0.046
+   madd_tabii           n 62144  flagged now 0.02  calculus 0.037  tempo-aware 0.046
+   tawassut             n 22184  flagged now 0.001  calculus 0.028  tempo-aware 0.022
+
+-> /home/azureuser/github-director/repos/muqri/research_agency_lab/experiments/timing/stretch_model.json

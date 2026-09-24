@@ -147,6 +147,22 @@
           "type": "integer",
           "minimum": 0,
           "description": "Letters whose test window the recording's start or end cuts (see letter.edge)."
+        },
+        "unit_s": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "The reciter's count unit in this recording: geometric mean of the plain voweled letters' durations (consonant + short vowel, nothing held). Continuous; no tempo classes needed."
+        },
+        "unit_by_ayah_s": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          }
         }
       }
     },
@@ -406,6 +422,13 @@
             "null"
           ],
           "description": "Nats: the worst margin of the attribute (attribute rules) or the letter-identity margin that failed (segmental)."
+        },
+        "stretch": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "The timing calculus (substrate_library/julia/stretch.jl): stretch = seconds / unit_s; expected_stretch = the masters' stretch for this rule and level at this reciter's unit; ratio = stretch / expected; equivalent_counts = level x ratio; z against the masters' spread (lower-half spread when short); verdict of the calculus."
         }
       }
     },

@@ -40,6 +40,10 @@ image = (
                    "/root/qaari/research_agency_lab/experiments/learner_eval", ignore=_IGNORE + ["**/*.jsonl"])
     .add_local_dir(str(ROOT / "research_agency_lab/experiments/calibration"),
                    "/root/qaari/research_agency_lab/experiments/calibration", ignore=_IGNORE)
+    .add_local_file(str(ROOT / "research_agency_lab/experiments/quran/reference_stats.json"),
+                    "/root/qaari/research_agency_lab/experiments/quran/reference_stats.json")
+    .add_local_file(str(ROOT / "research_agency_lab/experiments/timing/stretch_model.json"),
+                    "/root/qaari/research_agency_lab/experiments/timing/stretch_model.json")
     .add_local_file(str(ROOT / "research_agency_lab/experiments/qaari_keys/sukoon_T300.json"),
                     "/root/qaari/research_agency_lab/experiments/qaari_keys/sukoon_T300.json")
     .add_local_file(str(ROOT / "research_agency_lab/experiments/qaari_keys/modal_T300/layout.json"),
@@ -180,3 +184,52 @@ def build_inventory(tasks: int = 60) -> None:
     print(f"{len(rows)} ayahs ({err} errors), "
           f"{sum(len(r.get('rules', [])) for r in rows)} rule instances, "
           f"{sum(len(r.get('letters', [])) for r in rows)} consonants in {time.time() - t:.0f} s -> {out}")
+
+
+# ------------------------------------------------------------------ the timing calculus: raw stretches
+@app.function(image=image, volumes={"/vol": vol}, cpu=1.0, memory=3072, timeout=1800, max_containers=90,
+              retries=1)
+def stretch_chunk(shard: str, chunk: int, chunks: int) -> list[dict]:  # type: ignore[type-arg]
+    """Per verse: the plain voweled letters' spans and every stretching instance (app/stretch.py),
+    for substrate_library/julia/stretch.jl to learn each rule's stretch against the reciter's own count."""
+    import sys
+    import warnings
+
+    import numpy as np
+    warnings.filterwarnings("ignore")
+    sys.path.insert(0, "/root/qaari")
+    from app.engine import Engine
+    from app.stretch import timing_record
+
+    lay = json.loads(Path("/root/qaari/layout.json").read_text())
+    base = Path(f"/vol/muaalem/T300/{shard}")
+    recs = [json.loads(line) for line in open(base / "index.jsonl")]
+    recs = [r for r in recs if "file" in r][chunk::chunks]
+    eng = Engine(layout=lay)
+    out = []
+    for r in recs:
+        try:
+            lp = np.fromfile(base / r["file"], dtype="<f4").reshape(r["frames"], lay["columns"])
+            rep = eng.analyze(_audio(r), [(r["sura"], r["aya"])], posteriors=lp)
+            for a in timing_record(rep):
+                out.append({"speaker": r["speaker"], **a,
+                            "haraka_s": rep["ayahs"][0].get("haraka_s")})
+        except Exception as exc:  # noqa: BLE001
+            out.append({"speaker": r["speaker"], "surah": r["sura"], "ayah": r["aya"], "error": repr(exc)})
+    return out
+
+
+@app.local_entrypoint()
+def stretch(chunks: int = 12) -> None:
+    import time
+    t = time.time()
+    out = ROOT / "research_agency_lab/experiments/timing/stretch_T300.jsonl"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    n = err = 0
+    with open(out, "w") as f:
+        for rows in stretch_chunk.starmap([(s, c, chunks) for s in SHARDS for c in range(chunks)], order_outputs=False):
+            for r in rows:
+                f.write(json.dumps(r, ensure_ascii=False) + "\n")
+                n += 1
+                err += "error" in r
+    print(f"{n} verse records ({err} errors) in {time.time() - t:.0f} s -> {out}")

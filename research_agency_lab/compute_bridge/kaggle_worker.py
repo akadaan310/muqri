@@ -102,6 +102,12 @@ if CFG["octave"]:
 
 # 3. benchmark processes -------------------------------------------------------------------------
 env = dict(os.environ, OMP_NUM_THREADS="1", MKL_NUM_THREADS="1", PYTHONUNBUFFERED="1")
+# Load the ECAPA model once before the workers start: speechbrain symlinks it into its savedir and
+# several processes doing that at once race ([Errno 17] File exists) and die.
+warm = subprocess.run([sys.executable, "-c", "from app.fingerprint import EcapaEmbedder; EcapaEmbedder()"],
+                      cwd=CODE, env=env, capture_output=True, text=True)
+log("ECAPA pre-warmed" if warm.returncode == 0 else f"ECAPA pre-warm failed: {warm.stderr[-800:]}")
+skip = CODE / CFG["skip_done"] if CFG.get("skip_done") else None
 procs = []
 for i in range(CFG["procs"]):
     shard = CFG["shard_base"] + i
@@ -109,8 +115,11 @@ for i in range(CFG["procs"]):
     cmd = [sys.executable, str(CODE / "benchmarks" / "run_benchmark.py"), "--reciters", *CFG["reciters"],
            "--verses", CFG["verses"], "--modes", *CFG["modes"], "--shard", f"{shard}/{CFG['shard_total']}",
            "--local-root", "/kaggle/input", "--threads", "1", "--output", str(out)]
+    if skip is not None and skip.exists():
+        cmd += ["--skip-done", str(skip)]
     procs.append(subprocess.Popen(cmd, cwd=CODE, env=env, stdout=open(WORK / f"bench_{shard:03d}.log", "w"),
                                   stderr=subprocess.STDOUT))
+    time.sleep(20)  # stagger model loading
 log(f"started {len(procs)} benchmark processes")
 while any(p.poll() is None for p in procs):
     if time.time() > DEADLINE - OCTAVE_RESERVE:

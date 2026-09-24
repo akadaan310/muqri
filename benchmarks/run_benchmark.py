@@ -111,6 +111,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--local-root", default=None,
                     help="Quran-MD WAV root (e.g. /kaggle/input); reciters found there are read locally")
     ap.add_argument("--threads", type=int, default=0, help="torch intra-op threads (0 = library default)")
+    ap.add_argument("--skip-done", default=None,
+                    help="JSON list of [reciter, surah, ayah, mode] already computed elsewhere (e.g. an earlier run)")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args(argv)
     logging.basicConfig(level=logging.DEBUG if args.verbose else logging.INFO, format="%(asctime)s %(message)s")
@@ -128,6 +130,8 @@ def main(argv: list[str] | None = None) -> int:
                 done.add((r["reciter"], r["surah"], r["ayah"], r["mode"]))
             except (json.JSONDecodeError, KeyError):
                 continue
+    if args.skip_done and Path(args.skip_done).exists():
+        done |= {tuple(k) for k in json.loads(Path(args.skip_done).read_text(encoding="utf-8"))}  # type: ignore[misc]
     cache = Path(args.cache_dir)
     texts = {v: get_ayah_text(*v) for v in verses}
     evaluators = {m: QaariEvaluator(AnalysisOptions(aligner="ctc", index_dir=None, mode=m, tareeq=args.tareeq,
@@ -143,6 +147,8 @@ def main(argv: list[str] | None = None) -> int:
 
     jobs = [(f, v) for f in reciters for v in verses]
     jobs = [j for k, j in enumerate(jobs) if k % shard_n == shard_i]
+    # Don't even decode audio for jobs whose every mode is already done.
+    jobs = [(f, v) for f, v in jobs if any((f, v[0], v[1], m) not in done for m in args.modes)]
     if args.threads:
         import torch
 

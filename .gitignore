@@ -10,3 +10,6 @@ analysis_report.json
 pretrained_models/
 *.wav
 *.mp3
+
+# Raw Kaggle rows (committed gzipped as *.jsonl.gz)
+benchmarks/results/kaggle/*/*runs_*.jsonl

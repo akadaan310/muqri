@@ -15,7 +15,7 @@
 # The window is the units i−ctx … i+ctx and the frames the Viterbi alignment gives them (± margin),
 # so every hypothesis is scored on the same frames: segmentation-free inside the window.
 
-export ctc_forward, ctc_viterbi, ph_units, gop_sf, unit_times, CONFUSIONS, load_dump_layout, read_dump_clip
+export ctc_forward, ctc_viterbi, ctc_occupancy, centroid_onsets, ph_units, gop_sf, unit_times, CONFUSIONS, load_dump_layout, read_dump_clip
 
 const NEG = -Inf32
 
@@ -52,6 +52,59 @@ function ctc_forward(lp::AbstractMatrix{Float32}, seq::AbstractVector{Int}, blan
         α, nα = nα, α
     end
     return lse(α[S], α[S-1])
+end
+
+"""
+    ctc_occupancy(lp, seq, blank) -> T×L matrix
+
+Posterior probability that label k of `seq` occupies frame t (CTC forward-backward in log space). The
+occupancy of label k is γ at extended state 2k. Mirrored by `app/analysis.py::ctc_occupancy`.
+"""
+function ctc_occupancy(lp::AbstractMatrix{Float32}, seq::AbstractVector{Int}, blank::Int)
+    T, L = size(lp, 1), length(seq)
+    L == 0 && return zeros(T, 0)
+    S = 2L + 1
+    ext = [isodd(s) ? blank : seq[s ÷ 2] for s in 1:S]
+    skip = [s > 2 && ext[s] != blank && ext[s] != ext[s-2] for s in 1:S]
+    α = fill(-Inf, T, S)
+    β = fill(-Inf, T, S)
+    α[1, 1] = lp[1, ext[1]]
+    α[1, 2] = lp[1, ext[2]]
+    for t in 2:T, s in 1:S
+        v = α[t-1, s]
+        s > 1 && (v = lse64(v, α[t-1, s-1]))
+        skip[s] && (v = lse64(v, α[t-1, s-2]))
+        α[t, s] = v == -Inf ? -Inf : v + lp[t, ext[s]]
+    end
+    β[T, S] = 0.0
+    β[T, S-1] = 0.0
+    for t in T-1:-1:1, s in 1:S
+        v = β[t+1, s] + lp[t+1, ext[s]]
+        s < S && (v = lse64(v, β[t+1, s+1] + lp[t+1, ext[s+1]]))
+        s + 2 <= S && skip[s+2] && (v = lse64(v, β[t+1, s+2] + lp[t+1, ext[s+2]]))
+        β[t, s] = v
+    end
+    logZ = lse64(α[T, S], α[T, S-1])
+    return [exp(clamp(α[t, 2k] + β[t, 2k] - logZ, -60.0, 0.0)) for t in 1:T, k in 1:L]
+end
+
+"""
+    centroid_onsets(lp, seq, blank) -> Vector{Float64}
+
+Continuous onset of each label, in 1-based frames like `ctc_viterbi`'s `first`: the centre of mass
+of its occupancy. Breaks the 40 ms quantisation of a Viterbi span. NaN for a label with no mass.
+"""
+function centroid_onsets(lp::AbstractMatrix{Float32}, seq::AbstractVector{Int}, blank::Int)
+    g = ctc_occupancy(lp, seq, blank)
+    t = collect(1.0:size(g, 1))
+    return [(m = sum(@view g[:, k]); m > 1e-12 ? sum(t .* @view g[:, k]) / m : NaN) for k in 1:size(g, 2)]
+end
+
+@inline function lse64(a::Float64, b::Float64)
+    a == -Inf && return b
+    b == -Inf && return a
+    m = max(a, b)
+    return m + log1p(exp(-abs(a - b)))
 end
 
 """Best CTC path. Returns (score, first frame, last frame) per label of `seq` (frames 1-based)."""

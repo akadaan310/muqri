@@ -131,3 +131,19 @@ def test_unknown_timing_mode_is_refused() -> None:
     with pytest.raises(ValueError):
         analyse_clip(raw, rec["ref_ph"], vocab, blank, ph["first"], ph["width"], blocks, sif,
                      timing="cubic")
+
+
+CENTROIDS = ROOT / "tests/data/centroid_reference.json"
+
+
+@pytest.mark.skipif(not CENTROIDS.is_file(), reason="Julia centroid reference not captured")
+def test_centroid_onsets_match_julia() -> None:
+    """Sub-frame onsets are pinned to `CtcGop.centroid_onsets` (captured by centroid_capture.jl)."""
+    from app.analysis import centroid_onsets  # noqa: PLC0415
+
+    raw, rec, vocab, _blocks, ph, blank, _sif = load_clip()
+    lp = raw[:, ph["first"]:ph["first"] + ph["width"]]
+    got = centroid_onsets(lp, [vocab[c] for c in rec["ref_ph"]], blank)
+    want = json.loads(CENTROIDS.read_text())
+    assert want["clip"] == CLIP and len(got) == len(want["onsets"])
+    assert max(abs(g - w) for g, w in zip(got, want["onsets"])) < 1e-6

@@ -45,6 +45,30 @@ end
         @test score <= ctc_forward(lp, seq, blank) + 1e-5
     end
 
+    # occupancy = brute-force posterior that label k emits frame t; centroids follow from it
+    for (T, seq) in [(4, [2, 3]), (5, [2, 2]), (5, [3, 2, 3]), (6, [2, 3, 3])]
+        lp = randlp(rng, T, 3)
+        occ = zeros(T, length(seq)); tot = 0.0
+        for idx in CartesianIndices(ntuple(_ -> 3, T))
+            path = collect(Tuple(idx))
+            collapse(path, blank) == seq || continue
+            w = exp(sum(Float64(lp[t, path[t]]) for t in 1:T)); tot += w
+            k, prev = 0, 0
+            for t in 1:T
+                p = path[t]
+                p != blank && p != prev && (k += 1)
+                p != blank && (occ[t, k] += w)
+                prev = p
+            end
+        end
+        occ ./= tot
+        g = ctc_occupancy(lp, seq, blank)
+        @test maximum(abs.(g .- occ)) < 1e-5
+        @test all(isapprox.(sum(g; dims = 1) .+ 0, sum(occ; dims = 1); atol = 1e-5))
+        c = centroid_onsets(lp, seq, blank)
+        @test all(isapprox(c[k], sum((1:T) .* occ[:, k]) / sum(occ[:, k]); atol = 1e-4) for k in eachindex(seq))
+    end
+
     # A peaked posterior that spells the reference: GOP ≈ 0 everywhere; spell a substitution: GOP ≪ 0 there.
     chars = collect("بَسطَ")
     vocab = Dict('ب' => 2, '\u064e' => 3, 'س' => 4, 'ط' => 5, 'ص' => 6, 'ت' => 7, '\u0650' => 8, '\u064f' => 9)

@@ -84,6 +84,8 @@ DURATIONAL = frozenset({
     RuleType.MADD_ARID, RuleType.MADD_LEEN, RuleType.MADD_BADAL, RuleType.MADD_IWAD,
     RuleType.MADD_SILAH_SUGHRA, RuleType.MADD_SILAH_KUBRA, RuleType.GHUNNAH, RuleType.IKHFA,
     RuleType.IKHFA_SHAFAWI, RuleType.TAWASSUT,
+    # iqlab turns the noon into a hidden meem held for a two-count ghunnah, like ikhfa shafawi
+    RuleType.IQLAB,
     # the merged letter is held: nasals for two counts of ghunnah, others for the collision
     RuleType.IDGHAM_GHUNNAH, RuleType.IDGHAM_SHAFAWI,
 })

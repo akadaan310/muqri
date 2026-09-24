@@ -24,6 +24,7 @@ from __future__ import annotations
 import json
 import statistics
 from dataclasses import dataclass, field
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
@@ -167,6 +168,36 @@ class RuleVerdict:
         return d
 
 
+# Nasal holds (ghunnah, ikhfa, iqlab, the shafawi pair) are graded on a band calibrated from the
+# professionals, not on 2 +- 0.75 counts. On the engine's count scale a correct two-count ghunnah sits
+# at 2.5 (masters' median; their 5th percentile 2.07-2.15 for every nasal rule), so the old band
+# failed a quarter of the masters "long" -- the whole reason the ghunnah family looked hardest (pass
+# 0.77 ghunnah, 0.80 ikhfa across 41 reciters) -- and passed a certified reciter's deliberately
+# clipped ghunnahs (1.5-1.85 counts) while failing her correct ones (3.4-4.5). The band is [2.0, the
+# 41 reciters' 95th percentile of that rule]: pass rates 0.77 -> 0.92 (ghunnah), 0.80 -> 0.93 (ikhfa),
+# 0.77 -> 0.94 (idgham shafawi), 0.81 -> 0.91 (ikhfa shafawi), and every clipped take is "short".
+# Iqlab's meem is held like ikhfa shafawi's (the same symbol) and takes its band.
+NASAL_FLOOR = 2.0
+NASAL_BAND_OF = {"ghunnah": "ghunnah", "ikhfa": "ikhfa", "ikhfa_shafawi": "ikhfa_shafawi",
+                 "idgham_shafawi": "idgham_shafawi", "iqlab": "ikhfa_shafawi"}
+_REFERENCE = Path(__file__).resolve().parents[1] / "research_agency_lab/experiments/quran/reference_stats.json"
+
+
+@lru_cache(maxsize=1)
+def _nasal_ceilings() -> dict[str, float]:
+    try:
+        r = json.loads(_REFERENCE.read_text())
+        i = r["quantile_levels"].index(0.95)
+        return {k: float(r["rules"][src]["cohort"]["counts_quantiles"][i]) for k, src in NASAL_BAND_OF.items()}
+    except (OSError, KeyError, ValueError):
+        return {}
+
+
+def nasal_band(rule: str) -> tuple[float, float] | None:
+    hi = _nasal_ceilings().get(rule)
+    return (NASAL_FLOOR, round(hi, 2)) if hi else None
+
+
 def grade_rule(b, units: list[Unit]) -> RuleVerdict:  # type: ignore[no-untyped-def]
     """Grade one bound rule from the acoustic evidence at its units."""
     us = [units[i] for i in b.unit_indices if 0 <= i < len(units)]
@@ -179,9 +210,15 @@ def grade_rule(b, units: list[Unit]) -> RuleVerdict:  # type: ignore[no-untyped-
         # convert the measured duration into tajweed counts with the fitted scale, so the verdict can
         # be stated as "you gave 2.1 counts where 4 are required" instead of a bare ratio
         got = round(to_counts(measured), 2)
-        ceiling = six_count_ceiling() if hi >= 6 else hi + NOMINAL_TOLERANCE
-        status = "pass" if lo - NOMINAL_TOLERANCE <= got <= ceiling else \
-            ("short" if got < lo else "long")
+        band = nasal_band(b.rule_type)
+        if band:
+            lo, hi = band
+            ceiling = hi
+            status = "pass" if lo <= got <= hi else ("short" if got < lo else "long")
+        else:
+            ceiling = six_count_ceiling() if hi >= 6 else hi + NOMINAL_TOLERANCE
+            status = "pass" if lo - NOMINAL_TOLERANCE <= got <= ceiling else \
+                ("short" if got < lo else "long")
         ev = {"expected": [lo, hi], "given_counts": got, "raw_own_counts": measured}
         # At hadr the count unit is short, so a ghunnah or madd of normal duration reads as many of the
         # reciter's own counts: Ghamdi's idgham ghunnah read 3.9 counts in 0.63 s, and a certified
@@ -220,7 +257,7 @@ def grade_rule(b, units: list[Unit]) -> RuleVerdict:  # type: ignore[no-untyped-
                   "llr": bad[0].competitor_llr if bad else None}
     return RuleVerdict(rule=b.rule_type, word_index=b.word_index, word=b.word, detail=b.detail,
                        mechanism=b.mechanism, units=list(b.unit_indices),
-                       expected_counts=b.expected_counts, measured_counts=measured,
+                       expected_counts=(nasal_band(b.rule_type) or b.expected_counts) if b.mechanism == "durational" else b.expected_counts, measured_counts=measured,
                        shadda=b.shadda, status=status, evidence=ev)
 
 

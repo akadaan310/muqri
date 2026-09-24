@@ -18,6 +18,14 @@ Built from the calculus of characteristics (substrate_library/julia/calculus.jl)
                                                      departures co-occurring in the same verse
     (Reciter)-[:NEAR {similarity}]->(Reciter)        k nearest neighbours
     (Reciter)-[:IN_COMMUNITY]->(Community)
+    (Rule {name, stage, mean_pass}) and the rule layer (datastore/rule_layer.py, structures.jl):
+    (Reciter)-[:KEEPS {pass_rate, n}]->(Rule)        each reciter's pass rate per rule
+    (Rule)-[:PREREQUISITE_OF {violation, reverse}]->(Rule)
+                                                     the knowledge space's Hasse diagram
+    (Reciter)-[:READY_FOR]->(Rule)                   the reciter's outer fringe: what to learn next
+    (Rule)-[:FAILS_WITH {pmi, verses}]->(Rule)       rule failures that come together in a verse
+    (Measure)-[:DEPENDS {mi_bits}]->(Measure)        the Chow-Liu backbone over all measurements
+    (Measure)-[:PC_LINK {dir, r}]->(Measure)         the PC skeleton, oriented at v-structures
     (Concept)-[:CAUSES {claim, mechanism, provenance, verdict, estimate, ci_low, ci_high, strata}]->(Concept)
                                                      the causal layer (substrate_library/julia/causal.jl):
                                                      mechanisms and contexts -> the acts they produce,
@@ -52,6 +60,8 @@ SCHEMA = [
     "CREATE NODE TABLE Feature(id STRING, letter STRING, context STRING, head STRING, overruled BOOLEAN, PRIMARY KEY(id))",
     "CREATE NODE TABLE Community(id INT64, PRIMARY KEY(id))",
     "CREATE NODE TABLE Concept(name STRING, PRIMARY KEY(name))",
+    "CREATE NODE TABLE Rule(name STRING, stage INT64, mean_pass DOUBLE, PRIMARY KEY(name))",
+    "CREATE NODE TABLE Measure(name STRING, PRIMARY KEY(name))",
     "CREATE REL TABLE HAS(FROM Letter TO Characteristic)",
     "CREATE REL TABLE OF_LETTER(FROM Feature TO Letter)",
     "CREATE REL TABLE REALISES(FROM Reciter TO Feature, rate DOUBLE, graded DOUBLE)",
@@ -60,6 +70,12 @@ SCHEMA = [
     "CREATE REL TABLE IN_COMMUNITY(FROM Reciter TO Community)",
     "CREATE REL TABLE CAUSES(FROM Concept TO Concept, claim STRING, mechanism STRING, provenance STRING, "
     "verdict STRING, estimate DOUBLE, ci_low DOUBLE, ci_high DOUBLE, strata INT64)",
+    "CREATE REL TABLE KEEPS(FROM Reciter TO Rule, pass_rate DOUBLE, n INT64)",
+    "CREATE REL TABLE PREREQUISITE_OF(FROM Rule TO Rule, violation DOUBLE, reverse DOUBLE, n INT64)",
+    "CREATE REL TABLE READY_FOR(FROM Reciter TO Rule)",
+    "CREATE REL TABLE FAILS_WITH(FROM Rule TO Rule, pmi DOUBLE, verses INT64)",
+    "CREATE REL TABLE DEPENDS(FROM Measure TO Measure, mi_bits DOUBLE)",
+    "CREATE REL TABLE PC_LINK(FROM Measure TO Measure, dir STRING, r DOUBLE)",
 ]
 
 
@@ -69,7 +85,9 @@ def _tables() -> dict[str, list[list]]:  # type: ignore[type-arg]
     overruled = {x["feature"] for x in sets["overruled_expectations"]}
     t: dict[str, list[list]] = {k: [] for k in ("Reciter", "Letter", "Characteristic", "Feature", "Community",  # type: ignore[type-arg]
                                                   "HAS", "OF_LETTER", "REALISES", "TRAVELS_WITH", "NEAR",
-                                                  "IN_COMMUNITY", "Concept", "CAUSES")}
+                                                  "IN_COMMUNITY", "Concept", "CAUSES", "Rule", "Measure",
+                                                  "KEEPS", "PREREQUISITE_OF", "READY_FOR", "FAILS_WITH",
+                                                  "DEPENDS", "PC_LINK")}
     t["Reciter"] = [[r, tier] for r, tier in zip(sets["reciters"], sets["tiers"])]
     t["Letter"] = [[c] for c in calc["letters"]]
     t["Characteristic"] = [[a, a.split("=")[0], a.split("=")[1]] for a in calc["attributes"]]
@@ -95,6 +113,24 @@ def _tables() -> dict[str, list[list]]:  # type: ignore[type-arg]
         t["Concept"] = [[n] for n in sorted({e["cause"] for e in es} | {e["effect"] for e in es})]
         t["CAUSES"] = [[e["cause"], e["effect"], e["claim"], e["mechanism"], e["provenance"], e["verdict"],
                         e["estimate"], *(e["ci95"] or [None, None]), e["strata"]] for e in es]
+    rl_path = ROOT / "research_agency_lab/experiments/calculus/rule_layer_T300.json"
+    st_path = ROOT / "research_agency_lab/experiments/calculus/structures_T300.json"
+    if rl_path.is_file() and st_path.is_file():
+        rl = json.loads(rl_path.read_text())
+        st = json.loads(st_path.read_text())
+        mean_pass = {x["rule"]: x["mean_pass"] for x in rl["hardest_rules"]}
+        names = sorted(set(st["rules"]) | set(mean_pass))
+        t["Rule"] = [[n, st["stages"].get(n, -1), mean_pass.get(n)] for n in names]
+        for spk, d in rl["reciters"].items():
+            t["KEEPS"] += [[spk, ru, v["pass_rate"], v["n"]] for ru, v in d["rules"].items() if ru in names]
+        t["PREREQUISITE_OF"] = [[x["a"], x["b"], x["violation"], x["reverse"], x["n"]] for x in st["prerequisites"]]
+        for spk, d in st["reciter_states"].items():
+            t["READY_FOR"] += [[spk, ru] for ru in d["fringe"]]
+        t["FAILS_WITH"] = [[x["a"], x["b"], x["pmi"], x["verses"]] for x in rl["fail_together"]
+                           if x["a"] in names and x["b"] in names]
+        t["Measure"] = [[n] for n in st["variables"]]
+        t["DEPENDS"] = [[e["a"], e["b"], e["mi_bits"]] for e in st["chow_liu"]]
+        t["PC_LINK"] = [[e["a"], e["b"], e["dir"], e["r"]] for e in st["pc"]]
     for k, c in enumerate(sets["communities"]):
         t["Community"].append([k])
         t["IN_COMMUNITY"] += [[m, k] for m in c["members"]]

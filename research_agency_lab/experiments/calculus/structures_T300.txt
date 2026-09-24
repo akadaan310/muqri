@@ -1,0 +1,171 @@
+11996 verses, 35 rules, 10 heads -> 47 variables
+
+KNOWLEDGE SPACE: prerequisite (Hasse) edges, a -> b = 'b is almost never held without a'
+   hams                     -> tafashhi                 violation 0.003  vs reverse 0.202  n=3240
+   hams                     -> tafkheem                 violation 0.012  vs reverse 0.118  n=7033
+   hams                     -> tarqeeq                  violation 0.005  vs reverse 0.062  n=3492
+   hamzat_wasl              -> tafashhi                 violation 0.037  vs reverse 0.216  n=3642
+   hamzat_wasl              -> tafkheem                 violation 0.035  vs reverse 0.091  n=8880
+   hamzat_wasl              -> tarqeeq                  violation 0.046  vs reverse 0.052  n=4537
+   idgham_mithlayn          -> hamzat_wasl              violation 0.003  vs reverse 0.08  n=765
+   idgham_mutajanisayn      -> madd_tabii               violation 0.001  vs reverse 0.162  n=831
+   idgham_mutajanisayn      -> qalqalah                 violation 0.0  vs reverse 0.06  n=550
+   idgham_mutajanisayn      -> tafashhi                 violation 0.0  vs reverse 0.336  n=351
+   idgham_mutajanisayn      -> tafkheem                 violation 0.0  vs reverse 0.09  n=790
+   idgham_mutaqaribayn      -> madd_tabii               violation 0.0  vs reverse 0.07  n=599
+   idgham_mutaqaribayn      -> qalqalah                 violation 0.0  vs reverse 0.175  n=160
+   idgham_mutaqaribayn      -> tafashhi                 violation 0.0  vs reverse 0.6  n=200
+   idgham_mutaqaribayn      -> tafkheem                 violation 0.0  vs reverse 0.128  n=639
+   idgham_no_ghunnah        -> tafashhi                 violation 0.027  vs reverse 0.111  n=739
+   idgham_no_ghunnah        -> tafkheem                 violation 0.014  vs reverse 0.078  n=1900
+   idgham_no_ghunnah        -> tarqeeq                  violation 0.019  vs reverse 0.061  n=1217
+   iqlab                    -> madd_badal               violation 0.0  vs reverse 0.077  n=194
+   iqlab                    -> tarqeeq                  violation 0.001  vs reverse 0.053  n=697
+   istitaalah               -> hamzat_wasl              violation 0.015  vs reverse 0.084  n=729
+   istitaalah               -> idgham_no_ghunnah        violation 0.015  vs reverse 0.103  n=195
+   istitaalah               -> safir                    violation 0.02  vs reverse 0.055  n=649
+   itbaq                    -> tafashhi                 violation 0.011  vs reverse 0.245  n=2358
+   itbaq                    -> tafkheem                 violation 0.007  vs reverse 0.127  n=5387
+   itbaq                    -> tarqeeq                  violation 0.015  vs reverse 0.066  n=2777
+   izhar_halqi              -> ikhfa_shafawi            violation 0.038  vs reverse 0.184  n=472
+   izhar_shafawi            -> tafashhi                 violation 0.001  vs reverse 0.251  n=2480
+   izhar_shafawi            -> tafkheem                 violation 0.002  vs reverse 0.1  n=5665
+   izhar_shafawi            -> tarqeeq                  violation 0.002  vs reverse 0.054  n=3134
+   jahr                     -> tafashhi                 violation 0.001  vs reverse 0.217  n=3804
+   jahr                     -> tafkheem                 violation 0.001  vs reverse 0.097  n=9526
+   jahr                     -> tarqeeq                  violation 0.001  vs reverse 0.057  n=4862
+   madd_arid_lissukun       -> tafashhi                 violation 0.001  vs reverse 0.225  n=2768
+   madd_arid_lissukun       -> tafkheem                 violation 0.001  vs reverse 0.063  n=7025
+   madd_arid_lissukun       -> tarqeeq                  violation 0.0  vs reverse 0.065  n=3820
+   madd_badal               -> izhar_halqi              violation 0.004  vs reverse 0.071  n=822
+   madd_badal               -> madd_tabii               violation 0.013  vs reverse 0.148  n=1657
+   madd_badal               -> qalqalah                 violation 0.016  vs reverse 0.051  n=1069
+   madd_badal               -> tafashhi                 violation 0.024  vs reverse 0.119  n=776
+   madd_badal               -> tafkheem                 violation 0.013  vs reverse 0.124  n=1818
+   madd_leen                -> ghunnah                  violation 0.012  vs reverse 0.286  n=161
+   madd_leen                -> idgham_ghunnah           violation 0.006  vs reverse 0.313  n=163
+   madd_leen                -> ikhfa                    violation 0.009  vs reverse 0.244  n=225
+   madd_leen                -> tafashhi                 violation 0.008  vs reverse 0.216  n=365
+   madd_silah_kubra         -> madd_munfasil            violation 0.042  vs reverse 0.203  n=192
+   madd_silah_sughra        -> idgham_no_ghunnah        violation 0.008  vs reverse 0.057  n=369
+   qalqalah                 -> ghunnah                  violation 0.039  vs reverse 0.284  n=2973
+   qalqalah                 -> idgham_ghunnah           violation 0.042  vs reverse 0.359  n=2974
+   qalqalah                 -> idgham_shafawi           violation 0.028  vs reverse 0.255  n=899
+   qalqalah                 -> ikhfa                    violation 0.044  vs reverse 0.256  n=3465
+   qalqalah                 -> madd_munfasil            violation 0.04  vs reverse 0.293  n=1793
+   qalqalah                 -> madd_muttasil            violation 0.042  vs reverse 0.216  n=1793
+   rakhawah                 -> tafashhi                 violation 0.005  vs reverse 0.217  n=3764
+   rakhawah                 -> tafkheem                 violation 0.007  vs reverse 0.103  n=8883
+   rakhawah                 -> tarqeeq                  violation 0.008  vs reverse 0.062  n=4339
+   safir                    -> izhar_halqi              violation 0.027  vs reverse 0.122  n=3311
+   safir                    -> madd_tabii               violation 0.018  vs reverse 0.121  n=7950
+   safir                    -> qalqalah                 violation 0.02  vs reverse 0.055  n=4224
+   safir                    -> tafashhi                 violation 0.021  vs reverse 0.247  n=3199
+   safir                    -> tafkheem                 violation 0.019  vs reverse 0.102  n=8073
+   shiddah                  -> tafashhi                 violation 0.003  vs reverse 0.146  n=1047
+   shiddah                  -> tafkheem                 violation 0.006  vs reverse 0.11  n=2067
+   shiddah                  -> tarqeeq                  violation 0.011  vs reverse 0.111  n=820
+   tafkheem                 -> madd_lazim               violation 0.045  vs reverse 0.121  n=737
+   tafkheem                 -> madd_silah_kubra         violation 0.024  vs reverse 0.167  n=916
+   tarqeeq                  -> izhar_halqi              violation 0.04  vs reverse 0.136  n=2150
+   tarqeeq                  -> madd_lazim               violation 0.003  vs reverse 0.108  n=316
+   tarqeeq                  -> madd_tabii               violation 0.044  vs reverse 0.134  n=4781
+   tarqeeq                  -> qalqalah                 violation 0.042  vs reverse 0.056  n=2947
+   tawassut                 -> tafashhi                 violation 0.005  vs reverse 0.201  n=3320
+   tawassut                 -> tafkheem                 violation 0.002  vs reverse 0.092  n=8273
+   tawassut                 -> tarqeeq                  violation 0.004  vs reverse 0.057  n=4574
+LEARNING STAGES (longest-path layer):
+   stage 0: hams, idgham_mithlayn, idgham_mutajanisayn, idgham_mutaqaribayn, iqlab, istitaalah, itbaq, izhar_shafawi, jahr, jawaz_wajhayn, madd_arid_lissukun, madd_leen, madd_silah_sughra, rakhawah, shiddah, tawassut
+   stage 1: hamzat_wasl, idgham_no_ghunnah, madd_badal, safir
+   stage 2: tafashhi, tafkheem, tarqeeq
+   stage 3: izhar_halqi, madd_lazim, madd_silah_kubra, madd_tabii, qalqalah
+   stage 4: ghunnah, idgham_ghunnah, idgham_shafawi, ikhfa, ikhfa_shafawi, madd_munfasil, madd_muttasil
+
+PER RECITER: ready to learn next (outer fringe)
+   Abdul_Basit_Mujawwad_128kbps        ghunnah, idgham_ghunnah, idgham_shafawi, ikhfa, ikhfa_shafawi, madd_lazim, madd_silah_kubra, tafashhi
+   Abdul_Basit_Murattal_192kbps        ghunnah, idgham_ghunnah, idgham_shafawi, ikhfa, ikhfa_shafawi, madd_munfasil, tafashhi
+   Abdullah_Basfar_192kbps             ghunnah, idgham_ghunnah, idgham_shafawi, ikhfa, ikhfa_shafawi, madd_silah_kubra, tafashhi
+   Abdullah_Matroud_128kbps            idgham_ghunnah, idgham_shafawi, madd_lazim, madd_munfasil, madd_muttasil, tafashhi
+   Abdurrahmaan_As-Sudais_192kbps      idgham_ghunnah, madd_muttasil, tafashhi
+   Abu_Bakr_Ash-Shaatree_128kbps       ghunnah, idgham_ghunnah, madd_muttasil, madd_silah_kubra, tafashhi
+   Ahmed_Neana_128kbps                 ghunnah, idgham_ghunnah, idgham_shafawi, ikhfa, madd_muttasil, tafashhi
+   Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.netizhar_halqi, madd_lazim, madd_silah_kubra, qalqalah, tafashhi
+
+CHOW-LIU BACKBONE (strongest dependencies of the maximum-MI spanning tree)
+   tafashhi                   — sifah:tafashie            0.7435 bits
+   izhar_halqi                — sifah:ghonna              0.2413 bits
+   qalqalah                   — sifah:qalqla              0.2026 bits
+   izhar_halqi                — sifah:shidda_or_rakhawa   0.1805 bits
+   tafkheem                   — sifah:tafkheem_or_taqeeq  0.1504 bits
+   safir                      — sifah:safeer              0.1408 bits
+   ghunnah                    — word_accuracy             0.1347 bits
+   idgham_ghunnah             — word_accuracy             0.1141 bits
+   sifah:tafkheem_or_taqeeq   — word_accuracy             0.1098 bits
+   tafashhi                   — word_accuracy             0.1064 bits
+   ghunnah                    — ikhfa                     0.0976 bits
+   madd_munfasil              — word_accuracy             0.0941 bits
+   madd_muttasil              — word_accuracy             0.0785 bits
+   tarqeeq                    — sifah:tafkheem_or_taqeeq  0.0672 bits
+   sifah:shidda_or_rakhawa    — word_accuracy             0.0651 bits
+
+PC SKELETON (64 edges; oriented where a v-structure was found)
+   safir                      -- sifah:safeer               r=0.862
+   tafashhi                   -- sifah:tafashie             r=0.766
+   qalqalah                   -- sifah:qalqla               r=0.654
+   itbaq                      -- sifah:itbaq                r=0.613
+   sifah:hams_or_jahr         -> sifah:shidda_or_rakhawa    r=0.544
+   hams                       -- sifah:hams_or_jahr         r=0.525
+   izhar_shafawi              -- sifah:shidda_or_rakhawa    r=0.503
+   sifah:ghonna               -> sifah:shidda_or_rakhawa    r=0.497
+   izhar_halqi                -- sifah:ghonna               r=0.467
+   izhar_shafawi              -- sifah:hams_or_jahr         r=0.448
+   sifah:shidda_or_rakhawa    -- word_accuracy              r=0.442
+   ghunnah                    -> word_accuracy              r=0.436
+   ghunnah                    -> ikhfa                      r=0.432
+   rakhawah                   -> sifah:shidda_or_rakhawa    r=0.416
+   sifah:ghonna               -- sifah:tafkheem_or_taqeeq   r=0.415
+   tafkheem                   -> sifah:tafkheem_or_taqeeq   r=0.414
+   izhar_shafawi              -- sifah:ghonna               r=0.41
+   sifah:tafkheem_or_taqeeq   -- word_accuracy              r=0.405
+   idgham_ghunnah             -> word_accuracy              r=0.38
+   ikhfa                      -- word_accuracy              r=0.378
+
+d-SEPARATION: 115 independencies implied by the tradition's graph; 40 refuted by the data
+   sifah:hams_or_jahr       ⊥ sifah:shidda_or_rakhawa  |                  r=0.544   | reciter removed 0.524   | + verse removed 0.555   -> the reciter's performance in that verse (a state)
+   sifah:ghonna             ⊥ sifah:shidda_or_rakhawa  |                  r=0.497   | reciter removed 0.49    | + verse removed 0.439   -> the reciter's performance in that verse (a state)
+   sifah:ghonna             ⊥ sifah:tafkheem_or_taqeeq |                  r=0.415   | reciter removed 0.413   | + verse removed 0.217   -> the reciter's performance in that verse (a state)
+   ghunnah                  ⊥ ikhfa                    | tempo_haraka_s   r=0.401   | reciter removed 0.166   | + verse removed 0.171   -> the reciter's performance in that verse (a state)
+   sifah:shidda_or_rakhawa  ⊥ sifah:tafkheem_or_taqeeq |                  r=0.343   | reciter removed 0.342   | + verse removed 0.278   -> the reciter's performance in that verse (a state)
+   sifah:qalqla             ⊥ sifah:shidda_or_rakhawa  |                  r=0.286   | reciter removed 0.267   | + verse removed 0.25    -> the reciter's performance in that verse (a state)
+   sifah:ghonna             ⊥ sifah:hams_or_jahr       |                  r=0.263   | reciter removed 0.249   | + verse removed 0.309   -> the reciter's performance in that verse (a state)
+   sifah:safeer             ⊥ sifah:hams_or_jahr       |                  r=0.244   | reciter removed 0.227   | + verse removed 0.244   -> the reciter's performance in that verse (a state)
+   ikhfa                    ⊥ idgham_ghunnah           | tempo_haraka_s   r=0.238   | reciter removed 0.133   | + verse removed 0.145   -> the reciter's performance in that verse (a state)
+   sifah:safeer             ⊥ sifah:shidda_or_rakhawa  |                  r=0.211   | reciter removed 0.194   | + verse removed 0.219   -> the reciter's performance in that verse (a state)
+   sifah:qalqla             ⊥ sifah:tafkheem_or_taqeeq |                  r=0.173   | reciter removed 0.166   | + verse removed 0.126   -> the reciter's performance in that verse (a state)
+   sifah:hams_or_jahr       ⊥ sifah:tafkheem_or_taqeeq |                  r=0.165   | reciter removed 0.157   | + verse removed 0.252   -> the reciter's performance in that verse (a state)
+
+PRECISION STATE: leading factor of the residual characteristics explains 25.3 % of their joint variance; loadings:
+   sifah:ghonna                  0.411
+   sifah:hams_or_jahr            0.499
+   sifah:istitala                0.1
+   sifah:itbaq                   0.169
+   sifah:qalqla                  0.193
+   sifah:safeer                  0.276
+   sifah:shidda_or_rakhawa       0.543
+   sifah:tafashie                0.122
+   sifah:tafkheem_or_taqeeq      0.347
+STEADINESS (spread of the verse-level precision state; lower = steadier)
+   mahmoud_ali_al_banna_32kbps             0.552   over 299 verses
+   Husary_128kbps                          0.554   over 296 verses
+   Abdullah_Basfar_192kbps                 0.584   over 298 verses
+   Abu_Bakr_Ash-Shaatree_128kbps           0.611   over 299 verses
+   Abdul_Basit_Murattal_192kbps            0.615   over 296 verses
+   Ali_Hajjaj_AlSuesy_128kbps              0.616   over 299 verses
+   Muhammad_Jibreel_128kbps                1.772   over 299 verses
+   Hani_Rifai_192kbps                      1.807   over 298 verses
+   MaherAlMuaiqly128kbps                   2.038   over 300 verses
+   Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net2.711   over 296 verses
+   Minshawy_Mujawwad_192kbps               2.857   over 286 verses
+   khalefa_al_tunaiji_64kbps               5.823   over 299 verses
+
+-> research_agency_lab/experiments/calculus/structures_T300.json

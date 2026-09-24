@@ -1,0 +1,50 @@
+11996 verses, 41 reciters, 35 rules
+
+RULES EVERY RECITER KEEPS (>= 95 % on each of >= 30 reciters): hams, idgham_mutajanisayn, idgham_mutaqaribayn, idgham_no_ghunnah, iqlab, itbaq, izhar_shafawi, jahr, madd_arid_lissukun, madd_tabii, rakhawah, tawassut
+RULES EVERY MASTER KEEPS (>= 90 %) THAT >= 3 OTHERS BREAK (< 80 %): -
+
+HARDEST RULES (mean pass rate over reciters)
+  idgham_ghunnah           0.693   n=8390
+  ghunnah                  0.761   n=9650
+  idgham_shafawi           0.769   n=1792
+  madd_munfasil            0.774   n=5809
+  tafashhi                 0.793   n=5601
+  ikhfa                    0.796   n=10331
+  madd_muttasil            0.813   n=5462
+  ikhfa_shafawi            0.813   n=1266
+  madd_silah_kubra         0.834   n=997
+  madd_lazim               0.886   n=871
+
+RULE FAILURES THAT TRAVEL TOGETHER (same verse; PMI bits, >= 20 verses)
+  hams                   + rakhawah               PMI  5.14  n=25
+  itbaq                  + tafkheem               PMI  2.70  n=48
+  izhar_halqi            + tarqeeq                PMI  2.04  n=42
+  hamzat_wasl            + qalqalah               PMI  1.86  n=40
+  ikhfa                  + ikhfa_shafawi          PMI  1.83  n=95
+  idgham_shafawi         + ikhfa                  PMI  1.61  n=152
+  ghunnah                + ikhfa_shafawi          PMI  1.47  n=81
+  hamzat_wasl            + tarqeeq                PMI  1.35  n=23
+  madd_muttasil          + tarqeeq                PMI  1.34  n=47
+  safir                  + tafashhi               PMI  1.32  n=35
+
+HARDEST VERSES (recited by >= 30 reciters; mean share of words fully correct)
+  75:27   0.341  over 41 reciters
+  106:1    0.439  over 41 reciters
+  80:14   0.463  over 40 reciters
+  56:41   0.522  over 41 reciters
+  42:2    0.550  over 40 reciters
+  80:33   0.553  over 41 reciters
+  74:1    0.585  over 41 reciters
+  76:16   0.615  over 41 reciters
+  58:19   0.623  over 41 reciters
+  19:1    0.625  over 40 reciters
+
+THEIR OWN LENGTHS: median madd tabii / arid / munfasil in counts, masters vs hadr
+  Husary_128kbps                     anchor  tabii 1.9  arid 4.17  munfasil 4.26  lazim 7.01
+  Husary_128kbps_Mujawwad            anchor  tabii 2.0  arid 4.6  munfasil 2.08  lazim 6.4
+  Husary_Muallim_128kbps             anchor  tabii 1.9  arid 2.36  munfasil 4.88  lazim 7.77
+  MaherAlMuaiqly128kbps              imam    tabii 1.6  arid 3.43  munfasil 5.64  lazim 7.14
+  Salah_Al_Budair_128kbps            imam    tabii 1.71  arid 2.7  munfasil 1.96  lazim 8.03
+  Saood_ash-Shuraym_128kbps          imam    tabii 1.6  arid 3.07  munfasil 1.96  lazim 7.94
+
+-> /home/azureuser/github-director/repos/muqri/research_agency_lab/experiments/calculus/rule_layer_T300.json

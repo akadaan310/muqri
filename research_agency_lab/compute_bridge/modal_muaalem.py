@@ -132,7 +132,11 @@ def _items(tier: str, reciters: str, exclude: str = "") -> list[tuple[str, int, 
     # experiments/tajweed_coverage.md (free-decode vs reference edit distance per reciter)
     drop = {x for x in exclude.split(",") if x}
     folders = [f for f in folders if f not in drop]
-    if tier == "all":
+    if tier.startswith("surah:"):          # a whole surah, e.g. surah:54
+        sura = int(tier.split(":")[1])
+        counts = json.loads((ROOT / "datasets/qaari_keys/build/ayah_keys.json").read_text())["ayahs"]
+        verses = [(s, a) for s, a, *_ in counts if s == sura]
+    elif tier == "all":
         counts = json.loads((ROOT / "datasets/qaari_keys/build/ayah_keys.json").read_text())["ayahs"]
         verses = [(s, a) for s, a, *_ in counts]
     else:

@@ -1,0 +1,302 @@
+{
+    "instances": 6891,
+    "contexts": [
+        {
+            "heard_heavy": 0.9372325249643366,
+            "finding": "agree",
+            "examples": [
+                "وَسَخَّرَ",
+                "وَٱلْقَمَرَ",
+                "غَيْرَ",
+                "رَبِّكَ"
+            ],
+            "reference_heavy": 1,
+            "margin_median": 9.331,
+            "rule": "heavy",
+            "context": "voweled:َ",
+            "n": 2103
+        },
+        {
+            "heard_heavy": 0.007563025210084034,
+            "finding": "agree",
+            "examples": [
+                "ٱلْأَمْرِ",
+                "ٱلنَّارِ",
+                "رِزْقَهُۥ",
+                "ٱلنَّهَارِ"
+            ],
+            "reference_heavy": 0,
+            "margin_median": 12.416,
+            "rule": "light",
+            "context": "voweled:ِ",
+            "n": 1190
+        },
+        {
+            "heard_heavy": 0.927536231884058,
+            "finding": "agree",
+            "examples": [
+                "خَيْرٌۭ",
+                "كَفَرُوا۟",
+                "أَكُفَّارُكُمْ",
+                "يَتَذَكَّرُ"
+            ],
+            "reference_heavy": 1,
+            "margin_median": 9.986,
+            "rule": "heavy",
+            "context": "voweled:ُ",
+            "n": 897
+        },
+        {
+            "heard_heavy": 0.9918962722852512,
+            "finding": "agree",
+            "examples": [
+                "ٱلْأَرْضِ",
+                "وَٱلْأَرْضَ",
+                "أَرْسَلْنَا",
+                "يَرْزُقُكُمْ"
+            ],
+            "reference_heavy": 1,
+            "margin_median": 9.586,
+            "rule": "heavy",
+            "context": "sakin:after fatha",
+            "n": 617
+        },
+        {
+            "heard_heavy": 0.015015015015015015,
+            "finding": "agree",
+            "examples": [
+                "مُّدَّكِرٍۢ",
+                "بِمُصَيْطِرٍ",
+                "فَطَهِّرْ",
+                "ٱلْمُدَّثِّرُ"
+            ],
+            "reference_heavy": 0,
+            "margin_median": 8.751,
+            "rule": "light",
+            "context": "stop:after kasra",
+            "n": 333
+        },
+        {
+            "heard_heavy": 0.9801980198019802,
+            "finding": "agree",
+            "examples": [
+                "وَنُذُرِ",
+                "ٱلزُّبُرِ",
+                "نُّكُرٍ",
+                "بِٱلنُّذُرِ"
+            ],
+            "reference_heavy": 1,
+            "margin_median": 7.849,
+            "rule": "heavy",
+            "context": "stop:after damma",
+            "n": 303
+        },
+        {
+            "heard_heavy": 0.9626556016597511,
+            "finding": "agree",
+            "examples": [
+                "كَٱلْفَخَّارِ",
+                "ٱلْغَفَّـٰرُ",
+                "وَٱلنَّهَارَ",
+                "ٱلْأَنْهَـٰرَ"
+            ],
+            "reference_heavy": 1,
+            "margin_median": 8.102,
+            "rule": "heavy",
+            "context": "stop:after madd ا",
+            "n": 241
+        },
+        {
+            "heard_heavy": 1,
+            "finding": "agree",
+            "examples": [
+                "لِلرَّحْمَـٰنِ",
+                "رَّبِّ",
+                "رَّبِّكُمْ",
+                "حَرَّمَ"
+            ],
+            "reference_heavy": 1,
+            "margin_median": 10.6175,
+            "rule": "heavy",
+            "context": "doubled:َ",
+            "n": 232
+        },
+        {
+            "heard_heavy": 0.9945945945945946,
+            "finding": "agree",
+            "examples": [
+                "وَأَخَّرَ",
+                "لِلْبَشَرِ",
+                "ٱلْقَمَرُ",
+                "وَنَهَرٍۢ"
+            ],
+            "reference_heavy": 1,
+            "margin_median": 9.425,
+            "rule": "heavy",
+            "context": "stop:after fatha",
+            "n": 185
+        },
+        {
+            "heard_heavy": 1,
+            "finding": "agree",
+            "examples": [
+                "وَٱلْقُرْءَانِ",
+                "ٱلْقُرْءَانَ",
+                "وَٱذْكُرْ",
+                "مُرْسِلُوا۟"
+            ],
+            "reference_heavy": 1,
+            "margin_median": 10.749,
+            "rule": "heavy",
+            "context": "sakin:after damma",
+            "n": 167
+        },
+        {
+            "heard_heavy": 0.006289308176100629,
+            "finding": "agree",
+            "examples": [
+                "نَّصِيرٍ",
+                "قَدِيرٌۭ",
+                "ٱلْقَدِيرُ",
+                "ٱلْمَصِيرُ"
+            ],
+            "reference_heavy": 0,
+            "margin_median": 7.454,
+            "rule": "light",
+            "context": "stop:after madd ya",
+            "n": 159
+        },
+        {
+            "heard_heavy": 0.03896103896103896,
+            "finding": "agree",
+            "examples": [
+                "تُصَعِّرْ",
+                "نُعَمِّرْكُم",
+                "فِرْعَوْنَ",
+                "وَيُؤَخِّرْكُمْ"
+            ],
+            "reference_heavy": 0.03896103896103896,
+            "margin_median": 7.7905,
+            "rule": "light",
+            "context": "sakin:after kasra",
+            "n": 154
+        },
+        {
+            "heard_heavy": 1,
+            "finding": "agree",
+            "examples": [
+                "وَنُفُورٍ",
+                "فَخُورٍۢ",
+                "ٱلصُّدُورِ"
+            ],
+            "reference_heavy": 1,
+            "margin_median": 8.992,
+            "rule": "heavy",
+            "context": "stop:after madd ۥ",
+            "n": 112
+        },
+        {
+            "heard_heavy": 0,
+            "finding": "agree",
+            "examples": [
+                "ٱلرِّجْسَ",
+                "رِّزْقٍۢ",
+                "ٱلرِّيحُ",
+                "لِّلرِّجَالِ"
+            ],
+            "reference_heavy": 0,
+            "margin_median": 8.582,
+            "rule": "light",
+            "context": "doubled:ِ",
+            "n": 47
+        },
+        {
+            "heard_heavy": 0.3902439024390244,
+            "finding": "either / undetermined",
+            "examples": [
+                "يَسْرِ"
+            ],
+            "reference_heavy": 0,
+            "margin_median": 0.999,
+            "rule": "either",
+            "context": "stop:yasr (dropped ya')",
+            "n": 41
+        },
+        {
+            "heard_heavy": 0,
+            "finding": "agree",
+            "examples": [
+                "ٱلذِّكْرِ"
+            ],
+            "reference_heavy": 0,
+            "margin_median": 5.2445,
+            "rule": "light",
+            "context": "stop:after sakin letter after kasra",
+            "n": 40
+        },
+        {
+            "heard_heavy": 1,
+            "finding": "reference disagrees with the rule",
+            "examples": [
+                "مُّسْتَقِرٌّۭ",
+                "مُّسْتَمِرٌّۭ",
+                "مُّسْتَمِرٍّۢ"
+            ],
+            "reference_heavy": 1,
+            "margin_median": 2.3840000000000003,
+            "rule": "light",
+            "context": "stop doubled:after kasra",
+            "n": 40
+        },
+        {
+            "heard_heavy": 1,
+            "finding": "agree",
+            "examples": [
+                "يَضُرُّوكَ",
+                "وَٱلرُّكَّعِ",
+                "يُسِرُّونَ"
+            ],
+            "reference_heavy": 1,
+            "margin_median": 10.118,
+            "rule": "heavy",
+            "context": "doubled:ُ",
+            "n": 13
+        },
+        {
+            "heard_heavy": 1,
+            "finding": "agree",
+            "examples": [
+                "وَأَمَرُّ"
+            ],
+            "reference_heavy": 1,
+            "margin_median": 10.0175,
+            "rule": "heavy",
+            "context": "stop doubled:after fatha",
+            "n": 10
+        },
+        {
+            "heard_heavy": 0.2,
+            "finding": "PERCEPTION blind spot",
+            "examples": [
+                "فِرْقٍۢ"
+            ],
+            "reference_heavy": 1,
+            "margin_median": -4.208,
+            "rule": "heavy",
+            "context": "sakin:after kasra before a heavy letter",
+            "n": 5
+        },
+        {
+            "heard_heavy": 0,
+            "finding": "reference disagrees with the rule",
+            "examples": [
+                "مَجْر۪ىٰهَا"
+            ],
+            "reference_heavy": 0,
+            "margin_median": 3.885,
+            "rule": "heavy",
+            "context": "sakin:after sakin letter after fatha",
+            "n": 2
+        }
+    ]
+}

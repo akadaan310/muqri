@@ -1,0 +1,919 @@
+{
+ "schools": {
+  "features": 50,
+  "communities": [
+   {
+    "community": 24,
+    "size": 20,
+    "reciters": [
+     "Abdul_Basit_Murattal_192kbps",
+     "Abdullah_Basfar_192kbps",
+     "Abu_Bakr_Ash-Shaatree_128kbps",
+     "Ahmed_Neana_128kbps",
+     "Akram_AlAlaqimy_128kbps",
+     "Ali_Hajjaj_AlSuesy_128kbps",
+     "Fares_Abbad_64kbps",
+     "Ghamadi_40kbps",
+     "Hani_Rifai_192kbps",
+     "Husary_128kbps",
+     "Husary_128kbps_Mujawwad",
+     "Husary_Muallim_128kbps",
+     "MaherAlMuaiqly128kbps",
+     "Minshawy_Murattal_128kbps",
+     "Muhammad_AbdulKareem_128kbps",
+     "Mustafa_Ismail_48kbps",
+     "Nasser_Alqatami_128kbps",
+     "Yasser_Ad-Dussary_128kbps",
+     "aziz_alili_128kbps",
+     "mahmoud_ali_al_banna_32kbps"
+    ],
+    "tiers": {
+     "studio": 4,
+     "fast": 10,
+     "anchor": 3,
+     "imam": 3
+    },
+    "defined_by": [
+     {
+      "feature": "k:madd_muttasil",
+      "z": 0.51
+     },
+     {
+      "feature": "k:qalqalah",
+      "z": 0.32
+     },
+     {
+      "feature": "k:rakhawah",
+      "z": 0.32
+     },
+     {
+      "feature": "h:madd_arid_lissukun",
+      "z": -0.32
+     },
+     {
+      "feature": "k:madd_arid_lissukun",
+      "z": 0.31
+     }
+    ]
+   },
+   {
+    "community": 34,
+    "size": 11,
+    "reciters": [
+     "Abdullah_Matroud_128kbps",
+     "Abdurrahmaan_As-Sudais_192kbps",
+     "Ali_Jaber_64kbps",
+     "Khaalid_Abdullaah_al-Qahtaanee_192kbps",
+     "Muhammad_Jibreel_128kbps",
+     "Muhsin_Al_Qasim_192kbps",
+     "Sahl_Yassin_128kbps",
+     "Salaah_AbdulRahman_Bukhatir_128kbps",
+     "Salah_Al_Budair_128kbps",
+     "Saood_ash-Shuraym_128kbps",
+     "khalefa_al_tunaiji_64kbps"
+    ],
+    "tiers": {
+     "imam": 4,
+     "fast": 7
+    },
+    "defined_by": [
+     {
+      "feature": "k:hamzat_wasl",
+      "z": -1.08
+     },
+     {
+      "feature": "h:iqlab",
+      "z": -1.03
+     },
+     {
+      "feature": "h:ikhfa_shafawi",
+      "z": -0.97
+     },
+     {
+      "feature": "h:ikhfa",
+      "z": -0.89
+     },
+     {
+      "feature": "h:ghunnah",
+      "z": -0.79
+     }
+    ]
+   },
+   {
+    "community": 27,
+    "size": 4,
+    "reciters": [
+     "Alafasy_128kbps",
+     "Hudhaify_128kbps",
+     "Mohammad_al_Tablaway_128kbps",
+     "Muhammad_Ayyoub_128kbps"
+    ],
+    "tiers": {
+     "studio": 4
+    },
+    "defined_by": [
+     {
+      "feature": "k:madd_munfasil",
+      "z": -2.31
+     },
+     {
+      "feature": "k:madd_silah_kubra",
+      "z": -2.17
+     },
+     {
+      "feature": "h:ikhfa",
+      "z": 1.88
+     },
+     {
+      "feature": "h:madd_leen",
+      "z": 1.75
+     },
+     {
+      "feature": "h:idgham_shafawi",
+      "z": 1.74
+     }
+    ]
+   },
+   {
+    "community": 1,
+    "size": 3,
+    "reciters": [
+     "Abdul_Basit_Mujawwad_128kbps",
+     "Karim_Mansoori_40kbps",
+     "Minshawy_Mujawwad_192kbps"
+    ],
+    "tiers": {
+     "studio": 2,
+     "fast": 1
+    },
+    "defined_by": [
+     {
+      "feature": "h:tawassut",
+      "z": 2.83
+     },
+     {
+      "feature": "h:madd_tabii",
+      "z": 2.6
+     },
+     {
+      "feature": "h:madd_silah_sughra",
+      "z": 2.51
+     },
+     {
+      "feature": "k:madd_badal",
+      "z": -2.36
+     },
+     {
+      "feature": "h:madd_badal",
+      "z": 2.35
+     }
+    ]
+   },
+   {
+    "community": 31,
+    "size": 2,
+    "reciters": [
+     "Ayman_Sowaid_64kbps",
+     "Yaser_Salamah_128kbps"
+    ],
+    "tiers": {
+     "fast": 2
+    },
+    "defined_by": [
+     {
+      "feature": "k:idgham_shafawi",
+      "z": -2.11
+     },
+     {
+      "feature": "k:idgham_ghunnah",
+      "z": -1.83
+     },
+     {
+      "feature": "k:ghunnah",
+      "z": -1.7
+     },
+     {
+      "feature": "k:ikhfa",
+      "z": -1.67
+     },
+     {
+      "feature": "k:madd_silah_sughra",
+      "z": -1.58
+     }
+    ]
+   },
+   {
+    "community": 13,
+    "size": 1,
+    "reciters": [
+     "Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net"
+    ],
+    "tiers": {
+     "fast": 1
+    },
+    "defined_by": [
+     {
+      "feature": "k:idgham_mithlayn",
+      "z": -6.32
+     },
+     {
+      "feature": "k:iqlab",
+      "z": -4.41
+     },
+     {
+      "feature": "k:qalqalah",
+      "z": -3.56
+     },
+     {
+      "feature": "k:safir",
+      "z": -3.38
+     },
+     {
+      "feature": "k:itbaq",
+      "z": -3.34
+     }
+    ]
+   }
+  ],
+  "nmi_with_tier": {
+   "nmi": 0.2787,
+   "null_p95": 0.2284,
+   "p": 0.009
+  }
+ },
+ "phonotactics": {
+  "clusters": [
+   [
+    "و",
+    "َ",
+    "ش",
+    "ي",
+    "ء",
+    "غ",
+    "خ",
+    "ل",
+    "ف",
+    "ا"
+   ],
+   [
+    "م",
+    "ث",
+    "ك",
+    "ب",
+    "ه",
+    "ُ",
+    "ۦ",
+    "۾",
+    "ن",
+    "ۥ"
+   ],
+   [
+    "ق",
+    "ص",
+    "ت",
+    "ذ",
+    "ح",
+    "ظ",
+    "ں",
+    "ز",
+    "س",
+    "ِ"
+   ],
+   [
+    "ج",
+    "ض",
+    "ط",
+    "ع",
+    "ر",
+    "د",
+    "ڇ"
+   ]
+  ],
+  "pagerank_top": [
+   [
+    "َ",
+    2.389
+   ],
+   [
+    "ڇ",
+    2.334
+   ],
+   [
+    "ِ",
+    2.322
+   ],
+   [
+    "ُ",
+    2.17
+   ],
+   [
+    "ں",
+    2.145
+   ],
+   [
+    "ا",
+    1.267
+   ],
+   [
+    "ۦ",
+    1.183
+   ],
+   [
+    "ر",
+    1.023
+   ],
+   [
+    "ۥ",
+    1.004
+   ],
+   [
+    "ب",
+    0.946
+   ]
+  ],
+  "nmi_consonant_clusters_vs_region": {
+   "nmi": 0.1448,
+   "null_p95": 0.2283,
+   "p": 0.4263
+  },
+  "nmi_vs_hams_jahr": {
+   "nmi": 0.093,
+   "null_p95": 0.1636,
+   "p": 0.3588
+  },
+  "nmi_vs_istila": {
+   "nmi": 0.07,
+   "null_p95": 0.1677,
+   "p": 0.5647
+  }
+ },
+ "blindspots": {
+  "hot_contexts": 277,
+  "families": [
+   {
+    "size": 20,
+    "checks": {
+     "tafashie": 20
+    },
+    "shared": {
+     "letter": "ش",
+     "position": "doubled",
+     "ayah_position": "inner_word"
+    },
+    "mean_rate": 1.0,
+    "examples": [
+     "ش|م|ُ|َ|doubled|initial|inner_word",
+     "ش|د|ِ|َ|doubled|initial|inner_word",
+     "ش|ن|َ|َ|doubled|initial|inner_word",
+     "ش|ب|َ|ِ|doubled|medial|inner_word"
+    ]
+   },
+   {
+    "size": 18,
+    "checks": {
+     "identity": 18
+    },
+    "shared": {
+     "word_position": "final",
+     "ayah_position": "inner_word"
+    },
+    "mean_rate": 0.559,
+    "examples": [
+     "و|ء|َ|َ|doubled|final|inner_word",
+     "و|ت|َ|َ|doubled|final|inner_word",
+     "ُ|ل|م|و|harakah|medial|inner_word",
+     "و|م|ُ|َ|doubled|final|inner_word"
+    ]
+   },
+   {
+    "size": 17,
+    "checks": {
+     "ghonna": 6,
+     "tafkheem_or_taqeeq": 13,
+     "hams_or_jahr": 2
+    },
+    "shared": {
+     "letter": "ں",
+     "next": "ف",
+     "position": "doubled",
+     "word_position": "final",
+     "ayah_position": "inner_word"
+    },
+    "mean_rate": 0.459,
+    "examples": [
+     "ں|ء|َ|ف|doubled|final|inner_word",
+     "ں|م|ِ|ف|doubled|final|inner_word",
+     "ں|ت|ُ|ف|doubled|final|inner_word",
+     "ں|م|َ|ف|doubled|final|inner_word"
+    ]
+   },
+   {
+    "size": 13,
+    "checks": {
+     "ghonna": 8,
+     "identity": 12,
+     "shidda_or_rakhawa": 7
+    },
+    "shared": {
+     "ayah_position": "inner_word"
+    },
+    "mean_rate": 0.64,
+    "examples": [
+     "ن|ر|َ|ِ|doubled|initial|inner_word",
+     "ن|ح|َ|ء|saakin|final|inner_word",
+     "ن|ل|َ|ِ|voweled|medial|inner_word",
+     "ن|م|َ|ء|saakin|final|inner_word"
+    ]
+   },
+   {
+    "size": 11,
+    "checks": {
+     "itbaq": 10,
+     "tafkheem_or_taqeeq": 1,
+     "shidda_or_rakhawa": 1
+    },
+    "shared": {
+     "letter": "ڇ",
+     "prev": "ط",
+     "position": "qalqala_release",
+     "word_position": "medial",
+     "ayah_position": "inner_word"
+    },
+    "mean_rate": 0.725,
+    "examples": [
+     "ڇ|َ|ط|م|qalqala_release|medial|inner_word",
+     "ڇ|َ|ط|ء|qalqala_release|medial|inner_word",
+     "ڇ|ُ|ط|ف|qalqala_release|medial|inner_word",
+     "ڇ|َ|ط|ب|qalqala_release|medial|inner_word"
+    ]
+   },
+   {
+    "size": 9,
+    "checks": {
+     "tafkheem_or_taqeeq": 7,
+     "identity": 2
+    },
+    "shared": {
+     "ayah_position": "inner_word"
+    },
+    "mean_rate": 0.506,
+    "examples": [
+     "ں|ء|َ|ت|doubled|final|inner_word",
+     "ں|ك|ُ|ت|doubled|medial|inner_word",
+     "ُ|ا|ت|ں|harakah|medial|inner_word",
+     "ں|ء|ِ|ت|doubled|final|inner_word"
+    ]
+   },
+   {
+    "size": 9,
+    "checks": {
+     "ghonna": 6,
+     "tafkheem_or_taqeeq": 8
+    },
+    "shared": {
+     "letter": "ں",
+     "next": "ق",
+     "position": "doubled",
+     "word_position": "final",
+     "ayah_position": "inner_word"
+    },
+    "mean_rate": 0.774,
+    "examples": [
+     "ں|ن|َ|ق|doubled|final|inner_word",
+     "ں|ق|َ|ق|doubled|final|inner_word",
+     "ں|ء|ِ|ق|doubled|final|inner_word",
+     "ں|ف|ِ|ق|doubled|final|inner_word"
+    ]
+   },
+   {
+    "size": 8,
+    "checks": {
+     "tafkheem_or_taqeeq": 6,
+     "ghonna": 2
+    },
+    "shared": {
+     "letter": "ں",
+     "next": "ك",
+     "position": "doubled",
+     "ayah_position": "inner_word"
+    },
+    "mean_rate": 0.511,
+    "examples": [
+     "ں|ز|ُ|ك|doubled|medial|inner_word",
+     "ں|ك|ِ|ك|doubled|final|inner_word",
+     "ں|ع|َ|ك|doubled|medial|inner_word",
+     "ں|ق|ُ|ك|doubled|final|inner_word"
+    ]
+   },
+   {
+    "size": 7,
+    "checks": {
+     "tafkheem_or_taqeeq": 6,
+     "identity": 1
+    },
+    "shared": {
+     "letter": "ر",
+     "position": "voweled",
+     "word_position": "medial"
+    },
+    "mean_rate": 0.615,
+    "examples": [
+     "ر|ق|َ|َ|voweled|medial|ayah_final_word",
+     "ر|َ|ا|ُ|voweled|medial|inner_word",
+     "ر|ب|ُ|ِ|voweled|medial|inner_word",
+     "ر|ص|ِ|َ|voweled|medial|ayah_final_word"
+    ]
+   },
+   {
+    "size": 6,
+    "checks": {
+     "tafkheem_or_taqeeq": 4,
+     "ghonna": 1,
+     "identity": 1
+    },
+    "shared": {
+     "letter": "ں",
+     "next": "س",
+     "position": "doubled",
+     "ayah_position": "inner_word"
+    },
+    "mean_rate": 0.53,
+    "examples": [
+     "ں|ع|َ|س|doubled|final|inner_word",
+     "ں|ن|َ|س|doubled|final|inner_word",
+     "س|َ|ں|ِ|voweled|initial|inner_word",
+     "ں|م|ِ|س|doubled|final|inner_word"
+    ]
+   },
+   {
+    "size": 4,
+    "checks": {
+     "identity": 1,
+     "tafkheem_or_taqeeq": 3
+    },
+    "shared": {
+     "letter": "ل",
+     "position": "doubled",
+     "word_position": "initial",
+     "ayah_position": "inner_word"
+    },
+    "mean_rate": 0.521,
+    "examples": [
+     "ل|ض|ِ|ِ|doubled|initial|inner_word",
+     "ل|ه|ِ|َ|doubled|initial|inner_word",
+     "ل|د|ِ|َ|doubled|initial|inner_word",
+     "ل|ق|َ|َ|doubled|initial|inner_word"
+    ]
+   },
+   {
+    "size": 4,
+    "checks": {
+     "tafkheem_or_taqeeq": 3,
+     "qalqla": 1
+    },
+    "shared": {
+     "word_position": "medial"
+    },
+    "mean_rate": 0.437,
+    "examples": [
+     "ڇ|َ|ب|ق|qalqala_release|medial|ayah_final_word",
+     "ڇ|َ|ب|ر|qalqala_release|medial|ayah_final_word",
+     "ر|ب|ڇ|َ|voweled|medial|ayah_final_word",
+     "ب|ف|َ|ڇ|saakin|medial|inner_word"
+    ]
+   }
+  ]
+ },
+ "rules": {
+  "prerequisite_pagerank": [
+   [
+    "tafashhi",
+    0.836
+   ],
+   [
+    "tafkheem",
+    0.804
+   ],
+   [
+    "tarqeeq",
+    0.735
+   ],
+   [
+    "madd_lazim",
+    0.648
+   ],
+   [
+    "madd_munfasil",
+    0.63
+   ],
+   [
+    "madd_silah_kubra",
+    0.492
+   ],
+   [
+    "ikhfa_shafawi",
+    0.469
+   ],
+   [
+    "madd_tabii",
+    0.439
+   ],
+   [
+    "qalqalah",
+    0.439
+   ],
+   [
+    "izhar_halqi",
+    0.375
+   ],
+   [
+    "hamzat_wasl",
+    0.32
+   ],
+   [
+    "idgham_no_ghunnah",
+    0.32
+   ]
+  ],
+  "skill_families": [
+   [
+    "madd_badal",
+    "madd_arid_lissukun",
+    "tarqeeq",
+    "idgham_mithlayn",
+    "tawassut",
+    "iqlab",
+    "sifah:tafashie",
+    "idgham_mutajanisayn",
+    "tafkheem",
+    "shiddah",
+    "izhar_shafawi",
+    "sifah:tafkheem_or_taqeeq",
+    "tafashhi"
+   ],
+   [
+    "hams",
+    "sifah:hams_or_jahr",
+    "sifah:ghonna",
+    "hamzat_wasl",
+    "madd_muttasil",
+    "sifah:istitala",
+    "madd_silah_kubra",
+    "sifah:shidda_or_rakhawa",
+    "letter_identity",
+    "idgham_no_ghunnah",
+    "istitaalah",
+    "rakhawah",
+    "madd_munfasil"
+   ],
+   [
+    "ghunnah",
+    "idgham_ghunnah",
+    "madd_tabii",
+    "ikhfa_shafawi",
+    "ikhfa",
+    "idgham_shafawi",
+    "safir",
+    "madd_silah_sughra",
+    "sifah:safeer"
+   ],
+   [
+    "izhar_halqi",
+    "jahr",
+    "madd_leen",
+    "madd_lazim",
+    "itbaq",
+    "sifah:itbaq",
+    "sifah:qalqla",
+    "qalqalah"
+   ]
+  ]
+ },
+ "ayahs": {
+  "most_rule_kinds": [
+   {
+    "ayah": "2:282",
+    "words": 128,
+    "kinds": 15,
+    "inst": 71
+   },
+   {
+    "ayah": "2:233",
+    "words": 64,
+    "kinds": 15,
+    "inst": 34
+   },
+   {
+    "ayah": "24:33",
+    "words": 48,
+    "kinds": 15,
+    "inst": 31
+   },
+   {
+    "ayah": "2:249",
+    "words": 60,
+    "kinds": 14,
+    "inst": 36
+   },
+   {
+    "ayah": "2:231",
+    "words": 45,
+    "kinds": 14,
+    "inst": 28
+   },
+   {
+    "ayah": "5:106",
+    "words": 51,
+    "kinds": 14,
+    "inst": 26
+   },
+   {
+    "ayah": "2:145",
+    "words": 32,
+    "kinds": 14,
+    "inst": 21
+   },
+   {
+    "ayah": "4:12",
+    "words": 88,
+    "kinds": 13,
+    "inst": 57
+   },
+   {
+    "ayah": "2:196",
+    "words": 73,
+    "kinds": 13,
+    "inst": 47
+   },
+   {
+    "ayah": "5:95",
+    "words": 50,
+    "kinds": 13,
+    "inst": 34
+   }
+  ],
+  "like_55_39": [
+   {
+    "ayah": "47:32",
+    "j": 0.7142857142857143
+   },
+   {
+    "ayah": "42:33",
+    "j": 0.625
+   },
+   {
+    "ayah": "16:11",
+    "j": 0.5555555555555556
+   },
+   {
+    "ayah": "16:12",
+    "j": 0.5555555555555556
+   },
+   {
+    "ayah": "48:12",
+    "j": 0.5555555555555556
+   }
+  ]
+ },
+ "sessions": {
+  "per_mistake": [
+   {
+    "exercise": "r1e1",
+    "mistake": "لَضَآلُّونَ — the lazim at 2 counts instead of 6.",
+    "latest": "caught"
+   },
+   {
+    "exercise": "r1e1",
+    "mistake": "إِنَّ — drop the ghunnah: a short plain nūn, no nasal hold.",
+    "latest": "caught"
+   },
+   {
+    "exercise": "r1e1",
+    "mistake": "هَـٰٓؤُلَآءِ — both madds at 2 counts.",
+    "latest": "caught"
+   },
+   {
+    "exercise": "r1e1",
+    "mistake": "قَالُوٓا۟ إِنَّ — munfasil at 2 counts (qasr), though you declared 4.",
+    "latest": "caught"
+   },
+   {
+    "exercise": "r1e2",
+    "mistake": "ذَنۢبِهِۦٓ — no iqlab: a clear nūn before the bā', no meem.",
+    "latest": "caught"
+   },
+   {
+    "exercise": "r1e2",
+    "mistake": "جَآنٌّ — keep the 6-count madd, but cut the shaddah ghunnah to a short plain nūn.",
+    "latest": "flagged, other reason"
+   },
+   {
+    "exercise": "r1e2",
+    "mistake": "عَن ذَنۢبِهِۦٓ — iẓhār: a clear nūn, tongue on the gum, no hiding, no nasal hold.",
+    "latest": "caught"
+   },
+   {
+    "exercise": "r1e2",
+    "mistake": "إِنسٌ وَلَا — iẓhār of the tanwīn: 'insun walā', the nūn clear, no merging.",
+    "latest": "caught"
+   },
+   {
+    "exercise": "r1e3",
+    "mistake": "وَٱلطَّارِقِ — stop dead on the qāf: no echo, no qalqalah.",
+    "latest": "caught"
+   },
+   {
+    "exercise": "r1e3",
+    "mistake": "ٱلثَّاقِبُ — say the thā' as sīn.",
+    "latest": "caught"
+   },
+   {
+    "exercise": "r1e3",
+    "mistake": "ٱلطَّارِقُ — make the ṭā' light, like tā'.",
+    "latest": "missed"
+   },
+   {
+    "exercise": "r1e3",
+    "mistake": "وَٱلسَّمَآءِ — make the sīn heavy, like ṣād.",
+    "latest": "missed"
+   },
+   {
+    "exercise": "r2e1",
+    "mistake": "ٱلصِّرَٰطَ — say the ṣād as sīn: 'as-sirāt'.",
+    "latest": "caught"
+   },
+   {
+    "exercise": "r2e1",
+    "mistake": "ٱلْمُسْتَقِيمَ — say the qāf as kāf: 'al-mustakīm'.",
+    "latest": "caught"
+   },
+   {
+    "exercise": "r2e1",
+    "mistake": "نَعْبُدُ — say the ʿayn as a hamza: 'na-abudu'.",
+    "latest": "caught"
+   },
+   {
+    "exercise": "r2e1",
+    "mistake": "ٱلْمَغْضُوبِ — say the ḍād as dāl: 'al-maghdūb'.",
+    "latest": "missed"
+   },
+   {
+    "exercise": "r2e1",
+    "mistake": "ٱلضَّآلِّينَ — keep the 6-count madd, but say the ḍād as ẓā': 'aẓ-ẓāllīn'.",
+    "latest": "caught"
+   },
+   {
+    "exercise": "r2e2",
+    "mistake": "بِرَبِّ — make the rā' light (it carries fatḥah and must be heavy).",
+    "latest": "caught"
+   },
+   {
+    "exercise": "r2e2",
+    "mistake": "خَلَقَ — say the khā' as ḥā': 'ḥalaq'.",
+    "latest": "caught"
+   },
+   {
+    "exercise": "r2e2",
+    "mistake": "ٱلْفَلَقِ — stop dead on the qāf: no echo.",
+    "latest": "caught"
+   },
+   {
+    "exercise": "r2e2",
+    "mistake": "وَقَبَ — stop dead on the bā': no echo.",
+    "latest": "caught"
+   },
+   {
+    "exercise": "r2e2",
+    "mistake": "مِن شَرِّ — iẓhār: a clear nūn before the shīn, no nasal hold.",
+    "latest": "caught"
+   },
+   {
+    "exercise": "r2e3",
+    "mistake": "يَكُن لَّهُۥ — merge the nūn into the lām WITH a nasal ghunnah (it must be without).",
+    "latest": "missed"
+   },
+   {
+    "exercise": "r2e3",
+    "mistake": "كُفُوًا — drop the ḍammah on the fā': 'kufwan'.",
+    "latest": "missed"
+   },
+   {
+    "exercise": "r2e3",
+    "mistake": "يَلِدْ — no qalqalah on the sākin dāl (keep going into وَلَمْ).",
+    "latest": "caught"
+   },
+   {
+    "exercise": "r2e3",
+    "mistake": "ٱلصَّمَدُ — stop on the dāl with no qalqalah.",
+    "latest": "caught"
+   },
+   {
+    "exercise": "r2e3",
+    "mistake": "ٱللَّهُ (ayah 1) — make the lām of the Name light, though it follows a ḍammah.",
+    "latest": "caught"
+   }
+  ],
+  "caught": 21,
+  "scripted": 27
+ }
+}

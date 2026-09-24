@@ -16,6 +16,7 @@ Stage 1 caches per-clip vowel measurements (`extract`), stage 2 analyses them (`
     python tempo_test.py extract OUT.jsonl [clips_per_reciter] [procs]
     python tempo_test.py analyse OUT.jsonl
     python tempo_test.py null OUT.jsonl [permutations]
+    python tempo_test.py weight OUT.jsonl
 """
 import json
 import sys
@@ -39,6 +40,12 @@ FAST = {"Saood_ash-Shuraym_128kbps", "MaherAlMuaiqly128kbps", "Abdurrahmaan_As-S
 _lay = json.load(open(f"{D}/layout.json"))
 _pl = [lv for lv in _lay["levels"] if lv["level"] == "phonemes"][0]
 _vocab = {t: i for i, t in enumerate(_pl["vocab"]) if len(t) == 1}
+_tl = [lv for lv in _lay["levels"] if lv["level"] == "tafkheem_or_taqeeq"][0]
+_weight = {i: {"[مفخم]": "heavy", "[مرقق]": "light"}.get(v) for i, v in enumerate(_tl["vocab"])}
+_sif = {}
+for _line in open(f"{D}/sifat.jsonl"):
+    _x = json.loads(_line)
+    _sif[_x["id"]] = _x["levels"].get("tafkheem_or_taqeeq", [])
 
 
 def one_clip(r):
@@ -58,7 +65,15 @@ def one_clip(r):
     if len(har) < 5:
         return None
     # the last unit has no successor onset, so it is never measured
-    vs = [(V[units[i][0]], float(dur[i])) for i in range(nu - 1) if units[i][0] in V and dur[i] > 0]
+    ids = _sif.get(r["id"], [])
+
+    def weight(i):
+        """heavy/light of the consonant carrying vowel unit i, from the phonetizer's expectation."""
+        a = units[i - 1][1] if i > 0 else -1
+        return _weight.get(ids[a]) if 0 <= a < len(ids) else None
+
+    vs = [(V[units[i][0]], float(dur[i]), weight(i)) for i in range(nu - 1)
+          if units[i][0] in V and dur[i] > 0]
     return {"speaker": r["speaker"], "id": r["id"], "haraka_frames": float(np.median(har)), "vowels": vs}
 
 
@@ -83,7 +98,7 @@ def spread(clips, norm="haraka"):
     per = {"fatha": [], "damma": [], "kasra": []}
     for c in clips:
         h = c["haraka_frames"] if norm == "haraka" else 1.0
-        for v, d in c["vowels"]:
+        for v, d, *_ in c["vowels"]:
             per[v].append(d / h)
     if min(len(x) for x in per.values()) < 20:
         return None
@@ -141,7 +156,7 @@ def equalised_spread(parts, rng, reps=40):
     for part in parts:
         per = {"fatha": [], "damma": [], "kasra": []}
         for c in part:
-            for v, d in c["vowels"]:
+            for v, d, *_ in c["vowels"]:
                 per[v].append(d / c["haraka_frames"])
         pools.append({k: np.array(x) for k, x in per.items()})
     n = {k: min(len(p[k]) for p in pools) for k in ("fatha", "damma", "kasra")}
@@ -182,9 +197,59 @@ def null_test(path, perms=200):
           f"95% [{100 * np.percentile(null, 2.5):+.2f}, {100 * np.percentile(null, 97.5):+.2f}]  p = {pval:.3f}")
 
 
+def weight_test(path):
+    """Heavy-minus-light vowel duration: does it track mastery, or only tempo?
+
+    Sprint 1 read anchors -4.0 % and fast imams -8.2 %. If that gap is compression, it will also
+    appear inside one reciter between their own fast and slow ayahs, and across reciters it will
+    follow tempo rather than style.
+    """
+    by = {}
+    for line in open(path):
+        c = json.loads(line)
+        by.setdefault(c["speaker"], []).append(c)
+
+    def gap(clips):
+        hv = [d / c["haraka_frames"] for c in clips for _v, d, w in c["vowels"] if w == "heavy"]
+        lt = [d / c["haraka_frames"] for c in clips for _v, d, w in c["vowels"] if w == "light"]
+        if len(hv) < 30 or len(lt) < 30:
+            return None
+        return (np.median(hv) - np.median(lt)) / np.median(lt)
+
+    rows = []
+    for spk, cl in sorted(by.items()):
+        g = gap(cl)
+        if g is None:
+            continue
+        h = float(np.median([c["haraka_frames"] for c in cl])) * FRAME_S
+        rows.append((h, g, spk, "ANCHOR" if spk in ANCH else "FAST" if spk in FAST else ""))
+    print("ACROSS RECITERS -- heavy-minus-light vowel duration vs tempo")
+    for h, g, spk, tag in sorted(rows):
+        print(f"  {h:.3f}s  gap={100 * g:+6.2f}%  {spk:42s} {tag}")
+    hs, gs = np.array([r[0] for r in rows]), np.array([r[1] for r in rows])
+    rho = float(np.corrcoef(np.argsort(np.argsort(hs)), np.argsort(np.argsort(gs)))[0, 1])
+    print(f"  Spearman(tempo, gap) over {len(rows)} reciters = {rho:+.3f}")
+
+    d = []
+    for cl in by.values():
+        cl = sorted(cl, key=lambda c: c["haraka_frames"])
+        n = len(cl) // 3
+        a, b = gap(cl[:n]), gap(cl[2 * n:])
+        if a is not None and b is not None:
+            d.append(b - a)
+    d = np.array(d)
+    rng = np.random.default_rng(5)
+    boot = np.median(rng.choice(d, (4000, len(d))), axis=1)
+    lo, hi = np.percentile(boot, [2.5, 97.5])
+    print(f"WITHIN RECITER slow-minus-fast gap: median {100 * np.median(d):+.2f} pp "
+          f"95% CI [{100 * lo:+.2f}, {100 * hi:+.2f}]  ({int((d > 0).sum())}/{len(d)} positive)")
+
+
 if __name__ == "__main__":
     if sys.argv[1] == "extract":
         extract(sys.argv[2], *(int(a) for a in sys.argv[3:]))
+    elif sys.argv[1] == "weight":
+        weight_test(sys.argv[2])
     elif sys.argv[1] == "null":
         null_test(sys.argv[2], *(int(a) for a in sys.argv[3:]))
     else:

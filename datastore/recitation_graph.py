@@ -18,6 +18,10 @@ Built from the calculus of characteristics (substrate_library/julia/calculus.jl)
                                                      departures co-occurring in the same verse
     (Reciter)-[:NEAR {similarity}]->(Reciter)        k nearest neighbours
     (Reciter)-[:IN_COMMUNITY]->(Community)
+    (Concept)-[:CAUSES {claim, mechanism, provenance, verdict, estimate, ci_low, ci_high, strata}]->(Concept)
+                                                     the causal layer (substrate_library/julia/causal.jl):
+                                                     mechanisms and contexts -> the acts they produce,
+                                                     each edge tested within (letter, reciter) strata
 
 It is written twice: into an embedded Kùzu database (Cypher, queried below and from the app), and as
 Neo4j bulk-import CSVs plus a LOAD CSV script (`neo4j/`), so the same graph loads into Neo4j unchanged.
@@ -39,6 +43,7 @@ DATA = ROOT / "research_agency_lab/experiments/calculus/data"
 GRAPH_DIR = ROOT / "research_agency_lab/experiments/calculus/graph"
 KUZU = GRAPH_DIR / "recitation.kuzu"
 NEO = GRAPH_DIR / "neo4j"
+CAUSAL = ROOT / "research_agency_lab/experiments/calculus/causal_edges.json"
 
 SCHEMA = [
     "CREATE NODE TABLE Reciter(name STRING, tier STRING, PRIMARY KEY(name))",
@@ -46,12 +51,15 @@ SCHEMA = [
     "CREATE NODE TABLE Characteristic(id STRING, head STRING, cls STRING, PRIMARY KEY(id))",
     "CREATE NODE TABLE Feature(id STRING, letter STRING, context STRING, head STRING, overruled BOOLEAN, PRIMARY KEY(id))",
     "CREATE NODE TABLE Community(id INT64, PRIMARY KEY(id))",
+    "CREATE NODE TABLE Concept(name STRING, PRIMARY KEY(name))",
     "CREATE REL TABLE HAS(FROM Letter TO Characteristic)",
     "CREATE REL TABLE OF_LETTER(FROM Feature TO Letter)",
     "CREATE REL TABLE REALISES(FROM Reciter TO Feature, rate DOUBLE, graded DOUBLE)",
     "CREATE REL TABLE TRAVELS_WITH(FROM Feature TO Feature, pmi DOUBLE, verses INT64)",
     "CREATE REL TABLE NEAR(FROM Reciter TO Reciter, similarity DOUBLE)",
     "CREATE REL TABLE IN_COMMUNITY(FROM Reciter TO Community)",
+    "CREATE REL TABLE CAUSES(FROM Concept TO Concept, claim STRING, mechanism STRING, provenance STRING, "
+    "verdict STRING, estimate DOUBLE, ci_low DOUBLE, ci_high DOUBLE, strata INT64)",
 ]
 
 
@@ -61,7 +69,7 @@ def _tables() -> dict[str, list[list]]:  # type: ignore[type-arg]
     overruled = {x["feature"] for x in sets["overruled_expectations"]}
     t: dict[str, list[list]] = {k: [] for k in ("Reciter", "Letter", "Characteristic", "Feature", "Community",  # type: ignore[type-arg]
                                                   "HAS", "OF_LETTER", "REALISES", "TRAVELS_WITH", "NEAR",
-                                                  "IN_COMMUNITY")}
+                                                  "IN_COMMUNITY", "Concept", "CAUSES")}
     t["Reciter"] = [[r, tier] for r, tier in zip(sets["reciters"], sets["tiers"])]
     t["Letter"] = [[c] for c in calc["letters"]]
     t["Characteristic"] = [[a, a.split("=")[0], a.split("=")[1]] for a in calc["attributes"]]
@@ -81,6 +89,12 @@ def _tables() -> dict[str, list[list]]:  # type: ignore[type-arg]
             w = knn[j * S + i] if not isinstance(knn[0], list) else knn[i][j]
             if w and i != j:
                 t["NEAR"].append([sets["reciters"][i], sets["reciters"][j], round(w, 4)])
+    causal = CAUSAL.parent / "causal_edges.json"
+    if causal.is_file():
+        es = json.loads(causal.read_text())["edges"]
+        t["Concept"] = [[n] for n in sorted({e["cause"] for e in es} | {e["effect"] for e in es})]
+        t["CAUSES"] = [[e["cause"], e["effect"], e["claim"], e["mechanism"], e["provenance"], e["verdict"],
+                        e["estimate"], *(e["ci95"] or [None, None]), e["strata"]] for e in es]
     for k, c in enumerate(sets["communities"]):
         t["Community"].append([k])
         t["IN_COMMUNITY"] += [[m, k] for m in c["members"]]
@@ -135,6 +149,10 @@ LOAD CSV FROM 'file:///NEAR.csv' AS r MATCH (a:Reciter {name: r[0]}), (b:Reciter
   CREATE (a)-[:NEAR {similarity: toFloat(r[2])}]->(b);
 LOAD CSV FROM 'file:///IN_COMMUNITY.csv' AS r MATCH (a:Reciter {name: r[0]}), (b:Community {id: toInteger(r[1])})
   CREATE (a)-[:IN_COMMUNITY]->(b);
+LOAD CSV FROM 'file:///Concept.csv' AS r CREATE (:Concept {name: r[0]});
+LOAD CSV FROM 'file:///CAUSES.csv' AS r MATCH (a:Concept {name: r[0]}), (b:Concept {name: r[1]})
+  CREATE (a)-[:CAUSES {claim: r[2], mechanism: r[3], provenance: r[4], verdict: r[5], estimate: toFloat(r[6]),
+                       ci_low: toFloat(r[7]), ci_high: toFloat(r[8]), strata: toInteger(r[9])}]->(b);
 """
 
 

@@ -98,7 +98,7 @@ train_image = (
     .run_commands("git clone --depth 1 https://github.com/shivammehta25/Matcha-TTS /root/matcha",
                   "pip install --no-build-isolation -e /root/matcha",
                   "git clone --depth 1 https://github.com/NVIDIA/BigVGAN /root/bigvgan")
-    .pip_install("huggingface_hub", "librosa", "soundfile", "ninja", "tensorboard")
+    .pip_install("huggingface_hub", "librosa", "soundfile", "ninja", "tensorboard", "matplotlib==3.9.4")  # matcha plots with tostring_rgb (gone in 3.10)
     .add_local_file(str(SYN / "qps_symbols.txt"), "/root/qps_symbols.txt", copy=True)
     .run_function(_patch_matcha)
 )
@@ -376,8 +376,14 @@ def synth_passages(passages: list[dict], ckpt: str, steps: int, temperature: flo
     vol.reload()
     run = Path("/vol/synth/matcha/run")
     ck = Path(ckpt) if ckpt else max(run.rglob("*.ckpt"), key=lambda p: p.stat().st_mtime)
-    model = MatchaTTS.load_from_checkpoint(str(ck), map_location="cuda").eval().cuda()
-    voc = bigvgan.BigVGAN.from_pretrained(BIGVGAN, use_cuda_kernel=False)
+    # our own checkpoint (trusted): it stores its Hydra config, which weights_only=True refuses
+    model = MatchaTTS.load_from_checkpoint(str(ck), map_location="cuda", weights_only=False).eval().cuda()
+    # BigVGAN.from_pretrained no longer matches huggingface_hub's mixin signature: build it by hand
+    from env import AttrDict
+    from huggingface_hub import hf_hub_download
+    h = AttrDict(json.loads(Path(hf_hub_download(BIGVGAN, "config.json")).read_text()))
+    voc = bigvgan.BigVGAN(h, use_cuda_kernel=False)
+    voc.load_state_dict(torch.load(hf_hub_download(BIGVGAN, "bigvgan_generator.pt"), map_location="cpu")["generator"])
     voc.remove_weight_norm()
     voc = voc.eval().cuda()
     out = []

@@ -184,7 +184,8 @@ def _pooled(x: npt.NDArray[np.floating]) -> npt.NDArray[np.floating]:
 def analyse_clip(lp_full: npt.NDArray[np.floating], phonemes: str, vocab: dict[str, int], blank: int,
                  ph_first: int, ph_width: int, sifat_blocks: dict[str, tuple[int, int, list[str]]],
                  expected_sifat: dict[str, list[int]] | None = None,
-                 ctx: int = 2, margin: int = 3, timing: str = "viterbi") -> list[Unit]:
+                 ctx: int = 2, margin: int = 3, timing: str = "viterbi",
+                 haraka_s: float | None = None) -> list[Unit]:
     """Everything the engine knows about every unit of one ayah.
 
     `lp_full` is the T x C log-posterior matrix of all levels; `ph_first`/`ph_width` locate the
@@ -192,6 +193,10 @@ def analyse_clip(lp_full: npt.NDArray[np.floating], phonemes: str, vocab: dict[s
     `timing` is "viterbi" (whole frames) or "centroid" (continuous; see the module docstring). Only
     onsets and durations change with it: `frames`, the sifat windows and the GOP contexts stay on the
     Viterbi path, which is what they were validated on.
+
+    `haraka_s` is the count unit to fall back on when this ayah is too short to measure its own
+    (fewer than five vowelled letters -- الٓمٓ has none). Without it every duration in such an ayah is
+    unknown, and a madd lazim of six counts cannot be judged at all.
     """
     if timing not in ("viterbi", "centroid"):
         raise ValueError(f"timing must be 'viterbi' or 'centroid', not {timing!r}")
@@ -234,7 +239,7 @@ def analyse_clip(lp_full: npt.NDArray[np.floating], phonemes: str, vocab: dict[s
     harakas = [(onset(min(i + 2, nu - 1)) - onset(i)) * FRAME_S for i in range(nu - 1)
                if units[i][0] not in SHORT_V and units[i][0] not in MADD
                and units[i + 1][0] in SHORT_V]
-    haraka = float(np.median(harakas)) if len(harakas) >= 5 else None
+    haraka = float(np.median(harakas)) if len(harakas) >= 5 else haraka_s
 
     out: list[Unit] = []
     for i, (sym, a, b) in enumerate(units):

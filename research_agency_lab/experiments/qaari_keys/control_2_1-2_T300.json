@@ -1,0 +1,437 @@
+{
+ "verses": [
+  [
+   2,
+   1
+  ],
+  [
+   2,
+   2
+  ]
+ ],
+ "reciters": {
+  "Abdul_Basit_Mujawwad_128kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.32,
+   "audio": true
+  },
+  "Abdul_Basit_Murattal_192kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.2,
+   "audio": true
+  },
+  "Abdullah_Basfar_192kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.2,
+   "audio": true
+  },
+  "Abdullah_Matroud_128kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.24,
+   "audio": true
+  },
+  "Abdurrahmaan_As-Sudais_192kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.16,
+   "audio": true
+  },
+  "Abu_Bakr_Ash-Shaatree_128kbps": {
+   "accuracy": 0.9412,
+   "errors": [
+    [
+     "madd_tabii",
+     "فِيهِ",
+     "long",
+     3.32
+    ]
+   ],
+   "tempo": 0.2,
+   "audio": true
+  },
+  "Ahmed_Neana_128kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.16,
+   "audio": true
+  },
+  "Ahmed_ibn_Ali_al-Ajamy_128kbps_ketaballah.net": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.16,
+   "audio": true
+  },
+  "Akram_AlAlaqimy_128kbps": {
+   "accuracy": 0.9412,
+   "errors": [
+    [
+     "madd_tabii",
+     "فِيهِ",
+     "long",
+     5.97
+    ]
+   ],
+   "tempo": 0.2,
+   "audio": true
+  },
+  "Alafasy_128kbps": {
+   "accuracy": 0.9412,
+   "errors": [
+    [
+     "madd_tabii",
+     "فِيهِ",
+     "long",
+     6.56
+    ]
+   ],
+   "tempo": 0.2,
+   "audio": true
+  },
+  "Ali_Hajjaj_AlSuesy_128kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.2,
+   "audio": true
+  },
+  "Ali_Jaber_64kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.24,
+   "audio": true
+  },
+  "Ayman_Sowaid_64kbps": {
+   "accuracy": 0.9412,
+   "errors": [
+    [
+     "madd_tabii",
+     "فِيهِ",
+     "long",
+     4.35
+    ]
+   ],
+   "tempo": 0.24,
+   "audio": true
+  },
+  "Fares_Abbad_64kbps": {
+   "accuracy": 0.9412,
+   "errors": [
+    [
+     "madd_tabii",
+     "فِيهِ",
+     "long",
+     4.65
+    ]
+   ],
+   "tempo": 0.2,
+   "audio": true
+  },
+  "Ghamadi_40kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.16,
+   "audio": true
+  },
+  "Hani_Rifai_192kbps": {
+   "accuracy": 0.8824,
+   "errors": [
+    [
+     "hamzat_wasl",
+     "ذَٰلِكَ",
+     "wrong",
+     null
+    ],
+    [
+     "madd_tabii",
+     "ذَٰلِكَ",
+     "long",
+     9.21
+    ]
+   ],
+   "tempo": 0.2,
+   "audio": true
+  },
+  "Hudhaify_128kbps": {
+   "accuracy": 0.8824,
+   "errors": [
+    [
+     "madd_tabii",
+     "فِيهِ",
+     "long",
+     5.53
+    ],
+    [
+     "madd_arid_lissukun",
+     "لِّلْمُتَّقِينَ",
+     "long",
+     9.35
+    ]
+   ],
+   "tempo": 0.2,
+   "audio": true
+  },
+  "Husary_128kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.2,
+   "audio": true
+  },
+  "Husary_128kbps_Mujawwad": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.32,
+   "audio": true
+  },
+  "Husary_Muallim_128kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.2,
+   "audio": true
+  },
+  "Karim_Mansoori_40kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.32,
+   "audio": true
+  },
+  "Khaalid_Abdullaah_al-Qahtaanee_192kbps": {
+   "accuracy": 0.9412,
+   "errors": [
+    [
+     "madd_tabii",
+     "فِيهِ",
+     "long",
+     5.68
+    ]
+   ],
+   "tempo": 0.2,
+   "audio": true
+  },
+  "MaherAlMuaiqly128kbps": {
+   "accuracy": 0.9412,
+   "errors": [
+    [
+     "madd_tabii",
+     "فِيهِ",
+     "long",
+     2.88
+    ]
+   ],
+   "tempo": 0.16,
+   "audio": true
+  },
+  "Minshawy_Mujawwad_192kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.361,
+   "audio": true
+  },
+  "Minshawy_Murattal_128kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.2,
+   "audio": true
+  },
+  "Mohammad_al_Tablaway_128kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.24,
+   "audio": true
+  },
+  "Muhammad_AbdulKareem_128kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.16,
+   "audio": true
+  },
+  "Muhammad_Ayyoub_128kbps": {
+   "accuracy": 0.9412,
+   "errors": [
+    [
+     "madd_arid_lissukun",
+     "لِّلْمُتَّقِينَ",
+     "long",
+     9.5
+    ]
+   ],
+   "tempo": 0.2,
+   "audio": true
+  },
+  "Muhammad_Jibreel_128kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.2,
+   "audio": true
+  },
+  "Muhsin_Al_Qasim_192kbps": {
+   "accuracy": 0.9412,
+   "errors": [
+    [
+     "madd_tabii",
+     "فِيهِ",
+     "long",
+     3.25
+    ]
+   ],
+   "tempo": 0.16,
+   "audio": true
+  },
+  "Mustafa_Ismail_48kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.16,
+   "audio": true
+  },
+  "Nasser_Alqatami_128kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.16,
+   "audio": true
+  },
+  "Sahl_Yassin_128kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.2,
+   "audio": true
+  },
+  "Salaah_AbdulRahman_Bukhatir_128kbps": {
+   "accuracy": 0.8824,
+   "errors": [
+    [
+     "hamzat_wasl",
+     "ذَٰلِكَ",
+     "wrong",
+     null
+    ],
+    [
+     "madd_tabii",
+     "فِيهِ",
+     "long",
+     6.19
+    ]
+   ],
+   "tempo": 0.16,
+   "audio": true
+  },
+  "Salah_Al_Budair_128kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.16,
+   "audio": true
+  },
+  "Saood_ash-Shuraym_128kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.16,
+   "audio": true
+  },
+  "Yaser_Salamah_128kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.16,
+   "audio": true
+  },
+  "Yasser_Ad-Dussary_128kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.16,
+   "audio": true
+  },
+  "aziz_alili_128kbps": {
+   "accuracy": 0.9412,
+   "errors": [
+    [
+     "madd_tabii",
+     "فِيهِ",
+     "long",
+     3.4
+    ]
+   ],
+   "tempo": 0.28,
+   "audio": true
+  },
+  "khalefa_al_tunaiji_64kbps": {
+   "accuracy": 0.9412,
+   "errors": [
+    [
+     "madd_tabii",
+     "فِيهِ",
+     "long",
+     5.97
+    ]
+   ],
+   "tempo": 0.2,
+   "audio": true
+  },
+  "mahmoud_ali_al_banna_32kbps": {
+   "accuracy": 1.0,
+   "errors": [],
+   "tempo": 0.2,
+   "audio": true
+  }
+ },
+ "tally": {
+  "idgham_shafawi|الٓمٓ": {
+   "unconfirmed": 40,
+   "no_evidence": 1
+  },
+  "madd_lazim|الٓمٓ": {
+   "unconfirmed": 37,
+   "no_evidence": 45
+  },
+  "hamzat_wasl|ذَٰلِكَ": {
+   "pass": 39,
+   "wrong": 2
+  },
+  "jahr|ٱلْكِتَٰبُ": {
+   "pass": 41
+  },
+  "tawassut|ٱلْكِتَٰبُ": {
+   "pass": 41
+  },
+  "tafkheem|رَيْبَ": {
+   "pass": 41
+  },
+  "jahr|رَيْبَ": {
+   "pass": 41
+  },
+  "rakhawah|رَيْبَ": {
+   "pass": 41
+  },
+  "idgham_no_ghunnah|هُدًى": {
+   "pass": 41
+  },
+  "jahr|لِّلْمُتَّقِينَ": {
+   "pass": 41
+  },
+  "tawassut|لِّلْمُتَّقِينَ": {
+   "pass": 41
+  },
+  "madd_tabii|ذَٰلِكَ": {
+   "pass": 38,
+   "no_evidence": 2,
+   "long": 1
+  },
+  "madd_tabii|ٱلْكِتَٰبُ": {
+   "pass": 41
+  },
+  "madd_tabii|لَا": {
+   "pass": 41
+  },
+  "madd_arid_lissukun|فِيهِ": {
+   "pass": 8
+  },
+  "madd_arid_lissukun|لِّلْمُتَّقِينَ": {
+   "pass": 38,
+   "long": 2,
+   "no_evidence": 1
+  },
+  "madd_tabii|فِيهِ": {
+   "pass": 21,
+   "long": 12
+  }
+ }
+}

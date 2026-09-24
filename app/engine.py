@@ -24,7 +24,7 @@ from app.ghunnah import grade_ghunnah
 from app.mudud import resolve
 from app.tafkhim import grade as grade_tafkhim
 from app.itmam import sequences as vowel_sequences
-from app.waqf import find_stops
+from app.waqf import find_stops, madd_at_stops
 from app.submission import AyahRef, build_report, grade_rule, to_counts, walk_alignment
 from app.tajweed_rules.parser import TajweedParser
 
@@ -37,6 +37,28 @@ def _np_slice(wave, t0: int, t1: int, frame_s: float = 0.04, sr: int = 16000):  
     w = np.asarray(wave)
     return w[int(t0 * frame_s * sr):int(t1 * frame_s * sr)]
 LEARNER = ROOT / "research_agency_lab/experiments/learner_eval"
+
+
+def _haraka_of(units) -> float | None:  # type: ignore[no-untyped-def]
+    """The count unit an ayah's durations were measured in, recovered from its units."""
+    hs = [u.duration_s / u.duration_counts for u in units if u.duration_counts not in (None, 0)]
+    return float(np.median(hs)) if hs else None
+
+
+def _unconfirm_durations(verdicts) -> None:  # type: ignore[no-untyped-def]
+    """Durations in an ayah whose count unit was borrowed are reported, not judged.
+
+    An ayah like الٓمٓ is recited at its own pace, not the pace of the ayah after it. Graded on the
+    borrowed unit, 41 professional reciters on Baqarah 2:1 read the madd lazim anywhere from 3.9 to
+    beyond 12 counts and the idgham shafawi "long" in 37 of 41 -- a verdict that marks every master
+    wrong is not a verdict. The measured counts stay in the report for the learner to see.
+    """
+    for v in verdicts:
+        if v.mechanism == "durational" and v.status in {"pass", "short", "long"}:
+            v.evidence = {**v.evidence, "reason": "count unit borrowed from the neighbouring ayahs; "
+                          "this ayah is recited at its own pace, so its lengths are shown but not "
+                          "graded"}
+            v.status = "unconfirmed"
 
 
 class Engine:
@@ -129,25 +151,39 @@ class Engine:
         refs = [self.reference(s, a) for s, a in verses]
         spans = walk_alignment(lp, refs, vocab, blank, ph["first"], ph["width"])
 
+        # Pass 1: units per ayah. An ayah too short to measure its own count unit (الٓمٓ has no
+        # vowelled letters at all) borrows the unit measured on the rest of the submission, so its
+        # six-count madd lazim is judged instead of silently skipped.
+        clips = [(r, t0, t1) for r, (t0, t1) in zip(refs, spans) if t1 > t0]
+        units_of = [analyse_clip(lp[t0:t1], r.phonemes, vocab, blank, ph["first"], ph["width"],
+                                 blocks, r.expected_sifat) for r, t0, t1 in clips]
+        own = [_haraka_of(u) for u in units_of]
+        known = [h for h in own if h]
+        borrowed = float(np.median(known)) if known else None
+        for k, (r, t0, t1) in enumerate(clips):
+            if own[k] is None and borrowed:
+                units_of[k] = analyse_clip(lp[t0:t1], r.phonemes, vocab, blank, ph["first"],
+                                           ph["width"], blocks, r.expected_sifat, haraka_s=borrowed)
+
         per_ayah = []
-        for r, (t0, t1) in zip(refs, spans):
-            if t1 <= t0:
-                continue
-            units = analyse_clip(lp[t0:t1], r.phonemes, vocab, blank, ph["first"], ph["width"],
-                                 blocks, r.expected_sifat)
+        for (r, t0, t1), units, h_own in zip(clips, units_of, own):
             parsed = self.parser.parse(r.uthmani)
             bounds, resolutions = resolve(bind(parsed, r.phonemes, r.word_ph))
-            verdicts = [grade_rule(b, units) for b in bounds]
-            ghunnah = [g for g in (grade_ghunnah(b, units, to_counts) for b in bounds) if g]
             # silence is acoustic: pass the audio segment, not the posteriors
             seg = None if audio is None else _np_slice(audio, t0, t1)
             stops = find_stops(units, r.word_ph, seg)
+            # where the reciter actually stopped changes which madd the text requires
+            bounds = madd_at_stops(bounds, stops, units)
+            verdicts = [grade_rule(b, units) for b in bounds]
+            if not h_own:
+                _unconfirm_durations(verdicts)
+            ghunnah = [g for g in (grade_ghunnah(b, units, to_counts) for b in bounds) if g]
             heaviness = grade_tafkhim(units)
             seqs = vowel_sequences(units)
-            harakas = [u.duration_s / u.duration_counts for u in units
-                       if u.duration_counts not in (None, 0)]
+            h = _haraka_of(units)
             per_ayah.append({"surah": r.surah, "ayah": r.ayah, "frames": [t0, t1],
-                             "haraka_s": round(float(np.median(harakas)), 3) if harakas else None,
+                             "haraka_s": round(h, 3) if h else None,
+                             "haraka_source": "own" if h_own else ("borrowed" if h else None),
                              "verdicts": verdicts, "ghunnah": ghunnah,
                              "resolutions": resolutions, "stops": stops,
                              "heaviness": heaviness, "sequences": seqs, "_units": units})

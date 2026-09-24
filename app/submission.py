@@ -63,6 +63,21 @@ def count_scale() -> tuple[float, float]:
         return 0.0, 1.0
 
 
+def six_count_ceiling() -> float:
+    """Longest reading of a six-count madd that still matches how the anchors recite it.
+
+    The fitted scale does not recover the six-count level: the anchors themselves measure 7.21
+    counts there (n = 105, CV 0.22), because madd lazim is stretched past six in practice. A fixed
+    6 + tolerance ceiling therefore marks the masters "long" -- on Baqarah 2:1-2 it flagged 7 of 41
+    professional reciters' final madd 'arid. The ceiling is the anchors' own level plus one CV.
+    """
+    try:
+        d = json.loads(_SCALE_PATH.read_text())["per_nominal"]["6.0"]
+        return float(d["implied_counts"]) * (1 + float(d["cv"]))
+    except Exception:  # noqa: BLE001 - unfitted deployment: fall back to the nominal band
+        return 6.0 + NOMINAL_TOLERANCE
+
+
 def to_counts(measured: float) -> float:
     """Convert a measured own-counts duration into tajweed counts using the fitted scale."""
     a, b = count_scale()
@@ -123,7 +138,8 @@ def grade_rule(b, units: list[Unit]) -> RuleVerdict:  # type: ignore[no-untyped-
         # convert the measured duration into tajweed counts with the fitted scale, so the verdict can
         # be stated as "you gave 2.1 counts where 4 are required" instead of a bare ratio
         got = round(to_counts(measured), 2)
-        status = "pass" if lo - NOMINAL_TOLERANCE <= got <= hi + NOMINAL_TOLERANCE else \
+        ceiling = six_count_ceiling() if hi >= 6 else hi + NOMINAL_TOLERANCE
+        status = "pass" if lo - NOMINAL_TOLERANCE <= got <= ceiling else \
             ("short" if got < lo else "long")
         ev = {"expected": [lo, hi], "given_counts": got, "raw_own_counts": measured}
     elif b.mechanism == "attribute" and b.head:
@@ -135,6 +151,11 @@ def grade_rule(b, units: list[Unit]) -> RuleVerdict:  # type: ignore[no-untyped-
             ev = {"head": b.head, "llr": round(worst, 3),
                   "expected": us[0].sifat[b.head]["expected"] if b.head in us[0].sifat else None,
                   "heard": bad[0]["model_best"] if bad else None}
+    elif b.mechanism == "durational":
+        # A durational rule is judged by its length. When the length is unknown, the letters being
+        # present says nothing about it -- falling through to the identity check below passed every
+        # madd lazim in الٓمٓ, read at any speed, because the ayah had no count unit.
+        ev = {"reason": "duration not measurable here"}
     else:  # segmental: did the reference letters survive against their competitors
         if us:
             status = "pass" if all(u.confirmed for u in us) else "wrong"
@@ -258,7 +279,8 @@ def _mastery(per_ayah: list[dict[str, Any]]) -> dict[str, Any]:
                 by_class.setdefault(f"madd_{u.run_length}", []).append(u.duration_counts)
             elif u.symbol in "ںنم" and u.run_length >= 3:
                 by_class.setdefault("ghunnah", []).append(u.duration_counts)
-        if a.get("haraka_s"):
+        # a borrowed unit is the others' median again; counting it would weight them twice
+        if a.get("haraka_s") and a.get("haraka_source", "own") == "own":
             harakas.append(a["haraka_s"])
 
     def rcv(v: list[float]) -> float | None:
@@ -293,7 +315,7 @@ def build_report(per_ayah: list[dict[str, Any]], rule_filter: str | None = None)
         units = a["_units"]
         ayahs.append({
             "surah": a["surah"], "ayah": a["ayah"], "frames": a["frames"],
-            "haraka_s": a.get("haraka_s"),
+            "haraka_s": a.get("haraka_s"), "haraka_source": a.get("haraka_source", "own"),
             "letters": [{"i": u.index, "symbol": u.symbol, "kind": u.kind,
                          "onset_s": u.onset_s, "duration_s": u.duration_s,
                          "duration_counts": u.duration_counts,

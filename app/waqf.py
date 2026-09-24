@@ -130,6 +130,40 @@ def find_stops(units, word_ph: list[list[int]], wave=None, *,  # type: ignore[no
     return stops
 
 
+def madd_at_stops(bounds, stops: list[Stop], units):  # type: ignore[no-untyped-def]
+    """Re-type a natural madd as madd 'arid li-s-sukun when the reciter stopped on its word.
+
+    The rule binder reads the text in wasl (continuous), where فِيهِ has a natural madd of two
+    counts. Stopping on it silences the final vowel, the ه becomes sakin, and the madd is now followed
+    by a sukun that exists only because of the stop -- madd 'arid li-s-sukun, read 2, 4 or 6. A
+    reciter who stopped there and held four counts was graded "too long" for exactly the reading the
+    rule permits. The stop is measured from the waveform, so the rule follows what was recited.
+
+    Condition: a real stop (not the ayah end, whose madd the binder already types) lands at the end
+    of the madd's word, and exactly one consonant -- with only its vowel after it -- separates the
+    madd from that stop.
+    """
+    from dataclasses import replace
+    ends = {s.after_unit for s in stops if s.position == "word_boundary" and s.duration_s > 0}
+    if not ends:
+        return bounds
+    out = []
+    for b in bounds:
+        if b.rule_type == "madd_tabii" and b.unit_indices:
+            m = b.unit_indices[-1]
+            for e in ends:
+                between = units[m + 1:e + 1] if e > m else []
+                if (between and sum(u.kind == "consonant" for u in between) == 1
+                        and between[0].kind == "consonant"
+                        and all(u.kind == "harakah" for u in between[1:])):
+                    b = replace(b, rule_type="madd_arid_lissukun", expected_counts=(2.0, 6.0),
+                                at_waqf=True,
+                                detail="natural madd made 'arid by the stop on this word: 2, 4 or 6")
+                    break
+        out.append(b)
+    return out
+
+
 def endurance(stops_by_ayah: list[list[Stop]]) -> dict:  # type: ignore[type-arg]
     """Breath management across a passage.
 

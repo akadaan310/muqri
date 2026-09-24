@@ -25,8 +25,8 @@ for r in reciters
                 "  overhead=", round(law["overhead_ms_at_median_T"], digits = 1), " ms")
     end
     p = tempo["pooled"]
-    isempty(p) || println("  tempo ODE over ", p["surahs"], " surahs: τ≈", round(p["median_tau_s"], digits = 1),
-                          " s, drift ", round(p["median_drift_ms_per_s"], digits = 3), " ms/s, ODE preferred in ",
-                          round(100 * p["share_ode_preferred"], digits = 0), "% of surahs")
+    isempty(p) || println("  tempo over ", p["surahs"], " surahs: preferred ", p["share_preferred"],
+                          "; drift ", round(p["median_drift_ms_per_min"], digits = 2), " ms/min; τc (relaxation) ",
+                          round(p["median_tau_s_where_relaxation"], digits = 1), " s")
 end
 QaariLab.write_json(out, result)

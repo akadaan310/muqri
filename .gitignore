@@ -41,3 +41,5 @@ research_agency_lab/experiments/learners/
 research_agency_lab/experiments/external/*_engine.jsonl
 research_agency_lab/experiments/session_recordings/
 research_agency_lab/experiments/timing/stretch_T300.jsonl
+# Raw Kaggle rows (committed gzipped as *.jsonl.gz)
+benchmarks/results/kaggle/*/*runs_*.jsonl

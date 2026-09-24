@@ -67,7 +67,7 @@ end
 struct Robust
     n::Int
     median::Float64
-    sigma::Float64   # 1.4826 · MAD
+    sigma::Float64   # max(1.4826 · MAD, (p95 − p5)/3.29)
     p5::Float64
     p25::Float64
     p75::Float64
@@ -78,7 +78,11 @@ function robust(v::AbstractVector{<:Real})
     x = filter(isfinite, Float64.(v))
     isempty(x) && return Robust(0, NaN, NaN, NaN, NaN, NaN, NaN)
     q = quantile(x, [0.05, 0.25, 0.75, 0.95])
-    Robust(length(x), median(x), MADK * mad(x; normalize = false), q...)
+    # σ: the larger of the MAD estimate and the 5–95 % quantile spread / 3.29 (both equal σ for a
+    # normal). MAD alone collapses to 0 on saturated or discrete metrics (voicing ≈ 1.0 on almost
+    # every jahr letter, tap counts of 0), which would fail the anchor on his own recordings.
+    σ = max(MADK * mad(x; normalize = false), (q[4] - q[1]) / 3.29)
+    Robust(length(x), median(x), σ, q...)
 end
 
 "Robust coefficient of variation: how noisy a ruler is relative to what it measures."
@@ -231,8 +235,9 @@ end
    letter outside the model vocabulary); collapsed units < 40 ms. The old max(0.2, ·) put ~47 % of expert
    instances under the floor: this CTC model is peaky, a forced token often sits on blank-dominated frames.
 3. bands from the anchor + all peers; leave-one-peer-out bands to score each held-out peer.
-4. category weights: maximise mean(peers) − mean(imams) subject to every LOO peer ≥ 95, with an L2
-   pull toward the default weights (Optim.jl, Nelder–Mead on log-weights).
+4. category weights: maximise mean(peers) − mean(imams) with each weight bounded to ×/÷2 of its
+   default and a ridge pull (Optim.jl, Nelder–Mead); kept only if separation gains ≥ 1 point.
+   The ≥ 95 peer target is reported, never optimised for.
 """
 function calibrate(paths::Vector{String}; anchor::String, peers::Vector{String}, imams::Vector{String},
                    spec, taxonomy, target_peer::Float64 = 95.0)
@@ -284,40 +289,53 @@ function optimise_weights(obs, bands, taxonomy, peers, imams; conf_min, collapse
     present = Set(vcat(peers, imams))
     sub = [o for o in obs if o.reciter in present]
     has_imams = any(o.reciter in imams for o in sub)
-    function evaluate(logw)
+    base = log.([w0[c] for c in cats])
+    # Weights may move at most ×/÷ 2 from the defaults (bounded by tanh): a category that everyone
+    # passes (e.g. wasl) must not be inflated to lift scores — the first, unbounded search did exactly
+    # that (wasl ×30), raising the imams as much as the peers.
+    toweights(x) = base .+ log(2.0) .* tanh.(x)
+    function evaluate(x)
         w = copy(w0)
         for (i, c) in enumerate(cats)
-            w[c] = exp(logw[i])
+            w[c] = exp(toweights(x)[i])
         end
         s = rescore(sub, bands, taxonomy; weights = w, conf_min = conf_min, collapsed = collapsed, dur = dur)
         pp = [s[p]["perfection"] for p in peers if haskey(s, p)]
         ii = [s[i]["perfection"] for i in imams if haskey(s, i)]
         return pp, ii, w
     end
-    function objective(logw)
-        pp, ii, _ = evaluate(logw)
-        isempty(pp) && return 0.0
-        sep = has_imams && !isempty(ii) ? mean(pp) - mean(ii) : 0.0
-        shortfall = sum(max(0.0, target - p)^2 for p in pp)
-        ridge = 2.0 * sum(abs2, logw .- log.([w0[c] for c in cats]))   # anti-overfit pull to defaults
-        return -sep + 10.0 * shortfall + ridge
+    separation(pp, ii) = isempty(pp) || isempty(ii) ? 0.0 : mean(pp) - mean(ii)
+    # Objective: separation of the reference reciters from the imams only (the ≥ target score is a
+    # reported check, never optimised for), with a ridge toward the defaults.
+    function objective(x)
+        pp, ii, _ = evaluate(x)
+        return -separation(pp, ii) + 0.5 * sum(abs2, x)
     end
-    x0 = log.([w0[c] for c in cats])
+    x0 = zeros(length(cats))
     xbest = x0
-    try
-        res = Optim.optimize(objective, x0, Optim.NelderMead(), Optim.Options(iterations = 400))
-        xbest = Optim.minimizer(res)
-    catch err
-        @warn "Weight optimisation skipped" err
+    if has_imams
+        try
+            res = Optim.optimize(objective, x0, Optim.NelderMead(), Optim.Options(iterations = 300))
+            xbest = Optim.minimizer(res)
+        catch err
+            @warn "Weight optimisation skipped" err
+        end
     end
     pp0, ii0, _ = evaluate(x0)
     pp, ii, w = evaluate(xbest)
-    return Dict("weights" => w, "default_weights" => w0,
+    gain = separation(pp, ii) - separation(pp0, ii0)
+    accepted = has_imams && gain >= 1.0 && minimum(pp) >= minimum(pp0) - 0.5
+    return Dict("weights" => accepted ? w : w0, "tuned_weights" => w, "default_weights" => w0,
+                "accepted" => accepted,
+                "rule" => "accept only if peer–imam separation gains ≥ 1 point and no peer drops > 0.5",
+                "separation_default" => separation(pp0, ii0), "separation_tuned" => separation(pp, ii),
                 "peers_mean_default" => isempty(pp0) ? NaN : mean(pp0),
                 "imams_mean_default" => isempty(ii0) ? NaN : mean(ii0),
                 "peers_mean_tuned" => isempty(pp) ? NaN : mean(pp),
                 "imams_mean_tuned" => isempty(ii) ? NaN : mean(ii),
+                "peers_min_default" => isempty(pp0) ? NaN : minimum(pp0),
                 "peers_min_tuned" => isempty(pp) ? NaN : minimum(pp),
+                "peers_reaching_target" => count(>=(target), pp0),
                 "had_imams" => has_imams)
 end
 

@@ -1,0 +1,30 @@
+[{"stream_name":"stdout","time":1.645957371,"data":"[   0.0 min] code in /kaggle/tmp/qaari; config {'reciters': ['Husary_128kbps', 'Yasser_Ad-Dussary_128kbps'], 'verses': '1:1-7', 'modes': ['studio', 'taraweeh_adapted'], 'procs': 2, 'shard_base': 0, 'shard_total': 2, 'octave': True, 'tag': 'smoke2', 'pip': 'praat-parselmouth faiss-cpu nara_wpe soxr speechbrain', 'hours': 1.0}\n"}
+,{"stream_name":"stdout","time":1.6460247080000001,"data":"[   0.0 min] $ /usr/bin/python3 -m pip install -q praat-parselmouth faiss-cpu nara_wpe soxr speechbrain\n"}
+,{"stream_name":"stderr","time":36.568937128,"data":"WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('\u003cpip._vendor.urllib3.connection.HTTPSConnection object at 0x7b009eb427b0\u003e: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /simple/praat-parselmouth/\n"}
+,{"stream_name":"stderr","time":69.081698076,"data":"WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('\u003cpip._vendor.urllib3.connection.HTTPSConnection object at 0x7b009d8ef740\u003e: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /simple/praat-parselmouth/\n"}
+,{"stream_name":"stderr","time":102.093994611,"data":"WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('\u003cpip._vendor.urllib3.connection.HTTPSConnection object at 0x7b009d8668a0\u003e: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /simple/praat-parselmouth/\n"}
+,{"stream_name":"stderr","time":136.105669476,"data":"WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('\u003cpip._vendor.urllib3.connection.HTTPSConnection object at 0x7b009d866e70\u003e: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /simple/praat-parselmouth/\n"}
+,{"stream_name":"stderr","time":172.116949369,"data":"WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('\u003cpip._vendor.urllib3.connection.HTTPSConnection object at 0x7b009d8b0650\u003e: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /simple/praat-parselmouth/\n"}
+,{"stream_name":"stderr","time":204.137451237,"data":"ERROR: Could not find a version that satisfies the requirement praat-parselmouth (from versions: none)\n"}
+,{"stream_name":"stderr","time":204.13785633,"data":"ERROR: No matching distribution found for praat-parselmouth\n"}
+,{"stream_name":"stdout","time":204.225474192,"data":"[   3.4 min] started 2 benchmark processes\n"}
+,{"stream_name":"stdout","time":204.225507613,"data":"[   3.4 min] deadline reached; stopping benchmark processes (rows so far are kept)\n"}
+,{"stream_name":"stderr","time":591.132597596,"data":"W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/jammy/InRelease  Temporary failure resolving 'archive.ubuntu.com'\n"}
+,{"stream_name":"stderr","time":591.1326455,"data":"W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/jammy-updates/InRelease  Temporary failure resolving 'archive.ubuntu.com'\n"}
+,{"stream_name":"stderr","time":591.132654045,"data":"W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/jammy-backports/InRelease  Temporary failure resolving 'archive.ubuntu.com'\n"}
+,{"stream_name":"stderr","time":591.132658495,"data":"W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/jammy-security/InRelease  Temporary failure resolving 'security.ubuntu.com'\n"}
+,{"stream_name":"stderr","time":591.132662454,"data":"W: Failed to fetch https://cloud.r-project.org/bin/linux/ubuntu/jammy-cran40/InRelease  Temporary failure resolving 'cloud.r-project.org'\n"}
+,{"stream_name":"stderr","time":591.132681244,"data":"W: Failed to fetch https://r2u.stat.illinois.edu/ubuntu/dists/jammy/InRelease  Temporary failure resolving 'r2u.stat.illinois.edu'\n"}
+,{"stream_name":"stderr","time":591.132684974,"data":"W: Failed to fetch https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu/dists/jammy/InRelease  Temporary failure resolving 'ppa.launchpadcontent.net'\n"}
+,{"stream_name":"stderr","time":591.13268839,"data":"W: Failed to fetch https://cli.github.com/packages/dists/stable/InRelease  Temporary failure resolving 'cli.github.com'\n"}
+,{"stream_name":"stderr","time":591.132691665,"data":"W: Failed to fetch https://ppa.launchpadcontent.net/ubuntugis/ppa/ubuntu/dists/jammy/InRelease  Temporary failure resolving 'ppa.launchpadcontent.net'\n"}
+,{"stream_name":"stderr","time":591.132694992,"data":"W: Some index files failed to download. They have been ignored, or old ones used instead.\n"}
+,{"stream_name":"stdout","time":11734.393512724,"data":"[ 195.6 min] octave unavailable (see apt.log)\n"}
+,{"stream_name":"stdout","time":11734.393570522,"data":"[ 195.6 min] done\n"}
+,{"stream_name":"stderr","time":11737.079082145,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":11737.07912066,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":11737.381589411,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":11737.38161948,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":11738.230794683,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":11739.745177842,"data":"[NbConvertApp] Writing 296054 bytes to __results__.html\n"}
+]

@@ -42,10 +42,26 @@ Done means all of the following:
   - The code is uploaded as the private dataset `razanashrafalnajjar/qaari-eval-code`.
   - Kernels read Quran-MD WAVs locally (`husseinzahaki/quran-md-ayahs-wav-part1..3`: all 6236 ayahs × 30 reciters).
   - Mapping in `benchmarks/roster.py:QURAN_MD`.
-- **Not yet verified:**
-  - Smoke kernels `qaari-smoke-0` and `qaari-smoke2-0` were both still RUNNING at handoff.
-  - smoke-0 was probably slowed by recursive globs over the 190k-file input mount; that is fixed in smoke2.
-  - Check them first.
+- **Kaggle smoke tests.** Both finished; logs are in `benchmarks/results/kaggle/smoke*/`.
+  - **Root cause:** the kernels have **no internet**. `enable_internet` is ignored until the Kaggle account is phone-verified, so pip and apt both failed.
+  - **Glob fix confirmed:** after the fixed-depth change, code was found in 0.0 min instead of 5.2 min.
+  - **Worker bugs, now fixed:**
+    - The Octave reserve (1.5 h) exceeded the 1 h smoke session, so the processes were stopped at once. The reserve is now at most ¼ of the session.
+    - The worker waited 190 min on apt retries. apt now times out after 15 min and is skipped entirely when offline.
+- **Offline bundle.** Uploaded as the private dataset `razanashrafalnajjar/qaari-eval-deps`, and the worker now installs from it whether or not the kernel has internet:
+  - `wheels/`: parselmouth, faiss-cpu, soxr, speechbrain, nara_wpe and their deps, built for Kaggle's Python 3.12.
+  - `hf_hub/`: the wav2vec2 and ECAPA model snapshots.
+  - The rebuild recipe is in the `kaggle_bridge.py push-deps` docstring.
+- **Kaggle pipeline verified** (smoke5, rows in `benchmarks/results/kaggle/smoke5/`):
+  - Offline install works, models load, and 28 rows (Husary and Dosari, Al-Fatiha, both modes) were written in about 2 minutes.
+  - Rows match the local run: same harakah, scores within ±2–5. The Quran-MD source is 64 kbps WAV, the local run used 128 kbps MP3.
+  - Studio mode takes about 2.7 s per ayah per process.
+- **Full run launched** (tag `full`): 11 Quran-MD reciters × 6236 ayahs × {studio, taraweeh_adapted}, about 137k rows.
+  - 5 kernels × 4 processes, 20 shards, 11.5 h cap; roughly 5 h expected.
+  - Every process takes Husary's ayahs first, so his rows finish first even if the session runs out.
+  - Kernels are `qaari-full-0..3`. `qaari-full-4` was auto-launched once smoke4 freed the 5th session slot; if it is missing, run `launch ... --only 4` with the same arguments.
+  - Collect with `kaggle_bridge.py collect --tag full --kernels 5`.
+- **Octave on Kaggle** needs apt, and so needs internet. Until the account is phone-verified, run `octave_bridge.py` on the VM over the collected rows. It reads audio from the EveryAyah cache, or from `--local-root` if you download Quran-MD parts with `kaggle datasets download`.
 
 ## 4. Files
 - **VM repo:** `/home/azureuser/github-director/repos/muqri`. Run `git fetch && git checkout claude/qaari-eval-engine-btwkjt && git pull`.
@@ -69,25 +85,25 @@ Done means all of the following:
 - **Secrets.** Never write tokens into the repo.
 
 ## 6. Next steps
-1. **Check the smoke kernels.** Run `kaggle kernels status|logs|output razanashrafalnajjar/qaari-smoke2-0`, then `collect --tag smoke2 --kernels 1`.
-   - Confirm the rows contain `metrics.core_ms` and `key`, and that an `octave_*.jsonl` file was produced.
-   - If the kernel failed, fix it, run `push-code`, and relaunch the smoke test.
-2. **Full Husary run.** Run `python research_agency_lab/compute_bridge/kaggle_bridge.py launch --tag husary-all --reciters Husary_128kbps Husary_Muallim_128kbps --verses all --modes studio --kernels 5 --procs 4 --octave`.
-   - About 12.5k rows; each kernel stops cleanly at 11.5 h.
-   - Collect with `collect --tag husary-all --kernels 5`.
-3. **Peers and imams.**
-   - After step 2, run peers on the full Qur'an: `Minshawy_Murattal_128kbps Hudhaify_128kbps Abdul_Basit_Murattal_192kbps Alafasy_128kbps`, tag `peers-all`.
-   - Run the imams in both modes on the strategic set plus a stratified ~1000-ayah sample, tag `imams`: `Yasser_Ad-Dussary_128kbps Nasser_Alqatami_128kbps Saood_ash-Shuraym_128kbps Abdurrahmaan_As-Sudais_192kbps Abdullaah_3awwaad_Al-Juhaynee_128kbps`, with `--modes studio taraweeh_adapted`.
-   - Tablaway, Ayyoub, Budair, Matroud and Muaiqly aren't in Quran-MD. Run them on the VM from EveryAyah (`benchmarks/run_benchmark.py --reciters ...`, strategic set).
-4. **Calibrate and discover in Julia.**
-   - `julia --project=research_agency_lab/substrate_library/julia research_agency_lab/substrate_library/julia/calibrate.jl app/data/calibration.json benchmarks/results/kaggle/*/k*_runs_*.jsonl <local rows>`
-   - `discover.jl research_agency_lab/experiments/discovery_full.json <same rows>`, which gives the tempo ODE per surah and the duration law per reciter.
-5. **Octave cross-check.** Compare `octave.core_ms` with the Python `core_ms` and the Octave formants with Praat on the full Husary set. Report the agreement as correlation and median absolute error in `research_agency_lab/experiments/`.
-6. **Summarise and test.**
-   - `python benchmarks/summarize.py --runs <all rows>`, which writes the summary and both FAISS indices.
-   - `QAARI_ACCEPTANCE=1 pytest tests/test_benchmarks.py`. Report the real numbers, pass or fail.
-   - Also make the fingerprint's style similarity use the calibrated z-scores (`app/fingerprint.py compute_tajweed_vector`). This is the last open item from the task list.
-7. **Finish.** Update the README (calibration method, lab stack, results, limitations). Run ruff, mypy and pytest, then commit and push. No PR unless asked.
+**Done (2026-09-24):**
+- **`full` run collected:** 46,285 rows, committed gzipped in `benchmarks/results/kaggle/full/`.
+- **Calibration:** `app/data/calibration.json` has 37 rule keys, a quantile-robust scale and default weights. The weight search was rejected by its own guard.
+- **Discovery:** `research_agency_lab/experiments/discovery_full.json`.
+- **Summary and indices:** `benchmarks/results/summary.json` and `.md`, plus both FAISS indices.
+- **Acceptance** (all fail, reported as measured): Husary 97.1 (in-sample), Dosari adapted 89.0, FP reduction 1.2 %.
+- **README:** rewritten for v2 with the method and results.
+- **Rejected calibration outputs:** the first run's unbounded weight search (wasl ×30) and the MAD-only scale were both rejected. See the README.
+
+**Remaining:**
+1. **Collect the `fill` run.** It was launched 2026-09-24 ~05:00 UTC with `--skip-done benchmarks/done_full.json`; Sudais, Juhaynee, Shuraym and Qatami go first. Then:
+   - `collect --tag fill --kernels 5`
+   - gzip the rows
+   - rerun `calibrate.jl`, `discover.jl` and `summarize.py` on `full` + `fill` rows together
+   - update the README tables with the new numbers
+2. **Reciters outside Quran-MD.** Tablawi, Ayyoub, Budair, Matroud and Al-Muaiqly: run on the VM from EveryAyah (`benchmarks/run_benchmark.py --reciters … --modes studio taraweeh_adapted`, strategic set or more), then re-calibrate.
+3. **Fingerprint style similarity** should use the calibrated z-scores. `app/fingerprint.py compute_tajweed_vector` still uses textbook-derived fields.
+4. **Octave cross-check at scale.** Kaggle kernels have no internet, so apt can't install Octave. Run `octave_bridge.py` on the VM over a Husary subset: rows from the gz files, audio from EveryAyah or a `kaggle datasets download` of Quran-MD part 2. Report the correlation and MAE of Octave vs Python `core_ms`, and of the formants vs Praat.
+5. **A real Taraweeh test.** The adapter's ≥ 90 % FP target can only be judged on reverberant live recordings, not EveryAyah studio ayahs. Candidates are the live files used earlier (Dosari Makkah Hud, Kurdi, Qatami 1440).
 
 ## 7. Target instance
 **acct3** (razan.ashraf.alnajjar@proton.me) is recommended.

@@ -12,7 +12,8 @@ from pathlib import Path
 CFG = json.loads(r"""__CONFIG__""")
 T0 = time.time()
 DEADLINE = T0 + CFG["hours"] * 3600
-OCTAVE_RESERVE = 1.5 * 3600 if CFG["octave"] else 0
+# Time kept back for the Octave pass: at most a quarter of the session (a 1 h smoke test keeps 15 min).
+OCTAVE_RESERVE = min(1.5 * 3600, 0.25 * CFG["hours"] * 3600) if CFG["octave"] else 0
 WORK = Path("/kaggle/working")
 CODE = Path("/kaggle/tmp/qaari") if Path("/kaggle").exists() else Path("/tmp/qaari")
 
@@ -53,8 +54,47 @@ if text:
 log(f"code in {CODE}; config {CFG}")
 
 # 2. dependencies ------------------------------------------------------------------------------
-sh(f"{sys.executable} -m pip install -q {CFG['pip']}")
+def online(host="pypi.org", port=443, timeout=5.0):
+    import socket
+
+    try:
+        socket.create_connection((host, port), timeout=timeout).close()
+        return True
+    except OSError:
+        return False
+
+
+ONLINE = online()
+log(f"internet: {'on' if ONLINE else 'OFF (kernel internet disabled; using the attached qaari-eval-deps bundle)'}")
+wheels = find("wheels/praat_parselmouth*.whl")
+if wheels:  # bundled wheels: deterministic and works offline; one package at a time so a single
+    # resolver conflict cannot block the rest
+    wdir = Path(wheels[0]).parent
+    for pkg in ["ruamel.yaml.clib", "ruamel.yaml", "hyperpyyaml", "bottleneck", "sentencepiece", *CFG["pip"].split()]:
+        sh(f"{sys.executable} -m pip install -q --no-index --find-links {wdir} {pkg}")
+    check = subprocess.run([sys.executable, "-c", "import parselmouth, faiss, nara_wpe, soxr, speechbrain"],
+                           capture_output=True, text=True)
+    if check.returncode != 0:
+        raise SystemExit(f"dependency import check failed:\n{check.stderr[-1500:]}")
+    log("dependencies import cleanly")
+elif ONLINE:
+    sh(f"{sys.executable} -m pip install -q {CFG['pip']}")
+else:
+    raise SystemExit("No internet and no qaari-eval-deps bundle attached: cannot install dependencies.")
+hub = find("hf_hub/models--TBOGamer22--wav2vec2-quran-phonetics")
+if hub:  # copy (inputs are read-only; HF writes lock files next to the cache)
+    dst = Path.home() / ".cache" / "huggingface" / "hub"
+    dst.mkdir(parents=True, exist_ok=True)
+    for m in Path(hub[0]).parent.iterdir():
+        if not (dst / m.name).exists():
+            shutil.copytree(m, dst / m.name)
+    log(f"model snapshots copied to {dst}")
+if not ONLINE:
+    os.environ.update(HF_HUB_OFFLINE="1", TRANSFORMERS_OFFLINE="1")
 octave_ready = None
+if CFG["octave"] and not ONLINE:
+    log("Octave pass skipped: apt needs internet. Run octave_bridge.py on the collected rows elsewhere.")
+    CFG["octave"] = False
 if CFG["octave"]:
     octave_ready = subprocess.Popen(
         "apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends "
@@ -62,6 +102,12 @@ if CFG["octave"]:
 
 # 3. benchmark processes -------------------------------------------------------------------------
 env = dict(os.environ, OMP_NUM_THREADS="1", MKL_NUM_THREADS="1", PYTHONUNBUFFERED="1")
+# Load the ECAPA model once before the workers start: speechbrain symlinks it into its savedir and
+# several processes doing that at once race ([Errno 17] File exists) and die.
+warm = subprocess.run([sys.executable, "-c", "from app.fingerprint import EcapaEmbedder; EcapaEmbedder()"],
+                      cwd=CODE, env=env, capture_output=True, text=True)
+log("ECAPA pre-warmed" if warm.returncode == 0 else f"ECAPA pre-warm failed: {warm.stderr[-800:]}")
+skip = CODE / CFG["skip_done"] if CFG.get("skip_done") else None
 procs = []
 for i in range(CFG["procs"]):
     shard = CFG["shard_base"] + i
@@ -69,8 +115,11 @@ for i in range(CFG["procs"]):
     cmd = [sys.executable, str(CODE / "benchmarks" / "run_benchmark.py"), "--reciters", *CFG["reciters"],
            "--verses", CFG["verses"], "--modes", *CFG["modes"], "--shard", f"{shard}/{CFG['shard_total']}",
            "--local-root", "/kaggle/input", "--threads", "1", "--output", str(out)]
+    if skip is not None and skip.exists():
+        cmd += ["--skip-done", str(skip)]
     procs.append(subprocess.Popen(cmd, cwd=CODE, env=env, stdout=open(WORK / f"bench_{shard:03d}.log", "w"),
                                   stderr=subprocess.STDOUT))
+    time.sleep(20)  # stagger model loading
 log(f"started {len(procs)} benchmark processes")
 while any(p.poll() is None for p in procs):
     if time.time() > DEADLINE - OCTAVE_RESERVE:
@@ -85,7 +134,11 @@ while any(p.poll() is None for p in procs):
 # 4. Octave DSP pass -----------------------------------------------------------------------------
 if CFG["octave"]:
     if octave_ready is not None:
-        octave_ready.wait()
+        try:
+            octave_ready.wait(timeout=900)
+        except subprocess.TimeoutExpired:
+            octave_ready.kill()
+            log("apt-get timed out after 15 min")
     if shutil.which("octave-cli"):
         runs = sorted(str(f) for f in WORK.glob(f"runs_{CFG['tag']}_*.jsonl"))
         out = WORK / f"octave_{CFG['tag']}_{CFG['shard_base']:03d}.jsonl"

@@ -1,10 +1,10 @@
 # Model discovery on the reference reciters (included by QaariLab.jl).
 #
 # 1. Tempo dynamics — does a reciter's harakah drift through a surah, and how fast does it settle?
-#       dT/dτ = κ (T∞ − T) + φ,     T(0) = T₀,      τ = recited time (s)
-#    solved with OrdinaryDiffEq (Tsit5) and fitted per surah by L-BFGS on a Huber loss, gradients by
-#    forward-mode AD through the solver. Compared with the constant-tempo model by AIC. The same model
-#    on Taraweeh imams quantifies fatigue (φ > 0: slowing; κ: settling rate).
+#    Constant vs linear drift (dT/dτ = φ) vs relaxation ODE (dT/dτ = (T∞ − T)/τc), by AIC per surah;
+#    the ODE is solved with OrdinaryDiffEq (Tsit5) and fitted by L-BFGS on a Huber loss with gradients
+#    from forward-mode AD through the solver. On Taraweeh imams the same comparison quantifies fatigue
+#    (φ > 0: slowing through the surah).
 #
 # 2. Duration law — how a held sound's duration relates to its count and the tempo:
 #       D = Θ(n, T, final) ξ,   Θ = [1, T, n·T, n, T², n·T², final, final·T]
@@ -35,53 +35,88 @@ function _tempo_series(rows, reciter)
     return out
 end
 
+sigmoid(u) = 1 / (1 + exp(-u))
+
+"Time constant τc (s) from an unconstrained parameter, bounded to [5 s, 5 × recited time]."
+tau_c(u, span) = 5.0 + (5 * max(span, 5.0) - 5.0) * sigmoid(u)
+
 function _solve_tempo(p, τ)
-    T0, Tinf, logκ, φ = p
-    f(T, q, t) = exp(q[3]) * (q[2] - T) + q[4]
-    prob = ODEProblem(f, T0, (0.0, max(τ[end], 1e-3)), p)
+    T0, Tinf, u = p
+    span = max(τ[end], 1e-3)
+    f(T, q, t) = (q[2] - T) / tau_c(q[3], span)
+    prob = ODEProblem(f, T0, (0.0, span), p)
     sol = solve(prob, Tsit5(); saveat = τ, abstol = 1e-6, reltol = 1e-6)
     return sol.u
 end
 
 huber(r, δ) = abs(r) <= δ ? 0.5 * r^2 : δ * (abs(r) - 0.5 * δ)
 
+"Gaussian-equivalent AIC from a Huber loss (2·loss plays the role of the RSS)."
+aic(loss, n, k) = n * log(max(2 * loss / n, 1e-9)) + 2k
+
 """
     tempo_dynamics(rows, reciter; min_ayahs = 20)
 
-Fit the relaxation ODE per surah with ≥ `min_ayahs` ayahs. Returns per-surah parameters, the ΔAIC
-against a constant tempo, and pooled medians (time constant 1/κ in seconds, drift φ in ms/s).
+Per surah with ≥ `min_ayahs` ayahs, three models of the harakah T over recited time τ compete by AIC:
+
+* constant        T = c                                   (k = 1)
+* linear drift    dT/dτ = φ                               (k = 2, closed-form robust fit)
+* relaxation ODE  dT/dτ = (T∞ − T)/τc, T(0) = T₀           (k = 3; τc bounded to [5 s, 5·span])
+
+The ODE is solved with Tsit5 and fitted by L-BFGS with gradients from forward-mode AD through the
+solver. The first formulation (κ(T∞ − T) + φ) was not identifiable — T∞ and φ/κ trade off and the
+fit ran to κ → ∞ — so drift and relaxation are now separate hypotheses.
 """
 function tempo_dynamics(rows, reciter::String; min_ayahs::Int = 20, δ::Float64 = 15.0)
     series = _tempo_series(rows, reciter)
     fits = Dict{String,Any}()
     for (s, (τ, T)) in series
-        length(T) >= min_ayahs || continue
+        n = length(T)
+        n >= min_ayahs || continue
+        span = max(τ[end], 1e-3)
         med = median(T)
+        l_const = sum(huber(t - med, δ) for t in T)
+        # linear drift: robust (Huber) line by iteratively reweighted least squares
+        X = hcat(ones(n), τ)
+        β = X \ T
+        for _ in 1:20
+            r = T - X * β
+            w = [abs(x) <= δ ? 1.0 : δ / abs(x) for x in r]
+            β = (X' * (w .* X)) \ (X' * (w .* T))
+        end
+        l_drift = sum(huber(a - b, δ) for (a, b) in zip(X * β, T))
         loss(p) = sum(huber(a - b, δ) for (a, b) in zip(_solve_tempo(p, τ), T))
-        p0 = [T[1], med, log(1 / max(τ[end] / 4, 1.0)), 0.0]
+        k0 = max(1, n ÷ 5)
+        p0 = [median(T[1:k0]), median(T[end-k0+1:end]), 0.0]
         res = try
-            Optim.optimize(loss, p0, Optim.LBFGS(), Optim.Options(iterations = 300); autodiff = :forward)
+            # Gradient by forward-mode AD through the Tsit5 solve (dual numbers propagate through the ODE).
+            g!(G, p) = ForwardDiff.gradient!(G, loss, p)
+            Optim.optimize(loss, g!, p0, Optim.LBFGS(), Optim.Options(iterations = 300))
         catch err
             @warn "tempo fit failed" s err
             continue
         end
         p = Optim.minimizer(res)
-        n = length(T)
-        const_loss = sum(huber(t - med, δ) for t in T)
-        # Huber loss as a pseudo-likelihood: AIC = 2k + 2·loss/δ² (Gaussian-equivalent scale)
-        aic_ode = 2 * 4 + 2 * Optim.minimum(res) / δ^2
-        aic_const = 2 * 1 + 2 * const_loss / δ^2
-        fits[string(s)] = Dict("n_ayahs" => n, "recited_s" => τ[end], "T0_ms" => p[1], "Tinf_ms" => p[2],
-                               "tau_s" => 1 / exp(p[3]), "drift_ms_per_s" => p[4],
-                               "delta_aic_vs_constant" => aic_const - aic_ode)
+        a = Dict("constant" => aic(l_const, n, 1), "drift" => aic(l_drift, n, 2),
+                 "relaxation" => aic(Optim.minimum(res), n, 3))
+        best = argmin(a)
+        fits[string(s)] = Dict("n_ayahs" => n, "recited_s" => span, "median_T_ms" => med,
+                               "T0_ms" => p[1], "Tinf_ms" => p[2], "tau_s" => tau_c(p[3], span),
+                               "drift_ms_per_min" => 60 * β[2], "aic" => a, "preferred" => best,
+                               "delta_aic_best_vs_constant" => a["constant"] - a[best])
     end
     vals(k) = [Float64(f[k]) for f in values(fits)]
+    prefs = [f["preferred"] for f in values(fits)]
+    relax = [f for f in values(fits) if f["preferred"] == "relaxation"]
     pooled = isempty(fits) ? Dict{String,Any}() : Dict(
         "surahs" => length(fits),
-        "median_tau_s" => median(vals("tau_s")), "median_drift_ms_per_s" => median(vals("drift_ms_per_s")),
-        "median_T0_minus_Tinf_ms" => median(vals("T0_ms") .- vals("Tinf_ms")),
-        "share_ode_preferred" => mean(vals("delta_aic_vs_constant") .> 2))
-    return Dict("reciter" => reciter, "model" => "dT/dτ = κ(T∞ − T) + φ", "pooled" => pooled, "per_surah" => fits)
+        "share_preferred" => Dict(m => mean(prefs .== m) for m in ("constant", "drift", "relaxation")),
+        "median_drift_ms_per_min" => median(vals("drift_ms_per_min")),
+        "median_tau_s_where_relaxation" => isempty(relax) ? NaN : median([Float64(f["tau_s"]) for f in relax]),
+        "median_T0_minus_Tinf_ms_where_relaxation" =>
+            isempty(relax) ? NaN : median([Float64(f["T0_ms"] - f["Tinf_ms"]) for f in relax]))
+    return Dict("reciter" => reciter, "models" => ["T = c", "dT/dτ = φ", "dT/dτ = (T∞ − T)/τc"],
+                "pooled" => pooled, "per_surah" => fits)
 end
 
 # ------------------------------------------------------------------ duration law (STLSQ) ---------

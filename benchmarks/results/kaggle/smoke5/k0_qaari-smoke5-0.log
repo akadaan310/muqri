@@ -1,0 +1,25 @@
+[{"stream_name":"stdout","time":1.6280534100000001,"data":"[   0.0 min] code in /kaggle/tmp/qaari; config {'reciters': ['Husary_128kbps', 'Yasser_Ad-Dussary_128kbps'], 'verses': '1:1-7', 'modes': ['studio', 'taraweeh_adapted'], 'procs': 2, 'shard_base': 0, 'shard_total': 2, 'octave': False, 'tag': 'smoke5', 'pip': 'praat-parselmouth faiss-cpu nara_wpe soxr speechbrain', 'hours': 1.0}\n"}
+,{"stream_name":"stdout","time":33.677027792,"data":"[   0.5 min] internet: OFF (kernel internet disabled; using the attached qaari-eval-deps bundle)\n"}
+,{"stream_name":"stdout","time":33.723028234,"data":"[   0.5 min] $ /usr/bin/python3 -m pip install -q --no-index --find-links /kaggle/input/datasets/razanashrafalnajjar/qaari-eval-deps/wheels ruamel.yaml.clib\n"}
+,{"stream_name":"stdout","time":41.269417781,"data":"[   0.7 min] $ /usr/bin/python3 -m pip install -q --no-index --find-links /kaggle/input/datasets/razanashrafalnajjar/qaari-eval-deps/wheels ruamel.yaml\n"}
+,{"stream_name":"stdout","time":45.125929608,"data":"[   0.7 min] $ /usr/bin/python3 -m pip install -q --no-index --find-links /kaggle/input/datasets/razanashrafalnajjar/qaari-eval-deps/wheels hyperpyyaml\n"}
+,{"stream_name":"stdout","time":49.441942065,"data":"[   0.8 min] $ /usr/bin/python3 -m pip install -q --no-index --find-links /kaggle/input/datasets/razanashrafalnajjar/qaari-eval-deps/wheels bottleneck\n"}
+,{"stream_name":"stdout","time":53.629110016,"data":"[   0.9 min] $ /usr/bin/python3 -m pip install -q --no-index --find-links /kaggle/input/datasets/razanashrafalnajjar/qaari-eval-deps/wheels sentencepiece\n"}
+,{"stream_name":"stdout","time":57.821063351,"data":"[   0.9 min] $ /usr/bin/python3 -m pip install -q --no-index --find-links /kaggle/input/datasets/razanashrafalnajjar/qaari-eval-deps/wheels praat-parselmouth\n"}
+,{"stream_name":"stdout","time":62.570359805,"data":"[   1.0 min] $ /usr/bin/python3 -m pip install -q --no-index --find-links /kaggle/input/datasets/razanashrafalnajjar/qaari-eval-deps/wheels faiss-cpu\n"}
+,{"stream_name":"stdout","time":67.66630242,"data":"[   1.1 min] $ /usr/bin/python3 -m pip install -q --no-index --find-links /kaggle/input/datasets/razanashrafalnajjar/qaari-eval-deps/wheels nara_wpe\n"}
+,{"stream_name":"stdout","time":71.808186187,"data":"[   1.2 min] $ /usr/bin/python3 -m pip install -q --no-index --find-links /kaggle/input/datasets/razanashrafalnajjar/qaari-eval-deps/wheels soxr\n"}
+,{"stream_name":"stdout","time":75.786514448,"data":"[   1.2 min] $ /usr/bin/python3 -m pip install -q --no-index --find-links /kaggle/input/datasets/razanashrafalnajjar/qaari-eval-deps/wheels speechbrain\n"}
+,{"stream_name":"stdout","time":90.210107317,"data":"[   1.5 min] dependencies import cleanly\n"}
+,{"stream_name":"stdout","time":94.541349273,"data":"[   1.6 min] model snapshots copied to /root/.cache/huggingface/hub\n"}
+,{"stream_name":"stdout","time":94.543174622,"data":"[   1.6 min] started 2 benchmark processes\n"}
+,{"stream_name":"stdout","time":154.545193831,"data":"[   2.6 min] 15 rows written\n"}
+,{"stream_name":"stdout","time":214.546554852,"data":"[   3.6 min] 28 rows written\n"}
+,{"stream_name":"stdout","time":214.546598907,"data":"[   3.6 min] done\n"}
+,{"stream_name":"stderr","time":217.34605706,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":217.346122443,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":217.749763523,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":217.749933059,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":218.577019509,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":220.51885551,"data":"[NbConvertApp] Writing 306339 bytes to __results__.html\n"}
+]

@@ -1,0 +1,58 @@
+{
+ "ts": "2026-09-23T11:51:18",
+ "n_rows": 59,
+ "n_files": 1,
+ "reciters": [
+  "Husary_128kbps"
+ ],
+ "octave": {
+  "sampled_rows": 59,
+  "audio_available": 59,
+  "core_ms": {
+   "n": 485,
+   "pearson_r": 0.9975,
+   "median_abs_err": 20.0,
+   "mean_err": -12.75,
+   "p90_abs_err": 30.0
+  },
+  "f1_hz": {
+   "n": 308,
+   "pearson_r": 0.3403,
+   "median_abs_err": 61.07,
+   "mean_err": -75.98,
+   "p90_abs_err": 465.2
+  },
+  "f2_hz": {
+   "n": 308,
+   "pearson_r": 0.3413,
+   "median_abs_err": 90.21,
+   "mean_err": 42.88,
+   "p90_abs_err": 1089.03
+  }
+ },
+ "calibration": {
+  "rc": 0,
+  "stdout_tail": [
+   "Minshawy_Murattal_128kbps                raw    NaN  calibrated    NaN  LOO    NaN",
+   "Mohammad_al_Tablaway_128kbps             raw    NaN  calibrated    NaN  LOO    NaN",
+   "Muhammad_Ayyoub_128kbps                  raw    NaN  calibrated    NaN  LOO    NaN",
+   "Abdullaah_3awwaad_Al-Juhaynee_128kbps    raw    NaN  calibrated    NaN  LOO    NaN",
+   "Abdullah_Matroud_128kbps                 raw    NaN  calibrated    NaN  LOO    NaN",
+   "Abdurrahmaan_As-Sudais_192kbps           raw    NaN  calibrated    NaN  LOO    NaN",
+   "MaherAlMuaiqly128kbps                    raw    NaN  calibrated    NaN  LOO    NaN",
+   "Nasser_Alqatami_128kbps                  raw    NaN  calibrated    NaN  LOO    NaN",
+   "Salah_Al_Budair_128kbps                  raw    NaN  calibrated    NaN  LOO    NaN",
+   "Saood_ash-Shuraym_128kbps                raw    NaN  calibrated    NaN  LOO    NaN",
+   "Yasser_Ad-Dussary_128kbps                raw    NaN  calibrated    NaN  LOO    NaN",
+   "weights: Dict{String, Any}(\"default_weights\" => Dict(\"weight\" => 0.6, \"madd\" => 1.0, \"ghunnah\" => 1.0, \"meem\" => 0.8, \"idgham\" => 0.8, \"sifaat\" => 1.0, \"wasl\" => 0.5, \"noon\" => 1.0, \"qalqalah\" => 0.8), \"imams_mean_tuned\" => NaN, \"weights\" => Dict(\"weight\" => 0.6, \"madd\" => 1.0, \"ghunnah\" => 1.0, \"meem\" => 0.8, \"idgham\" => 0.8, \"sifaat\" => 1.0, \"wasl\" => 0.5, \"noon\" => 1.0, \"qalqalah\" => 0.8), \"peers_min_tuned\" => NaN, \"had_imams\" => false, \"peers_mean_tuned\" => NaN, \"peers_mean_default\" => NaN, \"imams_mean_default\" => NaN)"
+  ]
+ },
+ "discovery": {
+  "rc": 0,
+  "stdout_tail": [
+   "Husary_128kbps",
+   "  D_core = -551.7·1 + 150.3·T + 394.2·n   R²=0.679  ms/count=394.2  overhead=-70.3 ms",
+   "  D_span = -395.1·1 + 118.6·T + 448.6·n   R²=0.516  ms/count=448.6  overhead=-15.1 ms"
+  ]
+ }
+}

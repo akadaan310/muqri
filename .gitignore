@@ -29,3 +29,8 @@ research_agency_lab/experiments/protocol_recordings/
 research_agency_lab/experiments/calculus/data/
 # the recitation graph database and its CSVs (regenerable: datastore.recitation_graph build)
 research_agency_lab/experiments/calculus/graph/
+
+# stray DuckDB session artifacts
+*.ses
+# per-verse engine records: regenerable on Modal in ~5 min; the final set is kept as clips.jsonl.gz
+research_agency_lab/experiments/profiles/*.jsonl

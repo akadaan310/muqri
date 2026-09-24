@@ -260,7 +260,7 @@ class Engine:
         report["wajh"] = wajh_report
         if audio is not None:
             report["audio_seconds"] = round(float(np.asarray(audio).size) / 16000, 2)
-        from app.stretch import DECIDES_SHORT, apply as stretch
+        from app.stretch import DECIDES_BOTH, DECIDES_SHORT, apply as stretch
         report["stretch"] = stretch(report)
         by_place = {(s["surah"], s["ayah"], s["word"], s["rule"]): s for s in report["stretch"]["stretchings"]}
         for a in report["ayahs"]:
@@ -270,8 +270,12 @@ class Engine:
                     continue
                 v["stretch"] = {k: s.get(k) for k in ("unit_s", "stretch", "expected_stretch", "ratio", "level",
                                                       "equivalent_counts", "z", "verdict")}
-                if v["rule"] in DECIDES_SHORT and s.get("verdict") == "short" and v["status"] == "pass":
-                    v["status"] = "short"
+                verdict = s.get("verdict")
+                decides = (v["rule"] in DECIDES_BOTH and verdict in ("pass", "short", "long")
+                           and v["status"] in ("pass", "short", "long")) or \
+                          (v["rule"] in DECIDES_SHORT and verdict == "short" and v["status"] == "pass")
+                if decides and v["status"] != verdict:
+                    v["status"] = verdict
                     v["evidence"] = {**(v.get("evidence") or {}), "decided_by": "stretch calculus"}
         from app.measurements import build as measurements
         report["measurements"] = measurements(report)

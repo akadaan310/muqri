@@ -52,6 +52,7 @@ class Sig:
     sign: int = 0
     letter: str = ""
     heard: tuple[str, ...] = ()
+    word_offset: int = 0              # idgham: the merged letter sits in the next word
 
 
 @dataclass(frozen=True, slots=True)
@@ -176,6 +177,85 @@ ROUNDS: dict[int, tuple[Exercise, ...]] = {
                   "on sīn->ṣād or thā'->sīn says the confusion is heard but not decided, and the margin "
                   "shows by how much."),
     ),
+    2: (
+        Exercise(
+            "r2e1", "Articulation points beginners confuse — al-Fatihah 1:5–7", 1, (5, 7),
+            goal="The five classic substitutions of non-Arabic learners, one per word: ʿayn as hamza, ṣād as "
+                 "sīn, qāf as kāf, ḍād as dāl, ḍād as ẓā'. Al-Fatihah is half of all learner recordings in "
+                 "the open datasets. Which substitutions does the articulation test (each letter against its "
+                 "nearest-articulation competitor) decide, and by what margin?",
+            spec="Tadwir, stop at the end of each ayah. ٱلضَّآلِّينَ lazim 6; the ʿāriḍ at نَسْتَعِينُ and "
+                 "ٱلْمُسْتَقِيمَ 4.",
+            wajh="tawassut",
+            expect=(Expect(7, 8, "madd_lazim", (5.0, 7.75)), Expect(6, 1, "itbaq"), Expect(7, 5, "itbaq"),
+                    Expect(7, 8, "itbaq"), Expect(7, 2, "izhar_halqi")),
+            mistakes=(Mistake(5, 1, "نَعْبُدُ — say the ʿayn as a hamza: 'na-abudu'.",
+                              (Sig("identity", letter="ع", heard=("ء",)),)),
+                      Mistake(6, 1, "ٱلصِّرَٰطَ — say the ṣād as sīn: 'as-sirāt'.",
+                              (Sig("identity", letter="ص", heard=("س",)), Sig("sifah", "itbaq", letter="ص"),
+                               Sig("sifah", "tafkheem_or_taqeeq", letter="ص"), Sig("rule", "itbaq"))),
+                      Mistake(6, 2, "ٱلْمُسْتَقِيمَ — say the qāf as kāf: 'al-mustakīm'.",
+                              (Sig("identity", letter="ق", heard=("ك",)), Sig("sifah", "tafkheem_or_taqeeq", letter="ق"))),
+                      Mistake(7, 5, "ٱلْمَغْضُوبِ — say the ḍād as dāl: 'al-maghdūb'.",
+                              (Sig("identity", letter="ض", heard=("د",)), Sig("sifah", "itbaq", letter="ض"),
+                               Sig("rule", "itbaq"))),
+                      Mistake(7, 8, "ٱلضَّآلِّينَ — keep the 6-count madd, but say the ḍād as ẓā': 'aẓ-ẓāllīn'.",
+                              (Sig("identity", letter="ض", heard=("ظ",)), Sig("sifah", "istitala", letter="ض"),
+                               Sig("sifah", "shidda_or_rakhawa", letter="ض")))),
+            controls=((5, 0), (5, 2), (7, 1), (7, 2), (7, 4)),
+            learn="In round 1 a heavy sīn and a light ṭā' barely moved the margins (tafkhim 13.1 -> 13.1, "
+                  "9.6 -> 7.4) while thā' -> sīn moved the whistle clearly (7.2 -> -0.2). This round asks the "
+                  "same of five other pairs."),
+        Exercise(
+            "r2e2", "Qalqalah at the stop, the rā', and ikhfā' — al-Falaq 113:1–3", 113, (1, 3),
+            goal="Round 1 missed a qalqalah dropped at a stop (its margin barely moved). Is that systematic? "
+                 "Two more stops, on qāf and bā'. Plus the rā' made light where it must be heavy, khā' as "
+                 "ḥā', and ikhfā' read as a clear nūn in a new context.",
+            spec="Tadwir, stop at the end of each ayah with a clear qalqalah. بِرَبِّ the rā' heavy · شَرِّ the "
+                 "rā' light (kasrah) · مِن شَرِّ and وَمِن شَرِّ ikhfā' with ghunnah.",
+            wajh="tawassut",
+            expect=(Expect(1, 2, "tafkheem"), Expect(1, 3, "qalqalah"), Expect(2, 0, "ikhfa", _nasal("ikhfa")),
+                    Expect(2, 1, "tarqeeq"), Expect(2, 3, "qalqalah"), Expect(3, 0, "ikhfa", _nasal("ikhfa")),
+                    Expect(3, 2, "izhar_halqi"), Expect(3, 4, "qalqalah")),
+            mistakes=(Mistake(1, 2, "بِرَبِّ — make the rā' light (it carries fatḥah and must be heavy).",
+                              (Sig("rule", "tafkheem"), Sig("sifah", "tafkheem_or_taqeeq", letter="ر"))),
+                      Mistake(1, 3, "ٱلْفَلَقِ — stop dead on the qāf: no echo.",
+                              (Sig("rule", "qalqalah"), Sig("sifah", "qalqla", letter="ق"), Sig("sifah", "qalqla", letter="ڇ"))),
+                      Mistake(2, 0, "مِن شَرِّ — iẓhār: a clear nūn before the shīn, no nasal hold.",
+                              (Sig("rule", "ikhfa", ("short", "wrong"), -1), Sig("sifah", "ghonna", letter="ں"))),
+                      Mistake(2, 3, "خَلَقَ — say the khā' as ḥā': 'ḥalaq'.",
+                              (Sig("identity", letter="خ", heard=("ح", "غ")), Sig("sifah", "tafkheem_or_taqeeq", letter="خ"))),
+                      Mistake(3, 4, "وَقَبَ — stop dead on the bā': no echo.",
+                              (Sig("rule", "qalqalah"), Sig("sifah", "qalqla", letter="ب"), Sig("sifah", "qalqla", letter="ڇ")))),
+            controls=((1, 0), (1, 1), (2, 1), (3, 0), (3, 1), (3, 2)),
+            learn="If both stops are missed again, stop-qalqalah needs the waveform echo measure (the anatomy "
+                  "research) in grading; the posteriors alone do not decide it."),
+        Exercise(
+            "r2e3", "The Name, qalqalah ṣughrā and kubrā, idghām, a vowel — al-Ikhlāṣ 112:1–4", 112, (1, 4),
+            goal="The surah of the largest labelled learner dataset (1,506 clips, nearly all errors qalqalah "
+                 "of the dāl). The lām of the Name heavy after ḍammah, qalqalah on a sākin dāl mid-ayah "
+                 "(ṣughrā) and at a stop (kubrā), idghām without ghunnah read with one, and a dropped vowel.",
+            spec="Tadwir, stop at the end of each ayah. ٱللَّهُ heavy in both ayahs · يَلِدْ qalqalah ṣughrā "
+                 "(no stop) · ٱلصَّمَدُ, يُولَدْ, أَحَدٌۢ qalqalah at the stop · يَكُن لَّهُۥ idghām without ghunnah.",
+            wajh="tawassut",
+            expect=(Expect(1, 2, "tafkheem"), Expect(1, 3, "qalqalah"), Expect(2, 0, "tafkheem"),
+                    Expect(2, 1, "qalqalah"), Expect(3, 1, "qalqalah"), Expect(3, 3, "qalqalah"),
+                    Expect(4, 1, "idgham_no_ghunnah"), Expect(4, 2, "madd_silah_sughra", _madd(2)),
+                    Expect(4, 4, "qalqalah")),
+            mistakes=(Mistake(1, 2, "ٱللَّهُ (ayah 1) — make the lām of the Name light, though it follows a ḍammah.",
+                              (Sig("rule", "tafkheem"), Sig("sifah", "tafkheem_or_taqeeq", letter="ل"))),
+                      Mistake(2, 1, "ٱلصَّمَدُ — stop on the dāl with no qalqalah.",
+                              (Sig("rule", "qalqalah"), Sig("sifah", "qalqla", letter="د"), Sig("sifah", "qalqla", letter="ڇ"))),
+                      Mistake(3, 1, "يَلِدْ — no qalqalah on the sākin dāl (keep going into وَلَمْ).",
+                              (Sig("rule", "qalqalah"), Sig("sifah", "qalqla", letter="د"), Sig("sifah", "qalqla", letter="ڇ"))),
+                      Mistake(4, 1, "يَكُن لَّهُۥ — merge the nūn into the lām WITH a nasal ghunnah (it must be without).",
+                              (Sig("rule", "idgham_no_ghunnah"), Sig("sifah", "ghonna", letter="ل", word_offset=1))),
+                      Mistake(4, 3, "كُفُوًا — drop the ḍammah on the fā': 'kufwan'.",
+                              (Sig("identity"),))),
+            controls=((1, 0), (1, 1), (2, 0), (3, 0), (3, 2), (3, 3), (4, 0), (4, 4)),
+            learn="Vowel deletion has no identity test (short vowels are tested only against each other), "
+                  "so mistake 5 measures whether a dropped ḍammah is visible at all."),
+    ),
 }
 
 
@@ -247,7 +327,7 @@ def score(ex: Exercise, take: str, m: dict[str, Any]) -> dict[str, Any]:
     else:
         rows = []
         for mk in ex.mistakes:
-            ev = [x for sig in mk.catch for x in _matches(sig, m, s, mk.ayah, mk.word)]
+            ev = [x for sig in mk.catch for x in _matches(sig, m, s, mk.ayah, mk.word + sig.word_offset)]
             here = flagged.get((mk.ayah, mk.word))
             verdict = "caught" if ev else ("flagged, other reason" if here else "missed")
             rows.append({"ayah": mk.ayah, "word": mk.word, "text": word_text.get((mk.ayah, mk.word)), "do": mk.do,

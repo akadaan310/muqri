@@ -131,6 +131,10 @@ def judge(rule: str, seconds: float, unit: float, wajh: str | None = None) -> di
 # upper side absorbs pauses. Nasals keep the calibrated band (it caught the cut ghunnah and ikhfa the
 # calculus missed); the short madds keep their windows (fewer professional flags: tabii 0.020 vs 0.046).
 DECIDES_SHORT = ("madd_munfasil", "madd_muttasil", "madd_lazim", "madd_silah_kubra", "madd_leen")
+# ... and both ways for the lazim: it sits mid-word (no pause to absorb), the windows' six-count
+# ceiling flagged 7.7 % of professionals -- Husary's 9.5-count lazim of ad-dallin among them -- and
+# the calculus 3.8 %
+DECIDES_BOTH = ("madd_lazim",)
 
 
 def apply(report: dict[str, Any]) -> dict[str, Any]:

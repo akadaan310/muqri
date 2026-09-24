@@ -46,6 +46,39 @@ def _haraka_of(units) -> float | None:  # type: ignore[no-untyped-def]
     return float(np.median(hs)) if hs else None
 
 
+# The munfasil (and the silah kubra, which is read as a munfasil) has more than one authentic length
+# in Hafs: tawassut, 4-5 counts, by al-Shatibiyyah; qasr, 2 counts, by the Tayyibah. Over all 41 T300
+# reciters the choice is bimodal -- 17 hold it at ~2 counts throughout (Shuraym, Sudais, Budair,
+# Mustafa Ismail, ...), the rest at 4 and beyond -- and graded against the Shatibiyyah alone it read
+# as the "hardest rule" in the dataset (pass 0.52). The standard is consistency within the reading
+# the reciter chose, so the wajh is inferred from all of the submission's instances and each instance
+# is graded against it.
+WAJH_RULES = ("madd_munfasil", "madd_silah_kubra")
+QASR_MAX_COUNTS = 3.0          # the gap between the two modes: 1.8-2.2 vs 3.2+
+
+
+def _apply_wajh(verdict_lists) -> dict:  # type: ignore[type-arg,no-untyped-def]
+    from app.submission import NOMINAL_TOLERANCE
+    vs = [v for vl in verdict_lists for v in vl
+          if v.rule in WAJH_RULES and v.evidence.get("given_counts") is not None]
+    if not vs:
+        return {}
+    counts = [v.evidence["given_counts"] for v in vs]
+    med = float(np.median(counts))
+    qasr = med <= QASR_MAX_COUNTS
+    lo, hi = (2.0, 2.0) if qasr else (4.0, 5.0)
+    for v in vs:
+        got = v.evidence["given_counts"]
+        v.expected_counts = (lo, hi)
+        v.status = "pass" if lo - NOMINAL_TOLERANCE <= got <= hi + NOMINAL_TOLERANCE else \
+            ("short" if got < lo else "long")
+        v.evidence = {**v.evidence, "expected": [lo, hi],
+                      "wajh": "qasr (Tayyibah)" if qasr else "tawassut (Shatibiyyah)"}
+    return {"munfasil": "qasr (Tayyibah), 2 counts" if qasr else "tawassut (Shatibiyyah), 4-5 counts",
+            "instances": len(vs), "median_counts": round(med, 2),
+            "note": "graded for consistency with the wajh the reciter chose"}
+
+
 def _unconfirm_durations(verdicts) -> None:  # type: ignore[no-untyped-def]
     """Durations in an ayah whose count unit was borrowed are reported, not judged.
 
@@ -195,8 +228,10 @@ class Engine:
                              "verdicts": verdicts, "ghunnah": ghunnah,
                              "resolutions": resolutions, "stops": stops,
                              "heaviness": heaviness, "sequences": seqs, "_units": units})
+        wajh = _apply_wajh([a["verdicts"] for a in per_ayah])
         report = build_report(per_ayah, rule_filter)
         report["basmala"] = basmala
+        report["wajh"] = wajh
         return report
 
     # Recordings of a surah's first ayah often open with the basmala (in T300, 60 of 766 verse-1 clips,

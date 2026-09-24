@@ -1,0 +1,966 @@
+{
+ "summary": [
+  {
+   "letter": "ء",
+   "context": "sakin",
+   "n": 50,
+   "collision_db": 10.88,
+   "approach": 5.08,
+   "hold_db": -6.02,
+   "burst_db": 5.28,
+   "echo_db": -0.19
+  },
+  {
+   "letter": "ء",
+   "context": "voweled",
+   "n": 1127,
+   "collision_db": 5.86,
+   "approach": 4.8,
+   "hold_db": -0.64,
+   "burst_db": 12.39,
+   "echo_db": 6.69
+  },
+  {
+   "letter": "ب",
+   "context": "sakin",
+   "n": 71,
+   "collision_db": 2.79,
+   "approach": 2.99,
+   "hold_db": 1.97,
+   "burst_db": 9.06,
+   "echo_db": 5.44
+  },
+  {
+   "letter": "ب",
+   "context": "shaddah",
+   "n": 114,
+   "collision_db": 11.52,
+   "approach": 3.96,
+   "hold_db": -4.88,
+   "burst_db": 24.95,
+   "echo_db": 8.93
+  },
+  {
+   "letter": "ب",
+   "context": "voweled",
+   "n": 489,
+   "collision_db": 3.09,
+   "approach": 3.34,
+   "hold_db": 0.74,
+   "burst_db": 16.45,
+   "echo_db": 9.47
+  },
+  {
+   "letter": "ت",
+   "context": "sakin",
+   "n": 51,
+   "collision_db": 5.33,
+   "approach": 3.31,
+   "hold_db": -3.95,
+   "burst_db": 6.38,
+   "echo_db": 4.66
+  },
+  {
+   "letter": "ت",
+   "context": "shaddah",
+   "n": 50,
+   "collision_db": 15.33,
+   "approach": 4.92,
+   "hold_db": -12.12,
+   "burst_db": 24.42,
+   "echo_db": 14.02
+  },
+  {
+   "letter": "ت",
+   "context": "stop",
+   "n": 14,
+   "collision_db": 5.42,
+   "approach": 2.98,
+   "hold_db": -1.16,
+   "burst_db": 4.6,
+   "echo_db": -0.17
+  },
+  {
+   "letter": "ت",
+   "context": "voweled",
+   "n": 573,
+   "collision_db": 3.63,
+   "approach": 3.65,
+   "hold_db": -1.43,
+   "burst_db": 17.2,
+   "echo_db": 15.9
+  },
+  {
+   "letter": "ث",
+   "context": "sakin",
+   "n": 39,
+   "collision_db": 5.7,
+   "approach": 3.73,
+   "hold_db": -7.17,
+   "burst_db": 3.94,
+   "echo_db": 6.74
+  },
+  {
+   "letter": "ث",
+   "context": "shaddah",
+   "n": 16,
+   "collision_db": 13.45,
+   "approach": 3.77,
+   "hold_db": -8.79,
+   "burst_db": 16.54,
+   "echo_db": 13.96
+  },
+  {
+   "letter": "ث",
+   "context": "voweled",
+   "n": 160,
+   "collision_db": 4.49,
+   "approach": 3.51,
+   "hold_db": -2.44,
+   "burst_db": 10.64,
+   "echo_db": 15.63
+  },
+  {
+   "letter": "ج",
+   "context": "sakin",
+   "n": 40,
+   "collision_db": 4.67,
+   "approach": 3.3,
+   "hold_db": -0.62,
+   "burst_db": 9.06,
+   "echo_db": 7.6
+  },
+  {
+   "letter": "ج",
+   "context": "shaddah",
+   "n": 24,
+   "collision_db": 10.13,
+   "approach": 4.41,
+   "hold_db": -4.61,
+   "burst_db": 22.82,
+   "echo_db": 9.43
+  },
+  {
+   "letter": "ج",
+   "context": "shaddah_stop",
+   "n": 8,
+   "collision_db": 9.69,
+   "approach": 4.07,
+   "hold_db": -4.45,
+   "burst_db": 24.43,
+   "echo_db": 14.72
+  },
+  {
+   "letter": "ج",
+   "context": "voweled",
+   "n": 153,
+   "collision_db": 1.74,
+   "approach": 3.0,
+   "hold_db": 1.98,
+   "burst_db": 12.89,
+   "echo_db": 12.49
+  },
+  {
+   "letter": "ح",
+   "context": "sakin",
+   "n": 76,
+   "collision_db": 4.14,
+   "approach": 3.36,
+   "hold_db": -2.05,
+   "burst_db": 4.94,
+   "echo_db": 1.18
+  },
+  {
+   "letter": "ح",
+   "context": "voweled",
+   "n": 184,
+   "collision_db": 3.95,
+   "approach": 3.68,
+   "hold_db": 0.96,
+   "burst_db": 13.59,
+   "echo_db": 13.05
+  },
+  {
+   "letter": "خ",
+   "context": "sakin",
+   "n": 16,
+   "collision_db": 3.74,
+   "approach": 3.52,
+   "hold_db": -2.21,
+   "burst_db": 3.78,
+   "echo_db": 1.51
+  },
+  {
+   "letter": "خ",
+   "context": "shaddah",
+   "n": 8,
+   "collision_db": 15.9,
+   "approach": 5.22,
+   "hold_db": -11.84,
+   "burst_db": 9.11,
+   "echo_db": 5.89
+  },
+  {
+   "letter": "خ",
+   "context": "voweled",
+   "n": 162,
+   "collision_db": 3.73,
+   "approach": 3.72,
+   "hold_db": 0.15,
+   "burst_db": 11.63,
+   "echo_db": 13.81
+  },
+  {
+   "letter": "د",
+   "context": "sakin",
+   "n": 62,
+   "collision_db": 2.15,
+   "approach": 3.44,
+   "hold_db": 2.29,
+   "burst_db": 10.92,
+   "echo_db": 7.99
+  },
+  {
+   "letter": "د",
+   "context": "shaddah",
+   "n": 42,
+   "collision_db": 10.68,
+   "approach": 3.95,
+   "hold_db": -4.94,
+   "burst_db": 27.68,
+   "echo_db": 13.65
+  },
+  {
+   "letter": "د",
+   "context": "stop",
+   "n": 10,
+   "collision_db": 5.53,
+   "approach": 3.43,
+   "hold_db": 0.1,
+   "burst_db": 17.82,
+   "echo_db": 12.95
+  },
+  {
+   "letter": "د",
+   "context": "voweled",
+   "n": 296,
+   "collision_db": 1.77,
+   "approach": 3.05,
+   "hold_db": 2.68,
+   "burst_db": 16.05,
+   "echo_db": 11.69
+  },
+  {
+   "letter": "ذ",
+   "context": "sakin",
+   "n": 47,
+   "collision_db": 4.91,
+   "approach": 3.36,
+   "hold_db": -2.04,
+   "burst_db": 4.18,
+   "echo_db": 0.71
+  },
+  {
+   "letter": "ذ",
+   "context": "shaddah",
+   "n": 31,
+   "collision_db": 6.53,
+   "approach": 2.85,
+   "hold_db": -1.87,
+   "burst_db": 17.32,
+   "echo_db": 10.2
+  },
+  {
+   "letter": "ذ",
+   "context": "voweled",
+   "n": 166,
+   "collision_db": 3.39,
+   "approach": 3.42,
+   "hold_db": 0.18,
+   "burst_db": 13.68,
+   "echo_db": 9.32
+  },
+  {
+   "letter": "ر",
+   "context": "sakin",
+   "n": 114,
+   "collision_db": 6.29,
+   "approach": 5.32,
+   "hold_db": -1.21,
+   "burst_db": 5.14,
+   "echo_db": 0.21
+  },
+  {
+   "letter": "ر",
+   "context": "shaddah",
+   "n": 65,
+   "collision_db": 6.34,
+   "approach": 4.82,
+   "hold_db": -0.15,
+   "burst_db": 12.35,
+   "echo_db": 4.17
+  },
+  {
+   "letter": "ر",
+   "context": "stop",
+   "n": 52,
+   "collision_db": 5.14,
+   "approach": 4.42,
+   "hold_db": -2.19,
+   "burst_db": 4.78,
+   "echo_db": -1.18
+  },
+  {
+   "letter": "ر",
+   "context": "voweled",
+   "n": 542,
+   "collision_db": 5.13,
+   "approach": 5.62,
+   "hold_db": -0.47,
+   "burst_db": 8.5,
+   "echo_db": 3.02
+  },
+  {
+   "letter": "ز",
+   "context": "sakin",
+   "n": 16,
+   "collision_db": 3.93,
+   "approach": 2.53,
+   "hold_db": -2.72,
+   "burst_db": 5.08,
+   "echo_db": 0.43
+  },
+  {
+   "letter": "ز",
+   "context": "shaddah",
+   "n": 8,
+   "collision_db": 9.1,
+   "approach": 2.86,
+   "hold_db": -4.77,
+   "burst_db": 19.71,
+   "echo_db": 12.66
+  },
+  {
+   "letter": "ز",
+   "context": "voweled",
+   "n": 70,
+   "collision_db": 0.16,
+   "approach": 2.5,
+   "hold_db": 2.44,
+   "burst_db": 11.2,
+   "echo_db": 12.66
+  },
+  {
+   "letter": "س",
+   "context": "sakin",
+   "n": 100,
+   "collision_db": 3.13,
+   "approach": 2.95,
+   "hold_db": -4.36,
+   "burst_db": 4.1,
+   "echo_db": 1.52
+  },
+  {
+   "letter": "س",
+   "context": "shaddah",
+   "n": 30,
+   "collision_db": 11.74,
+   "approach": 4.54,
+   "hold_db": -13.65,
+   "burst_db": 14.69,
+   "echo_db": 9.09
+  },
+  {
+   "letter": "س",
+   "context": "voweled",
+   "n": 269,
+   "collision_db": 4.4,
+   "approach": 3.25,
+   "hold_db": 0.27,
+   "burst_db": 8.32,
+   "echo_db": 12.52
+  },
+  {
+   "letter": "ش",
+   "context": "sakin",
+   "n": 43,
+   "collision_db": 3.03,
+   "approach": 3.13,
+   "hold_db": -8.77,
+   "burst_db": 4.51,
+   "echo_db": 1.33
+  },
+  {
+   "letter": "ش",
+   "context": "shaddah",
+   "n": 16,
+   "collision_db": 9.04,
+   "approach": 4.2,
+   "hold_db": -12.91,
+   "burst_db": 9.49,
+   "echo_db": 7.63
+  },
+  {
+   "letter": "ش",
+   "context": "stop",
+   "n": 10,
+   "collision_db": 7.94,
+   "approach": 4.78,
+   "hold_db": -1.14,
+   "burst_db": 8.46,
+   "echo_db": 9.25
+  },
+  {
+   "letter": "ش",
+   "context": "voweled",
+   "n": 59,
+   "collision_db": 4.08,
+   "approach": 2.47,
+   "hold_db": -2.55,
+   "burst_db": 7.37,
+   "echo_db": 10.55
+  },
+  {
+   "letter": "ص",
+   "context": "sakin",
+   "n": 36,
+   "collision_db": 2.69,
+   "approach": 2.32,
+   "hold_db": -5.02,
+   "burst_db": 3.76,
+   "echo_db": 0.98
+  },
+  {
+   "letter": "ص",
+   "context": "shaddah",
+   "n": 31,
+   "collision_db": 12.91,
+   "approach": 5.03,
+   "hold_db": -12.69,
+   "burst_db": 11.71,
+   "echo_db": 10.07
+  },
+  {
+   "letter": "ص",
+   "context": "voweled",
+   "n": 119,
+   "collision_db": 4.4,
+   "approach": 3.38,
+   "hold_db": 0.18,
+   "burst_db": 10.02,
+   "echo_db": 12.64
+  },
+  {
+   "letter": "ض",
+   "context": "sakin",
+   "n": 50,
+   "collision_db": 4.03,
+   "approach": 3.73,
+   "hold_db": -1.29,
+   "burst_db": 4.47,
+   "echo_db": 6.59
+  },
+  {
+   "letter": "ض",
+   "context": "shaddah",
+   "n": 16,
+   "collision_db": 9.57,
+   "approach": 4.21,
+   "hold_db": -3.08,
+   "burst_db": 21.54,
+   "echo_db": 12.61
+  },
+  {
+   "letter": "ض",
+   "context": "stop",
+   "n": 8,
+   "collision_db": -8.0,
+   "approach": 1.19,
+   "hold_db": 5.99,
+   "burst_db": 9.28,
+   "echo_db": 15.68
+  },
+  {
+   "letter": "ض",
+   "context": "voweled",
+   "n": 111,
+   "collision_db": 1.5,
+   "approach": 2.88,
+   "hold_db": 4.27,
+   "burst_db": 14.43,
+   "echo_db": 13.45
+  },
+  {
+   "letter": "ط",
+   "context": "sakin",
+   "n": 25,
+   "collision_db": 4.6,
+   "approach": 3.34,
+   "hold_db": -1.87,
+   "burst_db": 5.1,
+   "echo_db": 2.0
+  },
+  {
+   "letter": "ط",
+   "context": "shaddah",
+   "n": 29,
+   "collision_db": 14.24,
+   "approach": 3.4,
+   "hold_db": -6.81,
+   "burst_db": 21.3,
+   "echo_db": 15.69
+  },
+  {
+   "letter": "ط",
+   "context": "voweled",
+   "n": 100,
+   "collision_db": 2.73,
+   "approach": 3.65,
+   "hold_db": -0.19,
+   "burst_db": 14.68,
+   "echo_db": 15.85
+  },
+  {
+   "letter": "ظ",
+   "context": "sakin",
+   "n": 11,
+   "collision_db": 6.69,
+   "approach": 4.4,
+   "hold_db": -1.89,
+   "burst_db": 5.07,
+   "echo_db": 5.43
+  },
+  {
+   "letter": "ظ",
+   "context": "shaddah",
+   "n": 31,
+   "collision_db": 8.25,
+   "approach": 3.56,
+   "hold_db": -2.93,
+   "burst_db": 16.64,
+   "echo_db": 8.19
+  },
+  {
+   "letter": "ظ",
+   "context": "voweled",
+   "n": 52,
+   "collision_db": 0.67,
+   "approach": 3.01,
+   "hold_db": 2.71,
+   "burst_db": 9.1,
+   "echo_db": 9.36
+  },
+  {
+   "letter": "ع",
+   "context": "sakin",
+   "n": 118,
+   "collision_db": 6.03,
+   "approach": 3.6,
+   "hold_db": -2.38,
+   "burst_db": 5.11,
+   "echo_db": -0.91
+  },
+  {
+   "letter": "ع",
+   "context": "shaddah",
+   "n": 14,
+   "collision_db": 10.05,
+   "approach": 3.97,
+   "hold_db": -2.53,
+   "burst_db": 12.35,
+   "echo_db": 2.02
+  },
+  {
+   "letter": "ع",
+   "context": "shaddah_stop",
+   "n": 8,
+   "collision_db": 12.05,
+   "approach": 5.08,
+   "hold_db": -5.43,
+   "burst_db": 15.1,
+   "echo_db": 2.69
+  },
+  {
+   "letter": "ع",
+   "context": "voweled",
+   "n": 485,
+   "collision_db": 2.51,
+   "approach": 2.35,
+   "hold_db": -0.4,
+   "burst_db": 4.77,
+   "echo_db": 2.11
+  },
+  {
+   "letter": "غ",
+   "context": "sakin",
+   "n": 22,
+   "collision_db": 4.77,
+   "approach": 3.51,
+   "hold_db": -0.58,
+   "burst_db": 3.6,
+   "echo_db": 2.62
+  },
+  {
+   "letter": "غ",
+   "context": "voweled",
+   "n": 69,
+   "collision_db": 2.02,
+   "approach": 3.04,
+   "hold_db": 0.87,
+   "burst_db": 9.06,
+   "echo_db": 7.04
+  },
+  {
+   "letter": "ف",
+   "context": "sakin",
+   "n": 55,
+   "collision_db": 5.81,
+   "approach": 4.1,
+   "hold_db": -4.97,
+   "burst_db": 4.11,
+   "echo_db": 0.32
+  },
+  {
+   "letter": "ف",
+   "context": "shaddah",
+   "n": 8,
+   "collision_db": 18.37,
+   "approach": 5.35,
+   "hold_db": -14.76,
+   "burst_db": 16.63,
+   "echo_db": 7.62
+  },
+  {
+   "letter": "ف",
+   "context": "shaddah_stop",
+   "n": 8,
+   "collision_db": 18.89,
+   "approach": 6.17,
+   "hold_db": -13.43,
+   "burst_db": 20.35,
+   "echo_db": 12.3
+  },
+  {
+   "letter": "ف",
+   "context": "stop",
+   "n": 8,
+   "collision_db": 4.24,
+   "approach": 2.64,
+   "hold_db": -3.12,
+   "burst_db": 4.07,
+   "echo_db": -1.42
+  },
+  {
+   "letter": "ف",
+   "context": "voweled",
+   "n": 464,
+   "collision_db": 4.03,
+   "approach": 3.52,
+   "hold_db": -1.69,
+   "burst_db": 13.27,
+   "echo_db": 15.23
+  },
+  {
+   "letter": "ق",
+   "context": "sakin",
+   "n": 102,
+   "collision_db": 3.42,
+   "approach": 3.48,
+   "hold_db": 0.12,
+   "burst_db": 11.7,
+   "echo_db": 13.49
+  },
+  {
+   "letter": "ق",
+   "context": "shaddah",
+   "n": 16,
+   "collision_db": 12.61,
+   "approach": 4.26,
+   "hold_db": -5.47,
+   "burst_db": 22.71,
+   "echo_db": 12.58
+  },
+  {
+   "letter": "ق",
+   "context": "stop",
+   "n": 8,
+   "collision_db": 1.78,
+   "approach": 4.64,
+   "hold_db": 11.77,
+   "burst_db": 16.02,
+   "echo_db": 19.16
+  },
+  {
+   "letter": "ق",
+   "context": "voweled",
+   "n": 460,
+   "collision_db": 2.01,
+   "approach": 3.71,
+   "hold_db": 4.39,
+   "burst_db": 16.9,
+   "echo_db": 18.83
+  },
+  {
+   "letter": "ك",
+   "context": "sakin",
+   "n": 16,
+   "collision_db": 4.8,
+   "approach": 3.58,
+   "hold_db": -3.37,
+   "burst_db": 4.11,
+   "echo_db": 0.72
+  },
+  {
+   "letter": "ك",
+   "context": "shaddah",
+   "n": 24,
+   "collision_db": 17.82,
+   "approach": 5.66,
+   "hold_db": -12.95,
+   "burst_db": 24.13,
+   "echo_db": 10.55
+  },
+  {
+   "letter": "ك",
+   "context": "voweled",
+   "n": 524,
+   "collision_db": 5.35,
+   "approach": 4.11,
+   "hold_db": -3.44,
+   "burst_db": 15.0,
+   "echo_db": 13.87
+  },
+  {
+   "letter": "ل",
+   "context": "sakin",
+   "n": 473,
+   "collision_db": 2.45,
+   "approach": 2.59,
+   "hold_db": 0.12,
+   "burst_db": 4.68,
+   "echo_db": 1.96
+  },
+  {
+   "letter": "ل",
+   "context": "shaddah",
+   "n": 385,
+   "collision_db": 5.68,
+   "approach": 3.92,
+   "hold_db": -0.02,
+   "burst_db": 11.18,
+   "echo_db": 5.21
+  },
+  {
+   "letter": "ل",
+   "context": "stop",
+   "n": 26,
+   "collision_db": 1.36,
+   "approach": 3.02,
+   "hold_db": 0.7,
+   "burst_db": 9.68,
+   "echo_db": 8.36
+  },
+  {
+   "letter": "ل",
+   "context": "voweled",
+   "n": 1084,
+   "collision_db": 5.39,
+   "approach": 4.26,
+   "hold_db": -0.14,
+   "burst_db": 9.79,
+   "echo_db": 3.2
+  },
+  {
+   "letter": "م",
+   "context": "sakin",
+   "n": 258,
+   "collision_db": 1.62,
+   "approach": 1.99,
+   "hold_db": 0.03,
+   "burst_db": 3.06,
+   "echo_db": 1.58
+  },
+  {
+   "letter": "م",
+   "context": "shaddah",
+   "n": 186,
+   "collision_db": 4.34,
+   "approach": 2.23,
+   "hold_db": 0.33,
+   "burst_db": 13.93,
+   "echo_db": 5.97
+  },
+  {
+   "letter": "م",
+   "context": "stop",
+   "n": 52,
+   "collision_db": 6.38,
+   "approach": 3.33,
+   "hold_db": -2.2,
+   "burst_db": 4.68,
+   "echo_db": -2.75
+  },
+  {
+   "letter": "م",
+   "context": "voweled",
+   "n": 934,
+   "collision_db": 1.64,
+   "approach": 1.99,
+   "hold_db": 0.25,
+   "burst_db": 9.71,
+   "echo_db": 5.39
+  },
+  {
+   "letter": "ن",
+   "context": "sakin",
+   "n": 124,
+   "collision_db": 1.64,
+   "approach": 2.07,
+   "hold_db": -0.16,
+   "burst_db": 3.47,
+   "echo_db": 1.93
+  },
+  {
+   "letter": "ن",
+   "context": "shaddah",
+   "n": 234,
+   "collision_db": 3.45,
+   "approach": 1.93,
+   "hold_db": 0.56,
+   "burst_db": 15.95,
+   "echo_db": 7.28
+  },
+  {
+   "letter": "ن",
+   "context": "stop",
+   "n": 199,
+   "collision_db": 6.78,
+   "approach": 4.11,
+   "hold_db": -3.05,
+   "burst_db": 4.75,
+   "echo_db": -3.08
+  },
+  {
+   "letter": "ن",
+   "context": "voweled",
+   "n": 957,
+   "collision_db": 1.1,
+   "approach": 1.96,
+   "hold_db": 0.07,
+   "burst_db": 10.81,
+   "echo_db": 6.2
+  },
+  {
+   "letter": "ه",
+   "context": "sakin",
+   "n": 23,
+   "collision_db": 6.25,
+   "approach": 3.33,
+   "hold_db": -2.83,
+   "burst_db": 3.36,
+   "echo_db": -1.63
+  },
+  {
+   "letter": "ه",
+   "context": "shaddah",
+   "n": 8,
+   "collision_db": 17.2,
+   "approach": 2.98,
+   "hold_db": -11.25,
+   "burst_db": 7.46,
+   "echo_db": 0.91
+  },
+  {
+   "letter": "ه",
+   "context": "stop",
+   "n": 22,
+   "collision_db": 7.17,
+   "approach": 4.17,
+   "hold_db": -5.6,
+   "burst_db": 4.23,
+   "echo_db": -5.47
+  },
+  {
+   "letter": "ه",
+   "context": "voweled",
+   "n": 753,
+   "collision_db": 3.8,
+   "approach": 2.98,
+   "hold_db": -0.8,
+   "burst_db": 7.08,
+   "echo_db": 2.91
+  },
+  {
+   "letter": "و",
+   "context": "sakin",
+   "n": 111,
+   "collision_db": 3.97,
+   "approach": 2.41,
+   "hold_db": 0.19,
+   "burst_db": 3.01,
+   "echo_db": -0.46
+  },
+  {
+   "letter": "و",
+   "context": "shaddah",
+   "n": 112,
+   "collision_db": 6.58,
+   "approach": 2.63,
+   "hold_db": -0.13,
+   "burst_db": 15.13,
+   "echo_db": 7.22
+  },
+  {
+   "letter": "و",
+   "context": "voweled",
+   "n": 601,
+   "collision_db": 0.28,
+   "approach": 1.99,
+   "hold_db": 0.99,
+   "burst_db": 9.57,
+   "echo_db": 7.39
+  },
+  {
+   "letter": "ي",
+   "context": "sakin",
+   "n": 303,
+   "collision_db": 2.96,
+   "approach": 2.03,
+   "hold_db": -0.24,
+   "burst_db": 3.59,
+   "echo_db": 0.17
+  },
+  {
+   "letter": "ي",
+   "context": "shaddah",
+   "n": 166,
+   "collision_db": 4.58,
+   "approach": 2.14,
+   "hold_db": 0.11,
+   "burst_db": 8.5,
+   "echo_db": 3.42
+  },
+  {
+   "letter": "ي",
+   "context": "shaddah_stop",
+   "n": 8,
+   "collision_db": 4.08,
+   "approach": 2.85,
+   "hold_db": 0.44,
+   "burst_db": 9.33,
+   "echo_db": 5.6
+  },
+  {
+   "letter": "ي",
+   "context": "voweled",
+   "n": 408,
+   "collision_db": 1.34,
+   "approach": 1.71,
+   "hold_db": 0.37,
+   "burst_db": 4.65,
+   "echo_db": 3.82
+  }
+ ],
+ "n_units": 15935,
+ "note": "per-unit rows are regenerable with anatomy_units.py + anatomy.jl"
+}

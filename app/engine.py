@@ -208,6 +208,10 @@ class Engine:
 
         refs = [self.reference(v[0], v[1], (v[2], v[3]) if len(v) > 2 else None) for v in verses]
         spans = walk_alignment(lp, refs, vocab, blank, ph["first"], ph["width"])
+        if len(spans) > 1:
+            from app.submission import settle_boundaries
+            from app.waqf import pause_intervals
+            spans = settle_boundaries(spans, pause_intervals(audio) if audio is not None else None)
         basmala = self._basmala(lp, refs, spans, vocab, blank, ph["first"], ph["width"])
         if basmala["present"]:
             spans = basmala.pop("_spans")

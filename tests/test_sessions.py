@@ -60,3 +60,13 @@ def test_the_pages_scripts_parse() -> None:
             fh.write(js)
         run = subprocess.run([node, "--check", fh.name], capture_output=True, text=True)
         assert run.returncode == 0, run.stderr[-500:]
+
+
+def test_consecutive_ayahs_never_share_audio_and_meet_at_the_pause() -> None:
+    """al-Fatihah 1:7 (صِرَٰطَ ...) was aligned onto 1:6's ٱلصِّرَٰطَ, overlapping it by 226 frames."""
+    from app.submission import settle_boundaries
+    spans = [(14, 243), (221, 481), (255, 849)]                  # the certified reciter's take A
+    pauses = [(0, 14), (123, 129), (202, 221), (249, 256), (300, 307), (373, 399), (854, 873)]
+    assert settle_boundaries(spans, pauses) == [(14, 202), (221, 373), (399, 849)]
+    assert settle_boundaries([(0, 100), (80, 200)]) == [(0, 90), (90, 200)]   # no audio: split the overlap
+    assert settle_boundaries([(0, 100), (120, 200)]) == [(0, 100), (120, 200)]  # already apart: untouched

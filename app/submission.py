@@ -261,6 +261,31 @@ def grade_rule(b, units: list[Unit]) -> RuleVerdict:  # type: ignore[no-untyped-
                        shadda=b.shadda, status=status, evidence=ev)
 
 
+def settle_boundaries(spans: list[tuple[int, int]], pauses: list[tuple[int, int]] | None = None,
+                      reach: int = 25) -> list[tuple[int, int]]:
+    """No two ayahs share audio, and each boundary sits in a real pause when there is one.
+
+    The windows of consecutive ayahs overlap by design (see walk_alignment), and an ayah that opens
+    with the words its predecessor ended on can be aligned onto them: in a certified reciter's al-Fatihah
+    1:5-7, 1:7 (صِرَٰطَ ...) was placed on 1:6's ٱلصِّرَٰطَ, starting 5 to 9 s early and swallowing
+    all of 1:6 -- 4-second 'vowels' and five false alarms followed. Reciters pause between ayahs, so
+    each boundary goes to the longest pause within `reach` frames of the two ayahs' meeting region;
+    without one, an overlap is split at its middle."""
+    out = [list(s) for s in spans]
+    for i in range(1, len(out)):
+        pe, ns = out[i - 1][1], out[i][0]
+        lo_r, hi_r = min(pe, ns) - reach, max(pe, ns) + reach
+        cands = [p for p in (pauses or []) if lo_r <= (p[0] + p[1]) / 2 <= hi_r
+                 and p[0] > out[i - 1][0] and p[1] < out[i][1]]
+        if cands:
+            p0, p1 = max(cands, key=lambda p: p[1] - p[0])
+            out[i - 1][1], out[i][0] = p0, p1
+        elif ns < pe:
+            mid = (ns + pe) // 2
+            out[i - 1][1], out[i][0] = mid, mid
+    return [(a, max(b, a + 1)) for a, b in out]
+
+
 def walk_alignment(lp: np.ndarray, refs: list[AyahRef], vocab: dict[str, int], blank: int,
                    ph_first: int, ph_width: int, band: float = 0.6) -> list[tuple[int, int]]:
     """Frame span of each ayah inside one long recording.

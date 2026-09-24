@@ -83,6 +83,42 @@ def silent_frames(wave, sr: int = 16000, frame_s: float = FRAME_S, drop_db: floa
     return db < (float(np.percentile(db, 90)) - drop_db)
 
 
+PAUSE_FRACTION = 0.35   # of the way from the recording's noise floor to its speech level
+MIN_BOUNDARY_PAUSE_S = 0.2
+
+
+def pause_intervals(wave, sr: int = 16000, frame_s: float = FRAME_S,  # type: ignore[no-untyped-def]
+                    min_s: float = MIN_BOUNDARY_PAUSE_S) -> list[tuple[int, int]]:
+    """Pauses as (first frame, frame after the last), with a threshold ADAPTED to the recording: a
+    fraction of the way from its own noise floor (10th percentile of frame level) to its speech level
+    (90th). A fixed drop below speech misses pauses in phone recordings, whose room noise sits ~20 dB
+    under the voice (learner datasets) -- on a certified reciter's phone takes of al-Fatihah 1:5-7 this
+    finds the ~1 s pauses between the ayahs where a 32 dB drop found none."""
+    import numpy as np
+    x = np.asarray(wave, dtype="float32")
+    n = max(1, int(frame_s * sr))
+    if x.size < 4 * n:
+        return []
+    frames = x[: x.size // n * n].reshape(-1, n)
+    db = 20 * np.log10(np.sqrt((frames ** 2).mean(axis=1) + 1e-12))
+    lo, hi = float(np.percentile(db, 10)), float(np.percentile(db, 90))
+    if hi - lo < 6:
+        return []
+    sil = db < lo + PAUSE_FRACTION * (hi - lo)
+    out, i, k = [], 0, int(round(min_s / frame_s))
+    while i < len(sil):
+        if sil[i]:
+            j = i
+            while j < len(sil) and sil[j]:
+                j += 1
+            if j - i >= k:
+                out.append((i, j))
+            i = j
+        else:
+            i += 1
+    return out
+
+
 def find_stops(units, word_ph: list[list[int]], wave=None, *,  # type: ignore[no-untyped-def]
                min_pause_s: float = MIN_PAUSE_S) -> list[Stop]:
     """Silences between units, classified by where they fall.

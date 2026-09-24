@@ -537,8 +537,17 @@ def create_app():  # type: ignore[no-untyped-def]
 
     @api.get("/sessions/rounds")
     def sessions_rounds() -> dict[str, Any]:
+        """Every round, newest last, with each exercise's saved takes -- the history panel."""
         from app.sessions import ROUNDS
-        return {"rounds": sorted(ROUNDS)}
+        out = []
+        for n in sorted(ROUNDS):
+            exs = []
+            for ex in ROUNDS[n]:
+                takes = {t: len(list((SESSIONS_DIR / ex.id / t).glob("*.score.json"))) if SESSIONS_DIR.is_dir() else 0
+                         for t in ("A", "B")}
+                exs.append({"id": ex.id, "title": ex.title, "takes": takes})
+            out.append({"round": n, "exercises": exs})
+        return {"rounds": sorted(ROUNDS), "history": out}
 
     @api.get("/sessions/round/{n}")
     def sessions_round(n: int) -> Any:
@@ -582,6 +591,14 @@ def create_app():  # type: ignore[no-untyped-def]
             report = engine().analyze(wave, verses, wajh=ex.wajh)
             report["audio_seconds"] = round(float(wave.size) / 16000, 2)
             card = score(ex, take, report["measurements"])
+            if ex.b_is_correct:                 # two correct speeds: compare with the other take
+                from app.sessions import tempo_pair
+                other = "A" if take == "B" else "B"
+                prev = sorted((SESSIONS_DIR / ex.id / other).glob("*.report.json")) if SESSIONS_DIR.is_dir() else []
+                if prev:
+                    o = _json.loads(prev[-1].read_text()).get("stretch") or {}
+                    card["tempo_pair"] = tempo_pair(o, report["stretch"]) if take == "B" else \
+                        tempo_pair(report["stretch"], o)
         except AudioDecodeError as exc:
             return JSONResponse({"error": str(exc)}, status_code=415)
         except Exception as exc:  # noqa: BLE001

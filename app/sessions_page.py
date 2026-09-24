@@ -36,13 +36,25 @@ SESSIONS_PAGE = """<!doctype html>
  td,th{padding:4px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
  th{color:var(--mut);font-weight:500} td.arw{direction:rtl;font-size:1rem}
  .done{color:var(--ok);font-size:.8rem;font-weight:600}
- select{font:inherit;padding:4px 8px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--fg)}
+ .hist-btn{position:fixed;top:12px;left:12px;z-index:30;background:var(--card);color:var(--fg);border:1px solid var(--line);margin:0}
+ .panel{position:fixed;top:0;left:0;bottom:0;width:300px;max-width:85vw;background:var(--card);border-right:1px solid var(--line);
+   transform:translateX(-105%);transition:transform .2s;z-index:40;overflow-y:auto;padding:16px}
+ .panel.open{transform:none} .panel h3{margin:0 0 10px;font-size:1rem}
+ .panel .rd{margin-bottom:14px} .panel .rd b{display:block;cursor:pointer;margin-bottom:4px}
+ .panel .ex{font-size:.82rem;color:var(--mut);padding:2px 0 2px 8px;cursor:pointer}
+ .panel .cur{color:var(--ok);font-size:.75rem}
+ .shade{position:fixed;inset:0;background:#0005;z-index:35;display:none} .shade.open{display:block}
+ .wrap{padding-top:56px}
 </style></head><body><div class="wrap">
+<button class="hist-btn" onclick="panel(true)">☰ History</button>
+<div class="shade" id="shade" onclick="panel(false)"></div>
+<div class="panel" id="panel"><h3>Sessions</h3><div id="hist"></div></div>
 <h1>Calibration sessions</h1>
 <p class="sub">Each exercise is recited twice at <b>tadwīr</b>. <b>Take A</b> to the spec — the engine should measure every
 length and characteristic inside the stated range. <b>Take B</b>, same speed, perfect except the numbered mistakes. Every take
 is scored against what it should produce: expectations met, mistakes caught with the right kind, and anything flagged that you
-did not do. Round <select id="round" onchange="load()"></select> · <a href="/">analyser</a> · <a href="/protocol">protocol</a></p>
+did not do. <a href="/">analyser</a> · <a href="/protocol">protocol</a></p>
+<h2 id="rtitle" style="font-size:1.1rem;margin:0 0 12px"></h2>
 <p id="micnote" class="learn" style="display:none;border:1px solid var(--line);border-radius:8px;padding:8px 10px">
 In-page recording needs a secure (https) page, and this one is plain http. Use <b>● Record with phone</b>: it opens
 your phone's voice recorder, and the recording is uploaded and scored when you finish. Or <b>Choose File</b> to upload one.</p>
@@ -54,14 +66,20 @@ let EX=[];
 // browsers expose the microphone only to https pages (or localhost); over plain http the in-page
 // recorder cannot exist, so the phone's own recorder is offered instead (file input with capture)
 const MIC=!!(navigator.mediaDevices&&navigator.mediaDevices.getUserMedia&&window.MediaRecorder);
-async function load(){
-  const sel=document.getElementById('round');
+let CUR=null,LATEST=null;
+function panel(o){document.getElementById('panel').classList.toggle('open',o);document.getElementById('shade').classList.toggle('open',o);}
+async function load(n){
   const r=await fetch('/sessions/rounds').then(r=>r.json());
-  if(!sel.options.length){sel.innerHTML=r.rounds.map(n=>'<option>'+n+'</option>').join('');sel.value=r.rounds[r.rounds.length-1];}
-  const d=await fetch('/sessions/round/'+sel.value).then(r=>r.json());
+  LATEST=r.rounds[r.rounds.length-1]; CUR=n||LATEST;
+  document.getElementById('hist').innerHTML=r.history.slice().reverse().map(h=>'<div class="rd"><b onclick="go('+h.round+')">Round '+h.round
+    +(h.round==LATEST?' <span class="cur">live</span>':'')+'</b>'+h.exercises.map(e=>'<div class="ex" onclick="go('+h.round+',&quot;'+e.id+'&quot;)">'
+    +esc(e.title)+' — A '+e.takes.A+' · B '+e.takes.B+'</div>').join('')+'</div>').join('');
+  document.getElementById('rtitle').textContent='Round '+CUR+(CUR==LATEST?' (live)':' (history)');
+  const d=await fetch('/sessions/round/'+CUR).then(r=>r.json());
   EX=d.exercises;
   document.getElementById('ex').innerHTML=EX.map((x,i)=>card(x,i,d.status[x.id]||{})).join('');
 }
+async function go(n,id){panel(false);await load(n);if(id){const e=document.getElementById('c-'+id);if(e)e.scrollIntoView();}}
 function verses(x){
   return x.verses.map(v=>'<div class="ar">'+v.words.map((w,i)=>{
       const m=x.mistakes.findIndex(k=>k.ayah==v.ayah&&k.word==i);
@@ -72,9 +90,10 @@ function card(x,i,st){
   const words=(a,w)=>{const v=x.verses.find(v=>v.ayah==a);return v?v.words[w]:'';};
   const A='<p style="font-size:.88rem">'+esc(x.spec)+'</p><p class="mut">Declared wajh: <b>'+esc(x.wajh)+'</b>. The engine should measure:</p><ul>'
     +x.expect.map(e=>'<li><span class="ar" style="font-size:1rem">'+esc(words(e.ayah,e.word))+'</span> '+esc(e.rule)+(e.counts?' · '+e.counts[0]+'–'+e.counts[1]+' counts':' · passes')+'</li>').join('')+'</ul>';
-  const B='<p style="font-size:.88rem">Same speed, perfect except:</p><ol>'+x.mistakes.map(m=>'<li>'+esc(m.do)+'</li>').join('')+'</ol>';
-  return '<div class="card"><h2>'+(i+1)+'. '+esc(x.title)+'</h2><p class="goal"><b>Goal.</b> '+esc(x.goal)+'</p><p class="learn">'+esc(x.learn)+'</p>'
-    +verses(x)+'<div class="takes">'+take(x,'A','Take A · to the spec',A,st.A)+take(x,'B','Take B · scripted mistakes',B,st.B)+'</div></div>';
+  const B=x.b_is_correct?'<p style="font-size:.88rem">'+esc(x.b_spec)+'</p>'
+    :'<p style="font-size:.88rem">Same speed, perfect except:</p><ol>'+x.mistakes.map(m=>'<li>'+esc(m.do)+'</li>').join('')+'</ol>';
+  return '<div class="card" id="c-'+x.id+'"><h2>'+(i+1)+'. '+esc(x.title)+'</h2><p class="goal"><b>Goal.</b> '+esc(x.goal)+'</p><p class="learn">'+esc(x.learn)+'</p>'
+    +verses(x)+'<div class="takes">'+take(x,'A','Take A · to the spec',A,st.A)+take(x,'B',x.b_is_correct?'Take B · faster, perfect':'Take B · scripted mistakes',B,st.B)+'</div></div>';
 }
 function take(x,k,h,body,st){
   const id=x.id+'-'+k;
@@ -84,25 +103,30 @@ function take(x,k,h,body,st){
    +'<input type="file" accept="audio/*" onchange="up(\\''+x.id+'\\',\\''+k+'\\',this.files[0])">'
    +'<div class="st" id="s-'+id+'">'+(st&&st.last?summ(st.last):'')+'</div><div class="tbl" id="o-'+id+'">'+(st&&st.last?detail(st.last):'')+'</div></div>';
 }
+function pair(p){
+  return '<details open><summary>Two speeds compared — unit '+p.unit_s[0]+' s → '+p.unit_s[1]+' s (take B '+(p.speed_ratio??'?')+'× faster)</summary><table><tr><th>rule</th><th>seconds A → B</th><th>equivalent counts A → B</th><th>verdict A / B</th></tr>'
+   +p.stretchings.map(s=>'<tr><td>'+esc(s.rule)+' <span class="mut">'+s.ayah+':'+s.word+'</span></td><td>'+s.seconds.join(' → ')+'</td><td>'+s.equivalent_counts.join(' → ')+'</td><td>'+s.verdict.join(' / ')+'</td></tr>').join('')+'</table></details>';
+}
 function tempo(c){const t=c.tempo;return 'tempo '+(t.seconds_per_count??'?')+' s/count ('+esc(t.class)+') '+(t.ok?'<span class="ok">✓</span>':'<span class="warn">outside tadwīr</span>');}
 function summ(c){
   const fa=c.false_alarms.length, fac='<span class="'+(fa?'warn':'ok')+'">'+fa+' false-alarm word'+(fa==1?'':'s')+'</span>';
-  if(c.take=='A')return '<b>'+c.met+'/'+c.expectations.length+'</b> expectations met · '+fac+' · '+tempo(c);
+  if(c.expectations)return '<b>'+c.met+'/'+c.expectations.length+'</b> expectations met · '+fac+' · '+tempo(c);
   return '<b>'+c.caught+'/'+c.mistakes.length+'</b> mistakes caught · '+fac+' · '+tempo(c);
 }
 function detail(c){
   let h='';
-  if(c.take=='A'){
+  if(c.expectations){
     h+='<table><tr><th>word</th><th>rule</th><th>expected</th><th>measured</th><th>z vs masters</th><th></th></tr>'+c.expectations.map(e=>'<tr><td class="arw">'+esc(e.text)+'</td><td>'+esc(e.rule)+'</td><td>'+(e.expected_counts?e.expected_counts.join('–'):'pass')+'</td><td>'+(e.measured??'—')+(e.status&&e.status!='pass'?' ('+esc(e.status)+')':'')+'</td><td>'+(e.z_masters??'')+'</td><td class="'+(e.verdict=='ok'?'ok':'bad')+'">'+esc(e.verdict)+'</td></tr>').join('')+'</table>';
   }else{
     h+='<table><tr><th>#</th><th>word</th><th>result</th><th>engine evidence</th></tr>'+c.mistakes.map((m,i)=>'<tr><td>'+(i+1)+'</td><td class="arw">'+esc(m.text)+'</td><td class="'+(m.verdict=='caught'?'ok':m.verdict=='missed'?'bad':'warn')+'">'+esc(m.verdict)+'</td><td>'+esc((m.evidence.length?m.evidence:m.engine_failing).join('; '))+'</td></tr>').join('')+'</table>';
   }
+  if(c.tempo_pair)h+=pair(c.tempo_pair);
   if(c.letter_matrix)h+=matrix(c.letter_matrix);
   if(c.false_alarms.length)h+='<details><summary>'+c.false_alarms.length+' word(s) flagged that the script left alone</summary><table>'+c.false_alarms.map(a=>'<tr><td class="arw">'+esc(a.text)+'</td><td>'+esc(a.failing.join('; '))+'</td></tr>').join('')+'</table></details>';
   return h;
 }
 // only what the engine measures: makhraj (the identity test) and the characteristics it has a head for
-const COLS=[['hams_jahr','hams / jahr'],['shiddah_rakhawah','shiddah / rakhawah'],['istila_istifal','isti\'la / istifal'],
+const COLS=[['hams_jahr','hams / jahr'],['shiddah_rakhawah','shiddah / rakhawah'],['istila_istifal','isti’la / istifal'],
  ['itbaq_infitah','itbaq / infitah'],['safir','safir'],['qalqalah','qalqalah'],['tafashshi','tafashshi'],['istitalah','istitalah'],['ghunnah','ghunnah']];
 const AR={'[همس]':'hams','[جهر]':'jahr','[شديد]':'shiddah','[رخو]':'rakhawah','[بين بين]':'tawassut','[مفخم]':'heavy','[مرقق]':'light',
  '[مطبق]':'itbaq','[منفتح]':'infitah','[صفير]':'safir','[لا صفير]':'no safir','[مقلقل]':'qalqalah','[لا قلقلة]':'no qalqalah','[مغن]':'ghunnah','[لا غنة]':'no ghunnah'};
@@ -123,7 +147,7 @@ function matrix(M){
     const by={};r.sifat.forEach(s=>by[s.sifah]=s);
     const mk=r.makhraj, mc=mk.margin==null?'<td></td>':'<td class="'+(mk.confirmed?'ok':'bad')+'" title="'+esc(mk.region)+'">'+(mk.confirmed?'✓':'✗ heard '+esc(mk.competitor))+'<br><span class="mut">'+mk.margin+(mk.confirmed&&mk.competitor?' vs '+esc(mk.competitor):'')+'</span></td>';
     return '<tr><td class="arw">'+esc(r.letter)+'</td><td>'+esc(r.context)+'</td>'+mc+cols.map(c=>mcell(by[c[0]])).join('')+'</tr>';}).join('')+'</table></div>'
-   +'<p class="mut">Numbers are the engine\'s confidence margin (higher = clearer). Makhraj: the letter against the nearest letter it could be confused with.</p></details>';
+   +'<p class="mut">Numbers are the engine’s confidence margin (higher = clearer). Makhraj: the letter against the nearest letter it could be confused with.</p></details>';
   return h;
 }
 let media=null,chunks=[],recKey=null;

@@ -39,3 +39,24 @@ def test_take_b_caught_only_with_the_right_signature() -> None:
     got = {r["word"]: r["verdict"] for r in c["mistakes"]}
     assert got == {2: "caught", 3: "missed", 4: "missed", 5: "flagged, other reason"}
     assert [(f["word"], f["control"]) for f in c["false_alarms"]] == [(1, True)]
+
+
+def test_the_pages_scripts_parse() -> None:
+    """A stray quote once blanked the whole sessions page ('Loading...' forever): every page's script
+    must at least parse."""
+    import shutil
+    import subprocess
+    import tempfile
+
+    import pytest
+    node = shutil.which("node")
+    if not node:
+        pytest.skip("node not installed")
+    from app.protocol_page import PROTOCOL_PAGE
+    from app.sessions_page import SESSIONS_PAGE
+    for page in (SESSIONS_PAGE, PROTOCOL_PAGE):
+        js = page[page.index("<script>") + 8:page.rindex("</script>")]
+        with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False) as fh:
+            fh.write(js)
+        run = subprocess.run([node, "--check", fh.name], capture_output=True, text=True)
+        assert run.returncode == 0, run.stderr[-500:]

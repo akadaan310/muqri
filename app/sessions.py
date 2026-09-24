@@ -76,6 +76,8 @@ class Exercise:
     mistakes: tuple[Mistake, ...]
     learn: str = ""                          # what a miss / false alarm here would tell us
     controls: tuple[tuple[int, int], ...] = field(default_factory=tuple)   # (ayah, word) kept correct in B
+    b_is_correct: bool = False               # take B is a second CORRECT reading, at another speed
+    b_spec: str = ""
 
 
 def _nasal(rule: str) -> tuple[float, float]:
@@ -255,6 +257,22 @@ ROUNDS: dict[int, tuple[Exercise, ...]] = {
             controls=((1, 0), (1, 1), (2, 0), (3, 0), (3, 2), (3, 3), (4, 0), (4, 4)),
             learn="Vowel deletion has no identity test (short vowels are tested only against each other), "
                   "so mistake 5 measures whether a dropped ḍammah is visible at all."),
+        Exercise(
+            "r2e4", "One passage at two speeds — al-ʿAṣr 103:1–3", 103, (1, 3),
+            goal="Both takes perfect: take A at your tadwīr, take B clearly faster while keeping every "
+                 "rule and characteristic intact. The adaptive timing judges each stretching against your "
+                 "own count at each speed; a fast correct reading must score exactly as well as a measured "
+                 "one, and every stretching should keep its proportion.",
+            spec="Tadwīr, stop at the end of each ayah. إِنَّ ghunnah · ٱلْإِنسَـٰنَ ikhfā' · ءَامَنُوا۟ badal · "
+                 "بِٱلصَّبْرِ qalqalah at the stop.",
+            wajh="tawassut",
+            expect=(Expect(2, 0, "ghunnah", _nasal("ghunnah")), Expect(2, 1, "ikhfa", _nasal("ikhfa")),
+                    Expect(3, 2, "madd_badal"), Expect(3, 4, "itbaq"), Expect(3, 8, "qalqalah")),
+            mistakes=(),
+            b_is_correct=True,
+            b_spec="Take B: the same passage, perfect, but clearly FASTER -- as fast as you can while keeping "
+                   "every rule and characteristic. It should score the same as take A.",
+            learn="The report compares your count unit and every stretching across the two speeds."),
     ),
 }
 
@@ -304,7 +322,7 @@ def score(ex: Exercise, take: str, m: dict[str, Any]) -> dict[str, Any]:
                                      "ok": spc is not None and TADWIR[0] <= spc <= TADWIR[1]}}
     flagged = {(int(w["ref"].split(":")[1]), int(w["ref"].split(":")[2])): w for w in m["words"] if not w["all_correct"]}
     word_text = {(int(w["ref"].split(":")[1]), int(w["ref"].split(":")[2])): w["text"] for w in m["words"]}
-    if take == "A":
+    if take == "A" or ex.b_is_correct:
         rows = []
         for e in ex.expect:
             rs = _rules_at(m, s, e.ayah, e.word, e.rule)
@@ -348,4 +366,24 @@ def to_json(ex: Exercise) -> dict[str, Any]:
             "spec": ex.spec, "wajh": ex.wajh, "learn": ex.learn,
             "expect": [{"ayah": e.ayah, "word": e.word, "rule": e.rule, "counts": e.counts, "note": e.note}
                        for e in ex.expect],
-            "mistakes": [{"ayah": mk.ayah, "word": mk.word, "do": mk.do} for mk in ex.mistakes]}
+            "mistakes": [{"ayah": mk.ayah, "word": mk.word, "do": mk.do} for mk in ex.mistakes],
+            "b_is_correct": ex.b_is_correct, "b_spec": ex.b_spec}
+
+
+def tempo_pair(a: dict[str, Any], b: dict[str, Any]) -> dict[str, Any]:
+    """Two correct readings of one passage at two speeds: the count unit of each, and every
+    stretching's equivalent counts in both. A sound calculus keeps them equal: the masters are the
+    standard at any tempo, and a fast correct reading must not measure worse than a slow one."""
+    def key(s: dict[str, Any]) -> tuple[Any, ...]:
+        return (s["surah"], s["ayah"], s["word"], s["rule"])
+    sa = {key(s): s for s in a.get("stretchings", [])}
+    rows = []
+    for s in b.get("stretchings", []):
+        x = sa.get(key(s))
+        if x and x.get("equivalent_counts") is not None and s.get("equivalent_counts") is not None:
+            rows.append({"ayah": s["ayah"], "word": s["word"], "rule": s["rule"],
+                         "seconds": [x["seconds"], s["seconds"]], "equivalent_counts": [x["equivalent_counts"], s["equivalent_counts"]],
+                         "verdict": [x["verdict"], s["verdict"]]})
+    return {"unit_s": [a.get("unit_s"), b.get("unit_s")],
+            "speed_ratio": round(a["unit_s"] / b["unit_s"], 3) if a.get("unit_s") and b.get("unit_s") else None,
+            "stretchings": rows}

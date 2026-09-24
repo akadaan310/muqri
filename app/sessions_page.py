@@ -45,6 +45,13 @@ SESSIONS_PAGE = """<!doctype html>
  .panel .cur{color:var(--ok);font-size:.75rem}
  .shade{position:fixed;inset:0;background:#0005;z-index:35;display:none} .shade.open{display:block}
  .wrap{padding-top:56px}
+ .lq{border-top:1px solid var(--line);padding:12px 0 4px} .lq:first-of-type{border-top:0}
+ .lq .q{font-weight:600;font-size:.95rem} .lq .why{color:var(--mut);font-size:.8rem;margin:2px 0 8px}
+ .clip{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;padding:6px 0;border-bottom:1px dashed var(--line)}
+ .clip .who{min-width:150px;font-size:.85rem} .clip audio{height:34px;max-width:100%}
+ .clip button{margin:0;padding:6px 10px;font-size:.82rem;background:var(--card);color:var(--fg);border:1px solid var(--line)}
+ .clip button.on{background:var(--fg);color:var(--bg)}
+ .cmp{color:var(--mut);font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;margin-left:6px}
 </style></head><body><div class="wrap">
 <button class="hist-btn" onclick="panel(true)">☰ History</button>
 <div class="shade" id="shade" onclick="panel(false)"></div>
@@ -58,6 +65,7 @@ did not do. <a href="/">analyser</a> · <a href="/protocol">protocol</a></p>
 <p id="micnote" class="learn" style="display:none;border:1px solid var(--line);border-radius:8px;padding:8px 10px">
 In-page recording needs a secure (https) page, and this one is plain http. Use <b>● Record with phone</b>: it opens
 your phone's voice recorder, and the recording is uploaded and scored when you finish. Or <b>Choose File</b> to upload one.</p>
+<div id="listen"></div>
 <div id="ex">Loading…</div>
 </div>
 <script>
@@ -78,6 +86,28 @@ async function load(n){
   const d=await fetch('/sessions/round/'+CUR).then(r=>r.json());
   EX=d.exercises;
   document.getElementById('ex').innerHTML=EX.map((x,i)=>card(x,i,d.status[x.id]||{})).join('');
+  document.getElementById('listen').innerHTML=listen(d.listen||[]);
+}
+// questions for the expert's ear: a master's recitation, answered yes / no / unsure (saved as expert labels)
+function listen(L){
+  if(!L.length)return '';
+  const n=L.reduce((a,q)=>a+q.clips.length,0), done=L.reduce((a,q)=>a+q.clips.filter(c=>c.answer).length,0);
+  return '<div class="card"><h2>Listen and confirm <span class="mut" id="ldone">'+done+'/'+n+' answered</span></h2>'
+   +'<p class="goal">Questions only your ear can settle. Each clip is the whole ayah; the word in question is its last. '
+   +'<b>Yes</b> = heavy, <b>No</b> = light. Your answers are saved as expert labels.</p>'
+   +L.map(q=>'<div class="lq"><div class="q">'+esc(q.question)+' <span class="ar" style="font-size:1.1rem">'+esc(q.word)+'</span> <span class="mut">('+esc(q.ref)+')</span>'
+     +(q.comparison?'<span class="cmp">comparison</span>':'')+'</div><div class="why">'+esc(q.why)+'</div>'
+     +q.clips.map(c=>'<div class="clip" id="l-'+esc(c.id)+'"><span class="who">'+esc(c.reciter)+'</span><audio controls preload="none" src="'+esc(c.audio)+'"></audio>'
+       +['yes','no','unsure'].map(v=>'<button class="'+(c.answer==v?'on':'')+'" onclick="answer(this,&quot;'+esc(c.id)+'&quot;,&quot;'+v+'&quot;)">'+(v=='yes'?'Yes, heavy':v=='no'?'No, light':'Unsure')+'</button>').join('')
+       +'</div>').join('')+'</div>').join('')+'</div>';
+}
+async function answer(b,id,v){
+  const fd=new FormData();fd.append('id',id);fd.append('verdict',v);fd.append('note','round '+CUR+' listening');
+  const r=await fetch('/review/label',{method:'POST',body:fd});
+  if(!r.ok){alert('Not saved: '+r.status);return;}
+  const row=b.parentNode, first=!row.querySelector('button.on');
+  row.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
+  if(first){const e=document.getElementById('ldone'),m=e.textContent.match(/(\\d+)\\/(\\d+)/);e.textContent=(+m[1]+1)+'/'+m[2]+' answered';}
 }
 async function go(n,id){panel(false);await load(n);if(id){const e=document.getElementById('c-'+id);if(e)e.scrollIntoView();}}
 function verses(x){

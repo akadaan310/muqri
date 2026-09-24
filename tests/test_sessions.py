@@ -70,3 +70,27 @@ def test_consecutive_ayahs_never_share_audio_and_meet_at_the_pause() -> None:
     assert settle_boundaries(spans, pauses) == [(14, 202), (221, 373), (399, 849)]
     assert settle_boundaries([(0, 100), (80, 200)]) == [(0, 90), (90, 200)]   # no audio: split the overlap
     assert settle_boundaries([(0, 100), (120, 200)]) == [(0, 100), (120, 200)]  # already apart: untouched
+
+
+def test_every_exercise_points_at_real_words() -> None:
+    """Each expectation, mistake and control names a word that exists in its ayah."""
+    from app.engine import Engine
+    e = Engine()
+    for ex in exercises().values():
+        n = {a: len(e.reference(ex.surah, a).uthmani.split()) for a in range(ex.ayahs[0], ex.ayahs[1] + 1)}
+        for a, w in [(x.ayah, x.word) for x in ex.expect] + [(m.ayah, m.word) for m in ex.mistakes] + list(ex.controls):
+            assert a in n and 0 <= w < n[a], (ex.id, a, w)
+
+
+def test_listening_answers_are_saved_as_expert_labels(tmp_path, monkeypatch) -> None:  # type: ignore[no-untyped-def]
+    from app import review
+    from app.sessions import LISTEN, listen_json
+    monkeypatch.setattr(review, "LABELS", tmp_path / "labels.jsonl")
+    monkeypatch.setattr(review, "REVIEW_DIR", tmp_path)
+    q = listen_json(3, {})
+    assert {x["ref"] for x in q} >= {"54:2", "54:3", "54:19", "54:38"}
+    assert sum(len(x["clips"]) for x in q) == sum(len(l.reciters) for l in LISTEN[3])
+    cid = q[0]["clips"][0]["id"]
+    review.add_label(cid, "no", "round 3 listening")
+    again = listen_json(3, review.labels())
+    assert again[0]["clips"][0]["answer"] == "no" and again[0]["clips"][1]["answer"] is None

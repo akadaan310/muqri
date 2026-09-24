@@ -274,7 +274,182 @@ ROUNDS: dict[int, tuple[Exercise, ...]] = {
                    "every rule and characteristic. It should score the same as take A.",
             learn="The report compares your count unit and every stretching across the two speeds."),
     ),
+    3: (
+        Exercise(
+            "r3e1", "Light letters made heavy — al-Masad 111:1–3", 111, (1, 3),
+            goal="Rounds 1–2 caught ṣād→sīn, ḍād→ẓā', qāf→kāf and khā'→ḥā', but missed sīn→ṣād, ṭā'→tā' and "
+                 "ḍād→dāl -- the pairs that share a makhraj and differ only in itbāq and tafkhīm. This round "
+                 "tests the other direction (tā'→ṭā', dāl→ḍād) and sīn→ṣād again in a new word, with "
+                 "ṣād→sīn (caught before) in the same take as the reference point.",
+            spec="Tadwīr, stop at the end of each ayah. يَدَآ أَبِى and مَآ أَغْنَىٰ munfasil 4 · لَهَبٍۢ وَتَبَّ "
+                 "idghām with ghunnah · نَارًۭا ذَاتَ ikhfā' · qalqalah at the stops on وَتَبَّ, كَسَبَ, لَهَبٍۢ.",
+            wajh="tawassut",
+            expect=(Expect(1, 1, "madd_munfasil", _madd(4, 5), "declared tawassut"),
+                    Expect(1, 3, "idgham_ghunnah", _madd(2)), Expect(1, 4, "qalqalah"),
+                    Expect(2, 0, "madd_munfasil", _madd(4, 5), "declared tawassut"),
+                    Expect(2, 3, "madd_silah_sughra", _madd(2)), Expect(2, 5, "qalqalah"),
+                    Expect(3, 1, "ikhfa", _nasal("ikhfa")), Expect(3, 1, "tafkheem"), Expect(3, 3, "qalqalah")),
+            mistakes=(Mistake(1, 0, "تَبَّتْ — say the first tā' as ṭā': 'ṭabbat'.",
+                              (Sig("identity", letter="ت", heard=("ط",)), Sig("sifah", "tafkheem_or_taqeeq", letter="ت"),
+                               Sig("sifah", "itbaq", letter="ت"))),
+                      Mistake(1, 1, "يَدَآ — say the dāl as ḍād: 'yaḍā' (keep the munfasil at 4).",
+                              (Sig("identity", letter="د", heard=("ض",)), Sig("sifah", "tafkheem_or_taqeeq", letter="د"),
+                               Sig("sifah", "itbaq", letter="د"))),
+                      Mistake(2, 5, "كَسَبَ — say the sīn as ṣād: 'kaṣab'.",
+                              (Sig("identity", letter="س", heard=("ص",)), Sig("sifah", "tafkheem_or_taqeeq", letter="س"),
+                               Sig("sifah", "itbaq", letter="س"))),
+                      Mistake(3, 0, "سَيَصْلَىٰ — say the ṣād as sīn: 'sayaslā' (the direction caught before).",
+                              (Sig("identity", letter="ص", heard=("س",)), Sig("sifah", "itbaq", letter="ص"),
+                               Sig("sifah", "tafkheem_or_taqeeq", letter="ص")))),
+            controls=((1, 2), (2, 1), (2, 2), (3, 2)),
+            learn="If tā'→ṭā' and dāl→ḍād are caught but sīn→ṣād is missed again, the gap is one letter's "
+                  "test, not the itbāq pairs as a class; the margins show how far each moved."),
+        Exercise(
+            "r3e2", "The nasal family in context — az-Zalzalah 99:7–8", 99, (7, 8),
+            goal="Idghām with ghunnah three times, iẓhār ḥalqī and ikhfā' on tanwīn, and heavy rā's. The "
+                 "blind-spot graph finds the hidden nūn unreliable before ف ق ك س ت; before shīn it is trusted, "
+                 "so this is a clean test of whether an iẓhār of ikhfā' is heard -- and whether a merge "
+                 "without ghunnah is.",
+            spec="Tadwīr, stop at the end of each ayah (يَرَهْ). فَمَن يَعْمَلْ and وَمَن يَعْمَلْ idghām with "
+                 "ghunnah 2 · ذَرَّةٍ خَيْرًۭا iẓhār · خَيْرًۭا يَرَهُۥ and شَرًّۭا يَرَهُۥ idghām with ghunnah · "
+                 "ذَرَّةٍۢ شَرًّۭا ikhfā' · every rā' heavy.",
+            wajh="tawassut",
+            expect=(Expect(7, 0, "idgham_ghunnah", _madd(2)), Expect(7, 3, "izhar_halqi"),
+                    Expect(7, 4, "idgham_ghunnah", _madd(2)), Expect(7, 5, "tafkheem"),
+                    Expect(8, 0, "idgham_ghunnah", _madd(2)), Expect(8, 3, "ikhfa", _nasal("ikhfa")),
+                    Expect(8, 4, "idgham_ghunnah", _madd(2)), Expect(8, 4, "tafkheem")),
+            mistakes=(Mistake(7, 0, "فَمَن يَعْمَلْ — merge the nūn into the yā' with NO ghunnah: a plain 'fa-may-yaʿmal'.",
+                              (Sig("rule", "idgham_ghunnah", ("short", "wrong"), -1),
+                               Sig("sifah", "ghonna", letter="ي", word_offset=1), Sig("sifah", "ghonna"))),
+                      Mistake(7, 4, "خَيْرًۭا يَرَهُۥ — iẓhār of the tanwīn: 'khayran yarah', the nūn clear, no merging.",
+                              (Sig("rule", "idgham_ghunnah"), Sig("identity"))),
+                      Mistake(8, 3, "ذَرَّةٍۢ شَرًّۭا — iẓhār of the tanwīn before shīn: 'dharratin sharran', a clear nūn.",
+                              (Sig("rule", "ikhfa"), Sig("sifah", "ghonna", letter="ں"), Sig("identity", heard=("ن",)))),
+                      Mistake(8, 4, "شَرًّۭا — make the rā' light (it carries fatḥah and must be heavy).",
+                              (Sig("rule", "tafkheem"), Sig("sifah", "tafkheem_or_taqeeq", letter="ر")))),
+            controls=((7, 1), (7, 2), (7, 3), (8, 1), (8, 2)),
+            learn="A merge without ghunnah and an iẓhār in place of idghām have no letter competitor (the nūn "
+                  "is absent from the reference); only the rule's duration and the ghunnah head can see them."),
+        Exercise(
+            "r3e3", "Vowels: wrong, dropped, stretched — al-Kawthar 108:1–3", 108, (1, 3),
+            goal="Round 2's dropped ḍammah (كُفُوًا) went unseen: short vowels are tested only against each "
+                 "other, and a missing vowel has no competitor. This round separates four vowel errors -- a "
+                 "wrong vowel (has a competitor), a dropped vowel, a short vowel stretched into a madd, and a "
+                 "natural madd cut to one count.",
+            spec="Tadwīr, stop at the end of each ayah. إِنَّآ ghunnah and munfasil 4 · أَعْطَيْنَـٰكَ and "
+                 "شَانِئَكَ madd 2 · فَصَلِّ heavy ṣād · وَٱنْحَرْ and ٱلْأَبْتَرُ heavy rā' at the stop · "
+                 "ٱلْأَبْتَرُ qalqalah on the bā'.",
+            wajh="tawassut",
+            expect=(Expect(1, 0, "ghunnah", _nasal("ghunnah")), Expect(1, 0, "madd_munfasil", _madd(4, 5), "declared tawassut"),
+                    Expect(1, 1, "madd_tabii", _madd(2)), Expect(1, 1, "itbaq"), Expect(2, 0, "itbaq"),
+                    Expect(2, 1, "tafkheem"), Expect(2, 2, "izhar_halqi"), Expect(2, 2, "tafkheem"),
+                    Expect(3, 0, "ghunnah", _nasal("ghunnah")), Expect(3, 1, "madd_tabii", _madd(2)),
+                    Expect(3, 3, "qalqalah"), Expect(3, 3, "tafkheem")),
+            mistakes=(Mistake(1, 1, "أَعْطَيْنَـٰكَ — cut the madd on the nūn to one count: 'aʿṭaynaka'.",
+                              (Sig("rule", "madd_tabii", ("short",), -1), Sig("identity"))),
+                      Mistake(2, 0, "فَصَلِّ — end on fatḥah instead of kasrah: 'fa-ṣalla'.",
+                              (Sig("identity", heard=("َ",)),)),
+                      Mistake(3, 1, "شَانِئَكَ — drop the kasrah of the nūn: 'shān'aka'.",
+                              (Sig("identity"),)),
+                      Mistake(3, 2, "هُوَ — stretch the ḍammah into a madd: 'hūwa'.",
+                              (Sig("identity"),))),
+            controls=((1, 2), (2, 1), (2, 2), (3, 0), (3, 3)),
+            learn="The wrong vowel should be caught; if the dropped and stretched vowels are missed, the next "
+                  "step is to judge each short vowel's length in units of your own count -- the same "
+                  "calculus that judges the madds."),
+        Exercise(
+            "r3e4", "One long ayah — Yūnus 10:12", 10, (12, 12),
+            goal="Real learners read long ayahs. The knowledge graph chose this one from the long surahs "
+                 "(18–40 words) for coverage: 11 of the 12 rule kinds we target in 27 words, with three ḍāds, "
+                 "two sīns and a dāl. Does the engine hold alignment, tempo and every judgement over a "
+                 "long ayah, and do the substitutions tested in the short ones behave the same here?",
+            spec="Tadwīr, in one breath if you can (otherwise pause where you normally would), stop at the end. "
+                 "ٱلْإِنسَـٰنَ ikhfā' · ٱلضُّرُّ heavy ḍād · لِجَنۢبِهِۦٓ iqlāb and ṣila kubrā 4 · قَآئِمًۭا "
+                 "muttaṣil 4 and ikhfā' · فَلَمَّا ghunnah · كَأَن لَّمْ idghām without ghunnah · يَدْعُنَآ إِلَىٰ "
+                 "munfaṣil 4 and qalqalah on the dāl · ضُرٍّۢ مَّسَّهُۥ idghām with ghunnah · ٱلْمُسْرِفِينَ light rā'.",
+            wajh="tawassut",
+            expect=(Expect(12, 2, "ikhfa", _nasal("ikhfa")), Expect(12, 3, "tafkheem"), Expect(12, 3, "itbaq"),
+                    Expect(12, 5, "iqlab", _nasal("iqlab")),
+                    Expect(12, 5, "madd_silah_kubra", _madd(4, 5), "declared tawassut"),
+                    Expect(12, 7, "izhar_halqi"), Expect(12, 9, "madd_muttasil", _madd(4, 5)),
+                    Expect(12, 9, "ikhfa", _nasal("ikhfa")), Expect(12, 10, "ghunnah", _nasal("ghunnah")),
+                    Expect(12, 15, "idgham_no_ghunnah"),
+                    Expect(12, 17, "madd_munfasil", _madd(4, 5), "declared tawassut"), Expect(12, 17, "qalqalah"),
+                    Expect(12, 19, "idgham_ghunnah", _madd(2)), Expect(12, 23, "tarqeeq"),
+                    Expect(12, 26, "madd_arid_lissukun")),
+            mistakes=(Mistake(12, 1, "مَسَّ — say the sīn as ṣād: 'maṣṣa'.",
+                              (Sig("identity", letter="س", heard=("ص",)), Sig("sifah", "tafkheem_or_taqeeq", letter="س"),
+                               Sig("sifah", "itbaq", letter="س"))),
+                      Mistake(12, 4, "دَعَانَا — say the dāl as ḍād: 'ḍaʿānā'.",
+                              (Sig("identity", letter="د", heard=("ض",)), Sig("sifah", "tafkheem_or_taqeeq", letter="د"),
+                               Sig("sifah", "itbaq", letter="د"))),
+                      Mistake(12, 13, "ضُرَّهُۥ — say the ḍād as dāl: 'durrahu'.",
+                              (Sig("identity", letter="ض", heard=("د",)), Sig("sifah", "itbaq", letter="ض"),
+                               Sig("sifah", "tafkheem_or_taqeeq", letter="ض"), Sig("rule", "itbaq"))),
+                      Mistake(12, 19, "ضُرٍّۢ مَّسَّهُۥ — merge the tanwīn into the mīm with NO ghunnah.",
+                              (Sig("rule", "idgham_ghunnah", ("short", "wrong"), -1),
+                               Sig("sifah", "ghonna", letter="م", word_offset=1))),
+                      Mistake(12, 23, "ٱلْمُسْرِفِينَ — make the rā' heavy (it carries kasrah and must be light).",
+                              (Sig("rule", "tarqeeq"), Sig("sifah", "tafkheem_or_taqeeq", letter="ر")))),
+            controls=((12, 0), (12, 6), (12, 8), (12, 11), (12, 12), (12, 21), (12, 22), (12, 24), (12, 25)),
+            learn="The first long ayah in the sessions: a miss here that was caught in a short ayah points at "
+                  "alignment or tempo over length, not at the letter's test."),
+    ),
 }
+
+
+@dataclass(frozen=True, slots=True)
+class Listen:
+    """A question for the expert's ear: one word of a master's recitation, answered yes / no / unsure,
+    saved as an expert label (research_agency_lab/experiments/review/labels.jsonl)."""
+    id: str
+    surah: int
+    ayah: int
+    word: str
+    question: str
+    why: str
+    reciters: tuple[str, ...]
+    comparison: bool = False                 # a known case, to hear the recording's heavy / light first
+
+
+LISTENERS = ("Husary_128kbps", "Minshawy_Murattal_128kbps", "Abdul_Basit_Murattal_192kbps", "Alafasy_128kbps",
+             "Abdurrahmaan_As-Sudais_192kbps")
+RA_WHY = ("The reference and the model both call it heavy, 10/10 masters, but at a quarter of the model's "
+          "usual confidence -- and the model learned from the same reference, so it is not independent. "
+          "The stop makes it a sākin rā' after a kasrah, which the general rule makes light.")
+
+LISTEN: dict[int, tuple[Listen, ...]] = {
+    3: (
+        Listen("ra-54-2", 54, 2, "مُّسْتَمِرٌّۭ", "At the stop, is the rā' of مُّسْتَمِرّ heavy?", RA_WHY, LISTENERS),
+        Listen("ra-54-3", 54, 3, "مُّسْتَقِرٌّۭ", "At the stop, is the rā' of مُّسْتَقِرّ heavy?", RA_WHY, LISTENERS),
+        Listen("ra-54-19", 54, 19, "مُّسْتَمِرٍّۢ", "At the stop, is the rā' of مُّسْتَمِرّ heavy?", RA_WHY, LISTENERS),
+        Listen("ra-54-38", 54, 38, "مُّسْتَقِرٌّۭ", "At the stop, is the rā' of مُّسْتَقِرّ heavy?", RA_WHY, LISTENERS),
+        Listen("ra-89-4", 89, 4, "يَسْرِ", "At the stop, is the rā' of يَسْرِ heavy?",
+               "Both readings are allowed (its yā' is dropped); the reference says light and the model "
+               "hears heavy in 39 % of 41 masters, at its lowest confidence of any rā'. Which do these masters do?",
+               LISTENERS),
+        Listen("ra-54-1", 54, 1, "ٱلْقَمَرُ", "At the stop, is the rā' of ٱلْقَمَرُ heavy?",
+               "For comparison: a rā' after fatḥah, heavy by every account.", LISTENERS[:2], comparison=True),
+        Listen("ra-54-15", 54, 15, "مُّدَّكِرٍۢ", "At the stop, is the rā' of مُّدَّكِرٍ heavy?",
+               "For comparison: a rā' after kasrah, light by every account.", LISTENERS[:2], comparison=True),
+    ),
+}
+
+
+def listen_json(n: int, answered: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
+    """The round's listening questions, one clip per reciter, with any answer already given."""
+    out = []
+    for q in LISTEN.get(n, ()):
+        clips = []
+        for r in q.reciters:
+            cid = f"listen:{q.id}:{r}"
+            a = answered.get(cid)
+            clips.append({"id": cid, "reciter": r.split("_1")[0].split("_4")[0].replace("_", " "),
+                          "audio": f"https://everyayah.com/data/{r}/{q.surah:03d}{q.ayah:03d}.mp3",
+                          "answer": a["verdict"] if a else None})
+        out.append({"id": q.id, "ref": f"{q.surah}:{q.ayah}", "word": q.word, "question": q.question,
+                    "why": q.why, "comparison": q.comparison, "clips": clips})
+    return out
 
 
 def exercises() -> dict[str, Exercise]:

@@ -565,7 +565,9 @@ def create_app():  # type: ignore[no-untyped-def]
                 cards = sorted((SESSIONS_DIR / ex.id / take).glob("*.score.json")) if SESSIONS_DIR.is_dir() else []
                 if cards:
                     status.setdefault(ex.id, {})[take] = {"n": len(cards), "last": _json.loads(cards[-1].read_text())}
-        return {"round": n, "exercises": exs, "status": status}
+        from app import review
+        from app.sessions import listen_json
+        return {"round": n, "exercises": exs, "status": status, "listen": listen_json(n, review.labels())}
 
     @api.post("/sessions/submit")
     async def sessions_submit(

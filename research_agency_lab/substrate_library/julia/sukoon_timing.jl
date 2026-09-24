@@ -23,8 +23,12 @@
 #   separation            rikhw − shadeed, in counts: how strongly the ordering is realised
 #   ordered               whether rikhw > between > shadeed holds at all
 #
+# TIMING is `viterbi` (default, whole 40 ms frames) or `centroid` (sub-frame onsets from
+# `centroid_onsets`). At 40 ms a sakin letter is one or two frames, so under Viterbi rikhw and
+# bayniyya tie on quantised values; the centroid is what makes the three-way ordering measurable.
+#
 #   julia --project=research_agency_lab/substrate_library/julia \
-#         research_agency_lab/substrate_library/julia/sukoon_timing.jl DUMP_DIR OUT.json
+#         research_agency_lab/substrate_library/julia/sukoon_timing.jl DUMP_DIR OUT.json [TIMING]
 
 using QaariLab, JSON3, Statistics
 
@@ -38,7 +42,8 @@ speaker_of(id) = String(split(String(id), '/')[1])
 
 is_consonant(c) = !(c in SHORT_V) && !(c in MADD) && !(c in SPECIAL)
 
-function main(dir, out)
+function main(dir, out, timing = "viterbi")
+    timing in ("viterbi", "centroid") || error("timing must be viterbi or centroid, not $timing")
     C, c0, W, vocab, blank = load_dump_layout(dir)
     refs = load_sifat_ref(dir)
     isempty(refs) && error("no sifat.jsonl in $dir — run experiments/learner_eval/sifat_ref.py first")
@@ -64,7 +69,10 @@ function main(dir, out)
         spk = speaker_of(id)
         lp = read_dump_clip(dir, rec, C)[:, c0+1:c0+W]
         seq = [vocab[c] for c in ph]
-        _, f, l = ctc_viterbi(lp, seq, blank)
+        _, fi, l = ctc_viterbi(lp, seq, blank)
+        f = timing == "centroid" ?
+            [isfinite(c) ? c : Float64(v) for (c, v) in zip(centroid_onsets(lp, seq, blank), fi)] :
+            Float64.(fi)
         units = ph_units(ph)
         nu = length(units)
         onset(i) = f[units[i][2]]
@@ -121,12 +129,12 @@ function main(dir, out)
             " vs others ", round(median(oth); digits = 3),
             " | ordering holds: anchors ", count(x -> x.ordered && x.anchor, rows), "/", length(anc),
             ", others ", count(x -> x.ordered && !x.anchor, rows), "/", length(oth))
-    open(io -> JSON3.pretty(io, Dict("clips" => n, "reciters" => [Dict(pairs(x)) for x in rows],
+    open(io -> JSON3.pretty(io, Dict("clips" => n, "timing" => timing, "reciters" => [Dict(pairs(x)) for x in rows],
                                      "anchor_separation" => median(anc),
                                      "other_separation" => median(oth))), out, "w")
     println("$n clips in $(round(time() - t0; digits = 1)) s -> $out")
 end
 
 if abspath(PROGRAM_FILE) == @__FILE__
-    main(ARGS[1], ARGS[2])
+    main(ARGS...)
 end

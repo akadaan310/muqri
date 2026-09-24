@@ -70,6 +70,7 @@ def _verdict(value: float | None, target: float, higher_better: bool = True) -> 
 def build() -> list[tuple]:  # type: ignore[type-arg]
     ts, rs, sf = load("textswap"), load("ruleswap"), load("sifat")
     tw, sk, hk = load("tasawi"), load("sukoon"), load("harakat")
+    skc = load("sukoon_centroid")        # sukoon_timing.jl ... centroid
     cov, qc = load("letter_coverage"), load("qc")
     cal = json.loads((METRICS / "calibration.json").read_text()) if (METRICS / "calibration.json").is_file() else {}
     dist = load("distance")
@@ -140,11 +141,17 @@ def build() -> list[tuple]:  # type: ignore[type-arg]
             "anchor separation vs others (own counts)", round(a, 3), round(o, 3),
             len(sk["reciters"]), SHIP if a and o and a > o else CAUTION,
             "—" if a and o and a > o else "needs finer timing")
+        # the ordering needs sub-frame onsets: under Viterbi rikhw and bayniyya tie on whole frames
+        so = skc or sk
+        frac = round(sum(1 for r in so["reciters"] if r.get("ordered")) / len(so["reciters"]), 3)
         add("sukoon_ordering", "timing", "mastery",
             "strict rikhw > bayniyya > shadeed ordering",
-            "reciters where the strict ordering holds",
-            round(sum(1 for r in sk["reciters"] if r.get("ordered")) / len(sk["reciters"]), 3), 0.9,
-            len(sk["reciters"]), BLOCKED, "40 ms frames: rikhw and bayniyya tie on quantised values")
+            "reciters where the strict ordering holds" + (" (sub-frame onsets)" if skc else ""),
+            frac, 0.9, len(so["reciters"]),
+            (SHIP if frac >= 0.9 else CAUTION) if skc else BLOCKED,
+            ("16/41 under Viterbi -> sub-frame onsets; anchors 3/3, every failure is a fast voice "
+             "(haraka <= 0.22 s); the rikhw-bayniyya margin is thin even on anchors (0.05-0.08 counts)")
+            if skc else "40 ms frames: rikhw and bayniyya tie on quantised values")
     if hk:
         rr = hk["reciters"]
         add("ikhtilas", "timing", "advanced", "vowel truncated below one count (laḥn khafī)",

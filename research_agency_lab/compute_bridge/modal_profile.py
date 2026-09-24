@@ -47,9 +47,27 @@ image = (
 )
 
 
+def _audio(r: dict):  # type: ignore[no-untyped-def,type-arg]
+    """The verse's EveryAyah recording at 16 kHz, cut to the posteriors' frames (40 ms = 640 samples)."""
+    import io
+    import urllib.request
+
+    import librosa
+    import numpy as np
+    url = f"https://everyayah.com/data/{r['speaker']}/{r['sura']:03d}{r['aya']:03d}.mp3"
+    for _ in range(3):
+        try:
+            data = urllib.request.urlopen(url, timeout=60).read()
+            w = librosa.load(io.BytesIO(data), sr=16000, mono=True)[0][: r["frames"] * 640]
+            return np.pad(w, (0, r["frames"] * 640 - w.size)).astype("float32")
+        except Exception:  # noqa: BLE001 - retry, then grade without stops rather than lose the verse
+            continue
+    return None
+
+
 @app.function(image=image, volumes={"/vol": vol}, cpu=1.0, memory=3072, timeout=1800, max_containers=90,
               retries=1)
-def grade(shard: str, chunk: int, chunks: int) -> list[dict]:  # type: ignore[type-arg]
+def grade(shard: str, chunk: int, chunks: int, audio: bool = True) -> list[dict]:  # type: ignore[type-arg]
     import sys
     import warnings
 
@@ -68,7 +86,8 @@ def grade(shard: str, chunk: int, chunks: int) -> list[dict]:  # type: ignore[ty
     for r in recs:
         try:
             lp = np.fromfile(base / r["file"], dtype="<f4").reshape(r["frames"], lay["columns"])
-            rep = eng.analyze(None, [(r["sura"], r["aya"])], posteriors=lp)
+            wave = _audio(r) if audio else None       # stops are acoustic: without audio none are seen
+            rep = eng.analyze(wave, [(r["sura"], r["aya"])], posteriors=lp)
             out.append(record(rep, r["speaker"], "everyayah", r["sura"], r["aya"]))
         except Exception as exc:  # noqa: BLE001 - one bad clip must not lose the chunk
             out.append({"source": "everyayah", "speaker": r["speaker"], "surah": r["sura"], "ayah": r["aya"],
@@ -83,11 +102,11 @@ def smoke() -> None:
 
 
 @app.local_entrypoint()
-def run(chunks: int = 12) -> None:
+def run(chunks: int = 12, audio: bool = True) -> None:
     import time
     t = time.time()
-    jobs = [(s, c, chunks) for s in SHARDS for c in range(chunks)]
-    out = ROOT / "research_agency_lab/experiments/profiles/clips.jsonl"
+    jobs = [(s, c, chunks, audio) for s in SHARDS for c in range(chunks)]
+    out = ROOT / f"research_agency_lab/experiments/profiles/clips{'' if audio else '_noaudio'}.jsonl"
     out.parent.mkdir(parents=True, exist_ok=True)
     n = err = 0
     with open(out, "w") as f:

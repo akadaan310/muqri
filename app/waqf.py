@@ -131,7 +131,11 @@ def find_stops(units, word_ph: list[list[int]], wave=None, *,  # type: ignore[no
 
 
 def madd_at_stops(bounds, stops: list[Stop], units):  # type: ignore[no-untyped-def]
-    """Re-type a natural madd as madd 'arid li-s-sukun when the reciter stopped on its word.
+    """Re-type the madds a stop changes, on the word the reciter stopped on.
+
+    * natural madd before the word's last consonant -> madd 'arid li-s-sukun (2 / 4 / 6)
+    * madd munfasil -> natural madd (2): the hamza of the next word is no longer joined
+    * silah (sughra / kubra) of the pronoun haa -> not recited at all
 
     The rule binder reads the text in wasl (continuous), where فِيهِ has a natural madd of two
     counts. Stopping on it silences the final vowel, the ه becomes sakin, and the madd is now followed
@@ -144,11 +148,24 @@ def madd_at_stops(bounds, stops: list[Stop], units):  # type: ignore[no-untyped-
     madd from that stop.
     """
     from dataclasses import replace
-    ends = {s.after_unit for s in stops if s.position == "word_boundary" and s.duration_s > 0}
+    real = [s for s in stops if s.position == "word_boundary" and s.duration_s > 0]
+    ends = {s.after_unit for s in real}
+    stopped_words = {s.word_index for s in real if s.word_index is not None}
     if not ends:
         return bounds
     out = []
     for b in bounds:
+        # A munfasil exists only because the next word starts with hamza, and a silah only because the
+        # next word is read on: stopping after the word removes both (waqf_table: 2,659 boundaries
+        # where the munfasil falls back to a natural madd, 2,135 where the haa's silah drops). Graded
+        # as wasl they were the two "hardest rules" across 41 reciters (pass 0.52 and 0.44).
+        if b.word_index in stopped_words and b.rule_type == "madd_munfasil":
+            out.append(replace(b, rule_type="madd_tabii", expected_counts=(2.0, 2.0), at_waqf=True,
+                               detail="munfasil falls back to a natural madd: the reciter stopped on this word"))
+            continue
+        if b.word_index in stopped_words and b.rule_type in ("madd_silah_sughra", "madd_silah_kubra"):
+            continue                                   # not recited at a stop
+        # the natural madd before a final consonant becomes 'arid
         if b.rule_type == "madd_tabii" and b.unit_indices:
             m = b.unit_indices[-1]
             for e in ends:

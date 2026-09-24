@@ -1,0 +1,51 @@
+check                 instances  failure   held-out log-loss  (letter only -> context)   AUC (letter -> context)
+ghonna                   567755  0.004      0.0209 -> 0.0169                0.89 -> 0.916
+hams_or_jahr             567755  0.0027     0.0175 -> 0.0148                0.804 -> 0.874
+identity                1092012  0.0118     0.06 -> 0.0479                0.738 -> 0.87
+itbaq                    567755  0.0013     0.0066 -> 0.0039                0.958 -> 0.958
+qalqla                   567755  0.0023     0.0116 -> 0.009                0.947 -> 0.974
+safeer                   567755  0.0005     0.0033 -> 0.0032                0.922 -> 0.895
+shidda_or_rakhawa        493145  0.0061     0.0363 -> 0.0314                0.703 -> 0.813
+tafashie                 567755  0.0021     0.006 -> 0.0018                0.989 -> 0.984
+tafkheem_or_taqeeq       567755  0.0101     0.0363 -> 0.03                0.924 -> 0.956
+
+held-out suppression at predicted master failure >= 0.25:
+   ghonna                 professional failures removed 0.22    checks given up 0.0023
+   hams_or_jahr           professional failures removed 0.048   checks given up 0.0004
+   identity               professional failures removed 0.157   checks given up 0.0061
+   itbaq                  professional failures removed 0.636   checks given up 0.0012
+   qalqla                 professional failures removed 0.145   checks given up 0.0004
+   safeer                 professional failures removed 0.0     checks given up 0.0
+   shidda_or_rakhawa      professional failures removed 0.102   checks given up 0.0013
+   tafashie               professional failures removed 0.921   checks given up 0.002
+   tafkheem_or_taqeeq     professional failures removed 0.466   checks given up 0.0123
+
+dependence map: I(feature; failure | letter), bits x 1000
+   ghonna                next 3.97   sym_next 3.97   prev2 3.75
+   hams_or_jahr          prev2 4.02   prev 3.0   sym_prev 3.0
+   identity              next 10.4   sym_next 10.4   prev2 8.24
+   itbaq                 prev 4.32   sym_prev 4.32   next 2.09
+   qalqla                prev2 2.67   next 2.43   sym_next 2.43
+   safeer                prev2 0.53   prev 0.34   sym_prev 0.34
+   shidda_or_rakhawa     prev2 6.28   prev 5.19   sym_prev 5.19
+   tafashie              ctx 6.34   prev2 2.43   prev 1.19
+   tafkheem_or_taqeeq    prev2 6.62   prev 5.45   sym_prev 5.45
+
+words where masters fail a check >= 30 % (n >= 10): 402
+   من|2|ں|tafkheem_or_taqeeq   530/1684
+   الشيطن|0|ش|tafashie   400/400
+   انفسهم|2|ں|tafkheem_or_taqeeq   216/379
+   اتقوا|3|َ|identity   123/200
+   الشيطين|0|ش|tafashie   120/120
+   الشمس|0|ش|tafashie   120/120
+   شيا|5|و|identity   112/239
+   كنتم|2|ں|tafkheem_or_taqeeq   102/311
+   وان|4|ں|tafkheem_or_taqeeq   88/242
+   الانثيين|10|ِ|identity   84/158
+   بعض|4|ِ|identity   84/159
+   الشمال|0|ش|tafashie   82/82
+   يشاء|5|ُ|identity   82/191
+   انصار|6|ر|tafkheem_or_taqeeq   80/82
+   مسمي|6|ن|shidda_or_rakhawa   79/81
+
+-> /home/azureuser/github-director/repos/muqri/research_agency_lab/experiments/quran/blindspots.json

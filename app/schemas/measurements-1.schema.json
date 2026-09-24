@@ -489,6 +489,13 @@
         },
         "z_masters": {
           "$ref": "#/$defs/z"
+        },
+        "blind_spot_p": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Probability that a professional reciter fails this check in this context (substrate_library/julia/blindspots.jl over 41 reciters). At or above the model's tau the check is not scored."
         }
       }
     },
@@ -582,6 +589,16 @@
                 "null"
               ],
               "description": "Nats by which the expected letter beat its competitor."
+            },
+            "scored": {
+              "type": "boolean",
+              "description": "False where the identity test is a blind spot of the acoustic model in this context."
+            },
+            "blind_spot_p": {
+              "type": [
+                "number",
+                "null"
+              ]
             }
           }
         },

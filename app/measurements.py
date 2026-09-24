@@ -94,21 +94,32 @@ def build(report: dict[str, Any]) -> dict[str, Any]:
         t0 = a["frames"][0] * 0.04
         failing: dict[int, list[str]] = {w["index"]: [] for w in a.get("words", [])}
         lid = lambda i: f"{s}:{y}:L{i}"  # noqa: E731
+        # where the acoustic model is blind in this context (app/blindspots.py): above tau a check
+        # is reported, not scored -- professionals "fail" it there, so a learner's failure means nothing
+        from app.blindspots import annotate, model as _bs_model
+        tau = (_bs_model() or {}).get("tau", 1.1)
+        light = [{"id": lid(i), "symbol": l["symbol"], "kind": l["kind"], "run_length": l.get("run_length", 1),
+                  "word": l.get("word"), "characteristics": l.get("sifat") or {}} for i, l in enumerate(a.get("letters", []))]
+        blind = annotate(light, {w["index"]: w["word"] for w in a.get("words", [])})
         for i, l in enumerate(a.get("letters", [])):
             chars = {}
             for head, sv in (l.get("sifat") or {}).items():
-                scored = judged(head, l.get("run_length", 1), l["symbol"])
+                bp = blind[i].get(head)
+                scored = judged(head, l.get("run_length", 1), l["symbol"]) and not (bp is not None and bp >= tau)
                 margin = sv.get("llr")
                 pct = _char_pct(head, l["symbol"], margin)
                 # model_best is the best class OTHER than the expected one: it is what was heard
                 # only when the expected class lost
                 chars[head] = {"expected": sv.get("expected"),
                                "observed": sv.get("expected") if sv.get("realised") else sv.get("model_best"),
-                               "competitor": sv.get("model_best"), "margin": margin, "realised": bool(sv.get("realised")), "scored": scored, **pct}
+                               "competitor": sv.get("model_best"), "margin": margin, "realised": bool(sv.get("realised")), "scored": scored,
+                               "blind_spot_p": None if bp is None else round(bp, 3), **pct}
                 if scored and not sv.get("realised") and l.get("word") in failing:
                     failing[l["word"]].append(f"{lid(i)}:{head}")
             idn = l["identity"]
-            if not idn["confirmed"] and l.get("word") in failing:
+            ibp = blind[i].get("identity")
+            id_scored = not (ibp is not None and ibp >= tau)
+            if not idn["confirmed"] and id_scored and l.get("word") in failing:
                 failing[l["word"]].append(f"{lid(i)}:identity")
             letters.append({
                 "id": lid(i), "word": wabs(l.get("word")), "symbol": l["symbol"], "kind": l["kind"],
@@ -117,10 +128,20 @@ def build(report: dict[str, Any]) -> dict[str, Any]:
                 "duration_counts": l.get("duration_counts"),
                 "edge": bool(l.get("edge")),
                 "identity": {"confirmed": idn["confirmed"], "competitor": idn["heard_instead"] or None,
-                             "margin": None if idn.get("llr") is None else -idn["llr"]},
+                             "margin": None if idn.get("llr") is None else -idn["llr"], "scored": id_scored,
+                             "blind_spot_p": None if ibp is None else round(ibp, 3)},
                 "characteristics": chars})
         for j, v in enumerate(a.get("rules", [])):
             ev = v.get("evidence") or {}
+            # a rule that failed only on checks the model is blind to here is not a finding
+            if v["status"] == "wrong" and v.get("units"):
+                us = [u for u in v["units"] if 0 <= u < len(blind)]
+                head = ev.get("head") if v.get("mechanism") == "attribute" else "identity"
+                failed = [u for u in us if (a["letters"][u].get("sifat", {}).get(head, {}).get("llr", 1) <= 0
+                                            if head != "identity" else not a["letters"][u]["identity"]["confirmed"])]
+                if failed and all((blind[u].get(head) or 0) >= tau for u in failed):
+                    v = {**v, "status": "unconfirmed", "evidence": {**ev, "reason": "a blind spot of the acoustic model "
+                         "in this context (professionals fail this check here too)"}}
             counts = ev.get("given_counts")
             exp = v.get("expected_counts")
             dev = None
@@ -174,7 +195,7 @@ def build(report: dict[str, Any]) -> dict[str, Any]:
                       "edge_letters": sum(l["edge"] for l in letters)},
         "summary": {
             "words": len(words), "words_all_correct": sum(w["all_correct"] for w in words),
-            "letters": len(letters), "identity_not_confirmed": sum(not l["identity"]["confirmed"] for l in letters),
+            "letters": len(letters), "identity_not_confirmed": sum(l["identity"]["scored"] and not l["identity"]["confirmed"] for l in letters),
             "characteristics_scored": len(scored_chars),
             "characteristics_not_realised": sum(not c["realised"] for c in scored_chars),
             "rules_scored": sum(r["scored"] for r in rules),

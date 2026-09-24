@@ -233,3 +233,94 @@ def stretch(chunks: int = 12) -> None:
                 n += 1
                 err += "error" in r
     print(f"{n} verse records ({err} errors) in {time.time() - t:.0f} s -> {out}")
+
+
+# ------------------------------------------------------------------ where the masters themselves fail a check
+FEATURE_VERSION = 1
+
+
+@app.function(image=image, volumes={"/vol": vol}, cpu=1.0, memory=3072, timeout=1800, max_containers=90,
+              retries=1)
+def checks_chunk(shard: str, chunk: int, chunks: int) -> dict:  # type: ignore[type-arg]
+    """Every scored check (characteristic heads, letter identity) of every T300 recitation, aggregated
+    by its CONTEXT -- letter, check, the sound before and after, voweled / saakin / doubled / stop,
+    position in the word -- and by word, per reciter half (fold 0 / 1, for held-out validation):
+    [instances, failures, sum of margins]. substrate_library/julia/blindspots.jl learns from it
+    where the acoustic model cannot be trusted."""
+    import sys
+    import warnings
+    import zlib
+
+    import numpy as np
+    warnings.filterwarnings("ignore")
+    sys.path.insert(0, "/root/qaari")
+    from app.engine import Engine
+    from app.letter_matrix import _context
+    from app.verse_detect import normalise
+
+    lay = json.loads(Path("/root/qaari/layout.json").read_text())
+    base = Path(f"/vol/muaalem/T300/{shard}")
+    recs = [json.loads(line) for line in open(base / "index.jsonl")]
+    recs = [r for r in recs if "file" in r][chunk::chunks]
+    eng = Engine(layout=lay)
+    ctx_agg: dict[str, list] = {}   # type: ignore[type-arg]
+    word_agg: dict[str, list] = {}  # type: ignore[type-arg]
+    for r in recs:
+        try:
+            lp = np.fromfile(base / r["file"], dtype="<f4").reshape(r["frames"], lay["columns"])
+            m = eng.analyze(_audio(r), [(r["sura"], r["aya"])], posteriors=lp)["measurements"]
+        except Exception:  # noqa: BLE001
+            continue
+        fold = zlib.crc32(r["speaker"].encode()) % 2
+        L = m["letters"]
+        text = {int(w["ref"].split(":")[2]): normalise(w["text"]) for w in m["words"]}
+        last_word = max(text) if text else -1
+        pos: dict[int, int] = {}
+        nwc: dict[int, int] = {}
+        for l in L:
+            if l["word"] is not None:
+                nwc[l["word"]] = nwc.get(l["word"], 0) + 1
+        for i, l in enumerate(L):
+            w = l["word"]
+            if w is None:
+                continue
+            k = pos.get(w, 0)
+            pos[w] = k + 1
+            checks = [(h, c["realised"], c["margin"]) for h, c in l["characteristics"].items() if c["scored"]]
+            if l["identity"]["margin"] is not None:
+                checks.append(("identity", l["identity"]["confirmed"], l["identity"]["margin"]))
+            if not checks:
+                continue
+            prev = L[i - 1]["symbol"] if i else "^"
+            prev2 = L[i - 2]["symbol"] if i > 1 else "^"
+            nxt = L[i + 1]["symbol"] if i + 1 < len(L) else "$"
+            wpos = "initial" if k == 0 else ("final" if k == nwc[w] - 1 else "medial")
+            ctx = _context(L, i) if l["kind"] in ("consonant", "ikhfa_noon", "iqlab_meem") else l["kind"]
+            stop = "ayah_final_word" if w == last_word else "inner_word"
+            for h, ok, mg in checks:
+                for agg, key in ((ctx_agg, f"{fold}|{l['symbol']}|{h}|{prev2}|{prev}|{nxt}|{ctx}|{wpos}|{stop}"),
+                                 (word_agg, f"{fold}|{text.get(w, '')}|{k}|{l['symbol']}|{h}")):
+                    a = agg.setdefault(key, [0, 0, 0.0])
+                    a[0] += 1
+                    a[1] += (not ok)
+                    a[2] += float(mg or 0.0)
+    return {"ctx": ctx_agg, "word": word_agg}
+
+
+@app.local_entrypoint()
+def checks(chunks: int = 12) -> None:
+    import gzip
+    import time
+    t = time.time()
+    tot: dict[str, dict] = {"ctx": {}, "word": {}}  # type: ignore[type-arg]
+    for part in checks_chunk.starmap([(s, c, chunks) for s in SHARDS for c in range(chunks)], order_outputs=False):
+        for kind in ("ctx", "word"):
+            for k, (n, bad, mg) in part[kind].items():
+                a = tot[kind].setdefault(k, [0, 0, 0.0])
+                a[0] += n
+                a[1] += bad
+                a[2] += mg
+    out = ROOT / "research_agency_lab/experiments/quran/checks_T300.json.gz"
+    with gzip.open(out, "wt", encoding="utf-8") as f:
+        json.dump({"feature_version": FEATURE_VERSION, **tot}, f, ensure_ascii=False)
+    print(f"{len(tot['ctx'])} context keys, {len(tot['word'])} word keys in {time.time() - t:.0f} s -> {out}")

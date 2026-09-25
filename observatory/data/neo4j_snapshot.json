@@ -1,0 +1,931 @@
+{
+ "labels": {
+  "Sound": 43,
+  "Check": 10,
+  "Context": 10197,
+  "Word": 2049,
+  "Surah": 114,
+  "Ayah": 6236,
+  "QWord": 77433,
+  "Rule": 37,
+  "Sifah": 18,
+  "Makhraj": 16,
+  "Letter": 29,
+  "Region": 4,
+  "Reciter": 42,
+  "Feature": 1380,
+  "Characteristic": 22,
+  "Measure": 47,
+  "Concept": 16,
+  "Community": 2,
+  "Performance": 11996,
+  "RuleLevel": 22,
+  "Skill": 43,
+  "Exercise": 7,
+  "Take": 37,
+  "ScriptedMistake": 27,
+  "RaContext": 21
+ },
+ "relationships": {
+  "LETTER": 10197,
+  "AFTER": 10197,
+  "BEFORE": 10197,
+  "FAILS": 133902,
+  "HAS": 83958,
+  "NEXT": 77432,
+  "CARRIES": 174325,
+  "HAS_SIFAH": 155,
+  "ARTICULATED_AT": 29,
+  "IN": 16,
+  "PRECEDES": 751,
+  "IS_LETTER": 29,
+  "OF_LETTER": 1380,
+  "REALISES": 55680,
+  "TRAVELS_WITH": 99,
+  "NEAR": 276,
+  "IN_COMMUNITY": 41,
+  "KEEPS": 1389,
+  "PREREQUISITE_OF": 73,
+  "READY_FOR": 229,
+  "FAILS_WITH": 94,
+  "DEPENDS": 31,
+  "PC_LINK": 64,
+  "CAUSES": 12,
+  "RECITED": 11996,
+  "OF": 12055,
+  "HOLDS": 656,
+  "COVARIES": 220,
+  "IS_RULE": 33,
+  "ON": 18,
+  "SCRIPTS": 27,
+  "AT": 27,
+  "RECORDED": 37,
+  "JUDGED": 70,
+  "TRAINS": 29968,
+  "SAME_TAJWID": 30385,
+  "SAID_RA": 6891
+ },
+ "patterns": [
+  {
+   "from": "QWord",
+   "rel": "CARRIES",
+   "to": "Rule",
+   "count": 174325
+  },
+  {
+   "from": "Word",
+   "rel": "FAILS",
+   "to": "Check",
+   "count": 85699
+  },
+  {
+   "from": "Ayah",
+   "rel": "HAS",
+   "to": "QWord",
+   "count": 77433
+  },
+  {
+   "from": "QWord",
+   "rel": "NEXT",
+   "to": "QWord",
+   "count": 77432
+  },
+  {
+   "from": "Reciter",
+   "rel": "REALISES",
+   "to": "Feature",
+   "count": 55680
+  },
+  {
+   "from": "Context",
+   "rel": "FAILS",
+   "to": "Check",
+   "count": 48203
+  },
+  {
+   "from": "Ayah",
+   "rel": "SAME_TAJWID",
+   "to": "Ayah",
+   "count": 30385
+  },
+  {
+   "from": "Ayah",
+   "rel": "TRAINS",
+   "to": "Rule",
+   "count": 29968
+  },
+  {
+   "from": "Reciter",
+   "rel": "RECITED",
+   "to": "Performance",
+   "count": 11996
+  },
+  {
+   "from": "Performance",
+   "rel": "OF",
+   "to": "Ayah",
+   "count": 11996
+  },
+  {
+   "from": "Context",
+   "rel": "LETTER",
+   "to": "Sound",
+   "count": 10197
+  },
+  {
+   "from": "Context",
+   "rel": "AFTER",
+   "to": "Sound",
+   "count": 10197
+  },
+  {
+   "from": "Context",
+   "rel": "BEFORE",
+   "to": "Sound",
+   "count": 10197
+  },
+  {
+   "from": "Reciter",
+   "rel": "SAID_RA",
+   "to": "RaContext",
+   "count": 6891
+  },
+  {
+   "from": "Surah",
+   "rel": "HAS",
+   "to": "Ayah",
+   "count": 6236
+  },
+  {
+   "from": "Reciter",
+   "rel": "KEEPS",
+   "to": "Rule",
+   "count": 1389
+  },
+  {
+   "from": "Feature",
+   "rel": "OF_LETTER",
+   "to": "Letter",
+   "count": 1380
+  },
+  {
+   "from": "Sound",
+   "rel": "PRECEDES",
+   "to": "Sound",
+   "count": 751
+  },
+  {
+   "from": "Reciter",
+   "rel": "HOLDS",
+   "to": "Rule",
+   "count": 656
+  },
+  {
+   "from": "Letter",
+   "rel": "HAS",
+   "to": "Characteristic",
+   "count": 289
+  },
+  {
+   "from": "Reciter",
+   "rel": "NEAR",
+   "to": "Reciter",
+   "count": 276
+  },
+  {
+   "from": "Reciter",
+   "rel": "READY_FOR",
+   "to": "Rule",
+   "count": 229
+  },
+  {
+   "from": "Skill",
+   "rel": "COVARIES",
+   "to": "Skill",
+   "count": 220
+  },
+  {
+   "from": "Letter",
+   "rel": "HAS_SIFAH",
+   "to": "Sifah",
+   "count": 155
+  },
+  {
+   "from": "Feature",
+   "rel": "TRAVELS_WITH",
+   "to": "Feature",
+   "count": 99
+  },
+  {
+   "from": "Rule",
+   "rel": "FAILS_WITH",
+   "to": "Rule",
+   "count": 94
+  },
+  {
+   "from": "Rule",
+   "rel": "PREREQUISITE_OF",
+   "to": "Rule",
+   "count": 73
+  },
+  {
+   "from": "Take",
+   "rel": "JUDGED",
+   "to": "ScriptedMistake",
+   "count": 70
+  },
+  {
+   "from": "Measure",
+   "rel": "PC_LINK",
+   "to": "Measure",
+   "count": 64
+  },
+  {
+   "from": "Reciter",
+   "rel": "IN_COMMUNITY",
+   "to": "Community",
+   "count": 41
+  },
+  {
+   "from": "Take",
+   "rel": "OF",
+   "to": "Exercise",
+   "count": 37
+  },
+  {
+   "from": "Reciter",
+   "rel": "RECORDED",
+   "to": "Take",
+   "count": 37
+  },
+  {
+   "from": "Skill",
+   "rel": "IS_RULE",
+   "to": "Rule",
+   "count": 33
+  },
+  {
+   "from": "Measure",
+   "rel": "DEPENDS",
+   "to": "Measure",
+   "count": 31
+  },
+  {
+   "from": "Letter",
+   "rel": "ARTICULATED_AT",
+   "to": "Makhraj",
+   "count": 29
+  },
+  {
+   "from": "Sound",
+   "rel": "IS_LETTER",
+   "to": "Letter",
+   "count": 29
+  },
+  {
+   "from": "Exercise",
+   "rel": "SCRIPTS",
+   "to": "ScriptedMistake",
+   "count": 27
+  },
+  {
+   "from": "ScriptedMistake",
+   "rel": "AT",
+   "to": "QWord",
+   "count": 27
+  },
+  {
+   "from": "RuleLevel",
+   "rel": "OF",
+   "to": "Rule",
+   "count": 22
+  },
+  {
+   "from": "Exercise",
+   "rel": "ON",
+   "to": "Ayah",
+   "count": 18
+  },
+  {
+   "from": "Makhraj",
+   "rel": "IN",
+   "to": "Region",
+   "count": 16
+  },
+  {
+   "from": "Concept",
+   "rel": "CAUSES",
+   "to": "Concept",
+   "count": 12
+  }
+ ],
+ "indexes": [
+  {
+   "name": "ayah_ref",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "Ayah"
+   ],
+   "properties": [
+    "ref"
+   ]
+  },
+  {
+   "name": "charac_id",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "Characteristic"
+   ],
+   "properties": [
+    "id"
+   ]
+  },
+  {
+   "name": "check_name",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "Check"
+   ],
+   "properties": [
+    "name"
+   ]
+  },
+  {
+   "name": "concept_name",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "Concept"
+   ],
+   "properties": [
+    "name"
+   ]
+  },
+  {
+   "name": "context_key",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "Context"
+   ],
+   "properties": [
+    "key"
+   ]
+  },
+  {
+   "name": "exercise_id",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "Exercise"
+   ],
+   "properties": [
+    "id"
+   ]
+  },
+  {
+   "name": "feature_id",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "Feature"
+   ],
+   "properties": [
+    "id"
+   ]
+  },
+  {
+   "name": "index_1b9dcc97",
+   "type": "LOOKUP",
+   "labelsOrTypes": null,
+   "properties": null
+  },
+  {
+   "name": "index_460996c0",
+   "type": "LOOKUP",
+   "labelsOrTypes": null,
+   "properties": null
+  },
+  {
+   "name": "letter_ch",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "Letter"
+   ],
+   "properties": [
+    "ch"
+   ]
+  },
+  {
+   "name": "makhraj_name",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "Makhraj"
+   ],
+   "properties": [
+    "name"
+   ]
+  },
+  {
+   "name": "measure_name",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "Measure"
+   ],
+   "properties": [
+    "name"
+   ]
+  },
+  {
+   "name": "perf_id",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "Performance"
+   ],
+   "properties": [
+    "id"
+   ]
+  },
+  {
+   "name": "qword_ref",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "QWord"
+   ],
+   "properties": [
+    "ref"
+   ]
+  },
+  {
+   "name": "racontext",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "RaContext"
+   ],
+   "properties": [
+    "name"
+   ]
+  },
+  {
+   "name": "reciter_name",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "Reciter"
+   ],
+   "properties": [
+    "name"
+   ]
+  },
+  {
+   "name": "rule_name",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "Rule"
+   ],
+   "properties": [
+    "name"
+   ]
+  },
+  {
+   "name": "rulelevel",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "RuleLevel"
+   ],
+   "properties": [
+    "key"
+   ]
+  },
+  {
+   "name": "scripted_id",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "ScriptedMistake"
+   ],
+   "properties": [
+    "id"
+   ]
+  },
+  {
+   "name": "sifah_name",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "Sifah"
+   ],
+   "properties": [
+    "name"
+   ]
+  },
+  {
+   "name": "sound_symbol",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "Sound"
+   ],
+   "properties": [
+    "symbol"
+   ]
+  },
+  {
+   "name": "surah_n",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "Surah"
+   ],
+   "properties": [
+    "n"
+   ]
+  },
+  {
+   "name": "take_id",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "Take"
+   ],
+   "properties": [
+    "id"
+   ]
+  },
+  {
+   "name": "word_text",
+   "type": "RANGE",
+   "labelsOrTypes": [
+    "Word"
+   ],
+   "properties": [
+    "text"
+   ]
+  }
+ ],
+ "constraints": [
+  {
+   "name": "ayah_ref",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "Ayah"
+   ],
+   "properties": [
+    "ref"
+   ]
+  },
+  {
+   "name": "charac_id",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "Characteristic"
+   ],
+   "properties": [
+    "id"
+   ]
+  },
+  {
+   "name": "check_name",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "Check"
+   ],
+   "properties": [
+    "name"
+   ]
+  },
+  {
+   "name": "concept_name",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "Concept"
+   ],
+   "properties": [
+    "name"
+   ]
+  },
+  {
+   "name": "context_key",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "Context"
+   ],
+   "properties": [
+    "key"
+   ]
+  },
+  {
+   "name": "exercise_id",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "Exercise"
+   ],
+   "properties": [
+    "id"
+   ]
+  },
+  {
+   "name": "feature_id",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "Feature"
+   ],
+   "properties": [
+    "id"
+   ]
+  },
+  {
+   "name": "letter_ch",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "Letter"
+   ],
+   "properties": [
+    "ch"
+   ]
+  },
+  {
+   "name": "makhraj_name",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "Makhraj"
+   ],
+   "properties": [
+    "name"
+   ]
+  },
+  {
+   "name": "measure_name",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "Measure"
+   ],
+   "properties": [
+    "name"
+   ]
+  },
+  {
+   "name": "perf_id",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "Performance"
+   ],
+   "properties": [
+    "id"
+   ]
+  },
+  {
+   "name": "qword_ref",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "QWord"
+   ],
+   "properties": [
+    "ref"
+   ]
+  },
+  {
+   "name": "racontext",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "RaContext"
+   ],
+   "properties": [
+    "name"
+   ]
+  },
+  {
+   "name": "reciter_name",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "Reciter"
+   ],
+   "properties": [
+    "name"
+   ]
+  },
+  {
+   "name": "rule_name",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "Rule"
+   ],
+   "properties": [
+    "name"
+   ]
+  },
+  {
+   "name": "rulelevel",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "RuleLevel"
+   ],
+   "properties": [
+    "key"
+   ]
+  },
+  {
+   "name": "scripted_id",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "ScriptedMistake"
+   ],
+   "properties": [
+    "id"
+   ]
+  },
+  {
+   "name": "sifah_name",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "Sifah"
+   ],
+   "properties": [
+    "name"
+   ]
+  },
+  {
+   "name": "sound_symbol",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "Sound"
+   ],
+   "properties": [
+    "symbol"
+   ]
+  },
+  {
+   "name": "surah_n",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "Surah"
+   ],
+   "properties": [
+    "n"
+   ]
+  },
+  {
+   "name": "take_id",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "Take"
+   ],
+   "properties": [
+    "id"
+   ]
+  },
+  {
+   "name": "word_text",
+   "type": "NODE_PROPERTY_UNIQUENESS",
+   "labelsOrTypes": [
+    "Word"
+   ],
+   "properties": [
+    "text"
+   ]
+  }
+ ],
+ "properties": {
+  "Sound": [
+   "emb",
+   "symbol"
+  ],
+  "Check": [
+   "name"
+  ],
+  "Context": [
+   "ayah_position",
+   "emb",
+   "key",
+   "letter",
+   "next",
+   "position",
+   "prev",
+   "prev2",
+   "word_position"
+  ],
+  "Word": [
+   "text"
+  ],
+  "Surah": [
+   "n"
+  ],
+  "Ayah": [
+   "ayah",
+   "ref",
+   "surah",
+   "text",
+   "words"
+  ],
+  "QWord": [
+   "bare",
+   "i",
+   "ref",
+   "text"
+  ],
+  "Rule": [
+   "mean_pass",
+   "name",
+   "stage"
+  ],
+  "Sifah": [
+   "name"
+  ],
+  "Makhraj": [
+   "name"
+  ],
+  "Letter": [
+   "ch"
+  ],
+  "Region": [
+   "name"
+  ],
+  "Reciter": [
+   "name",
+   "school",
+   "style",
+   "tier"
+  ],
+  "Feature": [
+   "context",
+   "head",
+   "id",
+   "letter",
+   "overruled"
+  ],
+  "Characteristic": [
+   "cls",
+   "head",
+   "id"
+  ],
+  "Measure": [
+   "name"
+  ],
+  "Concept": [
+   "name"
+  ],
+  "Community": [
+   "id"
+  ],
+  "Performance": [
+   "faulted_words",
+   "haraka_s",
+   "id",
+   "letter_accuracy",
+   "rule_accuracy",
+   "word_accuracy",
+   "words"
+  ],
+  "RuleLevel": [
+   "a",
+   "b",
+   "key",
+   "level",
+   "n",
+   "rule",
+   "sd",
+   "sd_low",
+   "stretch_at_u0",
+   "u0"
+  ],
+  "Skill": [
+   "name"
+  ],
+  "Exercise": [
+   "goal",
+   "id",
+   "title",
+   "wajh"
+  ],
+  "Take": [
+   "caught",
+   "false_alarms",
+   "id",
+   "met",
+   "stamp",
+   "take",
+   "unit_s"
+  ],
+  "ScriptedMistake": [
+   "do",
+   "id"
+  ],
+  "RaContext": [
+   "examples",
+   "finding",
+   "heard_heavy",
+   "margin_median",
+   "n",
+   "name",
+   "reference_heavy",
+   "rule"
+  ]
+ },
+ "version": [
+  [
+   "Neo4j Kernel",
+   [
+    "2026.09.0"
+   ]
+  ],
+  [
+   "Cypher",
+   [
+    "5",
+    "25"
+   ]
+  ]
+ ],
+ "total_nodes": 109848,
+ "total_relationships": 652939
+}

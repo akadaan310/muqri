@@ -1,0 +1,20 @@
+{
+ "source": "modal billing report --start 2026-09-01 --end 2026-09-26 (workspace akadaan310); months 2026-06..08 returned no rows",
+ "retrieved": "2026-09-25",
+ "by_app_usd": {
+  "qaari-batch": 8.26,
+  "qaari-synth": 8.14,
+  "qaari-muaalem": 4.13,
+  "qaari-profile": 2.24,
+  "qaari-external": 1.75,
+  "quran-stroke-diff": 0.73,
+  "qaari-corpus": 0.52
+ },
+ "by_day_usd": {
+  "2026-09-23": 12.3,
+  "2026-09-24": 12.96,
+  "2026-09-25": 0.52
+ },
+ "total_usd": 25.77,
+ "note": "quran-stroke-diff is not an app in this repository"
+}

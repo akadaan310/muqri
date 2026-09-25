@@ -1,0 +1,8893 @@
+{
+ "git_revision": "eae947856892d6bf41e20aa2e5dee78f01c245b6",
+ "scored_at": "2026-09-25T08:05:46Z",
+ "note": "latest take per exercise, current engine, dry run: nothing historical was written",
+ "takes": [
+  {
+   "round": 1,
+   "exercise": "r1e1",
+   "take": "A",
+   "recording": "r1e1/A/20260924-142856.m4a",
+   "card": {
+    "exercise": "r1e1",
+    "take": "A",
+    "wajh": {
+     "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+     "choice": "tawassut",
+     "expected_counts": [
+      4.0,
+      5.0
+     ],
+     "source": "declared",
+     "instances": 1,
+     "median_counts": 3.99,
+     "note": "graded for consistency with the wajh the reciter chose"
+    },
+    "tempo": {
+     "seconds_per_count": 0.241,
+     "class": "tadwir",
+     "ok": true
+    },
+    "expectations": [
+     {
+      "ayah": 32,
+      "word": 0,
+      "text": "وَإِذَا",
+      "rule": "madd_tabii",
+      "expected_counts": [
+       1.25,
+       2.75
+      ],
+      "measured": 1.78,
+      "status": "pass",
+      "z_masters": -0.88,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 32,
+      "word": 2,
+      "text": "قَالُوٓا۟",
+      "rule": "madd_munfasil",
+      "expected_counts": [
+       3.25,
+       5.75
+      ],
+      "measured": 3.99,
+      "status": "pass",
+      "z_masters": -0.095,
+      "verdict": "ok",
+      "note": "declared tawassut"
+     },
+     {
+      "ayah": 32,
+      "word": 3,
+      "text": "إِنَّ",
+      "rule": "ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 3.37,
+      "status": "pass",
+      "z_masters": 2.578,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 32,
+      "word": 4,
+      "text": "هَـٰٓؤُلَآءِ",
+      "rule": "madd_muttasil",
+      "expected_counts": [
+       3.25,
+       5.75
+      ],
+      "measured": 4.96,
+      "status": "pass",
+      "z_masters": 0.842,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 32,
+      "word": 4,
+      "text": "هَـٰٓؤُلَآءِ",
+      "rule": "madd_muttasil",
+      "expected_counts": [
+       3.25,
+       5.75
+      ],
+      "measured": 5.46,
+      "status": "pass",
+      "z_masters": 1.622,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 32,
+      "word": 5,
+      "text": "لَضَآلُّونَ",
+      "rule": "madd_lazim",
+      "expected_counts": null,
+      "measured": 7.42,
+      "status": "pass",
+      "z_masters": 0.268,
+      "verdict": "ok",
+      "note": "judged by the stretch calculus at your tempo"
+     }
+    ],
+    "met": 6,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "tafkheem": {
+      "pass": 3
+     },
+     "jahr": {
+      "pass": 1
+     },
+     "rakhawah": {
+      "pass": 1
+     },
+     "izhar_shafawi": {
+      "pass": 1
+     },
+     "ghunnah": {
+      "pass": 1
+     },
+     "itbaq": {
+      "pass": 1
+     },
+     "madd_tabii": {
+      "pass": 1
+     },
+     "madd_munfasil": {
+      "pass": 1
+     },
+     "madd_muttasil": {
+      "pass": 2
+     },
+     "madd_lazim": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "و": {
+      "confirmed": 1
+     },
+     "َ": {
+      "confirmed": 10
+     },
+     "ء": {
+      "confirmed": 5
+     },
+     "ِ": {
+      "confirmed": 3
+     },
+     "ذ": {
+      "confirmed": 1
+     },
+     "ا": {
+      "confirmed": 5
+     },
+     "ر": {
+      "confirmed": 1
+     },
+     "ه": {
+      "confirmed": 2
+     },
+     "ُ": {
+      "confirmed": 4
+     },
+     "م": {
+      "confirmed": 1
+     },
+     "ق": {
+      "confirmed": 1
+     },
+     "ل": {
+      "confirmed": 4
+     },
+     "ۥ": {
+      "confirmed": 2
+     },
+     "ن": {
+      "confirmed": 2
+     },
+     "ض": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 20
+     },
+     "hams_or_jahr": {
+      "realised": 20
+     },
+     "itbaq": {
+      "realised": 20
+     },
+     "qalqla": {
+      "realised": 20
+     },
+     "safeer": {
+      "realised": 20
+     },
+     "shidda_or_rakhawa": {
+      "realised": 18
+     },
+     "tafashie": {
+      "realised": 20
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 20
+     },
+     "istitala": {
+      "realised": 1
+     }
+    },
+    "summary": {
+     "words": 6,
+     "words_all_correct": 6,
+     "letters": 44,
+     "identity_not_confirmed": 0,
+     "characteristics_scored": 159,
+     "characteristics_not_realised": 0,
+     "rules_scored": 13,
+     "rules_failed": 0
+    },
+    "recording": {
+     "audio_seconds": 16.28,
+     "seconds_per_count": 0.241,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 1,
+   "exercise": "r1e1",
+   "take": "B",
+   "recording": "r1e1/B/20260924-142846.m4a",
+   "card": {
+    "exercise": "r1e1",
+    "take": "B",
+    "wajh": {
+     "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+     "choice": "tawassut",
+     "expected_counts": [
+      4.0,
+      5.0
+     ],
+     "source": "declared",
+     "instances": 1,
+     "median_counts": 2.0,
+     "note": "graded for consistency with the wajh the reciter chose"
+    },
+    "tempo": {
+     "seconds_per_count": 0.2,
+     "class": "tadwir",
+     "ok": true
+    },
+    "mistakes": [
+     {
+      "ayah": 32,
+      "word": 2,
+      "text": "قَالُوٓا۟",
+      "do": "قَالُوٓا۟ إِنَّ — munfasil at 2 counts (qasr), though you declared 4.",
+      "verdict": "caught",
+      "evidence": [
+       "madd_munfasil short 2.0 counts (dev -2.0)"
+      ],
+      "engine_failing": [
+       "83:32:R9"
+      ]
+     },
+     {
+      "ayah": 32,
+      "word": 3,
+      "text": "إِنَّ",
+      "do": "إِنَّ — drop the ghunnah: a short plain nūn, no nasal hold.",
+      "verdict": "caught",
+      "evidence": [
+       "ghunnah short 1.85 counts (dev -0.15)"
+      ],
+      "engine_failing": [
+       "83:32:R5"
+      ]
+     },
+     {
+      "ayah": 32,
+      "word": 4,
+      "text": "هَـٰٓؤُلَآءِ",
+      "do": "هَـٰٓؤُلَآءِ — both madds at 2 counts.",
+      "verdict": "caught",
+      "evidence": [
+       "madd_muttasil short 1.85 counts (dev -2.15)",
+       "madd_muttasil short 1.71 counts (dev -2.29)"
+      ],
+      "engine_failing": [
+       "83:32:L33:shidda_or_rakhawa",
+       "83:32:L33:identity",
+       "83:32:R10",
+       "83:32:R11"
+      ]
+     },
+     {
+      "ayah": 32,
+      "word": 5,
+      "text": "لَضَآلُّونَ",
+      "do": "لَضَآلُّونَ — the lazim at 2 counts instead of 6.",
+      "verdict": "caught",
+      "evidence": [
+       "madd_lazim short 2.44 counts (dev -3.56)"
+      ],
+      "engine_failing": [
+       "83:32:L40:identity",
+       "83:32:R12"
+      ]
+     }
+    ],
+    "caught": 4,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "tafkheem": {
+      "pass": 3
+     },
+     "jahr": {
+      "pass": 1
+     },
+     "rakhawah": {
+      "pass": 1
+     },
+     "izhar_shafawi": {
+      "pass": 1
+     },
+     "ghunnah": {
+      "short": 1
+     },
+     "itbaq": {
+      "pass": 1
+     },
+     "madd_tabii": {
+      "pass": 1
+     },
+     "madd_munfasil": {
+      "short": 1
+     },
+     "madd_muttasil": {
+      "short": 2
+     },
+     "madd_lazim": {
+      "short": 1
+     }
+    },
+    "letters": {
+     "و": {
+      "confirmed": 1
+     },
+     "َ": {
+      "confirmed": 10
+     },
+     "ء": {
+      "confirmed": 4,
+      "not_confirmed": 1
+     },
+     "ِ": {
+      "confirmed": 3
+     },
+     "ذ": {
+      "confirmed": 1
+     },
+     "ا": {
+      "confirmed": 5
+     },
+     "ر": {
+      "confirmed": 1
+     },
+     "ه": {
+      "confirmed": 2
+     },
+     "ُ": {
+      "confirmed": 4
+     },
+     "م": {
+      "confirmed": 1
+     },
+     "ق": {
+      "confirmed": 1
+     },
+     "ل": {
+      "confirmed": 3,
+      "not_confirmed": 1
+     },
+     "ۥ": {
+      "confirmed": 2
+     },
+     "ن": {
+      "confirmed": 2
+     },
+     "ض": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 20
+     },
+     "hams_or_jahr": {
+      "realised": 20
+     },
+     "itbaq": {
+      "realised": 20
+     },
+     "qalqla": {
+      "realised": 20
+     },
+     "safeer": {
+      "realised": 20
+     },
+     "shidda_or_rakhawa": {
+      "realised": 17,
+      "not_realised": 1
+     },
+     "tafashie": {
+      "realised": 20
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 20
+     },
+     "istitala": {
+      "realised": 1
+     }
+    },
+    "summary": {
+     "words": 6,
+     "words_all_correct": 2,
+     "letters": 44,
+     "identity_not_confirmed": 2,
+     "characteristics_scored": 159,
+     "characteristics_not_realised": 1,
+     "rules_scored": 13,
+     "rules_failed": 5
+    },
+    "recording": {
+     "audio_seconds": 9.19,
+     "seconds_per_count": 0.2,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 1,
+   "exercise": "r1e2",
+   "take": "A",
+   "recording": "r1e2/A/20260924-142820.m4a",
+   "card": {
+    "exercise": "r1e2",
+    "take": "A",
+    "wajh": {
+     "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+     "choice": "tawassut",
+     "expected_counts": [
+      4.0,
+      5.0
+     ],
+     "source": "declared",
+     "instances": 1,
+     "median_counts": 5.51,
+     "note": "graded for consistency with the wajh the reciter chose"
+    },
+    "tempo": {
+     "seconds_per_count": 0.28,
+     "class": "tadwir",
+     "ok": true
+    },
+    "expectations": [
+     {
+      "ayah": 39,
+      "word": 0,
+      "text": "فَيَوْمَئِذٍۢ",
+      "rule": "idgham_no_ghunnah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 39,
+      "word": 3,
+      "text": "عَن",
+      "rule": "ikhfa",
+      "expected_counts": [
+       2.0,
+       4.79
+      ],
+      "measured": 3.4,
+      "status": "pass",
+      "z_masters": 3.437,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 39,
+      "word": 4,
+      "text": "ذَنۢبِهِۦٓ",
+      "rule": "iqlab",
+      "expected_counts": [
+       2.0,
+       4.5
+      ],
+      "measured": 3.51,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 39,
+      "word": 4,
+      "text": "ذَنۢبِهِۦٓ",
+      "rule": "madd_silah_kubra",
+      "expected_counts": [
+       3.25,
+       5.75
+      ],
+      "measured": 5.51,
+      "status": "pass",
+      "z_masters": 0.977,
+      "verdict": "ok",
+      "note": "declared tawassut"
+     },
+     {
+      "ayah": 39,
+      "word": 5,
+      "text": "إِنسٌۭ",
+      "rule": "ikhfa",
+      "expected_counts": [
+       2.0,
+       4.79
+      ],
+      "measured": 3.72,
+      "status": "pass",
+      "z_masters": 4.62,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 39,
+      "word": 5,
+      "text": "إِنسٌۭ",
+      "rule": "idgham_ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 4.14,
+      "status": "pass",
+      "z_masters": 3.283,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 39,
+      "word": 7,
+      "text": "جَآنٌّۭ",
+      "rule": "ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": null,
+      "status": "no_evidence",
+      "z_masters": null,
+      "verdict": "no_evidence",
+      "note": ""
+     },
+     {
+      "ayah": 39,
+      "word": 7,
+      "text": "جَآنٌّۭ",
+      "rule": "madd_lazim",
+      "expected_counts": null,
+      "measured": null,
+      "status": "no_evidence",
+      "z_masters": null,
+      "verdict": "no_evidence",
+      "note": "judged by the stretch calculus at your tempo"
+     }
+    ],
+    "met": 6,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "jahr": {
+      "pass": 1
+     },
+     "rakhawah": {
+      "pass": 2
+     },
+     "idgham_no_ghunnah": {
+      "pass": 1
+     },
+     "hams": {
+      "pass": 1
+     },
+     "safir": {
+      "pass": 2
+     },
+     "ikhfa": {
+      "pass": 2
+     },
+     "iqlab": {
+      "pass": 1
+     },
+     "idgham_ghunnah": {
+      "pass": 1
+     },
+     "ghunnah": {
+      "no_evidence": 1
+     },
+     "madd_tabii": {
+      "pass": 2
+     },
+     "madd_silah_kubra": {
+      "pass": 1
+     },
+     "madd_lazim": {
+      "no_evidence": 1
+     }
+    },
+    "letters": {
+     "ف": {
+      "confirmed": 1
+     },
+     "َ": {
+      "confirmed": 10
+     },
+     "ي": {
+      "confirmed": 2
+     },
+     "م": {
+      "confirmed": 1
+     },
+     "ء": {
+      "confirmed": 3
+     },
+     "ِ": {
+      "confirmed": 5
+     },
+     "ذ": {
+      "confirmed": 2
+     },
+     "ل": {
+      "confirmed": 3
+     },
+     "ا": {
+      "confirmed": 3
+     },
+     "ُ": {
+      "confirmed": 3
+     },
+     "س": {
+      "confirmed": 2
+     },
+     "ع": {
+      "confirmed": 1
+     },
+     "ب": {
+      "confirmed": 1
+     },
+     "ه": {
+      "confirmed": 1
+     },
+     "ۦ": {
+      "confirmed": 1
+     },
+     "و": {
+      "confirmed": 1
+     },
+     "ج": {
+      "confirmed": 1
+     },
+     "ن": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 24
+     },
+     "hams_or_jahr": {
+      "realised": 24
+     },
+     "itbaq": {
+      "realised": 24
+     },
+     "qalqla": {
+      "realised": 24
+     },
+     "safeer": {
+      "realised": 24
+     },
+     "shidda_or_rakhawa": {
+      "realised": 18
+     },
+     "tafashie": {
+      "realised": 24
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 24
+     }
+    },
+    "summary": {
+     "words": 8,
+     "words_all_correct": 8,
+     "letters": 46,
+     "identity_not_confirmed": 0,
+     "characteristics_scored": 186,
+     "characteristics_not_realised": 0,
+     "rules_scored": 14,
+     "rules_failed": 0
+    },
+    "recording": {
+     "audio_seconds": 19.2,
+     "seconds_per_count": 0.28,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 1,
+   "exercise": "r1e2",
+   "take": "B",
+   "recording": "r1e2/B/20260924-142808.m4a",
+   "card": {
+    "exercise": "r1e2",
+    "take": "B",
+    "wajh": {
+     "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+     "choice": "tawassut",
+     "expected_counts": [
+      4.0,
+      5.0
+     ],
+     "source": "declared",
+     "instances": 1,
+     "median_counts": 5.76,
+     "note": "graded for consistency with the wajh the reciter chose"
+    },
+    "tempo": {
+     "seconds_per_count": 0.26,
+     "class": "tadwir",
+     "ok": true
+    },
+    "mistakes": [
+     {
+      "ayah": 39,
+      "word": 3,
+      "text": "عَن",
+      "do": "عَن ذَنۢبِهِۦٓ — iẓhār: a clear nūn, tongue on the gum, no hiding, no nasal hold.",
+      "verdict": "caught",
+      "evidence": [
+       "ikhfa short 1.81 counts (dev -0.19)"
+      ],
+      "engine_failing": [
+       "55:39:R6"
+      ]
+     },
+     {
+      "ayah": 39,
+      "word": 4,
+      "text": "ذَنۢبِهِۦٓ",
+      "do": "ذَنۢبِهِۦٓ — no iqlab: a clear nūn before the bā', no meem.",
+      "verdict": "caught",
+      "evidence": [
+       "iqlab short 1.35 counts (dev -0.65)"
+      ],
+      "engine_failing": [
+       "55:39:R7",
+       "55:39:R13"
+      ]
+     },
+     {
+      "ayah": 39,
+      "word": 5,
+      "text": "إِنسٌۭ",
+      "do": "إِنسٌ وَلَا — iẓhār of the tanwīn: 'insun walā', the nūn clear, no merging.",
+      "verdict": "caught",
+      "evidence": [
+       "idgham_ghunnah short 1.47 counts (dev -0.53)",
+       "و heard as ∅ (margin -5.253)"
+      ],
+      "engine_failing": [
+       "55:39:L37:identity",
+       "55:39:R9"
+      ]
+     },
+     {
+      "ayah": 39,
+      "word": 7,
+      "text": "جَآنٌّۭ",
+      "do": "جَآنٌّ — keep the 6-count madd, but cut the shaddah ghunnah to a short plain nūn.",
+      "verdict": "missed",
+      "evidence": [],
+      "engine_failing": []
+     }
+    ],
+    "caught": 3,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "jahr": {
+      "pass": 1
+     },
+     "rakhawah": {
+      "pass": 2
+     },
+     "idgham_no_ghunnah": {
+      "pass": 1
+     },
+     "hams": {
+      "pass": 1
+     },
+     "safir": {
+      "pass": 2
+     },
+     "ikhfa": {
+      "short": 1,
+      "pass": 1
+     },
+     "iqlab": {
+      "short": 1
+     },
+     "idgham_ghunnah": {
+      "short": 1
+     },
+     "ghunnah": {
+      "no_evidence": 1
+     },
+     "madd_tabii": {
+      "pass": 2
+     },
+     "madd_silah_kubra": {
+      "long": 1
+     },
+     "madd_lazim": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "ف": {
+      "confirmed": 1
+     },
+     "َ": {
+      "confirmed": 10
+     },
+     "ي": {
+      "confirmed": 2
+     },
+     "م": {
+      "confirmed": 1
+     },
+     "ء": {
+      "confirmed": 3
+     },
+     "ِ": {
+      "confirmed": 5
+     },
+     "ذ": {
+      "confirmed": 2
+     },
+     "ل": {
+      "confirmed": 3
+     },
+     "ا": {
+      "confirmed": 3
+     },
+     "ُ": {
+      "confirmed": 3
+     },
+     "س": {
+      "confirmed": 2
+     },
+     "ع": {
+      "confirmed": 1
+     },
+     "ب": {
+      "confirmed": 1
+     },
+     "ه": {
+      "confirmed": 1
+     },
+     "ۦ": {
+      "confirmed": 1
+     },
+     "و": {
+      "not_confirmed": 1
+     },
+     "ج": {
+      "confirmed": 1
+     },
+     "ن": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 24
+     },
+     "hams_or_jahr": {
+      "realised": 24
+     },
+     "itbaq": {
+      "realised": 24
+     },
+     "qalqla": {
+      "realised": 24
+     },
+     "safeer": {
+      "realised": 24
+     },
+     "shidda_or_rakhawa": {
+      "realised": 18
+     },
+     "tafashie": {
+      "realised": 24
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 24
+     }
+    },
+    "summary": {
+     "words": 8,
+     "words_all_correct": 5,
+     "letters": 46,
+     "identity_not_confirmed": 1,
+     "characteristics_scored": 186,
+     "characteristics_not_realised": 0,
+     "rules_scored": 15,
+     "rules_failed": 4
+    },
+    "recording": {
+     "audio_seconds": 14.55,
+     "seconds_per_count": 0.26,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 1,
+   "exercise": "r1e3",
+   "take": "A",
+   "recording": "r1e3/A/20260924-142841.m4a",
+   "card": {
+    "exercise": "r1e3",
+    "take": "A",
+    "wajh": {
+     "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+     "choice": "tawassut",
+     "expected_counts": [
+      4.0,
+      5.0
+     ],
+     "source": "declared",
+     "instances": 1,
+     "median_counts": 5.33,
+     "note": "graded for consistency with the wajh the reciter chose"
+    },
+    "tempo": {
+     "seconds_per_count": 0.24,
+     "class": "tadwir",
+     "ok": true
+    },
+    "expectations": [
+     {
+      "ayah": 1,
+      "word": 0,
+      "text": "وَٱلسَّمَآءِ",
+      "rule": "madd_muttasil",
+      "expected_counts": [
+       3.25,
+       5.75
+      ],
+      "measured": 5.95,
+      "status": "pass",
+      "z_masters": 2.386,
+      "verdict": "out of range",
+      "note": ""
+     },
+     {
+      "ayah": 1,
+      "word": 1,
+      "text": "وَٱلطَّارِقِ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 1,
+      "word": 1,
+      "text": "وَٱلطَّارِقِ",
+      "rule": "tarqeeq",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 1,
+      "word": 1,
+      "text": "وَٱلطَّارِقِ",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 2,
+      "word": 0,
+      "text": "وَمَآ",
+      "rule": "madd_munfasil",
+      "expected_counts": [
+       3.25,
+       5.75
+      ],
+      "measured": 5.33,
+      "status": "pass",
+      "z_masters": 0.61,
+      "verdict": "ok",
+      "note": "declared tawassut"
+     },
+     {
+      "ayah": 2,
+      "word": 3,
+      "text": "ٱلطَّارِقُ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 2,
+      "word": 3,
+      "text": "ٱلطَّارِقُ",
+      "rule": "itbaq",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 1,
+      "text": "ٱلثَّاقِبُ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     }
+    ],
+    "met": 7,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "hamzat_wasl": {
+      "pass": 4
+     },
+     "safir": {
+      "pass": 1
+     },
+     "itbaq": {
+      "pass": 2
+     },
+     "tafkheem": {
+      "pass": 3
+     },
+     "tarqeeq": {
+      "pass": 2
+     },
+     "qalqalah": {
+      "pass": 5
+     },
+     "madd_muttasil": {
+      "pass": 1
+     },
+     "madd_tabii": {
+      "pass": 4
+     },
+     "madd_munfasil": {
+      "pass": 1
+     },
+     "ghunnah": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "و": {
+      "confirmed": 3
+     },
+     "َ": {
+      "confirmed": 15
+     },
+     "س": {
+      "confirmed": 1
+     },
+     "م": {
+      "confirmed": 4
+     },
+     "ا": {
+      "confirmed": 6
+     },
+     "ء": {
+      "confirmed": 3
+     },
+     "ِ": {
+      "confirmed": 4
+     },
+     "ط": {
+      "confirmed": 2
+     },
+     "ر": {
+      "confirmed": 3
+     },
+     "ق": {
+      "confirmed": 3
+     },
+     "د": {
+      "confirmed": 1
+     },
+     "ك": {
+      "confirmed": 1
+     },
+     "ن": {
+      "confirmed": 1
+     },
+     "ج": {
+      "confirmed": 1
+     },
+     "ُ": {
+      "confirmed": 1
+     },
+     "ث": {
+      "confirmed": 1
+     },
+     "ب": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 30
+     },
+     "hams_or_jahr": {
+      "realised": 30
+     },
+     "itbaq": {
+      "realised": 30
+     },
+     "qalqla": {
+      "realised": 30
+     },
+     "safeer": {
+      "realised": 30
+     },
+     "shidda_or_rakhawa": {
+      "realised": 25
+     },
+     "tafashie": {
+      "realised": 30
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 29
+     }
+    },
+    "summary": {
+     "words": 8,
+     "words_all_correct": 8,
+     "letters": 56,
+     "identity_not_confirmed": 0,
+     "characteristics_scored": 234,
+     "characteristics_not_realised": 0,
+     "rules_scored": 24,
+     "rules_failed": 0
+    },
+    "recording": {
+     "audio_seconds": 15.17,
+     "seconds_per_count": 0.24,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 1,
+   "exercise": "r1e3",
+   "take": "B",
+   "recording": "r1e3/B/20260924-142831.m4a",
+   "card": {
+    "exercise": "r1e3",
+    "take": "B",
+    "wajh": {
+     "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+     "choice": "tawassut",
+     "expected_counts": [
+      4.0,
+      5.0
+     ],
+     "source": "declared",
+     "instances": 1,
+     "median_counts": 4.96,
+     "note": "graded for consistency with the wajh the reciter chose"
+    },
+    "tempo": {
+     "seconds_per_count": 0.24,
+     "class": "tadwir",
+     "ok": true
+    },
+    "mistakes": [
+     {
+      "ayah": 1,
+      "word": 1,
+      "text": "وَٱلطَّارِقِ",
+      "do": "وَٱلطَّارِقِ — stop dead on the qāf: no echo, no qalqalah.",
+      "verdict": "missed",
+      "evidence": [],
+      "engine_failing": []
+     },
+     {
+      "ayah": 1,
+      "word": 0,
+      "text": "وَٱلسَّمَآءِ",
+      "do": "وَٱلسَّمَآءِ — make the sīn heavy, like ṣād.",
+      "verdict": "missed",
+      "evidence": [],
+      "engine_failing": []
+     },
+     {
+      "ayah": 2,
+      "word": 3,
+      "text": "ٱلطَّارِقُ",
+      "do": "ٱلطَّارِقُ — make the ṭā' light, like tā'.",
+      "verdict": "missed",
+      "evidence": [],
+      "engine_failing": []
+     },
+     {
+      "ayah": 3,
+      "word": 1,
+      "text": "ٱلثَّاقِبُ",
+      "do": "ٱلثَّاقِبُ — say the thā' as sīn.",
+      "verdict": "caught",
+      "evidence": [
+       "ث safeer: heard [صفير] (margin -0.188)"
+      ],
+      "engine_failing": [
+       "86:3:L8:safeer"
+      ]
+     }
+    ],
+    "caught": 1,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "hamzat_wasl": {
+      "pass": 4
+     },
+     "safir": {
+      "pass": 1
+     },
+     "itbaq": {
+      "pass": 2
+     },
+     "tafkheem": {
+      "pass": 3
+     },
+     "tarqeeq": {
+      "pass": 2
+     },
+     "qalqalah": {
+      "pass": 5
+     },
+     "madd_muttasil": {
+      "pass": 1
+     },
+     "madd_tabii": {
+      "pass": 4
+     },
+     "madd_munfasil": {
+      "pass": 1
+     },
+     "ghunnah": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "و": {
+      "confirmed": 3
+     },
+     "َ": {
+      "confirmed": 15
+     },
+     "س": {
+      "confirmed": 1
+     },
+     "م": {
+      "confirmed": 4
+     },
+     "ا": {
+      "confirmed": 6
+     },
+     "ء": {
+      "confirmed": 3
+     },
+     "ِ": {
+      "confirmed": 4
+     },
+     "ط": {
+      "confirmed": 2
+     },
+     "ر": {
+      "confirmed": 3
+     },
+     "ق": {
+      "confirmed": 3
+     },
+     "د": {
+      "confirmed": 1
+     },
+     "ك": {
+      "confirmed": 1
+     },
+     "ن": {
+      "confirmed": 1
+     },
+     "ج": {
+      "confirmed": 1
+     },
+     "ُ": {
+      "confirmed": 1
+     },
+     "ث": {
+      "confirmed": 1
+     },
+     "ب": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 30
+     },
+     "hams_or_jahr": {
+      "realised": 30
+     },
+     "itbaq": {
+      "realised": 30
+     },
+     "qalqla": {
+      "realised": 30
+     },
+     "safeer": {
+      "realised": 29,
+      "not_realised": 1
+     },
+     "shidda_or_rakhawa": {
+      "realised": 25
+     },
+     "tafashie": {
+      "realised": 30
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 29
+     }
+    },
+    "summary": {
+     "words": 8,
+     "words_all_correct": 7,
+     "letters": 56,
+     "identity_not_confirmed": 0,
+     "characteristics_scored": 234,
+     "characteristics_not_realised": 1,
+     "rules_scored": 24,
+     "rules_failed": 0
+    },
+    "recording": {
+     "audio_seconds": 15.85,
+     "seconds_per_count": 0.24,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 2,
+   "exercise": "r2e1",
+   "take": "A",
+   "recording": "r2e1/A/20260924-142927.m4a",
+   "card": {
+    "exercise": "r2e1",
+    "take": "A",
+    "wajh": {
+     "declared": "tawassut"
+    },
+    "tempo": {
+     "seconds_per_count": 0.279,
+     "class": "tadwir",
+     "ok": true
+    },
+    "expectations": [
+     {
+      "ayah": 7,
+      "word": 8,
+      "text": "ٱلضَّآلِّينَ",
+      "rule": "madd_lazim",
+      "expected_counts": null,
+      "measured": null,
+      "status": "no_evidence",
+      "z_masters": null,
+      "verdict": "no_evidence",
+      "note": "judged by the stretch calculus at your tempo"
+     },
+     {
+      "ayah": 6,
+      "word": 1,
+      "text": "ٱلصِّرَٰطَ",
+      "rule": "itbaq",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 7,
+      "word": 5,
+      "text": "ٱلْمَغْضُوبِ",
+      "rule": "itbaq",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 7,
+      "word": 8,
+      "text": "ٱلضَّآلِّينَ",
+      "rule": "itbaq",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 7,
+      "word": 2,
+      "text": "أَنْعَمْتَ",
+      "rule": "izhar_halqi",
+      "expected_counts": null,
+      "measured": 1.41,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     }
+    ],
+    "met": 4,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "jahr": {
+      "pass": 7
+     },
+     "tawassut": {
+      "pass": 3
+     },
+     "hams": {
+      "pass": 3
+     },
+     "rakhawah": {
+      "pass": 7
+     },
+     "safir": {
+      "pass": 4
+     },
+     "madd_tabii": {
+      "pass": 6
+     },
+     "madd_arid_lissukun": {
+      "pass": 2
+     },
+     "hamzat_wasl": {
+      "pass": 5
+     },
+     "tafkheem": {
+      "pass": 5,
+      "unconfirmed": 2
+     },
+     "itbaq": {
+      "pass": 4
+     },
+     "izhar_halqi": {
+      "pass": 1
+     },
+     "izhar_shafawi": {
+      "pass": 3
+     },
+     "tarqeeq": {
+      "pass": 1
+     },
+     "madd_lazim": {
+      "no_evidence": 1
+     }
+    },
+    "letters": {
+     "ء": {
+      "confirmed": 4
+     },
+     "ِ": {
+      "confirmed": 14
+     },
+     "ي": {
+      "confirmed": 2
+     },
+     "َ": {
+      "confirmed": 28
+     },
+     "ا": {
+      "confirmed": 5
+     },
+     "ك": {
+      "confirmed": 2
+     },
+     "ن": {
+      "confirmed": 7
+     },
+     "ع": {
+      "confirmed": 5
+     },
+     "ب": {
+      "confirmed": 2
+     },
+     "ُ": {
+      "confirmed": 4
+     },
+     "د": {
+      "confirmed": 2
+     },
+     "و": {
+      "confirmed": 2
+     },
+     "س": {
+      "confirmed": 2
+     },
+     "ت": {
+      "confirmed": 3
+     },
+     "ۦ": {
+      "confirmed": 4
+     },
+     "ه": {
+      "confirmed": 3
+     },
+     "ص": {
+      "confirmed": 2
+     },
+     "ر": {
+      "confirmed": 3
+     },
+     "ط": {
+      "confirmed": 2
+     },
+     "ل": {
+      "confirmed": 7
+     },
+     "م": {
+      "confirmed": 6
+     },
+     "ق": {
+      "confirmed": 1
+     },
+     "ذ": {
+      "confirmed": 1
+     },
+     "غ": {
+      "confirmed": 2
+     },
+     "ض": {
+      "confirmed": 2
+     },
+     "ۥ": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 63
+     },
+     "hams_or_jahr": {
+      "realised": 63
+     },
+     "itbaq": {
+      "realised": 63
+     },
+     "qalqla": {
+      "realised": 63
+     },
+     "safeer": {
+      "realised": 63
+     },
+     "shidda_or_rakhawa": {
+      "realised": 57
+     },
+     "tafashie": {
+      "realised": 63
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 61
+     },
+     "istitala": {
+      "realised": 2
+     }
+    },
+    "summary": {
+     "words": 16,
+     "words_all_correct": 16,
+     "letters": 119,
+     "identity_not_confirmed": 0,
+     "characteristics_scored": 498,
+     "characteristics_not_realised": 0,
+     "rules_scored": 51,
+     "rules_failed": 0
+    },
+    "recording": {
+     "audio_seconds": 34.92,
+     "seconds_per_count": 0.279,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 2,
+   "exercise": "r2e1",
+   "take": "B",
+   "recording": "r2e1/B/20260924-142956.m4a",
+   "card": {
+    "exercise": "r2e1",
+    "take": "B",
+    "wajh": {
+     "declared": "tawassut"
+    },
+    "tempo": {
+     "seconds_per_count": 0.28,
+     "class": "tadwir",
+     "ok": true
+    },
+    "mistakes": [
+     {
+      "ayah": 5,
+      "word": 1,
+      "text": "نَعْبُدُ",
+      "do": "نَعْبُدُ — say the ʿayn as a hamza: 'na-abudu'.",
+      "verdict": "caught",
+      "evidence": [
+       "ع heard as ء (margin -12.515)"
+      ],
+      "engine_failing": [
+       "1:5:L9:shidda_or_rakhawa",
+       "1:5:L9:identity"
+      ]
+     },
+     {
+      "ayah": 6,
+      "word": 1,
+      "text": "ٱلصِّرَٰطَ",
+      "do": "ٱلصِّرَٰطَ — say the ṣād as sīn: 'as-sirāt'.",
+      "verdict": "caught",
+      "evidence": [
+       "ص heard as س (margin -8.057)",
+       "ص itbaq: heard [منفتح] (margin -1.574)",
+       "ص tafkheem_or_taqeeq: heard [مرقق] (margin -5.389)"
+      ],
+      "engine_failing": [
+       "1:6:L7:itbaq",
+       "1:6:L7:tafkheem_or_taqeeq",
+       "1:6:L7:identity",
+       "1:6:R5"
+      ]
+     },
+     {
+      "ayah": 6,
+      "word": 2,
+      "text": "ٱلْمُسْتَقِيمَ",
+      "do": "ٱلْمُسْتَقِيمَ — say the qāf as kāf: 'al-mustakīm'.",
+      "verdict": "caught",
+      "evidence": [
+       "ق heard as ك (margin -4.883)",
+       "ق tafkheem_or_taqeeq: heard [مرقق] (margin -4.128)"
+      ],
+      "engine_failing": [
+       "1:6:L20:hams_or_jahr",
+       "1:6:L20:tafkheem_or_taqeeq",
+       "1:6:L20:identity"
+      ]
+     },
+     {
+      "ayah": 7,
+      "word": 5,
+      "text": "ٱلْمَغْضُوبِ",
+      "do": "ٱلْمَغْضُوبِ — say the ḍād as dāl: 'al-maghdūb'.",
+      "verdict": "missed",
+      "evidence": [],
+      "engine_failing": []
+     },
+     {
+      "ayah": 7,
+      "word": 8,
+      "text": "ٱلضَّآلِّينَ",
+      "do": "ٱلضَّآلِّينَ — keep the 6-count madd, but say the ḍād as ẓā': 'aẓ-ẓāllīn'.",
+      "verdict": "caught",
+      "evidence": [
+       "ض istitala: heard [لا إستطالة] (margin -4.208)"
+      ],
+      "engine_failing": [
+       "1:7:L56:istitala",
+       "1:7:L56:itbaq",
+       "1:7:L56:tafkheem_or_taqeeq",
+       "1:7:L56:identity",
+       "1:7:R25",
+       "1:7:R26"
+      ]
+     }
+    ],
+    "caught": 4,
+    "false_alarms": [
+     {
+      "ayah": 7,
+      "word": 0,
+      "text": "صِرَٰطَ",
+      "failing": [
+       "1:7:L5:hams_or_jahr"
+      ],
+      "control": false
+     }
+    ]
+   },
+   "digest": {
+    "rules": {
+     "jahr": {
+      "pass": 7
+     },
+     "tawassut": {
+      "pass": 3
+     },
+     "hams": {
+      "pass": 3
+     },
+     "rakhawah": {
+      "pass": 7
+     },
+     "safir": {
+      "pass": 4
+     },
+     "madd_tabii": {
+      "pass": 6
+     },
+     "madd_arid_lissukun": {
+      "pass": 2
+     },
+     "hamzat_wasl": {
+      "pass": 4,
+      "wrong": 1
+     },
+     "tafkheem": {
+      "pass": 4,
+      "unconfirmed": 2,
+      "wrong": 1
+     },
+     "itbaq": {
+      "pass": 3,
+      "wrong": 1
+     },
+     "izhar_halqi": {
+      "pass": 1
+     },
+     "izhar_shafawi": {
+      "pass": 3
+     },
+     "tarqeeq": {
+      "pass": 1
+     },
+     "madd_lazim": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "ء": {
+      "confirmed": 4
+     },
+     "ِ": {
+      "confirmed": 14
+     },
+     "ي": {
+      "confirmed": 2
+     },
+     "َ": {
+      "confirmed": 28
+     },
+     "ا": {
+      "confirmed": 5
+     },
+     "ك": {
+      "confirmed": 2
+     },
+     "ن": {
+      "confirmed": 7
+     },
+     "ع": {
+      "not_confirmed": 1,
+      "confirmed": 4
+     },
+     "ب": {
+      "confirmed": 2
+     },
+     "ُ": {
+      "confirmed": 4
+     },
+     "د": {
+      "confirmed": 2
+     },
+     "و": {
+      "confirmed": 2
+     },
+     "س": {
+      "confirmed": 2
+     },
+     "ت": {
+      "confirmed": 3
+     },
+     "ۦ": {
+      "confirmed": 4
+     },
+     "ه": {
+      "confirmed": 3
+     },
+     "ص": {
+      "not_confirmed": 1,
+      "confirmed": 1
+     },
+     "ر": {
+      "confirmed": 3
+     },
+     "ط": {
+      "confirmed": 2
+     },
+     "ل": {
+      "confirmed": 7
+     },
+     "م": {
+      "confirmed": 6
+     },
+     "ق": {
+      "not_confirmed": 1
+     },
+     "ذ": {
+      "confirmed": 1
+     },
+     "غ": {
+      "confirmed": 2
+     },
+     "ض": {
+      "confirmed": 1,
+      "not_confirmed": 1
+     },
+     "ۥ": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 63
+     },
+     "hams_or_jahr": {
+      "realised": 61,
+      "not_realised": 2
+     },
+     "itbaq": {
+      "realised": 61,
+      "not_realised": 2
+     },
+     "qalqla": {
+      "realised": 63
+     },
+     "safeer": {
+      "realised": 63
+     },
+     "shidda_or_rakhawa": {
+      "realised": 56,
+      "not_realised": 1
+     },
+     "tafashie": {
+      "realised": 63
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 58,
+      "not_realised": 3
+     },
+     "istitala": {
+      "realised": 1,
+      "not_realised": 1
+     }
+    },
+    "summary": {
+     "words": 16,
+     "words_all_correct": 11,
+     "letters": 119,
+     "identity_not_confirmed": 4,
+     "characteristics_scored": 498,
+     "characteristics_not_realised": 9,
+     "rules_scored": 52,
+     "rules_failed": 3
+    },
+    "recording": {
+     "audio_seconds": 32.81,
+     "seconds_per_count": 0.28,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 2,
+   "exercise": "r2e2",
+   "take": "A",
+   "recording": "r2e2/A/20260924-143016.m4a",
+   "card": {
+    "exercise": "r2e2",
+    "take": "A",
+    "wajh": {
+     "declared": "tawassut"
+    },
+    "tempo": {
+     "seconds_per_count": 0.28,
+     "class": "tadwir",
+     "ok": true
+    },
+    "expectations": [
+     {
+      "ayah": 1,
+      "word": 2,
+      "text": "بِرَبِّ",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 1,
+      "word": 3,
+      "text": "ٱلْفَلَقِ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 2,
+      "word": 0,
+      "text": "مِن",
+      "rule": "ikhfa",
+      "expected_counts": [
+       2.0,
+       4.79
+      ],
+      "measured": 3.2,
+      "status": "pass",
+      "z_masters": 2.698,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 2,
+      "word": 1,
+      "text": "شَرِّ",
+      "rule": "tarqeeq",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 2,
+      "word": 3,
+      "text": "خَلَقَ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 0,
+      "text": "وَمِن",
+      "rule": "ikhfa",
+      "expected_counts": [
+       2.0,
+       4.79
+      ],
+      "measured": 3.1,
+      "status": "pass",
+      "z_masters": 2.328,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 2,
+      "text": "غَاسِقٍ",
+      "rule": "izhar_halqi",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 4,
+      "text": "وَقَبَ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     }
+    ],
+    "met": 8,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "tafkheem": {
+      "pass": 5
+     },
+     "jahr": {
+      "pass": 2
+     },
+     "tawassut": {
+      "pass": 2
+     },
+     "hamzat_wasl": {
+      "pass": 1
+     },
+     "qalqalah": {
+      "pass": 3
+     },
+     "madd_tabii": {
+      "pass": 4
+     },
+     "ikhfa": {
+      "pass": 2
+     },
+     "tafashhi": {
+      "pass": 2
+     },
+     "takreer": {
+      "unconfirmed": 2
+     },
+     "tarqeeq": {
+      "pass": 2
+     },
+     "safir": {
+      "pass": 1
+     },
+     "izhar_halqi": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "ق": {
+      "confirmed": 5
+     },
+     "ُ": {
+      "confirmed": 3
+     },
+     "ل": {
+      "confirmed": 4
+     },
+     "ء": {
+      "confirmed": 2
+     },
+     "َ": {
+      "confirmed": 14
+     },
+     "ع": {
+      "confirmed": 1
+     },
+     "ۥ": {
+      "confirmed": 1
+     },
+     "ذ": {
+      "confirmed": 2
+     },
+     "ب": {
+      "confirmed": 3
+     },
+     "ِ": {
+      "confirmed": 9
+     },
+     "ر": {
+      "confirmed": 3
+     },
+     "ف": {
+      "confirmed": 1
+     },
+     "م": {
+      "confirmed": 3
+     },
+     "ش": {
+      "confirmed": 2
+     },
+     "ا": {
+      "confirmed": 3
+     },
+     "خ": {
+      "confirmed": 1
+     },
+     "و": {
+      "confirmed": 2
+     },
+     "غ": {
+      "confirmed": 1
+     },
+     "س": {
+      "confirmed": 1
+     },
+     "ن": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 37
+     },
+     "hams_or_jahr": {
+      "realised": 37
+     },
+     "itbaq": {
+      "realised": 37
+     },
+     "qalqla": {
+      "realised": 37
+     },
+     "safeer": {
+      "realised": 37
+     },
+     "shidda_or_rakhawa": {
+      "realised": 32
+     },
+     "tafashie": {
+      "realised": 37
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 35
+     }
+    },
+    "summary": {
+     "words": 13,
+     "words_all_correct": 13,
+     "letters": 67,
+     "identity_not_confirmed": 0,
+     "characteristics_scored": 289,
+     "characteristics_not_realised": 0,
+     "rules_scored": 25,
+     "rules_failed": 0
+    },
+    "recording": {
+     "audio_seconds": 15.3,
+     "seconds_per_count": 0.28,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 2,
+   "exercise": "r2e2",
+   "take": "B",
+   "recording": "r2e2/B/20260924-143007.m4a",
+   "card": {
+    "exercise": "r2e2",
+    "take": "B",
+    "wajh": {
+     "declared": "tawassut"
+    },
+    "tempo": {
+     "seconds_per_count": 0.239,
+     "class": "tadwir",
+     "ok": true
+    },
+    "mistakes": [
+     {
+      "ayah": 1,
+      "word": 2,
+      "text": "بِرَبِّ",
+      "do": "بِرَبِّ — make the rā' light (it carries fatḥah and must be heavy).",
+      "verdict": "caught",
+      "evidence": [
+       "tafkheem wrong",
+       "ر tafkheem_or_taqeeq: heard [مرقق] (margin -5.641)"
+      ],
+      "engine_failing": [
+       "113:1:L12:tafkheem_or_taqeeq",
+       "113:1:R3"
+      ]
+     },
+     {
+      "ayah": 1,
+      "word": 3,
+      "text": "ٱلْفَلَقِ",
+      "do": "ٱلْفَلَقِ — stop dead on the qāf: no echo.",
+      "verdict": "missed",
+      "evidence": [],
+      "engine_failing": []
+     },
+     {
+      "ayah": 2,
+      "word": 0,
+      "text": "مِن",
+      "do": "مِن شَرِّ — iẓhār: a clear nūn before the shīn, no nasal hold.",
+      "verdict": "caught",
+      "evidence": [
+       "ikhfa short 1.61 counts (dev -0.39)"
+      ],
+      "engine_failing": [
+       "113:2:R0"
+      ]
+     },
+     {
+      "ayah": 2,
+      "word": 3,
+      "text": "خَلَقَ",
+      "do": "خَلَقَ — say the khā' as ḥā': 'ḥalaq'.",
+      "verdict": "caught",
+      "evidence": [
+       "خ heard as ح (margin -9.686)",
+       "خ tafkheem_or_taqeeq: heard [مرقق] (margin -9.294)"
+      ],
+      "engine_failing": [
+       "113:2:L10:tafkheem_or_taqeeq",
+       "113:2:L10:identity",
+       "113:2:R4"
+      ]
+     },
+     {
+      "ayah": 3,
+      "word": 4,
+      "text": "وَقَبَ",
+      "do": "وَقَبَ — stop dead on the bā': no echo.",
+      "verdict": "caught",
+      "evidence": [
+       "qalqalah wrong",
+       "ب qalqla: heard [لا قلقلة] (margin -5.442)",
+       "ڇ qalqla: heard [لا قلقلة] (margin -5.019)"
+      ],
+      "engine_failing": [
+       "113:3:L26:ghonna",
+       "113:3:L26:qalqla",
+       "113:3:L26:shidda_or_rakhawa",
+       "113:3:L27:qalqla",
+       "113:3:R8"
+      ]
+     }
+    ],
+    "caught": 4,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "tafkheem": {
+      "pass": 3,
+      "wrong": 2
+     },
+     "jahr": {
+      "pass": 2
+     },
+     "tawassut": {
+      "pass": 2
+     },
+     "hamzat_wasl": {
+      "pass": 1
+     },
+     "qalqalah": {
+      "pass": 2,
+      "wrong": 1
+     },
+     "madd_tabii": {
+      "pass": 4
+     },
+     "ikhfa": {
+      "short": 1,
+      "pass": 1
+     },
+     "tafashhi": {
+      "pass": 2
+     },
+     "takreer": {
+      "unconfirmed": 2
+     },
+     "tarqeeq": {
+      "pass": 2
+     },
+     "safir": {
+      "pass": 1
+     },
+     "izhar_halqi": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "ق": {
+      "confirmed": 5
+     },
+     "ُ": {
+      "confirmed": 3
+     },
+     "ل": {
+      "confirmed": 4
+     },
+     "ء": {
+      "confirmed": 2
+     },
+     "َ": {
+      "confirmed": 14
+     },
+     "ع": {
+      "confirmed": 1
+     },
+     "ۥ": {
+      "confirmed": 1
+     },
+     "ذ": {
+      "confirmed": 2
+     },
+     "ب": {
+      "confirmed": 3
+     },
+     "ِ": {
+      "confirmed": 9
+     },
+     "ر": {
+      "confirmed": 3
+     },
+     "ف": {
+      "confirmed": 1
+     },
+     "م": {
+      "confirmed": 3
+     },
+     "ش": {
+      "confirmed": 2
+     },
+     "ا": {
+      "confirmed": 3
+     },
+     "خ": {
+      "not_confirmed": 1
+     },
+     "و": {
+      "confirmed": 2
+     },
+     "غ": {
+      "confirmed": 1
+     },
+     "س": {
+      "confirmed": 1
+     },
+     "ن": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 36,
+      "not_realised": 1
+     },
+     "hams_or_jahr": {
+      "realised": 37
+     },
+     "itbaq": {
+      "realised": 37
+     },
+     "qalqla": {
+      "realised": 35,
+      "not_realised": 2
+     },
+     "safeer": {
+      "realised": 37
+     },
+     "shidda_or_rakhawa": {
+      "realised": 31,
+      "not_realised": 1
+     },
+     "tafashie": {
+      "realised": 37
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 33,
+      "not_realised": 2
+     }
+    },
+    "summary": {
+     "words": 13,
+     "words_all_correct": 9,
+     "letters": 67,
+     "identity_not_confirmed": 1,
+     "characteristics_scored": 289,
+     "characteristics_not_realised": 6,
+     "rules_scored": 25,
+     "rules_failed": 4
+    },
+    "recording": {
+     "audio_seconds": 16.04,
+     "seconds_per_count": 0.239,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 2,
+   "exercise": "r2e3",
+   "take": "A",
+   "recording": "r2e3/A/20260924-143050.m4a",
+   "card": {
+    "exercise": "r2e3",
+    "take": "A",
+    "wajh": {
+     "declared": "tawassut"
+    },
+    "tempo": {
+     "seconds_per_count": 0.28,
+     "class": "tadwir",
+     "ok": true
+    },
+    "expectations": [
+     {
+      "ayah": 1,
+      "word": 2,
+      "text": "ٱللَّهُ",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 1,
+      "word": 3,
+      "text": "أَحَدٌ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 2,
+      "word": 0,
+      "text": "ٱللَّهُ",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 2,
+      "word": 1,
+      "text": "ٱلصَّمَدُ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 1,
+      "text": "يَلِدْ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 3,
+      "text": "يُولَدْ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 4,
+      "word": 1,
+      "text": "يَكُن",
+      "rule": "idgham_no_ghunnah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 4,
+      "word": 2,
+      "text": "لَّهُۥ",
+      "rule": "madd_silah_sughra",
+      "expected_counts": [
+       1.25,
+       2.75
+      ],
+      "measured": 1.83,
+      "status": "pass",
+      "z_masters": -0.956,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 4,
+      "word": 4,
+      "text": "أَحَدٌۢ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     }
+    ],
+    "met": 9,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "tafkheem": {
+      "pass": 4
+     },
+     "jahr": {
+      "pass": 1
+     },
+     "tawassut": {
+      "pass": 1
+     },
+     "hamzat_wasl": {
+      "pass": 2
+     },
+     "qalqalah": {
+      "pass": 5
+     },
+     "itbaq": {
+      "pass": 1
+     },
+     "safir": {
+      "pass": 1
+     },
+     "izhar_shafawi": {
+      "pass": 3
+     },
+     "madd_tabii": {
+      "pass": 1
+     },
+     "idgham_no_ghunnah": {
+      "pass": 1
+     },
+     "izhar_halqi": {
+      "pass": 1
+     },
+     "madd_silah_sughra": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "ق": {
+      "confirmed": 1
+     },
+     "ُ": {
+      "confirmed": 9
+     },
+     "ل": {
+      "confirmed": 9
+     },
+     "ه": {
+      "confirmed": 4
+     },
+     "و": {
+      "confirmed": 4
+     },
+     "َ": {
+      "confirmed": 20
+     },
+     "ا": {
+      "confirmed": 2
+     },
+     "ء": {
+      "confirmed": 3
+     },
+     "ح": {
+      "confirmed": 2
+     },
+     "د": {
+      "confirmed": 5
+     },
+     "ص": {
+      "confirmed": 1
+     },
+     "م": {
+      "confirmed": 4
+     },
+     "ي": {
+      "confirmed": 3
+     },
+     "ِ": {
+      "confirmed": 1
+     },
+     "ۥ": {
+      "confirmed": 2
+     },
+     "ك": {
+      "confirmed": 2
+     },
+     "ف": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 45
+     },
+     "hams_or_jahr": {
+      "realised": 45
+     },
+     "itbaq": {
+      "realised": 45
+     },
+     "qalqla": {
+      "realised": 45
+     },
+     "safeer": {
+      "realised": 45
+     },
+     "shidda_or_rakhawa": {
+      "realised": 41
+     },
+     "tafashie": {
+      "realised": 45
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 45
+     }
+    },
+    "summary": {
+     "words": 15,
+     "words_all_correct": 15,
+     "letters": 79,
+     "identity_not_confirmed": 0,
+     "characteristics_scored": 356,
+     "characteristics_not_realised": 0,
+     "rules_scored": 22,
+     "rules_failed": 0
+    },
+    "recording": {
+     "audio_seconds": 17.11,
+     "seconds_per_count": 0.28,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 2,
+   "exercise": "r2e3",
+   "take": "B",
+   "recording": "r2e3/B/20260924-143027.m4a",
+   "card": {
+    "exercise": "r2e3",
+    "take": "B",
+    "wajh": {
+     "declared": "tawassut"
+    },
+    "tempo": {
+     "seconds_per_count": 0.28,
+     "class": "tadwir",
+     "ok": true
+    },
+    "mistakes": [
+     {
+      "ayah": 1,
+      "word": 2,
+      "text": "ٱللَّهُ",
+      "do": "ٱللَّهُ (ayah 1) — make the lām of the Name light, though it follows a ḍammah.",
+      "verdict": "caught",
+      "evidence": [
+       "tafkheem wrong",
+       "ل tafkheem_or_taqeeq: heard [مرقق] (margin -7.419)"
+      ],
+      "engine_failing": [
+       "112:1:L7:tafkheem_or_taqeeq",
+       "112:1:R4"
+      ]
+     },
+     {
+      "ayah": 2,
+      "word": 1,
+      "text": "ٱلصَّمَدُ",
+      "do": "ٱلصَّمَدُ — stop on the dāl with no qalqalah.",
+      "verdict": "caught",
+      "evidence": [
+       "qalqalah wrong",
+       "د qalqla: heard [لا قلقلة] (margin -4.544)",
+       "ڇ qalqla: heard [لا قلقلة] (margin -5.094)"
+      ],
+      "engine_failing": [
+       "112:2:L11:qalqla",
+       "112:2:L12:qalqla",
+       "112:2:R5"
+      ]
+     },
+     {
+      "ayah": 3,
+      "word": 1,
+      "text": "يَلِدْ",
+      "do": "يَلِدْ — no qalqalah on the sākin dāl (keep going into وَلَمْ).",
+      "verdict": "caught",
+      "evidence": [
+       "qalqalah wrong",
+       "د qalqla: heard [لا قلقلة] (margin -8.054)",
+       "ڇ qalqla: heard [لا قلقلة] (margin -9.717)"
+      ],
+      "engine_failing": [
+       "112:3:L7:qalqla",
+       "112:3:L8:qalqla",
+       "112:3:R1"
+      ]
+     },
+     {
+      "ayah": 4,
+      "word": 1,
+      "text": "يَكُن",
+      "do": "يَكُن لَّهُۥ — merge the nūn into the lām WITH a nasal ghunnah (it must be without).",
+      "verdict": "missed",
+      "evidence": [],
+      "engine_failing": []
+     },
+     {
+      "ayah": 4,
+      "word": 3,
+      "text": "كُفُوًا",
+      "do": "كُفُوًا — drop the ḍammah on the fā': 'kufwan'.",
+      "verdict": "missed",
+      "evidence": [],
+      "engine_failing": []
+     }
+    ],
+    "caught": 3,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "tafkheem": {
+      "pass": 3,
+      "wrong": 1
+     },
+     "jahr": {
+      "pass": 1
+     },
+     "tawassut": {
+      "pass": 1
+     },
+     "hamzat_wasl": {
+      "pass": 2
+     },
+     "qalqalah": {
+      "pass": 3,
+      "wrong": 2
+     },
+     "itbaq": {
+      "pass": 1
+     },
+     "safir": {
+      "pass": 1
+     },
+     "izhar_shafawi": {
+      "pass": 3
+     },
+     "madd_tabii": {
+      "pass": 1
+     },
+     "idgham_no_ghunnah": {
+      "pass": 1
+     },
+     "izhar_halqi": {
+      "pass": 1
+     },
+     "madd_silah_sughra": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "ق": {
+      "confirmed": 1
+     },
+     "ُ": {
+      "confirmed": 9
+     },
+     "ل": {
+      "confirmed": 9
+     },
+     "ه": {
+      "confirmed": 4
+     },
+     "و": {
+      "confirmed": 4
+     },
+     "َ": {
+      "confirmed": 20
+     },
+     "ا": {
+      "confirmed": 2
+     },
+     "ء": {
+      "confirmed": 3
+     },
+     "ح": {
+      "confirmed": 2
+     },
+     "د": {
+      "confirmed": 5
+     },
+     "ص": {
+      "confirmed": 1
+     },
+     "م": {
+      "confirmed": 4
+     },
+     "ي": {
+      "confirmed": 3
+     },
+     "ِ": {
+      "confirmed": 1
+     },
+     "ۥ": {
+      "confirmed": 2
+     },
+     "ك": {
+      "confirmed": 2
+     },
+     "ف": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 45
+     },
+     "hams_or_jahr": {
+      "realised": 45
+     },
+     "itbaq": {
+      "realised": 45
+     },
+     "qalqla": {
+      "realised": 41,
+      "not_realised": 4
+     },
+     "safeer": {
+      "realised": 45
+     },
+     "shidda_or_rakhawa": {
+      "realised": 41
+     },
+     "tafashie": {
+      "realised": 45
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 44,
+      "not_realised": 1
+     }
+    },
+    "summary": {
+     "words": 15,
+     "words_all_correct": 12,
+     "letters": 79,
+     "identity_not_confirmed": 0,
+     "characteristics_scored": 356,
+     "characteristics_not_realised": 5,
+     "rules_scored": 22,
+     "rules_failed": 3
+    },
+    "recording": {
+     "audio_seconds": 16.7,
+     "seconds_per_count": 0.28,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 2,
+   "exercise": "r2e4",
+   "take": "A",
+   "recording": "r2e4/A/20260924-143119.m4a",
+   "card": {
+    "exercise": "r2e4",
+    "take": "A",
+    "wajh": {
+     "declared": "tawassut"
+    },
+    "tempo": {
+     "seconds_per_count": 0.26,
+     "class": "tadwir",
+     "ok": true
+    },
+    "expectations": [
+     {
+      "ayah": 2,
+      "word": 0,
+      "text": "إِنَّ",
+      "rule": "ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 4.72,
+      "status": "pass",
+      "z_masters": 6.625,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 2,
+      "word": 1,
+      "text": "ٱلْإِنسَـٰنَ",
+      "rule": "ikhfa",
+      "expected_counts": [
+       2.0,
+       4.79
+      ],
+      "measured": 3.99,
+      "status": "pass",
+      "z_masters": 5.618,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 2,
+      "text": "ءَامَنُوا۟",
+      "rule": "madd_badal",
+      "expected_counts": null,
+      "measured": 1.73,
+      "status": "pass",
+      "z_masters": -1.901,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 4,
+      "text": "ٱلصَّـٰلِحَـٰتِ",
+      "rule": "itbaq",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 8,
+      "text": "بِٱلصَّبْرِ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     }
+    ],
+    "met": 5,
+    "false_alarms": [
+     {
+      "ayah": 2,
+      "word": 1,
+      "text": "ٱلْإِنسَـٰنَ",
+      "failing": [
+       "103:2:L7:tafkheem_or_taqeeq"
+      ],
+      "control": false
+     }
+    ]
+   },
+   "digest": {
+    "rules": {
+     "hamzat_wasl": {
+      "pass": 6
+     },
+     "jahr": {
+      "pass": 8
+     },
+     "tawassut": {
+      "unconfirmed": 1,
+      "no_evidence": 3,
+      "pass": 2
+     },
+     "hams": {
+      "pass": 2
+     },
+     "rakhawah": {
+      "pass": 4
+     },
+     "safir": {
+      "pass": 7
+     },
+     "tafkheem": {
+      "pass": 8
+     },
+     "takreer": {
+      "unconfirmed": 3
+     },
+     "ghunnah": {
+      "pass": 1
+     },
+     "ikhfa": {
+      "pass": 1
+     },
+     "madd_tabii": {
+      "pass": 7
+     },
+     "itbaq": {
+      "pass": 4
+     },
+     "qalqalah": {
+      "pass": 1
+     },
+     "madd_badal": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "و": {
+      "confirmed": 6
+     },
+     "َ": {
+      "confirmed": 25
+     },
+     "ل": {
+      "confirmed": 8
+     },
+     "ع": {
+      "confirmed": 2
+     },
+     "ص": {
+      "confirmed": 5
+     },
+     "ر": {
+      "confirmed": 3
+     },
+     "ء": {
+      "confirmed": 4
+     },
+     "ِ": {
+      "confirmed": 9
+     },
+     "ن": {
+      "confirmed": 4
+     },
+     "س": {
+      "confirmed": 2
+     },
+     "ا": {
+      "confirmed": 6
+     },
+     "ف": {
+      "confirmed": 1
+     },
+     "ۦ": {
+      "confirmed": 2
+     },
+     "خ": {
+      "confirmed": 1
+     },
+     "ُ": {
+      "confirmed": 3
+     },
+     "ذ": {
+      "confirmed": 1
+     },
+     "م": {
+      "confirmed": 2
+     },
+     "ۥ": {
+      "confirmed": 1
+     },
+     "ح": {
+      "confirmed": 2
+     },
+     "ت": {
+      "confirmed": 3
+     },
+     "ب": {
+      "confirmed": 3
+     },
+     "ق": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 52
+     },
+     "hams_or_jahr": {
+      "realised": 52
+     },
+     "itbaq": {
+      "realised": 52
+     },
+     "qalqla": {
+      "realised": 52
+     },
+     "safeer": {
+      "realised": 52
+     },
+     "shidda_or_rakhawa": {
+      "realised": 45
+     },
+     "tafashie": {
+      "realised": 52
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 49,
+      "not_realised": 1
+     }
+    },
+    "summary": {
+     "words": 14,
+     "words_all_correct": 13,
+     "letters": 100,
+     "identity_not_confirmed": 0,
+     "characteristics_scored": 407,
+     "characteristics_not_realised": 1,
+     "rules_scored": 52,
+     "rules_failed": 0
+    },
+    "recording": {
+     "audio_seconds": 22.74,
+     "seconds_per_count": 0.26,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 2,
+   "exercise": "r2e4",
+   "take": "B",
+   "recording": "r2e4/B/20260924-143103.m4a",
+   "card": {
+    "exercise": "r2e4",
+    "take": "B",
+    "wajh": {
+     "declared": "tawassut"
+    },
+    "tempo": {
+     "seconds_per_count": 0.24,
+     "class": "tadwir",
+     "ok": true
+    },
+    "expectations": [
+     {
+      "ayah": 2,
+      "word": 0,
+      "text": "إِنَّ",
+      "rule": "ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 2.88,
+      "status": "pass",
+      "z_masters": 1.109,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 2,
+      "word": 1,
+      "text": "ٱلْإِنسَـٰنَ",
+      "rule": "ikhfa",
+      "expected_counts": [
+       2.0,
+       4.79
+      ],
+      "measured": 3.25,
+      "status": "pass",
+      "z_masters": 2.883,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 2,
+      "text": "ءَامَنُوا۟",
+      "rule": "madd_badal",
+      "expected_counts": null,
+      "measured": 1.65,
+      "status": "pass",
+      "z_masters": -2.391,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 4,
+      "text": "ٱلصَّـٰلِحَـٰتِ",
+      "rule": "itbaq",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 8,
+      "text": "بِٱلصَّبْرِ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     }
+    ],
+    "met": 5,
+    "false_alarms": [],
+    "tempo_pair": {
+     "unit_s": [
+      0.262,
+      0.231
+     ],
+     "speed_ratio": 1.134,
+     "stretchings": [
+      {
+       "ayah": 1,
+       "word": 0,
+       "rule": "tawassut",
+       "seconds": [
+        0.32,
+        0.24
+       ],
+       "equivalent_counts": [
+        1.88,
+        1.61
+       ],
+       "verdict": [
+        "pass",
+        "pass"
+       ]
+      },
+      {
+       "ayah": 2,
+       "word": 0,
+       "rule": "ghunnah",
+       "seconds": [
+        1.32,
+        0.72
+       ],
+       "equivalent_counts": [
+        3.68,
+        2.16
+       ],
+       "verdict": [
+        "pass",
+        "pass"
+       ]
+      },
+      {
+       "ayah": 2,
+       "word": 1,
+       "rule": "tawassut",
+       "seconds": [
+        0.32,
+        0.2
+       ],
+       "equivalent_counts": [
+        1.84,
+        1.25
+       ],
+       "verdict": [
+        "pass",
+        "pass"
+       ]
+      },
+      {
+       "ayah": 2,
+       "word": 1,
+       "rule": "ikhfa",
+       "seconds": [
+        1.08,
+        0.84
+       ],
+       "equivalent_counts": [
+        2.78,
+        2.35
+       ],
+       "verdict": [
+        "pass",
+        "pass"
+       ]
+      },
+      {
+       "ayah": 2,
+       "word": 1,
+       "rule": "madd_tabii",
+       "seconds": [
+        0.36,
+        0.28
+       ],
+       "equivalent_counts": [
+        1.82,
+        1.56
+       ],
+       "verdict": [
+        "pass",
+        "pass"
+       ]
+      },
+      {
+       "ayah": 2,
+       "word": 2,
+       "rule": "madd_tabii",
+       "seconds": [
+        0.48,
+        0.4
+       ],
+       "equivalent_counts": [
+        2.42,
+        2.22
+       ],
+       "verdict": [
+        "pass",
+        "pass"
+       ]
+      },
+      {
+       "ayah": 3,
+       "word": 6,
+       "rule": "tawassut",
+       "seconds": [
+        0.28,
+        0.24
+       ],
+       "equivalent_counts": [
+        1.69,
+        1.64
+       ],
+       "verdict": [
+        "pass",
+        "pass"
+       ]
+      },
+      {
+       "ayah": 3,
+       "word": 1,
+       "rule": "madd_tabii",
+       "seconds": [
+        0.28,
+        0.32
+       ],
+       "equivalent_counts": [
+        1.5,
+        1.97
+       ],
+       "verdict": [
+        "pass",
+        "pass"
+       ]
+      },
+      {
+       "ayah": 3,
+       "word": 2,
+       "rule": "madd_badal",
+       "seconds": [
+        0.4,
+        0.32
+       ],
+       "equivalent_counts": [
+        2.06,
+        1.9
+       ],
+       "verdict": [
+        "pass",
+        "pass"
+       ]
+      },
+      {
+       "ayah": 3,
+       "word": 4,
+       "rule": "madd_tabii",
+       "seconds": [
+        0.44,
+        0.28
+       ],
+       "equivalent_counts": [
+        2.35,
+        1.73
+       ],
+       "verdict": [
+        "pass",
+        "pass"
+       ]
+      },
+      {
+       "ayah": 3,
+       "word": 4,
+       "rule": "madd_tabii",
+       "seconds": [
+        0.44,
+        0.32
+       ],
+       "equivalent_counts": [
+        2.35,
+        1.97
+       ],
+       "verdict": [
+        "pass",
+        "pass"
+       ]
+      },
+      {
+       "ayah": 3,
+       "word": 5,
+       "rule": "madd_tabii",
+       "seconds": [
+        0.44,
+        0.44
+       ],
+       "equivalent_counts": [
+        2.35,
+        2.72
+       ],
+       "verdict": [
+        "pass",
+        "pass"
+       ]
+      },
+      {
+       "ayah": 3,
+       "word": 7,
+       "rule": "madd_tabii",
+       "seconds": [
+        0.44,
+        0.36
+       ],
+       "equivalent_counts": [
+        2.35,
+        2.22
+       ],
+       "verdict": [
+        "pass",
+        "pass"
+       ]
+      }
+     ]
+    }
+   },
+   "digest": {
+    "rules": {
+     "hamzat_wasl": {
+      "pass": 6
+     },
+     "jahr": {
+      "pass": 8
+     },
+     "tawassut": {
+      "unconfirmed": 1,
+      "no_evidence": 3,
+      "pass": 2
+     },
+     "hams": {
+      "pass": 2
+     },
+     "rakhawah": {
+      "pass": 4
+     },
+     "safir": {
+      "pass": 7
+     },
+     "tafkheem": {
+      "pass": 8
+     },
+     "takreer": {
+      "unconfirmed": 3
+     },
+     "ghunnah": {
+      "pass": 1
+     },
+     "ikhfa": {
+      "pass": 1
+     },
+     "madd_tabii": {
+      "pass": 7
+     },
+     "itbaq": {
+      "pass": 4
+     },
+     "qalqalah": {
+      "pass": 1
+     },
+     "madd_badal": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "و": {
+      "confirmed": 6
+     },
+     "َ": {
+      "confirmed": 25
+     },
+     "ل": {
+      "confirmed": 8
+     },
+     "ع": {
+      "confirmed": 2
+     },
+     "ص": {
+      "confirmed": 5
+     },
+     "ر": {
+      "confirmed": 3
+     },
+     "ء": {
+      "confirmed": 4
+     },
+     "ِ": {
+      "confirmed": 9
+     },
+     "ن": {
+      "confirmed": 4
+     },
+     "س": {
+      "confirmed": 2
+     },
+     "ا": {
+      "confirmed": 6
+     },
+     "ف": {
+      "confirmed": 1
+     },
+     "ۦ": {
+      "confirmed": 2
+     },
+     "خ": {
+      "confirmed": 1
+     },
+     "ُ": {
+      "confirmed": 3
+     },
+     "ذ": {
+      "confirmed": 1
+     },
+     "م": {
+      "confirmed": 2
+     },
+     "ۥ": {
+      "confirmed": 1
+     },
+     "ح": {
+      "confirmed": 2
+     },
+     "ت": {
+      "confirmed": 3
+     },
+     "ب": {
+      "confirmed": 3
+     },
+     "ق": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 52
+     },
+     "hams_or_jahr": {
+      "realised": 52
+     },
+     "itbaq": {
+      "realised": 52
+     },
+     "qalqla": {
+      "realised": 52
+     },
+     "safeer": {
+      "realised": 52
+     },
+     "shidda_or_rakhawa": {
+      "realised": 45
+     },
+     "tafashie": {
+      "realised": 52
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 50
+     }
+    },
+    "summary": {
+     "words": 14,
+     "words_all_correct": 14,
+     "letters": 100,
+     "identity_not_confirmed": 0,
+     "characteristics_scored": 407,
+     "characteristics_not_realised": 0,
+     "rules_scored": 52,
+     "rules_failed": 0
+    },
+    "recording": {
+     "audio_seconds": 18.01,
+     "seconds_per_count": 0.24,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 3,
+   "exercise": "r3e1",
+   "take": "A",
+   "recording": "r3e1/A/20260924-143235.m4a",
+   "card": {
+    "exercise": "r3e1",
+    "take": "A",
+    "wajh": {
+     "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+     "choice": "tawassut",
+     "expected_counts": [
+      4.0,
+      5.0
+     ],
+     "source": "declared",
+     "instances": 2,
+     "median_counts": 4.52,
+     "note": "graded for consistency with the wajh the reciter chose"
+    },
+    "tempo": {
+     "seconds_per_count": 0.279,
+     "class": "tadwir",
+     "ok": true
+    },
+    "expectations": [
+     {
+      "ayah": 1,
+      "word": 1,
+      "text": "يَدَآ",
+      "rule": "madd_munfasil",
+      "expected_counts": [
+       3.25,
+       5.75
+      ],
+      "measured": 4.04,
+      "status": "pass",
+      "z_masters": -0.068,
+      "verdict": "ok",
+      "note": "declared tawassut"
+     },
+     {
+      "ayah": 1,
+      "word": 3,
+      "text": "لَهَبٍۢ",
+      "rule": "idgham_ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 3.51,
+      "status": "pass",
+      "z_masters": 2.482,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 1,
+      "word": 4,
+      "text": "وَتَبَّ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 2,
+      "word": 0,
+      "text": "مَآ",
+      "rule": "madd_munfasil",
+      "expected_counts": [
+       3.25,
+       5.75
+      ],
+      "measured": 4.99,
+      "status": "pass",
+      "z_masters": 0.431,
+      "verdict": "ok",
+      "note": "declared tawassut"
+     },
+     {
+      "ayah": 2,
+      "word": 3,
+      "text": "مَالُهُۥ",
+      "rule": "madd_silah_sughra",
+      "expected_counts": [
+       1.25,
+       2.75
+      ],
+      "measured": 1.73,
+      "status": "pass",
+      "z_masters": -1.518,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 2,
+      "word": 5,
+      "text": "كَسَبَ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 1,
+      "text": "نَارًۭا",
+      "rule": "ikhfa",
+      "expected_counts": [
+       2.0,
+       4.79
+      ],
+      "measured": 2.88,
+      "status": "pass",
+      "z_masters": 1.515,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 1,
+      "text": "نَارًۭا",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 3,
+      "text": "لَهَبٍۢ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     }
+    ],
+    "met": 9,
+    "false_alarms": [
+     {
+      "ayah": 2,
+      "word": 5,
+      "text": "كَسَبَ",
+      "failing": [
+       "111:2:L29:safeer",
+       "111:2:L29:identity",
+       "111:2:R3"
+      ],
+      "control": false
+     }
+    ]
+   },
+   "digest": {
+    "rules": {
+     "hams": {
+      "pass": 2
+     },
+     "shiddah": {
+      "pass": 1
+     },
+     "idgham_ghunnah": {
+      "pass": 1
+     },
+     "qalqalah": {
+      "pass": 3
+     },
+     "madd_munfasil": {
+      "pass": 2
+     },
+     "madd_tabii": {
+      "pass": 7
+     },
+     "jahr": {
+      "pass": 1
+     },
+     "rakhawah": {
+      "pass": 2
+     },
+     "izhar_halqi": {
+      "pass": 1
+     },
+     "safir": {
+      "wrong": 1,
+      "pass": 2
+     },
+     "madd_silah_sughra": {
+      "pass": 1
+     },
+     "ikhfa": {
+      "pass": 1
+     },
+     "tafkheem": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "ت": {
+      "confirmed": 4
+     },
+     "َ": {
+      "confirmed": 27
+     },
+     "ب": {
+      "confirmed": 6
+     },
+     "ي": {
+      "confirmed": 2
+     },
+     "د": {
+      "confirmed": 1
+     },
+     "ا": {
+      "confirmed": 8
+     },
+     "ء": {
+      "confirmed": 2
+     },
+     "ِ": {
+      "confirmed": 2
+     },
+     "ۦ": {
+      "confirmed": 1
+     },
+     "ل": {
+      "confirmed": 4
+     },
+     "ه": {
+      "confirmed": 4
+     },
+     "و": {
+      "confirmed": 2
+     },
+     "م": {
+      "confirmed": 3
+     },
+     "غ": {
+      "confirmed": 1
+     },
+     "ن": {
+      "confirmed": 3
+     },
+     "ع": {
+      "confirmed": 1
+     },
+     "ُ": {
+      "confirmed": 3
+     },
+     "ۥ": {
+      "confirmed": 1
+     },
+     "ك": {
+      "confirmed": 1
+     },
+     "س": {
+      "not_confirmed": 1,
+      "confirmed": 1
+     },
+     "ص": {
+      "confirmed": 1
+     },
+     "ر": {
+      "confirmed": 1
+     },
+     "ذ": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 42
+     },
+     "hams_or_jahr": {
+      "realised": 43
+     },
+     "itbaq": {
+      "realised": 43
+     },
+     "qalqla": {
+      "realised": 43
+     },
+     "safeer": {
+      "realised": 42,
+      "not_realised": 1
+     },
+     "shidda_or_rakhawa": {
+      "realised": 39
+     },
+     "tafashie": {
+      "realised": 43
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 42
+     }
+    },
+    "summary": {
+     "words": 15,
+     "words_all_correct": 14,
+     "letters": 85,
+     "identity_not_confirmed": 1,
+     "characteristics_scored": 338,
+     "characteristics_not_realised": 1,
+     "rules_scored": 26,
+     "rules_failed": 1
+    },
+    "recording": {
+     "audio_seconds": 20.25,
+     "seconds_per_count": 0.279,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 3,
+   "exercise": "r3e1",
+   "take": "B",
+   "recording": "r3e1/B/20260924-143136.m4a",
+   "card": {
+    "exercise": "r3e1",
+    "take": "B",
+    "wajh": {
+     "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+     "choice": "tawassut",
+     "expected_counts": [
+      4.0,
+      5.0
+     ],
+     "source": "declared",
+     "instances": 2,
+     "median_counts": 4.59,
+     "note": "graded for consistency with the wajh the reciter chose"
+    },
+    "tempo": {
+     "seconds_per_count": 0.3,
+     "class": "tahqiq",
+     "ok": true
+    },
+    "mistakes": [
+     {
+      "ayah": 1,
+      "word": 0,
+      "text": "تَبَّتْ",
+      "do": "تَبَّتْ — say the first tā' as ṭā': 'ṭabbat'.",
+      "verdict": "caught",
+      "evidence": [
+       "ت heard as ط (margin -8.764)",
+       "ت tafkheem_or_taqeeq: heard [مفخم] (margin -8.01)",
+       "ت itbaq: heard [مطبق] (margin -5.019)"
+      ],
+      "engine_failing": [
+       "111:1:L0:hams_or_jahr",
+       "111:1:L0:itbaq",
+       "111:1:L0:tafkheem_or_taqeeq",
+       "111:1:L0:identity",
+       "111:1:R0"
+      ]
+     },
+     {
+      "ayah": 1,
+      "word": 1,
+      "text": "يَدَآ",
+      "do": "يَدَآ — say the dāl as ḍād: 'yaḍā' (keep the munfasil at 4).",
+      "verdict": "caught",
+      "evidence": [
+       "د heard as ض (margin -10.601)",
+       "د tafkheem_or_taqeeq: heard [مفخم] (margin -7.017)",
+       "د itbaq: heard [مطبق] (margin -6.861)"
+      ],
+      "engine_failing": [
+       "111:1:L7:itbaq",
+       "111:1:L7:shidda_or_rakhawa",
+       "111:1:L7:tafkheem_or_taqeeq",
+       "111:1:L7:identity"
+      ]
+     },
+     {
+      "ayah": 2,
+      "word": 5,
+      "text": "كَسَبَ",
+      "do": "كَسَبَ — say the sīn as ṣād: 'kaṣab'.",
+      "verdict": "caught",
+      "evidence": [
+       "س heard as ص (margin -11.929)",
+       "س tafkheem_or_taqeeq: heard [مفخم] (margin -9.88)",
+       "س itbaq: heard [مطبق] (margin -10.221)"
+      ],
+      "engine_failing": [
+       "111:2:L29:itbaq",
+       "111:2:L29:tafkheem_or_taqeeq",
+       "111:2:L29:identity"
+      ]
+     },
+     {
+      "ayah": 3,
+      "word": 0,
+      "text": "سَيَصْلَىٰ",
+      "do": "سَيَصْلَىٰ — say the ṣād as sīn: 'sayaslā' (the direction caught before).",
+      "verdict": "caught",
+      "evidence": [
+       "ص heard as س (margin -8.2)",
+       "ص itbaq: heard [منفتح] (margin -7.951)",
+       "ص tafkheem_or_taqeeq: heard [مرقق] (margin -7.392)"
+      ],
+      "engine_failing": [
+       "111:3:L4:itbaq",
+       "111:3:L4:tafkheem_or_taqeeq",
+       "111:3:L4:identity"
+      ]
+     }
+    ],
+    "caught": 4,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "hams": {
+      "wrong": 1,
+      "pass": 1
+     },
+     "shiddah": {
+      "pass": 1
+     },
+     "idgham_ghunnah": {
+      "pass": 1
+     },
+     "qalqalah": {
+      "pass": 3
+     },
+     "madd_munfasil": {
+      "pass": 2
+     },
+     "madd_tabii": {
+      "pass": 7
+     },
+     "jahr": {
+      "pass": 1
+     },
+     "rakhawah": {
+      "pass": 2
+     },
+     "izhar_halqi": {
+      "pass": 1
+     },
+     "safir": {
+      "pass": 3
+     },
+     "madd_silah_sughra": {
+      "pass": 1
+     },
+     "ikhfa": {
+      "pass": 1
+     },
+     "tafkheem": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "ت": {
+      "not_confirmed": 1,
+      "confirmed": 3
+     },
+     "َ": {
+      "confirmed": 27
+     },
+     "ب": {
+      "confirmed": 6
+     },
+     "ي": {
+      "confirmed": 2
+     },
+     "د": {
+      "not_confirmed": 1
+     },
+     "ا": {
+      "confirmed": 8
+     },
+     "ء": {
+      "confirmed": 2
+     },
+     "ِ": {
+      "confirmed": 2
+     },
+     "ۦ": {
+      "confirmed": 1
+     },
+     "ل": {
+      "confirmed": 4
+     },
+     "ه": {
+      "confirmed": 4
+     },
+     "و": {
+      "confirmed": 2
+     },
+     "م": {
+      "confirmed": 3
+     },
+     "غ": {
+      "confirmed": 1
+     },
+     "ن": {
+      "confirmed": 3
+     },
+     "ع": {
+      "confirmed": 1
+     },
+     "ُ": {
+      "confirmed": 3
+     },
+     "ۥ": {
+      "confirmed": 1
+     },
+     "ك": {
+      "confirmed": 1
+     },
+     "س": {
+      "not_confirmed": 1,
+      "confirmed": 1
+     },
+     "ص": {
+      "not_confirmed": 1
+     },
+     "ر": {
+      "confirmed": 1
+     },
+     "ذ": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 42
+     },
+     "hams_or_jahr": {
+      "not_realised": 1,
+      "realised": 42
+     },
+     "itbaq": {
+      "not_realised": 4,
+      "realised": 39
+     },
+     "qalqla": {
+      "realised": 43
+     },
+     "safeer": {
+      "realised": 43
+     },
+     "shidda_or_rakhawa": {
+      "realised": 38,
+      "not_realised": 1
+     },
+     "tafashie": {
+      "realised": 43
+     },
+     "tafkheem_or_taqeeq": {
+      "not_realised": 4,
+      "realised": 38
+     }
+    },
+    "summary": {
+     "words": 15,
+     "words_all_correct": 11,
+     "letters": 85,
+     "identity_not_confirmed": 4,
+     "characteristics_scored": 338,
+     "characteristics_not_realised": 10,
+     "rules_scored": 26,
+     "rules_failed": 1
+    },
+    "recording": {
+     "audio_seconds": 22.44,
+     "seconds_per_count": 0.3,
+     "tempo_class": "tahqiq"
+    }
+   }
+  },
+  {
+   "round": 3,
+   "exercise": "r3e2",
+   "take": "A",
+   "recording": "r3e2/A/20260924-143352.m4a",
+   "card": {
+    "exercise": "r3e2",
+    "take": "A",
+    "wajh": {
+     "declared": "tawassut"
+    },
+    "tempo": {
+     "seconds_per_count": 0.3,
+     "class": "tahqiq",
+     "ok": true
+    },
+    "expectations": [
+     {
+      "ayah": 7,
+      "word": 0,
+      "text": "فَمَن",
+      "rule": "idgham_ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 3.4,
+      "status": "pass",
+      "z_masters": 2.342,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 7,
+      "word": 3,
+      "text": "ذَرَّةٍ",
+      "rule": "izhar_halqi",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 7,
+      "word": 4,
+      "text": "خَيْرًۭا",
+      "rule": "idgham_ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 4.25,
+      "status": "pass",
+      "z_masters": 3.423,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 7,
+      "word": 5,
+      "text": "يَرَهُۥ",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 8,
+      "word": 0,
+      "text": "وَمَن",
+      "rule": "idgham_ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 4.35,
+      "status": "pass",
+      "z_masters": 3.551,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 8,
+      "word": 3,
+      "text": "ذَرَّةٍۢ",
+      "rule": "ikhfa",
+      "expected_counts": [
+       2.0,
+       4.79
+      ],
+      "measured": 2.97,
+      "status": "pass",
+      "z_masters": 1.848,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 8,
+      "word": 4,
+      "text": "شَرًّۭا",
+      "rule": "idgham_ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 4.17,
+      "status": "pass",
+      "z_masters": 3.322,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 8,
+      "word": 4,
+      "text": "شَرًّۭا",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     }
+    ],
+    "met": 8,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "idgham_ghunnah": {
+      "pass": 4
+     },
+     "jahr": {
+      "pass": 5
+     },
+     "tawassut": {
+      "pass": 4
+     },
+     "hams": {
+      "pass": 4
+     },
+     "rakhawah": {
+      "pass": 5
+     },
+     "tafkheem": {
+      "pass": 9
+     },
+     "takreer": {
+      "unconfirmed": 3
+     },
+     "izhar_halqi": {
+      "pass": 1
+     },
+     "madd_tabii": {
+      "pass": 2
+     },
+     "ikhfa": {
+      "pass": 1
+     },
+     "tafashhi": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "ف": {
+      "confirmed": 1
+     },
+     "َ": {
+      "confirmed": 24
+     },
+     "م": {
+      "confirmed": 6
+     },
+     "ي": {
+      "confirmed": 4
+     },
+     "ع": {
+      "confirmed": 2
+     },
+     "ل": {
+      "confirmed": 4
+     },
+     "ِ": {
+      "confirmed": 4
+     },
+     "ث": {
+      "confirmed": 2
+     },
+     "ق": {
+      "confirmed": 2
+     },
+     "ا": {
+      "confirmed": 2
+     },
+     "ذ": {
+      "confirmed": 2
+     },
+     "ر": {
+      "confirmed": 6
+     },
+     "ت": {
+      "confirmed": 2
+     },
+     "ن": {
+      "confirmed": 1
+     },
+     "خ": {
+      "confirmed": 1
+     },
+     "و": {
+      "confirmed": 1
+     },
+     "ش": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 39
+     },
+     "hams_or_jahr": {
+      "realised": 37
+     },
+     "itbaq": {
+      "realised": 39
+     },
+     "qalqla": {
+      "realised": 39
+     },
+     "safeer": {
+      "realised": 39
+     },
+     "shidda_or_rakhawa": {
+      "realised": 31
+     },
+     "tafashie": {
+      "realised": 39
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 39
+     }
+    },
+    "summary": {
+     "words": 12,
+     "words_all_correct": 12,
+     "letters": 69,
+     "identity_not_confirmed": 0,
+     "characteristics_scored": 302,
+     "characteristics_not_realised": 0,
+     "rules_scored": 36,
+     "rules_failed": 0
+    },
+    "recording": {
+     "audio_seconds": 21.53,
+     "seconds_per_count": 0.3,
+     "tempo_class": "tahqiq"
+    }
+   }
+  },
+  {
+   "round": 3,
+   "exercise": "r3e2",
+   "take": "B",
+   "recording": "r3e2/B/20260924-143246.m4a",
+   "card": {
+    "exercise": "r3e2",
+    "take": "B",
+    "wajh": {
+     "declared": "tawassut"
+    },
+    "tempo": {
+     "seconds_per_count": 0.24,
+     "class": "tadwir",
+     "ok": true
+    },
+    "mistakes": [
+     {
+      "ayah": 7,
+      "word": 0,
+      "text": "فَمَن",
+      "do": "فَمَن يَعْمَلْ — merge the nūn into the yā' with NO ghunnah: a plain 'fa-may-yaʿmal'.",
+      "verdict": "caught",
+      "evidence": [
+       "idgham_ghunnah short 1.9 counts (dev -0.1)"
+      ],
+      "engine_failing": [
+       "99:7:R0"
+      ]
+     },
+     {
+      "ayah": 7,
+      "word": 4,
+      "text": "خَيْرًۭا",
+      "do": "خَيْرًۭا يَرَهُۥ — iẓhār of the tanwīn: 'khayran yarah', the nūn clear, no merging.",
+      "verdict": "caught",
+      "evidence": [
+       "idgham_ghunnah short 1.65 counts (dev -0.35)",
+       "ي heard as ∅ (margin -6.603)"
+      ],
+      "engine_failing": [
+       "99:7:L30:identity",
+       "99:7:R14"
+      ]
+     },
+     {
+      "ayah": 8,
+      "word": 3,
+      "text": "ذَرَّةٍۢ",
+      "do": "ذَرَّةٍۢ شَرًّۭا — iẓhār of the tanwīn before shīn: 'dharratin sharran', a clear nūn.",
+      "verdict": "caught",
+      "evidence": [
+       "ikhfa short 1.65 counts (dev -0.35)"
+      ],
+      "engine_failing": [
+       "99:8:R10"
+      ]
+     },
+     {
+      "ayah": 8,
+      "word": 4,
+      "text": "شَرًّۭا",
+      "do": "شَرًّۭا — make the rā' light (it carries fatḥah and must be heavy).",
+      "verdict": "caught",
+      "evidence": [
+       "tafkheem wrong",
+       "ر tafkheem_or_taqeeq: heard [مرقق] (margin -7.072)"
+      ],
+      "engine_failing": [
+       "99:8:L27:tafkheem_or_taqeeq",
+       "99:8:R13"
+      ]
+     }
+    ],
+    "caught": 4,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "idgham_ghunnah": {
+      "short": 2,
+      "pass": 2
+     },
+     "jahr": {
+      "pass": 5
+     },
+     "tawassut": {
+      "pass": 4
+     },
+     "hams": {
+      "pass": 4
+     },
+     "rakhawah": {
+      "pass": 5
+     },
+     "tafkheem": {
+      "pass": 8,
+      "wrong": 1
+     },
+     "takreer": {
+      "unconfirmed": 3
+     },
+     "izhar_halqi": {
+      "pass": 1
+     },
+     "madd_tabii": {
+      "pass": 2
+     },
+     "ikhfa": {
+      "short": 1
+     },
+     "tafashhi": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "ف": {
+      "confirmed": 1
+     },
+     "َ": {
+      "confirmed": 24
+     },
+     "م": {
+      "confirmed": 6
+     },
+     "ي": {
+      "confirmed": 3,
+      "not_confirmed": 1
+     },
+     "ع": {
+      "confirmed": 2
+     },
+     "ل": {
+      "confirmed": 4
+     },
+     "ِ": {
+      "confirmed": 4
+     },
+     "ث": {
+      "confirmed": 2
+     },
+     "ق": {
+      "confirmed": 2
+     },
+     "ا": {
+      "confirmed": 2
+     },
+     "ذ": {
+      "confirmed": 2
+     },
+     "ر": {
+      "confirmed": 6
+     },
+     "ت": {
+      "confirmed": 2
+     },
+     "ن": {
+      "confirmed": 1
+     },
+     "خ": {
+      "confirmed": 1
+     },
+     "و": {
+      "confirmed": 1
+     },
+     "ش": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 39
+     },
+     "hams_or_jahr": {
+      "realised": 37
+     },
+     "itbaq": {
+      "realised": 39
+     },
+     "qalqla": {
+      "realised": 39
+     },
+     "safeer": {
+      "realised": 39
+     },
+     "shidda_or_rakhawa": {
+      "realised": 31
+     },
+     "tafashie": {
+      "realised": 39
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 38,
+      "not_realised": 1
+     }
+    },
+    "summary": {
+     "words": 12,
+     "words_all_correct": 8,
+     "letters": 69,
+     "identity_not_confirmed": 1,
+     "characteristics_scored": 302,
+     "characteristics_not_realised": 1,
+     "rules_scored": 36,
+     "rules_failed": 4
+    },
+    "recording": {
+     "audio_seconds": 16.02,
+     "seconds_per_count": 0.24,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 3,
+   "exercise": "r3e3",
+   "take": "A",
+   "recording": "r3e3/A/20260924-143307.m4a",
+   "card": {
+    "exercise": "r3e3",
+    "take": "A",
+    "wajh": {
+     "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+     "choice": "tawassut",
+     "expected_counts": [
+      4.0,
+      5.0
+     ],
+     "source": "declared",
+     "instances": 1,
+     "median_counts": 3.99,
+     "note": "graded for consistency with the wajh the reciter chose"
+    },
+    "tempo": {
+     "seconds_per_count": 0.26,
+     "class": "tadwir",
+     "ok": true
+    },
+    "expectations": [
+     {
+      "ayah": 1,
+      "word": 0,
+      "text": "إِنَّآ",
+      "rule": "ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 3.01,
+      "status": "pass",
+      "z_masters": 1.499,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 1,
+      "word": 0,
+      "text": "إِنَّآ",
+      "rule": "madd_munfasil",
+      "expected_counts": [
+       3.25,
+       5.75
+      ],
+      "measured": 3.99,
+      "status": "pass",
+      "z_masters": -0.095,
+      "verdict": "ok",
+      "note": "declared tawassut"
+     },
+     {
+      "ayah": 1,
+      "word": 1,
+      "text": "أَعْطَيْنَـٰكَ",
+      "rule": "madd_tabii",
+      "expected_counts": [
+       1.25,
+       2.75
+      ],
+      "measured": 1.78,
+      "status": "pass",
+      "z_masters": -0.88,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 1,
+      "word": 1,
+      "text": "أَعْطَيْنَـٰكَ",
+      "rule": "itbaq",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 2,
+      "word": 0,
+      "text": "فَصَلِّ",
+      "rule": "itbaq",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 2,
+      "word": 1,
+      "text": "لِرَبِّكَ",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 2,
+      "word": 2,
+      "text": "وَٱنْحَرْ",
+      "rule": "izhar_halqi",
+      "expected_counts": null,
+      "measured": 1.41,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 2,
+      "word": 2,
+      "text": "وَٱنْحَرْ",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 0,
+      "text": "إِنَّ",
+      "rule": "ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 3.51,
+      "status": "pass",
+      "z_masters": 2.998,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 1,
+      "text": "شَانِئَكَ",
+      "rule": "madd_tabii",
+      "expected_counts": [
+       1.25,
+       2.75
+      ],
+      "measured": 1.69,
+      "status": "pass",
+      "z_masters": -1.408,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 3,
+      "text": "ٱلْأَبْتَرُ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 3,
+      "text": "ٱلْأَبْتَرُ",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     }
+    ],
+    "met": 12,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "ghunnah": {
+      "pass": 2
+     },
+     "jahr": {
+      "pass": 8
+     },
+     "tawassut": {
+      "pass": 3,
+      "no_evidence": 3
+     },
+     "itbaq": {
+      "pass": 2
+     },
+     "tafkheem": {
+      "pass": 6
+     },
+     "rakhawah": {
+      "pass": 2
+     },
+     "hamzat_wasl": {
+      "pass": 3
+     },
+     "takreer": {
+      "unconfirmed": 3
+     },
+     "madd_munfasil": {
+      "pass": 1
+     },
+     "madd_tabii": {
+      "pass": 2
+     },
+     "safir": {
+      "pass": 1
+     },
+     "izhar_halqi": {
+      "pass": 1
+     },
+     "tafashhi": {
+      "pass": 1
+     },
+     "qalqalah": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "ء": {
+      "confirmed": 5
+     },
+     "ِ": {
+      "confirmed": 6
+     },
+     "ن": {
+      "confirmed": 5
+     },
+     "َ": {
+      "confirmed": 20
+     },
+     "ا": {
+      "confirmed": 3
+     },
+     "ع": {
+      "confirmed": 1
+     },
+     "ط": {
+      "confirmed": 1
+     },
+     "ك": {
+      "confirmed": 4
+     },
+     "ل": {
+      "confirmed": 4
+     },
+     "ث": {
+      "confirmed": 1
+     },
+     "ر": {
+      "confirmed": 4
+     },
+     "ف": {
+      "confirmed": 1
+     },
+     "ص": {
+      "confirmed": 1
+     },
+     "ب": {
+      "confirmed": 2
+     },
+     "و": {
+      "confirmed": 2
+     },
+     "ح": {
+      "confirmed": 1
+     },
+     "ش": {
+      "confirmed": 1
+     },
+     "ه": {
+      "confirmed": 1
+     },
+     "ُ": {
+      "confirmed": 1
+     },
+     "ت": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 38
+     },
+     "hams_or_jahr": {
+      "realised": 38
+     },
+     "itbaq": {
+      "realised": 38
+     },
+     "qalqla": {
+      "realised": 38
+     },
+     "safeer": {
+      "realised": 38
+     },
+     "shidda_or_rakhawa": {
+      "realised": 34
+     },
+     "tafashie": {
+      "realised": 38
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 38
+     }
+    },
+    "summary": {
+     "words": 10,
+     "words_all_correct": 10,
+     "letters": 68,
+     "identity_not_confirmed": 0,
+     "characteristics_scored": 300,
+     "characteristics_not_realised": 0,
+     "rules_scored": 33,
+     "rules_failed": 0
+    },
+    "recording": {
+     "audio_seconds": 16.53,
+     "seconds_per_count": 0.26,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 3,
+   "exercise": "r3e3",
+   "take": "B",
+   "recording": "r3e3/B/20260924-143256.m4a",
+   "card": {
+    "exercise": "r3e3",
+    "take": "B",
+    "wajh": {
+     "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+     "choice": "tawassut",
+     "expected_counts": [
+      4.0,
+      5.0
+     ],
+     "source": "declared",
+     "instances": 1,
+     "median_counts": 4.35,
+     "note": "graded for consistency with the wajh the reciter chose"
+    },
+    "tempo": {
+     "seconds_per_count": 0.24,
+     "class": "tadwir",
+     "ok": true
+    },
+    "mistakes": [
+     {
+      "ayah": 1,
+      "word": 1,
+      "text": "أَعْطَيْنَـٰكَ",
+      "do": "أَعْطَيْنَـٰكَ — cut the madd on the nūn to one count: 'aʿṭaynaka'.",
+      "verdict": "caught",
+      "evidence": [
+       "madd_tabii short 1.04 counts (dev -0.96)"
+      ],
+      "engine_failing": [
+       "108:1:R17"
+      ]
+     },
+     {
+      "ayah": 2,
+      "word": 0,
+      "text": "فَصَلِّ",
+      "do": "فَصَلِّ — end on fatḥah instead of kasrah: 'fa-ṣalla'.",
+      "verdict": "caught",
+      "evidence": [
+       "ِ heard as َ (margin -17.273)"
+      ],
+      "engine_failing": [
+       "108:2:L5:identity"
+      ]
+     },
+     {
+      "ayah": 3,
+      "word": 1,
+      "text": "شَانِئَكَ",
+      "do": "شَانِئَكَ — drop the kasrah of the nūn: 'shān'aka'.",
+      "verdict": "caught",
+      "evidence": [
+       "ِ heard as َ (margin -1.745)"
+      ],
+      "engine_failing": [
+       "108:3:L8:identity"
+      ]
+     },
+     {
+      "ayah": 3,
+      "word": 2,
+      "text": "هُوَ",
+      "do": "هُوَ — stretch the ḍammah into a madd: 'hūwa'.",
+      "verdict": "missed",
+      "evidence": [],
+      "engine_failing": []
+     }
+    ],
+    "caught": 3,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "ghunnah": {
+      "pass": 2
+     },
+     "jahr": {
+      "pass": 8
+     },
+     "tawassut": {
+      "pass": 3,
+      "no_evidence": 3
+     },
+     "itbaq": {
+      "pass": 2
+     },
+     "tafkheem": {
+      "pass": 6
+     },
+     "rakhawah": {
+      "pass": 2
+     },
+     "hamzat_wasl": {
+      "pass": 3
+     },
+     "takreer": {
+      "unconfirmed": 3
+     },
+     "madd_munfasil": {
+      "pass": 1
+     },
+     "madd_tabii": {
+      "short": 1,
+      "pass": 1
+     },
+     "safir": {
+      "pass": 1
+     },
+     "izhar_halqi": {
+      "pass": 1
+     },
+     "tafashhi": {
+      "pass": 1
+     },
+     "qalqalah": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "ء": {
+      "confirmed": 5
+     },
+     "ِ": {
+      "confirmed": 4,
+      "not_confirmed": 2
+     },
+     "ن": {
+      "confirmed": 5
+     },
+     "َ": {
+      "confirmed": 20
+     },
+     "ا": {
+      "confirmed": 3
+     },
+     "ع": {
+      "confirmed": 1
+     },
+     "ط": {
+      "confirmed": 1
+     },
+     "ك": {
+      "confirmed": 4
+     },
+     "ل": {
+      "confirmed": 4
+     },
+     "ث": {
+      "confirmed": 1
+     },
+     "ر": {
+      "confirmed": 4
+     },
+     "ف": {
+      "confirmed": 1
+     },
+     "ص": {
+      "confirmed": 1
+     },
+     "ب": {
+      "confirmed": 2
+     },
+     "و": {
+      "confirmed": 2
+     },
+     "ح": {
+      "confirmed": 1
+     },
+     "ش": {
+      "confirmed": 1
+     },
+     "ه": {
+      "confirmed": 1
+     },
+     "ُ": {
+      "confirmed": 1
+     },
+     "ت": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 38
+     },
+     "hams_or_jahr": {
+      "realised": 38
+     },
+     "itbaq": {
+      "realised": 38
+     },
+     "qalqla": {
+      "realised": 38
+     },
+     "safeer": {
+      "realised": 38
+     },
+     "shidda_or_rakhawa": {
+      "realised": 34
+     },
+     "tafashie": {
+      "realised": 38
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 38
+     }
+    },
+    "summary": {
+     "words": 10,
+     "words_all_correct": 7,
+     "letters": 68,
+     "identity_not_confirmed": 2,
+     "characteristics_scored": 300,
+     "characteristics_not_realised": 0,
+     "rules_scored": 33,
+     "rules_failed": 1
+    },
+    "recording": {
+     "audio_seconds": 15.72,
+     "seconds_per_count": 0.24,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 3,
+   "exercise": "r3e4",
+   "take": "A",
+   "recording": null
+  },
+  {
+   "round": 3,
+   "exercise": "r3e4",
+   "take": "B",
+   "recording": null
+  },
+  {
+   "round": 4,
+   "exercise": "r4e1",
+   "take": "A",
+   "recording": "r4e1/A/20260924-150911.m4a",
+   "card": {
+    "exercise": "r4e1",
+    "take": "A",
+    "wajh": {
+     "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+     "choice": "tawassut",
+     "expected_counts": [
+      4.0,
+      5.0
+     ],
+     "source": "declared",
+     "instances": 2,
+     "median_counts": 5.09,
+     "note": "graded for consistency with the wajh the reciter chose"
+    },
+    "tempo": {
+     "seconds_per_count": 0.28,
+     "class": "tadwir",
+     "ok": true
+    },
+    "expectations": [
+     {
+      "ayah": 22,
+      "word": 0,
+      "text": "أَفَمَن",
+      "rule": "idgham_ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 3.3,
+      "status": "pass",
+      "z_masters": 2.214,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 22,
+      "word": 2,
+      "text": "مُكِبًّا",
+      "rule": "izhar_halqi",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 22,
+      "word": 4,
+      "text": "وَجْهِهِۦٓ",
+      "rule": "madd_silah_kubra",
+      "expected_counts": [
+       3.25,
+       5.75
+      ],
+      "measured": 4.46,
+      "status": "pass",
+      "z_masters": 0.291,
+      "verdict": "ok",
+      "note": "declared tawassut"
+     },
+     {
+      "ayah": 22,
+      "word": 4,
+      "text": "وَجْهِهِۦٓ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 22,
+      "word": 5,
+      "text": "أَهْدَىٰٓ",
+      "rule": "madd_munfasil",
+      "expected_counts": [
+       3.25,
+       5.75
+      ],
+      "measured": 5.72,
+      "status": "pass",
+      "z_masters": 0.815,
+      "verdict": "ok",
+      "note": "declared tawassut"
+     },
+     {
+      "ayah": 22,
+      "word": 6,
+      "text": "أَمَّن",
+      "rule": "ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 3.51,
+      "status": "pass",
+      "z_masters": 2.998,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 22,
+      "word": 6,
+      "text": "أَمَّن",
+      "rule": "idgham_ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 3.4,
+      "status": "pass",
+      "z_masters": 2.342,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 22,
+      "word": 8,
+      "text": "سَوِيًّا",
+      "rule": "izhar_halqi",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 22,
+      "word": 10,
+      "text": "صِرَٰطٍۢ",
+      "rule": "idgham_ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 4.25,
+      "status": "pass",
+      "z_masters": 3.423,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 22,
+      "word": 10,
+      "text": "صِرَٰطٍۢ",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 22,
+      "word": 11,
+      "text": "مُّسْتَقِيمٍۢ",
+      "rule": "madd_arid_lissukun",
+      "expected_counts": null,
+      "measured": 4.88,
+      "status": "pass",
+      "z_masters": 0.629,
+      "verdict": "ok",
+      "note": ""
+     }
+    ],
+    "met": 11,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "idgham_ghunnah": {
+      "pass": 3
+     },
+     "izhar_shafawi": {
+      "pass": 2
+     },
+     "tafashhi": {
+      "pass": 2
+     },
+     "izhar_halqi": {
+      "pass": 2
+     },
+     "qalqalah": {
+      "pass": 1
+     },
+     "hams": {
+      "pass": 2
+     },
+     "rakhawah": {
+      "pass": 2
+     },
+     "ghunnah": {
+      "pass": 1
+     },
+     "safir": {
+      "pass": 3
+     },
+     "tafkheem": {
+      "pass": 1
+     },
+     "madd_tabii": {
+      "pass": 5
+     },
+     "madd_silah_kubra": {
+      "pass": 1
+     },
+     "madd_munfasil": {
+      "pass": 1
+     },
+     "madd_arid_lissukun": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "ء": {
+      "confirmed": 3
+     },
+     "َ": {
+      "confirmed": 19
+     },
+     "ف": {
+      "confirmed": 1
+     },
+     "م": {
+      "confirmed": 7
+     },
+     "ي": {
+      "confirmed": 3
+     },
+     "ش": {
+      "confirmed": 2
+     },
+     "ِ": {
+      "confirmed": 9
+     },
+     "ۦ": {
+      "confirmed": 4
+     },
+     "ُ": {
+      "confirmed": 2
+     },
+     "ك": {
+      "confirmed": 1
+     },
+     "ب": {
+      "confirmed": 1
+     },
+     "ن": {
+      "confirmed": 2
+     },
+     "ع": {
+      "confirmed": 2
+     },
+     "ل": {
+      "confirmed": 2
+     },
+     "ا": {
+      "confirmed": 4
+     },
+     "و": {
+      "confirmed": 2
+     },
+     "ج": {
+      "confirmed": 1
+     },
+     "ه": {
+      "confirmed": 3
+     },
+     "د": {
+      "confirmed": 1
+     },
+     "س": {
+      "confirmed": 2
+     },
+     "ص": {
+      "confirmed": 1
+     },
+     "ر": {
+      "confirmed": 1
+     },
+     "ط": {
+      "confirmed": 1
+     },
+     "ت": {
+      "confirmed": 1
+     },
+     "ق": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 39
+     },
+     "hams_or_jahr": {
+      "realised": 39
+     },
+     "itbaq": {
+      "realised": 39
+     },
+     "qalqla": {
+      "realised": 39
+     },
+     "safeer": {
+      "realised": 39
+     },
+     "shidda_or_rakhawa": {
+      "realised": 33
+     },
+     "tafashie": {
+      "realised": 39
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 38
+     }
+    },
+    "summary": {
+     "words": 12,
+     "words_all_correct": 12,
+     "letters": 77,
+     "identity_not_confirmed": 0,
+     "characteristics_scored": 305,
+     "characteristics_not_realised": 0,
+     "rules_scored": 27,
+     "rules_failed": 0
+    },
+    "recording": {
+     "audio_seconds": 22.02,
+     "seconds_per_count": 0.28,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 4,
+   "exercise": "r4e1",
+   "take": "B",
+   "recording": "r4e1/B/20260924-150751.m4a",
+   "card": {
+    "exercise": "r4e1",
+    "take": "B",
+    "wajh": {
+     "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+     "choice": "tawassut",
+     "expected_counts": [
+      4.0,
+      5.0
+     ],
+     "source": "declared",
+     "instances": 2,
+     "median_counts": 4.97,
+     "note": "graded for consistency with the wajh the reciter chose"
+    },
+    "tempo": {
+     "seconds_per_count": 0.26,
+     "class": "tadwir",
+     "ok": true
+    },
+    "mistakes": [
+     {
+      "ayah": 22,
+      "word": 0,
+      "text": "أَفَمَن",
+      "do": "أَفَمَن يَمْشِى — merge the nūn into the yā' with NO ghunnah: 'afamay-yamshī'.",
+      "verdict": "caught",
+      "evidence": [
+       "idgham_ghunnah short 1.92 counts (dev -0.08)"
+      ],
+      "engine_failing": [
+       "67:22:R0"
+      ]
+     },
+     {
+      "ayah": 22,
+      "word": 1,
+      "text": "يَمْشِى",
+      "do": "يَمْشِى — say the shīn as sīn: 'yamsī'.",
+      "verdict": "caught",
+      "evidence": [
+       "ش tafashie: heard [لا تفشي] (margin -3.73)"
+      ],
+      "engine_failing": [
+       "67:22:L9:safeer",
+       "67:22:L9:tafashie",
+       "67:22:R2"
+      ]
+     },
+     {
+      "ayah": 22,
+      "word": 6,
+      "text": "أَمَّن",
+      "do": "أَمَّن يَمْشِى — iẓhār: 'amman yamshī', the nūn clear, no merging (keep the ghunnah on the mīm).",
+      "verdict": "caught",
+      "evidence": [
+       "idgham_ghunnah short 1.92 counts (dev -0.08)",
+       "ي heard as ∅ (margin -5.42)"
+      ],
+      "engine_failing": [
+       "67:22:L43:identity",
+       "67:22:R8"
+      ]
+     },
+     {
+      "ayah": 22,
+      "word": 10,
+      "text": "صِرَٰطٍۢ",
+      "do": "صِرَٰطٍۢ مُّسْتَقِيمٍۢ — merge the tanwīn into the mīm with NO ghunnah.",
+      "verdict": "caught",
+      "evidence": [
+       "idgham_ghunnah short 1.81 counts (dev -0.19)"
+      ],
+      "engine_failing": [
+       "67:22:R15"
+      ]
+     }
+    ],
+    "caught": 4,
+    "false_alarms": [
+     {
+      "ayah": 22,
+      "word": 4,
+      "text": "وَجْهِهِۦٓ",
+      "failing": [
+       "67:22:L30:identity"
+      ],
+      "control": false
+     },
+     {
+      "ayah": 22,
+      "word": 8,
+      "text": "سَوِيًّا",
+      "failing": [
+       "67:22:L49:ghonna",
+       "67:22:L49:hams_or_jahr",
+       "67:22:L49:safeer",
+       "67:22:L49:shidda_or_rakhawa",
+       "67:22:L49:identity",
+       "67:22:L50:identity",
+       "67:22:L51:hams_or_jahr",
+       "67:22:L51:shidda_or_rakhawa",
+       "67:22:L51:identity",
+       "67:22:L53:identity",
+       "67:22:R11"
+      ],
+      "control": false
+     }
+    ]
+   },
+   "digest": {
+    "rules": {
+     "idgham_ghunnah": {
+      "short": 3
+     },
+     "izhar_shafawi": {
+      "pass": 2
+     },
+     "tafashhi": {
+      "wrong": 1,
+      "pass": 1
+     },
+     "izhar_halqi": {
+      "pass": 2
+     },
+     "qalqalah": {
+      "pass": 1
+     },
+     "hams": {
+      "pass": 2
+     },
+     "rakhawah": {
+      "pass": 2
+     },
+     "ghunnah": {
+      "pass": 1
+     },
+     "safir": {
+      "wrong": 1,
+      "pass": 2
+     },
+     "tafkheem": {
+      "pass": 1
+     },
+     "madd_tabii": {
+      "pass": 5
+     },
+     "madd_silah_kubra": {
+      "pass": 1
+     },
+     "madd_munfasil": {
+      "pass": 1
+     },
+     "madd_arid_lissukun": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "ء": {
+      "confirmed": 3
+     },
+     "َ": {
+      "confirmed": 18,
+      "not_confirmed": 1
+     },
+     "ف": {
+      "confirmed": 1
+     },
+     "م": {
+      "confirmed": 7
+     },
+     "ي": {
+      "confirmed": 1,
+      "not_confirmed": 2
+     },
+     "ش": {
+      "confirmed": 2
+     },
+     "ِ": {
+      "confirmed": 9
+     },
+     "ۦ": {
+      "confirmed": 4
+     },
+     "ُ": {
+      "confirmed": 2
+     },
+     "ك": {
+      "confirmed": 1
+     },
+     "ب": {
+      "confirmed": 1
+     },
+     "ن": {
+      "confirmed": 2
+     },
+     "ع": {
+      "confirmed": 2
+     },
+     "ل": {
+      "confirmed": 2
+     },
+     "ا": {
+      "confirmed": 4
+     },
+     "و": {
+      "confirmed": 1,
+      "not_confirmed": 1
+     },
+     "ج": {
+      "confirmed": 1
+     },
+     "ه": {
+      "confirmed": 2,
+      "not_confirmed": 1
+     },
+     "د": {
+      "confirmed": 1
+     },
+     "س": {
+      "not_confirmed": 1,
+      "confirmed": 1
+     },
+     "ص": {
+      "confirmed": 1
+     },
+     "ر": {
+      "confirmed": 1
+     },
+     "ط": {
+      "confirmed": 1
+     },
+     "ت": {
+      "confirmed": 1
+     },
+     "ق": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 38,
+      "not_realised": 1
+     },
+     "hams_or_jahr": {
+      "realised": 37,
+      "not_realised": 2
+     },
+     "itbaq": {
+      "realised": 39
+     },
+     "qalqla": {
+      "realised": 39
+     },
+     "safeer": {
+      "realised": 37,
+      "not_realised": 2
+     },
+     "shidda_or_rakhawa": {
+      "realised": 31,
+      "not_realised": 2
+     },
+     "tafashie": {
+      "realised": 38,
+      "not_realised": 1
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 38
+     }
+    },
+    "summary": {
+     "words": 12,
+     "words_all_correct": 6,
+     "letters": 77,
+     "identity_not_confirmed": 6,
+     "characteristics_scored": 305,
+     "characteristics_not_realised": 8,
+     "rules_scored": 27,
+     "rules_failed": 5
+    },
+    "recording": {
+     "audio_seconds": 19.73,
+     "seconds_per_count": 0.26,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 4,
+   "exercise": "r4e2",
+   "take": "A",
+   "recording": "r4e2/A/20260924-151925.m4a",
+   "card": {
+    "exercise": "r4e2",
+    "take": "A",
+    "wajh": {
+     "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+     "choice": "tawassut",
+     "expected_counts": [
+      4.0,
+      5.0
+     ],
+     "source": "declared",
+     "instances": 3,
+     "median_counts": 4.63,
+     "note": "graded for consistency with the wajh the reciter chose"
+    },
+    "tempo": {
+     "seconds_per_count": 0.28,
+     "class": "tadwir",
+     "ok": true
+    },
+    "expectations": [
+     {
+      "ayah": 255,
+      "word": 1,
+      "text": "لَآ",
+      "rule": "madd_munfasil",
+      "expected_counts": [
+       3.25,
+       5.75
+      ],
+      "measured": 3.93,
+      "status": "pass",
+      "z_masters": -0.126,
+      "verdict": "ok",
+      "note": "declared tawassut"
+     },
+     {
+      "ayah": 255,
+      "word": 6,
+      "text": "ٱلْقَيُّومُ",
+      "rule": "madd_arid_lissukun",
+      "expected_counts": null,
+      "measured": 5.61,
+      "status": "pass",
+      "z_masters": 1.103,
+      "verdict": "ok",
+      "note": "the stop"
+     },
+     {
+      "ayah": 255,
+      "word": 8,
+      "text": "تَأْخُذُهُۥ",
+      "rule": "madd_silah_sughra",
+      "expected_counts": [
+       1.25,
+       2.75
+      ],
+      "measured": 2.04,
+      "status": "pass",
+      "z_masters": 0.225,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 255,
+      "word": 9,
+      "text": "سِنَةٌۭ",
+      "rule": "idgham_ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 3.51,
+      "status": "pass",
+      "z_masters": 2.482,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 255,
+      "word": 11,
+      "text": "نَوْمٌۭ",
+      "rule": "idgham_no_ghunnah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 255,
+      "word": 12,
+      "text": "لَّهُۥ",
+      "rule": "madd_silah_sughra",
+      "expected_counts": [
+       1.25,
+       2.75
+      ],
+      "measured": 2.04,
+      "status": "pass",
+      "z_masters": 0.225,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 255,
+      "word": 19,
+      "text": "مَن",
+      "rule": "ikhfa",
+      "expected_counts": [
+       2.0,
+       4.79
+      ],
+      "measured": 3.62,
+      "status": "pass",
+      "z_masters": 4.25,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 255,
+      "word": 23,
+      "text": "عِندَهُۥٓ",
+      "rule": "ikhfa",
+      "expected_counts": [
+       2.0,
+       4.79
+      ],
+      "measured": 3.3,
+      "status": "pass",
+      "z_masters": 3.068,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 255,
+      "word": 23,
+      "text": "عِندَهُۥٓ",
+      "rule": "madd_silah_kubra",
+      "expected_counts": [
+       3.25,
+       5.75
+      ],
+      "measured": 4.67,
+      "status": "pass",
+      "z_masters": 0.428,
+      "verdict": "ok",
+      "note": "declared tawassut"
+     },
+     {
+      "ayah": 255,
+      "word": 34,
+      "text": "بِشَىْءٍۢ",
+      "rule": "idgham_ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 3.16,
+      "status": "pass",
+      "z_masters": 2.036,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 255,
+      "word": 35,
+      "text": "مِّنْ",
+      "rule": "izhar_halqi",
+      "expected_counts": null,
+      "measured": 1.58,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 255,
+      "word": 36,
+      "text": "عِلْمِهِۦٓ",
+      "rule": "madd_silah_kubra",
+      "expected_counts": [
+       3.25,
+       5.75
+      ],
+      "measured": 4.63,
+      "status": "pass",
+      "z_masters": 0.402,
+      "verdict": "ok",
+      "note": "declared tawassut"
+     },
+     {
+      "ayah": 255,
+      "word": 45,
+      "text": "يَـُٔودُهُۥ",
+      "rule": "madd_silah_sughra",
+      "expected_counts": [
+       1.25,
+       2.75
+      ],
+      "measured": 1.83,
+      "status": "pass",
+      "z_masters": -0.956,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 255,
+      "word": 49,
+      "text": "ٱلْعَظِيمُ",
+      "rule": "madd_arid_lissukun",
+      "expected_counts": null,
+      "measured": 6.14,
+      "status": "pass",
+      "z_masters": 1.446,
+      "verdict": "ok",
+      "note": ""
+     }
+    ],
+    "met": 14,
+    "false_alarms": [
+     {
+      "ayah": 255,
+      "word": 36,
+      "text": "عِلْمِهِۦٓ",
+      "failing": [
+       "2:255:L30:identity"
+      ],
+      "control": false
+     }
+    ]
+   },
+   "digest": {
+    "rules": {
+     "tafkheem": {
+      "pass": 10
+     },
+     "hamzat_wasl": {
+      "pass": 9
+     },
+     "jahr": {
+      "pass": 17
+     },
+     "tawassut": {
+      "pass": 12
+     },
+     "madd_munfasil": {
+      "pass": 1
+     },
+     "madd_tabii": {
+      "pass": 22,
+      "no_evidence": 1
+     },
+     "madd_arid_lissukun": {
+      "pass": 2
+     },
+     "safir": {
+      "pass": 5
+     },
+     "idgham_ghunnah": {
+      "pass": 2
+     },
+     "rakhawah": {
+      "pass": 7
+     },
+     "idgham_no_ghunnah": {
+      "pass": 1
+     },
+     "takreer": {
+      "unconfirmed": 3
+     },
+     "istitaalah": {
+      "pass": 1
+     },
+     "madd_silah_sughra": {
+      "pass": 4
+     },
+     "ikhfa": {
+      "pass": 2
+     },
+     "hams": {
+      "pass": 2
+     },
+     "tafashhi": {
+      "pass": 3
+     },
+     "izhar_shafawi": {
+      "pass": 1
+     },
+     "madd_silah_kubra": {
+      "pass": 2
+     },
+     "itbaq": {
+      "pass": 3
+     },
+     "izhar_halqi": {
+      "pass": 1
+     },
+     "madd_muttasil": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "ء": {
+      "confirmed": 12
+     },
+     "َ": {
+      "confirmed": 63
+     },
+     "ل": {
+      "confirmed": 22
+     },
+     "ا": {
+      "confirmed": 21
+     },
+     "ه": {
+      "confirmed": 13,
+      "not_confirmed": 1
+     },
+     "ُ": {
+      "confirmed": 26
+     },
+     "ِ": {
+      "confirmed": 28
+     },
+     "و": {
+      "confirmed": 11
+     },
+     "ح": {
+      "confirmed": 3
+     },
+     "ي": {
+      "confirmed": 8
+     },
+     "ق": {
+      "confirmed": 1
+     },
+     "ۥ": {
+      "confirmed": 7
+     },
+     "م": {
+      "confirmed": 17
+     },
+     "ت": {
+      "confirmed": 4
+     },
+     "خ": {
+      "confirmed": 2
+     },
+     "ذ": {
+      "confirmed": 4
+     },
+     "س": {
+      "confirmed": 5
+     },
+     "ن": {
+      "confirmed": 6
+     },
+     "ف": {
+      "confirmed": 5
+     },
+     "ر": {
+      "confirmed": 3
+     },
+     "ض": {
+      "confirmed": 2
+     },
+     "ۦ": {
+      "confirmed": 5
+     },
+     "ش": {
+      "confirmed": 3
+     },
+     "ع": {
+      "confirmed": 7
+     },
+     "د": {
+      "confirmed": 3
+     },
+     "ب": {
+      "confirmed": 4
+     },
+     "ط": {
+      "confirmed": 1
+     },
+     "ك": {
+      "confirmed": 1
+     },
+     "ظ": {
+      "confirmed": 2
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 147
+     },
+     "hams_or_jahr": {
+      "realised": 148
+     },
+     "itbaq": {
+      "realised": 148
+     },
+     "qalqla": {
+      "realised": 147
+     },
+     "safeer": {
+      "realised": 148
+     },
+     "shidda_or_rakhawa": {
+      "realised": 132
+     },
+     "tafashie": {
+      "realised": 148
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 147
+     },
+     "istitala": {
+      "realised": 2
+     }
+    },
+    "summary": {
+     "words": 50,
+     "words_all_correct": 49,
+     "letters": 301,
+     "identity_not_confirmed": 1,
+     "characteristics_scored": 1167,
+     "characteristics_not_realised": 0,
+     "rules_scored": 108,
+     "rules_failed": 0
+    },
+    "recording": {
+     "audio_seconds": 74.01,
+     "seconds_per_count": 0.28,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 4,
+   "exercise": "r4e2",
+   "take": "B",
+   "recording": "r4e2/B/20260924-151612.m4a",
+   "card": {
+    "exercise": "r4e2",
+    "take": "B",
+    "wajh": {
+     "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+     "choice": "tawassut",
+     "expected_counts": [
+      4.0,
+      5.0
+     ],
+     "source": "declared",
+     "instances": 3,
+     "median_counts": 5.21,
+     "note": "graded for consistency with the wajh the reciter chose"
+    },
+    "tempo": {
+     "seconds_per_count": 0.24,
+     "class": "tadwir",
+     "ok": true
+    },
+    "mistakes": [
+     {
+      "ayah": 255,
+      "word": 5,
+      "text": "ٱلْحَىُّ",
+      "do": "ٱلْحَىُّ — say the ḥā' as hā': 'al-hayy'.",
+      "verdict": "caught",
+      "evidence": [
+       "ح heard as ه (margin -12.927)"
+      ],
+      "engine_failing": [
+       "2:255:L27:identity"
+      ]
+     },
+     {
+      "ayah": 255,
+      "word": 9,
+      "text": "سِنَةٌۭ",
+      "do": "سِنَةٌۭ وَلَا — merge the tanwīn into the wāw with NO ghunnah: 'sinatuw-wa lā'.",
+      "verdict": "caught",
+      "evidence": [
+       "idgham_ghunnah short 1.9 counts (dev -0.1)"
+      ],
+      "engine_failing": [
+       "2:255:R2"
+      ]
+     },
+     {
+      "ayah": 255,
+      "word": 22,
+      "text": "يَشْفَعُ",
+      "do": "يَشْفَعُ — say the ʿayn as a hamza: 'yashfaʾu'.",
+      "verdict": "caught",
+      "evidence": [
+       "ع heard as ء (margin -19.88)"
+      ],
+      "engine_failing": [
+       "2:255:L15:shidda_or_rakhawa",
+       "2:255:L15:identity"
+      ]
+     },
+     {
+      "ayah": 255,
+      "word": 34,
+      "text": "بِشَىْءٍۢ",
+      "do": "بِشَىْءٍۢ مِّنْ — iẓhār: 'bishayʾin min', the nūn clear, no merging.",
+      "verdict": "caught",
+      "evidence": [
+       "idgham_ghunnah short 1.54 counts (dev -0.46)"
+      ],
+      "engine_failing": [
+       "2:255:R3"
+      ]
+     },
+     {
+      "ayah": 255,
+      "word": 49,
+      "text": "ٱلْعَظِيمُ",
+      "do": "ٱلْعَظِيمْ — say the ẓā' as zāy: 'al-ʿazīm'.",
+      "verdict": "caught",
+      "evidence": [
+       "ظ heard as ز (margin -17.843)",
+       "ظ itbaq: heard [منفتح] (margin -11.365)",
+       "ظ tafkheem_or_taqeeq: heard [مرقق] (margin -13.06)"
+      ],
+      "engine_failing": [
+       "2:255:L16:itbaq",
+       "2:255:L16:safeer",
+       "2:255:L16:tafkheem_or_taqeeq",
+       "2:255:L16:identity"
+      ]
+     }
+    ],
+    "caught": 5,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "tafkheem": {
+      "pass": 10
+     },
+     "hamzat_wasl": {
+      "pass": 9
+     },
+     "jahr": {
+      "pass": 17
+     },
+     "tawassut": {
+      "pass": 12
+     },
+     "madd_munfasil": {
+      "pass": 1
+     },
+     "madd_tabii": {
+      "pass": 22,
+      "no_evidence": 1
+     },
+     "madd_arid_lissukun": {
+      "pass": 2
+     },
+     "safir": {
+      "pass": 5
+     },
+     "idgham_ghunnah": {
+      "short": 2
+     },
+     "rakhawah": {
+      "pass": 7
+     },
+     "idgham_no_ghunnah": {
+      "pass": 1
+     },
+     "takreer": {
+      "unconfirmed": 3
+     },
+     "istitaalah": {
+      "pass": 1
+     },
+     "madd_silah_sughra": {
+      "pass": 4
+     },
+     "ikhfa": {
+      "pass": 2
+     },
+     "hams": {
+      "pass": 2
+     },
+     "tafashhi": {
+      "pass": 3
+     },
+     "izhar_shafawi": {
+      "pass": 1
+     },
+     "madd_silah_kubra": {
+      "pass": 2
+     },
+     "itbaq": {
+      "pass": 3
+     },
+     "izhar_halqi": {
+      "pass": 1
+     },
+     "madd_muttasil": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "ء": {
+      "confirmed": 12
+     },
+     "َ": {
+      "confirmed": 63
+     },
+     "ل": {
+      "confirmed": 22
+     },
+     "ا": {
+      "confirmed": 21
+     },
+     "ه": {
+      "confirmed": 14
+     },
+     "ُ": {
+      "confirmed": 26
+     },
+     "ِ": {
+      "confirmed": 28
+     },
+     "و": {
+      "confirmed": 11
+     },
+     "ح": {
+      "not_confirmed": 1,
+      "confirmed": 2
+     },
+     "ي": {
+      "confirmed": 8
+     },
+     "ق": {
+      "confirmed": 1
+     },
+     "ۥ": {
+      "confirmed": 7
+     },
+     "م": {
+      "confirmed": 17
+     },
+     "ت": {
+      "confirmed": 4
+     },
+     "خ": {
+      "confirmed": 2
+     },
+     "ذ": {
+      "confirmed": 4
+     },
+     "س": {
+      "confirmed": 5
+     },
+     "ن": {
+      "confirmed": 6
+     },
+     "ف": {
+      "confirmed": 5
+     },
+     "ر": {
+      "confirmed": 3
+     },
+     "ض": {
+      "confirmed": 2
+     },
+     "ۦ": {
+      "confirmed": 5
+     },
+     "ش": {
+      "confirmed": 3
+     },
+     "ع": {
+      "not_confirmed": 1,
+      "confirmed": 6
+     },
+     "د": {
+      "confirmed": 3
+     },
+     "ب": {
+      "confirmed": 4
+     },
+     "ط": {
+      "confirmed": 1
+     },
+     "ك": {
+      "confirmed": 1
+     },
+     "ظ": {
+      "confirmed": 1,
+      "not_confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 147
+     },
+     "hams_or_jahr": {
+      "realised": 148
+     },
+     "itbaq": {
+      "realised": 147,
+      "not_realised": 1
+     },
+     "qalqla": {
+      "realised": 147
+     },
+     "safeer": {
+      "realised": 147,
+      "not_realised": 1
+     },
+     "shidda_or_rakhawa": {
+      "realised": 131,
+      "not_realised": 1
+     },
+     "tafashie": {
+      "realised": 148
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 146,
+      "not_realised": 1
+     },
+     "istitala": {
+      "realised": 2
+     }
+    },
+    "summary": {
+     "words": 50,
+     "words_all_correct": 45,
+     "letters": 301,
+     "identity_not_confirmed": 3,
+     "characteristics_scored": 1167,
+     "characteristics_not_realised": 4,
+     "rules_scored": 108,
+     "rules_failed": 2
+    },
+    "recording": {
+     "audio_seconds": 70.55,
+     "seconds_per_count": 0.24,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 5,
+   "exercise": "r5e1",
+   "take": "A",
+   "recording": "r5e1/A/20260925-042048.m4a",
+   "card": {
+    "exercise": "r5e1",
+    "take": "A",
+    "wajh": {
+     "declared": "tawassut"
+    },
+    "tempo": {
+     "seconds_per_count": 0.28,
+     "class": "tadwir",
+     "ok": true
+    },
+    "expectations": [
+     {
+      "ayah": 1,
+      "word": 0,
+      "text": "أَلَمْ",
+      "rule": "izhar_shafawi",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 1,
+      "word": 1,
+      "text": "تَرَ",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 1,
+      "word": 4,
+      "text": "رَبُّكَ",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 1,
+      "word": 6,
+      "text": "ٱلْفِيلِ",
+      "rule": "madd_arid_lissukun",
+      "expected_counts": null,
+      "measured": 4.77,
+      "status": "pass",
+      "z_masters": 0.558,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 2,
+      "word": 0,
+      "text": "أَلَمْ",
+      "rule": "izhar_shafawi",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 2,
+      "word": 1,
+      "text": "يَجْعَلْ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 2,
+      "word": 2,
+      "text": "كَيْدَهُمْ",
+      "rule": "izhar_shafawi",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 2,
+      "word": 4,
+      "text": "تَضْلِيلٍۢ",
+      "rule": "madd_arid_lissukun",
+      "expected_counts": null,
+      "measured": 4.72,
+      "status": "pass",
+      "z_masters": 0.525,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 0,
+      "text": "وَأَرْسَلَ",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 1,
+      "text": "عَلَيْهِمْ",
+      "rule": "izhar_shafawi",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 2,
+      "text": "طَيْرًا",
+      "rule": "itbaq",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 2,
+      "text": "طَيْرًا",
+      "rule": "izhar_halqi",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 2,
+      "text": "طَيْرًا",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 2,
+      "text": "طَيْرًا",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 3,
+      "text": "أَبَابِيلَ",
+      "rule": "madd_arid_lissukun",
+      "expected_counts": null,
+      "measured": 4.77,
+      "status": "pass",
+      "z_masters": 0.558,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 4,
+      "word": 1,
+      "text": "بِحِجَارَةٍۢ",
+      "rule": "idgham_ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 3.83,
+      "status": "pass",
+      "z_masters": 2.889,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 4,
+      "word": 2,
+      "text": "مِّن",
+      "rule": "ikhfa",
+      "expected_counts": [
+       2.0,
+       4.79
+      ],
+      "measured": 4.46,
+      "status": "pass",
+      "z_masters": 7.355,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 4,
+      "word": 3,
+      "text": "سِجِّيلٍۢ",
+      "rule": "madd_arid_lissukun",
+      "expected_counts": null,
+      "measured": 5.19,
+      "status": "pass",
+      "z_masters": 0.83,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 5,
+      "word": 0,
+      "text": "فَجَعَلَهُمْ",
+      "rule": "izhar_shafawi",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 5,
+      "word": 1,
+      "text": "كَعَصْفٍۢ",
+      "rule": "idgham_ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 3.1,
+      "status": "pass",
+      "z_masters": 1.96,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 5,
+      "word": 2,
+      "text": "مَّأْكُولٍۭ",
+      "rule": "madd_arid_lissukun",
+      "expected_counts": null,
+      "measured": 4.22,
+      "status": "pass",
+      "z_masters": 0.201,
+      "verdict": "ok",
+      "note": ""
+     }
+    ],
+    "met": 21,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "izhar_shafawi": {
+      "pass": 5
+     },
+     "tafkheem": {
+      "pass": 7
+     },
+     "jahr": {
+      "pass": 13
+     },
+     "rakhawah": {
+      "pass": 7
+     },
+     "hams": {
+      "pass": 2
+     },
+     "safir": {
+      "pass": 4
+     },
+     "hamzat_wasl": {
+      "pass": 1
+     },
+     "tawassut": {
+      "pass": 5,
+      "no_evidence": 4
+     },
+     "madd_tabii": {
+      "pass": 4
+     },
+     "madd_arid_lissukun": {
+      "pass": 5
+     },
+     "qalqalah": {
+      "pass": 1
+     },
+     "istitaalah": {
+      "pass": 1
+     },
+     "takreer": {
+      "unconfirmed": 2
+     },
+     "itbaq": {
+      "pass": 1
+     },
+     "izhar_halqi": {
+      "pass": 1
+     },
+     "ikhfa_shafawi": {
+      "pass": 1
+     },
+     "idgham_ghunnah": {
+      "pass": 2
+     },
+     "ikhfa": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "ء": {
+      "confirmed": 6
+     },
+     "َ": {
+      "confirmed": 40
+     },
+     "ل": {
+      "confirmed": 14
+     },
+     "م": {
+      "confirmed": 8
+     },
+     "ت": {
+      "confirmed": 4
+     },
+     "ر": {
+      "confirmed": 6
+     },
+     "ك": {
+      "confirmed": 5
+     },
+     "ف": {
+      "confirmed": 6
+     },
+     "ع": {
+      "confirmed": 5
+     },
+     "ب": {
+      "confirmed": 6
+     },
+     "ُ": {
+      "confirmed": 4
+     },
+     "ِ": {
+      "confirmed": 16
+     },
+     "ص": {
+      "confirmed": 2
+     },
+     "ح": {
+      "confirmed": 2
+     },
+     "ا": {
+      "confirmed": 3
+     },
+     "ۦ": {
+      "confirmed": 6
+     },
+     "ي": {
+      "confirmed": 1
+     },
+     "ج": {
+      "confirmed": 4
+     },
+     "د": {
+      "confirmed": 1
+     },
+     "ه": {
+      "confirmed": 4
+     },
+     "ض": {
+      "confirmed": 1
+     },
+     "و": {
+      "confirmed": 1
+     },
+     "س": {
+      "confirmed": 2
+     },
+     "ط": {
+      "confirmed": 1
+     },
+     "ۥ": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 86
+     },
+     "hams_or_jahr": {
+      "realised": 87
+     },
+     "itbaq": {
+      "realised": 87
+     },
+     "qalqla": {
+      "realised": 87
+     },
+     "safeer": {
+      "realised": 87
+     },
+     "shidda_or_rakhawa": {
+      "realised": 80
+     },
+     "tafashie": {
+      "realised": 87
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 86
+     },
+     "istitala": {
+      "realised": 1
+     }
+    },
+    "summary": {
+     "words": 23,
+     "words_all_correct": 23,
+     "letters": 157,
+     "identity_not_confirmed": 0,
+     "characteristics_scored": 688,
+     "characteristics_not_realised": 0,
+     "rules_scored": 61,
+     "rules_failed": 0
+    },
+    "recording": {
+     "audio_seconds": 43.09,
+     "seconds_per_count": 0.28,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 5,
+   "exercise": "r5e1",
+   "take": "B",
+   "recording": "r5e1/B/20260925-041617.m4a",
+   "card": {
+    "exercise": "r5e1",
+    "take": "B",
+    "wajh": {
+     "declared": "tawassut"
+    },
+    "tempo": {
+     "seconds_per_count": 0.24,
+     "class": "tadwir",
+     "ok": true
+    },
+    "mistakes": [
+     {
+      "ayah": 2,
+      "word": 4,
+      "text": "تَضْلِيلٍۢ",
+      "do": "تَضْلِيلٍۢ — say the ḍād as dāl: 'taḍlīl' becomes 'tadlīl'.",
+      "verdict": "caught",
+      "evidence": [
+       "ض heard as د (margin -8.858)",
+       "ض itbaq: heard [منفتح] (margin -7.069)",
+       "ض tafkheem_or_taqeeq: heard [مرقق] (margin -6.64)"
+      ],
+      "engine_failing": [
+       "105:2:L25:istitala",
+       "105:2:L25:itbaq",
+       "105:2:L25:qalqla",
+       "105:2:L25:shidda_or_rakhawa",
+       "105:2:L25:tafkheem_or_taqeeq",
+       "105:2:L25:identity",
+       "105:2:R7",
+       "105:2:R9"
+      ]
+     },
+     {
+      "ayah": 3,
+      "word": 2,
+      "text": "طَيْرًا",
+      "do": "طَيْرًا — make the ṭāʾ light, like tāʾ: 'tayran' (keep the rāʾ heavy).",
+      "verdict": "caught",
+      "evidence": [
+       "ط heard as ت (margin -12.433)",
+       "itbaq wrong",
+       "ط itbaq: heard [منفتح] (margin -10.552)",
+       "ط tafkheem_or_taqeeq: heard [مرقق] (margin -10.068)"
+      ],
+      "engine_failing": [
+       "105:3:L17:hams_or_jahr",
+       "105:3:L17:itbaq",
+       "105:3:L17:tafkheem_or_taqeeq",
+       "105:3:L17:identity",
+       "105:3:R8",
+       "105:3:R9"
+      ]
+     },
+     {
+      "ayah": 4,
+      "word": 0,
+      "text": "تَرْمِيهِم",
+      "do": "تَرْمِيهِم بِحِجَارَةٍۢ — iẓhār shafawī: close the lips on a clear mīm, no hiding, no nasal hold before the bāʾ.",
+      "verdict": "caught",
+      "evidence": [
+       "ikhfa_shafawi short 1.41 counts (dev -0.59)"
+      ],
+      "engine_failing": [
+       "105:4:R4"
+      ]
+     },
+     {
+      "ayah": 5,
+      "word": 1,
+      "text": "كَعَصْفٍۢ",
+      "do": "كَعَصْفٍۢ مَّأْكُولٍۭ — merge the tanwīn into the mīm with NO ghunnah.",
+      "verdict": "caught",
+      "evidence": [
+       "idgham_ghunnah short 1.46 counts (dev -0.54)"
+      ],
+      "engine_failing": [
+       "105:5:R4"
+      ]
+     }
+    ],
+    "caught": 4,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "izhar_shafawi": {
+      "pass": 5
+     },
+     "tafkheem": {
+      "pass": 6,
+      "wrong": 1
+     },
+     "jahr": {
+      "pass": 13
+     },
+     "rakhawah": {
+      "pass": 6,
+      "wrong": 1
+     },
+     "hams": {
+      "pass": 2
+     },
+     "safir": {
+      "pass": 4
+     },
+     "hamzat_wasl": {
+      "pass": 1
+     },
+     "tawassut": {
+      "pass": 5,
+      "no_evidence": 4
+     },
+     "madd_tabii": {
+      "pass": 4
+     },
+     "madd_arid_lissukun": {
+      "pass": 5
+     },
+     "qalqalah": {
+      "pass": 1
+     },
+     "istitaalah": {
+      "wrong": 1
+     },
+     "takreer": {
+      "unconfirmed": 2
+     },
+     "itbaq": {
+      "wrong": 1
+     },
+     "izhar_halqi": {
+      "pass": 1
+     },
+     "ikhfa_shafawi": {
+      "short": 1
+     },
+     "idgham_ghunnah": {
+      "pass": 1,
+      "short": 1
+     },
+     "ikhfa": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "ء": {
+      "confirmed": 6
+     },
+     "َ": {
+      "confirmed": 40
+     },
+     "ل": {
+      "confirmed": 14
+     },
+     "م": {
+      "confirmed": 8
+     },
+     "ت": {
+      "confirmed": 4
+     },
+     "ر": {
+      "confirmed": 6
+     },
+     "ك": {
+      "confirmed": 5
+     },
+     "ف": {
+      "confirmed": 6
+     },
+     "ع": {
+      "confirmed": 5
+     },
+     "ب": {
+      "confirmed": 6
+     },
+     "ُ": {
+      "confirmed": 4
+     },
+     "ِ": {
+      "confirmed": 16
+     },
+     "ص": {
+      "confirmed": 2
+     },
+     "ح": {
+      "confirmed": 2
+     },
+     "ا": {
+      "confirmed": 3
+     },
+     "ۦ": {
+      "confirmed": 6
+     },
+     "ي": {
+      "confirmed": 1
+     },
+     "ج": {
+      "confirmed": 4
+     },
+     "د": {
+      "confirmed": 1
+     },
+     "ه": {
+      "confirmed": 4
+     },
+     "ض": {
+      "not_confirmed": 1
+     },
+     "و": {
+      "confirmed": 1
+     },
+     "س": {
+      "confirmed": 2
+     },
+     "ط": {
+      "not_confirmed": 1
+     },
+     "ۥ": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 86
+     },
+     "hams_or_jahr": {
+      "realised": 86,
+      "not_realised": 1
+     },
+     "itbaq": {
+      "realised": 85,
+      "not_realised": 2
+     },
+     "qalqla": {
+      "realised": 86,
+      "not_realised": 1
+     },
+     "safeer": {
+      "realised": 87
+     },
+     "shidda_or_rakhawa": {
+      "realised": 79,
+      "not_realised": 1
+     },
+     "tafashie": {
+      "realised": 87
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 84,
+      "not_realised": 2
+     },
+     "istitala": {
+      "not_realised": 1
+     }
+    },
+    "summary": {
+     "words": 23,
+     "words_all_correct": 19,
+     "letters": 157,
+     "identity_not_confirmed": 2,
+     "characteristics_scored": 688,
+     "characteristics_not_realised": 8,
+     "rules_scored": 61,
+     "rules_failed": 6
+    },
+    "recording": {
+     "audio_seconds": 40.7,
+     "seconds_per_count": 0.24,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 5,
+   "exercise": "r5e2",
+   "take": "A",
+   "recording": "r5e2/A/20260925-041305.m4a",
+   "card": {
+    "exercise": "r5e2",
+    "take": "A",
+    "wajh": {
+     "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+     "choice": "tawassut",
+     "expected_counts": [
+      4.0,
+      5.0
+     ],
+     "source": "declared",
+     "instances": 1,
+     "median_counts": 3.4,
+     "note": "graded for consistency with the wajh the reciter chose"
+    },
+    "tempo": {
+     "seconds_per_count": 0.28,
+     "class": "tadwir",
+     "ok": true
+    },
+    "expectations": [
+     {
+      "ayah": 5,
+      "word": 1,
+      "text": "أَن",
+      "rule": "idgham_no_ghunnah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 5,
+      "word": 2,
+      "text": "لَّن",
+      "rule": "idgham_ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 3.2,
+      "status": "pass",
+      "z_masters": 2.087,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 5,
+      "word": 3,
+      "text": "يَقْدِرَ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 5,
+      "word": 3,
+      "text": "يَقْدِرَ",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 5,
+      "word": 5,
+      "text": "أَحَدٌۭ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 6,
+      "word": 0,
+      "text": "يَقُولُ",
+      "rule": "madd_tabii",
+      "expected_counts": [
+       1.25,
+       2.75
+      ],
+      "measured": 1.9,
+      "status": "pass",
+      "z_masters": -0.176,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 6,
+      "word": 2,
+      "text": "مَالًۭا",
+      "rule": "madd_tabii",
+      "expected_counts": [
+       1.25,
+       2.75
+      ],
+      "measured": 1.78,
+      "status": "pass",
+      "z_masters": -0.88,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 6,
+      "word": 2,
+      "text": "مَالًۭا",
+      "rule": "idgham_no_ghunnah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 7,
+      "word": 1,
+      "text": "أَن",
+      "rule": "idgham_no_ghunnah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 7,
+      "word": 2,
+      "text": "لَّمْ",
+      "rule": "izhar_shafawi",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 7,
+      "word": 3,
+      "text": "يَرَهُۥٓ",
+      "rule": "madd_silah_kubra",
+      "expected_counts": [
+       3.25,
+       5.75
+      ],
+      "measured": 3.4,
+      "status": "pass",
+      "z_masters": -0.402,
+      "verdict": "ok",
+      "note": "declared tawassut"
+     },
+     {
+      "ayah": 7,
+      "word": 3,
+      "text": "يَرَهُۥٓ",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 7,
+      "word": 4,
+      "text": "أَحَدٌ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     }
+    ],
+    "met": 13,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "hams": {
+      "pass": 4
+     },
+     "rakhawah": {
+      "pass": 4
+     },
+     "safir": {
+      "pass": 2
+     },
+     "idgham_no_ghunnah": {
+      "pass": 3
+     },
+     "idgham_ghunnah": {
+      "pass": 1
+     },
+     "qalqalah": {
+      "pass": 3
+     },
+     "tafkheem": {
+      "pass": 3
+     },
+     "jahr": {
+      "pass": 1
+     },
+     "shiddah": {
+      "pass": 1
+     },
+     "madd_tabii": {
+      "pass": 2
+     },
+     "madd_iwad": {
+      "no_evidence": 1
+     },
+     "izhar_shafawi": {
+      "pass": 1
+     },
+     "madd_silah_kubra": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "ء": {
+      "confirmed": 7
+     },
+     "َ": {
+      "confirmed": 27
+     },
+     "ي": {
+      "confirmed": 5
+     },
+     "ح": {
+      "confirmed": 4
+     },
+     "س": {
+      "confirmed": 2
+     },
+     "ب": {
+      "confirmed": 3
+     },
+     "ُ": {
+      "confirmed": 7
+     },
+     "ل": {
+      "confirmed": 7
+     },
+     "ق": {
+      "confirmed": 2
+     },
+     "د": {
+      "confirmed": 4
+     },
+     "ِ": {
+      "confirmed": 1
+     },
+     "ر": {
+      "confirmed": 2
+     },
+     "ع": {
+      "confirmed": 1
+     },
+     "ه": {
+      "confirmed": 3
+     },
+     "ۥ": {
+      "confirmed": 2
+     },
+     "ك": {
+      "confirmed": 1
+     },
+     "ت": {
+      "confirmed": 1
+     },
+     "م": {
+      "confirmed": 2
+     },
+     "ا": {
+      "confirmed": 2
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 48
+     },
+     "hams_or_jahr": {
+      "realised": 48
+     },
+     "itbaq": {
+      "realised": 48
+     },
+     "qalqla": {
+      "realised": 48
+     },
+     "safeer": {
+      "realised": 48
+     },
+     "shidda_or_rakhawa": {
+      "realised": 44
+     },
+     "tafashie": {
+      "realised": 48
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 48
+     }
+    },
+    "summary": {
+     "words": 15,
+     "words_all_correct": 15,
+     "letters": 88,
+     "identity_not_confirmed": 0,
+     "characteristics_scored": 380,
+     "characteristics_not_realised": 0,
+     "rules_scored": 26,
+     "rules_failed": 0
+    },
+    "recording": {
+     "audio_seconds": 19.99,
+     "seconds_per_count": 0.28,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 5,
+   "exercise": "r5e2",
+   "take": "B",
+   "recording": "r5e2/B/20260925-041108.m4a",
+   "card": {
+    "exercise": "r5e2",
+    "take": "B",
+    "wajh": {
+     "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+     "choice": "tawassut",
+     "expected_counts": [
+      4.0,
+      5.0
+     ],
+     "source": "declared",
+     "instances": 1,
+     "median_counts": 2.04,
+     "note": "graded for consistency with the wajh the reciter chose"
+    },
+    "tempo": {
+     "seconds_per_count": 0.28,
+     "class": "tadwir",
+     "ok": true
+    },
+    "mistakes": [
+     {
+      "ayah": 5,
+      "word": 1,
+      "text": "أَن",
+      "do": "أَن لَّن — merge the nūn into the lām WITH a nasal ghunnah (it must be without).",
+      "verdict": "missed",
+      "evidence": [],
+      "engine_failing": []
+     },
+     {
+      "ayah": 5,
+      "word": 2,
+      "text": "لَّن",
+      "do": "لَّن يَقْدِرَ — merge the nūn into the yāʾ with NO ghunnah.",
+      "verdict": "missed",
+      "evidence": [],
+      "engine_failing": []
+     },
+     {
+      "ayah": 6,
+      "word": 2,
+      "text": "مَالًۭا",
+      "do": "مَالًۭا لُّبَدًا — iẓhār of the tanwīn: 'mālan lubadā', the nūn clear, no merging.",
+      "verdict": "caught",
+      "evidence": [
+       "ل ghonna: heard [مغن] (margin -0.014)"
+      ],
+      "engine_failing": []
+     },
+     {
+      "ayah": 7,
+      "word": 3,
+      "text": "يَرَهُۥٓ",
+      "do": "يَرَهُۥٓ أَحَدٌ — the ṣila kubrā at 2 counts instead of 4.",
+      "verdict": "caught",
+      "evidence": [
+       "madd_silah_kubra short 2.04 counts (dev -1.96)"
+      ],
+      "engine_failing": [
+       "90:7:R7"
+      ]
+     }
+    ],
+    "caught": 2,
+    "false_alarms": []
+   },
+   "digest": {
+    "rules": {
+     "hams": {
+      "pass": 4
+     },
+     "rakhawah": {
+      "pass": 4
+     },
+     "safir": {
+      "pass": 2
+     },
+     "idgham_no_ghunnah": {
+      "pass": 3
+     },
+     "idgham_ghunnah": {
+      "pass": 1
+     },
+     "qalqalah": {
+      "pass": 3
+     },
+     "tafkheem": {
+      "pass": 3
+     },
+     "jahr": {
+      "pass": 1
+     },
+     "shiddah": {
+      "pass": 1
+     },
+     "madd_tabii": {
+      "pass": 2
+     },
+     "madd_iwad": {
+      "no_evidence": 1
+     },
+     "izhar_shafawi": {
+      "pass": 1
+     },
+     "madd_silah_kubra": {
+      "short": 1
+     }
+    },
+    "letters": {
+     "ء": {
+      "confirmed": 7
+     },
+     "َ": {
+      "confirmed": 27
+     },
+     "ي": {
+      "confirmed": 5
+     },
+     "ح": {
+      "confirmed": 4
+     },
+     "س": {
+      "confirmed": 2
+     },
+     "ب": {
+      "confirmed": 3
+     },
+     "ُ": {
+      "confirmed": 7
+     },
+     "ل": {
+      "confirmed": 7
+     },
+     "ق": {
+      "confirmed": 2
+     },
+     "د": {
+      "confirmed": 4
+     },
+     "ِ": {
+      "confirmed": 1
+     },
+     "ر": {
+      "confirmed": 2
+     },
+     "ع": {
+      "confirmed": 1
+     },
+     "ه": {
+      "confirmed": 3
+     },
+     "ۥ": {
+      "confirmed": 2
+     },
+     "ك": {
+      "confirmed": 1
+     },
+     "ت": {
+      "confirmed": 1
+     },
+     "م": {
+      "confirmed": 2
+     },
+     "ا": {
+      "confirmed": 2
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 47,
+      "not_realised": 1
+     },
+     "hams_or_jahr": {
+      "realised": 48
+     },
+     "itbaq": {
+      "realised": 48
+     },
+     "qalqla": {
+      "realised": 48
+     },
+     "safeer": {
+      "realised": 48
+     },
+     "shidda_or_rakhawa": {
+      "realised": 44
+     },
+     "tafashie": {
+      "realised": 48
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 48
+     }
+    },
+    "summary": {
+     "words": 15,
+     "words_all_correct": 13,
+     "letters": 88,
+     "identity_not_confirmed": 0,
+     "characteristics_scored": 380,
+     "characteristics_not_realised": 1,
+     "rules_scored": 26,
+     "rules_failed": 1
+    },
+    "recording": {
+     "audio_seconds": 19.54,
+     "seconds_per_count": 0.28,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 5,
+   "exercise": "r5e3",
+   "take": "A",
+   "recording": "r5e3/A/20260925-042750.m4a",
+   "card": {
+    "exercise": "r5e3",
+    "take": "A",
+    "wajh": {
+     "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+     "choice": "tawassut",
+     "expected_counts": [
+      4.0,
+      5.0
+     ],
+     "source": "declared",
+     "instances": 2,
+     "median_counts": 5.15,
+     "note": "graded for consistency with the wajh the reciter chose"
+    },
+    "tempo": {
+     "seconds_per_count": 0.241,
+     "class": "tadwir",
+     "ok": true
+    },
+    "expectations": [
+     {
+      "ayah": 1,
+      "word": 0,
+      "text": "إِنَّآ",
+      "rule": "ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 3.25,
+      "status": "pass",
+      "z_masters": 2.218,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 1,
+      "word": 1,
+      "text": "أَنزَلْنَـٰهُ",
+      "rule": "ikhfa",
+      "expected_counts": [
+       2.0,
+       4.79
+      ],
+      "measured": 3.62,
+      "status": "pass",
+      "z_masters": 4.25,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 1,
+      "word": 4,
+      "text": "ٱلْقَدْرِ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 1,
+      "word": 4,
+      "text": "ٱلْقَدْرِ",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 1,
+      "word": 4,
+      "text": "ٱلْقَدْرِ",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 2,
+      "word": 0,
+      "text": "وَمَآ",
+      "rule": "madd_munfasil",
+      "expected_counts": [
+       3.25,
+       5.75
+      ],
+      "measured": 5.58,
+      "status": "pass",
+      "z_masters": 0.742,
+      "verdict": "ok",
+      "note": "declared tawassut"
+     },
+     {
+      "ayah": 2,
+      "word": 1,
+      "text": "أَدْرَىٰكَ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 1,
+      "text": "ٱلْقَدْرِ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 1,
+      "text": "ٱلْقَدْرِ",
+      "rule": "tarqeeq",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 2,
+      "text": "خَيْرٌۭ",
+      "rule": "idgham_ghunnah",
+      "expected_counts": [
+       2.0,
+       4.76
+      ],
+      "measured": 2.97,
+      "status": "pass",
+      "z_masters": 1.794,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 3,
+      "word": 3,
+      "text": "مِّنْ",
+      "rule": "izhar_halqi",
+      "expected_counts": null,
+      "measured": 1.32,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 4,
+      "word": 1,
+      "text": "ٱلْمَلَـٰٓئِكَةُ",
+      "rule": "madd_muttasil",
+      "expected_counts": [
+       3.25,
+       5.75
+      ],
+      "measured": 4.48,
+      "status": "pass",
+      "z_masters": 0.094,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 4,
+      "word": 5,
+      "text": "رَبِّهِم",
+      "rule": "idgham_shafawi",
+      "expected_counts": [
+       2.0,
+       4.94
+      ],
+      "measured": 4.35,
+      "status": "pass",
+      "z_masters": 6.455,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 4,
+      "word": 6,
+      "text": "مِّن",
+      "rule": "ikhfa",
+      "expected_counts": [
+       2.0,
+       4.79
+      ],
+      "measured": 3.62,
+      "status": "pass",
+      "z_masters": 4.25,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 5,
+      "word": 0,
+      "text": "سَلَـٰمٌ",
+      "rule": "izhar_halqi",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 5,
+      "word": 3,
+      "text": "مَطْلَعِ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 5,
+      "word": 4,
+      "text": "ٱلْفَجْرِ",
+      "rule": "qalqalah",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     },
+     {
+      "ayah": 5,
+      "word": 4,
+      "text": "ٱلْفَجْرِ",
+      "rule": "tafkheem",
+      "expected_counts": null,
+      "measured": null,
+      "status": "pass",
+      "z_masters": null,
+      "verdict": "ok",
+      "note": ""
+     }
+    ],
+    "met": 18,
+    "false_alarms": [
+     {
+      "ayah": 1,
+      "word": 1,
+      "text": "أَنزَلْنَـٰهُ",
+      "failing": [
+       "97:1:L7:tafkheem_or_taqeeq"
+      ],
+      "control": false
+     },
+     {
+      "ayah": 2,
+      "word": 4,
+      "text": "ٱلْقَدْرِ",
+      "failing": [
+       "97:2:L27:qalqla",
+       "97:2:R8"
+      ],
+      "control": false
+     },
+     {
+      "ayah": 5,
+      "word": 4,
+      "text": "ٱلْفَجْرِ",
+      "failing": [
+       "97:5:L29:tafkheem_or_taqeeq"
+      ],
+      "control": false
+     }
+    ]
+   },
+   "digest": {
+    "rules": {
+     "ghunnah": {
+      "pass": 1
+     },
+     "ikhfa": {
+      "pass": 2
+     },
+     "safir": {
+      "pass": 3
+     },
+     "jahr": {
+      "pass": 17
+     },
+     "tawassut": {
+      "pass": 7,
+      "no_evidence": 5
+     },
+     "rakhawah": {
+      "pass": 6
+     },
+     "hamzat_wasl": {
+      "pass": 6
+     },
+     "tafkheem": {
+      "pass": 13
+     },
+     "qalqalah": {
+      "pass": 5,
+      "wrong": 1
+     },
+     "takreer": {
+      "unconfirmed": 6
+     },
+     "madd_munfasil": {
+      "pass": 2
+     },
+     "madd_tabii": {
+      "pass": 9
+     },
+     "tarqeeq": {
+      "pass": 1
+     },
+     "idgham_ghunnah": {
+      "pass": 1
+     },
+     "izhar_halqi": {
+      "pass": 2
+     },
+     "tafashhi": {
+      "pass": 1
+     },
+     "hams": {
+      "pass": 1
+     },
+     "idgham_shafawi": {
+      "pass": 1
+     },
+     "izhar_shafawi": {
+      "pass": 1
+     },
+     "madd_muttasil": {
+      "pass": 1
+     }
+    },
+    "letters": {
+     "ء": {
+      "confirmed": 7
+     },
+     "ِ": {
+      "confirmed": 17
+     },
+     "ن": {
+      "confirmed": 6
+     },
+     "َ": {
+      "confirmed": 40
+     },
+     "ا": {
+      "confirmed": 9
+     },
+     "ز": {
+      "confirmed": 2
+     },
+     "ل": {
+      "confirmed": 18
+     },
+     "ه": {
+      "confirmed": 5
+     },
+     "ُ": {
+      "confirmed": 9
+     },
+     "ف": {
+      "confirmed": 4
+     },
+     "ۦ": {
+      "confirmed": 2
+     },
+     "ت": {
+      "confirmed": 6
+     },
+     "ق": {
+      "confirmed": 3
+     },
+     "د": {
+      "confirmed": 4
+     },
+     "ر": {
+      "confirmed": 10
+     },
+     "و": {
+      "confirmed": 2
+     },
+     "م": {
+      "confirmed": 8
+     },
+     "ك": {
+      "confirmed": 3
+     },
+     "خ": {
+      "confirmed": 1
+     },
+     "ش": {
+      "confirmed": 1
+     },
+     "ۥ": {
+      "confirmed": 1
+     },
+     "ح": {
+      "confirmed": 2
+     },
+     "ب": {
+      "confirmed": 2
+     },
+     "ذ": {
+      "confirmed": 1
+     },
+     "س": {
+      "confirmed": 1
+     },
+     "ي": {
+      "confirmed": 1
+     },
+     "ط": {
+      "confirmed": 1
+     },
+     "ع": {
+      "confirmed": 1
+     },
+     "ج": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 102
+     },
+     "hams_or_jahr": {
+      "realised": 102
+     },
+     "itbaq": {
+      "realised": 101
+     },
+     "qalqla": {
+      "realised": 101,
+      "not_realised": 1
+     },
+     "safeer": {
+      "realised": 102
+     },
+     "shidda_or_rakhawa": {
+      "realised": 92
+     },
+     "tafashie": {
+      "realised": 102
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 99,
+      "not_realised": 2
+     }
+    },
+    "summary": {
+     "words": 30,
+     "words_all_correct": 27,
+     "letters": 181,
+     "identity_not_confirmed": 0,
+     "characteristics_scored": 804,
+     "characteristics_not_realised": 3,
+     "rules_scored": 81,
+     "rules_failed": 1
+    },
+    "recording": {
+     "audio_seconds": 42.88,
+     "seconds_per_count": 0.241,
+     "tempo_class": "tadwir"
+    }
+   }
+  },
+  {
+   "round": 5,
+   "exercise": "r5e3",
+   "take": "B",
+   "recording": "r5e3/B/20260925-042401.m4a",
+   "card": {
+    "exercise": "r5e3",
+    "take": "B",
+    "wajh": {
+     "munfasil": "tawassut (Shatibiyyah), 4-5 counts",
+     "choice": "tawassut",
+     "expected_counts": [
+      4.0,
+      5.0
+     ],
+     "source": "declared",
+     "instances": 2,
+     "median_counts": 6.07,
+     "note": "graded for consistency with the wajh the reciter chose"
+    },
+    "tempo": {
+     "seconds_per_count": 0.241,
+     "class": "tadwir",
+     "ok": true
+    },
+    "mistakes": [
+     {
+      "ayah": 4,
+      "word": 1,
+      "text": "ٱلْمَلَـٰٓئِكَةُ",
+      "do": "ٱلْمَلَـٰٓئِكَةُ — the muttaṣil at 2 counts instead of 4.",
+      "verdict": "caught",
+      "evidence": [
+       "madd_muttasil short 1.9 counts (dev -2.1)"
+      ],
+      "engine_failing": [
+       "97:4:R17"
+      ]
+     },
+     {
+      "ayah": 4,
+      "word": 5,
+      "text": "رَبِّهِم",
+      "do": "رَبِّهِم مِّن — merge the mīm into the mīm with NO ghunnah.",
+      "verdict": "caught",
+      "evidence": [
+       "idgham_shafawi short 1.9 counts (dev -0.1)"
+      ],
+      "engine_failing": [
+       "97:4:R10"
+      ]
+     },
+     {
+      "ayah": 3,
+      "word": 3,
+      "text": "مِّنْ",
+      "do": "مِّنْ أَلْفِ — hide the nūn with a ghunnah before the hamza (it must be clear).",
+      "verdict": "caught",
+      "evidence": [
+       "izhar_halqi long 3.62 counts (dev +2.62)"
+      ],
+      "engine_failing": [
+       "97:3:R13"
+      ]
+     },
+     {
+      "ayah": 1,
+      "word": 4,
+      "text": "ٱلْقَدْرِ",
+      "do": "ٱلْقَدْرِ (ayah 1) — stop on the rāʾ with no qalqalah on the dāl.",
+      "verdict": "caught",
+      "evidence": [
+       "qalqalah wrong",
+       "د qalqla: heard [لا قلقلة] (margin -4.113)",
+       "ڇ qalqla: heard [لا قلقلة] (margin -5.1)"
+      ],
+      "engine_failing": [
+       "97:1:L29:qalqla",
+       "97:1:L30:qalqla",
+       "97:1:L31:itbaq",
+       "97:1:L31:shidda_or_rakhawa",
+       "97:1:R11"
+      ]
+     },
+     {
+      "ayah": 5,
+      "word": 3,
+      "text": "مَطْلَعِ",
+      "do": "مَطْلَعِ — make the sākin ṭāʾ light, like tāʾ: 'matlaʿ'.",
+      "verdict": "flagged, other reason",
+      "evidence": [],
+      "engine_failing": [
+       "97:5:L20:shidda_or_rakhawa"
+      ]
+     }
+    ],
+    "caught": 4,
+    "false_alarms": [
+     {
+      "ayah": 1,
+      "word": 0,
+      "text": "إِنَّآ",
+      "failing": [
+       "97:1:R16"
+      ],
+      "control": false
+     },
+     {
+      "ayah": 1,
+      "word": 1,
+      "text": "أَنزَلْنَـٰهُ",
+      "failing": [
+       "97:1:L7:tafkheem_or_taqeeq"
+      ],
+      "control": false
+     },
+     {
+      "ayah": 2,
+      "word": 0,
+      "text": "وَمَآ",
+      "failing": [
+       "97:2:R13"
+      ],
+      "control": false
+     },
+     {
+      "ayah": 4,
+      "word": 6,
+      "text": "مِّن",
+      "failing": [
+       "97:4:R11"
+      ],
+      "control": false
+     },
+     {
+      "ayah": 5,
+      "word": 4,
+      "text": "ٱلْفَجْرِ",
+      "failing": [
+       "97:5:L29:tafkheem_or_taqeeq"
+      ],
+      "control": false
+     }
+    ]
+   },
+   "digest": {
+    "rules": {
+     "ghunnah": {
+      "pass": 1
+     },
+     "ikhfa": {
+      "pass": 1,
+      "short": 1
+     },
+     "safir": {
+      "pass": 3
+     },
+     "jahr": {
+      "pass": 17
+     },
+     "tawassut": {
+      "pass": 7,
+      "no_evidence": 5
+     },
+     "rakhawah": {
+      "pass": 6
+     },
+     "hamzat_wasl": {
+      "pass": 6
+     },
+     "tafkheem": {
+      "pass": 13
+     },
+     "qalqalah": {
+      "wrong": 1,
+      "pass": 5
+     },
+     "takreer": {
+      "unconfirmed": 6
+     },
+     "madd_munfasil": {
+      "long": 2
+     },
+     "madd_tabii": {
+      "pass": 9
+     },
+     "tarqeeq": {
+      "pass": 1
+     },
+     "idgham_ghunnah": {
+      "pass": 1
+     },
+     "izhar_halqi": {
+      "long": 1,
+      "pass": 1
+     },
+     "tafashhi": {
+      "pass": 1
+     },
+     "hams": {
+      "pass": 1
+     },
+     "idgham_shafawi": {
+      "short": 1
+     },
+     "izhar_shafawi": {
+      "pass": 1
+     },
+     "madd_muttasil": {
+      "short": 1
+     }
+    },
+    "letters": {
+     "ء": {
+      "confirmed": 7
+     },
+     "ِ": {
+      "confirmed": 17
+     },
+     "ن": {
+      "confirmed": 6
+     },
+     "َ": {
+      "confirmed": 40
+     },
+     "ا": {
+      "confirmed": 9
+     },
+     "ز": {
+      "confirmed": 2
+     },
+     "ل": {
+      "confirmed": 18
+     },
+     "ه": {
+      "confirmed": 5
+     },
+     "ُ": {
+      "confirmed": 9
+     },
+     "ف": {
+      "confirmed": 4
+     },
+     "ۦ": {
+      "confirmed": 2
+     },
+     "ت": {
+      "confirmed": 6
+     },
+     "ق": {
+      "confirmed": 3
+     },
+     "د": {
+      "confirmed": 4
+     },
+     "ر": {
+      "confirmed": 10
+     },
+     "و": {
+      "confirmed": 2
+     },
+     "م": {
+      "confirmed": 8
+     },
+     "ك": {
+      "confirmed": 3
+     },
+     "خ": {
+      "confirmed": 1
+     },
+     "ش": {
+      "confirmed": 1
+     },
+     "ۥ": {
+      "confirmed": 1
+     },
+     "ح": {
+      "confirmed": 2
+     },
+     "ب": {
+      "confirmed": 2
+     },
+     "ذ": {
+      "confirmed": 1
+     },
+     "س": {
+      "confirmed": 1
+     },
+     "ي": {
+      "confirmed": 1
+     },
+     "ط": {
+      "confirmed": 1
+     },
+     "ع": {
+      "confirmed": 1
+     },
+     "ج": {
+      "confirmed": 1
+     }
+    },
+    "characteristics": {
+     "ghonna": {
+      "realised": 102
+     },
+     "hams_or_jahr": {
+      "realised": 102
+     },
+     "itbaq": {
+      "realised": 100,
+      "not_realised": 1
+     },
+     "qalqla": {
+      "realised": 100,
+      "not_realised": 2
+     },
+     "safeer": {
+      "realised": 102
+     },
+     "shidda_or_rakhawa": {
+      "realised": 90,
+      "not_realised": 2
+     },
+     "tafashie": {
+      "realised": 102
+     },
+     "tafkheem_or_taqeeq": {
+      "realised": 99,
+      "not_realised": 2
+     }
+    },
+    "summary": {
+     "words": 30,
+     "words_all_correct": 20,
+     "letters": 181,
+     "identity_not_confirmed": 0,
+     "characteristics_scored": 804,
+     "characteristics_not_realised": 7,
+     "rules_scored": 81,
+     "rules_failed": 7
+    },
+    "recording": {
+     "audio_seconds": 46.08,
+     "seconds_per_count": 0.241,
+     "tempo_class": "tadwir"
+    }
+   }
+  }
+ ]
+}

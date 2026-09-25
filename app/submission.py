@@ -291,7 +291,8 @@ def settle_boundaries(spans: list[tuple[int, int]], pauses: list[tuple[int, int]
 
 
 def walk_alignment(lp: np.ndarray, refs: list[AyahRef], vocab: dict[str, int], blank: int,
-                   ph_first: int, ph_width: int, band: float = 0.6) -> list[tuple[int, int]]:
+                   ph_first: int, ph_width: int, band: float = 0.6,
+                   joint_cells: int = 6_000_000) -> list[tuple[int, int]]:
     """Frame span of each ayah inside one long recording.
 
     `ctc_viterbi` is O(T x 2S+1), so a long submission cannot be aligned as one string (a whole surah
@@ -305,9 +306,31 @@ def walk_alignment(lp: np.ndarray, refs: list[AyahRef], vocab: dict[str, int], b
     band around that. Errors cannot accumulate because every window is placed from the whole, not
     from its predecessor. Speech rate is near-constant within one submission, which is what makes the
     proportional prior sound.
+
+    Except when it is not: a master reading al-Qadr 97:1-5 gives 97:4 17 s for a length of text the
+    prior allots far less, and every window was misplaced -- 97:3 got 1.6 s of its 9.8 s, and the
+    master drew 13 false alarms. A submission small enough to align whole (`joint_cells`, the
+    Viterbi lattice size) is therefore aligned as one string with no prior at all, and each ayah's
+    span is read off where its phonemes landed. The windowed walk remains for long submissions.
     """
     block = lp[:, ph_first:ph_first + ph_width]
     T = block.shape[0]
+    seqs = [[vocab[c] for c in r.phonemes if c in vocab] for r in refs]
+    n_sym = sum(len(q) for q in seqs)
+    if T and n_sym and T * (2 * n_sym + 1) <= joint_cells:
+        _s, first, last = ctc_viterbi(block, [x for q in seqs for x in q], blank)
+        spans_j: list[tuple[int, int]] = []
+        k = prev_end_j = 0
+        for q in seqs:
+            if not q:
+                spans_j.append((prev_end_j, prev_end_j))
+                continue
+            a, b = first[k] - 1, last[k + len(q) - 1]
+            a, b = max(0, a), min(T, max(b, a + 1))
+            spans_j.append((a, b))
+            prev_end_j = b
+            k += len(q)
+        return spans_j
     lens = [max(1, len(r.phonemes)) for r in refs]
     total = sum(lens)
     starts: list[int] = []

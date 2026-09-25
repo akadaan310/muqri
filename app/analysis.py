@@ -67,13 +67,13 @@ def ctc_viterbi(lp: npt.NDArray[np.floating], seq: list[int], blank: int
     delta[0, 0] = lp[0, blank]
     if S > 1:
         delta[0, 1] = lp[0, ext[1]]
+    ok = np.array([ext[s] != blank and ext[s] != ext[s - 2] for s in range(2, S)], dtype=bool)
     for t in range(1, T):
         prev = delta[t - 1]
         stay = prev
         one = np.concatenate(([NEG], prev[:-1]))
         skip = np.full(S, NEG)
         if S > 2:
-            ok = np.array([ext[s] != blank and ext[s] != ext[s - 2] for s in range(2, S)])
             skip[2:] = np.where(ok, prev[:-2], NEG)
         stacked = np.vstack([stay, one, skip])
         arg = np.argmax(stacked, axis=0)

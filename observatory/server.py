@@ -172,6 +172,11 @@ def digest_by_round() -> dict[int, dict[str, Any]]:
 
 # ---------------------------------------------------------------- manifest ---------------------------------
 
+def _running_revision() -> str:
+    import subprocess
+    return subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+
+
 def manifest() -> dict[str, Any]:
     from observatory import content as C
     snap = load("snapshot.json") or {}
@@ -181,7 +186,8 @@ def manifest() -> dict[str, Any]:
     return {
         "system": {"name": "Muqri", "engines": C.ENGINES, "status_vocabulary": ["IMPLEMENTED", "TESTED",
                    "PARTIALLY IMPLEMENTED", "EXPERIMENTAL", "PLANNED", "CONCEPTUAL", "NOT VERIFIED"]},
-        "git_revision": snap.get("git", {}), "tests_collected": snap.get("tests_collected"),
+        "git_revision": {"snapshot_built_at": snap.get("git", {}), "running": _running_revision()},
+        "tests_collected": snap.get("tests_collected"),
         "deployment": {"backend": "FastAPI app/webapp.py, uvicorn, VM port 8088 (plain HTTP)",
                        "observatory": "observatory/server.py, 127.0.0.1:8095, read-only, token",
                        "public_https": "Cloudflare quick tunnel (trycloudflare.com) to the observatory only"},

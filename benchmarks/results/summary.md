@@ -1,24 +1,26 @@
 # qaari-eval v2 benchmark
 
-Up to 4055 ayahs per reciter (the most complete reciter's count; see each row).
+Up to 6236 ayahs per reciter (the most complete reciter's count; see each row).
 
 | Reciter | Set | Raw textbook | Perfection (studio) | Perfection (adapted) | Sifaat | Timing FAILs studio → adapted | FP reduction |
 |---|---|---|---|---|---|---|---|
-| Al-Hussary (Muallim) | studio | 75.1 | 98.0 | 97.7 | 95.0 | 743 → 781 (of 32795) | -5.1% |
-| Mahmoud Khalil Al-Hussary | studio | 71.2 | 97.1 | 97.1 | 94.1 | 864 → 773 (of 26718) | 10.5% |
-| Abdul Basit Abdul Samad (Murattal) | studio | 69.1 | 92.5 | 95.1 | 95.6 | 1156 → 684 (of 11842) | 40.8% |
-| Ali Al-Hudhaify | studio | 69.0 | 91.3 | 91.6 | 90.6 | 1976 → 1912 (of 19759) | 3.2% |
-| Mishary Alafasy | studio | 68.1 | 89.4 | 90.2 | 96.4 | 1263 → 1188 (of 11062) | 5.9% |
-| Siddiq Al-Minshawi (Murattal) | studio | 61.3 | 86.0 | 91.9 | 94.0 | 3036 → 1822 (of 17990) | 40.0% |
-| Saud Al-Shuraim | taraweeh | 69.2 | 91.1 | 92.3 | 90.8 | 109 → 88 (of 1139) | 19.3% |
-| Yasser Al-Dosari | taraweeh | 68.2 | 88.9 | 89.0 | 95.9 | 1057 → 1028 (of 8561) | 2.7% |
-| Nasser Al-Qatami | taraweeh | 64.3 | 87.3 | 86.9 | 95.5 | 789 → 815 (of 4890) | -3.3% |
+| Al-Hussary (Muallim) | studio | 75.0 | 96.9 | 95.1 | 89.1 | 1381 → 2294 (of 44505) | -66.1% |
+| Mahmoud Khalil Al-Hussary | studio | 71.2 | 95.1 | 94.1 | 88.2 | 2670 → 3300 (of 54704) | -23.6% |
+| Abdul Basit Abdul Samad (Murattal) | studio | 68.9 | 92.5 | 92.8 | 90.3 | 2733 → 2429 (of 31930) | 11.1% |
+| Ali Al-Hudhaify | studio | 69.0 | 90.8 | 91.2 | 86.1 | 3235 → 3079 (of 32206) | 4.8% |
+| Mishary Alafasy | studio | 68.1 | 89.7 | 89.7 | 91.5 | 3516 → 3586 (of 31492) | -2.0% |
+| Siddiq Al-Minshawi (Murattal) | studio | 61.3 | 87.3 | 90.0 | 89.6 | 3901 → 2882 (of 28138) | 26.1% |
+| Saud Al-Shuraim | taraweeh | 69.1 | 90.4 | 90.7 | 85.2 | 3678 → 3579 (of 43239) | 2.7% |
+| Abdul Rahman Al-Sudais | taraweeh | 62.6 | 89.0 | 89.5 | 89.9 | 4466 → 4512 (of 35497) | -1.0% |
+| Yasser Al-Dosari | taraweeh | 68.0 | 88.3 | 88.0 | 89.6 | 5704 → 6031 (of 46432) | -5.7% |
+| Nasser Al-Qatami | taraweeh | 65.0 | 85.5 | 84.9 | 89.1 | 7598 → 8017 (of 44116) | -5.5% |
+| Abdullah Al-Juhany | taraweeh | 38.4 | 67.2 | 66.9 | 75.0 | 3856 → 3986 (of 10648) | -3.4% |
 
 ## Aggregates
 
-- **studio_set_mean_perfection**: 92.4
-- **taraweeh_set_mean_perfection_unadapted**: 89.1
-- **taraweeh_set_mean_perfection_adapted**: 89.4
-- **taraweeh_timing_fails_unadapted**: 1955
-- **taraweeh_timing_fails_adapted**: 1931
-- **taraweeh_timing_fp_reduction_pct**: 1.2
+- **studio_set_mean_perfection**: 92.0
+- **taraweeh_set_mean_perfection_unadapted**: 84.1
+- **taraweeh_set_mean_perfection_adapted**: 84.0
+- **taraweeh_timing_fails_unadapted**: 25302
+- **taraweeh_timing_fails_adapted**: 26125
+- **taraweeh_timing_fp_reduction_pct**: -3.3

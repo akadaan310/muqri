@@ -174,48 +174,62 @@ The first, unbounded search reached the peers' 95 target by inflating the wasl w
 
 The live scorer and the offline re-scoring (`benchmarks/summarize.py`) share one `Calibration.judge()`. The Julia implementation reproduces the Python scores to the decimal.
 
-### Results (full-Qur'an Kaggle run, 46,285 ayah recordings)
+### Results (full-Qur'an Kaggle runs, 114,746 ayah recordings, scored with calibration v3)
 
 **Data.**
-- Source: Quran-MD WAVs (the EveryAyah recordings).
-- Al-Hussary: 4,053 ayahs. Peers: 1,869–4,055 each.
-- Imams: Dosari 1,872, Qatami 908, Shuraym 273.
+- Source: Quran-MD WAVs (the EveryAyah recordings), the `full` and `fill` Kaggle runs together; the
+  rows are committed gzipped in `benchmarks/results/kaggle/{full,fill}/`.
+- Imams complete: Sudais, Juhaynee, Shuraym, Qatami and Dosari, all 6,236 ayahs in both modes.
+- Al-Hussary 6,031 ayahs; peers 3,651–4,352 each.
+- Scored with the installed calibration (`app/data/calibration.json`, v3, built from the studio-all run)
+  through `Calibration.judge`: `python benchmarks/summarize.py --runs <rows> --calibration app/data/calibration.json`.
+  The bands come from the anchor and peers only; these rows add scoring coverage, not calibration data.
 
-**Collection gaps.**
-- 7 of the 20 shards were lost to a model-loading race, now fixed.
-- Sudais and Juhaynee have no rows yet.
-- The `fill` run is completing both.
+| Reciter | Set | Raw textbook | Calibrated (studio) | Adapted mode |
+|---|---|---|---|---|
+| Al-Hussary (Muallim) | peer | 75.0 | **96.9** | 95.1 |
+| Al-Hussary | anchor | 71.2 | **95.1** | 94.1 |
+| Abdul Basit (Murattal) | peer | 68.9 | 92.5 | 92.8 |
+| Al-Hudhaify | peer | 69.0 | 90.8 | 91.2 |
+| Alafasy | peer | 68.1 | 89.7 | 89.7 |
+| Al-Minshawi (Murattal) | peer | 61.3 | 87.3 | 90.0 |
+| Saud Al-Shuraim | imam | 69.1 | 90.4 | 90.7 |
+| Abdul Rahman Al-Sudais | imam | 62.6 | 89.0 | 89.5 |
+| Yasser Al-Dosari | imam | 68.0 | 88.3 | 88.0 |
+| Nasser Al-Qatami | imam | 65.0 | 85.5 | 84.9 |
+| Abdullah Al-Juhany | imam | 38.4 | *67.2 — unscored* | 66.9 |
 
-| Reciter | Set | Raw textbook | Calibrated | Held out (LOO) | Adapted mode |
-|---|---|---|---|---|---|
-| Al-Hussary | anchor | 71.2 | **97.1** (in-sample) | — | 97.1 |
-| Al-Hussary (Muallim) | peer | 75.1 | 98.0 | 98.1 | 97.7 |
-| Abdul Basit (Murattal) | peer | 69.1 | 92.5 | 92.3 | 95.1 |
-| Al-Hudhaify | peer | 69.0 | 91.3 | 90.5 | 91.6 |
-| Alafasy | peer | 68.1 | 89.4 | 88.8 | 90.2 |
-| Al-Minshawi (Murattal) | peer | 61.3 | 86.0 | 85.7 | 91.9 |
-| Saud Al-Shuraim | imam | 69.2 | 91.1 | — | 92.3 |
-| Yasser Al-Dosari | imam | 68.2 | 88.9 | — | 89.0 |
-| Nasser Al-Qatami | imam | 64.3 | 87.3 | — | 86.9 |
+Al-Hussary's 95.1 and the Muallim recording's 96.9 match the calibration gate's own figures (95.10 and
+97.05) on the independent studio-all rows.
+
+**Al-Juhany's score is an alignment failure, not a verdict.** His files hold the right ayahs (duration
+tracks word count at r = 0.95, as for every reciter), but the CTC alignment posterior is 0.000 even at
+the 75th percentile (0.3–0.99 for everyone else), his harakah estimate collapses to an impossible 80 ms
+(160–320 ms for the rest) and the signal-to-noise ratio is 8 dB, the worst of the set. Treat his rows as
+unmeasured until the audio or the aligner is dealt with.
 
 **Findings.**
 - **The vowel-core ruler recovers "2 harakat".**
-  - On 12,122 natural Madds, the Hilbert-envelope vowel core measures Al-Hussary's median at **1.98 counts** (`count_scale` 1.008).
+  - On 26,956 natural Madds (calibration v3), the Hilbert-envelope vowel core measures Al-Hussary's median at **1.98 counts** (`count_scale` 1.009).
   - The raw span ruler gives 2.2–2.5 because CTC spans take in the next letter's closure; this was the "harakah inflation".
-- **Held-out peers barely move** (LOO − in-sample ≤ 0.8), so the bands are not overfit to the reciters that built them.
+- **Held-out peers barely move** (v3: in-sample − LOO ≤ 0.73 for all seven peers), so the bands are not overfit to the reciters that built them.
 - **Imams vs. peers.**
-  - The imams average 89.1 against the peers' 91.4. The separation is real but modest, and Al-Minshawi sits below the imams.
-  - The per-rule gaps (`summary.json → rule_gaps_vs_reference`, signed z from the reference band) are more informative than the single index:
-    - **Qatami and Al-Shuraim** hold Munfasil at median z ≈ −2 (about half pass), i.e. shorter than the reference, consistent with the shorter Munfasil common in Haramain Taraweeh.
-    - **Al-Hudhaify**, a peer, goes the other way (z ≈ +2.4): his Munfasil is longer.
-    - **Qatami** holds Madd ʿIwad long (z ≈ +3.9; 9 % pass).
-    - **Dosari**'s weakest rule is Muttasil, held long (z ≈ +1.3; 60 % pass).
-  - Under the earlier MAD-only scale, Dosari also appeared to fail Takreer. That was an artefact of the degenerate band the quantile term fixes.
+  - The measured imams (Al-Juhany excluded) average 88.3 against the peers' 91.4. The separation is
+    real but modest, and Al-Minshawi sits below three of the imams.
+  - The per-rule gaps (`summary.json → rule_gaps_vs_reference`, signed z from the reference band) are
+    more informative than the single index:
+    - **Short Munfasil is the Haramain signature:** Qatami, Al-Shuraim and Al-Sudais all hold it at
+      median z ≈ −2.4, with 22–29 % inside the reference band.
+    - **Al-Hudhaify**, a peer, goes the other way (z ≈ +2.6): his Munfasil is longer.
+    - **Qatami** holds Madd ʿIwad long (z ≈ +4.8; 9 % pass).
+    - **Al-Shuraim** cuts the Ṣila Kubrā short (z ≈ −3.7).
+    - **Dosari**'s Munfasil mostly passes (78 %); his weakest rule is a long Lāzim Kalimī (z ≈ +2.1).
 
 **Acceptance criteria.** All three fail; the numbers are reported as measured, not tuned.
-- Al-Hussary ≥ 98: **97.1**. This is in-sample, since his own recordings define the bands.
-- Dosari adapted ≥ 95: **89.0**.
-- Timing false positives cut ≥ 90 % by the Taraweeh adapter: **1.2 %**.
+- Al-Hussary ≥ 98: **95.1**.
+- Dosari adapted ≥ 95: **88.0**.
+- Timing false positives cut ≥ 90 % by the Taraweeh adapter: **−3.3 %** (25,302 → 26,125 timing FAILs
+  over the imams).
   - The adapter was built for reverberant live audio. These imam recordings are studio-quality EveryAyah ayahs, so there is little reverberation for it to remove.
   - It does not help here, and a real Taraweeh test needs live recordings.
 
@@ -286,7 +300,7 @@ QAARI_ACCEPTANCE=1 pytest tests/test_benchmarks.py # the spec's acceptance crite
 - **The anchor's score is in-sample.** Only the peers get held-out (LOO) validation.
 - **The Taraweeh adapter** is untested on genuine live recordings. EveryAyah imam recordings are studio-clean, and the blind RT60 estimate is biased low above 1 s.
 - **Gaps in the benchmark:**
-  - Sudais and Juhaynee are pending the `fill` run.
+  - Al-Juhany's audio defeats the aligner (see Results); his rows are unmeasured.
   - Tablawi, Ayyoub, Budair, Matroud and Al-Muaiqly are not in Quran-MD and need an EveryAyah run.
 - **Jawaz al-wajhayn** reports the realised variant and always passes. Madd ʿArid and Leen stay on textbook limits, because 2/4/6 counts is the reciter's free choice.
 - **Educational aid.** This does not replace a qualified teacher (*mujawwid*).

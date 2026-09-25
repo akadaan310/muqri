@@ -53,25 +53,39 @@
   ],
   "reciters": [
     {
-      "reciter_id": "Yasser_Ad-Dussary_128kbps",
-      "name": "Yasser Al-Dosari",
+      "reciter_id": "Abdurrahmaan_As-Sudais_192kbps",
+      "name": "Abdul Rahman Al-Sudais",
       "category": "taraweeh",
-      "n_segments": 1872,
-      "source": "https://everyayah.com/data/Yasser_Ad-Dussary_128kbps"
+      "n_segments": 6236,
+      "source": "https://everyayah.com/data/Abdurrahmaan_As-Sudais_192kbps"
     },
     {
-      "reciter_id": "Nasser_Alqatami_128kbps",
-      "name": "Nasser Al-Qatami",
+      "reciter_id": "Abdullaah_3awwaad_Al-Juhaynee_128kbps",
+      "name": "Abdullah Al-Juhany",
       "category": "taraweeh",
-      "n_segments": 908,
-      "source": "https://everyayah.com/data/Nasser_Alqatami_128kbps"
+      "n_segments": 6236,
+      "source": "https://everyayah.com/data/Abdullaah_3awwaad_Al-Juhaynee_128kbps"
     },
     {
       "reciter_id": "Saood_ash-Shuraym_128kbps",
       "name": "Saud Al-Shuraim",
       "category": "taraweeh",
-      "n_segments": 273,
+      "n_segments": 6236,
       "source": "https://everyayah.com/data/Saood_ash-Shuraym_128kbps"
+    },
+    {
+      "reciter_id": "Nasser_Alqatami_128kbps",
+      "name": "Nasser Al-Qatami",
+      "category": "taraweeh",
+      "n_segments": 6236,
+      "source": "https://everyayah.com/data/Nasser_Alqatami_128kbps"
+    },
+    {
+      "reciter_id": "Yasser_Ad-Dussary_128kbps",
+      "name": "Yasser Al-Dosari",
+      "category": "taraweeh",
+      "n_segments": 6236,
+      "source": "https://everyayah.com/data/Yasser_Ad-Dussary_128kbps"
     }
   ]
 }

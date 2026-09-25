@@ -1,5 +1,5 @@
 {
- "verses": 4055,
+ "verses": 6236,
  "reciters": [
   {
    "reciter": "Husary_Muallim_128kbps",
@@ -7,62 +7,62 @@
    "category": "studio",
    "modes": {
     "studio": {
-     "perfection": 97.97475155340801,
-     "sifaat": 95.04363314885492,
+     "perfection": 96.87894102649577,
+     "sifaat": 89.13272892585925,
      "categories": {
-      "ghunnah": 97.4,
-      "idgham": 96.8,
-      "madd": 97.6,
-      "meem": 97.3,
-      "noon": 98.8,
+      "ghunnah": 94.9,
+      "idgham": 97.1,
+      "madd": 95.7,
+      "meem": 98.8,
+      "noon": 99.3,
       "qalqalah": 99.6,
-      "sifaat": 95.0,
-      "wasl": 98.2,
-      "weight": 98.6
+      "sifaat": 89.1,
+      "wasl": 98.4,
+      "weight": 97.3
      },
      "status_counts": {
-      "PASS": 83202,
-      "SKIPPED": 35641,
-      "FAIL": 2621,
-      "WARNING": 1837
+      "PASS": 104263,
+      "WARNING": 3468,
+      "FAIL": 6709,
+      "SKIPPED": 22086
      },
-     "timing_rules": 32795,
-     "timing_fails": 743,
-     "raw_perfection": 75.05783515295327,
-     "raw_timing_fails": 14853,
-     "ayahs": 4051,
+     "timing_rules": 44505,
+     "timing_fails": 1381,
+     "raw_perfection": 74.96132461005243,
+     "raw_timing_fails": 16569,
+     "ayahs": 4352,
      "haraka_ms_median": 280.3
     },
     "taraweeh_adapted": {
-     "perfection": 97.7362700854384,
-     "sifaat": 95.3300501523337,
+     "perfection": 95.06387994213395,
+     "sifaat": 88.89658253814967,
      "categories": {
-      "ghunnah": 96.4,
-      "idgham": 97.4,
-      "madd": 97.6,
-      "meem": 97.2,
-      "noon": 98.1,
-      "qalqalah": 99.8,
-      "sifaat": 95.3,
-      "wasl": 97.8,
-      "weight": 98.0
+      "ghunnah": 89.5,
+      "idgham": 97.9,
+      "madd": 93.1,
+      "meem": 98.4,
+      "noon": 98.6,
+      "qalqalah": 99.7,
+      "sifaat": 88.9,
+      "wasl": 98.0,
+      "weight": 97.0
      },
      "status_counts": {
-      "PASS": 83871,
-      "SKIPPED": 34545,
-      "FAIL": 2641,
-      "WARNING": 2169,
-      "VALID_NECESSARY_PAUSE": 7
+      "PASS": 102190,
+      "WARNING": 5220,
+      "FAIL": 7819,
+      "SKIPPED": 21119,
+      "VALID_NECESSARY_PAUSE": 9
      },
-     "timing_rules": 33220,
-     "timing_fails": 781,
-     "raw_perfection": 74.68663067000276,
-     "raw_timing_fails": 15257,
-     "ayahs": 4051,
+     "timing_rules": 44993,
+     "timing_fails": 2294,
+     "raw_perfection": 74.54557149330704,
+     "raw_timing_fails": 17032,
+     "ayahs": 4350,
      "haraka_ms_median": 280.3
     }
    },
-   "timing_fp_reduction_pct": -5.1
+   "timing_fp_reduction_pct": -66.1
   },
   {
    "reciter": "Husary_128kbps",
@@ -70,62 +70,62 @@
    "category": "studio",
    "modes": {
     "studio": {
-     "perfection": 97.11384770990557,
-     "sifaat": 94.14426926339797,
+     "perfection": 95.14363306876541,
+     "sifaat": 88.22732645312963,
      "categories": {
-      "ghunnah": 98.1,
-      "idgham": 98.5,
-      "madd": 95.9,
-      "meem": 97.7,
-      "noon": 99.0,
-      "qalqalah": 99.3,
-      "sifaat": 94.1,
+      "ghunnah": 97.0,
+      "idgham": 98.8,
+      "madd": 93.2,
+      "meem": 95.8,
+      "noon": 99.4,
+      "qalqalah": 99.4,
+      "sifaat": 88.2,
       "wasl": 99.8,
-      "weight": 97.3
+      "weight": 93.5
      },
      "status_counts": {
-      "PASS": 61892,
-      "SKIPPED": 58549,
-      "WARNING": 1700,
-      "FAIL": 2514
+      "PASS": 123822,
+      "SKIPPED": 46646,
+      "FAIL": 10072,
+      "WARNING": 4836
      },
-     "timing_rules": 26718,
-     "timing_fails": 864,
-     "raw_perfection": 71.18253690050224,
-     "raw_timing_fails": 17674,
-     "ayahs": 4053,
+     "timing_rules": 54704,
+     "timing_fails": 2670,
+     "raw_perfection": 71.21528670958072,
+     "raw_timing_fails": 26275,
+     "ayahs": 6031,
      "haraka_ms_median": 320.2
     },
     "taraweeh_adapted": {
-     "perfection": 97.12721663934268,
-     "sifaat": 94.80517528942765,
+     "perfection": 94.07844191114604,
+     "sifaat": 87.83519285969483,
      "categories": {
-      "ghunnah": 97.2,
-      "idgham": 98.5,
-      "madd": 96.6,
-      "meem": 98.2,
-      "noon": 98.5,
+      "ghunnah": 92.8,
+      "idgham": 99.3,
+      "madd": 91.9,
+      "meem": 96.9,
+      "noon": 98.9,
       "qalqalah": 99.7,
-      "sifaat": 94.8,
-      "wasl": 97.8,
-      "weight": 96.6
+      "sifaat": 87.8,
+      "wasl": 98.3,
+      "weight": 93.3
      },
      "status_counts": {
-      "PASS": 67458,
-      "SKIPPED": 52394,
-      "WARNING": 2103,
-      "FAIL": 2569,
-      "VALID_NECESSARY_PAUSE": 11
+      "PASS": 126192,
+      "SKIPPED": 40440,
+      "FAIL": 11466,
+      "WARNING": 7105,
+      "VALID_NECESSARY_PAUSE": 13
      },
-     "timing_rules": 28041,
-     "timing_fails": 773,
-     "raw_perfection": 71.69550274811448,
-     "raw_timing_fails": 17277,
-     "ayahs": 4053,
+     "timing_rules": 56631,
+     "timing_fails": 3300,
+     "raw_perfection": 71.73979375736978,
+     "raw_timing_fails": 25680,
+     "ayahs": 6031,
      "haraka_ms_median": 320.3
     }
    },
-   "timing_fp_reduction_pct": 10.5
+   "timing_fp_reduction_pct": -23.6
   },
   {
    "reciter": "Abdul_Basit_Murattal_192kbps",
@@ -133,62 +133,62 @@
    "category": "studio",
    "modes": {
     "studio": {
-     "perfection": 92.4910508673209,
-     "sifaat": 95.58022035293853,
+     "perfection": 92.45056032778632,
+     "sifaat": 90.25166152944728,
      "categories": {
-      "ghunnah": 95.1,
-      "idgham": 97.0,
-      "madd": 88.0,
-      "meem": 98.0,
-      "noon": 96.8,
-      "qalqalah": 99.8,
-      "sifaat": 95.6,
-      "wasl": 99.3,
-      "weight": 97.5
+      "ghunnah": 91.8,
+      "idgham": 98.0,
+      "madd": 89.2,
+      "meem": 95.9,
+      "noon": 98.1,
+      "qalqalah": 99.7,
+      "sifaat": 90.3,
+      "wasl": 99.6,
+      "weight": 93.4
      },
      "status_counts": {
-      "SKIPPED": 38696,
-      "PASS": 27124,
-      "FAIL": 1683,
-      "WARNING": 899
+      "SKIPPED": 44366,
+      "PASS": 70216,
+      "WARNING": 3309,
+      "FAIL": 6138
      },
-     "timing_rules": 11842,
-     "timing_fails": 1156,
-     "raw_perfection": 69.09064909763335,
-     "raw_timing_fails": 11055,
-     "ayahs": 2093,
+     "timing_rules": 31930,
+     "timing_fails": 2733,
+     "raw_perfection": 68.86320973965098,
+     "raw_timing_fails": 20120,
+     "ayahs": 4054,
      "haraka_ms_median": 240.2
     },
     "taraweeh_adapted": {
-     "perfection": 95.12118178132711,
-     "sifaat": 94.67688315560254,
+     "perfection": 92.76769854229555,
+     "sifaat": 87.39255404240177,
      "categories": {
-      "ghunnah": 89.6,
-      "idgham": 96.5,
-      "madd": 94.7,
-      "meem": 98.8,
-      "noon": 96.7,
+      "ghunnah": 80.7,
+      "idgham": 97.6,
+      "madd": 91.6,
+      "meem": 97.7,
+      "noon": 98.0,
       "qalqalah": 99.9,
-      "sifaat": 94.7,
-      "wasl": 95.5,
-      "weight": 96.2
+      "sifaat": 87.4,
+      "wasl": 95.8,
+      "weight": 93.4
      },
      "status_counts": {
-      "SKIPPED": 32823,
-      "PASS": 32349,
-      "FAIL": 1627,
-      "WARNING": 1375,
-      "VALID_NECESSARY_PAUSE": 1
+      "SKIPPED": 34802,
+      "PASS": 75751,
+      "WARNING": 5503,
+      "FAIL": 7765,
+      "VALID_NECESSARY_PAUSE": 3
      },
-     "timing_rules": 13142,
-     "timing_fails": 684,
-     "raw_perfection": 71.10552327195097,
-     "raw_timing_fails": 10166,
-     "ayahs": 2091,
+     "timing_rules": 34656,
+     "timing_fails": 2429,
+     "raw_perfection": 71.14280746744087,
+     "raw_timing_fails": 18387,
+     "ayahs": 4054,
      "haraka_ms_median": 240.3
     }
    },
-   "timing_fp_reduction_pct": 40.8
+   "timing_fp_reduction_pct": 11.1
   },
   {
    "reciter": "Hudhaify_128kbps",
@@ -196,61 +196,61 @@
    "category": "studio",
    "modes": {
     "studio": {
-     "perfection": 91.26489529759179,
-     "sifaat": 90.60223749931687,
+     "perfection": 90.7820930890681,
+     "sifaat": 86.14584959735086,
      "categories": {
-      "ghunnah": 97.2,
-      "idgham": 96.0,
-      "madd": 84.7,
-      "meem": 97.1,
-      "noon": 90.6,
+      "ghunnah": 91.5,
+      "idgham": 96.7,
+      "madd": 85.5,
+      "meem": 94.9,
+      "noon": 94.7,
       "qalqalah": 100.0,
-      "sifaat": 90.6,
-      "wasl": 99.8,
-      "weight": 99.0
+      "sifaat": 86.1,
+      "wasl": 99.9,
+      "weight": 95.7
      },
      "status_counts": {
-      "SKIPPED": 69845,
-      "PASS": 44928,
-      "WARNING": 4125,
-      "FAIL": 3689
+      "SKIPPED": 42134,
+      "PASS": 68094,
+      "FAIL": 7530,
+      "WARNING": 6419
      },
-     "timing_rules": 19759,
-     "timing_fails": 1976,
-     "raw_perfection": 68.99959365265357,
-     "raw_timing_fails": 19880,
-     "ayahs": 3970,
+     "timing_rules": 32206,
+     "timing_fails": 3235,
+     "raw_perfection": 68.96648167488887,
+     "raw_timing_fails": 20151,
+     "ayahs": 4052,
      "haraka_ms_median": 200.1
     },
     "taraweeh_adapted": {
-     "perfection": 91.61247449563045,
-     "sifaat": 89.91563036980924,
+     "perfection": 91.21291167490863,
+     "sifaat": 83.82436274254327,
      "categories": {
-      "ghunnah": 95.4,
-      "idgham": 96.6,
-      "madd": 86.2,
-      "meem": 95.3,
-      "noon": 91.1,
+      "ghunnah": 91.2,
+      "idgham": 97.3,
+      "madd": 86.3,
+      "meem": 94.8,
+      "noon": 95.6,
       "qalqalah": 100.0,
-      "sifaat": 89.9,
-      "wasl": 97.6,
-      "weight": 98.9
+      "sifaat": 83.8,
+      "wasl": 98.3,
+      "weight": 96.3
      },
      "status_counts": {
-      "SKIPPED": 67124,
-      "PASS": 46992,
-      "WARNING": 4430,
-      "FAIL": 3971
+      "SKIPPED": 39124,
+      "PASS": 69900,
+      "FAIL": 8386,
+      "WARNING": 6696
      },
-     "timing_rules": 20388,
-     "timing_fails": 1912,
-     "raw_perfection": 68.48747169369408,
-     "raw_timing_fails": 20048,
-     "ayahs": 3970,
-     "haraka_ms_median": 200.1
+     "timing_rules": 33068,
+     "timing_fails": 3079,
+     "raw_perfection": 68.48051913828401,
+     "raw_timing_fails": 20307,
+     "ayahs": 4052,
+     "haraka_ms_median": 200.2
     }
    },
-   "timing_fp_reduction_pct": 3.2
+   "timing_fp_reduction_pct": 4.8
   },
   {
    "reciter": "Alafasy_128kbps",
@@ -258,62 +258,62 @@
    "category": "studio",
    "modes": {
     "studio": {
-     "perfection": 89.41832175612858,
-     "sifaat": 96.35774797609882,
+     "perfection": 89.73106105834071,
+     "sifaat": 91.46480042456608,
      "categories": {
-      "ghunnah": 97.6,
-      "idgham": 96.5,
-      "madd": 82.2,
-      "meem": 96.8,
-      "noon": 91.9,
-      "qalqalah": 99.3,
-      "sifaat": 96.4,
-      "wasl": 99.8,
-      "weight": 98.7
+      "ghunnah": 95.3,
+      "idgham": 97.8,
+      "madd": 82.3,
+      "meem": 95.4,
+      "noon": 97.2,
+      "qalqalah": 99.1,
+      "sifaat": 91.5,
+      "wasl": 99.9,
+      "weight": 96.0
      },
      "status_counts": {
-      "PASS": 24569,
-      "SKIPPED": 29381,
-      "FAIL": 1620,
-      "WARNING": 1842
+      "SKIPPED": 34737,
+      "PASS": 69236,
+      "FAIL": 6490,
+      "WARNING": 4800
      },
-     "timing_rules": 11062,
-     "timing_fails": 1263,
-     "raw_perfection": 68.06599215664491,
-     "raw_timing_fails": 9436,
-     "ayahs": 1869,
+     "timing_rules": 31492,
+     "timing_fails": 3516,
+     "raw_perfection": 68.05518656038268,
+     "raw_timing_fails": 19047,
+     "ayahs": 3651,
      "haraka_ms_median": 220.1
     },
     "taraweeh_adapted": {
-     "perfection": 90.23289404966815,
-     "sifaat": 96.04573575853775,
+     "perfection": 89.71259547950305,
+     "sifaat": 90.1046668818316,
      "categories": {
-      "ghunnah": 96.0,
-      "idgham": 96.0,
-      "madd": 84.2,
-      "meem": 98.3,
-      "noon": 91.6,
-      "qalqalah": 99.7,
-      "sifaat": 96.0,
-      "wasl": 98.9,
-      "weight": 98.6
+      "ghunnah": 93.4,
+      "idgham": 98.2,
+      "madd": 82.8,
+      "meem": 95.6,
+      "noon": 96.3,
+      "qalqalah": 99.6,
+      "sifaat": 90.1,
+      "wasl": 99.3,
+      "weight": 96.0
      },
      "status_counts": {
-      "PASS": 26588,
-      "SKIPPED": 27148,
-      "FAIL": 1647,
-      "WARNING": 2010,
+      "WARNING": 5389,
+      "PASS": 71113,
+      "FAIL": 7188,
+      "SKIPPED": 31437,
       "VALID_NECESSARY_PAUSE": 2
      },
-     "timing_rules": 11653,
-     "timing_fails": 1188,
-     "raw_perfection": 68.08461551852069,
-     "raw_timing_fails": 9403,
-     "ayahs": 1869,
+     "timing_rules": 32468,
+     "timing_fails": 3586,
+     "raw_perfection": 68.02519276021599,
+     "raw_timing_fails": 18920,
+     "ayahs": 3649,
      "haraka_ms_median": 220.1
     }
    },
-   "timing_fp_reduction_pct": 5.9
+   "timing_fp_reduction_pct": -2.0
   },
   {
    "reciter": "Minshawy_Murattal_128kbps",
@@ -321,61 +321,61 @@
    "category": "studio",
    "modes": {
     "studio": {
-     "perfection": 86.02104810316064,
-     "sifaat": 93.96175551006827,
+     "perfection": 87.29326937090414,
+     "sifaat": 89.59720296954,
      "categories": {
-      "ghunnah": 95.7,
-      "idgham": 98.4,
-      "madd": 77.3,
-      "meem": 98.3,
-      "noon": 97.1,
-      "qalqalah": 98.6,
-      "sifaat": 94.0,
+      "ghunnah": 93.0,
+      "idgham": 98.9,
+      "madd": 80.8,
+      "meem": 93.4,
+      "noon": 98.2,
+      "qalqalah": 97.9,
+      "sifaat": 89.6,
       "wasl": 99.9,
-      "weight": 93.1
+      "weight": 85.9
      },
      "status_counts": {
-      "SKIPPED": 82731,
-      "PASS": 35283,
-      "FAIL": 4269,
-      "WARNING": 1676
+      "SKIPPED": 53480,
+      "PASS": 58967,
+      "FAIL": 7992,
+      "WARNING": 3520
      },
-     "timing_rules": 17990,
-     "timing_fails": 3036,
+     "timing_rules": 28138,
+     "timing_fails": 3901,
      "raw_perfection": 61.2712517083243,
      "raw_timing_fails": 23793,
      "ayahs": 4055,
      "haraka_ms_median": 220.3
     },
     "taraweeh_adapted": {
-     "perfection": 91.87255754994263,
-     "sifaat": 94.5677897200884,
+     "perfection": 90.00365387458396,
+     "sifaat": 88.22793816824766,
      "categories": {
-      "ghunnah": 93.9,
-      "idgham": 97.8,
-      "madd": 89.6,
-      "meem": 97.6,
-      "noon": 96.8,
-      "qalqalah": 99.6,
-      "sifaat": 94.6,
-      "wasl": 95.8,
-      "weight": 91.3
+      "ghunnah": 86.7,
+      "idgham": 97.9,
+      "madd": 88.0,
+      "meem": 96.4,
+      "noon": 98.1,
+      "qalqalah": 99.4,
+      "sifaat": 88.2,
+      "wasl": 97.0,
+      "weight": 84.1
      },
      "status_counts": {
-      "SKIPPED": 69321,
-      "PASS": 48394,
-      "WARNING": 2326,
-      "FAIL": 3716
+      "SKIPPED": 40906,
+      "PASS": 68909,
+      "WARNING": 5319,
+      "FAIL": 8623
      },
-     "timing_rules": 21554,
-     "timing_fails": 1822,
+     "timing_rules": 32572,
+     "timing_fails": 2882,
      "raw_perfection": 66.77434250228127,
      "raw_timing_fails": 20344,
      "ayahs": 4055,
      "haraka_ms_median": 220.4
     }
    },
-   "timing_fp_reduction_pct": 40.0
+   "timing_fp_reduction_pct": 26.1
   },
   {
    "reciter": "Saood_ash-Shuraym_128kbps",
@@ -383,62 +383,125 @@
    "category": "taraweeh",
    "modes": {
     "studio": {
-     "perfection": 91.0624749830856,
-     "sifaat": 90.78742373707755,
+     "perfection": 90.42285388352751,
+     "sifaat": 85.16807359909672,
      "categories": {
-      "ghunnah": 89.5,
-      "idgham": 84.0,
-      "madd": 88.5,
-      "meem": 98.8,
-      "noon": 98.8,
-      "qalqalah": 99.4,
-      "sifaat": 90.8,
-      "wasl": 100.0,
-      "weight": 91.2
+      "ghunnah": 89.3,
+      "idgham": 95.2,
+      "madd": 88.4,
+      "meem": 97.2,
+      "noon": 98.6,
+      "qalqalah": 99.7,
+      "sifaat": 85.2,
+      "wasl": 99.9,
+      "weight": 83.4
      },
      "status_counts": {
-      "SKIPPED": 6026,
-      "PASS": 2266,
-      "WARNING": 176,
-      "FAIL": 215
+      "SKIPPED": 83772,
+      "PASS": 86955,
+      "FAIL": 11406,
+      "WARNING": 6998
      },
-     "timing_rules": 1139,
-     "timing_fails": 109,
-     "raw_perfection": 69.20946251283813,
-     "raw_timing_fails": 1251,
-     "ayahs": 273,
-     "haraka_ms_median": 160.3
+     "timing_rules": 43239,
+     "timing_fails": 3678,
+     "raw_perfection": 69.05976193842682,
+     "raw_timing_fails": 27644,
+     "ayahs": 6236,
+     "haraka_ms_median": 160.25
     },
     "taraweeh_adapted": {
-     "perfection": 92.33577280054607,
-     "sifaat": 91.23375024685518,
+     "perfection": 90.68963298978362,
+     "sifaat": 84.88775490570067,
      "categories": {
-      "ghunnah": 88.5,
-      "idgham": 92.0,
-      "madd": 91.4,
-      "meem": 98.4,
-      "noon": 99.0,
-      "qalqalah": 100.0,
-      "sifaat": 91.2,
-      "wasl": 98.8,
-      "weight": 89.9
+      "ghunnah": 89.0,
+      "idgham": 94.9,
+      "madd": 89.0,
+      "meem": 96.7,
+      "noon": 98.4,
+      "qalqalah": 99.8,
+      "sifaat": 84.9,
+      "wasl": 99.8,
+      "weight": 83.5
      },
      "status_counts": {
-      "SKIPPED": 5921,
-      "PASS": 2371,
-      "WARNING": 178,
-      "FAIL": 198,
-      "VALID_NECESSARY_PAUSE": 7
+      "SKIPPED": 80881,
+      "PASS": 89046,
+      "WARNING": 7381,
+      "FAIL": 11709,
+      "VALID_NECESSARY_PAUSE": 73
      },
-     "timing_rules": 1164,
-     "timing_fails": 88,
-     "raw_perfection": 69.12668589479473,
-     "raw_timing_fails": 1250,
-     "ayahs": 273,
+     "timing_rules": 44253,
+     "timing_fails": 3579,
+     "raw_perfection": 68.88181772460666,
+     "raw_timing_fails": 27812,
+     "ayahs": 6236,
      "haraka_ms_median": 160.3
     }
    },
-   "timing_fp_reduction_pct": 19.3
+   "timing_fp_reduction_pct": 2.7
+  },
+  {
+   "reciter": "Abdurrahmaan_As-Sudais_192kbps",
+   "name": "Abdul Rahman Al-Sudais",
+   "category": "taraweeh",
+   "modes": {
+    "studio": {
+     "perfection": 88.98503053614748,
+     "sifaat": 89.85419899012581,
+     "categories": {
+      "ghunnah": 79.8,
+      "idgham": 95.3,
+      "madd": 83.8,
+      "meem": 96.0,
+      "noon": 98.0,
+      "qalqalah": 99.1,
+      "sifaat": 89.9,
+      "wasl": 99.9,
+      "weight": 92.4
+     },
+     "status_counts": {
+      "SKIPPED": 95024,
+      "PASS": 79054,
+      "FAIL": 8914,
+      "WARNING": 6454
+     },
+     "timing_rules": 35497,
+     "timing_fails": 4466,
+     "raw_perfection": 62.593936236781644,
+     "raw_timing_fails": 33865,
+     "ayahs": 6236,
+     "haraka_ms_median": 180.4
+    },
+    "taraweeh_adapted": {
+     "perfection": 89.46100638225136,
+     "sifaat": 89.29572431691409,
+     "categories": {
+      "ghunnah": 79.0,
+      "idgham": 95.3,
+      "madd": 84.9,
+      "meem": 95.4,
+      "noon": 97.7,
+      "qalqalah": 99.3,
+      "sifaat": 89.3,
+      "wasl": 99.7,
+      "weight": 92.7
+     },
+     "status_counts": {
+      "PASS": 83738,
+      "SKIPPED": 88985,
+      "FAIL": 9432,
+      "WARNING": 7173,
+      "VALID_NECESSARY_PAUSE": 41
+     },
+     "timing_rules": 37581,
+     "timing_fails": 4512,
+     "raw_perfection": 63.60976164545262,
+     "raw_timing_fails": 33157,
+     "ayahs": 6236,
+     "haraka_ms_median": 180.5
+    }
+   },
+   "timing_fp_reduction_pct": -1.0
   },
   {
    "reciter": "Yasser_Ad-Dussary_128kbps",
@@ -446,62 +509,62 @@
    "category": "taraweeh",
    "modes": {
     "studio": {
-     "perfection": 88.8656593121715,
-     "sifaat": 95.92827437059502,
+     "perfection": 88.34708623154177,
+     "sifaat": 89.5755376294066,
      "categories": {
-      "ghunnah": 86.7,
-      "idgham": 99.5,
-      "madd": 85.4,
-      "meem": 95.9,
-      "noon": 93.0,
+      "ghunnah": 81.9,
+      "idgham": 99.1,
+      "madd": 85.6,
+      "meem": 94.7,
+      "noon": 94.7,
       "qalqalah": 99.9,
-      "sifaat": 95.9,
+      "sifaat": 89.6,
       "wasl": 99.9,
-      "weight": 90.9
+      "weight": 86.1
      },
      "status_counts": {
-      "PASS": 20593,
-      "SKIPPED": 33104,
-      "WARNING": 1097,
-      "FAIL": 1745
+      "SKIPPED": 65103,
+      "PASS": 105488,
+      "WARNING": 6485,
+      "FAIL": 13062
      },
-     "timing_rules": 8561,
-     "timing_fails": 1057,
-     "raw_perfection": 68.1888171951871,
-     "raw_timing_fails": 8851,
-     "ayahs": 1872,
+     "timing_rules": 46432,
+     "timing_fails": 5704,
+     "raw_perfection": 68.04145809990935,
+     "raw_timing_fails": 29978,
+     "ayahs": 6236,
      "haraka_ms_median": 200.2
     },
     "taraweeh_adapted": {
-     "perfection": 89.04585457678536,
-     "sifaat": 95.77023600618901,
+     "perfection": 87.98603111110998,
+     "sifaat": 89.31693138945462,
      "categories": {
-      "ghunnah": 86.0,
-      "idgham": 98.5,
-      "madd": 85.9,
-      "meem": 95.7,
-      "noon": 93.2,
+      "ghunnah": 80.8,
+      "idgham": 99.0,
+      "madd": 85.2,
+      "meem": 93.4,
+      "noon": 94.3,
       "qalqalah": 99.9,
-      "sifaat": 95.8,
-      "wasl": 99.7,
-      "weight": 90.6
+      "sifaat": 89.3,
+      "wasl": 99.8,
+      "weight": 86.1
      },
      "status_counts": {
-      "SKIPPED": 32695,
-      "PASS": 20891,
-      "WARNING": 1144,
-      "FAIL": 1756,
-      "VALID_NECESSARY_PAUSE": 18
+      "SKIPPED": 63761,
+      "PASS": 105748,
+      "WARNING": 6858,
+      "FAIL": 13615,
+      "VALID_NECESSARY_PAUSE": 67
      },
-     "timing_rules": 8594,
-     "timing_fails": 1028,
-     "raw_perfection": 67.33100465688192,
-     "raw_timing_fails": 9060,
-     "ayahs": 1872,
+     "timing_rules": 46652,
+     "timing_fails": 6031,
+     "raw_perfection": 67.06881202704858,
+     "raw_timing_fails": 30846,
+     "ayahs": 6236,
      "haraka_ms_median": 200.2
     }
    },
-   "timing_fp_reduction_pct": 2.7
+   "timing_fp_reduction_pct": -5.7
   },
   {
    "reciter": "Nasser_Alqatami_128kbps",
@@ -509,151 +572,534 @@
    "category": "taraweeh",
    "modes": {
     "studio": {
-     "perfection": 87.28104049821425,
-     "sifaat": 95.46579968859658,
+     "perfection": 85.54851055854061,
+     "sifaat": 89.09274026361626,
      "categories": {
-      "ghunnah": 92.0,
-      "idgham": 100.0,
-      "madd": 80.8,
-      "meem": 97.7,
-      "noon": 85.3,
-      "qalqalah": 98.9,
-      "sifaat": 95.5,
-      "wasl": 100.0,
-      "weight": 96.9
+      "ghunnah": 85.0,
+      "idgham": 99.0,
+      "madd": 77.9,
+      "meem": 92.8,
+      "noon": 90.0,
+      "qalqalah": 99.0,
+      "sifaat": 89.1,
+      "wasl": 99.9,
+      "weight": 92.6
      },
      "status_counts": {
-      "SKIPPED": 19513,
-      "PASS": 10604,
-      "FAIL": 1007,
-      "WARNING": 802
+      "SKIPPED": 75099,
+      "PASS": 93671,
+      "FAIL": 12959,
+      "WARNING": 8202
      },
-     "timing_rules": 4890,
-     "timing_fails": 789,
-     "raw_perfection": 64.29294503792377,
-     "raw_timing_fails": 5813,
-     "ayahs": 908,
+     "timing_rules": 44116,
+     "timing_fails": 7598,
+     "raw_perfection": 64.96082618030152,
+     "raw_timing_fails": 33160,
+     "ayahs": 6236,
      "haraka_ms_median": 190.3
     },
     "taraweeh_adapted": {
-     "perfection": 86.85293176541174,
-     "sifaat": 95.29724312485817,
+     "perfection": 84.93000457008458,
+     "sifaat": 88.5351637139079,
      "categories": {
-      "ghunnah": 90.4,
-      "idgham": 100.0,
-      "madd": 80.6,
-      "meem": 96.4,
-      "noon": 83.4,
+      "ghunnah": 83.5,
+      "idgham": 98.6,
+      "madd": 77.2,
+      "meem": 92.0,
+      "noon": 88.9,
       "qalqalah": 99.3,
-      "sifaat": 95.3,
-      "wasl": 100.0,
-      "weight": 97.0
+      "sifaat": 88.5,
+      "wasl": 99.9,
+      "weight": 92.7
      },
      "status_counts": {
-      "SKIPPED": 19514,
-      "PASS": 10533,
-      "WARNING": 804,
-      "FAIL": 1032,
-      "VALID_NECESSARY_PAUSE": 14
+      "SKIPPED": 74514,
+      "PASS": 93042,
+      "FAIL": 13673,
+      "WARNING": 8605,
+      "VALID_NECESSARY_PAUSE": 75
      },
-     "timing_rules": 4861,
-     "timing_fails": 815,
-     "raw_perfection": 62.74433688048071,
-     "raw_timing_fails": 6068,
-     "ayahs": 907,
-     "haraka_ms_median": 190.2
+     "timing_rules": 44275,
+     "timing_fails": 8017,
+     "raw_perfection": 63.53291773745083,
+     "raw_timing_fails": 34584,
+     "ayahs": 6236,
+     "haraka_ms_median": 190.3
     }
    },
-   "timing_fp_reduction_pct": -3.3
+   "timing_fp_reduction_pct": -5.5
+  },
+  {
+   "reciter": "Abdullaah_3awwaad_Al-Juhaynee_128kbps",
+   "name": "Abdullah Al-Juhany",
+   "category": "taraweeh",
+   "modes": {
+    "studio": {
+     "perfection": 67.21816635450804,
+     "sifaat": 75.01345394711177,
+     "categories": {
+      "ghunnah": 59.0,
+      "idgham": 95.8,
+      "madd": 56.5,
+      "meem": 94.9,
+      "noon": 95.2,
+      "qalqalah": 97.4,
+      "sifaat": 75.0,
+      "wasl": 99.7,
+      "weight": 77.9
+     },
+     "status_counts": {
+      "SKIPPED": 165364,
+      "FAIL": 7046,
+      "PASS": 15821,
+      "WARNING": 3213
+     },
+     "timing_rules": 10648,
+     "timing_fails": 3856,
+     "raw_perfection": 38.41940777655602,
+     "raw_timing_fails": 52377,
+     "ayahs": 6236,
+     "haraka_ms_median": 80.0
+    },
+    "taraweeh_adapted": {
+     "perfection": 66.85824264020516,
+     "sifaat": 75.14302839441167,
+     "categories": {
+      "ghunnah": 59.1,
+      "idgham": 95.5,
+      "madd": 55.8,
+      "meem": 94.0,
+      "noon": 95.2,
+      "qalqalah": 97.3,
+      "sifaat": 75.1,
+      "wasl": 99.6,
+      "weight": 77.8
+     },
+     "status_counts": {
+      "SKIPPED": 165047,
+      "FAIL": 7183,
+      "PASS": 15912,
+      "WARNING": 3273,
+      "VALID_NECESSARY_PAUSE": 18
+     },
+     "timing_rules": 10794,
+     "timing_fails": 3986,
+     "raw_perfection": 38.511955219431194,
+     "raw_timing_fails": 52390,
+     "ayahs": 6236,
+     "haraka_ms_median": 80.0
+    }
+   },
+   "timing_fp_reduction_pct": -3.4
   }
  ],
  "aggregate": {
-  "studio_set_mean_perfection": 92.4,
-  "taraweeh_set_mean_perfection_unadapted": 89.1,
-  "taraweeh_set_mean_perfection_adapted": 89.4,
-  "taraweeh_timing_fails_unadapted": 1955,
-  "taraweeh_timing_fails_adapted": 1931,
-  "taraweeh_timing_fp_reduction_pct": 1.2
+  "studio_set_mean_perfection": 92.0,
+  "taraweeh_set_mean_perfection_unadapted": 84.1,
+  "taraweeh_set_mean_perfection_adapted": 84.0,
+  "taraweeh_timing_fails_unadapted": 25302,
+  "taraweeh_timing_fails_adapted": 26125,
+  "taraweeh_timing_fp_reduction_pct": -3.3
  },
  "pass_rate_by_rule_studio_mode": {
-  "Mahmoud Khalil Al-Hussary": {
-   "hams": 56.7,
-   "safir": 99.9,
-   "rakhawah": 48.0,
-   "hamzat_wasl": 99.9,
-   "tarqeeq": 73.2,
-   "tafkheem": 89.4,
-   "takreer": 75.0,
-   "madd_tabii": 43.1,
-   "madd_arid_lissukun": 93.0,
-   "madd_badal": 29.5,
-   "madd_munfasil": 17.7,
-   "ghunnah": 10.7,
-   "jahr": 81.7,
-   "tafashhi": 88.5,
-   "izhar_shafawi": 66.8,
-   "tawassut": 65.7,
-   "madd_muttasil": 16.8,
-   "qalqalah": 87.1,
-   "shiddah": 34.0,
-   "madd_silah_sughra": 41.2,
-   "itbaq": 81.3,
-   "ikhfa": 9.5,
-   "ikhfa_shafawi": 5.5,
-   "idgham_no_ghunnah": 28.3,
-   "idgham_shafawi": 7.1,
-   "iqlab": 33.3,
-   "izhar_halqi": 70.1,
-   "idgham_ghunnah": 13.6,
-   "madd_iwad": 0.5,
-   "idgham_mithlayn": 97.6,
-   "istitaalah": 28.3,
-   "madd_leen": 75.9,
-   "madd_silah_kubra": 20.5,
-   "idgham_mutaqaribayn": 100.0,
-   "idgham_mutajanisayn": 83.3,
-   "madd_lazim": 7.8,
-   "sakt": 0.0
-  },
-  "Al-Hussary (Muallim)": {
-   "madd_tabii": 52.9,
-   "tawassut": 66.7,
-   "jahr": 82.3,
-   "hams": 62.7,
-   "safir": 100.0,
-   "rakhawah": 41.6,
-   "madd_arid_lissukun": 97.2,
-   "ghunnah": 13.4,
-   "iqlab": 36.8,
-   "shiddah": 71.7,
-   "izhar_halqi": 68.9,
-   "izhar_shafawi": 74.7,
-   "ikhfa": 6.4,
-   "takreer": 75.7,
-   "tafkheem": 92.0,
-   "hamzat_wasl": 99.8,
-   "itbaq": 86.6,
-   "madd_iwad": 8.9,
-   "idgham_shafawi": 14.7,
-   "qalqalah": 89.6,
-   "tafashhi": 91.2,
-   "idgham_ghunnah": 12.6,
-   "madd_munfasil": 3.3,
-   "idgham_no_ghunnah": 26.1,
-   "tarqeeq": 80.1,
-   "madd_muttasil": 4.9,
-   "madd_silah_sughra": 52.4,
-   "madd_badal": 29.3,
-   "istitaalah": 19.6,
-   "madd_lazim": 1.2,
-   "madd_silah_kubra": 5.1,
-   "idgham_mithlayn": 91.4,
-   "ikhfa_shafawi": 26.4,
-   "madd_leen": 78.6,
-   "idgham_mutaqaribayn": 100.0,
-   "idgham_mutajanisayn": 88.6,
+  "Abdul Rahman Al-Sudais": {
+   "hams": 33.5,
+   "safir": 97.8,
+   "rakhawah": 35.6,
+   "hamzat_wasl": 100.0,
+   "tarqeeq": 67.7,
+   "tafkheem": 82.2,
+   "takreer": 79.5,
+   "madd_tabii": 33.7,
+   "madd_arid_lissukun": 60.5,
+   "madd_badal": 16.8,
+   "madd_munfasil": 10.8,
+   "ghunnah": 28.6,
+   "izhar_shafawi": 79.5,
+   "tawassut": 55.4,
+   "madd_muttasil": 5.2,
+   "qalqalah": 54.9,
+   "shiddah": 1.1,
+   "jahr": 60.7,
+   "madd_silah_sughra": 32.9,
+   "itbaq": 79.1,
+   "ikhfa": 3.8,
+   "ikhfa_shafawi": 3.1,
+   "idgham_no_ghunnah": 37.7,
+   "idgham_shafawi": 11.6,
+   "iqlab": 20.5,
+   "idgham_ghunnah": 20.0,
+   "izhar_halqi": 84.2,
+   "tafashhi": 50.8,
+   "madd_iwad": 5.9,
+   "idgham_mithlayn": 80.4,
+   "istitaalah": 9.0,
+   "madd_leen": 72.0,
+   "madd_silah_kubra": 8.5,
+   "idgham_mutaqaribayn": 96.7,
+   "idgham_mutajanisayn": 82.3,
+   "madd_lazim": 4.7,
    "sakt": 0.0,
    "jawaz_wajhayn": 100.0
+  },
+  "Abdullah Al-Juhany": {
+   "madd_tabii": 8.4,
+   "tawassut": 17.7,
+   "hams": 33.4,
+   "safir": 73.7,
+   "rakhawah": 16.1,
+   "madd_arid_lissukun": 28.4,
+   "ghunnah": 3.7,
+   "iqlab": 4.1,
+   "shiddah": 0.0,
+   "izhar_halqi": 78.4,
+   "izhar_shafawi": 85.9,
+   "ikhfa": 0.4,
+   "takreer": 89.3,
+   "hamzat_wasl": 99.8,
+   "tafkheem": 45.0,
+   "itbaq": 41.1,
+   "idgham_shafawi": 4.9,
+   "qalqalah": 15.9,
+   "jahr": 17.6,
+   "idgham_ghunnah": 4.9,
+   "madd_munfasil": 4.3,
+   "idgham_no_ghunnah": 57.8,
+   "tarqeeq": 64.0,
+   "madd_muttasil": 4.0,
+   "madd_silah_sughra": 8.5,
+   "madd_badal": 5.5,
+   "istitaalah": 17.4,
+   "madd_lazim": 0.7,
+   "madd_silah_kubra": 2.3,
+   "idgham_mithlayn": 86.8,
+   "tafashhi": 52.2,
+   "idgham_mutajanisayn": 80.6,
+   "ikhfa_shafawi": 1.3,
+   "madd_leen": 36.7,
+   "idgham_mutaqaribayn": 96.6,
+   "madd_iwad": 3.7,
+   "sakt": 0.0,
+   "jawaz_wajhayn": 100.0
+  },
+  "Saud Al-Shuraim": {
+   "madd_tabii": 44.7,
+   "hamzat_wasl": 100.0,
+   "tawassut": 65.3,
+   "jahr": 38.2,
+   "tafkheem": 75.6,
+   "rakhawah": 39.5,
+   "idgham_no_ghunnah": 35.0,
+   "madd_arid_lissukun": 77.4,
+   "takreer": 76.7,
+   "itbaq": 74.2,
+   "tafashhi": 58.9,
+   "idgham_ghunnah": 14.5,
+   "madd_muttasil": 6.2,
+   "ikhfa": 7.7,
+   "madd_silah_sughra": 41.7,
+   "qalqalah": 88.9,
+   "tarqeeq": 66.4,
+   "izhar_shafawi": 82.2,
+   "shiddah": 0.1,
+   "ghunnah": 25.2,
+   "madd_badal": 17.4,
+   "izhar_halqi": 82.4,
+   "safir": 94.2,
+   "hams": 49.9,
+   "madd_munfasil": 11.1,
+   "ikhfa_shafawi": 7.7,
+   "madd_lazim": 1.4,
+   "madd_silah_kubra": 4.3,
+   "idgham_mithlayn": 83.8,
+   "madd_iwad": 0.3,
+   "iqlab": 20.1,
+   "madd_leen": 72.6,
+   "idgham_shafawi": 10.8,
+   "istitaalah": 4.0,
+   "idgham_mutaqaribayn": 83.3,
+   "idgham_mutajanisayn": 59.7,
+   "sakt": 0.0,
+   "jawaz_wajhayn": 100.0
+  },
+  "Nasser Al-Qatami": {
+   "ghunnah": 4.3,
+   "hamzat_wasl": 99.9,
+   "madd_tabii": 50.1,
+   "tafkheem": 86.6,
+   "madd_muttasil": 2.7,
+   "izhar_halqi": 68.1,
+   "rakhawah": 38.0,
+   "ikhfa": 1.5,
+   "takreer": 68.0,
+   "tawassut": 63.7,
+   "jahr": 73.3,
+   "izhar_shafawi": 75.3,
+   "madd_arid_lissukun": 33.3,
+   "madd_silah_kubra": 9.7,
+   "idgham_ghunnah": 8.9,
+   "istitaalah": 6.4,
+   "tarqeeq": 60.6,
+   "itbaq": 82.1,
+   "madd_badal": 11.4,
+   "idgham_no_ghunnah": 35.2,
+   "madd_munfasil": 7.7,
+   "madd_iwad": 0.6,
+   "madd_silah_sughra": 39.9,
+   "hams": 30.0,
+   "idgham_shafawi": 3.2,
+   "qalqalah": 87.3,
+   "ikhfa_shafawi": 1.0,
+   "safir": 100.0,
+   "shiddah": 0.1,
+   "tafashhi": 94.7,
+   "iqlab": 11.8,
+   "madd_lazim": 1.4,
+   "idgham_mithlayn": 97.3,
+   "madd_leen": 54.1,
+   "idgham_mutajanisayn": 74.2,
+   "idgham_mutaqaribayn": 96.7,
+   "jawaz_wajhayn": 100.0,
+   "sakt": 0.0
+  },
+  "Yasser Al-Dosari": {
+   "madd_tabii": 54.1,
+   "idgham_shafawi": 3.0,
+   "tafkheem": 82.1,
+   "ikhfa": 0.3,
+   "hamzat_wasl": 99.7,
+   "madd_iwad": 3.1,
+   "itbaq": 79.9,
+   "izhar_shafawi": 80.1,
+   "izhar_halqi": 82.3,
+   "iqlab": 3.7,
+   "shiddah": 0.0,
+   "hams": 32.6,
+   "madd_arid_lissukun": 44.9,
+   "rakhawah": 43.2,
+   "jahr": 62.6,
+   "tawassut": 71.1,
+   "madd_muttasil": 2.1,
+   "ghunnah": 7.0,
+   "takreer": 56.4,
+   "madd_munfasil": 6.9,
+   "qalqalah": 92.5,
+   "idgham_ghunnah": 8.6,
+   "safir": 99.8,
+   "madd_badal": 11.5,
+   "idgham_no_ghunnah": 32.4,
+   "tafashhi": 74.5,
+   "madd_silah_kubra": 9.4,
+   "istitaalah": 8.1,
+   "madd_silah_sughra": 52.7,
+   "tarqeeq": 68.3,
+   "ikhfa_shafawi": 0.4,
+   "madd_leen": 59.5,
+   "idgham_mutajanisayn": 77.0,
+   "madd_lazim": 0.0,
+   "idgham_mithlayn": 97.3,
+   "idgham_mutaqaribayn": 100.0,
+   "sakt": 0.0,
+   "jawaz_wajhayn": 100.0
+  },
+  "Mahmoud Khalil Al-Hussary": {
+   "tawassut": 65.8,
+   "izhar_shafawi": 66.3,
+   "tarqeeq": 72.0,
+   "tafkheem": 89.4,
+   "hamzat_wasl": 99.9,
+   "jahr": 81.5,
+   "madd_tabii": 43.4,
+   "madd_arid_lissukun": 93.0,
+   "hams": 57.3,
+   "safir": 99.9,
+   "rakhawah": 47.7,
+   "izhar_halqi": 69.9,
+   "ikhfa": 9.2,
+   "ghunnah": 10.7,
+   "qalqalah": 87.2,
+   "itbaq": 81.4,
+   "idgham_ghunnah": 13.5,
+   "shiddah": 35.6,
+   "takreer": 74.9,
+   "madd_silah_sughra": 41.4,
+   "iqlab": 36.6,
+   "tafashhi": 87.5,
+   "madd_iwad": 0.5,
+   "ikhfa_shafawi": 5.7,
+   "madd_muttasil": 16.7,
+   "madd_munfasil": 17.6,
+   "idgham_shafawi": 6.7,
+   "istitaalah": 31.7,
+   "idgham_no_ghunnah": 27.6,
+   "madd_leen": 77.9,
+   "madd_silah_kubra": 20.0,
+   "madd_badal": 28.1,
+   "idgham_mutajanisayn": 83.9,
+   "idgham_mithlayn": 96.4,
+   "madd_lazim": 7.1,
+   "idgham_mutaqaribayn": 96.6,
+   "sakt": 0.0,
+   "jawaz_wajhayn": 100.0
+  },
+  "Al-Hussary (Muallim)": {
+   "rakhawah": 41.4,
+   "hams": 62.9,
+   "hamzat_wasl": 99.8,
+   "safir": 99.9,
+   "madd_tabii": 52.8,
+   "tafkheem": 91.7,
+   "itbaq": 86.1,
+   "tawassut": 66.9,
+   "jahr": 82.8,
+   "madd_arid_lissukun": 97.1,
+   "idgham_ghunnah": 12.5,
+   "madd_muttasil": 4.8,
+   "takreer": 75.3,
+   "qalqalah": 89.9,
+   "izhar_shafawi": 75.0,
+   "madd_munfasil": 3.1,
+   "madd_badal": 29.7,
+   "idgham_shafawi": 14.5,
+   "iqlab": 37.2,
+   "tarqeeq": 80.0,
+   "ghunnah": 13.3,
+   "izhar_halqi": 69.6,
+   "ikhfa": 6.4,
+   "idgham_no_ghunnah": 27.1,
+   "shiddah": 72.3,
+   "tafashhi": 90.9,
+   "madd_silah_sughra": 52.1,
+   "madd_iwad": 9.6,
+   "madd_lazim": 1.1,
+   "madd_leen": 77.8,
+   "idgham_mithlayn": 92.2,
+   "istitaalah": 18.3,
+   "idgham_mutajanisayn": 87.2,
+   "ikhfa_shafawi": 25.6,
+   "madd_silah_kubra": 4.5,
+   "idgham_mutaqaribayn": 100.0,
+   "sakt": 0.0,
+   "jawaz_wajhayn": 100.0
+  },
+  "Abdul Basit Abdul Samad (Murattal)": {
+   "madd_tabii": 55.4,
+   "tawassut": 61.5,
+   "jahr": 79.9,
+   "izhar_halqi": 78.5,
+   "ikhfa": 2.7,
+   "tafashhi": 43.8,
+   "hamzat_wasl": 99.5,
+   "ghunnah": 1.0,
+   "izhar_shafawi": 69.0,
+   "rakhawah": 44.5,
+   "hams": 43.3,
+   "tafkheem": 87.9,
+   "madd_iwad": 0.1,
+   "madd_muttasil": 5.5,
+   "takreer": 73.8,
+   "madd_arid_lissukun": 60.0,
+   "idgham_ghunnah": 4.2,
+   "qalqalah": 73.2,
+   "safir": 99.1,
+   "tarqeeq": 77.2,
+   "itbaq": 79.6,
+   "ikhfa_shafawi": 0.3,
+   "madd_silah_sughra": 54.3,
+   "madd_munfasil": 7.2,
+   "madd_badal": 20.7,
+   "idgham_shafawi": 1.5,
+   "shiddah": 39.7,
+   "idgham_no_ghunnah": 28.7,
+   "istitaalah": 31.4,
+   "madd_silah_kubra": 9.1,
+   "idgham_mutaqaribayn": 100.0,
+   "iqlab": 16.0,
+   "idgham_mithlayn": 94.9,
+   "idgham_mutajanisayn": 79.5,
+   "madd_lazim": 1.1,
+   "madd_leen": 56.1,
+   "sakt": 0.0
+  },
+  "Mishary Alafasy": {
+   "madd_tabii": 63.1,
+   "tawassut": 69.8,
+   "rakhawah": 42.0,
+   "hams": 39.1,
+   "madd_arid_lissukun": 9.8,
+   "safir": 99.9,
+   "ghunnah": 0.2,
+   "iqlab": 4.9,
+   "shiddah": 1.4,
+   "izhar_halqi": 76.3,
+   "izhar_shafawi": 75.2,
+   "ikhfa": 0.3,
+   "takreer": 69.7,
+   "jahr": 69.3,
+   "tafkheem": 88.9,
+   "hamzat_wasl": 100.0,
+   "itbaq": 82.7,
+   "madd_iwad": 0.1,
+   "idgham_shafawi": 0.7,
+   "qalqalah": 83.4,
+   "tafashhi": 87.8,
+   "idgham_ghunnah": 2.5,
+   "madd_munfasil": 1.9,
+   "idgham_no_ghunnah": 33.0,
+   "tarqeeq": 61.1,
+   "madd_muttasil": 0.5,
+   "madd_silah_sughra": 53.1,
+   "madd_badal": 13.6,
+   "istitaalah": 15.8,
+   "madd_lazim": 3.4,
+   "madd_silah_kubra": 4.1,
+   "idgham_mithlayn": 95.2,
+   "idgham_mutajanisayn": 87.2,
+   "ikhfa_shafawi": 0.4,
+   "madd_leen": 35.6,
+   "idgham_mutaqaribayn": 100.0,
+   "sakt": 0.0,
+   "jawaz_wajhayn": 100.0
+  },
+  "Ali Al-Hudhaify": {
+   "rakhawah": 35.6,
+   "jahr": 56.3,
+   "safir": 92.9,
+   "hamzat_wasl": 99.7,
+   "tawassut": 63.2,
+   "madd_tabii": 52.6,
+   "tafkheem": 91.5,
+   "idgham_ghunnah": 1.3,
+   "qalqalah": 97.4,
+   "tarqeeq": 79.4,
+   "madd_silah_sughra": 54.9,
+   "ghunnah": 0.6,
+   "ikhfa": 0.7,
+   "hams": 44.9,
+   "izhar_halqi": 79.3,
+   "madd_arid_lissukun": 40.0,
+   "takreer": 59.4,
+   "madd_iwad": 0.2,
+   "istitaalah": 18.8,
+   "idgham_no_ghunnah": 31.7,
+   "itbaq": 84.6,
+   "izhar_shafawi": 75.5,
+   "madd_muttasil": 0.5,
+   "tafashhi": 9.1,
+   "madd_badal": 8.8,
+   "madd_munfasil": 0.2,
+   "ikhfa_shafawi": 0.0,
+   "iqlab": 1.4,
+   "madd_silah_kubra": 1.0,
+   "madd_lazim": 1.0,
+   "idgham_shafawi": 0.7,
+   "madd_leen": 40.7,
+   "shiddah": 17.8,
+   "idgham_mithlayn": 89.0,
+   "idgham_mutajanisayn": 87.9,
+   "idgham_mutaqaribayn": 100.0,
+   "jawaz_wajhayn": 100.0,
+   "sakt": 0.0
   },
   "Siddiq Al-Minshawi (Murattal)": {
    "madd_tabii": 46.6,
@@ -694,245 +1140,11 @@
    "idgham_mutajanisayn": 82.4,
    "jawaz_wajhayn": 100.0,
    "sakt": 0.0
-  },
-  "Ali Al-Hudhaify": {
-   "ghunnah": 0.6,
-   "hamzat_wasl": 99.7,
-   "madd_tabii": 52.7,
-   "tafkheem": 91.5,
-   "safir": 93.1,
-   "madd_muttasil": 0.5,
-   "izhar_halqi": 79.1,
-   "rakhawah": 35.6,
-   "jahr": 56.3,
-   "izhar_shafawi": 75.4,
-   "ikhfa": 0.7,
-   "takreer": 59.5,
-   "tawassut": 63.2,
-   "madd_arid_lissukun": 40.2,
-   "hams": 44.9,
-   "madd_silah_kubra": 1.1,
-   "idgham_ghunnah": 1.3,
-   "istitaalah": 18.6,
-   "tarqeeq": 79.4,
-   "itbaq": 84.7,
-   "madd_badal": 8.9,
-   "idgham_no_ghunnah": 32.0,
-   "madd_munfasil": 0.2,
-   "madd_iwad": 0.2,
-   "madd_silah_sughra": 55.1,
-   "idgham_shafawi": 0.8,
-   "tafashhi": 8.8,
-   "qalqalah": 97.4,
-   "ikhfa_shafawi": 0.0,
-   "shiddah": 17.8,
-   "iqlab": 1.4,
-   "madd_lazim": 1.0,
-   "idgham_mithlayn": 89.0,
-   "madd_leen": 41.2,
-   "idgham_mutajanisayn": 87.9,
-   "idgham_mutaqaribayn": 100.0,
-   "jawaz_wajhayn": 100.0,
-   "sakt": 0.0
-  },
-  "Abdul Basit Abdul Samad (Murattal)": {
-   "madd_tabii": 56.2,
-   "idgham_shafawi": 1.3,
-   "tafkheem": 87.6,
-   "ikhfa": 2.4,
-   "hamzat_wasl": 99.7,
-   "itbaq": 79.2,
-   "idgham_ghunnah": 4.3,
-   "izhar_shafawi": 68.3,
-   "izhar_halqi": 79.5,
-   "iqlab": 20.3,
-   "shiddah": 40.4,
-   "hams": 45.1,
-   "madd_arid_lissukun": 59.3,
-   "rakhawah": 44.5,
-   "jahr": 81.6,
-   "tawassut": 61.0,
-   "madd_muttasil": 4.4,
-   "ghunnah": 1.0,
-   "takreer": 74.3,
-   "madd_munfasil": 5.8,
-   "qalqalah": 73.7,
-   "madd_badal": 21.2,
-   "idgham_no_ghunnah": 31.6,
-   "tafashhi": 44.9,
-   "madd_silah_kubra": 7.7,
-   "istitaalah": 25.7,
-   "madd_silah_sughra": 54.4,
-   "tarqeeq": 77.2,
-   "safir": 98.9,
-   "madd_leen": 52.0,
-   "ikhfa_shafawi": 0.6,
-   "madd_iwad": 0.2,
-   "idgham_mutajanisayn": 66.7,
-   "madd_lazim": 0.0,
-   "idgham_mithlayn": 94.2,
-   "idgham_mutaqaribayn": 100.0,
-   "sakt": 0.0
-  },
-  "Mishary Alafasy": {
-   "hams": 38.6,
-   "safir": 99.9,
-   "rakhawah": 42.5,
-   "hamzat_wasl": 100.0,
-   "tarqeeq": 62.3,
-   "tafkheem": 88.8,
-   "takreer": 68.4,
-   "madd_tabii": 63.3,
-   "madd_arid_lissukun": 9.2,
-   "madd_badal": 13.0,
-   "madd_munfasil": 1.6,
-   "ghunnah": 0.3,
-   "jahr": 68.6,
-   "tafashhi": 88.2,
-   "izhar_shafawi": 76.0,
-   "tawassut": 70.4,
-   "madd_muttasil": 0.4,
-   "qalqalah": 83.6,
-   "shiddah": 0.9,
-   "madd_silah_sughra": 52.6,
-   "itbaq": 81.9,
-   "ikhfa": 0.2,
-   "ikhfa_shafawi": 0.0,
-   "madd_leen": 40.4,
-   "idgham_shafawi": 0.4,
-   "iqlab": 3.0,
-   "izhar_halqi": 76.4,
-   "idgham_ghunnah": 2.0,
-   "idgham_no_ghunnah": 34.6,
-   "madd_iwad": 0.3,
-   "idgham_mithlayn": 90.2,
-   "istitaalah": 13.7,
-   "madd_silah_kubra": 4.8,
-   "idgham_mutaqaribayn": 100.0,
-   "idgham_mutajanisayn": 91.7,
-   "madd_lazim": 0.0,
-   "sakt": 0.0,
-   "jawaz_wajhayn": 100.0
-  },
-  "Yasser Al-Dosari": {
-   "madd_tabii": 53.7,
-   "tawassut": 70.8,
-   "jahr": 63.0,
-   "hams": 32.8,
-   "safir": 99.7,
-   "rakhawah": 43.2,
-   "madd_arid_lissukun": 42.6,
-   "ghunnah": 6.6,
-   "iqlab": 3.7,
-   "shiddah": 0.0,
-   "izhar_halqi": 82.3,
-   "izhar_shafawi": 80.4,
-   "ikhfa": 0.3,
-   "takreer": 55.7,
-   "tafkheem": 81.9,
-   "hamzat_wasl": 99.6,
-   "itbaq": 80.5,
-   "madd_iwad": 3.7,
-   "idgham_shafawi": 2.3,
-   "qalqalah": 92.7,
-   "tafashhi": 70.3,
-   "idgham_ghunnah": 9.4,
-   "madd_munfasil": 7.3,
-   "idgham_no_ghunnah": 34.2,
-   "tarqeeq": 70.0,
-   "madd_muttasil": 1.8,
-   "madd_silah_sughra": 53.8,
-   "madd_badal": 9.6,
-   "istitaalah": 4.6,
-   "madd_lazim": 0.0,
-   "madd_silah_kubra": 10.0,
-   "idgham_mithlayn": 98.0,
-   "idgham_mutajanisayn": 84.2,
-   "ikhfa_shafawi": 0.0,
-   "idgham_mutaqaribayn": 100.0,
-   "madd_leen": 56.8,
-   "sakt": 0.0
-  },
-  "Nasser Al-Qatami": {
-   "madd_tabii": 49.4,
-   "hamzat_wasl": 99.8,
-   "tawassut": 65.5,
-   "jahr": 73.2,
-   "tafkheem": 86.8,
-   "rakhawah": 39.3,
-   "idgham_no_ghunnah": 31.7,
-   "madd_arid_lissukun": 35.7,
-   "takreer": 68.0,
-   "itbaq": 83.3,
-   "idgham_ghunnah": 8.5,
-   "madd_muttasil": 1.9,
-   "ikhfa": 1.5,
-   "hams": 27.8,
-   "madd_silah_sughra": 37.8,
-   "qalqalah": 88.0,
-   "tarqeeq": 60.8,
-   "izhar_shafawi": 75.9,
-   "shiddah": 0.0,
-   "ghunnah": 4.1,
-   "madd_badal": 10.0,
-   "izhar_halqi": 67.4,
-   "madd_iwad": 0.4,
-   "madd_munfasil": 7.9,
-   "ikhfa_shafawi": 1.3,
-   "madd_lazim": 2.8,
-   "madd_silah_kubra": 5.2,
-   "safir": 100.0,
-   "idgham_mithlayn": 100.0,
-   "tafashhi": 94.0,
-   "istitaalah": 5.4,
-   "iqlab": 12.9,
-   "madd_leen": 48.5,
-   "idgham_shafawi": 3.7,
-   "idgham_mutaqaribayn": 100.0,
-   "idgham_mutajanisayn": 60.0
-  },
-  "Saud Al-Shuraim": {
-   "madd_tabii": 43.5,
-   "rakhawah": 36.7,
-   "hamzat_wasl": 100.0,
-   "madd_arid_lissukun": 75.1,
-   "izhar_shafawi": 85.0,
-   "tafkheem": 75.5,
-   "ikhfa": 7.4,
-   "ghunnah": 26.2,
-   "madd_munfasil": 6.1,
-   "madd_muttasil": 8.9,
-   "itbaq": 75.2,
-   "shiddah": 0.0,
-   "hams": 52.7,
-   "jahr": 40.7,
-   "tarqeeq": 75.9,
-   "idgham_no_ghunnah": 35.7,
-   "qalqalah": 87.9,
-   "madd_badal": 12.2,
-   "takreer": 76.0,
-   "madd_silah_sughra": 44.6,
-   "tawassut": 65.7,
-   "safir": 96.1,
-   "idgham_ghunnah": 18.8,
-   "tafashhi": 68.3,
-   "izhar_halqi": 80.0,
-   "ikhfa_shafawi": 20.0,
-   "idgham_mithlayn": 57.1,
-   "iqlab": 18.2,
-   "istitaalah": 16.7,
-   "idgham_shafawi": 11.8,
-   "madd_silah_kubra": 0.0,
-   "madd_iwad": 1.9,
-   "madd_leen": 100.0,
-   "idgham_mutaqaribayn": 100.0,
-   "madd_lazim": 0.0,
-   "idgham_mutajanisayn": 50.0
   }
  },
  "calibration": {
-  "path": "/home/user/muqri/app/data/calibration.json",
-  "count_scale": 1.0080645161290323,
+  "path": "app/data/calibration.json",
+  "count_scale": 1.0090817356205852,
   "category_weights": {
    "madd": 1.0,
    "noon": 1.0,
@@ -942,1667 +1154,2292 @@
    "idgham": 0.8,
    "weight": 0.6,
    "wasl": 0.5,
+   "lahn": 1.5,
    "sifaat": 1.0
   },
-  "rule_keys": 37
+  "rule_keys": 41
  },
  "rule_gaps_vs_reference": {
-  "Husary_128kbps": {
+  "Abdurrahmaan_As-Sudais_192kbps": {
    "hams": {
-    "n": 2413,
-    "median_signed_z": 0.0,
+    "n": 2980,
+    "median_signed_z": 1.24,
     "pass_rate": 100.0
    },
    "safir": {
-    "n": 3244,
-    "median_signed_z": 0.0,
-    "pass_rate": 98.6
+    "n": 3155,
+    "median_signed_z": -0.53,
+    "pass_rate": 89.1
    },
    "rakhawah": {
-    "n": 3744,
-    "median_signed_z": 0.0,
-    "pass_rate": 93.2
+    "n": 5256,
+    "median_signed_z": -0.35,
+    "pass_rate": 89.0
    },
    "hamzat_wasl": {
-    "n": 3928,
-    "median_signed_z": 0.0,
-    "pass_rate": 99.7
-   },
-   "tarqeeq:lam_allah": {
-    "n": 392,
-    "median_signed_z": -0.0,
-    "pass_rate": 99.0
-   },
-   "tafkheem:raa": {
-    "n": 3774,
-    "median_signed_z": -0.0,
-    "pass_rate": 93.4
-   },
-   "takreer": {
-    "n": 1239,
-    "median_signed_z": 0.0,
-    "pass_rate": 85.9
-   },
-   "madd_tabii": {
-    "n": 12122,
-    "median_signed_z": 0.0,
-    "pass_rate": 94.3
-   },
-   "tafkheem": {
-    "n": 5262,
-    "median_signed_z": -0.0,
-    "pass_rate": 93.2
-   },
-   "ghunnah": {
-    "n": 3187,
-    "median_signed_z": 0.0,
-    "pass_rate": 99.1
-   },
-   "tafashhi": {
-    "n": 1195,
-    "median_signed_z": 0.0,
-    "pass_rate": 97.1
-   },
-   "izhar_shafawi": {
-    "n": 591,
-    "median_signed_z": 0.0,
-    "pass_rate": 89.7
-   },
-   "madd_munfasil": {
-    "n": 922,
-    "median_signed_z": 0.0,
-    "pass_rate": 97.2
-   },
-   "tawassut": {
-    "n": 4216,
-    "median_signed_z": 0.0,
-    "pass_rate": 94.8
-   },
-   "jahr": {
-    "n": 5233,
-    "median_signed_z": 0.0,
-    "pass_rate": 81.2
-   },
-   "ikhfa:light": {
-    "n": 1532,
-    "median_signed_z": -0.0,
-    "pass_rate": 99.1
-   },
-   "qalqalah:sughra": {
-    "n": 1618,
-    "median_signed_z": -0.0,
-    "pass_rate": 98.8
-   },
-   "tarqeeq:raa": {
-    "n": 1086,
-    "median_signed_z": 0.0,
-    "pass_rate": 92.4
-   },
-   "idgham_shafawi": {
-    "n": 539,
-    "median_signed_z": 0.0,
-    "pass_rate": 99.1
-   },
-   "iqlab": {
-    "n": 220,
-    "median_signed_z": -0.01,
-    "pass_rate": 96.8
-   },
-   "izhar_halqi": {
-    "n": 917,
-    "median_signed_z": 0.0,
-    "pass_rate": 97.6
-   },
-   "madd_muttasil": {
-    "n": 816,
-    "median_signed_z": -0.0,
-    "pass_rate": 97.3
-   },
-   "shiddah": {
-    "n": 458,
-    "median_signed_z": 0.0,
-    "pass_rate": 88.0
-   },
-   "idgham_ghunnah:kamil": {
-    "n": 775,
-    "median_signed_z": 0.0,
-    "pass_rate": 97.2
-   },
-   "madd_badal": {
-    "n": 41,
-    "median_signed_z": 0.0,
-    "pass_rate": 92.7
-   },
-   "idgham_no_ghunnah": {
-    "n": 420,
+    "n": 7193,
     "median_signed_z": 0.0,
     "pass_rate": 100.0
    },
-   "ikhfa:heavy": {
-    "n": 380,
-    "median_signed_z": -0.0,
-    "pass_rate": 99.7
+   "tarqeeq:lam_allah": {
+    "n": 620,
+    "median_signed_z": -0.05,
+    "pass_rate": 91.5
+   },
+   "tafkheem:raa": {
+    "n": 6061,
+    "median_signed_z": 0.0,
+    "pass_rate": 91.9
+   },
+   "takreer": {
+    "n": 2157,
+    "median_signed_z": 2.0,
+    "pass_rate": 78.8
+   },
+   "tafkheem": {
+    "n": 9215,
+    "median_signed_z": 0.4,
+    "pass_rate": 86.4
+   },
+   "ghunnah": {
+    "n": 3902,
+    "median_signed_z": -0.83,
+    "pass_rate": 79.0
    },
    "tafkheem:lam_allah": {
-    "n": 257,
-    "median_signed_z": 0.0,
-    "pass_rate": 89.5
+    "n": 1567,
+    "median_signed_z": 0.64,
+    "pass_rate": 67.6
    },
-   "qalqalah:kubra": {
-    "n": 321,
-    "median_signed_z": 0.0,
-    "pass_rate": 99.4
-   },
-   "idgham_ghunnah:naqis": {
-    "n": 339,
-    "median_signed_z": 0.0,
-    "pass_rate": 96.8
-   },
-   "madd_iwad": {
-    "n": 462,
-    "median_signed_z": -0.0,
-    "pass_rate": 97.2
-   },
-   "qalqalah:akbar": {
-    "n": 22,
-    "median_signed_z": -0.0,
-    "pass_rate": 90.9
-   },
-   "izhar_shafawi:before_waw_faa": {
-    "n": 125,
-    "median_signed_z": 0.0,
+   "ikhfa:light": {
+    "n": 1603,
+    "median_signed_z": -0.38,
     "pass_rate": 98.4
    },
-   "ikhfa_shafawi": {
-    "n": 16,
-    "median_signed_z": -0.0,
-    "pass_rate": 100.0
+   "shiddah": {
+    "n": 809,
+    "median_signed_z": -0.71,
+    "pass_rate": 88.4
    },
-   "madd_lazim:kalimi": {
-    "n": 29,
-    "median_signed_z": 0.0,
-    "pass_rate": 100.0
-   },
-   "madd_silah_sughra": {
-    "n": 54,
-    "median_signed_z": 0.01,
-    "pass_rate": 90.7
-   },
-   "idgham_mutajanisayn:kamil": {
-    "n": 30,
-    "median_signed_z": 0.0,
-    "pass_rate": 100.0
-   }
-  },
-  "Husary_Muallim_128kbps": {
    "madd_tabii": {
-    "n": 15879,
+    "n": 15941,
     "median_signed_z": 0.0,
-    "pass_rate": 97.2
+    "pass_rate": 84.0
    },
    "tawassut": {
-    "n": 6454,
-    "median_signed_z": 0.0,
-    "pass_rate": 96.3
+    "n": 5414,
+    "median_signed_z": -0.08,
+    "pass_rate": 76.7
    },
    "jahr": {
-    "n": 8757,
+    "n": 8114,
     "median_signed_z": 0.0,
-    "pass_rate": 83.3
-   },
-   "hams": {
-    "n": 2979,
-    "median_signed_z": 0.0,
-    "pass_rate": 100.0
-   },
-   "safir": {
-    "n": 4350,
-    "median_signed_z": -0.0,
-    "pass_rate": 97.7
-   },
-   "rakhawah": {
-    "n": 5845,
-    "median_signed_z": 0.09,
-    "pass_rate": 94.9
-   },
-   "tafkheem": {
-    "n": 6429,
-    "median_signed_z": 0.0,
-    "pass_rate": 96.8
-   },
-   "ghunnah": {
-    "n": 3194,
-    "median_signed_z": -0.08,
-    "pass_rate": 97.8
-   },
-   "iqlab": {
-    "n": 284,
-    "median_signed_z": -0.18,
-    "pass_rate": 98.2
-   },
-   "shiddah": {
-    "n": 716,
-    "median_signed_z": 0.0,
-    "pass_rate": 95.4
-   },
-   "izhar_halqi": {
-    "n": 1413,
-    "median_signed_z": 0.0,
-    "pass_rate": 98.0
-   },
-   "izhar_shafawi": {
-    "n": 717,
-    "median_signed_z": -0.05,
-    "pass_rate": 96.9
-   },
-   "ikhfa:light": {
-    "n": 2012,
-    "median_signed_z": -0.06,
-    "pass_rate": 98.6
-   },
-   "tafkheem:raa": {
-    "n": 5269,
-    "median_signed_z": 0.0,
-    "pass_rate": 95.1
-   },
-   "takreer": {
-    "n": 1910,
-    "median_signed_z": 0.0,
-    "pass_rate": 88.7
-   },
-   "madd_iwad": {
-    "n": 659,
-    "median_signed_z": 0.0,
-    "pass_rate": 98.5
-   },
-   "idgham_shafawi": {
-    "n": 521,
-    "median_signed_z": -0.23,
-    "pass_rate": 96.9
-   },
-   "hamzat_wasl": {
-    "n": 6158,
-    "median_signed_z": 0.0,
-    "pass_rate": 97.5
-   },
-   "qalqalah:sughra": {
-    "n": 1770,
-    "median_signed_z": 0.0,
-    "pass_rate": 99.6
-   },
-   "tafashhi": {
-    "n": 1341,
-    "median_signed_z": 0.0,
-    "pass_rate": 98.0
-   },
-   "idgham_ghunnah:naqis": {
-    "n": 480,
-    "median_signed_z": 0.0,
-    "pass_rate": 95.6
+    "pass_rate": 84.1
    },
    "idgham_ghunnah:kamil": {
-    "n": 842,
-    "median_signed_z": -0.08,
-    "pass_rate": 96.8
-   },
-   "tarqeeq:raa": {
-    "n": 1262,
-    "median_signed_z": 0.0,
-    "pass_rate": 92.2
-   },
-   "madd_munfasil": {
-    "n": 1077,
-    "median_signed_z": 0.0,
-    "pass_rate": 96.8
-   },
-   "idgham_no_ghunnah": {
-    "n": 545,
-    "median_signed_z": 0.0,
-    "pass_rate": 99.6
-   },
-   "tarqeeq:lam_allah": {
-    "n": 437,
-    "median_signed_z": 0.0,
-    "pass_rate": 98.6
-   },
-   "madd_silah_sughra": {
-    "n": 243,
-    "median_signed_z": 0.0,
-    "pass_rate": 94.7
-   },
-   "tafkheem:lam_allah": {
-    "n": 689,
-    "median_signed_z": -0.18,
-    "pass_rate": 95.6
-   },
-   "ikhfa:heavy": {
-    "n": 416,
-    "median_signed_z": -0.08,
-    "pass_rate": 99.8
+    "n": 966,
+    "median_signed_z": -0.43,
+    "pass_rate": 94.0
    },
    "madd_muttasil": {
-    "n": 1044,
+    "n": 1176,
     "median_signed_z": 0.0,
-    "pass_rate": 98.1
-   },
-   "izhar_shafawi:before_waw_faa": {
-    "n": 175,
-    "median_signed_z": -0.08,
-    "pass_rate": 97.7
-   },
-   "madd_lazim:kalimi": {
-    "n": 45,
-    "median_signed_z": 0.0,
-    "pass_rate": 97.8
-   },
-   "qalqalah:kubra": {
-    "n": 368,
-    "median_signed_z": 0.0,
-    "pass_rate": 98.6
-   },
-   "qalqalah:akbar": {
-    "n": 50,
-    "median_signed_z": 2.85,
-    "pass_rate": 80.0
-   },
-   "madd_badal": {
-    "n": 70,
-    "median_signed_z": 0.41,
-    "pass_rate": 92.9
-   },
-   "idgham_mutajanisayn:kamil": {
-    "n": 28,
-    "median_signed_z": 0.0,
-    "pass_rate": 96.4
-   },
-   "ikhfa_shafawi": {
-    "n": 8,
-    "median_signed_z": 0.31,
-    "pass_rate": 75.0
-   }
-  },
-  "Minshawy_Murattal_128kbps": {
-   "hamzat_wasl": {
-    "n": 2391,
-    "median_signed_z": 0.0,
-    "pass_rate": 99.7
-   },
-   "tawassut": {
-    "n": 1442,
-    "median_signed_z": 0.05,
-    "pass_rate": 96.1
-   },
-   "jahr": {
-    "n": 2190,
-    "median_signed_z": 0.0,
-    "pass_rate": 86.0
-   },
-   "madd_tabii": {
-    "n": 7448,
-    "median_signed_z": -0.08,
-    "pass_rate": 92.4
-   },
-   "tafkheem": {
-    "n": 3839,
-    "median_signed_z": 0.26,
-    "pass_rate": 82.6
-   },
-   "tafkheem:raa": {
-    "n": 2224,
-    "median_signed_z": 0.0,
-    "pass_rate": 89.5
+    "pass_rate": 87.3
    },
    "idgham_ghunnah:naqis": {
-    "n": 238,
-    "median_signed_z": 0.0,
-    "pass_rate": 96.6
-   },
-   "safir": {
-    "n": 2530,
-    "median_signed_z": 0.01,
-    "pass_rate": 97.2
-   },
-   "madd_muttasil": {
-    "n": 564,
-    "median_signed_z": 0.0,
-    "pass_rate": 92.2
-   },
-   "ikhfa:light": {
-    "n": 536,
-    "median_signed_z": -0.13,
-    "pass_rate": 93.5
-   },
-   "idgham_no_ghunnah": {
-    "n": 241,
-    "median_signed_z": 0.0,
-    "pass_rate": 100.0
-   },
-   "tarqeeq:lam_allah": {
-    "n": 288,
-    "median_signed_z": -0.49,
-    "pass_rate": 93.4
-   },
-   "ghunnah": {
-    "n": 3009,
-    "median_signed_z": 0.0,
-    "pass_rate": 97.9
-   },
-   "izhar_shafawi": {
-    "n": 242,
-    "median_signed_z": 0.07,
-    "pass_rate": 93.8
-   },
-   "tafashhi": {
-    "n": 1119,
-    "median_signed_z": 0.0,
-    "pass_rate": 95.6
-   },
-   "madd_munfasil": {
-    "n": 554,
-    "median_signed_z": 0.0,
-    "pass_rate": 90.8
-   },
-   "izhar_halqi": {
-    "n": 442,
-    "median_signed_z": 0.0,
-    "pass_rate": 95.0
-   },
-   "qalqalah:kubra": {
-    "n": 141,
-    "median_signed_z": -0.83,
-    "pass_rate": 97.2
-   },
-   "rakhawah": {
-    "n": 2075,
-    "median_signed_z": 0.0,
-    "pass_rate": 92.2
-   },
-   "hams": {
-    "n": 1277,
-    "median_signed_z": 0.0,
-    "pass_rate": 100.0
-   },
-   "tarqeeq:raa": {
-    "n": 687,
-    "median_signed_z": -0.23,
-    "pass_rate": 85.7
-   },
-   "takreer": {
-    "n": 515,
-    "median_signed_z": 0.0,
+    "n": 732,
+    "median_signed_z": -0.14,
     "pass_rate": 98.8
    },
-   "idgham_ghunnah:kamil": {
-    "n": 431,
-    "median_signed_z": 0.0,
-    "pass_rate": 92.8
-   },
-   "tafkheem:lam_allah": {
-    "n": 268,
-    "median_signed_z": 0.38,
-    "pass_rate": 85.8
-   },
-   "madd_iwad": {
-    "n": 367,
-    "median_signed_z": 0.0,
-    "pass_rate": 92.1
-   },
-   "idgham_shafawi": {
-    "n": 373,
-    "median_signed_z": 0.0,
-    "pass_rate": 97.6
-   },
-   "qalqalah:sughra": {
-    "n": 417,
-    "median_signed_z": -0.65,
-    "pass_rate": 95.4
-   },
-   "ikhfa:heavy": {
-    "n": 77,
-    "median_signed_z": -0.42,
-    "pass_rate": 93.5
-   },
-   "iqlab": {
-    "n": 65,
-    "median_signed_z": 0.0,
-    "pass_rate": 87.7
-   },
-   "shiddah": {
-    "n": 205,
-    "median_signed_z": 0.01,
-    "pass_rate": 94.1
-   },
-   "izhar_shafawi:before_waw_faa": {
-    "n": 32,
-    "median_signed_z": 0.02,
-    "pass_rate": 90.6
-   },
-   "madd_badal": {
-    "n": 17,
-    "median_signed_z": -0.07,
-    "pass_rate": 88.2
-   },
-   "idgham_mutajanisayn:kamil": {
-    "n": 21,
-    "median_signed_z": 0.0,
-    "pass_rate": 100.0
-   },
-   "madd_lazim:kalimi": {
-    "n": 14,
-    "median_signed_z": 0.0,
-    "pass_rate": 100.0
-   },
-   "ikhfa_shafawi": {
-    "n": 12,
-    "median_signed_z": 0.0,
-    "pass_rate": 91.7
-   },
-   "madd_silah_sughra": {
-    "n": 5,
-    "median_signed_z": 0.21,
-    "pass_rate": 80.0
-   },
-   "qalqalah:akbar": {
-    "n": 1,
-    "median_signed_z": -5.95,
-    "pass_rate": 0.0
-   }
-  },
-  "Hudhaify_128kbps": {
-   "madd_tabii": {
-    "n": 7817,
-    "median_signed_z": -0.17,
-    "pass_rate": 95.0
-   },
-   "tafkheem:raa": {
-    "n": 3954,
-    "median_signed_z": 0.2,
-    "pass_rate": 96.5
-   },
-   "safir": {
-    "n": 3207,
-    "median_signed_z": -1.79,
-    "pass_rate": 56.2
-   },
    "izhar_halqi": {
-    "n": 820,
-    "median_signed_z": -0.38,
-    "pass_rate": 96.6
-   },
-   "izhar_shafawi": {
-    "n": 314,
-    "median_signed_z": -0.17,
-    "pass_rate": 95.2
-   },
-   "takreer": {
-    "n": 1024,
-    "median_signed_z": 0.6,
-    "pass_rate": 86.3
-   },
-   "tarqeeq:raa": {
-    "n": 1077,
-    "median_signed_z": -0.02,
-    "pass_rate": 98.1
-   },
-   "tawassut": {
-    "n": 2775,
-    "median_signed_z": -0.11,
-    "pass_rate": 92.9
-   },
-   "jahr": {
-    "n": 3640,
-    "median_signed_z": 0.0,
-    "pass_rate": 88.0
-   },
-   "tafkheem:lam_allah": {
-    "n": 359,
-    "median_signed_z": 0.43,
-    "pass_rate": 88.0
-   },
-   "ikhfa:light": {
-    "n": 758,
-    "median_signed_z": 0.78,
-    "pass_rate": 72.4
-   },
-   "rakhawah": {
-    "n": 2642,
-    "median_signed_z": -0.34,
-    "pass_rate": 93.8
-   },
-   "tafkheem": {
-    "n": 4773,
-    "median_signed_z": 0.44,
-    "pass_rate": 95.3
-   },
-   "ghunnah": {
-    "n": 2846,
-    "median_signed_z": 0.65,
-    "pass_rate": 93.0
-   },
-   "hamzat_wasl": {
-    "n": 3564,
-    "median_signed_z": 0.0,
-    "pass_rate": 99.8
-   },
-   "madd_iwad": {
-    "n": 541,
-    "median_signed_z": 0.4,
-    "pass_rate": 90.4
-   },
-   "idgham_no_ghunnah": {
-    "n": 428,
-    "median_signed_z": -0.08,
-    "pass_rate": 100.0
-   },
-   "madd_muttasil": {
-    "n": 672,
-    "median_signed_z": 2.24,
-    "pass_rate": 40.5
-   },
-   "idgham_ghunnah:kamil": {
-    "n": 600,
-    "median_signed_z": 0.87,
-    "pass_rate": 76.2
-   },
-   "tafashhi": {
-    "n": 429,
-    "median_signed_z": -2.58,
-    "pass_rate": 27.0
-   },
-   "ikhfa:heavy": {
-    "n": 149,
-    "median_signed_z": 1.23,
-    "pass_rate": 62.4
-   },
-   "qalqalah:sughra": {
-    "n": 1552,
-    "median_signed_z": 0.76,
-    "pass_rate": 100.0
-   },
-   "tarqeeq:lam_allah": {
-    "n": 394,
-    "median_signed_z": 1.74,
-    "pass_rate": 99.2
-   },
-   "shiddah": {
-    "n": 584,
-    "median_signed_z": -0.1,
-    "pass_rate": 91.8
-   },
-   "hams": {
-    "n": 1652,
-    "median_signed_z": 0.39,
-    "pass_rate": 100.0
-   },
-   "qalqalah:kubra": {
-    "n": 297,
-    "median_signed_z": 0.77,
-    "pass_rate": 99.3
-   },
-   "madd_munfasil": {
-    "n": 851,
-    "median_signed_z": 2.35,
-    "pass_rate": 39.7
-   },
-   "idgham_mutajanisayn:kamil": {
-    "n": 22,
-    "median_signed_z": 0.0,
-    "pass_rate": 100.0
-   },
-   "idgham_ghunnah:naqis": {
-    "n": 210,
-    "median_signed_z": 0.47,
-    "pass_rate": 78.1
-   },
-   "iqlab": {
-    "n": 128,
-    "median_signed_z": 1.24,
-    "pass_rate": 69.5
-   },
-   "idgham_shafawi": {
-    "n": 387,
-    "median_signed_z": 0.44,
-    "pass_rate": 93.3
-   },
-   "madd_silah_sughra": {
-    "n": 36,
-    "median_signed_z": -0.4,
-    "pass_rate": 91.7
-   },
-   "madd_lazim:kalimi": {
-    "n": 17,
-    "median_signed_z": 2.56,
-    "pass_rate": 17.6
-   },
-   "madd_badal": {
-    "n": 39,
-    "median_signed_z": -0.19,
-    "pass_rate": 89.7
-   },
-   "qalqalah:akbar": {
-    "n": 30,
-    "median_signed_z": 0.0,
-    "pass_rate": 96.7
-   },
-   "izhar_shafawi:before_waw_faa": {
-    "n": 40,
-    "median_signed_z": 0.68,
-    "pass_rate": 87.5
-   },
-   "ikhfa_shafawi": {
-    "n": 15,
-    "median_signed_z": 0.38,
-    "pass_rate": 86.7
-   }
-  },
-  "Abdul_Basit_Murattal_192kbps": {
-   "tafkheem": {
-    "n": 2924,
-    "median_signed_z": 0.0,
-    "pass_rate": 91.6
-   },
-   "madd_tabii": {
-    "n": 5452,
-    "median_signed_z": 0.0,
+    "n": 1277,
+    "median_signed_z": -0.57,
     "pass_rate": 94.3
    },
-   "idgham_shafawi": {
-    "n": 221,
-    "median_signed_z": 0.02,
-    "pass_rate": 96.4
-   },
-   "tafkheem:raa": {
-    "n": 1677,
-    "median_signed_z": 0.0,
-    "pass_rate": 94.8
-   },
-   "hamzat_wasl": {
-    "n": 2070,
-    "median_signed_z": 0.0,
-    "pass_rate": 98.9
-   },
-   "tafkheem:lam_allah": {
-    "n": 162,
-    "median_signed_z": 0.0,
-    "pass_rate": 89.5
-   },
-   "iqlab": {
-    "n": 55,
-    "median_signed_z": 0.0,
-    "pass_rate": 90.9
-   },
-   "shiddah": {
-    "n": 250,
-    "median_signed_z": 0.0,
-    "pass_rate": 91.2
-   },
-   "hams": {
-    "n": 1032,
-    "median_signed_z": 0.01,
-    "pass_rate": 100.0
-   },
-   "tawassut": {
-    "n": 1678,
-    "median_signed_z": 0.03,
-    "pass_rate": 96.2
-   },
-   "jahr": {
-    "n": 2416,
-    "median_signed_z": 0.0,
-    "pass_rate": 92.1
-   },
-   "madd_muttasil": {
-    "n": 453,
-    "median_signed_z": 0.0,
-    "pass_rate": 96.9
-   },
-   "ghunnah": {
-    "n": 1633,
-    "median_signed_z": 0.0,
-    "pass_rate": 98.5
-   },
-   "ikhfa:light": {
-    "n": 360,
-    "median_signed_z": 0.0,
-    "pass_rate": 90.3
-   },
-   "takreer": {
-    "n": 454,
-    "median_signed_z": 0.0,
-    "pass_rate": 96.7
-   },
-   "madd_munfasil": {
-    "n": 432,
-    "median_signed_z": 0.0,
-    "pass_rate": 95.4
-   },
-   "rakhawah": {
-    "n": 1867,
-    "median_signed_z": 0.09,
-    "pass_rate": 94.6
+   "ikhfa:heavy": {
+    "n": 387,
+    "median_signed_z": -0.5,
+    "pass_rate": 98.7
    },
    "qalqalah:sughra": {
-    "n": 597,
+    "n": 2151,
     "median_signed_z": 0.0,
-    "pass_rate": 99.5
+    "pass_rate": 98.3
    },
-   "tarqeeq:raa": {
-    "n": 431,
-    "median_signed_z": 0.0,
-    "pass_rate": 98.6
+   "idgham_shafawi": {
+    "n": 515,
+    "median_signed_z": -0.61,
+    "pass_rate": 80.8
+   },
+   "iqlab": {
+    "n": 328,
+    "median_signed_z": -0.31,
+    "pass_rate": 96.0
    },
    "idgham_no_ghunnah": {
-    "n": 241,
-    "median_signed_z": 0.0,
-    "pass_rate": 100.0
-   },
-   "tafashhi": {
-    "n": 531,
-    "median_signed_z": -1.09,
-    "pass_rate": 77.6
-   },
-   "izhar_halqi": {
-    "n": 326,
-    "median_signed_z": -0.0,
-    "pass_rate": 95.7
-   },
-   "idgham_ghunnah:naqis": {
-    "n": 93,
-    "median_signed_z": 0.01,
-    "pass_rate": 90.3
-   },
-   "qalqalah:kubra": {
-    "n": 128,
+    "n": 748,
     "median_signed_z": -0.24,
     "pass_rate": 100.0
    },
-   "idgham_ghunnah:kamil": {
-    "n": 303,
-    "median_signed_z": 0.0,
-    "pass_rate": 93.4
-   },
-   "izhar_shafawi:before_waw_faa": {
-    "n": 24,
-    "median_signed_z": 0.0,
-    "pass_rate": 95.8
-   },
-   "tarqeeq:lam_allah": {
-    "n": 246,
-    "median_signed_z": 1.72,
-    "pass_rate": 99.2
-   },
-   "ikhfa:heavy": {
-    "n": 82,
-    "median_signed_z": 0.01,
-    "pass_rate": 90.2
-   },
-   "safir": {
-    "n": 565,
-    "median_signed_z": 0.8,
-    "pass_rate": 98.2
-   },
-   "madd_iwad": {
-    "n": 264,
-    "median_signed_z": 0.0,
-    "pass_rate": 94.7
-   },
-   "qalqalah:akbar": {
-    "n": 16,
-    "median_signed_z": -0.37,
-    "pass_rate": 93.8
-   },
-   "ikhfa_shafawi": {
-    "n": 9,
-    "median_signed_z": 0.0,
-    "pass_rate": 100.0
-   },
-   "izhar_shafawi": {
-    "n": 218,
-    "median_signed_z": 0.0,
-    "pass_rate": 95.9
-   },
-   "madd_lazim:kalimi": {
-    "n": 13,
-    "median_signed_z": 0.0,
-    "pass_rate": 100.0
-   },
-   "madd_badal": {
-    "n": 14,
-    "median_signed_z": 0.15,
-    "pass_rate": 92.9
-   },
-   "idgham_mutajanisayn:kamil": {
-    "n": 15,
-    "median_signed_z": 0.0,
-    "pass_rate": 100.0
-   },
-   "madd_silah_sughra": {
-    "n": 5,
-    "median_signed_z": -0.19,
-    "pass_rate": 100.0
-   }
-  },
-  "Alafasy_128kbps": {
-   "hams": {
-    "n": 977,
-    "median_signed_z": 0.64,
-    "pass_rate": 100.0
-   },
-   "safir": {
-    "n": 1338,
-    "median_signed_z": -0.5,
-    "pass_rate": 92.6
-   },
-   "rakhawah": {
-    "n": 1689,
-    "median_signed_z": -0.05,
-    "pass_rate": 94.0
-   },
-   "hamzat_wasl": {
-    "n": 1684,
-    "median_signed_z": 0.0,
-    "pass_rate": 100.0
-   },
-   "tarqeeq:lam_allah": {
-    "n": 158,
-    "median_signed_z": -0.36,
-    "pass_rate": 96.2
-   },
-   "tafkheem:raa": {
-    "n": 1502,
-    "median_signed_z": 0.01,
-    "pass_rate": 96.2
-   },
-   "takreer": {
-    "n": 425,
-    "median_signed_z": 0.6,
-    "pass_rate": 92.2
-   },
-   "madd_tabii": {
-    "n": 5160,
-    "median_signed_z": 0.0,
-    "pass_rate": 93.4
-   },
-   "tafkheem": {
-    "n": 2607,
-    "median_signed_z": 0.0,
-    "pass_rate": 94.4
+   "tafashhi": {
+    "n": 1576,
+    "median_signed_z": -1.46,
+    "pass_rate": 64.1
    },
    "madd_munfasil": {
-    "n": 352,
-    "median_signed_z": 0.84,
-    "pass_rate": 83.2
-   },
-   "ghunnah": {
-    "n": 1318,
-    "median_signed_z": 0.34,
-    "pass_rate": 97.5
-   },
-   "jahr": {
-    "n": 2250,
-    "median_signed_z": 0.0,
-    "pass_rate": 90.2
-   },
-   "tafashhi": {
-    "n": 600,
-    "median_signed_z": 0.0,
-    "pass_rate": 97.0
-   },
-   "tawassut": {
-    "n": 1467,
-    "median_signed_z": -0.11,
-    "pass_rate": 97.5
-   },
-   "madd_muttasil": {
-    "n": 373,
-    "median_signed_z": 1.25,
-    "pass_rate": 71.3
-   },
-   "qalqalah:sughra": {
-    "n": 807,
-    "median_signed_z": 0.08,
-    "pass_rate": 98.9
-   },
-   "shiddah": {
-    "n": 270,
-    "median_signed_z": -0.1,
-    "pass_rate": 99.3
-   },
-   "ikhfa_shafawi": {
-    "n": 13,
-    "median_signed_z": 0.0,
-    "pass_rate": 100.0
-   },
-   "ikhfa:light": {
-    "n": 529,
-    "median_signed_z": 1.08,
-    "pass_rate": 70.9
+    "n": 956,
+    "median_signed_z": -2.43,
+    "pass_rate": 26.8
    },
    "tarqeeq:raa": {
-    "n": 389,
+    "n": 1568,
     "median_signed_z": 0.0,
-    "pass_rate": 98.7
-   },
-   "idgham_shafawi": {
-    "n": 172,
-    "median_signed_z": 0.0,
-    "pass_rate": 97.7
-   },
-   "izhar_halqi": {
-    "n": 412,
-    "median_signed_z": -0.11,
-    "pass_rate": 97.1
-   },
-   "tafkheem:lam_allah": {
-    "n": 174,
-    "median_signed_z": 0.0,
-    "pass_rate": 94.8
-   },
-   "idgham_ghunnah:kamil": {
-    "n": 285,
-    "median_signed_z": 0.51,
-    "pass_rate": 87.0
-   },
-   "idgham_ghunnah:naqis": {
-    "n": 110,
-    "median_signed_z": 0.0,
-    "pass_rate": 83.6
-   },
-   "izhar_shafawi:before_waw_faa": {
-    "n": 24,
-    "median_signed_z": 0.66,
-    "pass_rate": 79.2
-   },
-   "madd_badal": {
-    "n": 9,
-    "median_signed_z": 0.0,
-    "pass_rate": 100.0
-   },
-   "ikhfa:heavy": {
-    "n": 136,
-    "median_signed_z": 1.05,
-    "pass_rate": 64.7
-   },
-   "iqlab": {
-    "n": 85,
-    "median_signed_z": 1.27,
-    "pass_rate": 67.1
-   },
-   "idgham_no_ghunnah": {
-    "n": 185,
-    "median_signed_z": -0.05,
-    "pass_rate": 100.0
-   },
-   "madd_iwad": {
-    "n": 256,
-    "median_signed_z": 2.39,
-    "pass_rate": 37.5
-   },
-   "qalqalah:kubra": {
-    "n": 145,
-    "median_signed_z": 0.49,
-    "pass_rate": 99.3
-   },
-   "izhar_shafawi": {
-    "n": 151,
-    "median_signed_z": 0.0,
-    "pass_rate": 94.0
-   },
-   "madd_silah_sughra": {
-    "n": 15,
-    "median_signed_z": 0.0,
-    "pass_rate": 93.3
-   },
-   "qalqalah:akbar": {
-    "n": 4,
-    "median_signed_z": -1.72,
-    "pass_rate": 75.0
-   },
-   "idgham_mutajanisayn:kamil": {
-    "n": 19,
-    "median_signed_z": 0.0,
-    "pass_rate": 100.0
-   },
-   "madd_lazim:kalimi": {
-    "n": 10,
-    "median_signed_z": 1.62,
-    "pass_rate": 60.0
-   }
-  },
-  "Yasser_Ad-Dussary_128kbps": {
-   "madd_tabii": {
-    "n": 4513,
-    "median_signed_z": -0.02,
-    "pass_rate": 95.3
-   },
-   "safir": {
-    "n": 902,
-    "median_signed_z": -0.26,
-    "pass_rate": 98.7
-   },
-   "tafkheem": {
-    "n": 2248,
-    "median_signed_z": 0.32,
-    "pass_rate": 85.0
-   },
-   "shiddah": {
-    "n": 205,
-    "median_signed_z": -0.12,
-    "pass_rate": 100.0
-   },
-   "hams": {
-    "n": 761,
-    "median_signed_z": 1.01,
-    "pass_rate": 100.0
-   },
-   "izhar_halqi": {
-    "n": 156,
-    "median_signed_z": -0.53,
-    "pass_rate": 93.6
-   },
-   "ikhfa:light": {
-    "n": 200,
-    "median_signed_z": 0.23,
     "pass_rate": 92.0
    },
-   "tafkheem:raa": {
-    "n": 1795,
-    "median_signed_z": 0.19,
-    "pass_rate": 72.9
+   "qalqalah:kubra": {
+    "n": 526,
+    "median_signed_z": 0.47,
+    "pass_rate": 98.7
    },
-   "takreer": {
-    "n": 381,
-    "median_signed_z": 1.21,
-    "pass_rate": 89.2
-   },
-   "tawassut": {
-    "n": 1639,
-    "median_signed_z": -0.11,
-    "pass_rate": 96.2
-   },
-   "jahr": {
-    "n": 2027,
+   "izhar_shafawi:before_waw_faa": {
+    "n": 203,
     "median_signed_z": 0.0,
-    "pass_rate": 91.5
+    "pass_rate": 84.2
    },
-   "ghunnah": {
-    "n": 751,
-    "median_signed_z": 0.0,
-    "pass_rate": 93.6
+   "madd_badal": {
+    "n": 69,
+    "median_signed_z": 0.07,
+    "pass_rate": 75.4
    },
-   "idgham_shafawi": {
-    "n": 84,
-    "median_signed_z": 0.0,
-    "pass_rate": 89.3
+   "izhar_shafawi": {
+    "n": 1292,
+    "median_signed_z": -0.55,
+    "pass_rate": 95.0
    },
-   "rakhawah": {
-    "n": 1083,
-    "median_signed_z": -0.29,
-    "pass_rate": 95.1
-   },
-   "tafashhi": {
-    "n": 450,
-    "median_signed_z": -0.42,
-    "pass_rate": 95.8
-   },
-   "idgham_ghunnah:kamil": {
-    "n": 103,
+   "madd_iwad": {
+    "n": 848,
     "median_signed_z": 0.13,
-    "pass_rate": 68.0
+    "pass_rate": 63.7
    },
-   "tarqeeq:raa": {
-    "n": 448,
+   "ikhfa_shafawi": {
+    "n": 57,
+    "median_signed_z": -0.86,
+    "pass_rate": 70.2
+   },
+   "qalqalah:akbar": {
+    "n": 41,
+    "median_signed_z": -0.72,
+    "pass_rate": 92.7
+   },
+   "madd_lazim:harfi": {
+    "n": 22,
     "median_signed_z": 0.0,
-    "pass_rate": 99.8
+    "pass_rate": 90.9
    },
-   "madd_munfasil": {
-    "n": 275,
-    "median_signed_z": 0.52,
-    "pass_rate": 74.5
+   "madd_silah_sughra": {
+    "n": 117,
+    "median_signed_z": -0.1,
+    "pass_rate": 81.2
    },
-   "idgham_no_ghunnah": {
-    "n": 147,
+   "idgham_mutajanisayn:kamil": {
+    "n": 52,
     "median_signed_z": 0.0,
     "pass_rate": 100.0
    },
+   "madd_lazim:kalimi": {
+    "n": 54,
+    "median_signed_z": 1.17,
+    "pass_rate": 51.9
+   },
+   "istitaalah": {
+    "n": 29,
+    "median_signed_z": -0.82,
+    "pass_rate": 100.0
+   },
+   "idgham_mithlayn:kamil": {
+    "n": 16,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "madd_silah_kubra": {
+    "n": 22,
+    "median_signed_z": -3.0,
+    "pass_rate": 27.3
+   }
+  },
+  "Abdullaah_3awwaad_Al-Juhaynee_128kbps": {
+   "tafkheem": {
+    "n": 2037,
+    "median_signed_z": 1.58,
+    "pass_rate": 57.2
+   },
+   "madd_tabii": {
+    "n": 2528,
+    "median_signed_z": -0.48,
+    "pass_rate": 87.5
+   },
+   "tafkheem:raa": {
+    "n": 1453,
+    "median_signed_z": 0.76,
+    "pass_rate": 76.1
+   },
+   "tafashhi": {
+    "n": 405,
+    "median_signed_z": -1.07,
+    "pass_rate": 70.4
+   },
+   "ghunnah": {
+    "n": 948,
+    "median_signed_z": -1.88,
+    "pass_rate": 49.5
+   },
+   "safir": {
+    "n": 918,
+    "median_signed_z": -1.59,
+    "pass_rate": 71.7
+   },
    "hamzat_wasl": {
-    "n": 1529,
+    "n": 1786,
     "median_signed_z": 0.0,
     "pass_rate": 99.9
    },
-   "qalqalah:sughra": {
-    "n": 682,
-    "median_signed_z": 0.42,
-    "pass_rate": 100.0
-   },
-   "tarqeeq:lam_allah": {
-    "n": 96,
-    "median_signed_z": -0.78,
-    "pass_rate": 85.4
-   },
-   "tafkheem:lam_allah": {
-    "n": 172,
-    "median_signed_z": 0.13,
-    "pass_rate": 82.6
-   },
-   "madd_muttasil": {
-    "n": 236,
-    "median_signed_z": 1.28,
-    "pass_rate": 59.7
-   },
-   "madd_lazim:kalimi": {
-    "n": 8,
-    "median_signed_z": 1.79,
-    "pass_rate": 50.0
-   },
-   "qalqalah:kubra": {
-    "n": 149,
-    "median_signed_z": 0.7,
-    "pass_rate": 100.0
-   },
-   "ikhfa:heavy": {
-    "n": 32,
-    "median_signed_z": 0.34,
-    "pass_rate": 84.4
-   },
-   "izhar_shafawi": {
-    "n": 102,
-    "median_signed_z": -0.11,
-    "pass_rate": 98.0
-   },
-   "idgham_ghunnah:naqis": {
-    "n": 111,
-    "median_signed_z": 0.15,
-    "pass_rate": 80.2
-   },
-   "madd_iwad": {
-    "n": 274,
-    "median_signed_z": 1.22,
-    "pass_rate": 74.5
-   },
-   "madd_silah_sughra": {
-    "n": 23,
-    "median_signed_z": -0.61,
-    "pass_rate": 100.0
-   },
-   "qalqalah:akbar": {
-    "n": 19,
-    "median_signed_z": -1.46,
-    "pass_rate": 89.5
-   },
-   "iqlab": {
-    "n": 38,
-    "median_signed_z": 1.09,
-    "pass_rate": 84.2
-   },
-   "izhar_shafawi:before_waw_faa": {
-    "n": 10,
-    "median_signed_z": 0.66,
-    "pass_rate": 90.0
-   },
-   "madd_badal": {
-    "n": 10,
-    "median_signed_z": -0.04,
-    "pass_rate": 90.0
-   },
-   "ikhfa_shafawi": {
-    "n": 6,
-    "median_signed_z": 0.23,
-    "pass_rate": 100.0
-   },
-   "idgham_mutajanisayn:kamil": {
-    "n": 10,
-    "median_signed_z": 0.0,
-    "pass_rate": 100.0
-   }
-  },
-  "Nasser_Alqatami_128kbps": {
-   "madd_tabii": {
-    "n": 2370,
-    "median_signed_z": 0.0,
-    "pass_rate": 91.8
-   },
-   "hamzat_wasl": {
-    "n": 816,
-    "median_signed_z": 0.0,
-    "pass_rate": 100.0
-   },
    "tawassut": {
-    "n": 644,
-    "median_signed_z": 0.09,
-    "pass_rate": 94.4
+    "n": 938,
+    "median_signed_z": -0.05,
+    "pass_rate": 68.8
    },
    "jahr": {
-    "n": 800,
+    "n": 1373,
     "median_signed_z": 0.0,
-    "pass_rate": 89.8
+    "pass_rate": 72.0
    },
-   "tafkheem": {
-    "n": 1336,
-    "median_signed_z": 0.06,
-    "pass_rate": 93.3
+   "qalqalah:kubra": {
+    "n": 40,
+    "median_signed_z": 0.0,
+    "pass_rate": 95.0
    },
-   "rakhawah": {
-    "n": 535,
-    "median_signed_z": -0.34,
+   "tafkheem:lam_allah": {
+    "n": 892,
+    "median_signed_z": 2.26,
+    "pass_rate": 46.0
+   },
+   "ikhfa:light": {
+    "n": 244,
+    "median_signed_z": -0.24,
+    "pass_rate": 94.7
+   },
+   "tarqeeq:raa": {
+    "n": 415,
+    "median_signed_z": 0.0,
+    "pass_rate": 77.3
+   },
+   "tarqeeq:lam_allah": {
+    "n": 295,
+    "median_signed_z": 0.21,
     "pass_rate": 90.8
    },
    "hams": {
-    "n": 414,
-    "median_signed_z": 0.92,
+    "n": 409,
+    "median_signed_z": 0.0,
     "pass_rate": 100.0
    },
-   "tafkheem:raa": {
-    "n": 739,
+   "rakhawah": {
+    "n": 1012,
+    "median_signed_z": -0.58,
+    "pass_rate": 78.0
+   },
+   "idgham_mutajanisayn:kamil": {
+    "n": 11,
     "median_signed_z": 0.0,
-    "pass_rate": 89.4
-   },
-   "qalqalah:sughra": {
-    "n": 405,
-    "median_signed_z": 0.42,
-    "pass_rate": 98.0
-   },
-   "ghunnah": {
-    "n": 583,
-    "median_signed_z": 0.07,
-    "pass_rate": 87.5
-   },
-   "tarqeeq:lam_allah": {
-    "n": 79,
-    "median_signed_z": 0.16,
-    "pass_rate": 96.2
-   },
-   "shiddah": {
-    "n": 119,
-    "median_signed_z": -0.12,
-    "pass_rate": 98.3
-   },
-   "madd_munfasil": {
-    "n": 187,
-    "median_signed_z": -2.01,
-    "pass_rate": 47.1
-   },
-   "qalqalah:kubra": {
-    "n": 71,
-    "median_signed_z": 1.07,
-    "pass_rate": 97.2
-   },
-   "izhar_halqi": {
-    "n": 113,
-    "median_signed_z": 0.04,
-    "pass_rate": 92.0
-   },
-   "ikhfa:heavy": {
-    "n": 30,
-    "median_signed_z": 0.57,
-    "pass_rate": 70.0
-   },
-   "tarqeeq:raa": {
-    "n": 174,
-    "median_signed_z": -0.09,
-    "pass_rate": 98.3
-   },
-   "tafashhi": {
-    "n": 275,
-    "median_signed_z": 0.26,
-    "pass_rate": 99.6
+    "pass_rate": 100.0
    },
    "madd_muttasil": {
-    "n": 183,
-    "median_signed_z": 1.12,
-    "pass_rate": 63.4
+    "n": 156,
+    "median_signed_z": 0.34,
+    "pass_rate": 71.8
    },
-   "ikhfa:light": {
-    "n": 206,
-    "median_signed_z": 0.8,
-    "pass_rate": 64.6
+   "idgham_ghunnah:kamil": {
+    "n": 115,
+    "median_signed_z": -0.66,
+    "pass_rate": 87.8
    },
-   "idgham_no_ghunnah": {
-    "n": 108,
-    "median_signed_z": -0.27,
+   "shiddah": {
+    "n": 66,
+    "median_signed_z": -0.71,
+    "pass_rate": 66.7
+   },
+   "qalqalah:sughra": {
+    "n": 281,
+    "median_signed_z": 0.0,
+    "pass_rate": 96.1
+   },
+   "qalqalah:akbar": {
+    "n": 8,
+    "median_signed_z": -0.76,
     "pass_rate": 100.0
    },
    "takreer": {
-    "n": 162,
-    "median_signed_z": 0.6,
-    "pass_rate": 88.3
-   },
-   "tafkheem:lam_allah": {
-    "n": 129,
+    "n": 442,
     "median_signed_z": 0.0,
-    "pass_rate": 93.8
-   },
-   "madd_iwad": {
-    "n": 128,
-    "median_signed_z": 3.88,
-    "pass_rate": 9.4
-   },
-   "idgham_ghunnah:naqis": {
-    "n": 55,
-    "median_signed_z": 0.0,
-    "pass_rate": 70.9
-   },
-   "iqlab": {
-    "n": 42,
-    "median_signed_z": 1.13,
-    "pass_rate": 64.3
-   },
-   "safir": {
-    "n": 381,
-    "median_signed_z": -0.4,
-    "pass_rate": 97.9
-   },
-   "idgham_ghunnah:kamil": {
-    "n": 44,
-    "median_signed_z": 0.53,
-    "pass_rate": 63.6
+    "pass_rate": 75.3
    },
    "izhar_shafawi": {
-    "n": 9,
-    "median_signed_z": 0.0,
-    "pass_rate": 88.9
+    "n": 143,
+    "median_signed_z": -0.33,
+    "pass_rate": 88.1
    },
-   "qalqalah:akbar": {
-    "n": 9,
-    "median_signed_z": -1.42,
-    "pass_rate": 100.0
-   },
-   "madd_badal": {
-    "n": 7,
-    "median_signed_z": 0.15,
-    "pass_rate": 85.7
+   "madd_munfasil": {
+    "n": 139,
+    "median_signed_z": -2.58,
+    "pass_rate": 15.1
    },
    "idgham_shafawi": {
-    "n": 18,
-    "median_signed_z": 0.46,
-    "pass_rate": 94.4
+    "n": 122,
+    "median_signed_z": -1.6,
+    "pass_rate": 68.9
    },
-   "madd_lazim:kalimi": {
-    "n": 9,
-    "median_signed_z": 1.35,
-    "pass_rate": 66.7
-   },
-   "madd_silah_sughra": {
-    "n": 6,
-    "median_signed_z": 0.0,
-    "pass_rate": 83.3
-   },
-   "ikhfa_shafawi": {
-    "n": 3,
-    "median_signed_z": -1.37,
+   "madd_badal": {
+    "n": 12,
+    "median_signed_z": -0.03,
     "pass_rate": 100.0
    },
-   "idgham_mutajanisayn:kamil": {
-    "n": 4,
-    "median_signed_z": 1.0,
+   "izhar_halqi": {
+    "n": 160,
+    "median_signed_z": -0.36,
+    "pass_rate": 90.6
+   },
+   "idgham_no_ghunnah": {
+    "n": 170,
+    "median_signed_z": -0.5,
+    "pass_rate": 100.0
+   },
+   "idgham_ghunnah:naqis": {
+    "n": 127,
+    "median_signed_z": -0.26,
+    "pass_rate": 99.2
+   },
+   "ikhfa:heavy": {
+    "n": 50,
+    "median_signed_z": -0.49,
+    "pass_rate": 100.0
+   },
+   "izhar_shafawi:before_waw_faa": {
+    "n": 38,
+    "median_signed_z": 0.03,
+    "pass_rate": 89.5
+   },
+   "iqlab": {
+    "n": 49,
+    "median_signed_z": -0.08,
+    "pass_rate": 85.7
+   },
+   "madd_lazim:kalimi": {
+    "n": 11,
+    "median_signed_z": 2.22,
+    "pass_rate": 45.5
+   },
+   "ikhfa_shafawi": {
+    "n": 8,
+    "median_signed_z": -0.09,
+    "pass_rate": 87.5
+   },
+   "madd_iwad": {
+    "n": 71,
+    "median_signed_z": 2.45,
+    "pass_rate": 43.7
+   },
+   "idgham_mithlayn:kamil": {
+    "n": 2,
+    "median_signed_z": -1.0,
+    "pass_rate": 100.0
+   },
+   "madd_silah_sughra": {
+    "n": 30,
+    "median_signed_z": -0.49,
+    "pass_rate": 86.7
+   },
+   "madd_silah_kubra": {
+    "n": 6,
+    "median_signed_z": -3.34,
+    "pass_rate": 16.7
+   },
+   "istitaalah": {
+    "n": 3,
+    "median_signed_z": -0.49,
+    "pass_rate": 100.0
+   },
+   "madd_lazim:harfi": {
+    "n": 5,
+    "median_signed_z": -1.15,
     "pass_rate": 100.0
    }
   },
   "Saood_ash-Shuraym_128kbps": {
+   "madd_tabii": {
+    "n": 20287,
+    "median_signed_z": 0.0,
+    "pass_rate": 87.1
+   },
    "hamzat_wasl": {
-    "n": 136,
+    "n": 8074,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "tawassut": {
+    "n": 5447,
+    "median_signed_z": -0.23,
+    "pass_rate": 79.3
+   },
+   "jahr": {
+    "n": 8364,
+    "median_signed_z": 0.0,
+    "pass_rate": 72.4
+   },
+   "tafkheem:raa": {
+    "n": 6723,
+    "median_signed_z": 0.2,
+    "pass_rate": 73.1
+   },
+   "idgham_no_ghunnah": {
+    "n": 826,
+    "median_signed_z": -0.21,
+    "pass_rate": 100.0
+   },
+   "takreer": {
+    "n": 2204,
+    "median_signed_z": 2.0,
+    "pass_rate": 76.0
+   },
+   "tafkheem": {
+    "n": 9754,
+    "median_signed_z": 0.64,
+    "pass_rate": 71.7
+   },
+   "tafashhi": {
+    "n": 1616,
+    "median_signed_z": -0.62,
+    "pass_rate": 66.2
+   },
+   "madd_muttasil": {
+    "n": 1425,
+    "median_signed_z": 0.0,
+    "pass_rate": 87.2
+   },
+   "ikhfa:light": {
+    "n": 2211,
+    "median_signed_z": -0.16,
+    "pass_rate": 99.0
+   },
+   "rakhawah": {
+    "n": 5316,
+    "median_signed_z": -0.16,
+    "pass_rate": 85.8
+   },
+   "tarqeeq:raa": {
+    "n": 1985,
+    "median_signed_z": -0.07,
+    "pass_rate": 89.2
+   },
+   "qalqalah:sughra": {
+    "n": 2623,
+    "median_signed_z": 0.13,
+    "pass_rate": 99.7
+   },
+   "tarqeeq:lam_allah": {
+    "n": 678,
+    "median_signed_z": 0.15,
+    "pass_rate": 96.2
+   },
+   "ghunnah": {
+    "n": 4776,
+    "median_signed_z": -0.29,
+    "pass_rate": 89.9
+   },
+   "safir": {
+    "n": 3670,
+    "median_signed_z": -1.7,
+    "pass_rate": 65.2
+   },
+   "izhar_halqi": {
+    "n": 1757,
+    "median_signed_z": -0.42,
+    "pass_rate": 96.9
+   },
+   "madd_munfasil": {
+    "n": 1245,
+    "median_signed_z": -2.41,
+    "pass_rate": 29.1
+   },
+   "hams": {
+    "n": 2366,
+    "median_signed_z": 0.36,
+    "pass_rate": 100.0
+   },
+   "qalqalah:kubra": {
+    "n": 500,
+    "median_signed_z": 0.42,
+    "pass_rate": 99.2
+   },
+   "izhar_shafawi": {
+    "n": 1295,
+    "median_signed_z": -0.59,
+    "pass_rate": 95.3
+   },
+   "ikhfa:heavy": {
+    "n": 534,
+    "median_signed_z": -0.22,
+    "pass_rate": 99.4
+   },
+   "izhar_shafawi:before_waw_faa": {
+    "n": 259,
+    "median_signed_z": 0.0,
+    "pass_rate": 92.7
+   },
+   "tafkheem:lam_allah": {
+    "n": 1680,
+    "median_signed_z": 0.18,
+    "pass_rate": 70.0
+   },
+   "idgham_ghunnah:kamil": {
+    "n": 1133,
+    "median_signed_z": -0.24,
+    "pass_rate": 97.4
+   },
+   "madd_iwad": {
+    "n": 949,
+    "median_signed_z": 1.8,
+    "pass_rate": 55.3
+   },
+   "idgham_mithlayn:kamil": {
+    "n": 16,
+    "median_signed_z": 0.0,
+    "pass_rate": 93.8
+   },
+   "iqlab": {
+    "n": 372,
+    "median_signed_z": -0.08,
+    "pass_rate": 95.7
+   },
+   "idgham_ghunnah:naqis": {
+    "n": 826,
+    "median_signed_z": 0.0,
+    "pass_rate": 98.7
+   },
+   "madd_silah_sughra": {
+    "n": 287,
+    "median_signed_z": -1.1,
+    "pass_rate": 77.0
+   },
+   "shiddah": {
+    "n": 753,
+    "median_signed_z": -0.71,
+    "pass_rate": 75.3
+   },
+   "idgham_shafawi": {
+    "n": 655,
+    "median_signed_z": -0.27,
+    "pass_rate": 84.4
+   },
+   "madd_badal": {
+    "n": 112,
+    "median_signed_z": 0.0,
+    "pass_rate": 94.6
+   },
+   "madd_lazim:kalimi": {
+    "n": 52,
+    "median_signed_z": 0.64,
+    "pass_rate": 82.7
+   },
+   "istitaalah": {
+    "n": 32,
+    "median_signed_z": -0.72,
+    "pass_rate": 96.9
+   },
+   "ikhfa_shafawi": {
+    "n": 83,
+    "median_signed_z": -0.19,
+    "pass_rate": 92.8
+   },
+   "qalqalah:akbar": {
+    "n": 39,
+    "median_signed_z": -1.2,
+    "pass_rate": 82.1
+   },
+   "idgham_mutajanisayn:kamil": {
+    "n": 54,
+    "median_signed_z": 0.0,
+    "pass_rate": 96.3
+   },
+   "madd_silah_kubra": {
+    "n": 58,
+    "median_signed_z": -3.67,
+    "pass_rate": 6.9
+   },
+   "madd_lazim:harfi": {
+    "n": 24,
+    "median_signed_z": 0.34,
+    "pass_rate": 62.5
+   }
+  },
+  "Nasser_Alqatami_128kbps": {
+   "ghunnah": {
+    "n": 4538,
+    "median_signed_z": 0.0,
+    "pass_rate": 67.1
+   },
+   "hamzat_wasl": {
+    "n": 9677,
+    "median_signed_z": 0.0,
+    "pass_rate": 99.9
+   },
+   "ikhfa:light": {
+    "n": 2784,
+    "median_signed_z": 0.55,
+    "pass_rate": 75.5
+   },
+   "izhar_shafawi": {
+    "n": 1393,
+    "median_signed_z": 0.0,
+    "pass_rate": 92.6
+   },
+   "takreer": {
+    "n": 1917,
+    "median_signed_z": 2.0,
+    "pass_rate": 64.5
+   },
+   "tarqeeq:raa": {
+    "n": 1740,
+    "median_signed_z": -0.45,
+    "pass_rate": 91.3
+   },
+   "tawassut": {
+    "n": 7103,
+    "median_signed_z": 0.15,
+    "pass_rate": 75.5
+   },
+   "jahr": {
+    "n": 9803,
+    "median_signed_z": 0.0,
+    "pass_rate": 79.1
+   },
+   "tafkheem:lam_allah": {
+    "n": 1869,
+    "median_signed_z": 0.19,
+    "pass_rate": 83.3
+   },
+   "idgham_ghunnah:naqis": {
+    "n": 1068,
+    "median_signed_z": 0.0,
+    "pass_rate": 92.0
+   },
+   "tafkheem": {
+    "n": 10357,
+    "median_signed_z": 0.04,
+    "pass_rate": 85.4
+   },
+   "madd_tabii": {
+    "n": 20883,
+    "median_signed_z": 0.0,
+    "pass_rate": 83.1
+   },
+   "idgham_no_ghunnah": {
+    "n": 918,
+    "median_signed_z": -0.18,
+    "pass_rate": 100.0
+   },
+   "tafkheem:raa": {
+    "n": 6625,
+    "median_signed_z": 0.0,
+    "pass_rate": 85.5
+   },
+   "madd_iwad": {
+    "n": 1028,
+    "median_signed_z": 4.82,
+    "pass_rate": 8.7
+   },
+   "rakhawah": {
+    "n": 6755,
+    "median_signed_z": -0.41,
+    "pass_rate": 88.5
+   },
+   "hams": {
+    "n": 4313,
+    "median_signed_z": 0.71,
+    "pass_rate": 100.0
+   },
+   "idgham_shafawi": {
+    "n": 343,
+    "median_signed_z": 0.0,
+    "pass_rate": 67.6
+   },
+   "madd_muttasil": {
+    "n": 1405,
+    "median_signed_z": 0.75,
+    "pass_rate": 64.3
+   },
+   "madd_badal": {
+    "n": 222,
+    "median_signed_z": 0.0,
+    "pass_rate": 93.2
+   },
+   "ikhfa:heavy": {
+    "n": 535,
+    "median_signed_z": 0.63,
+    "pass_rate": 74.6
+   },
+   "izhar_halqi": {
+    "n": 1547,
+    "median_signed_z": 0.0,
+    "pass_rate": 86.7
+   },
+   "madd_munfasil": {
+    "n": 1422,
+    "median_signed_z": -2.36,
+    "pass_rate": 22.0
+   },
+   "qalqalah:sughra": {
+    "n": 3051,
+    "median_signed_z": 0.4,
+    "pass_rate": 98.7
+   },
+   "tarqeeq:lam_allah": {
+    "n": 680,
+    "median_signed_z": 0.0,
+    "pass_rate": 89.1
+   },
+   "qalqalah:kubra": {
+    "n": 550,
+    "median_signed_z": 0.44,
+    "pass_rate": 93.1
+   },
+   "madd_silah_sughra": {
+    "n": 185,
+    "median_signed_z": -0.05,
+    "pass_rate": 80.5
+   },
+   "shiddah": {
+    "n": 1088,
+    "median_signed_z": -0.47,
+    "pass_rate": 85.0
+   },
+   "safir": {
+    "n": 2855,
+    "median_signed_z": -0.37,
+    "pass_rate": 98.2
+   },
+   "tafashhi": {
+    "n": 1496,
+    "median_signed_z": 0.17,
+    "pass_rate": 97.9
+   },
+   "iqlab": {
+    "n": 396,
+    "median_signed_z": 0.33,
+    "pass_rate": 75.3
+   },
+   "idgham_ghunnah:kamil": {
+    "n": 705,
+    "median_signed_z": 0.0,
+    "pass_rate": 75.9
+   },
+   "madd_lazim:kalimi": {
+    "n": 52,
+    "median_signed_z": 1.44,
+    "pass_rate": 65.4
+   },
+   "izhar_shafawi:before_waw_faa": {
+    "n": 307,
+    "median_signed_z": 0.0,
+    "pass_rate": 87.9
+   },
+   "idgham_mutajanisayn:kamil": {
+    "n": 54,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "qalqalah:akbar": {
+    "n": 71,
+    "median_signed_z": -0.68,
+    "pass_rate": 87.3
+   },
+   "ikhfa_shafawi": {
+    "n": 71,
+    "median_signed_z": 0.0,
+    "pass_rate": 53.5
+   },
+   "istitaalah": {
+    "n": 15,
+    "median_signed_z": -1.29,
+    "pass_rate": 100.0
+   },
+   "idgham_mithlayn:kamil": {
+    "n": 17,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "madd_lazim:harfi": {
+    "n": 16,
+    "median_signed_z": 2.54,
+    "pass_rate": 43.8
+   },
+   "madd_silah_kubra": {
+    "n": 26,
+    "median_signed_z": -3.2,
+    "pass_rate": 23.1
+   }
+  },
+  "Yasser_Ad-Dussary_128kbps": {
+   "tafkheem": {
+    "n": 10408,
+    "median_signed_z": 0.41,
+    "pass_rate": 77.0
+   },
+   "madd_tabii": {
+    "n": 24199,
+    "median_signed_z": 0.0,
+    "pass_rate": 88.9
+   },
+   "idgham_shafawi": {
+    "n": 528,
+    "median_signed_z": -0.0,
+    "pass_rate": 68.9
+   },
+   "tafkheem:raa": {
+    "n": 8248,
+    "median_signed_z": 0.34,
+    "pass_rate": 69.2
+   },
+   "ikhfa:light": {
+    "n": 1705,
+    "median_signed_z": 0.17,
+    "pass_rate": 85.6
+   },
+   "hamzat_wasl": {
+    "n": 9960,
+    "median_signed_z": 0.0,
+    "pass_rate": 99.9
+   },
+   "tafkheem:lam_allah": {
+    "n": 1741,
+    "median_signed_z": 0.28,
+    "pass_rate": 79.6
+   },
+   "madd_iwad": {
+    "n": 1123,
+    "median_signed_z": 1.14,
+    "pass_rate": 69.0
+   },
+   "izhar_halqi": {
+    "n": 1295,
+    "median_signed_z": -0.33,
+    "pass_rate": 93.2
+   },
+   "shiddah": {
+    "n": 1089,
+    "median_signed_z": -0.64,
+    "pass_rate": 89.5
+   },
+   "hams": {
+    "n": 4482,
+    "median_signed_z": 0.65,
+    "pass_rate": 100.0
+   },
+   "tawassut": {
+    "n": 8909,
+    "median_signed_z": -0.23,
+    "pass_rate": 83.3
+   },
+   "jahr": {
+    "n": 12491,
+    "median_signed_z": 0.0,
+    "pass_rate": 80.8
+   },
+   "madd_muttasil": {
+    "n": 1185,
+    "median_signed_z": 1.14,
+    "pass_rate": 60.6
+   },
+   "takreer": {
+    "n": 2634,
+    "median_signed_z": 2.0,
+    "pass_rate": 53.3
+   },
+   "madd_munfasil": {
+    "n": 1522,
+    "median_signed_z": 0.36,
+    "pass_rate": 78.3
+   },
+   "qalqalah:sughra": {
+    "n": 2955,
+    "median_signed_z": 0.43,
+    "pass_rate": 100.0
+   },
+   "rakhawah": {
+    "n": 7650,
+    "median_signed_z": -0.11,
+    "pass_rate": 92.3
+   },
+   "safir": {
+    "n": 3359,
+    "median_signed_z": -0.21,
+    "pass_rate": 99.0
+   },
+   "izhar_shafawi": {
+    "n": 1400,
+    "median_signed_z": -0.19,
+    "pass_rate": 94.0
+   },
+   "tarqeeq:raa": {
+    "n": 1981,
+    "median_signed_z": 0.0,
+    "pass_rate": 95.4
+   },
+   "idgham_no_ghunnah": {
+    "n": 926,
+    "median_signed_z": -0.06,
+    "pass_rate": 100.0
+   },
+   "ghunnah": {
+    "n": 4508,
+    "median_signed_z": 0.0,
+    "pass_rate": 67.4
+   },
+   "tafashhi": {
+    "n": 1636,
+    "median_signed_z": -0.75,
+    "pass_rate": 87.3
+   },
+   "qalqalah:kubra": {
+    "n": 599,
+    "median_signed_z": 0.69,
+    "pass_rate": 99.5
+   },
+   "idgham_ghunnah:kamil": {
+    "n": 966,
+    "median_signed_z": 0.0,
+    "pass_rate": 83.2
+   },
+   "madd_silah_sughra": {
+    "n": 486,
+    "median_signed_z": -0.59,
+    "pass_rate": 92.2
+   },
+   "madd_badal": {
+    "n": 163,
+    "median_signed_z": 0.0,
+    "pass_rate": 86.5
+   },
+   "idgham_ghunnah:naqis": {
+    "n": 1095,
+    "median_signed_z": 0.0,
+    "pass_rate": 93.6
+   },
+   "tarqeeq:lam_allah": {
+    "n": 692,
+    "median_signed_z": -0.99,
+    "pass_rate": 79.6
+   },
+   "ikhfa:heavy": {
+    "n": 393,
+    "median_signed_z": 0.33,
+    "pass_rate": 80.9
+   },
+   "iqlab": {
+    "n": 339,
+    "median_signed_z": 0.58,
+    "pass_rate": 83.2
+   },
+   "qalqalah:akbar": {
+    "n": 71,
+    "median_signed_z": -1.35,
+    "pass_rate": 85.9
+   },
+   "madd_silah_kubra": {
+    "n": 67,
+    "median_signed_z": 0.0,
+    "pass_rate": 77.6
+   },
+   "izhar_shafawi:before_waw_faa": {
+    "n": 220,
+    "median_signed_z": 0.26,
+    "pass_rate": 87.7
+   },
+   "madd_lazim:kalimi": {
+    "n": 51,
+    "median_signed_z": 2.06,
+    "pass_rate": 41.2
+   },
+   "madd_lazim:harfi": {
+    "n": 16,
+    "median_signed_z": 0.06,
+    "pass_rate": 81.2
+   },
+   "idgham_mutajanisayn:kamil": {
+    "n": 54,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "idgham_mithlayn:kamil": {
+    "n": 17,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "ikhfa_shafawi": {
+    "n": 70,
+    "median_signed_z": 0.68,
+    "pass_rate": 65.7
+   },
+   "istitaalah": {
+    "n": 31,
+    "median_signed_z": -1.14,
+    "pass_rate": 100.0
+   }
+  },
+  "Husary_128kbps": {
+   "tawassut": {
+    "n": 9032,
+    "median_signed_z": 0.0,
+    "pass_rate": 79.6
+   },
+   "izhar_shafawi": {
+    "n": 2523,
+    "median_signed_z": 0.0,
+    "pass_rate": 88.3
+   },
+   "tarqeeq:lam_allah": {
+    "n": 690,
+    "median_signed_z": 0.0,
+    "pass_rate": 98.1
+   },
+   "tafkheem:raa": {
+    "n": 7559,
+    "median_signed_z": 0.0,
+    "pass_rate": 87.2
+   },
+   "hamzat_wasl": {
+    "n": 10082,
+    "median_signed_z": 0.0,
+    "pass_rate": 99.7
+   },
+   "jahr": {
+    "n": 13111,
+    "median_signed_z": 0.0,
+    "pass_rate": 71.5
+   },
+   "madd_tabii": {
+    "n": 26270,
+    "median_signed_z": 0.0,
+    "pass_rate": 87.8
+   },
+   "tafkheem:lam_allah": {
+    "n": 1610,
+    "median_signed_z": -0.04,
+    "pass_rate": 86.6
+   },
+   "hams": {
+    "n": 5289,
+    "median_signed_z": -0.02,
+    "pass_rate": 100.0
+   },
+   "safir": {
+    "n": 5307,
+    "median_signed_z": 0.0,
+    "pass_rate": 98.5
+   },
+   "rakhawah": {
+    "n": 9892,
+    "median_signed_z": 0.0,
+    "pass_rate": 90.2
+   },
+   "izhar_shafawi:before_waw_faa": {
+    "n": 607,
+    "median_signed_z": -0.0,
+    "pass_rate": 90.8
+   },
+   "tafkheem": {
+    "n": 9896,
+    "median_signed_z": -0.0,
+    "pass_rate": 83.9
+   },
+   "ikhfa:light": {
+    "n": 3327,
+    "median_signed_z": 0.0,
+    "pass_rate": 99.9
+   },
+   "ghunnah": {
+    "n": 4843,
+    "median_signed_z": -0.01,
+    "pass_rate": 91.1
+   },
+   "izhar_halqi": {
+    "n": 2018,
+    "median_signed_z": 0.0,
+    "pass_rate": 95.3
+   },
+   "qalqalah:sughra": {
+    "n": 2964,
+    "median_signed_z": -0.02,
+    "pass_rate": 99.0
+   },
+   "idgham_ghunnah:kamil": {
+    "n": 1421,
+    "median_signed_z": -0.01,
+    "pass_rate": 97.2
+   },
+   "tarqeeq:raa": {
+    "n": 2282,
+    "median_signed_z": 0.0,
+    "pass_rate": 89.4
+   },
+   "takreer": {
+    "n": 2774,
+    "median_signed_z": 0.0,
+    "pass_rate": 74.4
+   },
+   "iqlab": {
+    "n": 480,
+    "median_signed_z": -0.0,
+    "pass_rate": 99.6
+   },
+   "idgham_ghunnah:naqis": {
+    "n": 1287,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "shiddah": {
+    "n": 1225,
+    "median_signed_z": 0.0,
+    "pass_rate": 77.6
+   },
+   "tafashhi": {
+    "n": 1807,
+    "median_signed_z": 0.0,
+    "pass_rate": 92.3
+   },
+   "qalqalah:kubra": {
+    "n": 554,
+    "median_signed_z": -0.01,
+    "pass_rate": 98.4
+   },
+   "madd_silah_sughra": {
+    "n": 516,
+    "median_signed_z": 0.0,
+    "pass_rate": 86.8
+   },
+   "madd_iwad": {
+    "n": 1033,
+    "median_signed_z": 0.0,
+    "pass_rate": 96.0
+   },
+   "ikhfa_shafawi": {
+    "n": 131,
+    "median_signed_z": 0.0,
+    "pass_rate": 97.7
+   },
+   "madd_muttasil": {
+    "n": 1387,
+    "median_signed_z": 0.0,
+    "pass_rate": 97.4
+   },
+   "madd_munfasil": {
+    "n": 1905,
+    "median_signed_z": 0.0,
+    "pass_rate": 97.6
+   },
+   "idgham_shafawi": {
+    "n": 805,
+    "median_signed_z": 0.0,
+    "pass_rate": 93.4
+   },
+   "idgham_no_ghunnah": {
+    "n": 910,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "madd_silah_kubra": {
+    "n": 87,
+    "median_signed_z": -0.05,
+    "pass_rate": 98.9
+   },
+   "ikhfa:heavy": {
+    "n": 688,
+    "median_signed_z": 0.0,
+    "pass_rate": 99.9
+   },
+   "madd_badal": {
+    "n": 173,
+    "median_signed_z": 0.0,
+    "pass_rate": 91.9
+   },
+   "idgham_mutajanisayn:kamil": {
+    "n": 53,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "istitaalah": {
+    "n": 92,
+    "median_signed_z": 0.0,
+    "pass_rate": 98.9
+   },
+   "qalqalah:akbar": {
+    "n": 61,
+    "median_signed_z": 0.09,
+    "pass_rate": 93.4
+   },
+   "madd_lazim:kalimi": {
+    "n": 66,
+    "median_signed_z": 0.0,
+    "pass_rate": 97.0
+   },
+   "idgham_mithlayn:kamil": {
+    "n": 16,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "madd_lazim:harfi": {
+    "n": 35,
+    "median_signed_z": 0.0,
+    "pass_rate": 97.1
+   }
+  },
+  "Husary_Muallim_128kbps": {
+   "rakhawah": {
+    "n": 8103,
+    "median_signed_z": 0.0,
+    "pass_rate": 93.3
+   },
+   "hams": {
+    "n": 4077,
+    "median_signed_z": -0.15,
+    "pass_rate": 100.0
+   },
+   "hamzat_wasl": {
+    "n": 8633,
+    "median_signed_z": 0.0,
+    "pass_rate": 97.7
+   },
+   "safir": {
+    "n": 5010,
+    "median_signed_z": 0.0,
+    "pass_rate": 97.9
+   },
+   "madd_tabii": {
+    "n": 21724,
+    "median_signed_z": 0.0,
+    "pass_rate": 93.0
+   },
+   "tafkheem:raa": {
+    "n": 6276,
+    "median_signed_z": 0.0,
+    "pass_rate": 92.9
+   },
+   "tafkheem": {
+    "n": 7686,
+    "median_signed_z": -0.05,
+    "pass_rate": 94.7
+   },
+   "tawassut": {
+    "n": 7948,
+    "median_signed_z": 0.0,
+    "pass_rate": 83.8
+   },
+   "jahr": {
+    "n": 11252,
+    "median_signed_z": 0.0,
+    "pass_rate": 69.8
+   },
+   "idgham_ghunnah:kamil": {
+    "n": 1062,
+    "median_signed_z": -0.12,
+    "pass_rate": 87.5
+   },
+   "madd_muttasil": {
+    "n": 1201,
+    "median_signed_z": 0.0,
+    "pass_rate": 98.2
+   },
+   "idgham_ghunnah:naqis": {
+    "n": 975,
+    "median_signed_z": -0.38,
+    "pass_rate": 99.8
+   },
+   "takreer": {
+    "n": 2333,
+    "median_signed_z": 0.0,
+    "pass_rate": 76.2
+   },
+   "qalqalah:kubra": {
+    "n": 448,
+    "median_signed_z": 0.0,
+    "pass_rate": 97.8
+   },
+   "qalqalah:sughra": {
+    "n": 2289,
+    "median_signed_z": 0.0,
+    "pass_rate": 99.5
+   },
+   "izhar_shafawi:before_waw_faa": {
+    "n": 568,
+    "median_signed_z": -0.11,
+    "pass_rate": 98.6
+   },
+   "madd_munfasil": {
+    "n": 1408,
+    "median_signed_z": 0.0,
+    "pass_rate": 96.0
+   },
+   "idgham_shafawi": {
+    "n": 582,
+    "median_signed_z": -0.26,
+    "pass_rate": 89.2
+   },
+   "tafkheem:lam_allah": {
+    "n": 1444,
+    "median_signed_z": -0.14,
+    "pass_rate": 91.1
+   },
+   "iqlab": {
+    "n": 368,
+    "median_signed_z": -0.08,
+    "pass_rate": 99.5
+   },
+   "ghunnah": {
+    "n": 3605,
+    "median_signed_z": -0.27,
+    "pass_rate": 79.8
+   },
+   "izhar_halqi": {
+    "n": 1781,
+    "median_signed_z": 0.0,
+    "pass_rate": 96.7
+   },
+   "ikhfa:light": {
+    "n": 2676,
+    "median_signed_z": -0.04,
+    "pass_rate": 99.9
+   },
+   "tarqeeq:raa": {
+    "n": 1793,
+    "median_signed_z": 0.0,
+    "pass_rate": 89.0
+   },
+   "idgham_no_ghunnah": {
+    "n": 715,
+    "median_signed_z": 0.0,
+    "pass_rate": 99.7
+   },
+   "shiddah": {
+    "n": 971,
+    "median_signed_z": 0.0,
+    "pass_rate": 87.3
+   },
+   "izhar_shafawi": {
+    "n": 2293,
+    "median_signed_z": -0.02,
+    "pass_rate": 98.5
+   },
+   "tarqeeq:lam_allah": {
+    "n": 515,
+    "median_signed_z": 0.0,
+    "pass_rate": 98.4
+   },
+   "tafashhi": {
+    "n": 1495,
+    "median_signed_z": 0.0,
+    "pass_rate": 95.5
+   },
+   "ikhfa:heavy": {
+    "n": 529,
+    "median_signed_z": -0.05,
+    "pass_rate": 99.8
+   },
+   "madd_iwad": {
+    "n": 876,
+    "median_signed_z": 0.0,
+    "pass_rate": 97.8
+   },
+   "madd_lazim:kalimi": {
+    "n": 62,
+    "median_signed_z": 0.0,
+    "pass_rate": 93.5
+   },
+   "madd_badal": {
+    "n": 150,
+    "median_signed_z": 0.0,
+    "pass_rate": 97.3
+   },
+   "madd_silah_sughra": {
+    "n": 605,
+    "median_signed_z": 0.0,
+    "pass_rate": 91.4
+   },
+   "istitaalah": {
+    "n": 151,
+    "median_signed_z": 0.16,
+    "pass_rate": 100.0
+   },
+   "idgham_mutajanisayn:kamil": {
+    "n": 32,
+    "median_signed_z": 0.0,
+    "pass_rate": 96.9
+   },
+   "madd_silah_kubra": {
+    "n": 86,
+    "median_signed_z": 0.0,
+    "pass_rate": 98.8
+   },
+   "madd_lazim:harfi": {
+    "n": 20,
+    "median_signed_z": 0.0,
+    "pass_rate": 95.0
+   },
+   "qalqalah:akbar": {
+    "n": 61,
+    "median_signed_z": 3.39,
+    "pass_rate": 83.6
+   },
+   "ikhfa_shafawi": {
+    "n": 90,
+    "median_signed_z": -1.01,
+    "pass_rate": 92.2
+   },
+   "idgham_mithlayn:kamil": {
+    "n": 11,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   }
+  },
+  "Abdul_Basit_Murattal_192kbps": {
+   "madd_tabii": {
+    "n": 15883,
+    "median_signed_z": 0.0,
+    "pass_rate": 90.8
+   },
+   "tawassut": {
+    "n": 4862,
+    "median_signed_z": 0.01,
+    "pass_rate": 78.2
+   },
+   "jahr": {
+    "n": 7073,
+    "median_signed_z": 0.0,
+    "pass_rate": 82.6
+   },
+   "tafashhi": {
+    "n": 1025,
+    "median_signed_z": -1.68,
+    "pass_rate": 59.3
+   },
+   "hamzat_wasl": {
+    "n": 6366,
+    "median_signed_z": 0.0,
+    "pass_rate": 99.3
+   },
+   "ghunnah": {
+    "n": 3176,
+    "median_signed_z": 0.0,
+    "pass_rate": 83.4
+   },
+   "tafkheem": {
+    "n": 6557,
+    "median_signed_z": 0.01,
+    "pass_rate": 81.0
+   },
+   "ikhfa:light": {
+    "n": 1369,
+    "median_signed_z": 0.0,
+    "pass_rate": 97.1
+   },
+   "tafkheem:raa": {
+    "n": 4485,
+    "median_signed_z": 0.01,
+    "pass_rate": 89.0
+   },
+   "rakhawah": {
+    "n": 5697,
+    "median_signed_z": 0.0,
+    "pass_rate": 91.9
+   },
+   "madd_iwad": {
+    "n": 650,
+    "median_signed_z": 0.0,
+    "pass_rate": 94.5
+   },
+   "hams": {
+    "n": 2877,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "idgham_ghunnah:kamil": {
+    "n": 788,
+    "median_signed_z": 0.0,
+    "pass_rate": 93.9
+   },
+   "izhar_halqi": {
+    "n": 1052,
+    "median_signed_z": 0.0,
+    "pass_rate": 95.2
+   },
+   "qalqalah:sughra": {
+    "n": 1761,
+    "median_signed_z": 0.0,
+    "pass_rate": 99.3
+   },
+   "safir": {
+    "n": 1217,
+    "median_signed_z": 0.76,
+    "pass_rate": 98.4
+   },
+   "qalqalah:kubra": {
+    "n": 312,
+    "median_signed_z": -0.09,
+    "pass_rate": 98.7
+   },
+   "tarqeeq:lam_allah": {
+    "n": 473,
+    "median_signed_z": 1.76,
+    "pass_rate": 99.4
+   },
+   "madd_silah_sughra": {
+    "n": 244,
+    "median_signed_z": 0.0,
+    "pass_rate": 88.1
+   },
+   "madd_muttasil": {
+    "n": 1014,
+    "median_signed_z": 0.0,
+    "pass_rate": 97.6
+   },
+   "madd_munfasil": {
+    "n": 1166,
+    "median_signed_z": 0.0,
+    "pass_rate": 94.9
+   },
+   "idgham_shafawi": {
+    "n": 458,
+    "median_signed_z": 0.03,
+    "pass_rate": 79.3
+   },
+   "tarqeeq:raa": {
+    "n": 1240,
+    "median_signed_z": 0.0,
+    "pass_rate": 95.1
+   },
+   "shiddah": {
+    "n": 767,
+    "median_signed_z": 0.08,
+    "pass_rate": 77.3
+   },
+   "idgham_no_ghunnah": {
+    "n": 585,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "takreer": {
+    "n": 1458,
+    "median_signed_z": 0.0,
+    "pass_rate": 80.5
+   },
+   "tafkheem:lam_allah": {
+    "n": 1194,
+    "median_signed_z": 0.0,
+    "pass_rate": 83.9
+   },
+   "ikhfa:heavy": {
+    "n": 317,
+    "median_signed_z": 0.01,
+    "pass_rate": 96.8
+   },
+   "madd_badal": {
+    "n": 96,
+    "median_signed_z": -0.18,
+    "pass_rate": 91.7
+   },
+   "idgham_ghunnah:naqis": {
+    "n": 699,
+    "median_signed_z": 0.21,
+    "pass_rate": 97.1
+   },
+   "izhar_shafawi": {
+    "n": 1142,
+    "median_signed_z": 0.0,
+    "pass_rate": 92.8
+   },
+   "izhar_shafawi:before_waw_faa": {
+    "n": 194,
+    "median_signed_z": 0.04,
+    "pass_rate": 87.6
+   },
+   "iqlab": {
+    "n": 220,
+    "median_signed_z": 0.0,
+    "pass_rate": 86.8
+   },
+   "qalqalah:akbar": {
+    "n": 37,
+    "median_signed_z": -0.05,
+    "pass_rate": 91.9
+   },
+   "istitaalah": {
+    "n": 37,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "madd_lazim:kalimi": {
+    "n": 40,
+    "median_signed_z": 0.0,
+    "pass_rate": 95.0
+   },
+   "madd_silah_kubra": {
+    "n": 51,
+    "median_signed_z": 0.0,
+    "pass_rate": 98.0
+   },
+   "madd_lazim:harfi": {
+    "n": 15,
+    "median_signed_z": 0.0,
+    "pass_rate": 86.7
+   },
+   "idgham_mutajanisayn:kamil": {
+    "n": 37,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "ikhfa_shafawi": {
+    "n": 30,
+    "median_signed_z": 0.06,
+    "pass_rate": 70.0
+   },
+   "idgham_mithlayn:kamil": {
+    "n": 10,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   }
+  },
+  "Alafasy_128kbps": {
+   "madd_tabii": {
+    "n": 15284,
+    "median_signed_z": 0.0,
+    "pass_rate": 86.9
+   },
+   "safir": {
+    "n": 2995,
+    "median_signed_z": -0.47,
+    "pass_rate": 93.0
+   },
+   "tafkheem": {
+    "n": 6260,
+    "median_signed_z": 0.0,
+    "pass_rate": 85.9
+   },
+   "ghunnah": {
+    "n": 2947,
+    "median_signed_z": 0.67,
+    "pass_rate": 85.9
+   },
+   "iqlab": {
+    "n": 276,
+    "median_signed_z": 0.57,
+    "pass_rate": 80.8
+   },
+   "shiddah": {
+    "n": 737,
+    "median_signed_z": -0.28,
+    "pass_rate": 84.0
+   },
+   "hams": {
+    "n": 3106,
+    "median_signed_z": 0.28,
+    "pass_rate": 100.0
+   },
+   "izhar_halqi": {
+    "n": 1317,
+    "median_signed_z": -0.02,
+    "pass_rate": 95.8
+   },
+   "izhar_shafawi": {
+    "n": 1260,
+    "median_signed_z": -0.07,
+    "pass_rate": 92.1
+   },
+   "ikhfa:light": {
+    "n": 1770,
+    "median_signed_z": 0.56,
+    "pass_rate": 92.9
+   },
+   "tafkheem:raa": {
+    "n": 4292,
+    "median_signed_z": 0.15,
+    "pass_rate": 92.5
+   },
+   "takreer": {
+    "n": 1504,
+    "median_signed_z": 2.0,
+    "pass_rate": 69.9
+   },
+   "tawassut": {
+    "n": 4872,
+    "median_signed_z": -0.23,
+    "pass_rate": 84.9
+   },
+   "jahr": {
+    "n": 7544,
+    "median_signed_z": 0.0,
+    "pass_rate": 82.0
+   },
+   "madd_iwad": {
+    "n": 593,
+    "median_signed_z": 2.58,
+    "pass_rate": 31.9
+   },
+   "idgham_shafawi": {
+    "n": 489,
+    "median_signed_z": 0.39,
+    "pass_rate": 81.8
+   },
+   "rakhawah": {
+    "n": 5668,
+    "median_signed_z": -0.08,
+    "pass_rate": 92.9
+   },
+   "hamzat_wasl": {
+    "n": 5850,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "qalqalah:sughra": {
+    "n": 1863,
+    "median_signed_z": 0.0,
+    "pass_rate": 98.6
+   },
+   "tafashhi": {
+    "n": 1159,
+    "median_signed_z": 0.0,
+    "pass_rate": 93.6
+   },
+   "idgham_ghunnah:naqis": {
+    "n": 782,
+    "median_signed_z": 0.49,
+    "pass_rate": 91.6
+   },
+   "idgham_ghunnah:kamil": {
+    "n": 837,
+    "median_signed_z": 0.56,
+    "pass_rate": 90.0
+   },
+   "tarqeeq:lam_allah": {
+    "n": 414,
+    "median_signed_z": -0.09,
+    "pass_rate": 95.4
+   },
+   "tafkheem:lam_allah": {
+    "n": 1044,
+    "median_signed_z": 0.02,
+    "pass_rate": 90.2
+   },
+   "madd_munfasil": {
+    "n": 998,
+    "median_signed_z": 0.76,
+    "pass_rate": 82.5
+   },
+   "ikhfa:heavy": {
+    "n": 368,
+    "median_signed_z": 0.49,
+    "pass_rate": 87.5
+   },
+   "madd_silah_sughra": {
+    "n": 154,
+    "median_signed_z": 0.0,
+    "pass_rate": 88.3
+   },
+   "tarqeeq:raa": {
+    "n": 1184,
+    "median_signed_z": -0.08,
+    "pass_rate": 93.1
+   },
+   "madd_muttasil": {
+    "n": 836,
+    "median_signed_z": 1.16,
+    "pass_rate": 73.7
+   },
+   "idgham_no_ghunnah": {
+    "n": 561,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "madd_lazim:kalimi": {
+    "n": 38,
+    "median_signed_z": 1.96,
+    "pass_rate": 42.1
+   },
+   "qalqalah:kubra": {
+    "n": 342,
+    "median_signed_z": 0.44,
+    "pass_rate": 96.5
+   },
+   "idgham_mutajanisayn:kamil": {
+    "n": 31,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "qalqalah:akbar": {
+    "n": 25,
+    "median_signed_z": -0.41,
+    "pass_rate": 92.0
+   },
+   "ikhfa_shafawi": {
+    "n": 59,
+    "median_signed_z": 0.1,
+    "pass_rate": 74.6
+   },
+   "izhar_shafawi:before_waw_faa": {
+    "n": 277,
+    "median_signed_z": 0.0,
+    "pass_rate": 91.7
+   },
+   "istitaalah": {
+    "n": 37,
+    "median_signed_z": -0.14,
+    "pass_rate": 97.3
+   },
+   "madd_badal": {
+    "n": 101,
+    "median_signed_z": 0.0,
+    "pass_rate": 98.0
+   },
+   "madd_lazim:harfi": {
+    "n": 10,
+    "median_signed_z": 1.16,
+    "pass_rate": 70.0
+   },
+   "idgham_mithlayn:kamil": {
+    "n": 9,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "madd_silah_kubra": {
+    "n": 33,
+    "median_signed_z": 2.53,
+    "pass_rate": 33.3
+   }
+  },
+  "Hudhaify_128kbps": {
+   "rakhawah": {
+    "n": 5248,
+    "median_signed_z": -0.27,
+    "pass_rate": 91.1
+   },
+   "jahr": {
+    "n": 7054,
+    "median_signed_z": 0.0,
+    "pass_rate": 81.3
+   },
+   "safir": {
+    "n": 3473,
+    "median_signed_z": -1.77,
+    "pass_rate": 56.6
+   },
+   "hamzat_wasl": {
+    "n": 6373,
+    "median_signed_z": 0.0,
+    "pass_rate": 99.8
+   },
+   "tawassut": {
+    "n": 4790,
+    "median_signed_z": -0.23,
+    "pass_rate": 78.0
+   },
+   "madd_tabii": {
+    "n": 15024,
+    "median_signed_z": -0.35,
+    "pass_rate": 88.9
+   },
+   "tafkheem:raa": {
+    "n": 5020,
+    "median_signed_z": 0.29,
+    "pass_rate": 92.2
+   },
+   "idgham_ghunnah:naqis": {
+    "n": 789,
+    "median_signed_z": 0.65,
+    "pass_rate": 89.1
+   },
+   "qalqalah:kubra": {
+    "n": 377,
+    "median_signed_z": 0.82,
+    "pass_rate": 99.5
+   },
+   "tarqeeq:lam_allah": {
+    "n": 455,
+    "median_signed_z": 1.83,
+    "pass_rate": 99.3
+   },
+   "qalqalah:sughra": {
+    "n": 2042,
+    "median_signed_z": 0.7,
+    "pass_rate": 100.0
+   },
+   "ghunnah": {
+    "n": 3193,
+    "median_signed_z": 0.9,
+    "pass_rate": 74.3
+   },
+   "ikhfa:light": {
+    "n": 1759,
+    "median_signed_z": 0.79,
+    "pass_rate": 82.9
+   },
+   "izhar_halqi": {
+    "n": 1344,
+    "median_signed_z": -0.34,
+    "pass_rate": 96.4
+   },
+   "istitaalah": {
+    "n": 41,
+    "median_signed_z": -0.49,
+    "pass_rate": 95.1
+   },
+   "idgham_ghunnah:kamil": {
+    "n": 884,
+    "median_signed_z": 0.67,
+    "pass_rate": 85.2
+   },
+   "tafkheem:lam_allah": {
+    "n": 1085,
+    "median_signed_z": 0.8,
+    "pass_rate": 81.8
+   },
+   "hams": {
+    "n": 2710,
     "median_signed_z": 0.0,
     "pass_rate": 100.0
    },
    "tafkheem": {
-    "n": 276,
-    "median_signed_z": 0.41,
-    "pass_rate": 85.9
-   },
-   "ghunnah": {
-    "n": 163,
-    "median_signed_z": -0.19,
-    "pass_rate": 99.4
-   },
-   "madd_munfasil": {
-    "n": 28,
-    "median_signed_z": -2.06,
-    "pass_rate": 46.4
-   },
-   "shiddah": {
-    "n": 28,
-    "median_signed_z": -0.14,
-    "pass_rate": 100.0
-   },
-   "hams": {
-    "n": 57,
-    "median_signed_z": 0.8,
-    "pass_rate": 100.0
-   },
-   "rakhawah": {
-    "n": 74,
-    "median_signed_z": -0.49,
-    "pass_rate": 91.9
-   },
-   "jahr": {
-    "n": 133,
-    "median_signed_z": 0.0,
-    "pass_rate": 78.2
-   },
-   "tarqeeq:raa": {
-    "n": 67,
-    "median_signed_z": 0.0,
-    "pass_rate": 94.0
-   },
-   "madd_tabii": {
-    "n": 467,
-    "median_signed_z": -0.08,
-    "pass_rate": 94.6
+    "n": 6674,
+    "median_signed_z": 0.73,
+    "pass_rate": 85.5
    },
    "idgham_no_ghunnah": {
-    "n": 12,
-    "median_signed_z": -0.48,
-    "pass_rate": 100.0
-   },
-   "tafkheem:raa": {
-    "n": 143,
-    "median_signed_z": 0.12,
-    "pass_rate": 74.1
-   },
-   "takreer": {
-    "n": 53,
-    "median_signed_z": 0.6,
-    "pass_rate": 100.0
-   },
-   "ikhfa:light": {
-    "n": 31,
-    "median_signed_z": -0.75,
-    "pass_rate": 100.0
-   },
-   "tawassut": {
-    "n": 107,
-    "median_signed_z": -0.11,
-    "pass_rate": 98.1
-   },
-   "safir": {
-    "n": 150,
-    "median_signed_z": -1.57,
-    "pass_rate": 66.7
-   },
-   "tafkheem:lam_allah": {
-    "n": 16,
-    "median_signed_z": 0.03,
-    "pass_rate": 75.0
-   },
-   "qalqalah:sughra": {
-    "n": 94,
-    "median_signed_z": 0.19,
-    "pass_rate": 98.9
-   },
-   "tafashhi": {
-    "n": 55,
-    "median_signed_z": 0.0,
-    "pass_rate": 80.0
-   },
-   "qalqalah:kubra": {
-    "n": 17,
-    "median_signed_z": 0.63,
-    "pass_rate": 100.0
-   },
-   "madd_muttasil": {
-    "n": 60,
-    "median_signed_z": 0.0,
-    "pass_rate": 83.3
-   },
-   "idgham_ghunnah:kamil": {
-    "n": 26,
-    "median_signed_z": -0.31,
-    "pass_rate": 96.2
-   },
-   "idgham_ghunnah:naqis": {
-    "n": 8,
-    "median_signed_z": -0.01,
-    "pass_rate": 100.0
-   },
-   "izhar_halqi": {
-    "n": 31,
-    "median_signed_z": -0.4,
-    "pass_rate": 96.8
-   },
-   "tarqeeq:lam_allah": {
-    "n": 11,
-    "median_signed_z": 0.14,
-    "pass_rate": 100.0
-   },
-   "izhar_shafawi": {
-    "n": 12,
-    "median_signed_z": -0.87,
-    "pass_rate": 100.0
-   },
-   "idgham_shafawi": {
-    "n": 17,
-    "median_signed_z": -0.28,
-    "pass_rate": 94.1
-   },
-   "madd_iwad": {
-    "n": 36,
-    "median_signed_z": 2.2,
-    "pass_rate": 50.0
-   },
-   "iqlab": {
-    "n": 8,
-    "median_signed_z": -0.81,
+    "n": 635,
+    "median_signed_z": -0.02,
     "pass_rate": 100.0
    },
    "ikhfa:heavy": {
-    "n": 3,
-    "median_signed_z": -0.87,
-    "pass_rate": 100.0
+    "n": 354,
+    "median_signed_z": 1.03,
+    "pass_rate": 74.9
+   },
+   "takreer": {
+    "n": 1600,
+    "median_signed_z": 2.0,
+    "pass_rate": 60.1
+   },
+   "izhar_shafawi": {
+    "n": 1084,
+    "median_signed_z": -0.31,
+    "pass_rate": 93.0
+   },
+   "madd_muttasil": {
+    "n": 874,
+    "median_signed_z": 2.13,
+    "pass_rate": 43.0
+   },
+   "tafashhi": {
+    "n": 462,
+    "median_signed_z": -3.33,
+    "pass_rate": 16.0
+   },
+   "tarqeeq:raa": {
+    "n": 1439,
+    "median_signed_z": -0.08,
+    "pass_rate": 94.7
+   },
+   "madd_badal": {
+    "n": 134,
+    "median_signed_z": -0.8,
+    "pass_rate": 95.5
+   },
+   "madd_munfasil": {
+    "n": 1316,
+    "median_signed_z": 2.64,
+    "pass_rate": 34.3
+   },
+   "madd_silah_kubra": {
+    "n": 71,
+    "median_signed_z": 3.69,
+    "pass_rate": 16.9
+   },
+   "madd_lazim:kalimi": {
+    "n": 37,
+    "median_signed_z": 3.03,
+    "pass_rate": 32.4
+   },
+   "izhar_shafawi:before_waw_faa": {
+    "n": 191,
+    "median_signed_z": 0.11,
+    "pass_rate": 92.7
+   },
+   "idgham_shafawi": {
+    "n": 481,
+    "median_signed_z": 0.72,
+    "pass_rate": 80.2
+   },
+   "madd_iwad": {
+    "n": 709,
+    "median_signed_z": 0.0,
+    "pass_rate": 88.0
+   },
+   "shiddah": {
+    "n": 854,
+    "median_signed_z": -0.47,
+    "pass_rate": 81.3
+   },
+   "iqlab": {
+    "n": 270,
+    "median_signed_z": 0.75,
+    "pass_rate": 71.5
    },
    "madd_silah_sughra": {
-    "n": 2,
-    "median_signed_z": -1.35,
-    "pass_rate": 100.0
+    "n": 285,
+    "median_signed_z": -1.22,
+    "pass_rate": 81.4
    },
    "idgham_mutajanisayn:kamil": {
-    "n": 1,
+    "n": 27,
     "median_signed_z": 0.0,
     "pass_rate": 100.0
+   },
+   "ikhfa_shafawi": {
+    "n": 42,
+    "median_signed_z": 1.38,
+    "pass_rate": 52.4
+   },
+   "qalqalah:akbar": {
+    "n": 30,
+    "median_signed_z": 0.54,
+    "pass_rate": 96.7
+   },
+   "madd_lazim:harfi": {
+    "n": 15,
+    "median_signed_z": 0.0,
+    "pass_rate": 86.7
+   },
+   "idgham_mithlayn:kamil": {
+    "n": 10,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   }
+  },
+  "Minshawy_Murattal_128kbps": {
+   "hamzat_wasl": {
+    "n": 5430,
+    "median_signed_z": 0.0,
+    "pass_rate": 99.8
+   },
+   "tawassut": {
+    "n": 3617,
+    "median_signed_z": 0.11,
+    "pass_rate": 75.4
+   },
+   "jahr": {
+    "n": 5541,
+    "median_signed_z": 0.0,
+    "pass_rate": 78.6
+   },
+   "madd_tabii": {
+    "n": 12857,
+    "median_signed_z": 0.0,
+    "pass_rate": 86.4
+   },
+   "rakhawah": {
+    "n": 4529,
+    "median_signed_z": 0.0,
+    "pass_rate": 88.9
+   },
+   "idgham_no_ghunnah": {
+    "n": 510,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "tafkheem": {
+    "n": 6034,
+    "median_signed_z": 0.55,
+    "pass_rate": 70.5
+   },
+   "tafkheem:raa": {
+    "n": 3955,
+    "median_signed_z": 0.27,
+    "pass_rate": 80.2
+   },
+   "idgham_ghunnah:naqis": {
+    "n": 800,
+    "median_signed_z": 0.0,
+    "pass_rate": 98.2
+   },
+   "safir": {
+    "n": 2788,
+    "median_signed_z": 0.01,
+    "pass_rate": 97.5
+   },
+   "madd_muttasil": {
+    "n": 771,
+    "median_signed_z": 0.0,
+    "pass_rate": 93.3
+   },
+   "ikhfa:light": {
+    "n": 1463,
+    "median_signed_z": 0.0,
+    "pass_rate": 98.2
+   },
+   "tarqeeq:raa": {
+    "n": 1186,
+    "median_signed_z": -0.37,
+    "pass_rate": 77.6
+   },
+   "tarqeeq:lam_allah": {
+    "n": 443,
+    "median_signed_z": -0.28,
+    "pass_rate": 92.8
+   },
+   "izhar_shafawi": {
+    "n": 949,
+    "median_signed_z": 0.0,
+    "pass_rate": 85.7
+   },
+   "ghunnah": {
+    "n": 3232,
+    "median_signed_z": 0.0,
+    "pass_rate": 84.0
+   },
+   "hams": {
+    "n": 2572,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "izhar_shafawi:before_waw_faa": {
+    "n": 170,
+    "median_signed_z": 1.0,
+    "pass_rate": 78.8
+   },
+   "shiddah": {
+    "n": 567,
+    "median_signed_z": 0.14,
+    "pass_rate": 75.1
+   },
+   "tafashhi": {
+    "n": 1140,
+    "median_signed_z": -0.39,
+    "pass_rate": 90.0
+   },
+   "madd_munfasil": {
+    "n": 921,
+    "median_signed_z": 0.0,
+    "pass_rate": 89.8
+   },
+   "izhar_halqi": {
+    "n": 980,
+    "median_signed_z": 0.0,
+    "pass_rate": 92.9
+   },
+   "takreer": {
+    "n": 1310,
+    "median_signed_z": 0.0,
+    "pass_rate": 87.9
+   },
+   "ikhfa_shafawi": {
+    "n": 48,
+    "median_signed_z": 0.08,
+    "pass_rate": 81.2
+   },
+   "qalqalah:sughra": {
+    "n": 1314,
+    "median_signed_z": -0.62,
+    "pass_rate": 96.1
+   },
+   "madd_badal": {
+    "n": 73,
+    "median_signed_z": -0.36,
+    "pass_rate": 94.5
+   },
+   "qalqalah:kubra": {
+    "n": 244,
+    "median_signed_z": -0.79,
+    "pass_rate": 89.3
+   },
+   "idgham_ghunnah:kamil": {
+    "n": 821,
+    "median_signed_z": 0.0,
+    "pass_rate": 93.5
+   },
+   "tafkheem:lam_allah": {
+    "n": 1127,
+    "median_signed_z": 0.64,
+    "pass_rate": 70.6
+   },
+   "idgham_mithlayn:kamil": {
+    "n": 9,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "iqlab": {
+    "n": 214,
+    "median_signed_z": 0.0,
+    "pass_rate": 91.1
+   },
+   "madd_iwad": {
+    "n": 544,
+    "median_signed_z": 0.0,
+    "pass_rate": 92.3
+   },
+   "idgham_shafawi": {
+    "n": 487,
+    "median_signed_z": 0.0,
+    "pass_rate": 82.8
+   },
+   "ikhfa:heavy": {
+    "n": 298,
+    "median_signed_z": 0.0,
+    "pass_rate": 98.3
+   },
+   "madd_lazim:kalimi": {
+    "n": 36,
+    "median_signed_z": 0.0,
+    "pass_rate": 94.4
+   },
+   "istitaalah": {
+    "n": 21,
+    "median_signed_z": 0.0,
+    "pass_rate": 95.2
+   },
+   "madd_silah_kubra": {
+    "n": 28,
+    "median_signed_z": 0.04,
+    "pass_rate": 89.3
+   },
+   "madd_silah_sughra": {
+    "n": 107,
+    "median_signed_z": -0.28,
+    "pass_rate": 86.9
+   },
+   "qalqalah:akbar": {
+    "n": 21,
+    "median_signed_z": -2.13,
+    "pass_rate": 28.6
+   },
+   "idgham_mutajanisayn:kamil": {
+    "n": 27,
+    "median_signed_z": 0.0,
+    "pass_rate": 100.0
+   },
+   "madd_lazim:harfi": {
+    "n": 15,
+    "median_signed_z": 0.0,
+    "pass_rate": 93.3
    }
   }
  },
  "indices": {
-  "studio": 6,
-  "taraweeh": 3
+  "taraweeh": 5,
+  "studio": 6
  }
 }

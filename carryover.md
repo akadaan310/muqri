@@ -95,11 +95,7 @@ Done means all of the following:
 - **Rejected calibration outputs:** the first run's unbounded weight search (wasl ×30) and the MAD-only scale were both rejected. See the README.
 
 **Remaining:**
-1. **Collect the `fill` run.** It was launched 2026-09-24 ~05:00 UTC with `--skip-done benchmarks/done_full.json`; Sudais, Juhaynee, Shuraym and Qatami go first. Then:
-   - `collect --tag fill --kernels 5`
-   - gzip the rows
-   - rerun `calibrate.jl`, `discover.jl` and `summarize.py` on `full` + `fill` rows together
-   - update the README tables with the new numbers
+1. **`fill` run: done** (2026-09-24). 68,461 rows committed gzipped in `benchmarks/results/kaggle/fill/`; with `full`, the five Quran-MD imams are complete. Scored under calibration v3 (the bands come from the studio-all anchor and peer rows, which these rows would only duplicate): see the README results. Al-Juhany's rows are an alignment failure (posterior 0, harakah 80 ms, SNR 8 dB), not a score.
 2. **Reciters outside Quran-MD.** Tablawi, Ayyoub, Budair, Matroud and Al-Muaiqly: run on the VM from EveryAyah (`benchmarks/run_benchmark.py --reciters … --modes studio taraweeh_adapted`, strategic set or more), then re-calibrate.
 3. **Fingerprint style similarity** should use the calibrated z-scores. `app/fingerprint.py compute_tajweed_vector` still uses textbook-derived fields.
 4. **Octave cross-check at scale.** Kaggle kernels have no internet, so apt can't install Octave. Run `octave_bridge.py` on the VM over a Husary subset: rows from the gz files, audio from EveryAyah or a `kaggle datasets download` of Quran-MD part 2. Report the correlation and MAE of Octave vs Python `core_ms`, and of the formants vs Praat.

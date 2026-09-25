@@ -1,0 +1,2820 @@
+{
+ "experiment": "nasality specificity control on the decisive window (one unit)",
+ "unit": {
+  "reciter": "Husary_128kbps",
+  "surah": 11,
+  "ayah": 2,
+  "letter_id": "11:2:L24",
+  "rule": "ghunnah",
+  "source_audio": "everyayah:Husary_128kbps/011002.mp3",
+  "audio_sha256_16": "ae1eec5780e0e76e"
+ },
+ "window_s": [
+  10.3,
+  10.32
+ ],
+ "interior_s": [
+  9.48,
+  10.3
+ ],
+ "world_context_s": [
+  9.18,
+  10.620000000000001
+ ],
+ "provenance": {
+  "commit": "d2eafbb769514766ecdc345e39f1fc886e2e311d",
+  "working_tree_porcelain": "",
+  "script_sha256_16": "1acd270a2ff6b313",
+  "started": "2026-09-25T19:46:17Z",
+  "working_tree_clean": true,
+  "finished": "2026-09-25T19:48:08Z",
+  "python": "3.11.16",
+  "engine": "app.engine.Engine (makhraj=True), unmodified",
+  "model": "obadx/muaalem-model-v3_2",
+  "N_bit_identical_to_V1_construction": true,
+  "prior_artifacts": {
+   "smoke_records": "7bef873 dirty tree",
+   "alignment_experiment": "1ea5dd9 clean (results 1a6a560)"
+  }
+ },
+ "variants": {
+  "V0": {
+   "transform": "none",
+   "parameters": {},
+   "window_s": null,
+   "implementation": "—"
+  },
+  "B": {
+   "transform": "window no-op (interior nasal only)",
+   "parameters": {
+    "interior_g_db": -12.0
+   },
+   "window_s": [
+    10.3,
+    10.32
+   ],
+   "implementation": "world_lab.world/nasal(interior)/synth + perturb.splice"
+  },
+  "N": {
+   "transform": "nasal",
+   "parameters": {
+    "g_db": -12.0,
+    "pole_hz": 250,
+    "anti_hz": 900
+   },
+   "window_s": [
+    10.3,
+    10.32
+   ],
+   "implementation": "world_lab.nasal on interior+window (== transforms.apply nasal [9.48,10.32])"
+  },
+  "C1": {
+   "transform": "off-band resonance edit",
+   "parameters": {
+    "g_db": -12.0,
+    "pole_hz": 2000.0,
+    "anti_hz": 2650.0
+   },
+   "window_s": [
+    10.3,
+    10.32
+   ],
+   "implementation": "nasality_exp.off_band (world_lab.nasal expression, centres +1750 Hz)"
+  },
+  "C2": {
+   "transform": "flat envelope gain",
+   "parameters": {
+    "g_db": 1.48
+   },
+   "window_s": [
+    10.3,
+    10.32
+   ],
+   "implementation": "nasality_exp.flat_gain (constant envelope multiplication)"
+  },
+  "W": {
+   "transform": "noop_world",
+   "parameters": {},
+   "window_s": null,
+   "implementation": "transforms.apply noop_world [9.48,10.32] (world_lab.world -> synth)"
+  }
+ },
+ "c2_gain_db_from_N_minus_B_rms": 1.48,
+ "matching": {
+  "C1": {
+   "energy_matched": false,
+   "shape_magnitude_ratio_to_N": 0.92,
+   "shape_matched": true,
+   "non_nasal": true,
+   "rms_db": 2.23,
+   "N_rms_db": 1.48,
+   "nasal_ratio_change_db": 0.08,
+   "N_nasal_ratio_change_db": -19.94
+  },
+  "C2": {
+   "energy_matched": true,
+   "shape_magnitude_ratio_to_N": 0.74,
+   "shape_matched": true,
+   "non_nasal": true,
+   "rms_db": 1.35,
+   "N_rms_db": 1.48,
+   "nasal_ratio_change_db": 0.17,
+   "N_nasal_ratio_change_db": -19.94
+  }
+ },
+ "physics": {
+  "V0": {
+   "window": {
+    "window_s": [
+     10.3,
+     10.32
+    ],
+    "low_150_400_db": 21.28,
+    "anti_750_1100_db": 13.95,
+    "nasal_ratio_rect_db": 7.34,
+    "rms_db": -17.33,
+    "bands_db": {
+     "0-150": -10.72,
+     "150-400": 21.28,
+     "400-750": 20.92,
+     "750-1100": 13.95,
+     "1100-1500": 14.3,
+     "1500-2000": 20.68,
+     "2000-2400": 9.46,
+     "2400-3000": 18.58,
+     "3000-4000": 18.64,
+     "4000-8000": 4.98
+    },
+    "praat": {
+     "voiced_fraction": 1.0,
+     "f0_hz": 227.48,
+     "hnr_db": 11.65,
+     "f1_hz": 735.3,
+     "f2_hz": 1651.4,
+     "f3_hz": 2850.2
+    }
+   },
+   "interior": {
+    "window_s": [
+     9.48,
+     10.3
+    ],
+    "low_150_400_db": 52.98,
+    "anti_750_1100_db": 34.1,
+    "nasal_ratio_rect_db": 17.82,
+    "rms_db": -21.86,
+    "praat_hann": {
+     "span_duration_s": 0.82,
+     "voiced_fraction": 1.0,
+     "voiced_duration_s": 0.82,
+     "f0_hz": 204.88,
+     "hnr_db": 22.46,
+     "f1_hz": 403.1,
+     "f2_hz": 1795.2,
+     "f3_hz": 2586.4,
+     "nasal_ratio_db": 18.87,
+     "rms_db": -21.86
+    }
+   },
+   "vs_B_window": {
+    "rms_db": -0.51,
+    "nasal_ratio_rect_db": 0.1,
+    "low_150_400_db": -0.38,
+    "anti_750_1100_db": -0.11,
+    "bands_db": {
+     "0-150": -15.24,
+     "150-400": -0.38,
+     "400-750": 0.05,
+     "750-1100": -0.11,
+     "1100-1500": 0.02,
+     "1500-2000": -0.88,
+     "2000-2400": 0.37,
+     "2400-3000": -0.08,
+     "3000-4000": -1.23,
+     "4000-8000": 0.46
+    },
+    "spectral_change_mean_abs_db_100_4000": 1.19,
+    "spectral_change_mean_abs_db_outside_nasal_bands": 1.22
+   },
+   "vs_V0_window": {
+    "rms_db": 0.0,
+    "nasal_ratio_rect_db": 0.0,
+    "low_150_400_db": 0.0,
+    "anti_750_1100_db": 0.0,
+    "bands_db": {
+     "0-150": 0.0,
+     "150-400": 0.0,
+     "400-750": 0.0,
+     "750-1100": 0.0,
+     "1100-1500": 0.0,
+     "1500-2000": 0.0,
+     "2000-2400": 0.0,
+     "2400-3000": 0.0,
+     "3000-4000": 0.0,
+     "4000-8000": 0.0
+    },
+    "spectral_change_mean_abs_db_100_4000": 0.0,
+    "spectral_change_mean_abs_db_outside_nasal_bands": 0.0
+   },
+   "vs_B_interior": {
+    "rms_db": 2.68,
+    "nasal_ratio_rect_db": 20.16,
+    "low_150_400_db": 9.63,
+    "anti_750_1100_db": -11.1,
+    "bands_db": {
+     "0-150": 0.3,
+     "150-400": 9.63,
+     "400-750": 1.07,
+     "750-1100": -11.1,
+     "1100-1500": -1.43,
+     "1500-2000": 0.05,
+     "2000-2400": -0.86,
+     "2400-3000": -1.47,
+     "3000-4000": -3.43,
+     "4000-8000": -2.64
+    },
+    "spectral_change_mean_abs_db_100_4000": 2.64,
+    "spectral_change_mean_abs_db_outside_nasal_bands": 1.76
+   },
+   "vs_B_neighbours": {
+    "[10.28,10.3]": 1.55,
+    "[10.32,10.34]": -1.21,
+    "[10.34,10.4]": -2.49
+   },
+   "samples_changed_vs_V0_s": null
+  },
+  "B": {
+   "window": {
+    "window_s": [
+     10.3,
+     10.32
+    ],
+    "low_150_400_db": 21.66,
+    "anti_750_1100_db": 14.06,
+    "nasal_ratio_rect_db": 7.24,
+    "rms_db": -16.82,
+    "bands_db": {
+     "0-150": 4.52,
+     "150-400": 21.66,
+     "400-750": 20.87,
+     "750-1100": 14.06,
+     "1100-1500": 14.28,
+     "1500-2000": 21.56,
+     "2000-2400": 9.09,
+     "2400-3000": 18.66,
+     "3000-4000": 19.87,
+     "4000-8000": 4.52
+    },
+    "praat": {
+     "voiced_fraction": 1.0,
+     "f0_hz": 228.38,
+     "hnr_db": 11.21,
+     "f1_hz": 735.6,
+     "f2_hz": 1638.8,
+     "f3_hz": 2857.9
+    }
+   },
+   "interior": {
+    "window_s": [
+     9.48,
+     10.3
+    ],
+    "low_150_400_db": 43.35,
+    "anti_750_1100_db": 45.2,
+    "nasal_ratio_rect_db": -2.34,
+    "rms_db": -24.54,
+    "praat_hann": {
+     "span_duration_s": 0.82,
+     "voiced_fraction": 1.0,
+     "voiced_duration_s": 0.82,
+     "f0_hz": 204.62,
+     "hnr_db": 18.66,
+     "f1_hz": 767.5,
+     "f2_hz": 1803.7,
+     "f3_hz": 2497.2,
+     "nasal_ratio_db": -1.86,
+     "rms_db": -24.54
+    }
+   },
+   "vs_B_window": {
+    "rms_db": 0.0,
+    "nasal_ratio_rect_db": 0.0,
+    "low_150_400_db": 0.0,
+    "anti_750_1100_db": 0.0,
+    "bands_db": {
+     "0-150": 0.0,
+     "150-400": 0.0,
+     "400-750": 0.0,
+     "750-1100": 0.0,
+     "1100-1500": 0.0,
+     "1500-2000": 0.0,
+     "2000-2400": 0.0,
+     "2400-3000": 0.0,
+     "3000-4000": 0.0,
+     "4000-8000": 0.0
+    },
+    "spectral_change_mean_abs_db_100_4000": 0.0,
+    "spectral_change_mean_abs_db_outside_nasal_bands": 0.0
+   },
+   "vs_V0_window": {
+    "rms_db": 0.51,
+    "nasal_ratio_rect_db": -0.1,
+    "low_150_400_db": 0.38,
+    "anti_750_1100_db": 0.11,
+    "bands_db": {
+     "0-150": 15.24,
+     "150-400": 0.38,
+     "400-750": -0.05,
+     "750-1100": 0.11,
+     "1100-1500": -0.02,
+     "1500-2000": 0.88,
+     "2000-2400": -0.37,
+     "2400-3000": 0.08,
+     "3000-4000": 1.23,
+     "4000-8000": -0.46
+    },
+    "spectral_change_mean_abs_db_100_4000": 1.19,
+    "spectral_change_mean_abs_db_outside_nasal_bands": 1.22
+   },
+   "vs_B_interior": {
+    "rms_db": 0.0,
+    "nasal_ratio_rect_db": 0.0,
+    "low_150_400_db": 0.0,
+    "anti_750_1100_db": 0.0,
+    "bands_db": {
+     "0-150": 0.0,
+     "150-400": 0.0,
+     "400-750": 0.0,
+     "750-1100": 0.0,
+     "1100-1500": 0.0,
+     "1500-2000": 0.0,
+     "2000-2400": 0.0,
+     "2400-3000": 0.0,
+     "3000-4000": 0.0,
+     "4000-8000": 0.0
+    },
+    "spectral_change_mean_abs_db_100_4000": 0.0,
+    "spectral_change_mean_abs_db_outside_nasal_bands": 0.0
+   },
+   "vs_B_neighbours": {
+    "[10.28,10.3]": 0.0,
+    "[10.32,10.34]": 0.0,
+    "[10.34,10.4]": 0.0
+   },
+   "samples_changed_vs_V0_s": [
+    9.1801,
+    10.6199
+   ]
+  },
+  "N": {
+   "window": {
+    "window_s": [
+     10.3,
+     10.32
+    ],
+    "low_150_400_db": 9.73,
+    "anti_750_1100_db": 25.09,
+    "nasal_ratio_rect_db": -12.7,
+    "rms_db": -15.34,
+    "bands_db": {
+     "0-150": 4.2,
+     "150-400": 9.73,
+     "400-750": 24.04,
+     "750-1100": 25.09,
+     "1100-1500": 15.18,
+     "1500-2000": 21.56,
+     "2000-2400": 9.09,
+     "2400-3000": 18.67,
+     "3000-4000": 19.87,
+     "4000-8000": 4.52
+    },
+    "praat": {
+     "voiced_fraction": 1.0,
+     "f0_hz": 228.33,
+     "hnr_db": 13.84,
+     "f1_hz": 851.2,
+     "f2_hz": 1659.8,
+     "f3_hz": 2857.8
+    }
+   },
+   "interior": {
+    "window_s": [
+     9.48,
+     10.3
+    ],
+    "low_150_400_db": 43.35,
+    "anti_750_1100_db": 45.2,
+    "nasal_ratio_rect_db": -2.36,
+    "rms_db": -24.54,
+    "praat_hann": {
+     "span_duration_s": 0.82,
+     "voiced_fraction": 1.0,
+     "voiced_duration_s": 0.82,
+     "f0_hz": 204.62,
+     "hnr_db": 18.67,
+     "f1_hz": 767.5,
+     "f2_hz": 1803.7,
+     "f3_hz": 2497.2,
+     "nasal_ratio_db": -1.86,
+     "rms_db": -24.54
+    }
+   },
+   "vs_B_window": {
+    "rms_db": 1.48,
+    "nasal_ratio_rect_db": -19.94,
+    "low_150_400_db": -11.93,
+    "anti_750_1100_db": 11.03,
+    "bands_db": {
+     "0-150": -0.32,
+     "150-400": -11.93,
+     "400-750": 3.17,
+     "750-1100": 11.03,
+     "1100-1500": 0.9,
+     "1500-2000": 0.0,
+     "2000-2400": 0.0,
+     "2400-3000": 0.01,
+     "3000-4000": 0.0,
+     "4000-8000": 0.0
+    },
+    "spectral_change_mean_abs_db_100_4000": 2.05,
+    "spectral_change_mean_abs_db_outside_nasal_bands": 0.87
+   },
+   "vs_V0_window": {
+    "rms_db": 1.99,
+    "nasal_ratio_rect_db": -20.04,
+    "low_150_400_db": -11.55,
+    "anti_750_1100_db": 11.14,
+    "bands_db": {
+     "0-150": 14.92,
+     "150-400": -11.55,
+     "400-750": 3.12,
+     "750-1100": 11.14,
+     "1100-1500": 0.88,
+     "1500-2000": 0.88,
+     "2000-2400": -0.37,
+     "2400-3000": 0.09,
+     "3000-4000": 1.23,
+     "4000-8000": -0.46
+    },
+    "spectral_change_mean_abs_db_100_4000": 2.86,
+    "spectral_change_mean_abs_db_outside_nasal_bands": 1.94
+   },
+   "vs_B_interior": {
+    "rms_db": 0.0,
+    "nasal_ratio_rect_db": -0.02,
+    "low_150_400_db": 0.0,
+    "anti_750_1100_db": 0.0,
+    "bands_db": {
+     "0-150": 0.0,
+     "150-400": 0.0,
+     "400-750": 0.0,
+     "750-1100": 0.0,
+     "1100-1500": 0.0,
+     "1500-2000": 0.0,
+     "2000-2400": 0.0,
+     "2400-3000": 0.0,
+     "3000-4000": 0.0,
+     "4000-8000": 0.0
+    },
+    "spectral_change_mean_abs_db_100_4000": 0.0,
+    "spectral_change_mean_abs_db_outside_nasal_bands": 0.0
+   },
+   "vs_B_neighbours": {
+    "[10.28,10.3]": 0.09,
+    "[10.32,10.34]": -0.01,
+    "[10.34,10.4]": -0.0
+   },
+   "samples_changed_vs_V0_s": [
+    9.1801,
+    10.6199
+   ]
+  },
+  "C1": {
+   "window": {
+    "window_s": [
+     10.3,
+     10.32
+    ],
+    "low_150_400_db": 21.66,
+    "anti_750_1100_db": 14.05,
+    "nasal_ratio_rect_db": 7.32,
+    "rms_db": -14.59,
+    "bands_db": {
+     "0-150": 4.53,
+     "150-400": 21.66,
+     "400-750": 20.87,
+     "750-1100": 14.05,
+     "1100-1500": 14.29,
+     "1500-2000": 21.33,
+     "2000-2400": 5.86,
+     "2400-3000": 26.88,
+     "3000-4000": 20.03,
+     "4000-8000": 4.52
+    },
+    "praat": {
+     "voiced_fraction": 1.0,
+     "f0_hz": 228.48,
+     "hnr_db": 10.87,
+     "f1_hz": 735.9,
+     "f2_hz": 1611.9,
+     "f3_hz": 2757.3
+    }
+   },
+   "interior": {
+    "window_s": [
+     9.48,
+     10.3
+    ],
+    "low_150_400_db": 43.35,
+    "anti_750_1100_db": 45.2,
+    "nasal_ratio_rect_db": -2.33,
+    "rms_db": -24.53,
+    "praat_hann": {
+     "span_duration_s": 0.82,
+     "voiced_fraction": 1.0,
+     "voiced_duration_s": 0.82,
+     "f0_hz": 204.62,
+     "hnr_db": 18.65,
+     "f1_hz": 767.5,
+     "f2_hz": 1803.7,
+     "f3_hz": 2497.2,
+     "nasal_ratio_db": -1.86,
+     "rms_db": -24.53
+    }
+   },
+   "vs_B_window": {
+    "rms_db": 2.23,
+    "nasal_ratio_rect_db": 0.08,
+    "low_150_400_db": 0.0,
+    "anti_750_1100_db": -0.01,
+    "bands_db": {
+     "0-150": 0.01,
+     "150-400": 0.0,
+     "400-750": 0.0,
+     "750-1100": -0.01,
+     "1100-1500": 0.01,
+     "1500-2000": -0.23,
+     "2000-2400": -3.23,
+     "2400-3000": 8.22,
+     "3000-4000": 0.16,
+     "4000-8000": 0.0
+    },
+    "spectral_change_mean_abs_db_100_4000": 1.88,
+    "spectral_change_mean_abs_db_outside_nasal_bands": 2.16
+   },
+   "vs_V0_window": {
+    "rms_db": 2.74,
+    "nasal_ratio_rect_db": -0.02,
+    "low_150_400_db": 0.38,
+    "anti_750_1100_db": 0.1,
+    "bands_db": {
+     "0-150": 15.25,
+     "150-400": 0.38,
+     "400-750": -0.05,
+     "750-1100": 0.1,
+     "1100-1500": -0.01,
+     "1500-2000": 0.65,
+     "2000-2400": -3.6,
+     "2400-3000": 8.3,
+     "3000-4000": 1.39,
+     "4000-8000": -0.46
+    },
+    "spectral_change_mean_abs_db_100_4000": 2.69,
+    "spectral_change_mean_abs_db_outside_nasal_bands": 2.93
+   },
+   "vs_B_interior": {
+    "rms_db": 0.01,
+    "nasal_ratio_rect_db": 0.01,
+    "low_150_400_db": 0.0,
+    "anti_750_1100_db": 0.0,
+    "bands_db": {
+     "0-150": 0.0,
+     "150-400": 0.0,
+     "400-750": 0.0,
+     "750-1100": 0.0,
+     "1100-1500": 0.0,
+     "1500-2000": 0.0,
+     "2000-2400": 0.0,
+     "2400-3000": 0.0,
+     "3000-4000": 0.0,
+     "4000-8000": 0.0
+    },
+    "spectral_change_mean_abs_db_100_4000": 0.0,
+    "spectral_change_mean_abs_db_outside_nasal_bands": 0.0
+   },
+   "vs_B_neighbours": {
+    "[10.28,10.3]": 0.13,
+    "[10.32,10.34]": 0.07,
+    "[10.34,10.4]": 0.0
+   },
+   "samples_changed_vs_V0_s": [
+    9.1801,
+    10.6199
+   ]
+  },
+  "C2": {
+   "window": {
+    "window_s": [
+     10.3,
+     10.32
+    ],
+    "low_150_400_db": 23.14,
+    "anti_750_1100_db": 15.54,
+    "nasal_ratio_rect_db": 7.41,
+    "rms_db": -15.47,
+    "bands_db": {
+     "0-150": 7.99,
+     "150-400": 23.14,
+     "400-750": 22.33,
+     "750-1100": 15.54,
+     "1100-1500": 15.75,
+     "1500-2000": 23.03,
+     "2000-2400": 10.55,
+     "2400-3000": 20.14,
+     "3000-4000": 21.34,
+     "4000-8000": 5.99
+    },
+    "praat": {
+     "voiced_fraction": 1.0,
+     "f0_hz": 228.39,
+     "hnr_db": 11.07,
+     "f1_hz": 725.9,
+     "f2_hz": 1638.5,
+     "f3_hz": 2857.6
+    }
+   },
+   "interior": {
+    "window_s": [
+     9.48,
+     10.3
+    ],
+    "low_150_400_db": 43.35,
+    "anti_750_1100_db": 45.2,
+    "nasal_ratio_rect_db": -2.33,
+    "rms_db": -24.52,
+    "praat_hann": {
+     "span_duration_s": 0.82,
+     "voiced_fraction": 1.0,
+     "voiced_duration_s": 0.82,
+     "f0_hz": 204.62,
+     "hnr_db": 18.65,
+     "f1_hz": 768.1,
+     "f2_hz": 1806.2,
+     "f3_hz": 2500.2,
+     "nasal_ratio_db": -1.86,
+     "rms_db": -24.52
+    }
+   },
+   "vs_B_window": {
+    "rms_db": 1.35,
+    "nasal_ratio_rect_db": 0.17,
+    "low_150_400_db": 1.48,
+    "anti_750_1100_db": 1.48,
+    "bands_db": {
+     "0-150": 3.47,
+     "150-400": 1.48,
+     "400-750": 1.46,
+     "750-1100": 1.48,
+     "1100-1500": 1.47,
+     "1500-2000": 1.47,
+     "2000-2400": 1.46,
+     "2400-3000": 1.48,
+     "3000-4000": 1.47,
+     "4000-8000": 1.47
+    },
+    "spectral_change_mean_abs_db_100_4000": 1.52,
+    "spectral_change_mean_abs_db_outside_nasal_bands": 1.52
+   },
+   "vs_V0_window": {
+    "rms_db": 1.86,
+    "nasal_ratio_rect_db": 0.07,
+    "low_150_400_db": 1.86,
+    "anti_750_1100_db": 1.59,
+    "bands_db": {
+     "0-150": 18.71,
+     "150-400": 1.86,
+     "400-750": 1.41,
+     "750-1100": 1.59,
+     "1100-1500": 1.45,
+     "1500-2000": 2.35,
+     "2000-2400": 1.09,
+     "2400-3000": 1.56,
+     "3000-4000": 2.7,
+     "4000-8000": 1.01
+    },
+    "spectral_change_mean_abs_db_100_4000": 1.98,
+    "spectral_change_mean_abs_db_outside_nasal_bands": 1.99
+   },
+   "vs_B_interior": {
+    "rms_db": 0.02,
+    "nasal_ratio_rect_db": 0.01,
+    "low_150_400_db": 0.0,
+    "anti_750_1100_db": 0.0,
+    "bands_db": {
+     "0-150": 0.0,
+     "150-400": 0.0,
+     "400-750": 0.0,
+     "750-1100": 0.0,
+     "1100-1500": 0.0,
+     "1500-2000": 0.0,
+     "2000-2400": 0.0,
+     "2400-3000": 0.0,
+     "3000-4000": 0.0,
+     "4000-8000": 0.0
+    },
+    "spectral_change_mean_abs_db_100_4000": 0.0,
+    "spectral_change_mean_abs_db_outside_nasal_bands": 0.0
+   },
+   "vs_B_neighbours": {
+    "[10.28,10.3]": 0.57,
+    "[10.32,10.34]": 0.02,
+    "[10.34,10.4]": 0.0
+   },
+   "samples_changed_vs_V0_s": [
+    9.1801,
+    10.6199
+   ]
+  },
+  "W": {
+   "window": {
+    "window_s": [
+     10.3,
+     10.32
+    ],
+    "low_150_400_db": 21.69,
+    "anti_750_1100_db": 14.06,
+    "nasal_ratio_rect_db": 7.33,
+    "rms_db": -16.76,
+    "bands_db": {
+     "0-150": 3.9,
+     "150-400": 21.69,
+     "400-750": 20.87,
+     "750-1100": 14.06,
+     "1100-1500": 14.28,
+     "1500-2000": 21.56,
+     "2000-2400": 9.09,
+     "2400-3000": 18.67,
+     "3000-4000": 19.87,
+     "4000-8000": 4.52
+    },
+    "praat": {
+     "voiced_fraction": 1.0,
+     "f0_hz": 228.38,
+     "hnr_db": 13.71,
+     "f1_hz": 689.4,
+     "f2_hz": 1636.3,
+     "f3_hz": 2857.9
+    }
+   },
+   "interior": {
+    "window_s": [
+     9.48,
+     10.3
+    ],
+    "low_150_400_db": 53.36,
+    "anti_750_1100_db": 34.67,
+    "nasal_ratio_rect_db": 17.5,
+    "rms_db": -21.25,
+    "praat_hann": {
+     "span_duration_s": 0.82,
+     "voiced_fraction": 1.0,
+     "voiced_duration_s": 0.82,
+     "f0_hz": 204.64,
+     "hnr_db": 22.4,
+     "f1_hz": 393.1,
+     "f2_hz": 1778.2,
+     "f3_hz": 2670.8,
+     "nasal_ratio_db": 18.69,
+     "rms_db": -21.25
+    }
+   },
+   "vs_B_window": {
+    "rms_db": 0.06,
+    "nasal_ratio_rect_db": 0.09,
+    "low_150_400_db": 0.03,
+    "anti_750_1100_db": 0.0,
+    "bands_db": {
+     "0-150": -0.62,
+     "150-400": 0.03,
+     "400-750": 0.0,
+     "750-1100": 0.0,
+     "1100-1500": 0.0,
+     "1500-2000": 0.0,
+     "2000-2400": 0.0,
+     "2400-3000": 0.01,
+     "3000-4000": 0.0,
+     "4000-8000": 0.0
+    },
+    "spectral_change_mean_abs_db_100_4000": 0.01,
+    "spectral_change_mean_abs_db_outside_nasal_bands": 0.0
+   },
+   "vs_V0_window": {
+    "rms_db": 0.57,
+    "nasal_ratio_rect_db": -0.01,
+    "low_150_400_db": 0.41,
+    "anti_750_1100_db": 0.11,
+    "bands_db": {
+     "0-150": 14.62,
+     "150-400": 0.41,
+     "400-750": -0.05,
+     "750-1100": 0.11,
+     "1100-1500": -0.02,
+     "1500-2000": 0.88,
+     "2000-2400": -0.37,
+     "2400-3000": 0.09,
+     "3000-4000": 1.23,
+     "4000-8000": -0.46
+    },
+    "spectral_change_mean_abs_db_100_4000": 1.18,
+    "spectral_change_mean_abs_db_outside_nasal_bands": 1.22
+   },
+   "vs_B_interior": {
+    "rms_db": 3.29,
+    "nasal_ratio_rect_db": 19.84,
+    "low_150_400_db": 10.01,
+    "anti_750_1100_db": -10.53,
+    "bands_db": {
+     "0-150": 0.41,
+     "150-400": 10.01,
+     "400-750": 1.86,
+     "750-1100": -10.53,
+     "1100-1500": -0.05,
+     "1500-2000": 0.0,
+     "2000-2400": 0.0,
+     "2400-3000": 0.0,
+     "3000-4000": 0.0,
+     "4000-8000": 0.0
+    },
+    "spectral_change_mean_abs_db_100_4000": 1.83,
+    "spectral_change_mean_abs_db_outside_nasal_bands": 0.83
+   },
+   "vs_B_neighbours": {
+    "[10.28,10.3]": 2.05,
+    "[10.32,10.34]": 0.0,
+    "[10.34,10.4]": 0.0
+   },
+   "samples_changed_vs_V0_s": [
+    9.1801,
+    10.6199
+   ]
+  }
+ },
+ "muqri": {
+  "V0": {
+   "independent": {
+    "identity:margin": 44.201,
+    "identity:confirmed": true,
+    "identity:competitor": "∅",
+    "identity:blind_spot_p": 0.003,
+    "head:ghonna:margin": 11.278,
+    "head:ghonna:realised": true,
+    "head:ghonna:scored": true,
+    "head:hams_or_jahr:margin": 12.615,
+    "head:hams_or_jahr:realised": true,
+    "head:hams_or_jahr:scored": true,
+    "head:istitala:margin": 13.432,
+    "head:istitala:realised": true,
+    "head:istitala:scored": false,
+    "head:itbaq:margin": 12.895,
+    "head:itbaq:realised": true,
+    "head:itbaq:scored": true,
+    "head:qalqla:margin": 12.507,
+    "head:qalqla:realised": true,
+    "head:qalqla:scored": true,
+    "head:safeer:margin": 13.734,
+    "head:safeer:realised": true,
+    "head:safeer:scored": true,
+    "head:shidda_or_rakhawa:margin": 12.372,
+    "head:shidda_or_rakhawa:realised": true,
+    "head:shidda_or_rakhawa:scored": false,
+    "head:tafashie:margin": 17.729,
+    "head:tafashie:realised": true,
+    "head:tafashie:scored": true,
+    "head:tafkheem_or_taqeeq:margin": 15.58,
+    "head:tafkheem_or_taqeeq:realised": true,
+    "head:tafkheem_or_taqeeq:scored": true,
+    "head:tikraar:margin": 16.042,
+    "head:tikraar:realised": true,
+    "head:tikraar:scored": false,
+    "makhraj:ل": 50.51,
+    "makhraj:م": 45.576,
+    "makhraj:ر": 67.119,
+    "letter:duration_s": 0.84,
+    "rule:ghunnah:status": "pass",
+    "rule:ghunnah:counts": 2.49,
+    "rule:madd_tabii:status": "pass",
+    "rule:madd_tabii:counts": 1.71
+   },
+   "held": {
+    "identity:margin": 44.201,
+    "identity:confirmed": true,
+    "identity:competitor": "∅",
+    "identity:blind_spot_p": 0.003,
+    "head:ghonna:margin": 11.278,
+    "head:ghonna:realised": true,
+    "head:ghonna:scored": true,
+    "head:hams_or_jahr:margin": 12.615,
+    "head:hams_or_jahr:realised": true,
+    "head:hams_or_jahr:scored": true,
+    "head:istitala:margin": 13.432,
+    "head:istitala:realised": true,
+    "head:istitala:scored": false,
+    "head:itbaq:margin": 12.895,
+    "head:itbaq:realised": true,
+    "head:itbaq:scored": true,
+    "head:qalqla:margin": 12.507,
+    "head:qalqla:realised": true,
+    "head:qalqla:scored": true,
+    "head:safeer:margin": 13.734,
+    "head:safeer:realised": true,
+    "head:safeer:scored": true,
+    "head:shidda_or_rakhawa:margin": 12.372,
+    "head:shidda_or_rakhawa:realised": true,
+    "head:shidda_or_rakhawa:scored": false,
+    "head:tafashie:margin": 17.729,
+    "head:tafashie:realised": true,
+    "head:tafashie:scored": true,
+    "head:tafkheem_or_taqeeq:margin": 15.58,
+    "head:tafkheem_or_taqeeq:realised": true,
+    "head:tafkheem_or_taqeeq:scored": true,
+    "head:tikraar:margin": 16.042,
+    "head:tikraar:realised": true,
+    "head:tikraar:scored": false,
+    "makhraj:ل": 50.51,
+    "makhraj:م": 45.576,
+    "makhraj:ر": 67.119,
+    "letter:duration_s": 0.84,
+    "rule:ghunnah:status": "pass",
+    "rule:ghunnah:counts": 2.49,
+    "rule:madd_tabii:status": "pass",
+    "rule:madd_tabii:counts": 1.71
+   },
+   "alignment_L20_L30": {
+    "11:2:L20": [
+     189,
+     191
+    ],
+    "11:2:L21": [
+     229,
+     230
+    ],
+    "11:2:L22": [
+     230,
+     231
+    ],
+    "11:2:L23": [
+     231,
+     233
+    ],
+    "11:2:L24": [
+     237,
+     258
+    ],
+    "11:2:L25": [
+     258,
+     260
+    ],
+    "11:2:L26": [
+     265,
+     266
+    ],
+    "11:2:L27": [
+     266,
+     269
+    ],
+    "11:2:L28": [
+     269,
+     275
+    ],
+    "11:2:L29": [
+     281,
+     283
+    ],
+    "11:2:L30": [
+     283,
+     285
+    ]
+   },
+   "L24_moved": false,
+   "letters_moved_vs_V0": [],
+   "frame_posteriors_255_258": [
+    {
+     "frame": 255,
+     "t_s": 10.2,
+     "logp_noon": -7.027,
+     "logp_blank": -0.001,
+     "top3": [
+      [
+       "[PAD]",
+       -0.001
+      ],
+      [
+       "ن",
+       -7.027
+      ],
+      [
+       "ء",
+       -14.501
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -9.731,
+      "[لا غنة]": -13.498
+     }
+    },
+    {
+     "frame": 256,
+     "t_s": 10.24,
+     "logp_noon": -0.227,
+     "logp_blank": -1.594,
+     "top3": [
+      [
+       "ن",
+       -0.227
+      ],
+      [
+       "[PAD]",
+       -1.594
+      ],
+      [
+       "م",
+       -12.592
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -0.103,
+      "[لا غنة]": -11.496
+     }
+    },
+    {
+     "frame": 257,
+     "t_s": 10.28,
+     "logp_noon": -0.0,
+     "logp_blank": -10.152,
+     "top3": [
+      [
+       "ن",
+       -0.0
+      ],
+      [
+       "ل",
+       -9.852
+      ],
+      [
+       "[PAD]",
+       -10.152
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -0.0,
+      "[لا غنة]": -12.125
+     }
+    },
+    {
+     "frame": 258,
+     "t_s": 10.32,
+     "logp_noon": -15.422,
+     "logp_blank": -11.171,
+     "top3": [
+      [
+       "َ",
+       -0.0
+      ],
+      [
+       "[PAD]",
+       -11.171
+      ],
+      [
+       "ن",
+       -15.422
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -12.435,
+      "[لا غنة]": -12.883
+     }
+    }
+   ],
+   "audio_sha256_16": "ae1eec5780e0e76e",
+   "audio_local": "data/nasality_exp/V0.wav"
+  },
+  "B": {
+   "independent": {
+    "identity:margin": 41.821,
+    "identity:confirmed": true,
+    "identity:competitor": "∅",
+    "identity:blind_spot_p": 0.003,
+    "head:ghonna:margin": 10.983,
+    "head:ghonna:realised": true,
+    "head:ghonna:scored": true,
+    "head:hams_or_jahr:margin": 12.547,
+    "head:hams_or_jahr:realised": true,
+    "head:hams_or_jahr:scored": true,
+    "head:istitala:margin": 13.458,
+    "head:istitala:realised": true,
+    "head:istitala:scored": false,
+    "head:itbaq:margin": 12.684,
+    "head:itbaq:realised": true,
+    "head:itbaq:scored": true,
+    "head:qalqla:margin": 12.598,
+    "head:qalqla:realised": true,
+    "head:qalqla:scored": true,
+    "head:safeer:margin": 13.425,
+    "head:safeer:realised": true,
+    "head:safeer:scored": true,
+    "head:shidda_or_rakhawa:margin": 12.249,
+    "head:shidda_or_rakhawa:realised": true,
+    "head:shidda_or_rakhawa:scored": false,
+    "head:tafashie:margin": 16.375,
+    "head:tafashie:realised": true,
+    "head:tafashie:scored": true,
+    "head:tafkheem_or_taqeeq:margin": 15.281,
+    "head:tafkheem_or_taqeeq:realised": true,
+    "head:tafkheem_or_taqeeq:scored": true,
+    "head:tikraar:margin": 15.568,
+    "head:tikraar:realised": true,
+    "head:tikraar:scored": false,
+    "makhraj:ل": 50.926,
+    "makhraj:م": 45.73,
+    "makhraj:ر": 66.572,
+    "letter:duration_s": 0.84,
+    "rule:ghunnah:status": "pass",
+    "rule:ghunnah:counts": 2.49,
+    "rule:madd_tabii:status": "pass",
+    "rule:madd_tabii:counts": 1.71
+   },
+   "held": {
+    "identity:margin": 41.821,
+    "identity:confirmed": true,
+    "identity:competitor": "∅",
+    "identity:blind_spot_p": 0.003,
+    "head:ghonna:margin": 10.983,
+    "head:ghonna:realised": true,
+    "head:ghonna:scored": true,
+    "head:hams_or_jahr:margin": 12.547,
+    "head:hams_or_jahr:realised": true,
+    "head:hams_or_jahr:scored": true,
+    "head:istitala:margin": 13.458,
+    "head:istitala:realised": true,
+    "head:istitala:scored": false,
+    "head:itbaq:margin": 12.684,
+    "head:itbaq:realised": true,
+    "head:itbaq:scored": true,
+    "head:qalqla:margin": 12.598,
+    "head:qalqla:realised": true,
+    "head:qalqla:scored": true,
+    "head:safeer:margin": 13.425,
+    "head:safeer:realised": true,
+    "head:safeer:scored": true,
+    "head:shidda_or_rakhawa:margin": 12.249,
+    "head:shidda_or_rakhawa:realised": true,
+    "head:shidda_or_rakhawa:scored": false,
+    "head:tafashie:margin": 16.375,
+    "head:tafashie:realised": true,
+    "head:tafashie:scored": true,
+    "head:tafkheem_or_taqeeq:margin": 15.281,
+    "head:tafkheem_or_taqeeq:realised": true,
+    "head:tafkheem_or_taqeeq:scored": true,
+    "head:tikraar:margin": 15.568,
+    "head:tikraar:realised": true,
+    "head:tikraar:scored": false,
+    "makhraj:ل": 50.926,
+    "makhraj:م": 45.73,
+    "makhraj:ر": 66.572,
+    "letter:duration_s": 0.84,
+    "rule:ghunnah:status": "pass",
+    "rule:ghunnah:counts": 2.49,
+    "rule:madd_tabii:status": "pass",
+    "rule:madd_tabii:counts": 1.71
+   },
+   "alignment_L20_L30": {
+    "11:2:L20": [
+     189,
+     190
+    ],
+    "11:2:L21": [
+     190,
+     191
+    ],
+    "11:2:L22": [
+     230,
+     231
+    ],
+    "11:2:L23": [
+     232,
+     234
+    ],
+    "11:2:L24": [
+     237,
+     258
+    ],
+    "11:2:L25": [
+     258,
+     260
+    ],
+    "11:2:L26": [
+     265,
+     266
+    ],
+    "11:2:L27": [
+     266,
+     269
+    ],
+    "11:2:L28": [
+     269,
+     275
+    ],
+    "11:2:L29": [
+     281,
+     283
+    ],
+    "11:2:L30": [
+     283,
+     285
+    ]
+   },
+   "L24_moved": false,
+   "letters_moved_vs_V0": [
+    "11:2:L20",
+    "11:2:L21",
+    "11:2:L23"
+   ],
+   "frame_posteriors_255_258": [
+    {
+     "frame": 255,
+     "t_s": 10.2,
+     "logp_noon": -6.642,
+     "logp_blank": -0.001,
+     "top3": [
+      [
+       "[PAD]",
+       -0.001
+      ],
+      [
+       "ن",
+       -6.642
+      ],
+      [
+       "ء",
+       -14.106
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -8.682,
+      "[لا غنة]": -12.593
+     }
+    },
+    {
+     "frame": 256,
+     "t_s": 10.24,
+     "logp_noon": -0.003,
+     "logp_blank": -5.875,
+     "top3": [
+      [
+       "ن",
+       -0.003
+      ],
+      [
+       "[PAD]",
+       -5.875
+      ],
+      [
+       "م",
+       -11.219
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -0.001,
+      "[لا غنة]": -11.184
+     }
+    },
+    {
+     "frame": 257,
+     "t_s": 10.28,
+     "logp_noon": -0.006,
+     "logp_blank": -5.193,
+     "top3": [
+      [
+       "ن",
+       -0.006
+      ],
+      [
+       "[PAD]",
+       -5.193
+      ],
+      [
+       "َ",
+       -8.511
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -0.002,
+      "[لا غنة]": -11.796
+     }
+    },
+    {
+     "frame": 258,
+     "t_s": 10.32,
+     "logp_noon": -14.62,
+     "logp_blank": -10.863,
+     "top3": [
+      [
+       "َ",
+       -0.0
+      ],
+      [
+       "[PAD]",
+       -10.863
+      ],
+      [
+       "ن",
+       -14.62
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -12.163,
+      "[لا غنة]": -12.637
+     }
+    }
+   ],
+   "audio_sha256_16": "f5562952c9ca1a69",
+   "audio_local": "data/nasality_exp/B.wav"
+  },
+  "N": {
+   "independent": {
+    "identity:margin": 40.354,
+    "identity:confirmed": true,
+    "identity:competitor": "∅",
+    "identity:blind_spot_p": 0.003,
+    "head:ghonna:margin": 9.686,
+    "head:ghonna:realised": true,
+    "head:ghonna:scored": true,
+    "head:hams_or_jahr:margin": 11.555,
+    "head:hams_or_jahr:realised": true,
+    "head:hams_or_jahr:scored": true,
+    "head:istitala:margin": 12.398,
+    "head:istitala:realised": true,
+    "head:istitala:scored": false,
+    "head:itbaq:margin": 11.8,
+    "head:itbaq:realised": true,
+    "head:itbaq:scored": true,
+    "head:qalqla:margin": 12.424,
+    "head:qalqla:realised": true,
+    "head:qalqla:scored": true,
+    "head:safeer:margin": 12.449,
+    "head:safeer:realised": true,
+    "head:safeer:scored": true,
+    "head:shidda_or_rakhawa:margin": 10.706,
+    "head:shidda_or_rakhawa:realised": true,
+    "head:shidda_or_rakhawa:scored": false,
+    "head:tafashie:margin": 14.791,
+    "head:tafashie:realised": true,
+    "head:tafashie:scored": true,
+    "head:tafkheem_or_taqeeq:margin": 14.92,
+    "head:tafkheem_or_taqeeq:realised": true,
+    "head:tafkheem_or_taqeeq:scored": true,
+    "head:tikraar:margin": 14.086,
+    "head:tikraar:realised": true,
+    "head:tikraar:scored": false,
+    "makhraj:ل": 43.953,
+    "makhraj:م": 37.977,
+    "makhraj:ر": 59.276,
+    "letter:duration_s": 0.84,
+    "rule:ghunnah:status": "pass",
+    "rule:ghunnah:counts": 2.49,
+    "rule:madd_tabii:status": "pass",
+    "rule:madd_tabii:counts": 1.71
+   },
+   "held": {
+    "identity:margin": 40.354,
+    "identity:confirmed": true,
+    "identity:competitor": "∅",
+    "identity:blind_spot_p": 0.003,
+    "head:ghonna:margin": 9.48,
+    "head:ghonna:realised": true,
+    "head:ghonna:scored": true,
+    "head:hams_or_jahr:margin": 12.067,
+    "head:hams_or_jahr:realised": true,
+    "head:hams_or_jahr:scored": true,
+    "head:istitala:margin": 13.014,
+    "head:istitala:realised": true,
+    "head:istitala:scored": false,
+    "head:itbaq:margin": 12.432,
+    "head:itbaq:realised": true,
+    "head:itbaq:scored": true,
+    "head:qalqla:margin": 13.078,
+    "head:qalqla:realised": true,
+    "head:qalqla:scored": true,
+    "head:safeer:margin": 13.073,
+    "head:safeer:realised": true,
+    "head:safeer:scored": true,
+    "head:shidda_or_rakhawa:margin": 10.932,
+    "head:shidda_or_rakhawa:realised": true,
+    "head:shidda_or_rakhawa:scored": false,
+    "head:tafashie:margin": 14.788,
+    "head:tafashie:realised": true,
+    "head:tafashie:scored": true,
+    "head:tafkheem_or_taqeeq:margin": 14.895,
+    "head:tafkheem_or_taqeeq:realised": true,
+    "head:tafkheem_or_taqeeq:scored": true,
+    "head:tikraar:margin": 14.076,
+    "head:tikraar:realised": true,
+    "head:tikraar:scored": false,
+    "makhraj:ل": 43.953,
+    "makhraj:م": 37.977,
+    "makhraj:ر": 59.276,
+    "letter:duration_s": 0.84,
+    "rule:ghunnah:status": "pass",
+    "rule:ghunnah:counts": 2.49,
+    "rule:madd_tabii:status": "pass",
+    "rule:madd_tabii:counts": 1.71
+   },
+   "alignment_L20_L30": {
+    "11:2:L20": [
+     189,
+     190
+    ],
+    "11:2:L21": [
+     190,
+     191
+    ],
+    "11:2:L22": [
+     230,
+     231
+    ],
+    "11:2:L23": [
+     232,
+     234
+    ],
+    "11:2:L24": [
+     237,
+     257
+    ],
+    "11:2:L25": [
+     258,
+     259
+    ],
+    "11:2:L26": [
+     265,
+     266
+    ],
+    "11:2:L27": [
+     266,
+     269
+    ],
+    "11:2:L28": [
+     269,
+     275
+    ],
+    "11:2:L29": [
+     281,
+     283
+    ],
+    "11:2:L30": [
+     283,
+     285
+    ]
+   },
+   "L24_moved": true,
+   "letters_moved_vs_V0": [
+    "11:2:L20",
+    "11:2:L21",
+    "11:2:L23",
+    "11:2:L24",
+    "11:2:L25"
+   ],
+   "frame_posteriors_255_258": [
+    {
+     "frame": 255,
+     "t_s": 10.2,
+     "logp_noon": -5.545,
+     "logp_blank": -0.004,
+     "top3": [
+      [
+       "[PAD]",
+       -0.004
+      ],
+      [
+       "ن",
+       -5.545
+      ],
+      [
+       "م",
+       -13.557
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -5.989,
+      "[لا غنة]": -11.187
+     }
+    },
+    {
+     "frame": 256,
+     "t_s": 10.24,
+     "logp_noon": -0.0,
+     "logp_blank": -9.58,
+     "top3": [
+      [
+       "ن",
+       -0.0
+      ],
+      [
+       "ل",
+       -9.074
+      ],
+      [
+       "م",
+       -9.149
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -0.0,
+      "[لا غنة]": -10.196
+     }
+    },
+    {
+     "frame": 257,
+     "t_s": 10.28,
+     "logp_noon": -3.81,
+     "logp_blank": -0.085,
+     "top3": [
+      [
+       "[PAD]",
+       -0.085
+      ],
+      [
+       "َ",
+       -2.828
+      ],
+      [
+       "ن",
+       -3.81
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -1.846,
+      "[لا غنة]": -10.545
+     }
+    },
+    {
+     "frame": 258,
+     "t_s": 10.32,
+     "logp_noon": -13.964,
+     "logp_blank": -10.116,
+     "top3": [
+      [
+       "َ",
+       -0.0
+      ],
+      [
+       "[PAD]",
+       -10.116
+      ],
+      [
+       "ن",
+       -13.964
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -12.377,
+      "[لا غنة]": -11.966
+     }
+    }
+   ],
+   "audio_sha256_16": "0ef45d02f7159822",
+   "audio_local": "data/nasality_exp/N.wav"
+  },
+  "C1": {
+   "independent": {
+    "identity:margin": 42.336,
+    "identity:confirmed": true,
+    "identity:competitor": "∅",
+    "identity:blind_spot_p": 0.003,
+    "head:ghonna:margin": 10.999,
+    "head:ghonna:realised": true,
+    "head:ghonna:scored": true,
+    "head:hams_or_jahr:margin": 12.596,
+    "head:hams_or_jahr:realised": true,
+    "head:hams_or_jahr:scored": true,
+    "head:istitala:margin": 13.497,
+    "head:istitala:realised": true,
+    "head:istitala:scored": false,
+    "head:itbaq:margin": 12.732,
+    "head:itbaq:realised": true,
+    "head:itbaq:scored": true,
+    "head:qalqla:margin": 12.575,
+    "head:qalqla:realised": true,
+    "head:qalqla:scored": true,
+    "head:safeer:margin": 13.527,
+    "head:safeer:realised": true,
+    "head:safeer:scored": true,
+    "head:shidda_or_rakhawa:margin": 12.322,
+    "head:shidda_or_rakhawa:realised": true,
+    "head:shidda_or_rakhawa:scored": false,
+    "head:tafashie:margin": 16.541,
+    "head:tafashie:realised": true,
+    "head:tafashie:scored": true,
+    "head:tafkheem_or_taqeeq:margin": 15.302,
+    "head:tafkheem_or_taqeeq:realised": true,
+    "head:tafkheem_or_taqeeq:scored": true,
+    "head:tikraar:margin": 15.615,
+    "head:tikraar:realised": true,
+    "head:tikraar:scored": false,
+    "makhraj:ل": 50.676,
+    "makhraj:م": 45.903,
+    "makhraj:ر": 66.641,
+    "letter:duration_s": 0.84,
+    "rule:ghunnah:status": "pass",
+    "rule:ghunnah:counts": 2.49,
+    "rule:madd_tabii:status": "pass",
+    "rule:madd_tabii:counts": 1.71
+   },
+   "held": {
+    "identity:margin": 42.336,
+    "identity:confirmed": true,
+    "identity:competitor": "∅",
+    "identity:blind_spot_p": 0.003,
+    "head:ghonna:margin": 10.999,
+    "head:ghonna:realised": true,
+    "head:ghonna:scored": true,
+    "head:hams_or_jahr:margin": 12.596,
+    "head:hams_or_jahr:realised": true,
+    "head:hams_or_jahr:scored": true,
+    "head:istitala:margin": 13.497,
+    "head:istitala:realised": true,
+    "head:istitala:scored": false,
+    "head:itbaq:margin": 12.732,
+    "head:itbaq:realised": true,
+    "head:itbaq:scored": true,
+    "head:qalqla:margin": 12.575,
+    "head:qalqla:realised": true,
+    "head:qalqla:scored": true,
+    "head:safeer:margin": 13.527,
+    "head:safeer:realised": true,
+    "head:safeer:scored": true,
+    "head:shidda_or_rakhawa:margin": 12.322,
+    "head:shidda_or_rakhawa:realised": true,
+    "head:shidda_or_rakhawa:scored": false,
+    "head:tafashie:margin": 16.541,
+    "head:tafashie:realised": true,
+    "head:tafashie:scored": true,
+    "head:tafkheem_or_taqeeq:margin": 15.302,
+    "head:tafkheem_or_taqeeq:realised": true,
+    "head:tafkheem_or_taqeeq:scored": true,
+    "head:tikraar:margin": 15.615,
+    "head:tikraar:realised": true,
+    "head:tikraar:scored": false,
+    "makhraj:ل": 50.676,
+    "makhraj:م": 45.903,
+    "makhraj:ر": 66.641,
+    "letter:duration_s": 0.84,
+    "rule:ghunnah:status": "pass",
+    "rule:ghunnah:counts": 2.49,
+    "rule:madd_tabii:status": "pass",
+    "rule:madd_tabii:counts": 1.71
+   },
+   "alignment_L20_L30": {
+    "11:2:L20": [
+     189,
+     190
+    ],
+    "11:2:L21": [
+     190,
+     191
+    ],
+    "11:2:L22": [
+     230,
+     231
+    ],
+    "11:2:L23": [
+     232,
+     234
+    ],
+    "11:2:L24": [
+     237,
+     258
+    ],
+    "11:2:L25": [
+     258,
+     260
+    ],
+    "11:2:L26": [
+     265,
+     266
+    ],
+    "11:2:L27": [
+     266,
+     269
+    ],
+    "11:2:L28": [
+     269,
+     275
+    ],
+    "11:2:L29": [
+     281,
+     283
+    ],
+    "11:2:L30": [
+     283,
+     285
+    ]
+   },
+   "L24_moved": false,
+   "letters_moved_vs_V0": [
+    "11:2:L20",
+    "11:2:L21",
+    "11:2:L23"
+   ],
+   "frame_posteriors_255_258": [
+    {
+     "frame": 255,
+     "t_s": 10.2,
+     "logp_noon": -6.847,
+     "logp_blank": -0.001,
+     "top3": [
+      [
+       "[PAD]",
+       -0.001
+      ],
+      [
+       "ن",
+       -6.847
+      ],
+      [
+       "ء",
+       -14.224
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -8.901,
+      "[لا غنة]": -12.692
+     }
+    },
+    {
+     "frame": 256,
+     "t_s": 10.24,
+     "logp_noon": -0.004,
+     "logp_blank": -5.422,
+     "top3": [
+      [
+       "ن",
+       -0.004
+      ],
+      [
+       "[PAD]",
+       -5.422
+      ],
+      [
+       "م",
+       -11.352
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -0.001,
+      "[لا غنة]": -11.199
+     }
+    },
+    {
+     "frame": 257,
+     "t_s": 10.28,
+     "logp_noon": -0.003,
+     "logp_blank": -5.889,
+     "top3": [
+      [
+       "ن",
+       -0.003
+      ],
+      [
+       "[PAD]",
+       -5.889
+      ],
+      [
+       "َ",
+       -9.114
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -0.001,
+      "[لا غنة]": -11.762
+     }
+    },
+    {
+     "frame": 258,
+     "t_s": 10.32,
+     "logp_noon": -14.747,
+     "logp_blank": -10.923,
+     "top3": [
+      [
+       "َ",
+       -0.0
+      ],
+      [
+       "[PAD]",
+       -10.923
+      ],
+      [
+       "ن",
+       -14.747
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -12.236,
+      "[لا غنة]": -12.606
+     }
+    }
+   ],
+   "audio_sha256_16": "1fd92333e538c398",
+   "audio_local": "data/nasality_exp/C1.wav"
+  },
+  "C2": {
+   "independent": {
+    "identity:margin": 41.859,
+    "identity:confirmed": true,
+    "identity:competitor": "∅",
+    "identity:blind_spot_p": 0.003,
+    "head:ghonna:margin": 10.942,
+    "head:ghonna:realised": true,
+    "head:ghonna:scored": true,
+    "head:hams_or_jahr:margin": 12.539,
+    "head:hams_or_jahr:realised": true,
+    "head:hams_or_jahr:scored": true,
+    "head:istitala:margin": 13.454,
+    "head:istitala:realised": true,
+    "head:istitala:scored": false,
+    "head:itbaq:margin": 12.671,
+    "head:itbaq:realised": true,
+    "head:itbaq:scored": true,
+    "head:qalqla:margin": 12.652,
+    "head:qalqla:realised": true,
+    "head:qalqla:scored": true,
+    "head:safeer:margin": 13.386,
+    "head:safeer:realised": true,
+    "head:safeer:scored": true,
+    "head:shidda_or_rakhawa:margin": 12.197,
+    "head:shidda_or_rakhawa:realised": true,
+    "head:shidda_or_rakhawa:scored": false,
+    "head:tafashie:margin": 16.235,
+    "head:tafashie:realised": true,
+    "head:tafashie:scored": true,
+    "head:tafkheem_or_taqeeq:margin": 15.28,
+    "head:tafkheem_or_taqeeq:realised": true,
+    "head:tafkheem_or_taqeeq:scored": true,
+    "head:tikraar:margin": 15.526,
+    "head:tikraar:realised": true,
+    "head:tikraar:scored": false,
+    "makhraj:ل": 50.631,
+    "makhraj:م": 45.047,
+    "makhraj:ر": 65.974,
+    "letter:duration_s": 0.84,
+    "rule:ghunnah:status": "pass",
+    "rule:ghunnah:counts": 2.49,
+    "rule:madd_tabii:status": "pass",
+    "rule:madd_tabii:counts": 1.71
+   },
+   "held": {
+    "identity:margin": 41.859,
+    "identity:confirmed": true,
+    "identity:competitor": "∅",
+    "identity:blind_spot_p": 0.003,
+    "head:ghonna:margin": 10.942,
+    "head:ghonna:realised": true,
+    "head:ghonna:scored": true,
+    "head:hams_or_jahr:margin": 12.539,
+    "head:hams_or_jahr:realised": true,
+    "head:hams_or_jahr:scored": true,
+    "head:istitala:margin": 13.454,
+    "head:istitala:realised": true,
+    "head:istitala:scored": false,
+    "head:itbaq:margin": 12.671,
+    "head:itbaq:realised": true,
+    "head:itbaq:scored": true,
+    "head:qalqla:margin": 12.652,
+    "head:qalqla:realised": true,
+    "head:qalqla:scored": true,
+    "head:safeer:margin": 13.386,
+    "head:safeer:realised": true,
+    "head:safeer:scored": true,
+    "head:shidda_or_rakhawa:margin": 12.197,
+    "head:shidda_or_rakhawa:realised": true,
+    "head:shidda_or_rakhawa:scored": false,
+    "head:tafashie:margin": 16.235,
+    "head:tafashie:realised": true,
+    "head:tafashie:scored": true,
+    "head:tafkheem_or_taqeeq:margin": 15.28,
+    "head:tafkheem_or_taqeeq:realised": true,
+    "head:tafkheem_or_taqeeq:scored": true,
+    "head:tikraar:margin": 15.526,
+    "head:tikraar:realised": true,
+    "head:tikraar:scored": false,
+    "makhraj:ل": 50.631,
+    "makhraj:م": 45.047,
+    "makhraj:ر": 65.974,
+    "letter:duration_s": 0.84,
+    "rule:ghunnah:status": "pass",
+    "rule:ghunnah:counts": 2.49,
+    "rule:madd_tabii:status": "pass",
+    "rule:madd_tabii:counts": 1.71
+   },
+   "alignment_L20_L30": {
+    "11:2:L20": [
+     189,
+     190
+    ],
+    "11:2:L21": [
+     190,
+     191
+    ],
+    "11:2:L22": [
+     230,
+     231
+    ],
+    "11:2:L23": [
+     232,
+     234
+    ],
+    "11:2:L24": [
+     237,
+     258
+    ],
+    "11:2:L25": [
+     258,
+     260
+    ],
+    "11:2:L26": [
+     265,
+     266
+    ],
+    "11:2:L27": [
+     266,
+     269
+    ],
+    "11:2:L28": [
+     269,
+     275
+    ],
+    "11:2:L29": [
+     281,
+     283
+    ],
+    "11:2:L30": [
+     283,
+     285
+    ]
+   },
+   "L24_moved": false,
+   "letters_moved_vs_V0": [
+    "11:2:L20",
+    "11:2:L21",
+    "11:2:L23"
+   ],
+   "frame_posteriors_255_258": [
+    {
+     "frame": 255,
+     "t_s": 10.2,
+     "logp_noon": -6.667,
+     "logp_blank": -0.001,
+     "top3": [
+      [
+       "[PAD]",
+       -0.001
+      ],
+      [
+       "ن",
+       -6.667
+      ],
+      [
+       "ء",
+       -14.13
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -8.651,
+      "[لا غنة]": -12.57
+     }
+    },
+    {
+     "frame": 256,
+     "t_s": 10.24,
+     "logp_noon": -0.002,
+     "logp_blank": -6.324,
+     "top3": [
+      [
+       "ن",
+       -0.002
+      ],
+      [
+       "[PAD]",
+       -6.324
+      ],
+      [
+       "م",
+       -11.039
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -0.001,
+      "[لا غنة]": -11.111
+     }
+    },
+    {
+     "frame": 257,
+     "t_s": 10.28,
+     "logp_noon": -0.012,
+     "logp_blank": -4.493,
+     "top3": [
+      [
+       "ن",
+       -0.012
+      ],
+      [
+       "[PAD]",
+       -4.493
+      ],
+      [
+       "َ",
+       -7.969
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -0.003,
+      "[لا غنة]": -11.753
+     }
+    },
+    {
+     "frame": 258,
+     "t_s": 10.32,
+     "logp_noon": -14.493,
+     "logp_blank": -10.809,
+     "top3": [
+      [
+       "َ",
+       -0.0
+      ],
+      [
+       "[PAD]",
+       -10.809
+      ],
+      [
+       "ن",
+       -14.493
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -12.089,
+      "[لا غنة]": -12.614
+     }
+    }
+   ],
+   "audio_sha256_16": "f679a935ceb89975",
+   "audio_local": "data/nasality_exp/C2.wav"
+  },
+  "W": {
+   "independent": {
+    "identity:margin": 43.982,
+    "identity:confirmed": true,
+    "identity:competitor": "∅",
+    "identity:blind_spot_p": 0.003,
+    "head:ghonna:margin": 11.32,
+    "head:ghonna:realised": true,
+    "head:ghonna:scored": true,
+    "head:hams_or_jahr:margin": 12.635,
+    "head:hams_or_jahr:realised": true,
+    "head:hams_or_jahr:scored": true,
+    "head:istitala:margin": 13.532,
+    "head:istitala:realised": true,
+    "head:istitala:scored": false,
+    "head:itbaq:margin": 12.928,
+    "head:itbaq:realised": true,
+    "head:itbaq:scored": true,
+    "head:qalqla:margin": 12.488,
+    "head:qalqla:realised": true,
+    "head:qalqla:scored": true,
+    "head:safeer:margin": 13.725,
+    "head:safeer:realised": true,
+    "head:safeer:scored": true,
+    "head:shidda_or_rakhawa:margin": 12.53,
+    "head:shidda_or_rakhawa:realised": true,
+    "head:shidda_or_rakhawa:scored": false,
+    "head:tafashie:margin": 17.495,
+    "head:tafashie:realised": true,
+    "head:tafashie:scored": true,
+    "head:tafkheem_or_taqeeq:margin": 15.559,
+    "head:tafkheem_or_taqeeq:realised": true,
+    "head:tafkheem_or_taqeeq:scored": true,
+    "head:tikraar:margin": 16.044,
+    "head:tikraar:realised": true,
+    "head:tikraar:scored": false,
+    "makhraj:ل": 51.77,
+    "makhraj:م": 46.918,
+    "makhraj:ر": 68.345,
+    "letter:duration_s": 0.84,
+    "rule:ghunnah:status": "pass",
+    "rule:ghunnah:counts": 2.49,
+    "rule:madd_tabii:status": "pass",
+    "rule:madd_tabii:counts": 1.71
+   },
+   "held": {
+    "identity:margin": 43.982,
+    "identity:confirmed": true,
+    "identity:competitor": "∅",
+    "identity:blind_spot_p": 0.003,
+    "head:ghonna:margin": 11.32,
+    "head:ghonna:realised": true,
+    "head:ghonna:scored": true,
+    "head:hams_or_jahr:margin": 12.635,
+    "head:hams_or_jahr:realised": true,
+    "head:hams_or_jahr:scored": true,
+    "head:istitala:margin": 13.532,
+    "head:istitala:realised": true,
+    "head:istitala:scored": false,
+    "head:itbaq:margin": 12.928,
+    "head:itbaq:realised": true,
+    "head:itbaq:scored": true,
+    "head:qalqla:margin": 12.488,
+    "head:qalqla:realised": true,
+    "head:qalqla:scored": true,
+    "head:safeer:margin": 13.725,
+    "head:safeer:realised": true,
+    "head:safeer:scored": true,
+    "head:shidda_or_rakhawa:margin": 12.53,
+    "head:shidda_or_rakhawa:realised": true,
+    "head:shidda_or_rakhawa:scored": false,
+    "head:tafashie:margin": 17.495,
+    "head:tafashie:realised": true,
+    "head:tafashie:scored": true,
+    "head:tafkheem_or_taqeeq:margin": 15.559,
+    "head:tafkheem_or_taqeeq:realised": true,
+    "head:tafkheem_or_taqeeq:scored": true,
+    "head:tikraar:margin": 16.044,
+    "head:tikraar:realised": true,
+    "head:tikraar:scored": false,
+    "makhraj:ل": 51.77,
+    "makhraj:م": 46.918,
+    "makhraj:ر": 68.345,
+    "letter:duration_s": 0.84,
+    "rule:ghunnah:status": "pass",
+    "rule:ghunnah:counts": 2.49,
+    "rule:madd_tabii:status": "pass",
+    "rule:madd_tabii:counts": 1.71
+   },
+   "alignment_L20_L30": {
+    "11:2:L20": [
+     189,
+     190
+    ],
+    "11:2:L21": [
+     190,
+     191
+    ],
+    "11:2:L22": [
+     230,
+     231
+    ],
+    "11:2:L23": [
+     232,
+     234
+    ],
+    "11:2:L24": [
+     237,
+     258
+    ],
+    "11:2:L25": [
+     258,
+     260
+    ],
+    "11:2:L26": [
+     265,
+     266
+    ],
+    "11:2:L27": [
+     266,
+     269
+    ],
+    "11:2:L28": [
+     269,
+     275
+    ],
+    "11:2:L29": [
+     281,
+     283
+    ],
+    "11:2:L30": [
+     283,
+     285
+    ]
+   },
+   "L24_moved": false,
+   "letters_moved_vs_V0": [
+    "11:2:L20",
+    "11:2:L21",
+    "11:2:L23"
+   ],
+   "frame_posteriors_255_258": [
+    {
+     "frame": 255,
+     "t_s": 10.2,
+     "logp_noon": -6.452,
+     "logp_blank": -0.002,
+     "top3": [
+      [
+       "[PAD]",
+       -0.002
+      ],
+      [
+       "ن",
+       -6.452
+      ],
+      [
+       "ء",
+       -14.125
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -9.044,
+      "[لا غنة]": -13.127
+     }
+    },
+    {
+     "frame": 256,
+     "t_s": 10.24,
+     "logp_noon": -0.053,
+     "logp_blank": -2.973,
+     "top3": [
+      [
+       "ن",
+       -0.053
+      ],
+      [
+       "[PAD]",
+       -2.973
+      ],
+      [
+       "م",
+       -12.432
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -0.021,
+      "[لا غنة]": -11.569
+     }
+    },
+    {
+     "frame": 257,
+     "t_s": 10.28,
+     "logp_noon": -0.0,
+     "logp_blank": -9.035,
+     "top3": [
+      [
+       "ن",
+       -0.0
+      ],
+      [
+       "[PAD]",
+       -9.035
+      ],
+      [
+       "ل",
+       -9.962
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -0.0,
+      "[لا غنة]": -12.175
+     }
+    },
+    {
+     "frame": 258,
+     "t_s": 10.32,
+     "logp_noon": -15.157,
+     "logp_blank": -11.108,
+     "top3": [
+      [
+       "َ",
+       -0.0
+      ],
+      [
+       "[PAD]",
+       -11.108
+      ],
+      [
+       "ن",
+       -15.157
+      ]
+     ],
+     "ghonna_logp": {
+      "[مغن]": -12.364,
+      "[لا غنة]": -12.85
+     }
+    }
+   ],
+   "audio_sha256_16": "5ec1c28482d4c3fa",
+   "audio_local": "data/nasality_exp/W.wav"
+  }
+ },
+ "comparisons": {
+  "V0_vs_B": {
+   "independent": {
+    "head:ghonna:margin": 0.295,
+    "head:hams_or_jahr:margin": 0.068,
+    "head:istitala:margin": -0.026,
+    "head:itbaq:margin": 0.211,
+    "head:qalqla:margin": -0.091,
+    "head:safeer:margin": 0.309,
+    "head:shidda_or_rakhawa:margin": 0.123,
+    "head:tafashie:margin": 1.354,
+    "head:tafkheem_or_taqeeq:margin": 0.299,
+    "head:tikraar:margin": 0.474,
+    "identity:blind_spot_p": 0.0,
+    "identity:margin": 2.38,
+    "letter:duration_s": 0.0,
+    "makhraj:ر": 0.547,
+    "makhraj:ل": -0.416,
+    "makhraj:م": -0.154,
+    "rule:ghunnah:counts": 0.0,
+    "rule:madd_tabii:counts": 0.0
+   },
+   "held": {
+    "head:ghonna:margin": 0.295,
+    "head:hams_or_jahr:margin": 0.068,
+    "head:istitala:margin": -0.026,
+    "head:itbaq:margin": 0.211,
+    "head:qalqla:margin": -0.091,
+    "head:safeer:margin": 0.309,
+    "head:shidda_or_rakhawa:margin": 0.123,
+    "head:tafashie:margin": 1.354,
+    "head:tafkheem_or_taqeeq:margin": 0.299,
+    "head:tikraar:margin": 0.474,
+    "identity:blind_spot_p": 0.0,
+    "identity:margin": 2.38,
+    "letter:duration_s": 0.0,
+    "makhraj:ر": 0.547,
+    "makhraj:ل": -0.416,
+    "makhraj:م": -0.154,
+    "rule:ghunnah:counts": 0.0,
+    "rule:madd_tabii:counts": 0.0
+   },
+   "elsewhere_independent": {
+    "letters_elsewhere_flipped": 0,
+    "flips": []
+   },
+   "elsewhere_held": {
+    "letters_elsewhere_flipped": 0,
+    "flips": []
+   }
+  },
+  "N_vs_B": {
+   "independent": {
+    "head:ghonna:margin": -1.297,
+    "head:hams_or_jahr:margin": -0.992,
+    "head:istitala:margin": -1.06,
+    "head:itbaq:margin": -0.884,
+    "head:qalqla:margin": -0.174,
+    "head:safeer:margin": -0.976,
+    "head:shidda_or_rakhawa:margin": -1.543,
+    "head:tafashie:margin": -1.584,
+    "head:tafkheem_or_taqeeq:margin": -0.361,
+    "head:tikraar:margin": -1.482,
+    "identity:blind_spot_p": 0.0,
+    "identity:margin": -1.467,
+    "letter:duration_s": 0.0,
+    "makhraj:ر": -7.296,
+    "makhraj:ل": -6.973,
+    "makhraj:م": -7.753,
+    "rule:ghunnah:counts": 0.0,
+    "rule:madd_tabii:counts": 0.0
+   },
+   "held": {
+    "head:ghonna:margin": -1.503,
+    "head:hams_or_jahr:margin": -0.48,
+    "head:istitala:margin": -0.444,
+    "head:itbaq:margin": -0.252,
+    "head:qalqla:margin": 0.48,
+    "head:safeer:margin": -0.352,
+    "head:shidda_or_rakhawa:margin": -1.317,
+    "head:tafashie:margin": -1.587,
+    "head:tafkheem_or_taqeeq:margin": -0.386,
+    "head:tikraar:margin": -1.492,
+    "identity:blind_spot_p": 0.0,
+    "identity:margin": -1.467,
+    "letter:duration_s": 0.0,
+    "makhraj:ر": -7.296,
+    "makhraj:ل": -6.973,
+    "makhraj:م": -7.753,
+    "rule:ghunnah:counts": 0.0,
+    "rule:madd_tabii:counts": 0.0
+   },
+   "elsewhere_independent": {
+    "letters_elsewhere_flipped": 0,
+    "flips": []
+   },
+   "elsewhere_held": {
+    "letters_elsewhere_flipped": 0,
+    "flips": []
+   }
+  },
+  "C1_vs_B": {
+   "independent": {
+    "head:ghonna:margin": 0.016,
+    "head:hams_or_jahr:margin": 0.049,
+    "head:istitala:margin": 0.039,
+    "head:itbaq:margin": 0.048,
+    "head:qalqla:margin": -0.023,
+    "head:safeer:margin": 0.102,
+    "head:shidda_or_rakhawa:margin": 0.073,
+    "head:tafashie:margin": 0.166,
+    "head:tafkheem_or_taqeeq:margin": 0.021,
+    "head:tikraar:margin": 0.047,
+    "identity:blind_spot_p": 0.0,
+    "identity:margin": 0.515,
+    "letter:duration_s": 0.0,
+    "makhraj:ر": 0.069,
+    "makhraj:ل": -0.25,
+    "makhraj:م": 0.173,
+    "rule:ghunnah:counts": 0.0,
+    "rule:madd_tabii:counts": 0.0
+   },
+   "held": {
+    "head:ghonna:margin": 0.016,
+    "head:hams_or_jahr:margin": 0.049,
+    "head:istitala:margin": 0.039,
+    "head:itbaq:margin": 0.048,
+    "head:qalqla:margin": -0.023,
+    "head:safeer:margin": 0.102,
+    "head:shidda_or_rakhawa:margin": 0.073,
+    "head:tafashie:margin": 0.166,
+    "head:tafkheem_or_taqeeq:margin": 0.021,
+    "head:tikraar:margin": 0.047,
+    "identity:blind_spot_p": 0.0,
+    "identity:margin": 0.515,
+    "letter:duration_s": 0.0,
+    "makhraj:ر": 0.069,
+    "makhraj:ل": -0.25,
+    "makhraj:م": 0.173,
+    "rule:ghunnah:counts": 0.0,
+    "rule:madd_tabii:counts": 0.0
+   },
+   "elsewhere_independent": {
+    "letters_elsewhere_flipped": 0,
+    "flips": []
+   },
+   "elsewhere_held": {
+    "letters_elsewhere_flipped": 0,
+    "flips": []
+   }
+  },
+  "C2_vs_B": {
+   "independent": {
+    "head:ghonna:margin": -0.041,
+    "head:hams_or_jahr:margin": -0.008,
+    "head:istitala:margin": -0.004,
+    "head:itbaq:margin": -0.013,
+    "head:qalqla:margin": 0.054,
+    "head:safeer:margin": -0.039,
+    "head:shidda_or_rakhawa:margin": -0.052,
+    "head:tafashie:margin": -0.14,
+    "head:tafkheem_or_taqeeq:margin": -0.001,
+    "head:tikraar:margin": -0.042,
+    "identity:blind_spot_p": 0.0,
+    "identity:margin": 0.038,
+    "letter:duration_s": 0.0,
+    "makhraj:ر": -0.598,
+    "makhraj:ل": -0.295,
+    "makhraj:م": -0.683,
+    "rule:ghunnah:counts": 0.0,
+    "rule:madd_tabii:counts": 0.0
+   },
+   "held": {
+    "head:ghonna:margin": -0.041,
+    "head:hams_or_jahr:margin": -0.008,
+    "head:istitala:margin": -0.004,
+    "head:itbaq:margin": -0.013,
+    "head:qalqla:margin": 0.054,
+    "head:safeer:margin": -0.039,
+    "head:shidda_or_rakhawa:margin": -0.052,
+    "head:tafashie:margin": -0.14,
+    "head:tafkheem_or_taqeeq:margin": -0.001,
+    "head:tikraar:margin": -0.042,
+    "identity:blind_spot_p": 0.0,
+    "identity:margin": 0.038,
+    "letter:duration_s": 0.0,
+    "makhraj:ر": -0.598,
+    "makhraj:ل": -0.295,
+    "makhraj:م": -0.683,
+    "rule:ghunnah:counts": 0.0,
+    "rule:madd_tabii:counts": 0.0
+   },
+   "elsewhere_independent": {
+    "letters_elsewhere_flipped": 0,
+    "flips": []
+   },
+   "elsewhere_held": {
+    "letters_elsewhere_flipped": 0,
+    "flips": []
+   }
+  },
+  "W_vs_B": {
+   "independent": {
+    "head:ghonna:margin": 0.337,
+    "head:hams_or_jahr:margin": 0.088,
+    "head:istitala:margin": 0.074,
+    "head:itbaq:margin": 0.244,
+    "head:qalqla:margin": -0.11,
+    "head:safeer:margin": 0.3,
+    "head:shidda_or_rakhawa:margin": 0.281,
+    "head:tafashie:margin": 1.12,
+    "head:tafkheem_or_taqeeq:margin": 0.278,
+    "head:tikraar:margin": 0.476,
+    "identity:blind_spot_p": 0.0,
+    "identity:margin": 2.161,
+    "letter:duration_s": 0.0,
+    "makhraj:ر": 1.773,
+    "makhraj:ل": 0.844,
+    "makhraj:م": 1.188,
+    "rule:ghunnah:counts": 0.0,
+    "rule:madd_tabii:counts": 0.0
+   },
+   "held": {
+    "head:ghonna:margin": 0.337,
+    "head:hams_or_jahr:margin": 0.088,
+    "head:istitala:margin": 0.074,
+    "head:itbaq:margin": 0.244,
+    "head:qalqla:margin": -0.11,
+    "head:safeer:margin": 0.3,
+    "head:shidda_or_rakhawa:margin": 0.281,
+    "head:tafashie:margin": 1.12,
+    "head:tafkheem_or_taqeeq:margin": 0.278,
+    "head:tikraar:margin": 0.476,
+    "identity:blind_spot_p": 0.0,
+    "identity:margin": 2.161,
+    "letter:duration_s": 0.0,
+    "makhraj:ر": 1.773,
+    "makhraj:ل": 0.844,
+    "makhraj:م": 1.188,
+    "rule:ghunnah:counts": 0.0,
+    "rule:madd_tabii:counts": 0.0
+   },
+   "elsewhere_independent": {
+    "letters_elsewhere_flipped": 0,
+    "flips": []
+   },
+   "elsewhere_held": {
+    "letters_elsewhere_flipped": 0,
+    "flips": []
+   }
+  },
+  "B_vs_V0": {
+   "independent": {
+    "head:ghonna:margin": -0.295,
+    "head:hams_or_jahr:margin": -0.068,
+    "head:istitala:margin": 0.026,
+    "head:itbaq:margin": -0.211,
+    "head:qalqla:margin": 0.091,
+    "head:safeer:margin": -0.309,
+    "head:shidda_or_rakhawa:margin": -0.123,
+    "head:tafashie:margin": -1.354,
+    "head:tafkheem_or_taqeeq:margin": -0.299,
+    "head:tikraar:margin": -0.474,
+    "identity:blind_spot_p": 0.0,
+    "identity:margin": -2.38,
+    "letter:duration_s": 0.0,
+    "makhraj:ر": -0.547,
+    "makhraj:ل": 0.416,
+    "makhraj:م": 0.154,
+    "rule:ghunnah:counts": 0.0,
+    "rule:madd_tabii:counts": 0.0
+   },
+   "held": {
+    "head:ghonna:margin": -0.295,
+    "head:hams_or_jahr:margin": -0.068,
+    "head:istitala:margin": 0.026,
+    "head:itbaq:margin": -0.211,
+    "head:qalqla:margin": 0.091,
+    "head:safeer:margin": -0.309,
+    "head:shidda_or_rakhawa:margin": -0.123,
+    "head:tafashie:margin": -1.354,
+    "head:tafkheem_or_taqeeq:margin": -0.299,
+    "head:tikraar:margin": -0.474,
+    "identity:blind_spot_p": 0.0,
+    "identity:margin": -2.38,
+    "letter:duration_s": 0.0,
+    "makhraj:ر": -0.547,
+    "makhraj:ل": 0.416,
+    "makhraj:م": 0.154,
+    "rule:ghunnah:counts": 0.0,
+    "rule:madd_tabii:counts": 0.0
+   },
+   "elsewhere_independent": {
+    "letters_elsewhere_flipped": 0,
+    "flips": []
+   },
+   "elsewhere_held": {
+    "letters_elsewhere_flipped": 0,
+    "flips": []
+   }
+  },
+  "N_vs_V0": {
+   "independent": {
+    "head:ghonna:margin": -1.592,
+    "head:hams_or_jahr:margin": -1.06,
+    "head:istitala:margin": -1.034,
+    "head:itbaq:margin": -1.095,
+    "head:qalqla:margin": -0.083,
+    "head:safeer:margin": -1.285,
+    "head:shidda_or_rakhawa:margin": -1.666,
+    "head:tafashie:margin": -2.938,
+    "head:tafkheem_or_taqeeq:margin": -0.66,
+    "head:tikraar:margin": -1.956,
+    "identity:blind_spot_p": 0.0,
+    "identity:margin": -3.847,
+    "letter:duration_s": 0.0,
+    "makhraj:ر": -7.843,
+    "makhraj:ل": -6.557,
+    "makhraj:م": -7.599,
+    "rule:ghunnah:counts": 0.0,
+    "rule:madd_tabii:counts": 0.0
+   },
+   "held": {
+    "head:ghonna:margin": -1.798,
+    "head:hams_or_jahr:margin": -0.548,
+    "head:istitala:margin": -0.418,
+    "head:itbaq:margin": -0.463,
+    "head:qalqla:margin": 0.571,
+    "head:safeer:margin": -0.661,
+    "head:shidda_or_rakhawa:margin": -1.44,
+    "head:tafashie:margin": -2.941,
+    "head:tafkheem_or_taqeeq:margin": -0.685,
+    "head:tikraar:margin": -1.966,
+    "identity:blind_spot_p": 0.0,
+    "identity:margin": -3.847,
+    "letter:duration_s": 0.0,
+    "makhraj:ر": -7.843,
+    "makhraj:ل": -6.557,
+    "makhraj:م": -7.599,
+    "rule:ghunnah:counts": 0.0,
+    "rule:madd_tabii:counts": 0.0
+   },
+   "elsewhere_independent": {
+    "letters_elsewhere_flipped": 0,
+    "flips": []
+   },
+   "elsewhere_held": {
+    "letters_elsewhere_flipped": 0,
+    "flips": []
+   }
+  },
+  "C1_vs_V0": {
+   "independent": {
+    "head:ghonna:margin": -0.279,
+    "head:hams_or_jahr:margin": -0.019,
+    "head:istitala:margin": 0.065,
+    "head:itbaq:margin": -0.163,
+    "head:qalqla:margin": 0.068,
+    "head:safeer:margin": -0.207,
+    "head:shidda_or_rakhawa:margin": -0.05,
+    "head:tafashie:margin": -1.188,
+    "head:tafkheem_or_taqeeq:margin": -0.278,
+    "head:tikraar:margin": -0.427,
+    "identity:blind_spot_p": 0.0,
+    "identity:margin": -1.865,
+    "letter:duration_s": 0.0,
+    "makhraj:ر": -0.478,
+    "makhraj:ل": 0.166,
+    "makhraj:م": 0.327,
+    "rule:ghunnah:counts": 0.0,
+    "rule:madd_tabii:counts": 0.0
+   },
+   "held": {
+    "head:ghonna:margin": -0.279,
+    "head:hams_or_jahr:margin": -0.019,
+    "head:istitala:margin": 0.065,
+    "head:itbaq:margin": -0.163,
+    "head:qalqla:margin": 0.068,
+    "head:safeer:margin": -0.207,
+    "head:shidda_or_rakhawa:margin": -0.05,
+    "head:tafashie:margin": -1.188,
+    "head:tafkheem_or_taqeeq:margin": -0.278,
+    "head:tikraar:margin": -0.427,
+    "identity:blind_spot_p": 0.0,
+    "identity:margin": -1.865,
+    "letter:duration_s": 0.0,
+    "makhraj:ر": -0.478,
+    "makhraj:ل": 0.166,
+    "makhraj:م": 0.327,
+    "rule:ghunnah:counts": 0.0,
+    "rule:madd_tabii:counts": 0.0
+   },
+   "elsewhere_independent": {
+    "letters_elsewhere_flipped": 0,
+    "flips": []
+   },
+   "elsewhere_held": {
+    "letters_elsewhere_flipped": 0,
+    "flips": []
+   }
+  },
+  "C2_vs_V0": {
+   "independent": {
+    "head:ghonna:margin": -0.336,
+    "head:hams_or_jahr:margin": -0.076,
+    "head:istitala:margin": 0.022,
+    "head:itbaq:margin": -0.224,
+    "head:qalqla:margin": 0.145,
+    "head:safeer:margin": -0.348,
+    "head:shidda_or_rakhawa:margin": -0.175,
+    "head:tafashie:margin": -1.494,
+    "head:tafkheem_or_taqeeq:margin": -0.3,
+    "head:tikraar:margin": -0.516,
+    "identity:blind_spot_p": 0.0,
+    "identity:margin": -2.342,
+    "letter:duration_s": 0.0,
+    "makhraj:ر": -1.145,
+    "makhraj:ل": 0.121,
+    "makhraj:م": -0.529,
+    "rule:ghunnah:counts": 0.0,
+    "rule:madd_tabii:counts": 0.0
+   },
+   "held": {
+    "head:ghonna:margin": -0.336,
+    "head:hams_or_jahr:margin": -0.076,
+    "head:istitala:margin": 0.022,
+    "head:itbaq:margin": -0.224,
+    "head:qalqla:margin": 0.145,
+    "head:safeer:margin": -0.348,
+    "head:shidda_or_rakhawa:margin": -0.175,
+    "head:tafashie:margin": -1.494,
+    "head:tafkheem_or_taqeeq:margin": -0.3,
+    "head:tikraar:margin": -0.516,
+    "identity:blind_spot_p": 0.0,
+    "identity:margin": -2.342,
+    "letter:duration_s": 0.0,
+    "makhraj:ر": -1.145,
+    "makhraj:ل": 0.121,
+    "makhraj:م": -0.529,
+    "rule:ghunnah:counts": 0.0,
+    "rule:madd_tabii:counts": 0.0
+   },
+   "elsewhere_independent": {
+    "letters_elsewhere_flipped": 0,
+    "flips": []
+   },
+   "elsewhere_held": {
+    "letters_elsewhere_flipped": 0,
+    "flips": []
+   }
+  },
+  "W_vs_V0": {
+   "independent": {
+    "head:ghonna:margin": 0.042,
+    "head:hams_or_jahr:margin": 0.02,
+    "head:istitala:margin": 0.1,
+    "head:itbaq:margin": 0.033,
+    "head:qalqla:margin": -0.019,
+    "head:safeer:margin": -0.009,
+    "head:shidda_or_rakhawa:margin": 0.158,
+    "head:tafashie:margin": -0.234,
+    "head:tafkheem_or_taqeeq:margin": -0.021,
+    "head:tikraar:margin": 0.002,
+    "identity:blind_spot_p": 0.0,
+    "identity:margin": -0.219,
+    "letter:duration_s": 0.0,
+    "makhraj:ر": 1.226,
+    "makhraj:ل": 1.26,
+    "makhraj:م": 1.342,
+    "rule:ghunnah:counts": 0.0,
+    "rule:madd_tabii:counts": 0.0
+   },
+   "held": {
+    "head:ghonna:margin": 0.042,
+    "head:hams_or_jahr:margin": 0.02,
+    "head:istitala:margin": 0.1,
+    "head:itbaq:margin": 0.033,
+    "head:qalqla:margin": -0.019,
+    "head:safeer:margin": -0.009,
+    "head:shidda_or_rakhawa:margin": 0.158,
+    "head:tafashie:margin": -0.234,
+    "head:tafkheem_or_taqeeq:margin": -0.021,
+    "head:tikraar:margin": 0.002,
+    "identity:blind_spot_p": 0.0,
+    "identity:margin": -0.219,
+    "letter:duration_s": 0.0,
+    "makhraj:ر": 1.226,
+    "makhraj:ل": 1.26,
+    "makhraj:م": 1.342,
+    "rule:ghunnah:counts": 0.0,
+    "rule:madd_tabii:counts": 0.0
+   },
+   "elsewhere_independent": {
+    "letters_elsewhere_flipped": 0,
+    "flips": []
+   },
+   "elsewhere_held": {
+    "letters_elsewhere_flipped": 0,
+    "flips": []
+   }
+  }
+ },
+ "baseline_alignment_L24_sifat_frames": [
+  237,
+  258
+ ]
+}

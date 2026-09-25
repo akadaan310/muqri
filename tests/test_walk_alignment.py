@@ -46,3 +46,11 @@ def test_windowed_walk_misplaces_the_same_passage() -> None:
     spans = walk_alignment(_posteriors(LAYOUT), _refs("abcd", "a", "bc"), VOCAB, BLANK, 0, 5,
                            joint_cells=0)
     assert spans != TRUE
+
+
+def test_each_ayah_clip_gets_context_but_never_a_neighbours_audio() -> None:
+    from app.engine import _with_context
+    # ayahs at 5-17 and 27-207, a 10-frame pause between: each widens by up to 8, not past the pause
+    assert _with_context([(5, 17), (27, 207)], 220) == [(0, 25), (19, 215)]
+    # a 4-frame pause is shared, not crossed
+    assert _with_context([(5, 17), (21, 40)], 45) == [(0, 21), (17, 45)]

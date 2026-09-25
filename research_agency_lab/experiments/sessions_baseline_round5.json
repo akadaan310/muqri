@@ -301,7 +301,7 @@
        "region": "throat, deepest",
        "confirmed": true,
        "competitor": "∅",
-       "margin": 7.032
+       "margin": 7.039
       },
       "sifat": [
        {
@@ -1923,7 +1923,7 @@
        "region": "throat, deepest",
        "confirmed": true,
        "competitor": "∅",
-       "margin": 9.249
+       "margin": 10.139
       },
       "sifat": [
        {
@@ -1932,11 +1932,11 @@
         "value": "jahr",
         "measured": true,
         "realised": true,
-        "margin": 10.429,
+        "margin": 10.285,
         "scored": true,
         "expected": "[جهر]",
         "observed": "[جهر]",
-        "percentile_masters": 0.3419
+        "percentile_masters": 0.3093
        },
        {
         "sifah": "shiddah_rakhawah",
@@ -1944,11 +1944,11 @@
         "value": "shiddah",
         "measured": true,
         "realised": true,
-        "margin": 10.577,
+        "margin": 9.958,
         "scored": true,
         "expected": "[شديد]",
         "observed": "[شديد]",
-        "percentile_masters": 0.3056
+        "percentile_masters": 0.1978
        },
        {
         "sifah": "istila_istifal",
@@ -1956,11 +1956,11 @@
         "value": "istifal",
         "measured": true,
         "realised": true,
-        "margin": 11.579,
+        "margin": 11.516,
         "scored": true,
         "expected": "[مرقق]",
         "observed": "[مرقق]",
-        "percentile_masters": 0.2371
+        "percentile_masters": 0.2305
        },
        {
         "sifah": "itbaq_infitah",
@@ -1968,11 +1968,11 @@
         "value": "infitah",
         "measured": true,
         "realised": true,
-        "margin": 11.252,
+        "margin": 11.093,
         "scored": true,
         "expected": "[منفتح]",
         "observed": "[منفتح]",
-        "percentile_masters": 0.2901
+        "percentile_masters": 0.2461
        },
        {
         "sifah": "idhlaq_ismat",
@@ -3175,7 +3175,7 @@
        "region": "the lips",
        "confirmed": true,
        "competitor": "∅",
-       "margin": 12.621
+       "margin": 12.629
       },
       "sifat": [
        {
@@ -4543,7 +4543,7 @@
        "region": "tongue tip, upper incisor roots",
        "confirmed": true,
        "competitor": "∅",
-       "margin": 6.578
+       "margin": 6.593
       },
       "sifat": [
        {
@@ -5699,9 +5699,9 @@
       "context": "voweled",
       "makhraj": {
        "region": "lower lip, upper incisors",
-       "confirmed": false,
+       "confirmed": true,
        "competitor": "∅",
-       "margin": -2.781
+       "margin": 12.766
       },
       "sifat": [
        {
@@ -5710,11 +5710,11 @@
         "value": "hams",
         "measured": true,
         "realised": true,
-        "margin": 11.465,
+        "margin": 9.928,
         "scored": true,
         "expected": "[همس]",
         "observed": "[همس]",
-        "percentile_masters": 0.2454
+        "percentile_masters": 0.0926
        },
        {
         "sifah": "shiddah_rakhawah",
@@ -5722,11 +5722,11 @@
         "value": "rakhawah",
         "measured": true,
         "realised": true,
-        "margin": 8.872,
+        "margin": 10.15,
         "scored": true,
         "expected": "[رخو]",
         "observed": "[رخو]",
-        "percentile_masters": 0.2242
+        "percentile_masters": 0.4961
        },
        {
         "sifah": "istila_istifal",
@@ -5734,11 +5734,11 @@
         "value": "istifal",
         "measured": true,
         "realised": true,
-        "margin": 13.311,
+        "margin": 14.315,
         "scored": true,
         "expected": "[مرقق]",
         "observed": "[مرقق]",
-        "percentile_masters": 0.6805
+        "percentile_masters": 0.8869
        },
        {
         "sifah": "itbaq_infitah",
@@ -5746,11 +5746,11 @@
         "value": "infitah",
         "measured": true,
         "realised": true,
-        "margin": 15.953,
+        "margin": 12.557,
         "scored": true,
         "expected": "[منفتح]",
         "observed": "[منفتح]",
-        "percentile_masters": 0.99
+        "percentile_masters": 0.6981
        },
        {
         "sifah": "idhlaq_ismat",
@@ -6708,7 +6708,7 @@
     "summary": {
      "voweled": {
       "letters": 56,
-      "makhraj_confirmed": 0.982,
+      "makhraj_confirmed": 1.0,
       "sifat": {
        "ghunnah": {
         "n": 1,
@@ -6780,7 +6780,7 @@
      },
      "all": {
       "letters": 86,
-      "makhraj_confirmed": 0.988,
+      "makhraj_confirmed": 1.0,
       "sifat": {
        "ghunnah": {
         "n": 10,
@@ -6830,15 +6830,6 @@
      "text": "تَرْمِيهِم",
      "failing": [
       "105:4:R4"
-     ],
-     "control": false
-    },
-    {
-     "ayah": 5,
-     "word": 0,
-     "text": "فَجَعَلَهُمْ",
-     "failing": [
-      "105:5:L0:identity"
      ],
      "control": false
     },
@@ -7154,7 +7145,7 @@
        "region": "throat, deepest",
        "confirmed": true,
        "competitor": "∅",
-       "margin": 10.111
+       "margin": 10.112
       },
       "sifat": [
        {
@@ -8702,7 +8693,7 @@
        "region": "tongue edge, front",
        "confirmed": false,
        "competitor": "∅",
-       "margin": -4.486
+       "margin": -4.531
       },
       "sifat": [
        {
@@ -8776,7 +8767,7 @@
        "region": "throat, deepest",
        "confirmed": true,
        "competitor": "∅",
-       "margin": 12.499
+       "margin": 12.501
       },
       "sifat": [
        {
@@ -11394,9 +11385,9 @@
       "context": "voweled",
       "makhraj": {
        "region": "tongue tip, upper incisor roots",
-       "confirmed": false,
+       "confirmed": true,
        "competitor": "∅",
-       "margin": -8.237
+       "margin": 10.311
       },
       "sifat": [
        {
@@ -11405,11 +11396,11 @@
         "value": "hams",
         "measured": true,
         "realised": true,
-        "margin": 6.306,
+        "margin": 7.477,
         "scored": true,
         "expected": "[همس]",
         "observed": "[همس]",
-        "percentile_masters": 0.035
+        "percentile_masters": 0.0421
        },
        {
         "sifah": "shiddah_rakhawah",
@@ -11417,11 +11408,11 @@
         "value": "shiddah",
         "measured": true,
         "realised": true,
-        "margin": 8.726,
+        "margin": 9.466,
         "scored": true,
         "expected": "[شديد]",
         "observed": "[شديد]",
-        "percentile_masters": 0.0472
+        "percentile_masters": 0.0531
        },
        {
         "sifah": "istila_istifal",
@@ -11429,11 +11420,11 @@
         "value": "istifal",
         "measured": true,
         "realised": true,
-        "margin": 11.308,
+        "margin": 8.939,
         "scored": true,
         "expected": "[مرقق]",
         "observed": "[مرقق]",
-        "percentile_masters": 0.1604
+        "percentile_masters": 0.0464
        },
        {
         "sifah": "itbaq_infitah",
@@ -11441,11 +11432,11 @@
         "value": "infitah",
         "measured": true,
         "realised": true,
-        "margin": 11.405,
+        "margin": 8.508,
         "scored": true,
         "expected": "[منفتح]",
         "observed": "[منفتح]",
-        "percentile_masters": 0.3
+        "percentile_masters": 0.0454
        },
        {
         "sifah": "idhlaq_ismat",
@@ -12554,7 +12545,7 @@
        "region": "lower lip, upper incisors",
        "confirmed": true,
        "competitor": "∅",
-       "margin": 13.762
+       "margin": 13.766
       },
       "sifat": [
        {
@@ -13492,7 +13483,7 @@
        "region": "tongue edge, front",
        "confirmed": true,
        "competitor": "∅",
-       "margin": 2.106
+       "margin": 2.017
       },
       "sifat": [
        {
@@ -13561,7 +13552,7 @@
     "summary": {
      "voweled": {
       "letters": 56,
-      "makhraj_confirmed": 0.982,
+      "makhraj_confirmed": 1.0,
       "sifat": {
        "ghunnah": {
         "n": 1,
@@ -13633,7 +13624,7 @@
      },
      "all": {
       "letters": 86,
-      "makhraj_confirmed": 0.95,
+      "makhraj_confirmed": 0.963,
       "sifat": {
        "ghunnah": {
         "n": 10,
@@ -13692,15 +13683,6 @@
      "text": "أَبَابِيلَ",
      "failing": [
       "105:3:L31:identity"
-     ],
-     "control": false
-    },
-    {
-     "ayah": 4,
-     "word": 0,
-     "text": "تَرْمِيهِم",
-     "failing": [
-      "105:4:L0:identity"
      ],
      "control": false
     },
@@ -13935,7 +13917,7 @@
        "region": "throat, deepest",
        "confirmed": true,
        "competitor": "∅",
-       "margin": 9.795
+       "margin": 9.796
       },
       "sifat": [
        {
@@ -16229,7 +16211,7 @@
        "region": "throat, deepest",
        "confirmed": true,
        "competitor": "∅",
-       "margin": 10.789
+       "margin": 10.835
       },
       "sifat": [
        {
@@ -17582,7 +17564,7 @@
        "region": "throat, deepest",
        "confirmed": true,
        "competitor": "∅",
-       "margin": 10.678
+       "margin": 10.724
       },
       "sifat": [
        {
@@ -19876,7 +19858,7 @@
        "region": "throat, deepest",
        "confirmed": true,
        "competitor": "∅",
-       "margin": 11.1
+       "margin": 11.121
       },
       "sifat": [
        {
@@ -21300,7 +21282,7 @@
        "region": "throat, deepest",
        "confirmed": true,
        "competitor": "∅",
-       "margin": 11.659
+       "margin": 11.73
       },
       "sifat": [
        {
@@ -25164,7 +25146,7 @@
        "region": "tongue tip, upper incisor roots",
        "confirmed": true,
        "competitor": "∅",
-       "margin": 0.562
+       "margin": 10.871
       },
       "sifat": [
        {
@@ -25173,11 +25155,11 @@
         "value": "hams",
         "measured": true,
         "realised": true,
-        "margin": 12.505,
+        "margin": 11.516,
         "scored": true,
         "expected": "[همس]",
         "observed": "[همس]",
-        "percentile_masters": 0.413
+        "percentile_masters": 0.2182
        },
        {
         "sifah": "shiddah_rakhawah",
@@ -25185,11 +25167,11 @@
         "value": "shiddah",
         "measured": true,
         "realised": true,
-        "margin": 13.156,
+        "margin": 13.019,
         "scored": true,
         "expected": "[شديد]",
         "observed": "[شديد]",
-        "percentile_masters": 0.2228
+        "percentile_masters": 0.2125
        },
        {
         "sifah": "istila_istifal",
@@ -25197,11 +25179,11 @@
         "value": "istifal",
         "measured": true,
         "realised": true,
-        "margin": 11.977,
+        "margin": 12.201,
         "scored": true,
         "expected": "[مرقق]",
         "observed": "[مرقق]",
-        "percentile_masters": 0.2327
+        "percentile_masters": 0.2656
        },
        {
         "sifah": "itbaq_infitah",
@@ -25209,11 +25191,11 @@
         "value": "infitah",
         "measured": true,
         "realised": true,
-        "margin": 11.967,
+        "margin": 10.641,
         "scored": true,
         "expected": "[منفتح]",
         "observed": "[منفتح]",
-        "percentile_masters": 0.4634
+        "percentile_masters": 0.1674
        },
        {
         "sifah": "idhlaq_ismat",
@@ -27328,7 +27310,7 @@
        "region": "tongue tip, lower incisors (whistle)",
        "confirmed": true,
        "competitor": "∅",
-       "margin": 6.837
+       "margin": 7.177
       },
       "sifat": [
        {
@@ -28444,7 +28426,7 @@
        "region": "tongue tip and back of it, gum",
        "confirmed": true,
        "competitor": "∅",
-       "margin": 11.191
+       "margin": 11.194
       },
       "sifat": [
        {
@@ -28938,7 +28920,7 @@
        "region": "throat, deepest",
        "confirmed": true,
        "competitor": "∅",
-       "margin": 10.072
+       "margin": 10.074
       },
       "sifat": [
        {
@@ -32802,7 +32784,7 @@
        "region": "tongue tip, upper incisor roots",
        "confirmed": true,
        "competitor": "∅",
-       "margin": 12.167
+       "margin": 12.17
       },
       "sifat": [
        {

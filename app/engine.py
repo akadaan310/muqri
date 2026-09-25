@@ -37,7 +37,25 @@ def _np_slice(wave, t0: int, t1: int, frame_s: float = 0.04, sr: int = 16000):  
     import numpy as np
     w = np.asarray(wave)
     return w[int(t0 * frame_s * sr):int(t1 * frame_s * sr)]
+
+
 LEARNER = ROOT / "research_agency_lab/experiments/learner_eval"
+CONTEXT_FRAMES = 8   # 0.32 s
+
+
+def _with_context(spans: list[tuple[int, int]], T: int, pad: int = CONTEXT_FRAMES) -> list[tuple[int, int]]:
+    """Each ayah's clip widened into the pauses either side, never into a neighbouring ayah.
+
+    Aligned spans start on the ayah's first phoneme and end on its last, so in a multi-ayah
+    submission the first and last letters of every ayah sat on the clip edge, where the identity
+    and sifah tests (analysis.analyse_clip, `margin` frames of context) have none on the outer side.
+    A single-ayah upload has the recording's lead-in; this gives every ayah the same."""
+    out = []
+    for i, (a, b) in enumerate(spans):
+        lo = spans[i - 1][1] if i else 0
+        hi = spans[i + 1][0] if i + 1 < len(spans) else T
+        out.append((max(lo, a - pad, 0) if a >= lo else a, min(max(hi, b), b + pad, T)))
+    return out
 
 
 def _haraka_of(units) -> float | None:  # type: ignore[no-untyped-def]
@@ -220,7 +238,7 @@ class Engine:
         # Pass 1: units per ayah. An ayah too short to measure its own count unit (الٓمٓ has no
         # vowelled letters at all) borrows the unit measured on the rest of the submission, so its
         # six-count madd lazim is judged instead of silently skipped.
-        clips = [(r, t0, t1) for r, (t0, t1) in zip(refs, spans) if t1 > t0]
+        clips = [(r, t0, t1) for r, (t0, t1) in zip(refs, _with_context(spans, lp.shape[0])) if t1 > t0]
         units_of = [analyse_clip(lp[t0:t1], r.phonemes, vocab, blank, ph["first"], ph["width"],
                                  blocks, r.expected_sifat) for r, t0, t1 in clips]
         own = [_haraka_of(u) for u in units_of]

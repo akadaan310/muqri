@@ -1,3 +1,3 @@
 # CLAUDE.md
 
-Read [`AGENTS.md`](AGENTS.md): the service, its computation, rule coverage, calibration rounds and working rules.
+Read the repository itself (README.md, `app/`, `research_agency_lab/`) for how the service works.

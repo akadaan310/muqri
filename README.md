@@ -4,9 +4,6 @@ A measuring instrument for Quran recitation (Ḥafṣ ʿan ʿĀṣim). Send it a
 it returns, for every letter, characteristic (ṣifah) and tajwīd rule, what was realised and how it
 compares with 41 master reciters. **The engine measures; the apps decide** what to tell a learner.
 
-AI agents: start with [`AGENTS.md`](AGENTS.md). It covers the service, the computation layer by layer,
-rule coverage with reliability, the calibration rounds and the working rules.
-
 ## The service (muaalem engine, live)
 
 ```bash
@@ -40,11 +37,11 @@ rule coverage with reliability, the calibration rounds and the working rules.
   * hamzat al-waṣl, sakt and stops;
   * the ten ṣifāt;
   * laḥn jalī (wrong letter, wrong vowel).
-* **Reliability**: `GET /capability` serves each capability's reliability live. See `AGENTS.md` §4 for
-  what ships and what is still on caution or hold.
+* **Reliability**: `GET /capability` serves each capability's reliability live: what ships and what is still on caution or hold.
 * **Calibration rounds** (`/sessions`): a certified reciter records each exercise twice, once correct
   and once with dictated mistakes. Over rounds 1–4 the engine went to 41/48 dictated mistakes caught and
-  145/155 expectations met on the correct takes (`AGENTS.md` §5).
+  145/155 expectations met on the correct takes (`app/sessions.py`,
+  `research_agency_lab/experiments/sessions_results.jsonl`).
 
 The rest of this README documents the earlier **qaari-eval v2** pipeline (wav2vec2 aligner + DSP
 validators). It is kept for the CLI, the benchmark runs and its calibration on the full-Qur'an Kaggle run.

@@ -158,6 +158,7 @@ def slug(cell: str) -> str:
 def main() -> None:
     import soundfile as sf
     from app.webapp import decode_upload
+    from datastore.review_queue import audio_path
     from research_agency_lab.experiments.letter_corpus.clean import clean_ayah, cut
     plan = json.loads((HERE / "plan.json").read_text())
     order = {(x["surah"], x["ayah"]): k for k, x in enumerate(plan["chosen"])}
@@ -192,7 +193,8 @@ def main() -> None:
             need = [n for n in need if taken[n[1]] < PER]
             if not need:
                 continue
-            raw = decode_upload(Path(d["audio"]).read_bytes())
+            src = Path(d["audio"]) if d.get("audio") and rec == "learner" else audio_path(rec, d["surah"], d["ayah"])
+            raw = decode_upload(src.read_bytes())
             clean = clean_ayah(raw)
             dur = len(raw) / 16000
             for kind, cell, i, r in need:
@@ -221,7 +223,7 @@ def main() -> None:
                 c = cells.setdefault(cell, {"cell": cell, "kind": kind, "reciters": {}})
                 c["reciters"].setdefault(rec, []).append({
                     "clip": f"{rec}/{slug(cell)}/{n}.wav", "ref": ref, "word": words.get(ref, ""),
-                    "source": Path(d["audio"]).name, "span_s": [round(t0, 3), round(t1, 3)], **score})
+                    "source": src.name, "span_s": [round(t0, 3), round(t1, 3)], **score})
         print(f"{rec}: {sum(taken.values())} instances in {len(taken)} cells", flush=True)
     for c in cells.values():
         rank = []

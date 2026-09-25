@@ -87,7 +87,7 @@ PAGE = """<!doctype html>
 <h1>Qaari — recitation analysis</h1>
 <p class="sub">Upload a recitation and every letter is scored: identity, its five to seven classical
 sifāt, timing in your own counts, and every located tajweed rule graded against what it requires.
-<a href="/sessions">Calibration sessions →</a> · <a href="/protocol">Recording protocol →</a> · <a href="/review">Listening review →</a></p>
+<a href="/sessions">Calibration sessions →</a> · <a href="/letters">Letters corpus →</a> · <a href="/protocol">Recording protocol →</a> · <a href="/review">Listening review →</a></p>
 
 <div class="tabs">
   <button class="on" data-t="analyse">Analyse a recitation</button>
@@ -528,6 +528,31 @@ def create_app():  # type: ignore[no-untyped-def]
         (d / f"{stamp}.report.json").write_text(_json.dumps(report, ensure_ascii=False))
         (d / f"{stamp}.scorecard.json").write_text(_json.dumps(card, ensure_ascii=False))
         return JSONResponse({"scorecard": card, "elapsed_seconds": round(time.time() - t0, 2)})
+
+    # -- the letters corpus: every letter and rule form, per reciter, with its measurements ---------
+    corpus_dir = Path(__file__).resolve().parents[1] / "research_agency_lab/experiments/letter_corpus/data"
+
+    @api.get("/letters", response_class=HTMLResponse)
+    def letters_page() -> str:
+        from app.corpus_page import CORPUS_PAGE
+        return CORPUS_PAGE
+
+    @api.get("/letters/{name}.json")
+    def letters_json(name: str) -> Any:
+        from fastapi.responses import FileResponse
+        p = corpus_dir / f"{name}.json"
+        if name not in ("corpus", "perturb") or not p.is_file():
+            return JSONResponse({"error": f"{name} not built yet"}, status_code=404)
+        return FileResponse(p, media_type="application/json")
+
+    @api.get("/letters/audio/{path:path}")
+    def letters_audio(path: str) -> Any:
+        from fastapi.responses import FileResponse
+        root = (corpus_dir / "clips").resolve()
+        p = (root / path).resolve()
+        if root not in p.parents or p.suffix != ".wav" or not p.is_file():
+            return JSONResponse({"error": "no such clip"}, status_code=404)
+        return FileResponse(p, media_type="audio/wav")
 
     # -- calibration sessions: spec'd and scripted takes, scored number by number -----------------
     @api.get("/sessions", response_class=HTMLResponse)

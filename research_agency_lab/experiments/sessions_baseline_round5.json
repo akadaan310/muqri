@@ -194,21 +194,6 @@
     },
     {
      "ayah": 4,
-     "word": 0,
-     "text": "تَرْمِيهِم",
-     "rule": "ikhfa_shafawi",
-     "expected_counts": [
-      2.0,
-      4.5
-     ],
-     "measured": 1.99,
-     "status": "short",
-     "z_masters": -1.66,
-     "verdict": "short",
-     "note": ""
-    },
-    {
-     "ayah": 4,
      "word": 1,
      "text": "بِحِجَارَةٍۢ",
      "rule": "idgham_ghunnah",
@@ -7038,21 +7023,6 @@
     },
     {
      "ayah": 4,
-     "word": 0,
-     "text": "تَرْمِيهِم",
-     "rule": "ikhfa_shafawi",
-     "expected_counts": [
-      2.0,
-      4.5
-     ],
-     "measured": 2.78,
-     "status": "pass",
-     "z_masters": 1.619,
-     "verdict": "ok",
-     "note": ""
-    },
-    {
-     "ayah": 4,
      "word": 1,
      "text": "بِحِجَارَةٍۢ",
      "rule": "idgham_ghunnah",
@@ -7133,7 +7103,7 @@
      "note": ""
     }
    ],
-   "met": 22,
+   "met": 21,
    "letter_matrix": {
     "letters": [
      {
@@ -13827,21 +13797,6 @@
      "note": ""
     },
     {
-     "ayah": 6,
-     "word": 3,
-     "text": "لُّبَدًا",
-     "rule": "madd_iwad",
-     "expected_counts": [
-      1.25,
-      2.75
-     ],
-     "measured": null,
-     "status": "no_evidence",
-     "z_masters": null,
-     "verdict": "no_evidence",
-     "note": "the stop"
-    },
-    {
      "ayah": 7,
      "word": 1,
      "text": "أَن",
@@ -17474,21 +17429,6 @@
      "note": ""
     },
     {
-     "ayah": 6,
-     "word": 3,
-     "text": "لُّبَدًا",
-     "rule": "madd_iwad",
-     "expected_counts": [
-      1.25,
-      2.75
-     ],
-     "measured": null,
-     "status": "no_evidence",
-     "z_masters": null,
-     "verdict": "no_evidence",
-     "note": "the stop"
-    },
-    {
      "ayah": 7,
      "word": 1,
      "text": "أَن",
@@ -21034,21 +20974,6 @@
     },
     {
      "ayah": 1,
-     "word": 0,
-     "text": "إِنَّآ",
-     "rule": "madd_munfasil",
-     "expected_counts": [
-      3.25,
-      5.75
-     ],
-     "measured": 4.44,
-     "status": "pass",
-     "z_masters": 0.142,
-     "verdict": "ok",
-     "note": "declared tawassut"
-    },
-    {
-     "ayah": 1,
      "word": 1,
      "text": "أَنزَلْنَـٰهُ",
      "rule": "ikhfa",
@@ -21170,7 +21095,7 @@
      "text": "مِّنْ",
      "rule": "izhar_halqi",
      "expected_counts": null,
-     "measured": null,
+     "measured": 1.41,
      "status": "pass",
      "z_masters": null,
      "verdict": "ok",
@@ -21270,7 +21195,7 @@
      "note": ""
     }
    ],
-   "met": 19,
+   "met": 18,
    "letter_matrix": {
     "letters": [
      {
@@ -28672,21 +28597,6 @@
     },
     {
      "ayah": 1,
-     "word": 0,
-     "text": "إِنَّآ",
-     "rule": "madd_munfasil",
-     "expected_counts": [
-      3.25,
-      5.75
-     ],
-     "measured": 5.82,
-     "status": "long",
-     "z_masters": 0.868,
-     "verdict": "long",
-     "note": "declared tawassut"
-    },
-    {
-     "ayah": 1,
      "word": 1,
      "text": "أَنزَلْنَـٰهُ",
      "rule": "ikhfa",
@@ -28808,7 +28718,7 @@
      "text": "مِّنْ",
      "rule": "izhar_halqi",
      "expected_counts": null,
-     "measured": null,
+     "measured": 1.31,
      "status": "pass",
      "z_masters": null,
      "verdict": "ok",

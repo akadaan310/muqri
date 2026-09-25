@@ -142,7 +142,7 @@ def build(report: dict[str, Any]) -> dict[str, Any]:
                 if failed and all((blind[u].get(head) or 0) >= tau for u in failed):
                     v = {**v, "status": "unconfirmed", "evidence": {**ev, "reason": "a blind spot of the acoustic model "
                          "in this context (professionals fail this check here too)"}}
-            counts = ev.get("given_counts")
+            counts = ev.get("given_counts", ev.get("held_counts"))
             exp = v.get("expected_counts")
             dev = None
             if counts is not None and exp:

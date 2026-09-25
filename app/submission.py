@@ -202,6 +202,24 @@ def nasal_band(rule: str) -> tuple[float, float] | None:
     return (NASAL_FLOOR, round(hi, 2)) if hi else None
 
 
+# A clear nūn sākin before a throat letter is held only as long as the consonant itself (ghunnah
+# nāqiṣah). Hidden with a full ghunnah it held 3.62 counts where the same reader's clear one held 1.32
+# (round 5, مِّنْ أَلْفِ), and the rule passed: its letters were all there. Over the T300 pass
+# (research_agency_lab/experiments/izhar/naqisah.py) the masters' nūn sākin -- not tanwīn -- held a
+# median 1.29 counts, 99th percentile 1.74, and 2 of 804 beyond 2.5 (3 of 2,730 over all 41 reciters).
+# Tanwīn is left out: at a stop inside the ayah it is not an iẓhār at all, and its tail runs to 9 counts.
+IZHAR_HOLD_CEILING = 2.5
+
+
+def _izhar_hold(us: list[Unit], ev: dict[str, Any]) -> tuple[str, dict[str, Any]]:
+    nasal = [u for u in us if u.symbol in "نں"]
+    if not nasal or any(u.duration_counts is None for u in nasal):
+        return "pass", ev
+    held = round(to_counts(sum(u.duration_counts for u in nasal)), 2)
+    ev = {**ev, "held_counts": held, "hold_ceiling": IZHAR_HOLD_CEILING}
+    return ("long" if held > IZHAR_HOLD_CEILING else "pass"), ev
+
+
 def grade_rule(b, units: list[Unit]) -> RuleVerdict:  # type: ignore[no-untyped-def]
     """Grade one bound rule from the acoustic evidence at its units."""
     us = [units[i] for i in b.unit_indices if 0 <= i < len(units)]
@@ -259,6 +277,8 @@ def grade_rule(b, units: list[Unit]) -> RuleVerdict:  # type: ignore[no-untyped-
             bad = [u for u in us if not u.confirmed]
             ev = {"heard": bad[0].best_competitor if bad else None,
                   "llr": bad[0].competitor_llr if bad else None}
+    if b.rule_type == "izhar_halqi" and b.detail == "noon sakinah" and status == "pass":
+        status, ev = _izhar_hold(us, ev)
     return RuleVerdict(rule=b.rule_type, word_index=b.word_index, word=b.word, detail=b.detail,
                        mechanism=b.mechanism, units=list(b.unit_indices),
                        expected_counts=(nasal_band(b.rule_type) or b.expected_counts) if b.mechanism == "durational" else b.expected_counts, measured_counts=measured,

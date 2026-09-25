@@ -75,7 +75,7 @@ For the reciters in this pilot:
 | Sudais | the fast (ḥadr) reciter |
 | the learner | latest take A of each session exercise |
 
-**Scaling.** At the measured rate ($0.52 for 1,562 ayahs), a full-Qur'an pass costs about $2.08 per reciter, which is about $62 for 30 reciters. At 10 containers × 80 processes it takes roughly 3 hours of wall time. The index for 30 full readings is about 20 million units:
+**Scaling.** The measured rate is $0.52 for 1,562 short ayahs (36 phonemes on average). The Qur'an averages about 104 phonemes per ayah, 2.9× longer. Scaled by length, a full-Qur'an pass costs roughly $6 per reciter, which is about $180 for 30 reciters, and 5 reciters take about 3 hours on 10 containers × 80 processes. The index for 30 full readings is about 20 million units:
 - JSON: about 20 GB
 - Parquet: about 3–5 GB
 - 256-dimensional float16 embeddings per unit: about 10 GB

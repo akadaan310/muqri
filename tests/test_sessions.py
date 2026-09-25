@@ -77,7 +77,8 @@ def test_every_exercise_points_at_real_words() -> None:
     from app.engine import Engine
     e = Engine()
     for ex in exercises().values():
-        n = {a: len(e.reference(ex.surah, a).uthmani.split()) for a in range(ex.ayahs[0], ex.ayahs[1] + 1)}
+        n = {a: len((e.reference_text(ex.lines[a - 1]) if ex.lines else e.reference(ex.surah, a)).uthmani.split())
+             for a in range(ex.ayahs[0], ex.ayahs[1] + 1)}
         for a, w in [(x.ayah, x.word) for x in ex.expect] + [(m.ayah, m.word) for m in ex.mistakes] + list(ex.controls):
             assert a in n and 0 <= w < n[a], (ex.id, a, w)
 
@@ -108,10 +109,13 @@ def test_every_expected_rule_is_located_where_the_exercise_says() -> None:
     parser = TajweedParser()
     for ex in exercises().values():
         located: dict[tuple[int, int], set[str]] = {}
-        for part in parts(ex):              # as the engine sees them: an ayah cut at each declared stop
-            a = part[1]
-            words = Aya(ex.surah, a).get().uthmani.split()
-            lo, hi = (part[2], part[3]) if len(part) == 4 else (0, len(words) - 1)
+        for k, part in enumerate(parts(ex), 1):   # as the engine sees them: an ayah cut at each stop, or a drill line
+            if isinstance(part, str):
+                a, words, lo, hi = k, part.split(), 0, len(part.split()) - 1
+            else:
+                a = part[1]
+                words = Aya(ex.surah, a).get().uthmani.split()
+                lo, hi = (part[2], part[3]) if len(part) == 4 else (0, len(words) - 1)
             for r in parser.parse(" ".join(words[lo:hi + 1])).rules:
                 located.setdefault((a, lo + r.word_index), set()).add(r.rule_type.value)
         for x in ex.expect:
@@ -120,3 +124,35 @@ def test_every_expected_rule_is_located_where_the_exercise_says() -> None:
             for s in m.catch:
                 if s.kind == "rule":
                     assert s.name in located.get((m.ayah, m.word), set()), (ex.id, m.ayah, m.word, s.name)
+
+
+def test_letter_drill_lines_and_every_mistake_on_a_letter_that_is_there() -> None:
+    """Round 6: 28 letters, one line each; every scripted mistake names a syllable of its line whose
+    phonemes hold the letter its signatures look for."""
+    from app.engine import Engine
+    from app.letters import CONSONANTS
+    from app.sessions import ROUNDS, parts
+    e = Engine()
+    r6 = ROUNDS[6]
+    assert sorted(ln.split()[0][0] for ex in r6 for ln in ex.lines) == sorted(CONSONANTS)
+    for ex in r6:
+        assert ex.surah == 0 and parts(ex) == list(ex.lines) and ex.ayahs == (1, len(ex.lines))
+        for m in ex.mistakes:
+            ref = e.reference_text(ex.lines[m.ayah - 1])
+            p0, p1 = ref.word_ph[m.word]
+            syl = ref.phonemes[p0:len(ref.phonemes) if m.word == len(ref.word_ph) - 1 else p1]
+            for s in m.catch:
+                if s.letter:
+                    assert s.letter in syl, (ex.id, m.ayah, m.word, s.letter, syl)
+
+
+def test_a_drill_take_a_is_scored_syllable_by_syllable() -> None:
+    from app.sessions import drill
+    ex = drill("t", "t", ("بَ بِ بُ أَبْ",), goal="", spec="", mistakes=())
+    words = [{"ref": f"0:1:{i}", "text": t, "all_correct": i != 2, "failing": ["0:1:L5:identity"] if i == 2 else []}
+             for i, t in enumerate(("بَ", "بِ", "بُ", "أَبْ"))]
+    m = {"recording": {"seconds_per_count": None, "tempo_class": None, "wajh": {}}, "rules": [], "letters": [],
+         "words": words}
+    c = score(ex, "A", m)
+    assert c["met"] == 3 and [e["text"] for e in c["expectations"] if e["verdict"] != "ok"] == ["بُ"]
+    assert c["false_alarms"] == []

@@ -559,7 +559,8 @@ def create_app():  # type: ignore[no-untyped-def]
         status: dict[str, Any] = {}
         for ex in ROUNDS[n]:
             d = to_json(ex)
-            d["verses"] = [{"ayah": a, "words": _words_of(ex.surah, a)} for a in range(ex.ayahs[0], ex.ayahs[1] + 1)]
+            d["verses"] = [{"ayah": a, "words": ex.lines[a - 1].split() if ex.lines else _words_of(ex.surah, a)}
+                           for a in range(ex.ayahs[0], ex.ayahs[1] + 1)]
             exs.append(d)
             for take in ("A", "B"):
                 cards = sorted((SESSIONS_DIR / ex.id / take).glob("*.score.json")) if SESSIONS_DIR.is_dir() else []

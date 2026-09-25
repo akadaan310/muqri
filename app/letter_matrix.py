@@ -21,39 +21,9 @@ from __future__ import annotations
 
 from typing import Any
 
-HAMS = set("فحثهشخصسكت")
-SHIDDAH = set("ءجدقطبكت")
-TAWASSUT = set("لنعمر")
-ISTILA = set("خصضغطقظ")
-ITBAQ = set("صضطظ")
-IDHLAQ = set("فرمنلب")
-SINGLES = {"safir": set("صزس"), "qalqalah": set("قطبجد"), "leen": set("وي"), "inhiraf": set("لر"),
-           "takrir": set("ر"), "tafashshi": set("ش"), "istitalah": set("ض")}
-NASAL = set("نم")
-# phonetic-script letters that are a noon or a meem in another guise
-ALIAS = {"ں": "ن", "۾": "م"}
+from app.letters import ALIAS, NASAL, PAIRS, SINGLE_AR, SINGLE_HEADS, SINGLES, UNMEASURED_WHY, makhraj_of
 
-MAKHRAJ = {**{c: "throat, deepest" for c in "ءه"}, **{c: "throat, middle" for c in "عح"},
-           **{c: "throat, nearest" for c in "غخ"}, "ق": "tongue root, soft palate",
-           "ك": "tongue back, hard palate", **{c: "tongue middle" for c in "جشي"},
-           "ض": "tongue side, molars", "ل": "tongue edge, front", "ن": "tongue tip, gum",
-           "ر": "tongue tip and back of it, gum", **{c: "tongue tip, upper incisor roots" for c in "طدت"},
-           **{c: "tongue tip, lower incisors (whistle)" for c in "صزس"},
-           **{c: "tongue tip, upper incisor edges" for c in "ظذث"}, "ف": "lower lip, upper incisors",
-           **{c: "the lips" for c in "بمو"}}
-
-# (name, arabic, the engine head measuring it or None, the letter set it applies to, how to state it)
-PAIRS = (("hams_jahr", "الهمس/الجهر", "hams_or_jahr", lambda c: "hams" if c in HAMS else "jahr"),
-         ("shiddah_rakhawah", "الشدة/التوسط/الرخاوة", "shidda_or_rakhawa",
-          lambda c: "shiddah" if c in SHIDDAH else ("tawassut" if c in TAWASSUT else "rakhawah")),
-         ("istila_istifal", "الاستعلاء/الاستفال", "tafkheem_or_taqeeq",
-          lambda c: "isti'la" if c in ISTILA else "istifal"),
-         ("itbaq_infitah", "الإطباق/الانفتاح", "itbaq", lambda c: "itbaq" if c in ITBAQ else "infitah"),
-         ("idhlaq_ismat", "الإذلاق/الإصمات", None, lambda c: "idhlaq" if c in IDHLAQ else "ismat"))
-SINGLE_HEADS = {"safir": "safeer", "qalqalah": "qalqla", "leen": None, "inhiraf": None, "takrir": "tikraar",
-                "tafashshi": "tafashie", "istitalah": "istitala"}
-SINGLE_AR = {"safir": "الصفير", "qalqalah": "القلقلة", "leen": "اللين", "inhiraf": "الانحراف",
-             "takrir": "التكرير", "tafashshi": "التفشي", "istitalah": "الاستطالة"}
+VOWELS = {"َ": "fatha", "ِ": "kasra", "ُ": "damma"}
 
 
 def _context(letters: list[dict[str, Any]], i: int) -> str:
@@ -93,10 +63,28 @@ def build(m: dict[str, Any]) -> dict[str, Any]:
         if c in NASAL:
             sifat.append({"sifah": "ghunnah", "ar": "الغنة", "value": "ghunnah", **_cell(l, "ghonna")})
         idn = l["identity"]
+        mk = makhraj_of(c)
+        near = (l.get("makhraj") or {}).get("neighbours") or {}
+        nxt = letters[i + 1] if i + 1 < len(letters) else None
         rows.append({"id": l["id"], "word": l["word"], "letter": l["symbol"], "context": _context(letters, i),
-                     "makhraj": {"region": MAKHRAJ.get(c, ""), "confirmed": idn["confirmed"],
-                                 "competitor": idn["competitor"], "margin": idn["margin"]},
+                     "vowel": VOWELS.get(nxt["symbol"]) if nxt and nxt["word"] == l["word"] else None,
+                     "makhraj": {"point": mk["n"] if mk else None, "ar": mk["ar"] if mk else "",
+                                 "region": mk["point"] if mk else "", "confirmed": idn["confirmed"],
+                                 "competitor": idn["competitor"], "margin": idn["margin"],
+                                 # the articulation-point test (drills): against every neighbouring point
+                                 "neighbours": near, "neighbours_held": min(near.values()) > 0 if near else None},
                      "sifat": sifat})
+    # every short vowel: was it heard as itself, against the other two
+    vowels = []
+    for i, l in enumerate(letters):
+        if l["symbol"] not in VOWELS:
+            continue
+        prev = letters[i - 1] if i else None
+        idn = l["identity"]
+        vowels.append({"id": l["id"], "word": l["word"], "vowel": VOWELS[l["symbol"]],
+                       "after": prev["symbol"] if prev and prev["word"] == l["word"] else None,
+                       "confirmed": idn["confirmed"], "competitor": idn["competitor"], "margin": idn["margin"],
+                       "duration_s": l["duration_s"]})
     # accuracies, separately for the voweled (separation) and the held (collision) letters
     groups = {"voweled": ("voweled",), "held (saakin / doubled / stop)": ("saakin", "doubled", "stop"), "all": None}
     summary: dict[str, Any] = {}
@@ -108,10 +96,15 @@ def build(m: dict[str, Any]) -> dict[str, Any]:
             for s in r["sifat"]:
                 if s.get("measured") and s.get("scored"):
                     per.setdefault(s["sifah"], []).append(bool(s["realised"]))
+        nb = [r["makhraj"]["neighbours_held"] for r in rs if r["makhraj"]["neighbours_held"] is not None]
         summary[g] = {"letters": len(rs),
                       "makhraj_confirmed": round(sum(x["confirmed"] for x in mk) / len(mk), 3) if mk else None,
+                      "makhraj_neighbours_held": round(sum(nb) / len(nb), 3) if nb else None,
                       "sifat": {k: {"n": len(v), "realised": round(sum(v) / len(v), 3)} for k, v in sorted(per.items())}}
-    return {"letters": rows, "summary": summary,
-            "not_measured": {"idhlaq_ismat": "a property of the letter set, not a sound",
-                             "leen": "no per-letter head; the madd leen rule times it",
-                             "inhiraf": "no head yet"}}
+    by_vowel = {}
+    for v in VOWELS.values():
+        vs = [x for x in vowels if x["vowel"] == v and x["margin"] is not None]
+        if vs:
+            by_vowel[v] = {"n": len(vs), "confirmed": round(sum(x["confirmed"] for x in vs) / len(vs), 3)}
+    return {"letters": rows, "vowels": vowels, "summary": summary, "vowel_summary": by_vowel,
+            "not_measured": UNMEASURED_WHY}

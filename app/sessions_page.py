@@ -116,7 +116,7 @@ function verses(x){
       const m=x.mistakes.findIndex(k=>k.ayah==v.ayah&&k.word==i);
       const s=(x.stops||[]).some(k=>k.ayah==v.ayah&&k.word==i)?' <span class="stop">⏹ stop, then resume</span><br>':'';
       return (m>=0?'<mark>'+esc(w)+'<sup>'+(m+1)+'</sup></mark>':esc(w))+s;
-    }).join(' ')+' <span class="n">('+x.surah+':'+v.ayah+')</span></div>').join('');
+    }).join(' ')+' <span class="n">('+(x.drill?'line '+v.ayah:x.surah+':'+v.ayah)+')</span></div>').join('');
 }
 function card(x,i,st){
   const words=(a,w)=>{const v=x.verses.find(v=>v.ayah==a);return v?v.words[w]:'';};
@@ -177,9 +177,13 @@ function matrix(M){
   const cols=COLS.filter(c=>names.includes(c[0]));
   h+='<table><tr><th>letter</th><th>context</th><th>makhraj</th>'+cols.map(c=>'<th>'+c[1]+'</th>').join('')+'</tr>'+M.letters.map(r=>{
     const by={};r.sifat.forEach(s=>by[s.sifah]=s);
-    const mk=r.makhraj, mc=mk.margin==null?'<td></td>':'<td class="'+(mk.confirmed?'ok':'bad')+'" title="'+esc(mk.region)+'">'+(mk.confirmed?'✓':'✗ heard '+esc(mk.competitor))+'<br><span class="mut">'+mk.margin+(mk.confirmed&&mk.competitor?' vs '+esc(mk.competitor):'')+'</span></td>';
-    return '<tr><td class="arw">'+esc(r.letter)+'</td><td>'+esc(r.context)+'</td>'+mc+cols.map(c=>mcell(by[c[0]])).join('')+'</tr>';}).join('')+'</table></div>'
-   +'<p class="mut">Numbers are the engine’s confidence margin (higher = clearer). Makhraj: the letter against the nearest letter it could be confused with.</p></details>';
+    const mk=r.makhraj, nb=Object.entries(mk.neighbours||{}).sort((p,q)=>p[1]-q[1])[0];
+    const nbs=nb?'<br><span class="'+(nb[1]>0?'mut':'bad')+'">point '+(mk.point??'?')+': '+(nb[1]>0?'nearest ':'nearer to ')+esc(nb[0])+' '+nb[1]+'</span>':'';
+    const mc=mk.margin==null&&!nb?'<td></td>':'<td class="'+(mk.confirmed&&(!nb||nb[1]>0)?'ok':'bad')+'" title="'+esc(mk.region)+'">'+(mk.confirmed?'✓':'✗ heard '+esc(mk.competitor))+(mk.margin==null?'':'<br><span class="mut">'+mk.margin+(mk.confirmed&&mk.competitor?' vs '+esc(mk.competitor):'')+'</span>')+nbs+'</td>';
+    return '<tr><td class="arw">'+esc(r.letter)+'</td><td>'+esc(r.vowel||r.context)+'</td>'+mc+cols.map(c=>mcell(by[c[0]])).join('')+'</tr>';}).join('')+'</table>'
+   +(M.vowels&&M.vowels.length?'<table><tr><th>vowel</th><th>heard as itself</th><th>n</th></tr>'+Object.entries(M.vowel_summary||{}).map(([v,x])=>'<tr><td>'+esc(v)+'</td><td class="'+(x.confirmed==1?'ok':'warn')+'">'+Math.round(100*x.confirmed)+'%</td><td>'+x.n+'</td></tr>').join('')+'</table>'
+     +'<p class="mut">Vowels not heard as themselves: '+(M.vowels.filter(v=>!v.confirmed).map(v=>esc(v.vowel)+' after '+esc(v.after||'?')+' → '+esc(v.competitor)+' ('+v.margin+')').join(', ')||'none')+'</p>':'')+'</div>'
+   +'<p class="mut">Numbers are the engine’s confidence margin (higher = clearer). Makhraj: the letter against the nearest letter it could be confused with; in drills also against every neighbouring articulation point (reported, not scored).</p></details>';
   return h;
 }
 let media=null,chunks=[],recKey=null;

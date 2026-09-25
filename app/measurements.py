@@ -76,6 +76,16 @@ def _stats(x: float | None, d: dict[str, Any], key: str) -> dict[str, float | No
             "z_masters": robust_z(x, (d.get("masters") or {}).get(key))}
 
 
+def _makhraj(l: dict[str, Any]) -> dict[str, Any] | None:
+    from app.letters import makhraj_of
+    m = makhraj_of(l["symbol"]) if l["kind"] in ("consonant", "ikhfa_noon", "iqlab_meem") else None
+    near = l.get("neighbours") or {}
+    if m is None and not near:
+        return None
+    return {"point": m["n"] if m else None, "tested": bool(near), "neighbours": near,
+            "held": min(near.values()) > 0 if near else None}
+
+
 def _rule_pct(rule: str, counts: float | None) -> dict[str, float | None]:
     return _stats(counts, _ref().get("rules", {}).get(rule, {}), "counts_quantiles")
 
@@ -127,6 +137,9 @@ def build(report: dict[str, Any]) -> dict[str, Any]:
                 "onset_s": round(t0 + l["onset_s"], 3), "duration_s": l["duration_s"],
                 "duration_counts": l.get("duration_counts"),
                 "edge": bool(l.get("edge")),
+                # the articulation point, and the margin against its neighbours when the makhraj
+                # test ran (drills); a letter with no point of its own (a vowel, a madd) has none
+                "makhraj": _makhraj(l),
                 "identity": {"confirmed": idn["confirmed"], "competitor": idn["heard_instead"] or None,
                              "margin": None if idn.get("llr") is None else -idn["llr"], "scored": id_scored,
                              "blind_spot_p": None if ibp is None else round(ibp, 3)},

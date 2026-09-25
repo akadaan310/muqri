@@ -45,6 +45,8 @@ class Sig:
                      must be negative / positive
     kind "sifah":    characteristic head `name` not realised on a letter of the word (`letter` if set)
     kind "identity": a letter of the word (`letter` if set) not confirmed, heard as one of `heard`
+    kind "makhraj":  a letter of the word (`letter` if set) lost the articulation-point test to a
+                     neighbouring point (one of `heard` if set) -- drills, where that test runs
     """
     kind: str
     name: str = ""
@@ -82,12 +84,26 @@ class Exercise:
     # must name its stops: the reciter should not choose them, and the engine must know them, since a
     # stop changes what the text requires (قَآئِمًۭا at a stop is madd 'iwad, not ikhfa').
     stops: tuple[tuple[int, int], ...] = ()
+    # a drill: lines of letters, syllables or words that are not a verse (Engine.reference_text).
+    # Line n is "ayah" n of surah 0, and every word of a line -- a syllable, in a letter drill -- is
+    # addressed as (line, word) like a verse's. Take A is then scored letter by letter: every
+    # consonant and vowel heard as itself, every characteristic the engine measures realised.
+    lines: tuple[str, ...] = ()
 
 
-def parts(ex: Exercise) -> list[tuple[int, ...]]:
-    """The submission's verses for the engine: whole ayahs, or an ayah cut at each declared stop."""
+def drill(id: str, title: str, lines: tuple[str, ...], **kw: Any) -> Exercise:
+    """An exercise on drill lines; surah 0, one 'ayah' per line."""
+    return Exercise(id, title, 0, (1, len(lines)), lines=lines, wajh=kw.pop("wajh", "tawassut"),
+                    expect=kw.pop("expect", ()), **kw)
+
+
+def parts(ex: Exercise) -> list[tuple[int, ...] | str]:
+    """The submission's verses for the engine: whole ayahs, an ayah cut at each declared stop, or
+    a drill's lines."""
+    if ex.lines:
+        return list(ex.lines)
     from quran_transcript import Aya
-    out: list[tuple[int, ...]] = []
+    out: list[tuple[int, ...] | str] = []
     for a in range(ex.ayahs[0], ex.ayahs[1] + 1):
         cut = sorted(w for (y, w) in ex.stops if y == a)
         if not cut:
@@ -99,6 +115,17 @@ def parts(ex: Exercise) -> list[tuple[int, ...]]:
             out.append((ex.surah, a, lo, w))
             lo = w + 1
     return out
+
+
+LETTER_SPEC = ("Each line is one letter in four forms, read left to right as written: fatḥah, kasrah, ḍammah, then "
+               "the letter sākin after a hamza with fatḥah (أَبْ). One steady beat per syllable, a clear vowel on "
+               "each, a small even gap between syllables is fine; pause at the end of every line. The qalqalah "
+               "letters (ق ط ب ج د) echo when sākin; أَوْ and أَيْ are held as a līn at the stop.")
+
+
+def _letter_lines(letters: str) -> tuple[str, ...]:
+    """One drill line per letter: its three vowels, then sākin after a hamza (the hamza's own line: أَأْ)."""
+    return tuple(f"{c}َ {c}ِ {c}ُ " + ("أَأْ" if c == "ء" else f"أَ{c}ْ") for c in letters)
 
 
 def _nasal(rule: str) -> tuple[float, float]:
@@ -611,6 +638,135 @@ ROUNDS: dict[int, tuple[Exercise, ...]] = {
                   "engine parses the quran_transcript text, which carries no sakt mark (ۜ), so no sakt rule is "
                   "located at 36:52, 75:27 or 83:14 (the Tanzil text has the mark and the parser finds it)."),
     ),
+    6: (
+        drill("r6e1", "The throat — ء ه ع ح غ خ", _letter_lines("ءهعحغخ"),
+              goal="The first letter round: every letter alone, in its four forms -- fatḥah, kasrah, ḍammah, and "
+                   "sākin after a hamza with fatḥah (أَبْ) -- so each letter's identity, its makhraj against the "
+                   "points beside it, its vowels and every characteristic the engine measures are tested with "
+                   "nothing around them. The throat's three points (deepest ء ه, middle ع ح, nearest غ خ) are "
+                   "the hardest to tell apart by ear.",
+              spec=LETTER_SPEC,
+              mistakes=(Mistake(2, 0, "هَ — push it forward into a tight, raspy ḥāʾ: the breath scrapes the "
+                                      "middle of the throat instead of sighing from the bottom.",
+                                (Sig("identity", letter="ه", heard=("ح",)), Sig("makhraj", letter="ه"))),
+                        Mistake(3, 0, "عَ — close the throat completely and release it like a hamza (shiddah): "
+                                      "no flow of voice through the ʿayn.",
+                                (Sig("sifah", "shidda_or_rakhawa", letter="ع"), Sig("identity", letter="ع"),
+                                 Sig("makhraj", letter="ع"))),
+                        Mistake(4, 1, "حِ — let the voice buzz through it (jahr), halfway to ʿayn; keep the "
+                                      "kasrah.",
+                                (Sig("sifah", "hams_or_jahr", letter="ح"), Sig("identity", letter="ح"),
+                                 Sig("makhraj", letter="ح"))),
+                        Mistake(5, 0, "غَ — light: keep the back of the tongue low, no rising (istifāl).",
+                                (Sig("sifah", "tafkheem_or_taqeeq", letter="غ"), Sig("identity", letter="غ"))),
+                        Mistake(6, 3, "أَخْ — voice it at the end, sliding toward ghayn (jahr on a hams letter).",
+                                (Sig("sifah", "hams_or_jahr", letter="خ"), Sig("identity", letter="خ"),
+                                 Sig("makhraj", letter="خ"))),
+                        Mistake(1, 3, "أَأْ — let the final hamza go: no catch in the throat, a breath instead.",
+                                (Sig("identity", letter="ء"), Sig("sifah", "shidda_or_rakhawa", letter="ء"),
+                                 Sig("makhraj", letter="ء"))),
+                        Mistake(2, 2, "هُ — the ḍammah without rounding the lips, halfway to a fatḥah.",
+                                (Sig("identity", letter="ُ"), Sig("makhraj", letter="ُ")))),
+              learn="Take A is the letter matrix of the throat: which of these letters, vowels and characteristics "
+                    "the engine hears as themselves in isolation. ع and ح differ from ء and ه only in their point; "
+                    "the makhraj test (every letter against its neighbouring points) is reported for the first "
+                    "time here, and take B shows whether it moves when the point moves."),
+        drill("r6e2", "Tongue root and middle — ق ك ج ش ي", _letter_lines("قكجشي"),
+              goal="The back and middle of the tongue: ق at the soft palate, ك a little forward, ج ش ي at the "
+                   "middle. Qalqalah (ق ج), hams (ك ش), tafashshī (ش) and isti'lāʾ (ق) each get one change.",
+              spec=LETTER_SPEC,
+              mistakes=(Mistake(1, 0, "قَ — light: the tongue root not raised, a deep kāf rather than a qāf.",
+                                (Sig("sifah", "tafkheem_or_taqeeq", letter="ق"), Sig("identity", letter="ق"),
+                                 Sig("makhraj", letter="ق"))),
+                        Mistake(1, 3, "أَقْ — stop dead on the qāf: hold the closure, no echo (no qalqalah).",
+                                (Sig("rule", "qalqalah"), Sig("sifah", "qalqla", letter="ق"),
+                                 Sig("sifah", "qalqla", letter="ڇ"))),
+                        Mistake(2, 3, "أَكْ — release the kāf with no breath after it (the hams held back).",
+                                (Sig("sifah", "hams_or_jahr", letter="ك"),)),
+                        Mistake(3, 3, "أَجْ — a soft French j, as in 'garage': no closure, no echo.",
+                                (Sig("sifah", "shidda_or_rakhawa", letter="ج"), Sig("sifah", "qalqla", letter="ج"),
+                                 Sig("sifah", "qalqla", letter="ڇ"), Sig("rule", "qalqalah"),
+                                 Sig("identity", letter="ج"))),
+                        Mistake(4, 0, "شَ — the air in a narrow stream down the middle, not spread through the "
+                                      "mouth (no tafashshī), toward sīn.",
+                                (Sig("sifah", "tafashie", letter="ش"), Sig("makhraj", letter="ش"),
+                                 Sig("identity", letter="ش"))),
+                        Mistake(5, 1, "يِ — open the kasrah toward a fatḥah (the jaw drops).",
+                                (Sig("identity", letter="ِ"), Sig("makhraj", letter="ِ")))),
+              learn="ك and ش have no classical confusion in the identity test, so before this round a wrong kāf or "
+                    "shīn could only be heard as missing. The makhraj test gives them neighbours (ك: ق ت; ش: س ج)."),
+        drill("r6e3", "Side, edge and tip — ض ل ن ر", _letter_lines("ضلنر"),
+              goal="ض at the tongue's side, ل its edge, ن and ر its tip: istiṭālah (ض), inḥirāf and takrīr (ر), "
+                   "ghunnah (ن), and the rāʾ's heaviness changing with its vowel (heavy with fatḥah and ḍammah, "
+                   "light with kasrah, heavy sākin after fatḥah).",
+              spec=LETTER_SPEC,
+              mistakes=(Mistake(1, 0, "ضَ — short and stopped like a heavy dāl: no stretch along the side of the "
+                                      "tongue (no istiṭālah).",
+                                (Sig("sifah", "istitala", letter="ض"), Sig("identity", letter="ض"),
+                                 Sig("makhraj", letter="ض"))),
+                        Mistake(2, 1, "لِ — heavy, as in the lām of the Name (it must be light).",
+                                (Sig("sifah", "tafkheem_or_taqeeq", letter="ل"),)),
+                        Mistake(3, 3, "أَنْ — close the nose: an oral n with no hum (no ghunnah).",
+                                (Sig("sifah", "ghonna", letter="ن"),)),
+                        Mistake(4, 3, "أَرْ — roll it: let the tongue tap two or three times (takrīr made heard).",
+                                (Sig("sifah", "tikraar", letter="ر"), Sig("rule", "takreer"))),
+                        Mistake(4, 1, "رِ — heavy (with a kasrah it must be light).",
+                                (Sig("sifah", "tafkheem_or_taqeeq", letter="ر"), Sig("rule", "tarqeeq"))),
+                        Mistake(3, 0, "نَ — the tongue tip too far back and wide, toward a lām.",
+                                (Sig("makhraj", letter="ن"), Sig("identity", letter="ن")))),
+              learn="ل ن ر have no classical confusion: their makhraj is tested here for the first time, against "
+                    "each other. ن's ghunnah and ر's takrīr are single heads the model has; inḥirāf has none and is "
+                    "listed, not measured."),
+        drill("r6e4", "Tip at the teeth — ط د ت ص ز س", _letter_lines("طدتصزس"),
+              goal="Two points: the tip on the incisor roots (ط د ت, the itbāq and qalqalah pair) and the "
+                   "whistling letters (ص ز س). Itbāq, qalqalah, hams, ṣafīr and isti'lāʾ each get one change.",
+              spec=LETTER_SPEC,
+              mistakes=(Mistake(1, 0, "طَ — the tongue flat, not pressed up to the palate (no itbāq), toward tāʾ.",
+                                (Sig("sifah", "itbaq", letter="ط"), Sig("sifah", "tafkheem_or_taqeeq", letter="ط"),
+                                 Sig("identity", letter="ط", heard=("ت",)), Sig("makhraj", letter="ط"))),
+                        Mistake(1, 3, "أَطْ — stop dead on the ṭāʾ: no echo (no qalqalah).",
+                                (Sig("rule", "qalqalah"), Sig("sifah", "qalqla", letter="ط"),
+                                 Sig("sifah", "qalqla", letter="ڇ"))),
+                        Mistake(3, 3, "أَتْ — release the tāʾ with no breath after it (hams held back).",
+                                (Sig("sifah", "hams_or_jahr", letter="ت"),)),
+                        Mistake(4, 0, "صَ — no whistle: a flat, dull hiss (no ṣafīr), keep it heavy.",
+                                (Sig("sifah", "safeer", letter="ص"),)),
+                        Mistake(5, 1, "زِ — the voice off, toward sīn (hams on a jahr letter).",
+                                (Sig("sifah", "hams_or_jahr", letter="ز"), Sig("makhraj", letter="ز"),
+                                 Sig("identity", letter="ز"))),
+                        Mistake(6, 0, "سَ — heavy, toward ṣād (isti'lāʾ on a light letter).",
+                                (Sig("sifah", "tafkheem_or_taqeeq", letter="س"), Sig("identity", letter="س", heard=("ص",)),
+                                 Sig("makhraj", letter="س"))),
+                        Mistake(2, 2, "دُ — the ḍammah without rounding the lips, toward a kasrah.",
+                                (Sig("identity", letter="ُ"), Sig("makhraj", letter="ُ")))),
+              learn="ط→ت was caught voweled (طَيْرًا, r5e1) and missed sākin (مَطْلَعِ, r5e3); here it is voweled "
+                    "again with nothing around it, and the sākin ṭāʾ carries its qalqalah change instead."),
+        drill("r6e5", "Tip at the teeth edges and the lips — ظ ذ ث ف ب م و", _letter_lines("ظذثفبمو"),
+              goal="The tip at the incisor edges (ظ ذ ث), the lip and teeth (ف) and the two lips (ب م و). ف and و "
+                   "have no characteristic that marks them: only their point does, so they test the makhraj "
+                   "measure alone.",
+              spec=LETTER_SPEC,
+              mistakes=(Mistake(1, 0, "ظَ — light and flat, toward dhāl (no itbāq, no isti'lāʾ).",
+                                (Sig("sifah", "itbaq", letter="ظ"), Sig("sifah", "tafkheem_or_taqeeq", letter="ظ"),
+                                 Sig("identity", letter="ظ"), Sig("makhraj", letter="ظ"))),
+                        Mistake(2, 1, "ذِ — the voice off, toward thāʾ (hams on a jahr letter).",
+                                (Sig("sifah", "hams_or_jahr", letter="ذ"), Sig("makhraj", letter="ذ"),
+                                 Sig("identity", letter="ذ"))),
+                        Mistake(3, 0, "ثَ — voiced, toward dhāl (jahr on a hams letter).",
+                                (Sig("sifah", "hams_or_jahr", letter="ث"), Sig("makhraj", letter="ث"),
+                                 Sig("identity", letter="ث"))),
+                        Mistake(4, 0, "فَ — with both lips, no teeth, like blowing out a candle.",
+                                (Sig("makhraj", letter="ف"), Sig("identity", letter="ف"))),
+                        Mistake(5, 3, "أَبْ — stop dead on the bāʾ: no echo (no qalqalah).",
+                                (Sig("rule", "qalqalah"), Sig("sifah", "qalqla", letter="ب"),
+                                 Sig("sifah", "qalqla", letter="ڇ"))),
+                        Mistake(6, 3, "أَمْ — close the nose: an oral m, no hum (no ghunnah).",
+                                (Sig("sifah", "ghonna", letter="م"),)),
+                        Mistake(7, 0, "وَ — the lower lip on the upper teeth, like an English v.",
+                                (Sig("makhraj", letter="و"), Sig("identity", letter="و")))),
+              learn="A miss on ف or و says the makhraj measure cannot hear a moved point where no characteristic "
+                    "moves with it -- the case a letter drill exists for."),
+    ),
 }
 
 
@@ -701,6 +857,11 @@ def _matches(sig: Sig, m: dict[str, Any], surah: int, ayah: int, word: int) -> l
             i = l["identity"]
             if not i["confirmed"] and (not sig.heard or i["competitor"] in sig.heard):
                 ev.append(f"{l['symbol']} heard as {i['competitor']} (margin {i['margin']})")
+    elif sig.kind == "makhraj":
+        for l in _letters_at(m, surah, ayah, word, sig.letter):
+            for q, margin in ((l.get("makhraj") or {}).get("neighbours") or {}).items():
+                if margin <= 0 and (not sig.heard or q in sig.heard):
+                    ev.append(f"{l['symbol']} nearer to {q} (margin {margin})")
     return ev
 
 
@@ -708,6 +869,8 @@ def _named(sig: Sig, m: dict[str, Any], surah: int, ayah: int, word: int) -> set
     """The failing-item ids (as in measurements' words[].failing) a signature speaks for."""
     if sig.kind == "rule":
         return {r["id"] for r in _rules_at(m, surah, ayah, word, sig.name)}
+    if sig.kind == "makhraj":             # reported, never a failing item
+        return set()
     head = sig.name if sig.kind == "sifah" else "identity"
     return {f"{l['id']}:{head}" for l in _letters_at(m, surah, ayah, word, sig.letter)}
 
@@ -738,9 +901,18 @@ def score(ex: Exercise, take: str, m: dict[str, Any]) -> dict[str, Any]:
                              "z_masters": r["z_masters"], "verdict": "ok" if ok else (("out of range" if measured else "ok, length not measured")
                                                            if r["status"] == "pass" else r["status"]),
                              "note": e.note})
+        scripted: set[tuple[int, int]] = set()
+        if ex.lines:
+            # a drill's take A: every syllable is an expectation -- its letters and vowels heard as
+            # themselves and every characteristic the engine scores realised
+            for key, t in word_text.items():
+                bad = flagged[key]["failing"] if key in flagged else []
+                rows.append({"ayah": key[0], "word": key[1], "text": t, "rule": "letters", "expected_counts": None,
+                             "measured": "; ".join(bad) or None, "status": "wrong" if bad else "pass",
+                             "z_masters": None, "verdict": "ok" if not bad else "flagged", "failing": bad})
+                scripted.add(key)
         out["expectations"] = rows
         out["met"] = sum(r["verdict"] == "ok" for r in rows)
-        scripted: set[tuple[int, int]] = set()
     else:
         rows = []
         for mk in ex.mistakes:
@@ -777,7 +949,7 @@ def to_json(ex: Exercise) -> dict[str, Any]:
                        for e in ex.expect],
             "mistakes": [{"ayah": mk.ayah, "word": mk.word, "do": mk.do} for mk in ex.mistakes],
             "b_is_correct": ex.b_is_correct, "b_spec": ex.b_spec,
-            "stops": [{"ayah": a, "word": w} for a, w in ex.stops]}
+            "stops": [{"ayah": a, "word": w} for a, w in ex.stops], "drill": bool(ex.lines)}
 
 
 def tempo_pair(a: dict[str, Any], b: dict[str, Any]) -> dict[str, Any]:

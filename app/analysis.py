@@ -168,6 +168,9 @@ class Unit:
     # verdict: reviewers' tagged errors sit on these letters too, and excluding them traded recall
     # for false alarms one for one (lift over chance 2.06 -> 2.02..2.13 across thresholds).
     edge: bool = False
+    # margin (nats) of this letter against each letter at a neighbouring articulation point, when
+    # the caller asked for the makhraj test (app/letters.NEIGHBOURS); positive = the reference won
+    neighbours: dict[str, float] = field(default_factory=dict)
 
 
 def _plausible(counts: float, cap: float) -> float | None:
@@ -193,7 +196,8 @@ def analyse_clip(lp_full: npt.NDArray[np.floating], phonemes: str, vocab: dict[s
                  ph_first: int, ph_width: int, sifat_blocks: dict[str, tuple[int, int, list[str]]],
                  expected_sifat: dict[str, list[int]] | None = None,
                  ctx: int = 2, margin: int = 3, timing: str = "viterbi",
-                 haraka_s: float | None = None) -> list[Unit]:
+                 haraka_s: float | None = None,
+                 neighbours: dict[str, tuple[str, ...]] | None = None) -> list[Unit]:
     """Everything the engine knows about every unit of one ayah.
 
     `lp_full` is the T x C log-posterior matrix of all levels; `ph_first`/`ph_width` locate the
@@ -205,6 +209,9 @@ def analyse_clip(lp_full: npt.NDArray[np.floating], phonemes: str, vocab: dict[s
     `haraka_s` is the count unit to fall back on when this ayah is too short to measure its own
     (fewer than five vowelled letters -- الٓمٓ has none). Without it every duration in such an ayah is
     unknown, and a madd lazim of six counts cannot be judged at all.
+
+    `neighbours` (symbol -> letters at neighbouring articulation points) adds the makhraj test: the
+    letter's margin against each, reported on the unit and never part of `confirmed`.
     """
     if timing not in ("viterbi", "centroid"):
         raise ValueError(f"timing must be 'viterbi' or 'centroid', not {timing!r}")
@@ -281,6 +288,10 @@ def analyse_clip(lp_full: npt.NDArray[np.floating], phonemes: str, vocab: dict[s
         else:
             gop, best, lr = 0.0, "", None
 
+        near: dict[str, float] = {}
+        for q in (neighbours or {}).get(sym, ()):
+            if q in vocab:
+                near[q] = round(-(ctc_log_likelihood(x, [*left, *([vocab[q]] * n), *right], blank) - ref), 3)
         u = Unit(index=i, symbol=sym, kind=_kind(sym), run_length=n, char_span=(a, b),
                  frames=(first[a], last[b]), onset_s=round((onset(i) - 1) * FRAME_S, 3),
                  duration_s=round(dur(i), 3),
@@ -289,7 +300,7 @@ def analyse_clip(lp_full: npt.NDArray[np.floating], phonemes: str, vocab: dict[s
                  gop=round(float(gop), 3), best_competitor=best,
                  competitor_llr=None if lr is None else round(lr, 3),
                  confirmed=(lr is None or lr < 0),
-                 edge=first[a] - 1 - margin < 0 or last[b] + margin >= T)
+                 edge=first[a] - 1 - margin < 0 or last[b] + margin >= T, neighbours=near)
 
         if expected_sifat and sym not in SIFAT_SKIP:
             t0s, t1s = first[a] - 1, last[b]

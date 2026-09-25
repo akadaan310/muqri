@@ -41,6 +41,7 @@ def _np_slice(wave, t0: int, t1: int, frame_s: float = 0.04, sr: int = 16000):  
 
 LEARNER = ROOT / "research_agency_lab/experiments/learner_eval"
 CONTEXT_FRAMES = 8   # 0.32 s
+DRILL = 0            # the "surah" of drill lines: text that is not a verse
 
 
 def _with_context(spans: list[tuple[int, int]], T: int, pad: int = CONTEXT_FRAMES) -> list[tuple[int, int]]:
@@ -146,7 +147,7 @@ class Engine:
         phonetised on its own, because that is what a reader who starts or stops there must say:
         hamzat al-wasl read at the start, the waqf form of the last word at the end.
         """
-        Aya, phonetize, moshaf, md = self._phonetizer
+        Aya = self._phonetizer[0]
         uthmani = Aya(surah, ayah).get().uthmani
         offset = 0
         if words is not None:
@@ -156,6 +157,22 @@ class Engine:
                 raise ValueError(f"{surah}:{ayah} has {len(ws)} words; asked for {w0}..{w1}")
             if (w0, w1) != (0, len(ws) - 1):
                 uthmani, offset = " ".join(ws[w0:w1 + 1]), w0
+        return self._ref(uthmani, surah, ayah, offset)
+
+    def reference_text(self, text: str, line: int = 1) -> AyahRef:
+        """The reference for text that is not a verse: a drill line of letters, syllables or words.
+
+        The phonetiser and the rule parser take any Uthmani-script text, so a drill is measured
+        exactly as a verse is -- identity, sifat, rules, lengths. Its last word is read at a stop,
+        as a verse's is (بَ بِ بُ أَبْ puts the stop on the sakin form, where it changes nothing).
+        """
+        uthmani = " ".join(text.split())
+        if not uthmani:
+            raise ValueError("empty drill line")
+        return self._ref(uthmani, DRILL, line)
+
+    def _ref(self, uthmani: str, surah: int, ayah: int, offset: int = 0) -> AyahRef:
+        _aya, phonetize, moshaf, md = self._phonetizer
         r = phonetize(uthmani, moshaf, remove_spaces=True)
         from research_agency_lab.experiments.learner_eval.sifat_ref import LEVELS  # noqa: PLC0415
         maps = self._sifat_maps
@@ -199,9 +216,9 @@ class Engine:
         return {"columns": c0, "blank": 0, "levels": levels}
 
     # -- the call --------------------------------------------------------------------------------
-    def analyze(self, audio, verses: list[tuple[int, ...]], *,  # type: ignore[no-untyped-def]
+    def analyze(self, audio, verses: list[tuple[int, ...] | str], *,  # type: ignore[no-untyped-def]
                 rule_filter: str | None = None, posteriors: np.ndarray | None = None,
-                wajh: str | None = None) -> dict[str, Any]:
+                wajh: str | None = None, makhraj: bool | None = None) -> dict[str, Any]:
         """Score a submission covering `verses`, in order, against the audio.
 
         Each verse is (surah, ayah) or (surah, ayah, first_word, last_word) for part of an ayah
@@ -210,6 +227,11 @@ class Engine:
         `rule_filter` restricts the report to one rule family, for rule-practice submissions.
         `wajh` ("qasr" | "tawassut") declares the munfasil length the learner follows; without it the
         wajh is inferred from the recording.
+
+        A verse may also be a string: a drill line -- letters, syllables or words in Uthmani script,
+        not from a verse (see `reference_text`). Drill lines are numbered 1.. as surah 0.
+        `makhraj` runs the articulation-point test (every letter against its neighbours,
+        app/letters.NEIGHBOURS); by default it runs on drills and not on recitation.
         """
         lp = posteriors if posteriors is not None else self.posteriors(audio)
         audio = audio if isinstance(audio, __import__("numpy").ndarray) else None
@@ -224,7 +246,17 @@ class Engine:
         vocab = {t: i for i, t in enumerate(ph["vocab"]) if len(t) == 1}
         blank = lay["blank"]
 
-        refs = [self.reference(v[0], v[1], (v[2], v[3]) if len(v) > 2 else None) for v in verses]
+        refs, line = [], 0
+        for v in verses:
+            if isinstance(v, str):
+                line += 1
+                refs.append(self.reference_text(v, line))
+            else:
+                refs.append(self.reference(v[0], v[1], (v[2], v[3]) if len(v) > 2 else None))
+        if makhraj is None:
+            makhraj = any(r.surah == DRILL for r in refs)
+        from app.letters import NEIGHBOURS
+        near = NEIGHBOURS if makhraj else None
         spans = walk_alignment(lp, refs, vocab, blank, ph["first"], ph["width"])
         if len(spans) > 1:
             from app.submission import settle_boundaries
@@ -240,14 +272,15 @@ class Engine:
         # six-count madd lazim is judged instead of silently skipped.
         clips = [(r, t0, t1) for r, (t0, t1) in zip(refs, _with_context(spans, lp.shape[0])) if t1 > t0]
         units_of = [analyse_clip(lp[t0:t1], r.phonemes, vocab, blank, ph["first"], ph["width"],
-                                 blocks, r.expected_sifat) for r, t0, t1 in clips]
+                                 blocks, r.expected_sifat, neighbours=near) for r, t0, t1 in clips]
         own = [_haraka_of(u) for u in units_of]
         known = [h for h in own if h]
         borrowed = float(np.median(known)) if known else None
         for k, (r, t0, t1) in enumerate(clips):
             if own[k] is None and borrowed:
                 units_of[k] = analyse_clip(lp[t0:t1], r.phonemes, vocab, blank, ph["first"],
-                                           ph["width"], blocks, r.expected_sifat, haraka_s=borrowed)
+                                           ph["width"], blocks, r.expected_sifat, haraka_s=borrowed,
+                                           neighbours=near)
 
         per_ayah = []
         for (r, t0, t1), units, h_own in zip(clips, units_of, own):
@@ -314,7 +347,7 @@ class Engine:
     def _basmala(self, lp, refs, spans, vocab, blank, first, width) -> dict[str, Any]:  # type: ignore[no-untyped-def]
         from app.lahn.gop import ctc_log_likelihood
         out: dict[str, Any] = {"checked": False, "present": False}
-        if not refs or refs[0].ayah != 1 or refs[0].word_offset or refs[0].surah in (1, 9) or not spans:
+        if not refs or refs[0].ayah != 1 or refs[0].word_offset or refs[0].surah in (1, 9, DRILL) or not spans:
             return out
         bas = self.reference(1, 1)
         region = lp[:spans[0][1], first:first + width]

@@ -106,11 +106,13 @@ def _parser():  # type: ignore[no-untyped-def]
 
 def letter_span(L: list[dict[str, Any]], i: int, form: str) -> tuple[float, float, list[int]]:
     idx = [i]
+    same = lambda k: k < len(L) and L[k]["id"].rsplit(":", 1)[0] == L[i]["id"].rsplit(":", 1)[0]  # noqa: E731
     if form not in ("sakin", "stop"):
         j = i + 1
-        idx.append(j)
-        if j + 1 < len(L) and L[j + 1]["symbol"] in MADD:
-            idx.append(j + 1)
+        if same(j) and L[j]["symbol"] in SHORT:      # a shaddah at the ayah's end has no vowel after it
+            idx.append(j)
+            if same(j + 1) and L[j + 1]["symbol"] in MADD:
+                idx.append(j + 1)
     elif i + 1 < len(L) and L[i + 1]["symbol"] == "ڇ":
         idx.append(i + 1)
     t0 = L[idx[0]]["onset_s"]
@@ -194,9 +196,8 @@ def main() -> None:
             if not need:
                 continue
             src = Path(d["audio"]) if d.get("audio") and rec == "learner" else audio_path(rec, d["surah"], d["ayah"])
-            raw = decode_upload(src.read_bytes())
-            clean = clean_ayah(raw)
-            dur = len(raw) / 16000
+            raw = clean = None
+            dur = 0.0
             for kind, cell, i, r in need:
                 if taken[cell] >= PER:
                     continue
@@ -213,13 +214,19 @@ def main() -> None:
                     t0, t1 = min(u["onset_s"] for u in us), max(u["onset_s"] + u["duration_s"] for u in us)
                     score = rule_score(r)
                     ref = f"{r['id'].rsplit(':', 1)[0]}:{r['word']}"
-                t0, t1 = max(0.0, t0 - PAD_S), min(dur, t1 + PAD_S, t0 + MAX_S)
                 n = taken[cell]
                 taken[cell] += 1
                 out = DATA / "clips" / rec / slug(cell)
-                out.mkdir(parents=True, exist_ok=True)
-                sf.write(out / f"{n}.wav", cut(clean, t0, t1), 16000, subtype="PCM_16")
-                sf.write(out / f"{n}.raw.wav", cut(raw, t0, t1, level=False), 16000, subtype="PCM_16")
+                if raw is None:
+                    raw = decode_upload(src.read_bytes())
+                    dur = len(raw) / 16000
+                t0, t1 = max(0.0, t0 - PAD_S), min(dur, t1 + PAD_S, t0 + MAX_S)
+                if not ((out / f"{n}.wav").is_file() and (out / f"{n}.raw.wav").is_file()):   # resumable
+                    if clean is None:
+                        clean = clean_ayah(raw)
+                    out.mkdir(parents=True, exist_ok=True)
+                    sf.write(out / f"{n}.wav", cut(clean, t0, t1), 16000, subtype="PCM_16")
+                    sf.write(out / f"{n}.raw.wav", cut(raw, t0, t1, level=False), 16000, subtype="PCM_16")
                 c = cells.setdefault(cell, {"cell": cell, "kind": kind, "reciters": {}})
                 c["reciters"].setdefault(rec, []).append({
                     "clip": f"{rec}/{slug(cell)}/{n}.wav", "ref": ref, "word": words.get(ref, ""),

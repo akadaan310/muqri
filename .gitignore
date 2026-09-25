@@ -43,3 +43,4 @@ research_agency_lab/experiments/session_recordings/
 research_agency_lab/experiments/timing/stretch_T300.jsonl
 # Raw Kaggle rows (committed gzipped as *.jsonl.gz)
 benchmarks/results/kaggle/*/*runs_*.jsonl
+research_agency_lab/experiments/letter_corpus/data/

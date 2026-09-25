@@ -492,6 +492,118 @@ ROUNDS: dict[int, tuple[Exercise, ...]] = {
             learn="Six parts in one recording: a part whose words all fail points at the stop being misplaced "
                   "(alignment), not at the letters."),
     ),
+    5: (
+        Exercise(
+            "r5e1", "The mīm family and two misses retested — al-Fīl 105:1–5", 105, (1, 5),
+            goal="No take B has tested mīm sākinah yet: iẓhār shafawī four times, ikhfāʾ shafawī at "
+                 "تَرْمِيهِم بِحِجَارَةٍۢ, beside two idghāms with ghunnah. Two substitutions missed in rounds 1–2 "
+                 "come back in new words: ḍād as dāl (تَضْلِيلٍۢ, missed in ٱلْمَغْضُوبِ) and ṭāʾ as tāʾ "
+                 "(طَيْرًا, missed in ٱلطَّارِقُ).",
+            spec="Tadwīr, stop at the end of each ayah. تَرْمِيهِم بِحِجَارَةٍۢ ikhfāʾ shafawī with ghunnah 2 · "
+                 "بِحِجَارَةٍۢ مِّن and كَعَصْفٍۢ مَّأْكُولٍۭ idghām with ghunnah · مِّن سِجِّيلٍۢ ikhfāʾ · "
+                 "every mīm before a letter other than bāʾ or mīm clear (iẓhār shafawī) · طَيْرًا ṭāʾ and rāʾ heavy.",
+            wajh="tawassut",
+            expect=(Expect(1, 0, "izhar_shafawi"), Expect(1, 1, "tafkheem"), Expect(1, 4, "tafkheem"),
+                    Expect(1, 6, "madd_arid_lissukun"),
+                    Expect(2, 0, "izhar_shafawi"), Expect(2, 1, "qalqalah"), Expect(2, 2, "izhar_shafawi"),
+                    Expect(2, 4, "madd_arid_lissukun"),
+                    Expect(3, 0, "tafkheem"), Expect(3, 1, "izhar_shafawi"), Expect(3, 2, "itbaq"),
+                    Expect(3, 2, "izhar_halqi"), Expect(3, 2, "tafkheem"), Expect(3, 3, "madd_arid_lissukun"),
+                    Expect(4, 0, "ikhfa_shafawi", _nasal("ikhfa_shafawi")),
+                    Expect(4, 1, "idgham_ghunnah", _nasal("idgham_ghunnah")), Expect(4, 2, "ikhfa", _nasal("ikhfa")),
+                    Expect(4, 3, "madd_arid_lissukun"),
+                    Expect(5, 0, "izhar_shafawi"), Expect(5, 1, "idgham_ghunnah", _nasal("idgham_ghunnah")),
+                    Expect(5, 2, "madd_arid_lissukun")),
+            mistakes=(Mistake(2, 4, "تَضْلِيلٍۢ — say the ḍād as dāl: 'taḍlīl' becomes 'tadlīl'.",
+                              (Sig("identity", letter="ض", heard=("د",)), Sig("sifah", "itbaq", letter="ض"),
+                               Sig("sifah", "tafkheem_or_taqeeq", letter="ض"))),
+                      Mistake(3, 2, "طَيْرًا — make the ṭāʾ light, like tāʾ: 'tayran' (keep the rāʾ heavy).",
+                              (Sig("identity", letter="ط", heard=("ت",)), Sig("rule", "itbaq"),
+                               Sig("sifah", "itbaq", letter="ط"), Sig("sifah", "tafkheem_or_taqeeq", letter="ط"))),
+                      Mistake(4, 0, "تَرْمِيهِم بِحِجَارَةٍۢ — iẓhār shafawī: close the lips on a clear mīm, no hiding, "
+                                    "no nasal hold before the bāʾ.",
+                              (Sig("rule", "ikhfa_shafawi", ("short", "wrong"), -1),
+                               Sig("sifah", "ghonna", letter="م"))),
+                      Mistake(5, 1, "كَعَصْفٍۢ مَّأْكُولٍۭ — merge the tanwīn into the mīm with NO ghunnah.",
+                              (Sig("rule", "idgham_ghunnah", ("short", "wrong"), -1),
+                               Sig("sifah", "ghonna", letter="م", word_offset=1)))),
+            controls=((1, 0), (1, 2), (1, 3), (2, 1), (3, 0), (4, 3), (5, 2)),
+            learn="If ḍād→dāl and ṭāʾ→tāʾ are missed again in new words, the two pairs that share a makhraj and "
+                  "differ only in itbāq are a gap in the identity test itself, not a quirk of one word. Round 5 "
+                  "does not retest a short vowel stretched into a madd (ishbāʿ, missed in هُوَ): "
+                  "app/itmam.py measures it descriptively and scores nothing, so no signal can catch it yet."),
+        Exercise(
+            "r5e2", "Idghām without ghunnah against with — al-Balad 90:5–7", 90, (5, 7),
+            goal="Round 4 caught every merge made without ghunnah, but at 1.81–1.92 counts against a band "
+                 "that starts at 2.0: a thin margin. Here three idghāms WITHOUT ghunnah (أَن لَّن, "
+                 "مَالًۭا لُّبَدًا, أَن لَّمْ) sit beside one WITH (لَّن يَقْدِرَ). Round 2 "
+                 "missed the reverse error — a ghunnah added where it must not be (يَكُن لَّهُۥ).",
+            spec="Tadwīr, stop at the end of each ayah. أَن لَّن, مَالًۭا لُّبَدًا and أَن لَّمْ "
+                 "idghām WITHOUT ghunnah, no nasal hold · لَّن يَقْدِرَ idghām with ghunnah 2 · يَرَهُۥٓ "
+                 "أَحَدٌ ṣila kubrā 4 · qalqalah on يَقْدِرَ and at the stops on أَحَدٌۭ and أَحَدٌ · "
+                 "لُّبَدًا madd ʿiwaḍ 2 at the stop.",
+            wajh="tawassut",
+            expect=(Expect(5, 1, "idgham_no_ghunnah"), Expect(5, 2, "idgham_ghunnah", _nasal("idgham_ghunnah")),
+                    Expect(5, 3, "qalqalah"), Expect(5, 3, "tafkheem"), Expect(5, 5, "qalqalah"),
+                    Expect(6, 0, "madd_tabii", _madd(2)), Expect(6, 2, "madd_tabii", _madd(2)),
+                    Expect(6, 2, "idgham_no_ghunnah"), Expect(6, 3, "madd_iwad", _madd(2), "the stop"),
+                    Expect(7, 1, "idgham_no_ghunnah"), Expect(7, 2, "izhar_shafawi"),
+                    Expect(7, 3, "madd_silah_kubra", _madd(4, 5), "declared tawassut"), Expect(7, 3, "tafkheem"),
+                    Expect(7, 4, "qalqalah")),
+            mistakes=(Mistake(5, 1, "أَن لَّن — merge the nūn into the lām WITH a nasal ghunnah (it must be without).",
+                              (Sig("rule", "idgham_no_ghunnah"), Sig("sifah", "ghonna", letter="ل", word_offset=1))),
+                      Mistake(5, 2, "لَّن يَقْدِرَ — merge the nūn into the yāʾ with NO ghunnah.",
+                              (Sig("rule", "idgham_ghunnah", ("short", "wrong"), -1),
+                               Sig("sifah", "ghonna", letter="ي", word_offset=1), Sig("sifah", "ghonna"))),
+                      Mistake(6, 2, "مَالًۭا لُّبَدًا — iẓhār of the tanwīn: 'mālan lubadā', the nūn clear, no merging.",
+                              (Sig("rule", "idgham_no_ghunnah"), Sig("identity"))),
+                      Mistake(7, 3, "يَرَهُۥٓ أَحَدٌ — the ṣila kubrā at 2 counts instead of 4.",
+                              (Sig("rule", "madd_silah_kubra", ("short",), -1),))),
+            controls=((5, 0), (5, 4), (6, 1), (7, 0)),
+            learn="Mistake 1 is round 2's miss in a new word. If it is missed again, a ghunnah added to an "
+                  "idghām without ghunnah has no evidence path: the rule has no counted length and the lām "
+                  "has no nasal competitor. Mistake 2's deviation, set beside round 4's -0.08 / -0.19, says "
+                  "whether the with/without boundary is really where the band puts it."),
+        Exercise(
+            "r5e3", "Madd too short, the shafawī idghām, qalqalah at the stop — al-Qadr 97:1–5", 97, (1, 5),
+            goal="'Madd too short' is still on caution (0.937 against 0.95), so a muttaṣil is cut to two counts. "
+                 "Idghām shafawī (رَبِّهِم مِّن) is read without its ghunnah, an iẓhār ḥalqī (مِّنْ "
+                 "أَلْفِ) is hidden, and a qalqalah is dropped at a stop on dāl. A third ṭāʾ→tāʾ, sākinah "
+                 "this time (مَطْلَعِ), shows whether r5e1's result holds without a vowel on the letter.",
+            spec="Tadwīr, stop at the end of each ayah. إِنَّآ ghunnah and munfaṣil 4 · أَنزَلْنَـٰهُ ikhfāʾ · "
+                 "وَمَآ munfaṣil 4 · ٱلْمَلَـٰٓئِكَةُ muttaṣil 4 · خَيْرٌۭ مِّنْ idghām with ghunnah · مِّنْ "
+                 "أَلْفِ iẓhār · رَبِّهِم مِّن idghām shafawī with ghunnah · مِّن كُلِّ ikhfāʾ · "
+                 "qalqalah on the dāl of every ٱلْقَدْرِ and on مَطْلَعِ · ٱلْفَجْرِ heavy rāʾ at the stop.",
+            wajh="tawassut",
+            expect=(Expect(1, 0, "ghunnah", _nasal("ghunnah")),
+                    Expect(1, 0, "madd_munfasil", _madd(4, 5), "declared tawassut"),
+                    Expect(1, 1, "ikhfa", _nasal("ikhfa")), Expect(1, 4, "qalqalah"), Expect(1, 4, "tafkheem"),
+                    Expect(2, 0, "madd_munfasil", _madd(4, 5), "declared tawassut"), Expect(2, 1, "qalqalah"),
+                    Expect(3, 1, "qalqalah"), Expect(3, 1, "tarqeeq"),
+                    Expect(3, 2, "idgham_ghunnah", _nasal("idgham_ghunnah")), Expect(3, 3, "izhar_halqi"),
+                    Expect(4, 1, "madd_muttasil", _madd(4, 5)),
+                    Expect(4, 5, "idgham_shafawi", _nasal("idgham_shafawi")), Expect(4, 6, "ikhfa", _nasal("ikhfa")),
+                    Expect(5, 0, "izhar_halqi"), Expect(5, 3, "qalqalah"), Expect(5, 4, "qalqalah"),
+                    Expect(5, 4, "tafkheem")),
+            mistakes=(Mistake(4, 1, "ٱلْمَلَـٰٓئِكَةُ — the muttaṣil at 2 counts instead of 4.",
+                              (Sig("rule", "madd_muttasil", ("short",), -1),)),
+                      Mistake(4, 5, "رَبِّهِم مِّن — merge the mīm into the mīm with NO ghunnah.",
+                              (Sig("rule", "idgham_shafawi", ("short", "wrong"), -1),
+                               Sig("sifah", "ghonna", letter="م", word_offset=1))),
+                      Mistake(3, 3, "مِّنْ أَلْفِ — hide the nūn with a ghunnah before the hamza (it must be clear).",
+                              (Sig("rule", "izhar_halqi"), Sig("identity", letter="ن", heard=("ں",)))),
+                      Mistake(1, 4, "ٱلْقَدْرِ (ayah 1) — stop on the rāʾ with no qalqalah on the dāl.",
+                              (Sig("rule", "qalqalah"), Sig("sifah", "qalqla", letter="د"),
+                               Sig("sifah", "qalqla", letter="ڇ"))),
+                      Mistake(5, 3, "مَطْلَعِ — make the sākin ṭāʾ light, like tāʾ: 'matlaʿ'.",
+                              (Sig("identity", letter="ط", heard=("ت",)), Sig("sifah", "itbaq", letter="ط"),
+                               Sig("sifah", "tafkheem_or_taqeeq", letter="ط")))),
+            controls=((1, 2), (1, 3), (2, 2), (2, 3), (3, 0), (4, 0), (4, 2), (4, 3), (5, 1), (5, 2)),
+            learn="A hidden iẓhār (mistake 3) is new: the engine has only tested iẓhār read in place of "
+                  "ikhfāʾ or idghām, never the reverse. Sakt was meant for this round and is held back: the "
+                  "engine parses the quran_transcript text, which carries no sakt mark (ۜ), so no sakt rule is "
+                  "located at 36:52, 75:27 or 83:14 (the Tanzil text has the mark and the parser finds it)."),
+    ),
 }
 
 

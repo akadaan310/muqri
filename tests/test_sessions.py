@@ -94,3 +94,29 @@ def test_listening_answers_are_saved_as_expert_labels(tmp_path, monkeypatch) -> 
     review.add_label(cid, "no", "round 3 listening")
     again = listen_json(3, review.labels())
     assert again[0]["clips"][0]["answer"] == "no" and again[0]["clips"][1]["answer"] is None
+
+
+def test_every_expected_rule_is_located_where_the_exercise_says() -> None:
+    """Each take-A expectation, and each rule a mistake is caught by, is found by the parser at its word.
+
+    An expectation the engine cannot locate is scored as unmet on every take, whoever recites it; this
+    is the half of validating a new exercise that needs no audio.
+    """
+    from quran_transcript import Aya
+    from app.sessions import parts
+    from app.tajweed_rules.parser import TajweedParser
+    parser = TajweedParser()
+    for ex in exercises().values():
+        located: dict[tuple[int, int], set[str]] = {}
+        for part in parts(ex):              # as the engine sees them: an ayah cut at each declared stop
+            a = part[1]
+            words = Aya(ex.surah, a).get().uthmani.split()
+            lo, hi = (part[2], part[3]) if len(part) == 4 else (0, len(words) - 1)
+            for r in parser.parse(" ".join(words[lo:hi + 1])).rules:
+                located.setdefault((a, lo + r.word_index), set()).add(r.rule_type.value)
+        for x in ex.expect:
+            assert x.rule in located.get((x.ayah, x.word), set()), (ex.id, x)
+        for m in ex.mistakes:
+            for s in m.catch:
+                if s.kind == "rule":
+                    assert s.name in located.get((m.ayah, m.word), set()), (ex.id, m.ayah, m.word, s.name)

@@ -1,0 +1,6772 @@
+{
+ "spans": {
+  "rows": [
+   {
+    "experiment": "zay_fatha/determinism",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/determinism",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 16.15,
+     "julia": 16.15,
+     "octave": null
+    },
+    "altered": {
+     "python": 16.15,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/determinism",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -20.12,
+     "julia": -20.12,
+     "octave": null
+    },
+    "altered": {
+     "python": -20.12,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/determinism",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.08,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/determinism",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 159.33,
+     "julia": null,
+     "octave": 160.0
+    },
+    "altered": {
+     "python": 159.33,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/determinism",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 11.22,
+     "julia": null,
+     "octave": 10.16
+    },
+    "altered": {
+     "python": 11.22,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/determinism",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 470.3,
+     "julia": null,
+     "octave": 470.0
+    },
+    "altered": {
+     "python": 470.3,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/determinism",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1631.1,
+     "julia": null,
+     "octave": 1550.0
+    },
+    "altered": {
+     "python": 1631.1,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/noop_splice",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/noop_splice",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 16.15,
+     "julia": 16.15,
+     "octave": null
+    },
+    "altered": {
+     "python": 16.15,
+     "julia": 16.15,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/noop_splice",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -20.12,
+     "julia": -20.12,
+     "octave": null
+    },
+    "altered": {
+     "python": -20.12,
+     "julia": -20.12,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/noop_splice",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/noop_splice",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 159.33,
+     "julia": null,
+     "octave": 160.0
+    },
+    "altered": {
+     "python": 159.33,
+     "julia": null,
+     "octave": 160.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/noop_splice",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 11.22,
+     "julia": null,
+     "octave": 10.16
+    },
+    "altered": {
+     "python": 11.22,
+     "julia": null,
+     "octave": 10.16
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/noop_splice",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 470.3,
+     "julia": null,
+     "octave": 470.0
+    },
+    "altered": {
+     "python": 470.3,
+     "julia": null,
+     "octave": 470.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/noop_splice",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1631.1,
+     "julia": null,
+     "octave": 1550.0
+    },
+    "altered": {
+     "python": 1631.1,
+     "julia": null,
+     "octave": 1550.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/noop_world",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/noop_world",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 16.15,
+     "julia": 16.15,
+     "octave": null
+    },
+    "altered": {
+     "python": 17.19,
+     "julia": 17.19,
+     "octave": null
+    },
+    "delta": {
+     "python": 1.04,
+     "julia": 1.04,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/noop_world",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -20.12,
+     "julia": -20.12,
+     "octave": null
+    },
+    "altered": {
+     "python": -19.0,
+     "julia": -19.0,
+     "octave": null
+    },
+    "delta": {
+     "python": 1.12,
+     "julia": 1.12,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/noop_world",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/noop_world",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 159.33,
+     "julia": null,
+     "octave": 160.0
+    },
+    "altered": {
+     "python": 160.26,
+     "julia": null,
+     "octave": 161.6
+    },
+    "delta": {
+     "python": 0.93,
+     "julia": null,
+     "octave": 1.6
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/noop_world",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 11.22,
+     "julia": null,
+     "octave": 10.16
+    },
+    "altered": {
+     "python": 11.54,
+     "julia": null,
+     "octave": 10.6
+    },
+    "delta": {
+     "python": 0.32,
+     "julia": null,
+     "octave": 0.44
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/noop_world",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 470.3,
+     "julia": null,
+     "octave": 470.0
+    },
+    "altered": {
+     "python": 465.7,
+     "julia": null,
+     "octave": 469.0
+    },
+    "delta": {
+     "python": -4.6,
+     "julia": null,
+     "octave": -1.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/noop_world",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1631.1,
+     "julia": null,
+     "octave": 1550.0
+    },
+    "altered": {
+     "python": 1646.9,
+     "julia": null,
+     "octave": 1560.0
+    },
+    "delta": {
+     "python": 15.8,
+     "julia": null,
+     "octave": 10.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/noop_pv",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/noop_pv",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 16.15,
+     "julia": 16.15,
+     "octave": null
+    },
+    "altered": {
+     "python": 16.15,
+     "julia": 16.15,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/noop_pv",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -20.12,
+     "julia": -20.12,
+     "octave": null
+    },
+    "altered": {
+     "python": -20.12,
+     "julia": -20.12,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/noop_pv",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/noop_pv",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 159.33,
+     "julia": null,
+     "octave": 160.0
+    },
+    "altered": {
+     "python": 159.33,
+     "julia": null,
+     "octave": 160.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/noop_pv",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 11.22,
+     "julia": null,
+     "octave": 10.16
+    },
+    "altered": {
+     "python": 11.22,
+     "julia": null,
+     "octave": 10.16
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/noop_pv",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 470.3,
+     "julia": null,
+     "octave": 470.0
+    },
+    "altered": {
+     "python": 470.3,
+     "julia": null,
+     "octave": 470.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/noop_pv",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1631.1,
+     "julia": null,
+     "octave": 1550.0
+    },
+    "altered": {
+     "python": 1631.0,
+     "julia": null,
+     "octave": 1550.0
+    },
+    "delta": {
+     "python": -0.1,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/boundary-0.02|voicing",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 0.3333,
+     "octave": 0.909
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": -0.6667,
+     "octave": -0.091
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/boundary-0.02|voicing",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 16.15,
+     "julia": 16.15,
+     "octave": null
+    },
+    "altered": {
+     "python": 21.93,
+     "julia": 21.93,
+     "octave": null
+    },
+    "delta": {
+     "python": 5.78,
+     "julia": 5.78,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/boundary-0.02|voicing",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -20.12,
+     "julia": -20.12,
+     "octave": null
+    },
+    "altered": {
+     "python": -20.02,
+     "julia": -20.02,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.1,
+     "julia": 0.1,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/boundary-0.02|voicing",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/boundary-0.02|voicing",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 159.33,
+     "julia": null,
+     "octave": 160.0
+    },
+    "altered": {
+     "python": 155.84,
+     "julia": null,
+     "octave": 127.7
+    },
+    "delta": {
+     "python": -3.49,
+     "julia": null,
+     "octave": -32.3
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/boundary-0.02|voicing",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 11.22,
+     "julia": null,
+     "octave": 10.16
+    },
+    "altered": {
+     "python": 5.65,
+     "julia": null,
+     "octave": 3.07
+    },
+    "delta": {
+     "python": -5.57,
+     "julia": null,
+     "octave": -7.09
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/boundary-0.02|voicing",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 470.3,
+     "julia": null,
+     "octave": 470.0
+    },
+    "altered": {
+     "python": 350.9,
+     "julia": null,
+     "octave": 381.0
+    },
+    "delta": {
+     "python": -119.4,
+     "julia": null,
+     "octave": -89.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/boundary-0.02|voicing",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1631.1,
+     "julia": null,
+     "octave": 1550.0
+    },
+    "altered": {
+     "python": 1767.8,
+     "julia": null,
+     "octave": 1632.0
+    },
+    "delta": {
+     "python": 136.7,
+     "julia": null,
+     "octave": 82.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/boundary+0.02|voicing",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 0.5,
+     "octave": 0.909
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": -0.5,
+     "octave": -0.091
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/boundary+0.02|voicing",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 16.15,
+     "julia": 16.15,
+     "octave": null
+    },
+    "altered": {
+     "python": 12.33,
+     "julia": 12.33,
+     "octave": null
+    },
+    "delta": {
+     "python": -3.82,
+     "julia": -3.82,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/boundary+0.02|voicing",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -20.12,
+     "julia": -20.12,
+     "octave": null
+    },
+    "altered": {
+     "python": -17.51,
+     "julia": -17.51,
+     "octave": null
+    },
+    "delta": {
+     "python": 2.61,
+     "julia": 2.61,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/boundary+0.02|voicing",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/boundary+0.02|voicing",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 159.33,
+     "julia": null,
+     "octave": 160.0
+    },
+    "altered": {
+     "python": 159.7,
+     "julia": null,
+     "octave": 160.0
+    },
+    "delta": {
+     "python": 0.37,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/boundary+0.02|voicing",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 11.22,
+     "julia": null,
+     "octave": 10.16
+    },
+    "altered": {
+     "python": 3.12,
+     "julia": null,
+     "octave": 2.54
+    },
+    "delta": {
+     "python": -8.1,
+     "julia": null,
+     "octave": -7.62
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/boundary+0.02|voicing",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 470.3,
+     "julia": null,
+     "octave": 470.0
+    },
+    "altered": {
+     "python": 503.2,
+     "julia": null,
+     "octave": 513.0
+    },
+    "delta": {
+     "python": 32.9,
+     "julia": null,
+     "octave": 43.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/boundary+0.02|voicing",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1631.1,
+     "julia": null,
+     "octave": 1550.0
+    },
+    "altered": {
+     "python": 1522.5,
+     "julia": null,
+     "octave": 1446.0
+    },
+    "delta": {
+     "python": -108.6,
+     "julia": null,
+     "octave": -104.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/same-letter|ز 55:20 55:20:L13",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/same-letter|ز 55:20 55:20:L13",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 16.15,
+     "julia": 16.15,
+     "octave": null
+    },
+    "altered": {
+     "python": 27.06,
+     "julia": 27.06,
+     "octave": null
+    },
+    "delta": {
+     "python": 10.91,
+     "julia": 10.91,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/same-letter|ز 55:20 55:20:L13",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -20.12,
+     "julia": -20.12,
+     "octave": null
+    },
+    "altered": {
+     "python": -23.73,
+     "julia": -23.73,
+     "octave": null
+    },
+    "delta": {
+     "python": -3.61,
+     "julia": -3.61,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/same-letter|ز 55:20 55:20:L13",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.04,
+     "julia": 0.0399,
+     "octave": null
+    },
+    "delta": {
+     "python": -0.04,
+     "julia": -0.0401,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/same-letter|ز 55:20 55:20:L13",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 159.33,
+     "julia": null,
+     "octave": 160.0
+    },
+    "altered": {
+     "python": 182.06,
+     "julia": null,
+     "octave": 183.9
+    },
+    "delta": {
+     "python": 22.73,
+     "julia": null,
+     "octave": 23.9
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/same-letter|ز 55:20 55:20:L13",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 11.22,
+     "julia": null,
+     "octave": 10.16
+    },
+    "altered": {
+     "python": 5.82,
+     "julia": null,
+     "octave": 6.95
+    },
+    "delta": {
+     "python": -5.4,
+     "julia": null,
+     "octave": -3.21
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/same-letter|ز 55:20 55:20:L13",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 470.3,
+     "julia": null,
+     "octave": 470.0
+    },
+    "altered": {
+     "python": 391.0,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": -79.3,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/same-letter|ز 55:20 55:20:L13",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1631.1,
+     "julia": null,
+     "octave": 1550.0
+    },
+    "altered": {
+     "python": 1542.1,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": -89.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/neighbour|س 10:44 10:44:L48",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 0.625,
+     "julia": 0.5,
+     "octave": 0.545
+    },
+    "delta": {
+     "python": -0.375,
+     "julia": -0.5,
+     "octave": -0.455
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/neighbour|س 10:44 10:44:L48",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 16.15,
+     "julia": 16.15,
+     "octave": null
+    },
+    "altered": {
+     "python": 19.52,
+     "julia": 19.52,
+     "octave": null
+    },
+    "delta": {
+     "python": 3.37,
+     "julia": 3.37,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/neighbour|س 10:44 10:44:L48",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -20.12,
+     "julia": -20.12,
+     "octave": null
+    },
+    "altered": {
+     "python": -23.87,
+     "julia": -23.87,
+     "octave": null
+    },
+    "delta": {
+     "python": -3.75,
+     "julia": -3.75,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/neighbour|س 10:44 10:44:L48",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/neighbour|س 10:44 10:44:L48",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 159.33,
+     "julia": null,
+     "octave": 160.0
+    },
+    "altered": {
+     "python": 138.63,
+     "julia": null,
+     "octave": 131.1
+    },
+    "delta": {
+     "python": -20.7,
+     "julia": null,
+     "octave": -28.9
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/neighbour|س 10:44 10:44:L48",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 11.22,
+     "julia": null,
+     "octave": 10.16
+    },
+    "altered": {
+     "python": 5.1,
+     "julia": null,
+     "octave": 5.22
+    },
+    "delta": {
+     "python": -6.12,
+     "julia": null,
+     "octave": -4.94
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/neighbour|س 10:44 10:44:L48",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 470.3,
+     "julia": null,
+     "octave": 470.0
+    },
+    "altered": {
+     "python": 440.1,
+     "julia": null,
+     "octave": 411.0
+    },
+    "delta": {
+     "python": -30.2,
+     "julia": null,
+     "octave": -59.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/neighbour|س 10:44 10:44:L48",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1631.1,
+     "julia": null,
+     "octave": 1550.0
+    },
+    "altered": {
+     "python": 1563.7,
+     "julia": null,
+     "octave": 1533.0
+    },
+    "delta": {
+     "python": -67.4,
+     "julia": null,
+     "octave": -17.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.6}",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.6}",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 16.15,
+     "julia": 16.15,
+     "octave": null
+    },
+    "altered": {
+     "python": 17.25,
+     "julia": 17.25,
+     "octave": null
+    },
+    "delta": {
+     "python": 1.1,
+     "julia": 1.1,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.6}",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -20.12,
+     "julia": -20.12,
+     "octave": null
+    },
+    "altered": {
+     "python": -18.83,
+     "julia": -18.83,
+     "octave": null
+    },
+    "delta": {
+     "python": 1.29,
+     "julia": 1.29,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.6}",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.6}",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 159.33,
+     "julia": null,
+     "octave": 160.0
+    },
+    "altered": {
+     "python": 160.57,
+     "julia": null,
+     "octave": 161.6
+    },
+    "delta": {
+     "python": 1.24,
+     "julia": null,
+     "octave": 1.6
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.6}",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 11.22,
+     "julia": null,
+     "octave": 10.16
+    },
+    "altered": {
+     "python": 7.55,
+     "julia": null,
+     "octave": 6.62
+    },
+    "delta": {
+     "python": -3.67,
+     "julia": null,
+     "octave": -3.54
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.6}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 470.3,
+     "julia": null,
+     "octave": 470.0
+    },
+    "altered": {
+     "python": 465.7,
+     "julia": null,
+     "octave": 468.0
+    },
+    "delta": {
+     "python": -4.6,
+     "julia": null,
+     "octave": -2.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.6}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1631.1,
+     "julia": null,
+     "octave": 1550.0
+    },
+    "altered": {
+     "python": 1644.6,
+     "julia": null,
+     "octave": 1556.0
+    },
+    "delta": {
+     "python": 13.5,
+     "julia": null,
+     "octave": 6.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.3}",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 0.8333,
+     "octave": 0.909
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": -0.1667,
+     "octave": -0.091
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.3}",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 16.15,
+     "julia": 16.15,
+     "octave": null
+    },
+    "altered": {
+     "python": 16.79,
+     "julia": 16.79,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.64,
+     "julia": 0.64,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.3}",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -20.12,
+     "julia": -20.12,
+     "octave": null
+    },
+    "altered": {
+     "python": -19.15,
+     "julia": -19.15,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.97,
+     "julia": 0.97,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.3}",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.3}",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 159.33,
+     "julia": null,
+     "octave": 160.0
+    },
+    "altered": {
+     "python": 160.46,
+     "julia": null,
+     "octave": 159.2
+    },
+    "delta": {
+     "python": 1.13,
+     "julia": null,
+     "octave": -0.8
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.3}",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 11.22,
+     "julia": null,
+     "octave": 10.16
+    },
+    "altered": {
+     "python": 3.9,
+     "julia": null,
+     "octave": 3.16
+    },
+    "delta": {
+     "python": -7.32,
+     "julia": null,
+     "octave": -7.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.3}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 470.3,
+     "julia": null,
+     "octave": 470.0
+    },
+    "altered": {
+     "python": 468.8,
+     "julia": null,
+     "octave": 494.0
+    },
+    "delta": {
+     "python": -1.5,
+     "julia": null,
+     "octave": 24.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.3}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1631.1,
+     "julia": null,
+     "octave": 1550.0
+    },
+    "altered": {
+     "python": 1654.0,
+     "julia": null,
+     "octave": 1481.0
+    },
+    "delta": {
+     "python": 22.9,
+     "julia": null,
+     "octave": -69.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.0}",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.545
+    },
+    "delta": {
+     "python": -1.0,
+     "julia": -1.0,
+     "octave": -0.455
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.0}",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 16.15,
+     "julia": 16.15,
+     "octave": null
+    },
+    "altered": {
+     "python": 12.92,
+     "julia": 12.92,
+     "octave": null
+    },
+    "delta": {
+     "python": -3.23,
+     "julia": -3.23,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.0}",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -20.12,
+     "julia": -20.12,
+     "octave": null
+    },
+    "altered": {
+     "python": -20.52,
+     "julia": -20.52,
+     "octave": null
+    },
+    "delta": {
+     "python": -0.4,
+     "julia": -0.4,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.0}",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.0}",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 159.33,
+     "julia": null,
+     "octave": 160.0
+    },
+    "altered": {
+     "python": null,
+     "julia": null,
+     "octave": 80.6
+    },
+    "delta": {
+     "python": null,
+     "julia": null,
+     "octave": -79.4
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.0}",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 11.22,
+     "julia": null,
+     "octave": 10.16
+    },
+    "altered": {
+     "python": 0.66,
+     "julia": null,
+     "octave": 0.53
+    },
+    "delta": {
+     "python": -10.56,
+     "julia": null,
+     "octave": -9.63
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.0}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 470.3,
+     "julia": null,
+     "octave": 470.0
+    },
+    "altered": {
+     "python": null,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": null,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.0}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1631.1,
+     "julia": null,
+     "octave": 1550.0
+    },
+    "altered": {
+     "python": null,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": null,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 0.5}",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 0.5}",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 16.15,
+     "julia": 16.15,
+     "octave": null
+    },
+    "altered": {
+     "python": 19.89,
+     "julia": 19.89,
+     "octave": null
+    },
+    "delta": {
+     "python": 3.74,
+     "julia": 3.74,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 0.5}",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -20.12,
+     "julia": -20.12,
+     "octave": null
+    },
+    "altered": {
+     "python": -23.93,
+     "julia": -23.93,
+     "octave": null
+    },
+    "delta": {
+     "python": -3.81,
+     "julia": -3.81,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 0.5}",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.04,
+     "julia": 0.0399,
+     "octave": null
+    },
+    "delta": {
+     "python": -0.04,
+     "julia": -0.0401,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 0.5}",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 159.33,
+     "julia": null,
+     "octave": 160.0
+    },
+    "altered": {
+     "python": 156.96,
+     "julia": null,
+     "octave": 156.9
+    },
+    "delta": {
+     "python": -2.37,
+     "julia": null,
+     "octave": -3.1
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 0.5}",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 11.22,
+     "julia": null,
+     "octave": 10.16
+    },
+    "altered": {
+     "python": 9.45,
+     "julia": null,
+     "octave": 10.02
+    },
+    "delta": {
+     "python": -1.77,
+     "julia": null,
+     "octave": -0.14
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 0.5}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 470.3,
+     "julia": null,
+     "octave": 470.0
+    },
+    "altered": {
+     "python": 356.8,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": -113.5,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 0.5}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1631.1,
+     "julia": null,
+     "octave": 1550.0
+    },
+    "altered": {
+     "python": 1749.4,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 118.3,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 1.5}",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 1.5}",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 16.15,
+     "julia": 16.15,
+     "octave": null
+    },
+    "altered": {
+     "python": 13.89,
+     "julia": 13.89,
+     "octave": null
+    },
+    "delta": {
+     "python": -2.26,
+     "julia": -2.26,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 1.5}",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -20.12,
+     "julia": -20.12,
+     "octave": null
+    },
+    "altered": {
+     "python": -21.78,
+     "julia": -21.78,
+     "octave": null
+    },
+    "delta": {
+     "python": -1.66,
+     "julia": -1.66,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 1.5}",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.12,
+     "julia": 0.1199,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.04,
+     "julia": 0.0399,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 1.5}",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 159.33,
+     "julia": null,
+     "octave": 160.0
+    },
+    "altered": {
+     "python": 159.52,
+     "julia": null,
+     "octave": 160.0
+    },
+    "delta": {
+     "python": 0.19,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 1.5}",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 11.22,
+     "julia": null,
+     "octave": 10.16
+    },
+    "altered": {
+     "python": 10.03,
+     "julia": null,
+     "octave": 10.06
+    },
+    "delta": {
+     "python": -1.19,
+     "julia": null,
+     "octave": -0.1
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 1.5}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 470.3,
+     "julia": null,
+     "octave": 470.0
+    },
+    "altered": {
+     "python": 466.3,
+     "julia": null,
+     "octave": 486.0
+    },
+    "delta": {
+     "python": -4.0,
+     "julia": null,
+     "octave": 16.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 1.5}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1631.1,
+     "julia": null,
+     "octave": 1550.0
+    },
+    "altered": {
+     "python": 1537.8,
+     "julia": null,
+     "octave": 1510.0
+    },
+    "delta": {
+     "python": -93.3,
+     "julia": null,
+     "octave": -40.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 2.0}",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 0.8571,
+     "octave": 1.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": -0.1429,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 2.0}",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 16.15,
+     "julia": 16.15,
+     "octave": null
+    },
+    "altered": {
+     "python": 13.99,
+     "julia": 13.99,
+     "octave": null
+    },
+    "delta": {
+     "python": -2.16,
+     "julia": -2.16,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 2.0}",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -20.12,
+     "julia": -20.12,
+     "octave": null
+    },
+    "altered": {
+     "python": -22.94,
+     "julia": -22.94,
+     "octave": null
+    },
+    "delta": {
+     "python": -2.82,
+     "julia": -2.82,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 2.0}",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.16,
+     "julia": 0.16,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 2.0}",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 159.33,
+     "julia": null,
+     "octave": 160.0
+    },
+    "altered": {
+     "python": 159.53,
+     "julia": null,
+     "octave": 160.0
+    },
+    "delta": {
+     "python": 0.2,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 2.0}",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 11.22,
+     "julia": null,
+     "octave": 10.16
+    },
+    "altered": {
+     "python": 10.32,
+     "julia": null,
+     "octave": 10.08
+    },
+    "delta": {
+     "python": -0.9,
+     "julia": null,
+     "octave": -0.08
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 2.0}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 470.3,
+     "julia": null,
+     "octave": 470.0
+    },
+    "altered": {
+     "python": 457.5,
+     "julia": null,
+     "octave": 478.0
+    },
+    "delta": {
+     "python": -12.8,
+     "julia": null,
+     "octave": 8.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 2.0}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1631.1,
+     "julia": null,
+     "octave": 1550.0
+    },
+    "altered": {
+     "python": 1507.0,
+     "julia": null,
+     "octave": 1480.0
+    },
+    "delta": {
+     "python": -124.1,
+     "julia": null,
+     "octave": -70.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/determinism",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.898
+    },
+    "altered": {
+     "python": 0.8438,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/determinism",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": -9.14,
+     "julia": -9.14,
+     "octave": null
+    },
+    "altered": {
+     "python": -9.14,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/determinism",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -16.25,
+     "julia": -16.25,
+     "octave": null
+    },
+    "altered": {
+     "python": -16.25,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/determinism",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.32,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/determinism",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 173.01,
+     "julia": null,
+     "octave": 173.9
+    },
+    "altered": {
+     "python": 173.01,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/determinism",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 14.28,
+     "julia": null,
+     "octave": 14.09
+    },
+    "altered": {
+     "python": 14.28,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/determinism",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 674.4,
+     "julia": null,
+     "octave": 587.0
+    },
+    "altered": {
+     "python": 674.4,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/determinism",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1079.6,
+     "julia": null,
+     "octave": 1073.0
+    },
+    "altered": {
+     "python": 1079.6,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/noop_splice",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.898
+    },
+    "altered": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.898
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/noop_splice",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": -9.14,
+     "julia": -9.14,
+     "octave": null
+    },
+    "altered": {
+     "python": -9.14,
+     "julia": -9.14,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/noop_splice",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -16.25,
+     "julia": -16.25,
+     "octave": null
+    },
+    "altered": {
+     "python": -16.25,
+     "julia": -16.25,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/noop_splice",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/noop_splice",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 173.01,
+     "julia": null,
+     "octave": 173.9
+    },
+    "altered": {
+     "python": 173.01,
+     "julia": null,
+     "octave": 173.9
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/noop_splice",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 14.28,
+     "julia": null,
+     "octave": 14.09
+    },
+    "altered": {
+     "python": 14.28,
+     "julia": null,
+     "octave": 14.09
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/noop_splice",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 674.4,
+     "julia": null,
+     "octave": 587.0
+    },
+    "altered": {
+     "python": 674.4,
+     "julia": null,
+     "octave": 587.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/noop_splice",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1079.6,
+     "julia": null,
+     "octave": 1073.0
+    },
+    "altered": {
+     "python": 1079.6,
+     "julia": null,
+     "octave": 1073.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/noop_world",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.898
+    },
+    "altered": {
+     "python": 0.8594,
+     "julia": 0.8667,
+     "octave": 0.881
+    },
+    "delta": {
+     "python": 0.0156,
+     "julia": 0.0,
+     "octave": -0.017
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "sad_fatha/noop_world",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": -9.14,
+     "julia": -9.14,
+     "octave": null
+    },
+    "altered": {
+     "python": -12.45,
+     "julia": -12.45,
+     "octave": null
+    },
+    "delta": {
+     "python": -3.31,
+     "julia": -3.31,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/noop_world",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -16.25,
+     "julia": -16.25,
+     "octave": null
+    },
+    "altered": {
+     "python": -14.01,
+     "julia": -14.01,
+     "octave": null
+    },
+    "delta": {
+     "python": 2.24,
+     "julia": 2.24,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/noop_world",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/noop_world",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 173.01,
+     "julia": null,
+     "octave": 173.9
+    },
+    "altered": {
+     "python": 172.65,
+     "julia": null,
+     "octave": 172.0
+    },
+    "delta": {
+     "python": -0.36,
+     "julia": null,
+     "octave": -1.9
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/noop_world",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 14.28,
+     "julia": null,
+     "octave": 14.09
+    },
+    "altered": {
+     "python": 15.51,
+     "julia": null,
+     "octave": 15.58
+    },
+    "delta": {
+     "python": 1.23,
+     "julia": null,
+     "octave": 1.49
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/noop_world",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 674.4,
+     "julia": null,
+     "octave": 587.0
+    },
+    "altered": {
+     "python": 641.0,
+     "julia": null,
+     "octave": 590.0
+    },
+    "delta": {
+     "python": -33.4,
+     "julia": null,
+     "octave": 3.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "sad_fatha/noop_world",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1079.6,
+     "julia": null,
+     "octave": 1073.0
+    },
+    "altered": {
+     "python": 1068.0,
+     "julia": null,
+     "octave": 1065.0
+    },
+    "delta": {
+     "python": -11.6,
+     "julia": null,
+     "octave": -8.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/noop_pv",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.898
+    },
+    "altered": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.898
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/noop_pv",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": -9.14,
+     "julia": -9.14,
+     "octave": null
+    },
+    "altered": {
+     "python": -9.14,
+     "julia": -9.14,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/noop_pv",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -16.25,
+     "julia": -16.25,
+     "octave": null
+    },
+    "altered": {
+     "python": -16.25,
+     "julia": -16.25,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/noop_pv",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/noop_pv",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 173.01,
+     "julia": null,
+     "octave": 173.9
+    },
+    "altered": {
+     "python": 173.01,
+     "julia": null,
+     "octave": 173.9
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/noop_pv",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 14.28,
+     "julia": null,
+     "octave": 14.09
+    },
+    "altered": {
+     "python": 14.28,
+     "julia": null,
+     "octave": 14.09
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/noop_pv",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 674.4,
+     "julia": null,
+     "octave": 587.0
+    },
+    "altered": {
+     "python": 674.4,
+     "julia": null,
+     "octave": 587.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/noop_pv",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1079.6,
+     "julia": null,
+     "octave": 1073.0
+    },
+    "altered": {
+     "python": 1079.6,
+     "julia": null,
+     "octave": 1073.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/boundary-0.02|formant",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.898
+    },
+    "altered": {
+     "python": 0.7969,
+     "julia": 0.8,
+     "octave": 0.814
+    },
+    "delta": {
+     "python": -0.0469,
+     "julia": -0.0667,
+     "octave": -0.084
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/boundary-0.02|formant",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": -9.14,
+     "julia": -9.14,
+     "octave": null
+    },
+    "altered": {
+     "python": -3.81,
+     "julia": -3.81,
+     "octave": null
+    },
+    "delta": {
+     "python": 5.33,
+     "julia": 5.33,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/boundary-0.02|formant",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -16.25,
+     "julia": -16.25,
+     "octave": null
+    },
+    "altered": {
+     "python": -15.06,
+     "julia": -15.06,
+     "octave": null
+    },
+    "delta": {
+     "python": 1.19,
+     "julia": 1.19,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/boundary-0.02|formant",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/boundary-0.02|formant",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 173.01,
+     "julia": null,
+     "octave": 173.9
+    },
+    "altered": {
+     "python": 172.99,
+     "julia": null,
+     "octave": 172.0
+    },
+    "delta": {
+     "python": -0.02,
+     "julia": null,
+     "octave": -1.9
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/boundary-0.02|formant",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 14.28,
+     "julia": null,
+     "octave": 14.09
+    },
+    "altered": {
+     "python": 13.63,
+     "julia": null,
+     "octave": 14.01
+    },
+    "delta": {
+     "python": -0.65,
+     "julia": null,
+     "octave": -0.08
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/boundary-0.02|formant",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 674.4,
+     "julia": null,
+     "octave": 587.0
+    },
+    "altered": {
+     "python": 742.6,
+     "julia": null,
+     "octave": 754.0
+    },
+    "delta": {
+     "python": 68.2,
+     "julia": null,
+     "octave": 167.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/boundary-0.02|formant",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1079.6,
+     "julia": null,
+     "octave": 1073.0
+    },
+    "altered": {
+     "python": 1371.9,
+     "julia": null,
+     "octave": 1365.0
+    },
+    "delta": {
+     "python": 292.3,
+     "julia": null,
+     "octave": 292.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/boundary+0.02|formant",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.898
+    },
+    "altered": {
+     "python": 0.9062,
+     "julia": 0.9333,
+     "octave": 0.949
+    },
+    "delta": {
+     "python": 0.0624,
+     "julia": 0.0666,
+     "octave": 0.051
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/boundary+0.02|formant",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": -9.14,
+     "julia": -9.14,
+     "octave": null
+    },
+    "altered": {
+     "python": -3.3,
+     "julia": -3.3,
+     "octave": null
+    },
+    "delta": {
+     "python": 5.84,
+     "julia": 5.84,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/boundary+0.02|formant",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -16.25,
+     "julia": -16.25,
+     "octave": null
+    },
+    "altered": {
+     "python": -15.0,
+     "julia": -15.0,
+     "octave": null
+    },
+    "delta": {
+     "python": 1.25,
+     "julia": 1.25,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/boundary+0.02|formant",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/boundary+0.02|formant",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 173.01,
+     "julia": null,
+     "octave": 173.9
+    },
+    "altered": {
+     "python": 172.55,
+     "julia": null,
+     "octave": 172.0
+    },
+    "delta": {
+     "python": -0.46,
+     "julia": null,
+     "octave": -1.9
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/boundary+0.02|formant",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 14.28,
+     "julia": null,
+     "octave": 14.09
+    },
+    "altered": {
+     "python": 13.83,
+     "julia": null,
+     "octave": 13.94
+    },
+    "delta": {
+     "python": -0.45,
+     "julia": null,
+     "octave": -0.15
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/boundary+0.02|formant",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 674.4,
+     "julia": null,
+     "octave": 587.0
+    },
+    "altered": {
+     "python": 708.0,
+     "julia": null,
+     "octave": 747.0
+    },
+    "delta": {
+     "python": 33.6,
+     "julia": null,
+     "octave": 160.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/boundary+0.02|formant",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1079.6,
+     "julia": null,
+     "octave": 1073.0
+    },
+    "altered": {
+     "python": 1378.8,
+     "julia": null,
+     "octave": 1369.0
+    },
+    "delta": {
+     "python": 299.2,
+     "julia": null,
+     "octave": 296.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/same-letter|صَ 74:17 74:17:L12",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.898
+    },
+    "altered": {
+     "python": 0.8889,
+     "julia": 0.8947,
+     "octave": 0.96
+    },
+    "delta": {
+     "python": 0.0451,
+     "julia": 0.028,
+     "octave": 0.062
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/same-letter|صَ 74:17 74:17:L12",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": -9.14,
+     "julia": -9.14,
+     "octave": null
+    },
+    "altered": {
+     "python": -12.44,
+     "julia": -12.44,
+     "octave": null
+    },
+    "delta": {
+     "python": -3.3,
+     "julia": -3.3,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/same-letter|صَ 74:17 74:17:L12",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -16.25,
+     "julia": -16.25,
+     "octave": null
+    },
+    "altered": {
+     "python": -18.61,
+     "julia": -18.61,
+     "octave": null
+    },
+    "delta": {
+     "python": -2.36,
+     "julia": -2.36,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/same-letter|صَ 74:17 74:17:L12",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.4,
+     "julia": 0.4,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.08,
+     "julia": 0.08,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/same-letter|صَ 74:17 74:17:L12",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 173.01,
+     "julia": null,
+     "octave": 173.9
+    },
+    "altered": {
+     "python": 152.66,
+     "julia": null,
+     "octave": 152.4
+    },
+    "delta": {
+     "python": -20.35,
+     "julia": null,
+     "octave": -21.5
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/same-letter|صَ 74:17 74:17:L12",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 14.28,
+     "julia": null,
+     "octave": 14.09
+    },
+    "altered": {
+     "python": 10.02,
+     "julia": null,
+     "octave": 15.93
+    },
+    "delta": {
+     "python": -4.26,
+     "julia": null,
+     "octave": 1.84
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "sad_fatha/same-letter|صَ 74:17 74:17:L12",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 674.4,
+     "julia": null,
+     "octave": 587.0
+    },
+    "altered": {
+     "python": 856.3,
+     "julia": null,
+     "octave": 742.0
+    },
+    "delta": {
+     "python": 181.9,
+     "julia": null,
+     "octave": 155.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/same-letter|صَ 74:17 74:17:L12",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1079.6,
+     "julia": null,
+     "octave": 1073.0
+    },
+    "altered": {
+     "python": 1027.2,
+     "julia": null,
+     "octave": 1074.0
+    },
+    "delta": {
+     "python": -52.4,
+     "julia": null,
+     "octave": 1.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "sad_fatha/neighbour|سَ 10:44 10:44:L48",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.898
+    },
+    "altered": {
+     "python": 0.875,
+     "julia": 0.9,
+     "octave": 0.915
+    },
+    "delta": {
+     "python": 0.0312,
+     "julia": 0.0333,
+     "octave": 0.017
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/neighbour|سَ 10:44 10:44:L48",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": -9.14,
+     "julia": -9.14,
+     "octave": null
+    },
+    "altered": {
+     "python": 7.48,
+     "julia": 7.48,
+     "octave": null
+    },
+    "delta": {
+     "python": 16.62,
+     "julia": 16.62,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/neighbour|سَ 10:44 10:44:L48",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -16.25,
+     "julia": -16.25,
+     "octave": null
+    },
+    "altered": {
+     "python": -18.69,
+     "julia": -18.69,
+     "octave": null
+    },
+    "delta": {
+     "python": -2.44,
+     "julia": -2.44,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/neighbour|سَ 10:44 10:44:L48",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/neighbour|سَ 10:44 10:44:L48",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 173.01,
+     "julia": null,
+     "octave": 173.9
+    },
+    "altered": {
+     "python": 137.64,
+     "julia": null,
+     "octave": 137.9
+    },
+    "delta": {
+     "python": -35.37,
+     "julia": null,
+     "octave": -36.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/neighbour|سَ 10:44 10:44:L48",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 14.28,
+     "julia": null,
+     "octave": 14.09
+    },
+    "altered": {
+     "python": 12.96,
+     "julia": null,
+     "octave": 12.95
+    },
+    "delta": {
+     "python": -1.32,
+     "julia": null,
+     "octave": -1.14
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/neighbour|سَ 10:44 10:44:L48",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 674.4,
+     "julia": null,
+     "octave": 587.0
+    },
+    "altered": {
+     "python": 514.0,
+     "julia": null,
+     "octave": 518.0
+    },
+    "delta": {
+     "python": -160.4,
+     "julia": null,
+     "octave": -69.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/neighbour|سَ 10:44 10:44:L48",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1079.6,
+     "julia": null,
+     "octave": 1073.0
+    },
+    "altered": {
+     "python": 1437.0,
+     "julia": null,
+     "octave": 1395.0
+    },
+    "delta": {
+     "python": 357.4,
+     "julia": null,
+     "octave": 322.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.9}",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.898
+    },
+    "altered": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.864
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": -0.034
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.9}",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": -9.14,
+     "julia": -9.14,
+     "octave": null
+    },
+    "altered": {
+     "python": -5.83,
+     "julia": -5.83,
+     "octave": null
+    },
+    "delta": {
+     "python": 3.31,
+     "julia": 3.31,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.9}",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -16.25,
+     "julia": -16.25,
+     "octave": null
+    },
+    "altered": {
+     "python": -15.59,
+     "julia": -15.59,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.66,
+     "julia": 0.66,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.9}",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.9}",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 173.01,
+     "julia": null,
+     "octave": 173.9
+    },
+    "altered": {
+     "python": 172.78,
+     "julia": null,
+     "octave": 172.0
+    },
+    "delta": {
+     "python": -0.23,
+     "julia": null,
+     "octave": -1.9
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.9}",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 14.28,
+     "julia": null,
+     "octave": 14.09
+    },
+    "altered": {
+     "python": 13.58,
+     "julia": null,
+     "octave": 14.96
+    },
+    "delta": {
+     "python": -0.7,
+     "julia": null,
+     "octave": 0.87
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.9}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 674.4,
+     "julia": null,
+     "octave": 587.0
+    },
+    "altered": {
+     "python": 717.2,
+     "julia": null,
+     "octave": 654.0
+    },
+    "delta": {
+     "python": 42.8,
+     "julia": null,
+     "octave": 67.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.9}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1079.6,
+     "julia": null,
+     "octave": 1073.0
+    },
+    "altered": {
+     "python": 1217.5,
+     "julia": null,
+     "octave": 1224.0
+    },
+    "delta": {
+     "python": 137.9,
+     "julia": null,
+     "octave": 151.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.8}",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.898
+    },
+    "altered": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.898
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.8}",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": -9.14,
+     "julia": -9.14,
+     "octave": null
+    },
+    "altered": {
+     "python": -3.64,
+     "julia": -3.64,
+     "octave": null
+    },
+    "delta": {
+     "python": 5.5,
+     "julia": 5.5,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.8}",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -16.25,
+     "julia": -16.25,
+     "octave": null
+    },
+    "altered": {
+     "python": -15.05,
+     "julia": -15.05,
+     "octave": null
+    },
+    "delta": {
+     "python": 1.2,
+     "julia": 1.2,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.8}",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.8}",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 173.01,
+     "julia": null,
+     "octave": 173.9
+    },
+    "altered": {
+     "python": 172.77,
+     "julia": null,
+     "octave": 172.0
+    },
+    "delta": {
+     "python": -0.24,
+     "julia": null,
+     "octave": -1.9
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.8}",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 14.28,
+     "julia": null,
+     "octave": 14.09
+    },
+    "altered": {
+     "python": 13.64,
+     "julia": null,
+     "octave": 13.95
+    },
+    "delta": {
+     "python": -0.64,
+     "julia": null,
+     "octave": -0.14
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.8}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 674.4,
+     "julia": null,
+     "octave": 587.0
+    },
+    "altered": {
+     "python": 726.0,
+     "julia": null,
+     "octave": 752.0
+    },
+    "delta": {
+     "python": 51.6,
+     "julia": null,
+     "octave": 165.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.8}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1079.6,
+     "julia": null,
+     "octave": 1073.0
+    },
+    "altered": {
+     "python": 1376.5,
+     "julia": null,
+     "octave": 1371.0
+    },
+    "delta": {
+     "python": 296.9,
+     "julia": null,
+     "octave": 298.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.7}",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.898
+    },
+    "altered": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.864
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": -0.034
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.7}",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": -9.14,
+     "julia": -9.14,
+     "octave": null
+    },
+    "altered": {
+     "python": -7.02,
+     "julia": -7.02,
+     "octave": null
+    },
+    "delta": {
+     "python": 2.12,
+     "julia": 2.12,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.7}",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -16.25,
+     "julia": -16.25,
+     "octave": null
+    },
+    "altered": {
+     "python": -14.25,
+     "julia": -14.25,
+     "octave": null
+    },
+    "delta": {
+     "python": 2.0,
+     "julia": 2.0,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.7}",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.7}",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 173.01,
+     "julia": null,
+     "octave": 173.9
+    },
+    "altered": {
+     "python": 172.78,
+     "julia": null,
+     "octave": 172.0
+    },
+    "delta": {
+     "python": -0.23,
+     "julia": null,
+     "octave": -1.9
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.7}",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 14.28,
+     "julia": null,
+     "octave": 14.09
+    },
+    "altered": {
+     "python": 13.64,
+     "julia": null,
+     "octave": 13.88
+    },
+    "delta": {
+     "python": -0.64,
+     "julia": null,
+     "octave": -0.21
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.7}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 674.4,
+     "julia": null,
+     "octave": 587.0
+    },
+    "altered": {
+     "python": 766.7,
+     "julia": null,
+     "octave": 788.0
+    },
+    "delta": {
+     "python": 92.3,
+     "julia": null,
+     "octave": 201.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.7}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1079.6,
+     "julia": null,
+     "octave": 1073.0
+    },
+    "altered": {
+     "python": 1550.0,
+     "julia": null,
+     "octave": 1546.0
+    },
+    "delta": {
+     "python": 470.4,
+     "julia": null,
+     "octave": 473.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": -3}",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.898
+    },
+    "altered": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.881
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": -0.017
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": -3}",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": -9.14,
+     "julia": -9.14,
+     "octave": null
+    },
+    "altered": {
+     "python": -14.9,
+     "julia": -14.9,
+     "octave": null
+    },
+    "delta": {
+     "python": -5.76,
+     "julia": -5.76,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": -3}",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -16.25,
+     "julia": -16.25,
+     "octave": null
+    },
+    "altered": {
+     "python": -15.26,
+     "julia": -15.26,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.99,
+     "julia": 0.99,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": -3}",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": -3}",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 173.01,
+     "julia": null,
+     "octave": 173.9
+    },
+    "altered": {
+     "python": 145.42,
+     "julia": null,
+     "octave": 145.5
+    },
+    "delta": {
+     "python": -27.59,
+     "julia": null,
+     "octave": -28.4
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": -3}",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 14.28,
+     "julia": null,
+     "octave": 14.09
+    },
+    "altered": {
+     "python": 13.47,
+     "julia": null,
+     "octave": 13.73
+    },
+    "delta": {
+     "python": -0.81,
+     "julia": null,
+     "octave": -0.36
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": -3}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 674.4,
+     "julia": null,
+     "octave": 587.0
+    },
+    "altered": {
+     "python": 710.5,
+     "julia": null,
+     "octave": 615.0
+    },
+    "delta": {
+     "python": 36.1,
+     "julia": null,
+     "octave": 28.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": -3}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1079.6,
+     "julia": null,
+     "octave": 1073.0
+    },
+    "altered": {
+     "python": 1065.8,
+     "julia": null,
+     "octave": 1069.0
+    },
+    "delta": {
+     "python": -13.8,
+     "julia": null,
+     "octave": -4.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": 3}",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.898
+    },
+    "altered": {
+     "python": 0.8594,
+     "julia": 0.9,
+     "octave": 0.898
+    },
+    "delta": {
+     "python": 0.0156,
+     "julia": 0.0333,
+     "octave": 0.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": 3}",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": -9.14,
+     "julia": -9.14,
+     "octave": null
+    },
+    "altered": {
+     "python": -14.53,
+     "julia": -14.53,
+     "octave": null
+    },
+    "delta": {
+     "python": -5.39,
+     "julia": -5.39,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": 3}",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -16.25,
+     "julia": -16.25,
+     "octave": null
+    },
+    "altered": {
+     "python": -14.67,
+     "julia": -14.67,
+     "octave": null
+    },
+    "delta": {
+     "python": 1.58,
+     "julia": 1.58,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": 3}",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": 3}",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 173.01,
+     "julia": null,
+     "octave": 173.9
+    },
+    "altered": {
+     "python": 205.26,
+     "julia": null,
+     "octave": 205.1
+    },
+    "delta": {
+     "python": 32.25,
+     "julia": null,
+     "octave": 31.2
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": 3}",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 14.28,
+     "julia": null,
+     "octave": 14.09
+    },
+    "altered": {
+     "python": 15.84,
+     "julia": null,
+     "octave": 15.23
+    },
+    "delta": {
+     "python": 1.56,
+     "julia": null,
+     "octave": 1.14
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": 3}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 674.4,
+     "julia": null,
+     "octave": 587.0
+    },
+    "altered": {
+     "python": 716.4,
+     "julia": null,
+     "octave": 622.0
+    },
+    "delta": {
+     "python": 42.0,
+     "julia": null,
+     "octave": 35.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": 3}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1079.6,
+     "julia": null,
+     "octave": 1073.0
+    },
+    "altered": {
+     "python": 1049.0,
+     "julia": null,
+     "octave": 1054.0
+    },
+    "delta": {
+     "python": -30.6,
+     "julia": null,
+     "octave": -19.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": 6}",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.898
+    },
+    "altered": {
+     "python": 0.8594,
+     "julia": 0.8667,
+     "octave": 0.898
+    },
+    "delta": {
+     "python": 0.0156,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": 6}",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": -9.14,
+     "julia": -9.14,
+     "octave": null
+    },
+    "altered": {
+     "python": -12.8,
+     "julia": -12.8,
+     "octave": null
+    },
+    "delta": {
+     "python": -3.66,
+     "julia": -3.66,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": 6}",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -16.25,
+     "julia": -16.25,
+     "octave": null
+    },
+    "altered": {
+     "python": -14.94,
+     "julia": -14.94,
+     "octave": null
+    },
+    "delta": {
+     "python": 1.31,
+     "julia": 1.31,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": 6}",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.32,
+     "julia": 0.32,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": 6}",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 173.01,
+     "julia": null,
+     "octave": 173.9
+    },
+    "altered": {
+     "python": 244.06,
+     "julia": null,
+     "octave": 242.4
+    },
+    "delta": {
+     "python": 71.05,
+     "julia": null,
+     "octave": 68.5
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": 6}",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 14.28,
+     "julia": null,
+     "octave": 14.09
+    },
+    "altered": {
+     "python": 17.59,
+     "julia": null,
+     "octave": 17.55
+    },
+    "delta": {
+     "python": 3.31,
+     "julia": null,
+     "octave": 3.46
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": 6}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 674.4,
+     "julia": null,
+     "octave": 587.0
+    },
+    "altered": {
+     "python": 594.0,
+     "julia": null,
+     "octave": 606.0
+    },
+    "delta": {
+     "python": -80.4,
+     "julia": null,
+     "octave": 19.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": 6}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1079.6,
+     "julia": null,
+     "octave": 1073.0
+    },
+    "altered": {
+     "python": 1110.9,
+     "julia": null,
+     "octave": 1058.0
+    },
+    "delta": {
+     "python": 31.3,
+     "julia": null,
+     "octave": -15.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "ghunnah/determinism",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/determinism",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 18.92,
+     "julia": 18.92,
+     "octave": null
+    },
+    "altered": {
+     "python": 18.92,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/determinism",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -21.67,
+     "julia": -21.67,
+     "octave": null
+    },
+    "altered": {
+     "python": -21.67,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/determinism",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.84,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/determinism",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 204.94,
+     "julia": null,
+     "octave": 200.0
+    },
+    "altered": {
+     "python": 204.94,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/determinism",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 22.23,
+     "julia": null,
+     "octave": 20.44
+    },
+    "altered": {
+     "python": 22.23,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/determinism",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 403.8,
+     "julia": null,
+     "octave": 361.0
+    },
+    "altered": {
+     "python": 403.8,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/determinism",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1790.1,
+     "julia": null,
+     "octave": 1498.0
+    },
+    "altered": {
+     "python": 1790.1,
+     "julia": null,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/noop_splice",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/noop_splice",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 18.92,
+     "julia": 18.92,
+     "octave": null
+    },
+    "altered": {
+     "python": 18.92,
+     "julia": 18.92,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/noop_splice",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -21.67,
+     "julia": -21.67,
+     "octave": null
+    },
+    "altered": {
+     "python": -21.67,
+     "julia": -21.67,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/noop_splice",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/noop_splice",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 204.94,
+     "julia": null,
+     "octave": 200.0
+    },
+    "altered": {
+     "python": 204.94,
+     "julia": null,
+     "octave": 200.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/noop_splice",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 22.23,
+     "julia": null,
+     "octave": 20.44
+    },
+    "altered": {
+     "python": 22.23,
+     "julia": null,
+     "octave": 20.44
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/noop_splice",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 403.8,
+     "julia": null,
+     "octave": 361.0
+    },
+    "altered": {
+     "python": 403.8,
+     "julia": null,
+     "octave": 361.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/noop_splice",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1790.1,
+     "julia": null,
+     "octave": 1498.0
+    },
+    "altered": {
+     "python": 1790.1,
+     "julia": null,
+     "octave": 1498.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/noop_world",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/noop_world",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 18.92,
+     "julia": 18.92,
+     "octave": null
+    },
+    "altered": {
+     "python": 18.74,
+     "julia": 18.74,
+     "octave": null
+    },
+    "delta": {
+     "python": -0.18,
+     "julia": -0.18,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/noop_world",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -21.67,
+     "julia": -21.67,
+     "octave": null
+    },
+    "altered": {
+     "python": -21.07,
+     "julia": -21.07,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.6,
+     "julia": 0.6,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/noop_world",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/noop_world",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 204.94,
+     "julia": null,
+     "octave": 200.0
+    },
+    "altered": {
+     "python": 204.73,
+     "julia": null,
+     "octave": 200.0
+    },
+    "delta": {
+     "python": -0.21,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/noop_world",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 22.23,
+     "julia": null,
+     "octave": 20.44
+    },
+    "altered": {
+     "python": 22.21,
+     "julia": null,
+     "octave": 20.19
+    },
+    "delta": {
+     "python": -0.02,
+     "julia": null,
+     "octave": -0.25
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/noop_world",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 403.8,
+     "julia": null,
+     "octave": 361.0
+    },
+    "altered": {
+     "python": 395.0,
+     "julia": null,
+     "octave": 363.0
+    },
+    "delta": {
+     "python": -8.8,
+     "julia": null,
+     "octave": 2.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "ghunnah/noop_world",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1790.1,
+     "julia": null,
+     "octave": 1498.0
+    },
+    "altered": {
+     "python": 1774.3,
+     "julia": null,
+     "octave": 1484.0
+    },
+    "delta": {
+     "python": -15.8,
+     "julia": null,
+     "octave": -14.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/noop_pv",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/noop_pv",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 18.92,
+     "julia": 18.92,
+     "octave": null
+    },
+    "altered": {
+     "python": 18.92,
+     "julia": 18.92,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/noop_pv",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -21.67,
+     "julia": -21.67,
+     "octave": null
+    },
+    "altered": {
+     "python": -21.67,
+     "julia": -21.67,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/noop_pv",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/noop_pv",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 204.94,
+     "julia": null,
+     "octave": 200.0
+    },
+    "altered": {
+     "python": 204.94,
+     "julia": null,
+     "octave": 200.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/noop_pv",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 22.23,
+     "julia": null,
+     "octave": 20.44
+    },
+    "altered": {
+     "python": 22.23,
+     "julia": null,
+     "octave": 20.44
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/noop_pv",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 403.8,
+     "julia": null,
+     "octave": 361.0
+    },
+    "altered": {
+     "python": 403.8,
+     "julia": null,
+     "octave": 361.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/noop_pv",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1790.1,
+     "julia": null,
+     "octave": 1498.0
+    },
+    "altered": {
+     "python": 1790.1,
+     "julia": null,
+     "octave": 1498.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/boundary-0.02|nasal",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/boundary-0.02|nasal",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 18.92,
+     "julia": 18.92,
+     "octave": null
+    },
+    "altered": {
+     "python": -1.97,
+     "julia": -1.97,
+     "octave": null
+    },
+    "delta": {
+     "python": -20.89,
+     "julia": -20.89,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/boundary-0.02|nasal",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -21.67,
+     "julia": -21.67,
+     "octave": null
+    },
+    "altered": {
+     "python": -24.56,
+     "julia": -24.56,
+     "octave": null
+    },
+    "delta": {
+     "python": -2.89,
+     "julia": -2.89,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/boundary-0.02|nasal",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/boundary-0.02|nasal",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 204.94,
+     "julia": null,
+     "octave": 200.0
+    },
+    "altered": {
+     "python": 204.53,
+     "julia": null,
+     "octave": 200.0
+    },
+    "delta": {
+     "python": -0.41,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/boundary-0.02|nasal",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 22.23,
+     "julia": null,
+     "octave": 20.44
+    },
+    "altered": {
+     "python": 19.23,
+     "julia": null,
+     "octave": 16.78
+    },
+    "delta": {
+     "python": -3.0,
+     "julia": null,
+     "octave": -3.66
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/boundary-0.02|nasal",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 403.8,
+     "julia": null,
+     "octave": 361.0
+    },
+    "altered": {
+     "python": 768.4,
+     "julia": null,
+     "octave": 628.0
+    },
+    "delta": {
+     "python": 364.6,
+     "julia": null,
+     "octave": 267.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/boundary-0.02|nasal",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1790.1,
+     "julia": null,
+     "octave": 1498.0
+    },
+    "altered": {
+     "python": 1812.0,
+     "julia": null,
+     "octave": 2030.0
+    },
+    "delta": {
+     "python": 21.9,
+     "julia": null,
+     "octave": 532.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/boundary+0.02|nasal",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/boundary+0.02|nasal",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 18.92,
+     "julia": 18.92,
+     "octave": null
+    },
+    "altered": {
+     "python": -1.59,
+     "julia": -1.59,
+     "octave": null
+    },
+    "delta": {
+     "python": -20.51,
+     "julia": -20.51,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/boundary+0.02|nasal",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -21.67,
+     "julia": -21.67,
+     "octave": null
+    },
+    "altered": {
+     "python": -22.46,
+     "julia": -22.46,
+     "octave": null
+    },
+    "delta": {
+     "python": -0.79,
+     "julia": -0.79,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/boundary+0.02|nasal",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/boundary+0.02|nasal",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 204.94,
+     "julia": null,
+     "octave": 200.0
+    },
+    "altered": {
+     "python": 205.1,
+     "julia": null,
+     "octave": 202.5
+    },
+    "delta": {
+     "python": 0.16,
+     "julia": null,
+     "octave": 2.5
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/boundary+0.02|nasal",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 22.23,
+     "julia": null,
+     "octave": 20.44
+    },
+    "altered": {
+     "python": 18.56,
+     "julia": null,
+     "octave": 16.66
+    },
+    "delta": {
+     "python": -3.67,
+     "julia": null,
+     "octave": -3.78
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/boundary+0.02|nasal",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 403.8,
+     "julia": null,
+     "octave": 361.0
+    },
+    "altered": {
+     "python": 771.9,
+     "julia": null,
+     "octave": 667.0
+    },
+    "delta": {
+     "python": 368.1,
+     "julia": null,
+     "octave": 306.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/boundary+0.02|nasal",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1790.1,
+     "julia": null,
+     "octave": 1498.0
+    },
+    "altered": {
+     "python": 1808.9,
+     "julia": null,
+     "octave": 2100.0
+    },
+    "delta": {
+     "python": 18.8,
+     "julia": null,
+     "octave": 602.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -6}",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -6}",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 18.92,
+     "julia": 18.92,
+     "octave": null
+    },
+    "altered": {
+     "python": 8.38,
+     "julia": 8.38,
+     "octave": null
+    },
+    "delta": {
+     "python": -10.54,
+     "julia": -10.54,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -6}",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -21.67,
+     "julia": -21.67,
+     "octave": null
+    },
+    "altered": {
+     "python": -23.43,
+     "julia": -23.43,
+     "octave": null
+    },
+    "delta": {
+     "python": -1.76,
+     "julia": -1.76,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -6}",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -6}",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 204.94,
+     "julia": null,
+     "octave": 200.0
+    },
+    "altered": {
+     "python": 204.73,
+     "julia": null,
+     "octave": 200.0
+    },
+    "delta": {
+     "python": -0.21,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -6}",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 22.23,
+     "julia": null,
+     "octave": 20.44
+    },
+    "altered": {
+     "python": 19.57,
+     "julia": null,
+     "octave": 17.68
+    },
+    "delta": {
+     "python": -2.66,
+     "julia": null,
+     "octave": -2.76
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -6}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 403.8,
+     "julia": null,
+     "octave": 361.0
+    },
+    "altered": {
+     "python": 593.6,
+     "julia": null,
+     "octave": 463.0
+    },
+    "delta": {
+     "python": 189.8,
+     "julia": null,
+     "octave": 102.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -6}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1790.1,
+     "julia": null,
+     "octave": 1498.0
+    },
+    "altered": {
+     "python": 1781.0,
+     "julia": null,
+     "octave": 1432.0
+    },
+    "delta": {
+     "python": -9.1,
+     "julia": null,
+     "octave": -66.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -12}",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -12}",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 18.92,
+     "julia": 18.92,
+     "octave": null
+    },
+    "altered": {
+     "python": -1.77,
+     "julia": -1.77,
+     "octave": null
+    },
+    "delta": {
+     "python": -20.69,
+     "julia": -20.69,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -12}",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -21.67,
+     "julia": -21.67,
+     "octave": null
+    },
+    "altered": {
+     "python": -23.84,
+     "julia": -23.84,
+     "octave": null
+    },
+    "delta": {
+     "python": -2.17,
+     "julia": -2.17,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -12}",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -12}",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 204.94,
+     "julia": null,
+     "octave": 200.0
+    },
+    "altered": {
+     "python": 204.71,
+     "julia": null,
+     "octave": 200.0
+    },
+    "delta": {
+     "python": -0.23,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -12}",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 22.23,
+     "julia": null,
+     "octave": 20.44
+    },
+    "altered": {
+     "python": 18.58,
+     "julia": null,
+     "octave": 16.65
+    },
+    "delta": {
+     "python": -3.65,
+     "julia": null,
+     "octave": -3.79
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -12}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 403.8,
+     "julia": null,
+     "octave": 361.0
+    },
+    "altered": {
+     "python": 769.0,
+     "julia": null,
+     "octave": 620.0
+    },
+    "delta": {
+     "python": 365.2,
+     "julia": null,
+     "octave": 259.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -12}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1790.1,
+     "julia": null,
+     "octave": 1498.0
+    },
+    "altered": {
+     "python": 1803.8,
+     "julia": null,
+     "octave": 2013.0
+    },
+    "delta": {
+     "python": 13.7,
+     "julia": null,
+     "octave": 515.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -18}",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -18}",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 18.92,
+     "julia": 18.92,
+     "octave": null
+    },
+    "altered": {
+     "python": -11.48,
+     "julia": -11.48,
+     "octave": null
+    },
+    "delta": {
+     "python": -30.4,
+     "julia": -30.4,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -18}",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -21.67,
+     "julia": -21.67,
+     "octave": null
+    },
+    "altered": {
+     "python": -22.03,
+     "julia": -22.03,
+     "octave": null
+    },
+    "delta": {
+     "python": -0.36,
+     "julia": -0.36,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -18}",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": null
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -18}",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 204.94,
+     "julia": null,
+     "octave": 200.0
+    },
+    "altered": {
+     "python": 204.69,
+     "julia": null,
+     "octave": 200.0
+    },
+    "delta": {
+     "python": -0.25,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -18}",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 22.23,
+     "julia": null,
+     "octave": 20.44
+    },
+    "altered": {
+     "python": 19.25,
+     "julia": null,
+     "octave": 16.85
+    },
+    "delta": {
+     "python": -2.98,
+     "julia": null,
+     "octave": -3.59
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -18}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 403.8,
+     "julia": null,
+     "octave": 361.0
+    },
+    "altered": {
+     "python": 823.6,
+     "julia": null,
+     "octave": 755.0
+    },
+    "delta": {
+     "python": 419.8,
+     "julia": null,
+     "octave": 394.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/nasal|{\"g_db\": -18}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1790.1,
+     "julia": null,
+     "octave": 1498.0
+    },
+    "altered": {
+     "python": 1809.9,
+     "julia": null,
+     "octave": 2023.0
+    },
+    "delta": {
+     "python": 19.8,
+     "julia": null,
+     "octave": 525.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 0.5}",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 0.5}",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 18.92,
+     "julia": 18.92,
+     "octave": null
+    },
+    "altered": {
+     "python": 23.76,
+     "julia": 23.76,
+     "octave": null
+    },
+    "delta": {
+     "python": 4.84,
+     "julia": 4.84,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 0.5}",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -21.67,
+     "julia": -21.67,
+     "octave": null
+    },
+    "altered": {
+     "python": -23.45,
+     "julia": -23.45,
+     "octave": null
+    },
+    "delta": {
+     "python": -1.78,
+     "julia": -1.78,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 0.5}",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "altered": {
+     "python": 0.42,
+     "julia": 0.42,
+     "octave": null
+    },
+    "delta": {
+     "python": -0.42,
+     "julia": -0.42,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 0.5}",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 204.94,
+     "julia": null,
+     "octave": 200.0
+    },
+    "altered": {
+     "python": 204.79,
+     "julia": null,
+     "octave": 205.1
+    },
+    "delta": {
+     "python": -0.15,
+     "julia": null,
+     "octave": 5.1
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 0.5}",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 22.23,
+     "julia": null,
+     "octave": 20.44
+    },
+    "altered": {
+     "python": 17.28,
+     "julia": null,
+     "octave": 16.84
+    },
+    "delta": {
+     "python": -4.95,
+     "julia": null,
+     "octave": -3.6
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 0.5}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 403.8,
+     "julia": null,
+     "octave": 361.0
+    },
+    "altered": {
+     "python": 408.1,
+     "julia": null,
+     "octave": 328.0
+    },
+    "delta": {
+     "python": 4.3,
+     "julia": null,
+     "octave": -33.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 0.5}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1790.1,
+     "julia": null,
+     "octave": 1498.0
+    },
+    "altered": {
+     "python": 1744.5,
+     "julia": null,
+     "octave": 1487.0
+    },
+    "delta": {
+     "python": -45.6,
+     "julia": null,
+     "octave": -11.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 1.5}",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 0.9919,
+     "octave": 0.996
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": -0.0081,
+     "octave": -0.004
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 1.5}",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 18.92,
+     "julia": 18.92,
+     "octave": null
+    },
+    "altered": {
+     "python": 23.31,
+     "julia": 23.31,
+     "octave": null
+    },
+    "delta": {
+     "python": 4.39,
+     "julia": 4.39,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 1.5}",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -21.67,
+     "julia": -21.67,
+     "octave": null
+    },
+    "altered": {
+     "python": -23.49,
+     "julia": -23.49,
+     "octave": null
+    },
+    "delta": {
+     "python": -1.82,
+     "julia": -1.82,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 1.5}",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "altered": {
+     "python": 1.26,
+     "julia": 1.26,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.42,
+     "julia": 0.42,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 1.5}",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 204.94,
+     "julia": null,
+     "octave": 200.0
+    },
+    "altered": {
+     "python": 205.13,
+     "julia": null,
+     "octave": 202.5
+    },
+    "delta": {
+     "python": 0.19,
+     "julia": null,
+     "octave": 2.5
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 1.5}",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 22.23,
+     "julia": null,
+     "octave": 20.44
+    },
+    "altered": {
+     "python": 18.89,
+     "julia": null,
+     "octave": 19.39
+    },
+    "delta": {
+     "python": -3.34,
+     "julia": null,
+     "octave": -1.05
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 1.5}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 403.8,
+     "julia": null,
+     "octave": 361.0
+    },
+    "altered": {
+     "python": 408.2,
+     "julia": null,
+     "octave": 330.0
+    },
+    "delta": {
+     "python": 4.4,
+     "julia": null,
+     "octave": -31.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 1.5}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1790.1,
+     "julia": null,
+     "octave": 1498.0
+    },
+    "altered": {
+     "python": 1760.4,
+     "julia": null,
+     "octave": 1489.0
+    },
+    "delta": {
+     "python": -29.7,
+     "julia": null,
+     "octave": -9.0
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 2.0}",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "altered": {
+     "python": 1.0,
+     "julia": 1.0,
+     "octave": 1.0
+    },
+    "delta": {
+     "python": 0.0,
+     "julia": 0.0,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 2.0}",
+    "metric": "nasal_ratio_db",
+    "baseline": {
+     "python": 18.92,
+     "julia": 18.92,
+     "octave": null
+    },
+    "altered": {
+     "python": 18.64,
+     "julia": 18.64,
+     "octave": null
+    },
+    "delta": {
+     "python": -0.28,
+     "julia": -0.28,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 2.0}",
+    "metric": "rms_db",
+    "baseline": {
+     "python": -21.67,
+     "julia": -21.67,
+     "octave": null
+    },
+    "altered": {
+     "python": -22.99,
+     "julia": -22.99,
+     "octave": null
+    },
+    "delta": {
+     "python": -1.32,
+     "julia": -1.32,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 2.0}",
+    "metric": "span_duration_s",
+    "baseline": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "altered": {
+     "python": 1.68,
+     "julia": 1.68,
+     "octave": null
+    },
+    "delta": {
+     "python": 0.84,
+     "julia": 0.84,
+     "octave": null
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 2.0}",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 204.94,
+     "julia": null,
+     "octave": 200.0
+    },
+    "altered": {
+     "python": 205.13,
+     "julia": null,
+     "octave": 200.0
+    },
+    "delta": {
+     "python": 0.19,
+     "julia": null,
+     "octave": 0.0
+    },
+    "direction_agreement": null
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 2.0}",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 22.23,
+     "julia": null,
+     "octave": 20.44
+    },
+    "altered": {
+     "python": 21.05,
+     "julia": null,
+     "octave": 19.7
+    },
+    "delta": {
+     "python": -1.18,
+     "julia": null,
+     "octave": -0.74
+    },
+    "direction_agreement": true
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 2.0}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 403.8,
+     "julia": null,
+     "octave": 361.0
+    },
+    "altered": {
+     "python": 397.5,
+     "julia": null,
+     "octave": 362.0
+    },
+    "delta": {
+     "python": -6.3,
+     "julia": null,
+     "octave": 1.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 2.0}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1790.1,
+     "julia": null,
+     "octave": 1498.0
+    },
+    "altered": {
+     "python": 1793.7,
+     "julia": null,
+     "octave": 1494.0
+    },
+    "delta": {
+     "python": 3.6,
+     "julia": null,
+     "octave": -4.0
+    },
+    "direction_agreement": false
+   }
+  ],
+  "disagreements": [
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.3}",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 159.33,
+     "julia": null,
+     "octave": 160.0
+    },
+    "altered": {
+     "python": 160.46,
+     "julia": null,
+     "octave": 159.2
+    },
+    "delta": {
+     "python": 1.13,
+     "julia": null,
+     "octave": -0.8
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.3}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 470.3,
+     "julia": null,
+     "octave": 470.0
+    },
+    "altered": {
+     "python": 468.8,
+     "julia": null,
+     "octave": 494.0
+    },
+    "delta": {
+     "python": -1.5,
+     "julia": null,
+     "octave": 24.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "zay_fatha/voicing|{\"level\": 0.3}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1631.1,
+     "julia": null,
+     "octave": 1550.0
+    },
+    "altered": {
+     "python": 1654.0,
+     "julia": null,
+     "octave": 1481.0
+    },
+    "delta": {
+     "python": 22.9,
+     "julia": null,
+     "octave": -69.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 1.5}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 470.3,
+     "julia": null,
+     "octave": 470.0
+    },
+    "altered": {
+     "python": 466.3,
+     "julia": null,
+     "octave": 486.0
+    },
+    "delta": {
+     "python": -4.0,
+     "julia": null,
+     "octave": 16.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "zay_fatha/duration|{\"k\": 2.0}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 470.3,
+     "julia": null,
+     "octave": 470.0
+    },
+    "altered": {
+     "python": 457.5,
+     "julia": null,
+     "octave": 478.0
+    },
+    "delta": {
+     "python": -12.8,
+     "julia": null,
+     "octave": 8.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "sad_fatha/noop_world",
+    "metric": "voiced_fraction",
+    "baseline": {
+     "python": 0.8438,
+     "julia": 0.8667,
+     "octave": 0.898
+    },
+    "altered": {
+     "python": 0.8594,
+     "julia": 0.8667,
+     "octave": 0.881
+    },
+    "delta": {
+     "python": 0.0156,
+     "julia": 0.0,
+     "octave": -0.017
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "sad_fatha/noop_world",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 674.4,
+     "julia": null,
+     "octave": 587.0
+    },
+    "altered": {
+     "python": 641.0,
+     "julia": null,
+     "octave": 590.0
+    },
+    "delta": {
+     "python": -33.4,
+     "julia": null,
+     "octave": 3.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "sad_fatha/same-letter|صَ 74:17 74:17:L12",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 14.28,
+     "julia": null,
+     "octave": 14.09
+    },
+    "altered": {
+     "python": 10.02,
+     "julia": null,
+     "octave": 15.93
+    },
+    "delta": {
+     "python": -4.26,
+     "julia": null,
+     "octave": 1.84
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "sad_fatha/same-letter|صَ 74:17 74:17:L12",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1079.6,
+     "julia": null,
+     "octave": 1073.0
+    },
+    "altered": {
+     "python": 1027.2,
+     "julia": null,
+     "octave": 1074.0
+    },
+    "delta": {
+     "python": -52.4,
+     "julia": null,
+     "octave": 1.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "sad_fatha/formant|{\"a\": 0.9}",
+    "metric": "hnr_db",
+    "baseline": {
+     "python": 14.28,
+     "julia": null,
+     "octave": 14.09
+    },
+    "altered": {
+     "python": 13.58,
+     "julia": null,
+     "octave": 14.96
+    },
+    "delta": {
+     "python": -0.7,
+     "julia": null,
+     "octave": 0.87
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": 6}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 674.4,
+     "julia": null,
+     "octave": 587.0
+    },
+    "altered": {
+     "python": 594.0,
+     "julia": null,
+     "octave": 606.0
+    },
+    "delta": {
+     "python": -80.4,
+     "julia": null,
+     "octave": 19.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "sad_fatha/f0|{\"semitones\": 6}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1079.6,
+     "julia": null,
+     "octave": 1073.0
+    },
+    "altered": {
+     "python": 1110.9,
+     "julia": null,
+     "octave": 1058.0
+    },
+    "delta": {
+     "python": 31.3,
+     "julia": null,
+     "octave": -15.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "ghunnah/noop_world",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 403.8,
+     "julia": null,
+     "octave": 361.0
+    },
+    "altered": {
+     "python": 395.0,
+     "julia": null,
+     "octave": 363.0
+    },
+    "delta": {
+     "python": -8.8,
+     "julia": null,
+     "octave": 2.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 0.5}",
+    "metric": "f0_hz",
+    "baseline": {
+     "python": 204.94,
+     "julia": null,
+     "octave": 200.0
+    },
+    "altered": {
+     "python": 204.79,
+     "julia": null,
+     "octave": 205.1
+    },
+    "delta": {
+     "python": -0.15,
+     "julia": null,
+     "octave": 5.1
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 0.5}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 403.8,
+     "julia": null,
+     "octave": 361.0
+    },
+    "altered": {
+     "python": 408.1,
+     "julia": null,
+     "octave": 328.0
+    },
+    "delta": {
+     "python": 4.3,
+     "julia": null,
+     "octave": -33.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 1.5}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 403.8,
+     "julia": null,
+     "octave": 361.0
+    },
+    "altered": {
+     "python": 408.2,
+     "julia": null,
+     "octave": 330.0
+    },
+    "delta": {
+     "python": 4.4,
+     "julia": null,
+     "octave": -31.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 2.0}",
+    "metric": "f1_hz",
+    "baseline": {
+     "python": 403.8,
+     "julia": null,
+     "octave": 361.0
+    },
+    "altered": {
+     "python": 397.5,
+     "julia": null,
+     "octave": 362.0
+    },
+    "delta": {
+     "python": -6.3,
+     "julia": null,
+     "octave": 1.0
+    },
+    "direction_agreement": false
+   },
+   {
+    "experiment": "ghunnah/duration|{\"k\": 2.0}",
+    "metric": "f2_hz",
+    "baseline": {
+     "python": 1790.1,
+     "julia": null,
+     "octave": 1498.0
+    },
+    "altered": {
+     "python": 1793.7,
+     "julia": null,
+     "octave": 1494.0
+    },
+    "delta": {
+     "python": 3.6,
+     "julia": null,
+     "octave": -4.0
+    },
+    "direction_agreement": false
+   }
+  ]
+ },
+ "julia_rederived_deltas": {
+  "deltas_compared": 1120,
+  "mismatches": []
+ }
+}

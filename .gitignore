@@ -45,3 +45,4 @@ research_agency_lab/experiments/timing/stretch_T300.jsonl
 benchmarks/results/kaggle/*/*runs_*.jsonl
 research_agency_lab/experiments/letter_corpus/data/
 research_agency_lab/experiments/synthesis/data/
+research_agency_lab/experiments/causal/data/

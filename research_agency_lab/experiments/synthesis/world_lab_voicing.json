@@ -1,0 +1,1466 @@
+[
+ {
+  "experiment": "devoice",
+  "letter": "ز",
+  "ref": "48:19",
+  "lid": "48:19:L50",
+  "head": "hams_or_jahr",
+  "before": {
+   "ghonna": 11.437,
+   "hams_or_jahr": 12.083,
+   "istitala": 12.25,
+   "itbaq": 10.614,
+   "qalqla": 13.008,
+   "safeer": 8.823,
+   "shidda_or_rakhawa": 9.276,
+   "tafashie": 12.626,
+   "tafkheem_or_taqeeq": 10.503,
+   "tikraar": 10.735
+  },
+  "identity_before": 11.201,
+  "doses": [
+   {
+    "dose": "null",
+    "target_margin": 13.013,
+    "target_realised": true,
+    "identity": [
+     true,
+     "ذ",
+     10.9
+    ],
+    "others_moved_most": [
+     [
+      "tafkheem_or_taqeeq",
+      -0.89
+     ],
+     [
+      "qalqla",
+      -0.79
+     ],
+     [
+      "ghonna",
+      -0.66
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.5,
+    "target_margin": 11.758,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     11.514
+    ],
+    "others_moved_most": [
+     [
+      "tafashie",
+      0.43
+     ],
+     [
+      "ghonna",
+      -0.36
+     ],
+     [
+      "tikraar",
+      0.35
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.8,
+    "target_margin": 11.26,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     11.007
+    ],
+    "others_moved_most": [
+     [
+      "ghonna",
+      -0.89
+     ],
+     [
+      "tikraar",
+      0.57
+     ],
+     [
+      "tafashie",
+      0.56
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 1.0,
+    "target_margin": 11.39,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     10.585
+    ],
+    "others_moved_most": [
+     [
+      "ghonna",
+      -0.72
+     ],
+     [
+      "shidda_or_rakhawa",
+      -0.35
+     ],
+     [
+      "tafkheem_or_taqeeq",
+      -0.25
+     ]
+    ],
+    "heads_not_realised": []
+   }
+  ]
+ },
+ {
+  "experiment": "devoice",
+  "letter": "د",
+  "ref": "93:7",
+  "lid": "93:7:L6",
+  "head": "hams_or_jahr",
+  "before": {
+   "ghonna": 10.257,
+   "hams_or_jahr": 10.585,
+   "istitala": 10.156,
+   "itbaq": 10.39,
+   "qalqla": 11.678,
+   "safeer": 12.459,
+   "shidda_or_rakhawa": 10.771,
+   "tafashie": 14.459,
+   "tafkheem_or_taqeeq": 13.197,
+   "tikraar": 11.356
+  },
+  "identity_before": 14.027,
+  "doses": [
+   {
+    "dose": "null",
+    "target_margin": 10.302,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     13.742
+    ],
+    "others_moved_most": [
+     [
+      "safeer",
+      -0.26
+     ],
+     [
+      "tafkheem_or_taqeeq",
+      -0.21
+     ],
+     [
+      "istitala",
+      -0.2
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.5,
+    "target_margin": 9.009,
+    "target_realised": true,
+    "identity": [
+     true,
+     "ذ",
+     11.08
+    ],
+    "others_moved_most": [
+     [
+      "qalqla",
+      -4.49
+     ],
+     [
+      "tafkheem_or_taqeeq",
+      -2.07
+     ],
+     [
+      "safeer",
+      -1.9
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.8,
+    "target_margin": 8.606,
+    "target_realised": true,
+    "identity": [
+     true,
+     "ذ",
+     10.775
+    ],
+    "others_moved_most": [
+     [
+      "qalqla",
+      -4.57
+     ],
+     [
+      "tafkheem_or_taqeeq",
+      -2.54
+     ],
+     [
+      "safeer",
+      -2.26
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 1.0,
+    "target_margin": 7.858,
+    "target_realised": true,
+    "identity": [
+     true,
+     "ذ",
+     10.472
+    ],
+    "others_moved_most": [
+     [
+      "qalqla",
+      -4.56
+     ],
+     [
+      "tafkheem_or_taqeeq",
+      -3.16
+     ],
+     [
+      "tafashie",
+      -2.78
+     ]
+    ],
+    "heads_not_realised": []
+   }
+  ]
+ },
+ {
+  "experiment": "devoice",
+  "letter": "ج",
+  "ref": "92:17",
+  "lid": "92:17:L6",
+  "head": "hams_or_jahr",
+  "before": {
+   "ghonna": 15.504,
+   "hams_or_jahr": 14.099,
+   "istitala": 12.606,
+   "itbaq": 11.753,
+   "qalqla": 11.09,
+   "safeer": 14.746,
+   "shidda_or_rakhawa": 12.847,
+   "tafashie": 10.835,
+   "tafkheem_or_taqeeq": 12.293,
+   "tikraar": 12.555
+  },
+  "identity_before": 17.637,
+  "doses": [
+   {
+    "dose": "null",
+    "target_margin": 14.064,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     17.91
+    ],
+    "others_moved_most": [
+     [
+      "ghonna",
+      -0.17
+     ],
+     [
+      "itbaq",
+      -0.16
+     ],
+     [
+      "istitala",
+      -0.13
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.5,
+    "target_margin": 13.832,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     17.595
+    ],
+    "others_moved_most": [
+     [
+      "tafkheem_or_taqeeq",
+      -0.42
+     ],
+     [
+      "ghonna",
+      -0.35
+     ],
+     [
+      "itbaq",
+      -0.31
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.8,
+    "target_margin": 12.257,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     16.713
+    ],
+    "others_moved_most": [
+     [
+      "qalqla",
+      -3.36
+     ],
+     [
+      "ghonna",
+      -2.11
+     ],
+     [
+      "istitala",
+      -1.82
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 1.0,
+    "target_margin": 12.626,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     16.985
+    ],
+    "others_moved_most": [
+     [
+      "qalqla",
+      -3.02
+     ],
+     [
+      "ghonna",
+      -1.61
+     ],
+     [
+      "istitala",
+      -1.55
+     ]
+    ],
+    "heads_not_realised": []
+   }
+  ]
+ },
+ {
+  "experiment": "devoice",
+  "letter": "ع",
+  "ref": "38:68",
+  "lid": "38:68:L6",
+  "head": "hams_or_jahr",
+  "before": {
+   "ghonna": 13.923,
+   "hams_or_jahr": 16.293,
+   "istitala": 18.377,
+   "itbaq": 15.4,
+   "qalqla": 19.069,
+   "safeer": 17.295,
+   "shidda_or_rakhawa": 14.172,
+   "tafashie": 15.76,
+   "tafkheem_or_taqeeq": 16.306,
+   "tikraar": 15.097
+  },
+  "identity_before": 14.516,
+  "doses": [
+   {
+    "dose": "null",
+    "target_margin": 15.973,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     14.851
+    ],
+    "others_moved_most": [
+     [
+      "safeer",
+      -0.71
+     ],
+     [
+      "tafashie",
+      0.65
+     ],
+     [
+      "qalqla",
+      -0.58
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.5,
+    "target_margin": 15.846,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     15.101
+    ],
+    "others_moved_most": [
+     [
+      "safeer",
+      -0.96
+     ],
+     [
+      "qalqla",
+      -0.74
+     ],
+     [
+      "istitala",
+      -0.65
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.8,
+    "target_margin": 15.062,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     15.199
+    ],
+    "others_moved_most": [
+     [
+      "safeer",
+      -2.06
+     ],
+     [
+      "istitala",
+      -1.3
+     ],
+     [
+      "ghonna",
+      -0.95
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 1.0,
+    "target_margin": 14.65,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     14.761
+    ],
+    "others_moved_most": [
+     [
+      "safeer",
+      -2.09
+     ],
+     [
+      "tafkheem_or_taqeeq",
+      -1.42
+     ],
+     [
+      "tikraar",
+      -1.36
+     ]
+    ],
+    "heads_not_realised": []
+   }
+  ]
+ },
+ {
+  "experiment": "devoice",
+  "letter": "ب",
+  "ref": "90:13",
+  "lid": "90:13:L8",
+  "head": "hams_or_jahr",
+  "before": {
+   "ghonna": 12.559,
+   "hams_or_jahr": 11.942,
+   "istitala": 13.576,
+   "itbaq": 12.327,
+   "qalqla": 12.099,
+   "safeer": 13.983,
+   "shidda_or_rakhawa": 11.669,
+   "tafashie": 14.498,
+   "tafkheem_or_taqeeq": 16.388,
+   "tikraar": 13.456
+  },
+  "identity_before": 12.874,
+  "doses": [
+   {
+    "dose": "null",
+    "target_margin": 11.655,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     11.871
+    ],
+    "others_moved_most": [
+     [
+      "tafashie",
+      -0.59
+     ],
+     [
+      "qalqla",
+      -0.38
+     ],
+     [
+      "itbaq",
+      -0.26
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.5,
+    "target_margin": 11.106,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     11.721
+    ],
+    "others_moved_most": [
+     [
+      "qalqla",
+      -4.65
+     ],
+     [
+      "safeer",
+      -1.22
+     ],
+     [
+      "istitala",
+      -1.06
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.8,
+    "target_margin": 10.893,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     12.73
+    ],
+    "others_moved_most": [
+     [
+      "ghonna",
+      -0.94
+     ],
+     [
+      "tafkheem_or_taqeeq",
+      -0.87
+     ],
+     [
+      "qalqla",
+      -0.85
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 1.0,
+    "target_margin": 9.885,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     12.485
+    ],
+    "others_moved_most": [
+     [
+      "qalqla",
+      -4.42
+     ],
+     [
+      "tafkheem_or_taqeeq",
+      -2.41
+     ],
+     [
+      "safeer",
+      -2.15
+     ]
+    ],
+    "heads_not_realised": []
+   }
+  ]
+ },
+ {
+  "experiment": "devoice",
+  "letter": "غ",
+  "ref": "41:32",
+  "lid": "41:32:L9",
+  "head": "hams_or_jahr",
+  "before": {
+   "ghonna": 11.983,
+   "hams_or_jahr": 11.714,
+   "istitala": 11.47,
+   "itbaq": 12.307,
+   "qalqla": 14.089,
+   "safeer": 12.663,
+   "shidda_or_rakhawa": 10.952,
+   "tafashie": 15.838,
+   "tafkheem_or_taqeeq": 10.216,
+   "tikraar": 11.734
+  },
+  "identity_before": 11.572,
+  "doses": [
+   {
+    "dose": "null",
+    "target_margin": 12.723,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     9.192
+    ],
+    "others_moved_most": [
+     [
+      "tafkheem_or_taqeeq",
+      2.45
+     ],
+     [
+      "qalqla",
+      1.7
+     ],
+     [
+      "tafashie",
+      1.25
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.5,
+    "target_margin": 12.516,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     9.68
+    ],
+    "others_moved_most": [
+     [
+      "tafkheem_or_taqeeq",
+      2.2
+     ],
+     [
+      "tafashie",
+      1.18
+     ],
+     [
+      "qalqla",
+      1.17
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.8,
+    "target_margin": 12.335,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     9.552
+    ],
+    "others_moved_most": [
+     [
+      "tafkheem_or_taqeeq",
+      1.49
+     ],
+     [
+      "tafashie",
+      1.04
+     ],
+     [
+      "tikraar",
+      0.88
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 1.0,
+    "target_margin": 12.248,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     8.882
+    ],
+    "others_moved_most": [
+     [
+      "tafkheem_or_taqeeq",
+      2.49
+     ],
+     [
+      "qalqla",
+      1.66
+     ],
+     [
+      "tafashie",
+      1.1
+     ]
+    ],
+    "heads_not_realised": []
+   }
+  ]
+ },
+ {
+  "experiment": "voice",
+  "letter": "س",
+  "ref": "10:44",
+  "lid": "10:44:L48",
+  "head": "hams_or_jahr",
+  "before": {
+   "ghonna": 14.246,
+   "hams_or_jahr": 13.319,
+   "istitala": 15.558,
+   "itbaq": 11.979,
+   "qalqla": 15.216,
+   "safeer": 10.101,
+   "shidda_or_rakhawa": 10.182,
+   "tafashie": 13.043,
+   "tafkheem_or_taqeeq": 11.211,
+   "tikraar": 14.256
+  },
+  "identity_before": 11.251,
+  "doses": [
+   {
+    "dose": "null",
+    "target_margin": 13.503,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     10.937
+    ],
+    "others_moved_most": [
+     [
+      "tafashie",
+      0.77
+     ],
+     [
+      "tikraar",
+      0.57
+     ],
+     [
+      "qalqla",
+      -0.31
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.5,
+    "target_margin": 13.56,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     10.912
+    ],
+    "others_moved_most": [
+     [
+      "tafashie",
+      0.74
+     ],
+     [
+      "tikraar",
+      0.61
+     ],
+     [
+      "qalqla",
+      -0.27
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.8,
+    "target_margin": 13.531,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     10.978
+    ],
+    "others_moved_most": [
+     [
+      "tafashie",
+      0.67
+     ],
+     [
+      "tikraar",
+      0.56
+     ],
+     [
+      "qalqla",
+      -0.24
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 1.0,
+    "target_margin": 13.528,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     11.018
+    ],
+    "others_moved_most": [
+     [
+      "tafashie",
+      0.64
+     ],
+     [
+      "tikraar",
+      0.53
+     ],
+     [
+      "qalqla",
+      -0.21
+     ]
+    ],
+    "heads_not_realised": []
+   }
+  ]
+ },
+ {
+  "experiment": "voice",
+  "letter": "ت",
+  "ref": "37:92",
+  "lid": "37:92:L11",
+  "head": "hams_or_jahr",
+  "before": {
+   "ghonna": 15.468,
+   "hams_or_jahr": 13.29,
+   "istitala": 15.458,
+   "itbaq": 13.05,
+   "qalqla": 13.703,
+   "safeer": 14.333,
+   "shidda_or_rakhawa": 16.174,
+   "tafashie": 14.152,
+   "tafkheem_or_taqeeq": 14.427,
+   "tikraar": 14.819
+  },
+  "identity_before": 14.128,
+  "doses": [
+   {
+    "dose": "null",
+    "target_margin": 13.262,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     13.835
+    ],
+    "others_moved_most": [
+     [
+      "qalqla",
+      0.35
+     ],
+     [
+      "tafashie",
+      0.35
+     ],
+     [
+      "tafkheem_or_taqeeq",
+      0.3
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.5,
+    "target_margin": 13.477,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     13.838
+    ],
+    "others_moved_most": [
+     [
+      "tafkheem_or_taqeeq",
+      0.38
+     ],
+     [
+      "qalqla",
+      0.33
+     ],
+     [
+      "shidda_or_rakhawa",
+      -0.27
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.8,
+    "target_margin": 13.433,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     13.829
+    ],
+    "others_moved_most": [
+     [
+      "qalqla",
+      0.42
+     ],
+     [
+      "tafkheem_or_taqeeq",
+      0.4
+     ],
+     [
+      "shidda_or_rakhawa",
+      -0.3
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 1.0,
+    "target_margin": 13.406,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     13.801
+    ],
+    "others_moved_most": [
+     [
+      "qalqla",
+      0.49
+     ],
+     [
+      "tafkheem_or_taqeeq",
+      0.4
+     ],
+     [
+      "shidda_or_rakhawa",
+      -0.32
+     ]
+    ],
+    "heads_not_realised": []
+   }
+  ]
+ },
+ {
+  "experiment": "voice",
+  "letter": "ف",
+  "ref": "73:17",
+  "lid": "73:17:L5",
+  "head": "hams_or_jahr",
+  "before": {
+   "ghonna": 14.076,
+   "hams_or_jahr": 13.421,
+   "istitala": 16.124,
+   "itbaq": 12.703,
+   "qalqla": 16.649,
+   "safeer": 13.654,
+   "shidda_or_rakhawa": 11.979,
+   "tafashie": 13.536,
+   "tafkheem_or_taqeeq": 14.435,
+   "tikraar": 15.223
+  },
+  "identity_before": 14.405,
+  "doses": [
+   {
+    "dose": "null",
+    "target_margin": 12.94,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     13.832
+    ],
+    "others_moved_most": [
+     [
+      "tafashie",
+      0.43
+     ],
+     [
+      "safeer",
+      -0.34
+     ],
+     [
+      "tikraar",
+      0.29
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.5,
+    "target_margin": 12.954,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     13.83
+    ],
+    "others_moved_most": [
+     [
+      "tafashie",
+      0.44
+     ],
+     [
+      "safeer",
+      -0.32
+     ],
+     [
+      "tikraar",
+      0.29
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.8,
+    "target_margin": 12.959,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     13.844
+    ],
+    "others_moved_most": [
+     [
+      "tafashie",
+      0.43
+     ],
+     [
+      "safeer",
+      -0.31
+     ],
+     [
+      "tikraar",
+      0.27
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 1.0,
+    "target_margin": 12.96,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     13.854
+    ],
+    "others_moved_most": [
+     [
+      "tafashie",
+      0.42
+     ],
+     [
+      "safeer",
+      -0.3
+     ],
+     [
+      "tikraar",
+      0.26
+     ]
+    ],
+    "heads_not_realised": []
+   }
+  ]
+ },
+ {
+  "experiment": "voice",
+  "letter": "ك",
+  "ref": "35:17",
+  "lid": "35:17:L10",
+  "head": "hams_or_jahr",
+  "before": {
+   "ghonna": 15.845,
+   "hams_or_jahr": 12.302,
+   "istitala": 15.06,
+   "itbaq": 13.86,
+   "qalqla": 12.98,
+   "safeer": 14.401,
+   "shidda_or_rakhawa": 14.335,
+   "tafashie": 14.218,
+   "tafkheem_or_taqeeq": 12.455,
+   "tikraar": 12.201
+  },
+  "identity_before": 17.487,
+  "doses": [
+   {
+    "dose": "null",
+    "target_margin": 12.585,
+    "target_realised": true,
+    "identity": [
+     true,
+     "ق",
+     16.274
+    ],
+    "others_moved_most": [
+     [
+      "safeer",
+      -0.55
+     ],
+     [
+      "tafashie",
+      -0.54
+     ],
+     [
+      "shidda_or_rakhawa",
+      -0.52
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.5,
+    "target_margin": 12.709,
+    "target_realised": true,
+    "identity": [
+     true,
+     "ق",
+     16.322
+    ],
+    "others_moved_most": [
+     [
+      "shidda_or_rakhawa",
+      -0.49
+     ],
+     [
+      "tafashie",
+      -0.49
+     ],
+     [
+      "safeer",
+      -0.44
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.8,
+    "target_margin": 12.681,
+    "target_realised": true,
+    "identity": [
+     true,
+     "ق",
+     16.278
+    ],
+    "others_moved_most": [
+     [
+      "shidda_or_rakhawa",
+      -0.48
+     ],
+     [
+      "tafashie",
+      -0.48
+     ],
+     [
+      "safeer",
+      -0.41
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 1.0,
+    "target_margin": 12.628,
+    "target_realised": true,
+    "identity": [
+     true,
+     "ق",
+     16.195
+    ],
+    "others_moved_most": [
+     [
+      "tafashie",
+      -0.52
+     ],
+     [
+      "shidda_or_rakhawa",
+      -0.5
+     ],
+     [
+      "safeer",
+      -0.45
+     ]
+    ],
+    "heads_not_realised": []
+   }
+  ]
+ },
+ {
+  "experiment": "voice",
+  "letter": "ح",
+  "ref": "35:21",
+  "lid": "35:21:L13",
+  "head": "hams_or_jahr",
+  "before": {
+   "ghonna": 14.44,
+   "hams_or_jahr": 8.64,
+   "istitala": 18.252,
+   "itbaq": 13.918,
+   "qalqla": 18.815,
+   "safeer": 14.44,
+   "shidda_or_rakhawa": 9.444,
+   "tafashie": 11.813,
+   "tafkheem_or_taqeeq": 12.137,
+   "tikraar": 14.769
+  },
+  "identity_before": 13.294,
+  "doses": [
+   {
+    "dose": "null",
+    "target_margin": 8.546,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     13.288
+    ],
+    "others_moved_most": [
+     [
+      "shidda_or_rakhawa",
+      -0.16
+     ],
+     [
+      "qalqla",
+      -0.14
+     ],
+     [
+      "safeer",
+      -0.07
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.5,
+    "target_margin": 8.483,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     13.293
+    ],
+    "others_moved_most": [
+     [
+      "shidda_or_rakhawa",
+      -0.15
+     ],
+     [
+      "qalqla",
+      -0.11
+     ],
+     [
+      "safeer",
+      -0.07
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.8,
+    "target_margin": 8.448,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     13.298
+    ],
+    "others_moved_most": [
+     [
+      "shidda_or_rakhawa",
+      -0.16
+     ],
+     [
+      "tafkheem_or_taqeeq",
+      0.06
+     ],
+     [
+      "ghonna",
+      -0.05
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 1.0,
+    "target_margin": 8.429,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     13.298
+    ],
+    "others_moved_most": [
+     [
+      "shidda_or_rakhawa",
+      -0.15
+     ],
+     [
+      "tikraar",
+      -0.1
+     ],
+     [
+      "tafkheem_or_taqeeq",
+      0.07
+     ]
+    ],
+    "heads_not_realised": []
+   }
+  ]
+ },
+ {
+  "experiment": "voice",
+  "letter": "ث",
+  "ref": "36:78",
+  "lid": "36:78:L15",
+  "head": "hams_or_jahr",
+  "before": {
+   "ghonna": 13.542,
+   "hams_or_jahr": 9.149,
+   "istitala": 12.989,
+   "itbaq": 13.129,
+   "qalqla": 14.005,
+   "safeer": 11.133,
+   "shidda_or_rakhawa": 9.169,
+   "tafashie": 12.237,
+   "tafkheem_or_taqeeq": 11.051,
+   "tikraar": 12.607
+  },
+  "identity_before": 12.266,
+  "doses": [
+   {
+    "dose": "null",
+    "target_margin": 9.294,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     11.802
+    ],
+    "others_moved_most": [
+     [
+      "tikraar",
+      -0.52
+     ],
+     [
+      "tafashie",
+      0.44
+     ],
+     [
+      "safeer",
+      -0.35
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.5,
+    "target_margin": 9.367,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     11.733
+    ],
+    "others_moved_most": [
+     [
+      "tikraar",
+      -0.59
+     ],
+     [
+      "tafashie",
+      0.51
+     ],
+     [
+      "safeer",
+      -0.47
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 0.8,
+    "target_margin": 9.365,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     11.746
+    ],
+    "others_moved_most": [
+     [
+      "tikraar",
+      -0.58
+     ],
+     [
+      "tafashie",
+      0.52
+     ],
+     [
+      "safeer",
+      -0.47
+     ]
+    ],
+    "heads_not_realised": []
+   },
+   {
+    "dose": 1.0,
+    "target_margin": 9.354,
+    "target_realised": true,
+    "identity": [
+     true,
+     "∅",
+     11.76
+    ],
+    "others_moved_most": [
+     [
+      "tikraar",
+      -0.57
+     ],
+     [
+      "tafashie",
+      0.52
+     ],
+     [
+      "safeer",
+      -0.45
+     ]
+    ],
+    "heads_not_realised": []
+   }
+  ]
+ }
+]

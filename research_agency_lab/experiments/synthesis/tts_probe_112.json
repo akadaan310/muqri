@@ -1,0 +1,556 @@
+[
+ {
+  "voice": "ar-SA-HamedNeural",
+  "ref": "112:1",
+  "seconds": 3.26,
+  "count_unit_s": 0.16,
+  "consonants_confirmed": "9/9",
+  "vowels_confirmed": "7/7",
+  "heads_not_realised": {
+   "tafkheem_or_taqeeq": 1,
+   "qalqla": 1
+  },
+  "rules": [
+   [
+    "tawassut",
+    "pass",
+    1.23,
+    [
+     1.5,
+     1.5
+    ]
+   ],
+   [
+    "tafkheem",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "qalqalah",
+    "wrong",
+    null,
+    null
+   ]
+  ],
+  "words_all_correct": "2/4"
+ },
+ {
+  "voice": "ar-SA-HamedNeural",
+  "ref": "112:2",
+  "seconds": 2.88,
+  "count_unit_s": 0.2,
+  "consonants_confirmed": "2/6",
+  "vowels_confirmed": "4/5",
+  "heads_not_realised": {
+   "shidda_or_rakhawa": 2,
+   "tafkheem_or_taqeeq": 1,
+   "hams_or_jahr": 2,
+   "qalqla": 1
+  },
+  "rules": [
+   [
+    "tafkheem",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "hamzat_wasl",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "qalqalah",
+    "wrong",
+    null,
+    null
+   ]
+  ],
+  "words_all_correct": "0/2"
+ },
+ {
+  "voice": "ar-SA-HamedNeural",
+  "ref": "112:3",
+  "seconds": 3.29,
+  "count_unit_s": 0.16,
+  "consonants_confirmed": "11/11",
+  "vowels_confirmed": "7/7",
+  "heads_not_realised": {
+   "qalqla": 2
+  },
+  "rules": [
+   [
+    "qalqalah",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "qalqalah",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "madd_tabii",
+    "short",
+    1.23,
+    [
+     2,
+     2
+    ]
+   ]
+  ],
+  "words_all_correct": "2/4"
+ },
+ {
+  "voice": "ar-SA-HamedNeural",
+  "ref": "112:4",
+  "seconds": 4.03,
+  "count_unit_s": 0.16,
+  "consonants_confirmed": "13/13",
+  "vowels_confirmed": "11/11",
+  "heads_not_realised": {
+   "qalqla": 1
+  },
+  "rules": [
+   [
+    "qalqalah",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "madd_silah_sughra",
+    "short",
+    1.23,
+    [
+     2,
+     2
+    ]
+   ]
+  ],
+  "words_all_correct": "3/5"
+ },
+ {
+  "voice": "ar-SA-ZariyahNeural",
+  "ref": "112:1",
+  "seconds": 3.29,
+  "count_unit_s": 0.16,
+  "consonants_confirmed": "9/9",
+  "vowels_confirmed": "7/7",
+  "heads_not_realised": {
+   "ghonna": 1,
+   "tafkheem_or_taqeeq": 1,
+   "qalqla": 1
+  },
+  "rules": [
+   [
+    "tawassut",
+    "pass",
+    1.41,
+    [
+     1.5,
+     1.5
+    ]
+   ],
+   [
+    "tafkheem",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "qalqalah",
+    "wrong",
+    null,
+    null
+   ]
+  ],
+  "words_all_correct": "2/4"
+ },
+ {
+  "voice": "ar-SA-ZariyahNeural",
+  "ref": "112:2",
+  "seconds": 3.0,
+  "count_unit_s": 0.2,
+  "consonants_confirmed": "3/6",
+  "vowels_confirmed": "4/5",
+  "heads_not_realised": {
+   "shidda_or_rakhawa": 1,
+   "tafkheem_or_taqeeq": 2,
+   "hams_or_jahr": 2,
+   "itbaq": 1,
+   "safeer": 1
+  },
+  "rules": [
+   [
+    "tafkheem",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "hamzat_wasl",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "itbaq",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "safir",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "tafkheem",
+    "wrong",
+    null,
+    null
+   ]
+  ],
+  "words_all_correct": "0/2"
+ },
+ {
+  "voice": "ar-SA-ZariyahNeural",
+  "ref": "112:3",
+  "seconds": 3.31,
+  "count_unit_s": 0.16,
+  "consonants_confirmed": "11/11",
+  "vowels_confirmed": "7/7",
+  "heads_not_realised": {
+   "qalqla": 2
+  },
+  "rules": [
+   [
+    "qalqalah",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "qalqalah",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "madd_tabii",
+    "short",
+    1.23,
+    [
+     2,
+     2
+    ]
+   ]
+  ],
+  "words_all_correct": "2/4"
+ },
+ {
+  "voice": "ar-SA-ZariyahNeural",
+  "ref": "112:4",
+  "seconds": 4.25,
+  "count_unit_s": 0.16,
+  "consonants_confirmed": "13/13",
+  "vowels_confirmed": "11/11",
+  "heads_not_realised": {
+   "qalqla": 1
+  },
+  "rules": [
+   [
+    "qalqalah",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "madd_silah_sughra",
+    "pass",
+    1.6,
+    [
+     2,
+     2
+    ]
+   ]
+  ],
+  "words_all_correct": "4/5"
+ },
+ {
+  "voice": "ar-EG-ShakirNeural",
+  "ref": "112:1",
+  "seconds": 3.07,
+  "count_unit_s": 0.2,
+  "consonants_confirmed": "9/9",
+  "vowels_confirmed": "7/7",
+  "heads_not_realised": {
+   "tafkheem_or_taqeeq": 1,
+   "qalqla": 1
+  },
+  "rules": [
+   [
+    "tawassut",
+    "pass",
+    1.12,
+    [
+     1.5,
+     1.5
+    ]
+   ],
+   [
+    "tafkheem",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "qalqalah",
+    "wrong",
+    null,
+    null
+   ]
+  ],
+  "words_all_correct": "2/4"
+ },
+ {
+  "voice": "ar-EG-ShakirNeural",
+  "ref": "112:2",
+  "seconds": 2.9,
+  "count_unit_s": 0.239,
+  "consonants_confirmed": "4/6",
+  "vowels_confirmed": "4/5",
+  "heads_not_realised": {
+   "shidda_or_rakhawa": 2,
+   "tafkheem_or_taqeeq": 1,
+   "hams_or_jahr": 1,
+   "qalqla": 1
+  },
+  "rules": [
+   [
+    "tafkheem",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "hamzat_wasl",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "qalqalah",
+    "wrong",
+    null,
+    null
+   ]
+  ],
+  "words_all_correct": "0/2"
+ },
+ {
+  "voice": "ar-EG-ShakirNeural",
+  "ref": "112:3",
+  "seconds": 3.12,
+  "count_unit_s": 0.16,
+  "consonants_confirmed": "11/11",
+  "vowels_confirmed": "7/7",
+  "heads_not_realised": {
+   "qalqla": 2
+  },
+  "rules": [
+   [
+    "qalqalah",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "qalqalah",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "madd_tabii",
+    "pass",
+    1.41,
+    [
+     2,
+     2
+    ]
+   ]
+  ],
+  "words_all_correct": "2/4"
+ },
+ {
+  "voice": "ar-EG-ShakirNeural",
+  "ref": "112:4",
+  "seconds": 3.89,
+  "count_unit_s": 0.16,
+  "consonants_confirmed": "13/13",
+  "vowels_confirmed": "11/11",
+  "heads_not_realised": {
+   "qalqla": 1
+  },
+  "rules": [
+   [
+    "qalqalah",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "madd_silah_sughra",
+    "pass",
+    1.41,
+    [
+     2,
+     2
+    ]
+   ]
+  ],
+  "words_all_correct": "4/5"
+ },
+ {
+  "voice": "ar-AE-HamdanNeural",
+  "ref": "112:1",
+  "seconds": 3.43,
+  "count_unit_s": 0.2,
+  "consonants_confirmed": "9/9",
+  "vowels_confirmed": "7/7",
+  "heads_not_realised": {
+   "tafkheem_or_taqeeq": 1,
+   "qalqla": 1
+  },
+  "rules": [
+   [
+    "tawassut",
+    "pass",
+    1.26,
+    [
+     1.5,
+     1.5
+    ]
+   ],
+   [
+    "tafkheem",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "qalqalah",
+    "wrong",
+    null,
+    null
+   ]
+  ],
+  "words_all_correct": "2/4"
+ },
+ {
+  "voice": "ar-AE-HamdanNeural",
+  "ref": "112:2",
+  "seconds": 3.02,
+  "count_unit_s": 0.24,
+  "consonants_confirmed": "4/6",
+  "vowels_confirmed": "4/5",
+  "heads_not_realised": {
+   "shidda_or_rakhawa": 2,
+   "tafkheem_or_taqeeq": 1,
+   "hams_or_jahr": 2,
+   "qalqla": 1
+  },
+  "rules": [
+   [
+    "tafkheem",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "hamzat_wasl",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "qalqalah",
+    "wrong",
+    null,
+    null
+   ]
+  ],
+  "words_all_correct": "0/2"
+ },
+ {
+  "voice": "ar-AE-HamdanNeural",
+  "ref": "112:3",
+  "seconds": 3.46,
+  "count_unit_s": 0.16,
+  "consonants_confirmed": "11/11",
+  "vowels_confirmed": "7/7",
+  "heads_not_realised": {
+   "qalqla": 2
+  },
+  "rules": [
+   [
+    "qalqalah",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "qalqalah",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "madd_tabii",
+    "short",
+    1.23,
+    [
+     2,
+     2
+    ]
+   ]
+  ],
+  "words_all_correct": "2/4"
+ },
+ {
+  "voice": "ar-AE-HamdanNeural",
+  "ref": "112:4",
+  "seconds": 4.25,
+  "count_unit_s": 0.16,
+  "consonants_confirmed": "13/13",
+  "vowels_confirmed": "11/11",
+  "heads_not_realised": {
+   "qalqla": 1
+  },
+  "rules": [
+   [
+    "qalqalah",
+    "wrong",
+    null,
+    null
+   ],
+   [
+    "madd_silah_sughra",
+    "pass",
+    1.41,
+    [
+     2,
+     2
+    ]
+   ]
+  ],
+  "words_all_correct": "4/5"
+ }
+]

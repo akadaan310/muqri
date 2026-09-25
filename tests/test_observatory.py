@@ -40,3 +40,15 @@ def test_only_rounds_one_to_five_and_no_path_escape(client) -> None:  # type: ig
     assert client.get("/observatory/audio/r6e1/A/x.m4a").status_code == 404
     assert client.get("/observatory/audio/r5e1/A/..%2F..%2F..%2Fsessions_results.jsonl").status_code == 404
     assert client.get("/observatory/audio/r5e1/C/x.m4a").status_code == 404
+
+
+def test_machine_review_json_is_open_read_only_and_sanitized(client, monkeypatch) -> None:  # type: ignore[no-untyped-def]
+    import observatory.server as srv
+    monkeypatch.setattr(srv, "_engine_status", lambda: {"reachable": False})
+    r = client.get("/api/observatory/public")
+    assert r.status_code == 200 and r.headers["content-type"].startswith("application/json")
+    assert "t0ken-for-tests" not in r.text and not srv.sanitize_check(r.text, "t0ken-for-tests")
+    assert client.head("/api/observatory/public").status_code == 200
+    for m in ("post", "put", "patch", "delete"):
+        assert getattr(client, m)("/api/observatory/public").status_code == 405
+    assert client.get("/api/observatory/manifest").status_code == 401     # the full manifest stays behind the token

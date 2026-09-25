@@ -80,7 +80,7 @@ PIPELINE = [
      "scored flags", "compute": "CPU", "status": "IMPLEMENTED"},
     {"stage": "Knowledge graph", "module": "datastore/kg.py, datastore/graph.py, datastore/kg_discover.py", "language": "Python + Cypher",
      "library": "Neo4j 2026.09 Community + GDS", "model": "graph analyses (Louvain, FastRP, PMI)",
-     "input": "offline datasets", "output": "graph + discoveries.json", "compute": "CPU, VM, 127.0.0.1 only",
+     "input": "offline datasets", "output": "graph + discoveries.json", "compute": "CPU, VM, local only",
      "status": "EXPERIMENTAL", "note": "Not read by the engine at runtime; research layer."},
     {"stage": "Session results", "module": "app/sessions.py::score, app/letter_matrix.py, app/webapp.py (/sessions/*)",
      "language": "Python", "library": "FastAPI", "model": "deterministic scoring against scripted expectations",

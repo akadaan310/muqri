@@ -209,6 +209,93 @@ def manifest() -> dict[str, Any]:
     }
 
 
+# ---------------------------------------------------------------- public machine-review JSON ---------------
+PUBLIC_PATH = "/api/observatory/public"
+_LEAK_PATTERNS = {
+    "ip address": r"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b",
+    "absolute path": r"(?<![\w.])/(home|root|etc|opt|var|tmp|usr|mnt|srv)/",
+    "home dir": r"~/",
+    "credential word": r"(?i)password|passwd|secret|api[_-]?key|bearer |private[_ ]key|NEO4J_|MODAL_TOKEN|ANTHROPIC|OPENAI",
+    "token query": r"(?i)token=",
+    "localhost": r"(?i)localhost",
+}
+
+
+def sanitize_check(text: str, tok: str) -> list[str]:
+    import re
+    hits = [name for name, pat in _LEAK_PATTERNS.items() if re.search(pat, text)]
+    if tok and tok in text:
+        hits.append("observatory token")
+    return hits
+
+
+def _engine_status() -> dict[str, Any]:
+    import urllib.request
+    try:
+        with urllib.request.urlopen(BACKEND + "/health", timeout=5) as r:
+            h = json.loads(r.read())
+        return {"reachable": True, "model_warm": h.get("model_warm"), "status": h.get("status")}
+    except Exception:  # noqa: BLE001 - the report must serve even if the engine is down
+        return {"reachable": False}
+
+
+def public_review() -> dict[str, Any]:
+    """The Observatory's technical content for automated review: counts, statuses, results -- no locations,
+    addresses, credentials or tokens (checked by sanitize_check before serving)."""
+    from observatory import content as C
+    snap = load("snapshot.json") or {}
+    neo = load("neo4j_snapshot.json") or {}
+    bill = load("modal_billing.json") or {}
+    cur = load("current_engine.json") or {}
+    matrix = [{k: v for k, v in r.items() if k not in ("audio", "take_a_audio")} for r in perturbation_matrix()]
+    takes = [{"round": t["round"], "exercise": t["exercise"], "take": t["take"],
+              "recorded": t.get("recording") is not None,
+              "card": {k: t["card"].get(k) for k in ("expectations", "met", "mistakes", "caught", "false_alarms", "tempo")}
+              if t.get("card") else None} for t in cur.get("takes", [])]
+    as_rec = [{k: e.get(k) for k in ("round", "exercise", "take", "stamp", "kind", "note", "met", "caught",
+                                     "expectations", "mistakes", "false_alarms", "tempo")}
+              for e in snap.get("history", [])]
+    return {
+        "about": "Muqri Observatory, machine-review view: a sanitized, read-only JSON of the technical Observatory. "
+                 "Every statement describes the current implementation; status words: IMPLEMENTED (in the served "
+                 "Sessions path), TESTED (tests or recorded measurements), PARTIALLY IMPLEMENTED, EXPERIMENTAL "
+                 "(research code, measured), PLANNED, CONCEPTUAL, NOT VERIFIED.",
+        "revisions": {"observatory_running": _running_revision(), "engine_snapshot": snap.get("git", {}).get("revision"),
+                      "current_engine_rescore": cur.get("git_revision"), "rescored_at": cur.get("scored_at"),
+                      "repository": "https://github.com/akadaan310/muqri (branch claude/qaari-eval-engine-btwkjt)"},
+        "engine_status": _engine_status(),
+        "human_pages": {"observatory": "/muqri-observatory", "report": "/muqri-observatory/report",
+                        "sessions": "/sessions (rounds 1-5)", "access": "token link from the project owner"},
+        "engines": C.ENGINES, "components": C.PIPELINE, "reasoning_layers": C.REASONING,
+        "measures": C.MEASURES, "makharij": C.makharij(),
+        "sifat": [dict(zip(("name", "arabic", "letters", "acoustic", "detector", "score", "status", "evidence"), s))
+                  for s in C.SIFAT],
+        "sessions": {
+            "scope": "rounds 1-5 (round 6 is a letter-drill experiment, excluded)",
+            "exercises": [{k: x.get(k) for k in ("id", "round", "title", "surah", "ayahs", "wajh", "goal", "spec",
+                                                  "expect", "mistakes", "b_is_correct", "controls")}
+                          for x in snap.get("exercises", [])],
+            "recordings": [{k: r[k] for k in ("round", "exercise", "take", "stamp", "format", "audio_seconds")}
+                           for r in snap.get("recordings", [])],
+            "metrics_by_round": round_metrics(),
+            "as_recorded_history": as_rec,
+            "current_engine_takes": takes,
+            "scripted_mistake_matrix": matrix,
+            "per_rule_letter_characteristic_take_a_current": digest_by_round(),
+            "engine_commits_during_rounds": snap.get("engine_commits"),
+        },
+        "models": C.MODELS,
+        "corpus": snap.get("corpus"),
+        "knowledge_graph": {"engine": "Neo4j Community (local only; not read by the engine at runtime)",
+                            "version": neo.get("version"), "total_nodes": neo.get("total_nodes"),
+                            "total_relationships": neo.get("total_relationships"), "labels": neo.get("labels"),
+                            "relationship_counts": neo.get("relationships"), "patterns": neo.get("patterns")},
+        "modal": {"apps": C.MODAL, "billing": {k: bill.get(k) for k in ("by_app_usd", "by_day_usd", "total_usd", "note")}},
+        "julia_octave": C.JULIA_OCTAVE, "synthesis": C.SYNTHESIS, "qiraat": C.QIRAAT, "data_factory": C.FACTORY,
+        "limitations": C.LIMITATIONS,
+    }
+
+
 # ---------------------------------------------------------------- HTML -------------------------------------
 CSS = """
 :root{--bg:#fbfaf7;--fg:#1b1b1b;--mut:#666;--line:#e2dfd6;--card:#fff;--ok:#1a7f4b;--bad:#b3261e;--warn:#8a6100;--code:#f3f1ea}
@@ -498,6 +585,11 @@ def create_app():  # type: ignore[no-untyped-def]
     async def guard(request: Request, call_next):  # type: ignore[no-untyped-def]
         if request.method not in ("GET", "HEAD"):
             return JSONResponse({"error": "read-only inspection view"}, status_code=405)
+        if request.url.path == PUBLIC_PATH:          # sanitized machine-review JSON: no token needed
+            resp = await call_next(request)
+            resp.headers["X-Robots-Tag"] = "noindex, nofollow"
+            resp.headers["Cache-Control"] = "no-store"
+            return resp
         q = request.query_params.get("token")
         if q is not None and secrets.compare_digest(q, tok):
             r = RedirectResponse(str(request.url.remove_query_params("token")), status_code=303)
@@ -566,6 +658,15 @@ def create_app():  # type: ignore[no-untyped-def]
     def report_md():  # type: ignore[no-untyped-def]
         from observatory.report import render_markdown
         return render_markdown()
+
+    @api.api_route(PUBLIC_PATH, methods=["GET", "HEAD"])
+    async def public_json():  # type: ignore[no-untyped-def]
+        body = public_review()
+        text = json.dumps(body, ensure_ascii=False, indent=1)
+        leaks = sanitize_check(text, tok)
+        if leaks:                                    # fail closed: never serve something that looks sensitive
+            return JSONResponse({"error": "withheld: sanitization check failed", "patterns": leaks}, status_code=500)
+        return Response(text, media_type="application/json")
 
     @api.get("/api/observatory/manifest")
     def manifest_json():  # type: ignore[no-untyped-def]

@@ -22,7 +22,10 @@ The quick-tunnel URL changes whenever cloudflared restarts. A permanent hostname
 | `/observatory/audio/{exercise}/{take}/{file}` | the stored round 1–5 recordings (from `research_agency_lab/experiments/session_recordings/`, local only) |
 | `/muqri-observatory` | the technical page |
 | `/muqri-observatory/report` (and `.md`) | the full technical report |
-| `/api/observatory/manifest` | the machine-readable manifest |
+| `/api/observatory/manifest` | the full machine-readable manifest (token) |
+| `/api/observatory/public` | **the canonical machine-review representation**: a sanitized JSON generated live on every request, GET/HEAD without a token; withheld (500) if the sanitization check matches an IP address, an absolute path, localhost, a credential word or the token |
+
+The Cloudflare quick tunnel (above) is the only ingress. Its edge blocks some AI-crawler user agents on `trycloudflare.com` with a 403 before the request reaches the VM. That is a property of the quick tunnel; the Observatory itself never returns 403.
 
 **Access.** The reviewer link carries `?token=…` once. The token is kept in an HttpOnly, Secure cookie, and the token itself lives in `~/.config/qaari/observatory.token` (chmod 600). Without it, every route returns 401.
 
@@ -36,6 +39,7 @@ Everything is precomputed. The server never touches the database, credentials or
 | `observatory/data/current_engine.json` | `observatory/rescore_current.py` | the latest round 1–5 recordings rescored by the current engine; a dry run that writes nothing historical |
 | `observatory/data/neo4j_snapshot.json` | a read-only Cypher session (labels, relationship types, counts, patterns, indexes) | the local Neo4j |
 | `observatory/data/modal_billing.json` | `modal billing report` | the Modal workspace |
+| `observatory/data/public_review.json` | `observatory/snapshot_public.py` | a **review snapshot** of `/api/observatory/public`, labelled inside (`review_snapshot`: canonical source, capture time and revision). It is not authoritative, it is never read by the Observatory, and it is not updated automatically. Where it differs from the live endpoint, the live endpoint is correct |
 
 To refresh after engine changes, rebuild with `.venv/bin/python observatory/build_snapshot.py` and `.venv/bin/python observatory/rescore_current.py`.
 

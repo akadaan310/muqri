@@ -1,7 +1,13 @@
 {
+ "review_snapshot": {
+  "canonical_source": "GET /api/observatory/public (live, generated per request)",
+  "captured_at": "2026-09-25T08:52:09Z",
+  "observatory_revision_at_capture": "e430bfe8176ec27fb2c33991675f36aaa077db89",
+  "note": "Point-in-time copy for review only. Not authoritative and not updated automatically; where it differs from the live endpoint, the live endpoint is correct."
+ },
  "about": "Muqri Observatory, machine-review view: a sanitized, read-only JSON of the technical Observatory. Every statement describes the current implementation; status words: IMPLEMENTED (in the served Sessions path), TESTED (tests or recorded measurements), PARTIALLY IMPLEMENTED, EXPERIMENTAL (research code, measured), PLANNED, CONCEPTUAL, NOT VERIFIED.",
  "revisions": {
-  "observatory_running": "4a1f0e863b8e59a0b4deb1b58c9c76e7b02b836a",
+  "observatory_running": "e430bfe8176ec27fb2c33991675f36aaa077db89",
   "engine_snapshot": "eae947856892d6bf41e20aa2e5dee78f01c245b6",
   "current_engine_rescore": "eae947856892d6bf41e20aa2e5dee78f01c245b6",
   "rescored_at": "2026-09-25T08:05:46Z",

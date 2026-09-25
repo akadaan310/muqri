@@ -1,3 +1,24 @@
+# State at 2026-09-25 (branch `claude/qaari-eval-engine-btwkjt`)
+
+- **Removed:** `AGENTS.md`, `AGENTS-EXPLORE.md`, `CLAUDE.md`.
+- **Round 5** (`app/sessions.py`, exercises r5e1 al-Fil 105:1-5, r5e2 al-Balad 90:5-7, r5e3 al-Qadr 97:1-5):
+  - All 53 expectations are located by the parser.
+  - `/sessions/rounds` serves `[1..5]` with 5 live.
+  - **The VM web app must `git pull` and restart to show it.**
+  - Before recording, run `python scripts/validate_round.py 5` (Husary + Minshawy; needs the model).
+- **Round 4** was scored on the current engine (24 Sep 15:07-15:19): r4e1 11/11 and 4/4, r4e2 14/14 and 5/5, 3 false alarms.
+  - To re-run it: `python scripts/rescore_round.py 4 --dry-run`.
+- **Held back from round 5:**
+  - sakt: the engine's quran_transcript text has no sakt mark, so no sakt rule is located.
+  - ishba': `app/itmam.py` does not score it.
+- **Calibration:** v3, installed at `app/data/calibration.json`, is unchanged.
+  - Its source rows (studio-all, 37,411) are NOT in git; they are on the VM or Modal. Commit them gzipped.
+- **Kaggle rows:** full + fill, 114,746 rows, gzipped in `benchmarks/results/kaggle/{full,fill}/`. Scored under v3 in `benchmarks/results/summary.{json,md}` and `index/`.
+  - Al-Juhany's rows are an alignment failure, not a score.
+- **Kaggle assets:**
+  - private datasets `razanashrafalnajjar/qaari-eval-code` and `qaari-eval-deps`
+  - kernels `qaari-{smoke*,full,fill}-*`
+
 # Carry-over: qaari-eval — calibrate on Al-Hussary, validate on peers, score the imams
 
 ## 1. Goal

@@ -201,5 +201,52 @@ class SpeechAndSurfaceTests(unittest.TestCase):
         self.assertEqual(h.mode, "legacy")
 
 
+class HigherUnisonTests(unittest.TestCase):
+    def test_declarative_forty_eight_forms_not_universal_arabic_claim(self):
+        from unison.morphology import declare_paradigm
+        p = declare_paradigm(
+            language="synthetic-test", era="fictional", lemma="x", grammar_id="test-grid",
+            source="declared synthetic axes",
+            axes={"person": ("1","2","3"), "number": ("sg","pl"),
+                  "gender": ("m","f"), "time": ("past","now"),
+                  "voice": ("active","passive")},
+        )
+        self.assertEqual(p.form_count, 48)
+        self.assertEqual(p.attested_forms, 0)
+        self.assertTrue(p.form_48_profile)
+
+    def test_polyglot_requires_attested_sense(self):
+        from unison.polyglot import concept_board
+        d = MuajamIndex()
+        d.insert(DictionaryEntry("x", "en", "hello", "interj", "greeting",
+                                 "curated_example", sense_id="GREETING"))
+        rows = concept_board(d, "GREETING", ("ar", "en", "tr"))
+        self.assertEqual(rows[0].status, "UNKNOWN_LANGUAGE_SENSE")
+        self.assertEqual(rows[1].status, "ATTESTED_LEXICAL_SENSE")
+        self.assertEqual(rows[2].status, "UNKNOWN_LANGUAGE_SENSE")
+
+    def test_discrete_bit_and_quantum_simulation_are_distinct(self):
+        from unison.substrate_io import BitWord, qitt_control_trace, QuantumStateVector, HybridObservation
+        t = qitt_control_trace()
+        self.assertEqual([t[0].before.display()] + [v.after.display() for v in t],
+                         ["0000","1000","1100","1110","1000"])
+        self.assertEqual(t[-1].operation, "RETURN")
+        self.assertEqual(t[-1].generation, 1)
+        self.assertEqual(BitWord(4, 0).flip(3).display(), "1000")
+        q = QuantumStateVector(1, "q0_msb", (1+0j,0j), "ideal reference")
+        h = HybridObservation(BitWord(4, 8), q, 1, "bits", "quantum_reference")
+        self.assertEqual(h.as_record()["quantum"]["born_probabilities_simulated"], (1.0, 0.0))
+
+    def test_story_generator_uses_admitted_finite_state(self):
+        from unison.story import FictionState, advance, permitted
+        s = FictionState(credit=2, bill=5)
+        self.assertNotIn("PAY", permitted(s))
+        turn = advance(s, "REQUEST_TAB")
+        self.assertEqual(turn.after.episode, "DEFERRED")
+        self.assertEqual(s.episode, "BILL_PENDING")
+        with self.assertRaises(ValueError):
+            advance(s, "PAY")
+
+
 if __name__ == "__main__":
     unittest.main()

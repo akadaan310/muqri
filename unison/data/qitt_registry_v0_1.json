@@ -1,0 +1,1221 @@
+{
+  "schema": "glass.qitt.registry/0.1",
+  "title": "QITṬ — ṢIFR–LIFF cyclic Arabic letter registry",
+  "status": "owner-proposed computational semantics; formalized from owner directive, not externally theory-verified",
+  "source_context": "GLASS commission qitt-001, 2026-10-25",
+  "alphabet_cardinality": 28,
+  "numeric_order": "nine units 1..9; nine tens 10..90; nine hundreds 100..900; Ghayn as the 1000 anchor",
+  "alphabet": [
+    {
+      "id": "QITT-L-ALIF",
+      "glyph": "ا",
+      "letter_name": "Alif",
+      "order": 1,
+      "native_value": 1,
+      "band": "units",
+      "coefficient": 1,
+      "initial_position": 0,
+      "role": "low_unit_one_alif"
+    },
+    {
+      "id": "QITT-L-BA",
+      "glyph": "ب",
+      "letter_name": "Bāʾ",
+      "order": 2,
+      "native_value": 2,
+      "band": "units",
+      "coefficient": 2,
+      "initial_position": 0,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-JIM",
+      "glyph": "ج",
+      "letter_name": "Jīm",
+      "order": 3,
+      "native_value": 3,
+      "band": "units",
+      "coefficient": 3,
+      "initial_position": 0,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-DAL",
+      "glyph": "د",
+      "letter_name": "Dāl",
+      "order": 4,
+      "native_value": 4,
+      "band": "units",
+      "coefficient": 4,
+      "initial_position": 0,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-HA",
+      "glyph": "ه",
+      "letter_name": "Hāʾ",
+      "order": 5,
+      "native_value": 5,
+      "band": "units",
+      "coefficient": 5,
+      "initial_position": 0,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-WAW",
+      "glyph": "و",
+      "letter_name": "Wāw",
+      "order": 6,
+      "native_value": 6,
+      "band": "units",
+      "coefficient": 6,
+      "initial_position": 0,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-ZAY",
+      "glyph": "ز",
+      "letter_name": "Zāy",
+      "order": 7,
+      "native_value": 7,
+      "band": "units",
+      "coefficient": 7,
+      "initial_position": 0,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-HHA",
+      "glyph": "ح",
+      "letter_name": "Ḥāʾ",
+      "order": 8,
+      "native_value": 8,
+      "band": "units",
+      "coefficient": 8,
+      "initial_position": 0,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-TTA",
+      "glyph": "ط",
+      "letter_name": "Ṭāʾ",
+      "order": 9,
+      "native_value": 9,
+      "band": "units",
+      "coefficient": 9,
+      "initial_position": 0,
+      "role": "unit_terminal"
+    },
+    {
+      "id": "QITT-L-YA",
+      "glyph": "ي",
+      "letter_name": "Yāʾ",
+      "order": 10,
+      "native_value": 10,
+      "band": "tens",
+      "coefficient": 1,
+      "initial_position": 1,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-KAF",
+      "glyph": "ك",
+      "letter_name": "Kāf",
+      "order": 11,
+      "native_value": 20,
+      "band": "tens",
+      "coefficient": 2,
+      "initial_position": 1,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-LAM",
+      "glyph": "ل",
+      "letter_name": "Lām",
+      "order": 12,
+      "native_value": 30,
+      "band": "tens",
+      "coefficient": 3,
+      "initial_position": 1,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-MIM",
+      "glyph": "م",
+      "letter_name": "Mīm",
+      "order": 13,
+      "native_value": 40,
+      "band": "tens",
+      "coefficient": 4,
+      "initial_position": 1,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-NUN",
+      "glyph": "ن",
+      "letter_name": "Nūn",
+      "order": 14,
+      "native_value": 50,
+      "band": "tens",
+      "coefficient": 5,
+      "initial_position": 1,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-SIN",
+      "glyph": "س",
+      "letter_name": "Sīn",
+      "order": 15,
+      "native_value": 60,
+      "band": "tens",
+      "coefficient": 6,
+      "initial_position": 1,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-AYN",
+      "glyph": "ع",
+      "letter_name": "ʿAyn",
+      "order": 16,
+      "native_value": 70,
+      "band": "tens",
+      "coefficient": 7,
+      "initial_position": 1,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-FA",
+      "glyph": "ف",
+      "letter_name": "Fāʾ",
+      "order": 17,
+      "native_value": 80,
+      "band": "tens",
+      "coefficient": 8,
+      "initial_position": 1,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-SSAD",
+      "glyph": "ص",
+      "letter_name": "Ṣād",
+      "order": 18,
+      "native_value": 90,
+      "band": "tens",
+      "coefficient": 9,
+      "initial_position": 1,
+      "role": "tens_terminal"
+    },
+    {
+      "id": "QITT-L-QAF",
+      "glyph": "ق",
+      "letter_name": "Qāf",
+      "order": 19,
+      "native_value": 100,
+      "band": "hundreds",
+      "coefficient": 1,
+      "initial_position": 2,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-RA",
+      "glyph": "ر",
+      "letter_name": "Rāʾ",
+      "order": 20,
+      "native_value": 200,
+      "band": "hundreds",
+      "coefficient": 2,
+      "initial_position": 2,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-SHIN",
+      "glyph": "ش",
+      "letter_name": "Shīn",
+      "order": 21,
+      "native_value": 300,
+      "band": "hundreds",
+      "coefficient": 3,
+      "initial_position": 2,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-TA",
+      "glyph": "ت",
+      "letter_name": "Tāʾ",
+      "order": 22,
+      "native_value": 400,
+      "band": "hundreds",
+      "coefficient": 4,
+      "initial_position": 2,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-THA",
+      "glyph": "ث",
+      "letter_name": "Thāʾ",
+      "order": 23,
+      "native_value": 500,
+      "band": "hundreds",
+      "coefficient": 5,
+      "initial_position": 2,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-KHA",
+      "glyph": "خ",
+      "letter_name": "Khāʾ",
+      "order": 24,
+      "native_value": 600,
+      "band": "hundreds",
+      "coefficient": 6,
+      "initial_position": 2,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-DHAL",
+      "glyph": "ذ",
+      "letter_name": "Dhāl",
+      "order": 25,
+      "native_value": 700,
+      "band": "hundreds",
+      "coefficient": 7,
+      "initial_position": 2,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-DDAD",
+      "glyph": "ض",
+      "letter_name": "Ḍād",
+      "order": 26,
+      "native_value": 800,
+      "band": "hundreds",
+      "coefficient": 8,
+      "initial_position": 2,
+      "role": "register"
+    },
+    {
+      "id": "QITT-L-ZZHA",
+      "glyph": "ظ",
+      "letter_name": "Ẓāʾ",
+      "order": 27,
+      "native_value": 900,
+      "band": "hundreds",
+      "coefficient": 9,
+      "initial_position": 2,
+      "role": "hundreds_terminal"
+    },
+    {
+      "id": "QITT-L-GHAYN",
+      "glyph": "غ",
+      "letter_name": "Ghayn",
+      "order": 28,
+      "native_value": 1000,
+      "band": "thousands_return",
+      "coefficient": 1,
+      "initial_position": 3,
+      "role": "thousands_start_and_3_phase_return"
+    }
+  ],
+  "bands": [
+    {
+      "id": "units",
+      "position": 0,
+      "step": 1,
+      "terminal": 9,
+      "letter_terminal": "ط"
+    },
+    {
+      "id": "tens",
+      "position": 1,
+      "step": 10,
+      "terminal": 90,
+      "letter_terminal": "ص"
+    },
+    {
+      "id": "hundreds",
+      "position": 2,
+      "step": 100,
+      "terminal": 900,
+      "letter_terminal": "ظ"
+    },
+    {
+      "id": "thousands_return",
+      "position": 3,
+      "anchor": 1000,
+      "letter_anchor": "غ"
+    }
+  ],
+  "high_positional_lift": {
+    "rule": "coefficient digit d at decimal place p; p>=3 uses p modulo 3; p%3=0 -> Ghayn if d=1 else d-th units glyph; p%3=1 -> d-th tens glyph; p%3=2 -> d-th hundreds glyph",
+    "positional_value": "d*10^p; never replace numeric weight with the reused glyph's native value",
+    "low_alif_prohibition": "for all p>=3, coefficient 1 at a 3k position is Ghayn, not Alif; lower p=0 coefficient 1 remains Alif",
+    "sifr": "digit 0 has an explicit typed gap cell; never infer original places from an untagged glyph string",
+    "return_period": 3,
+    "cell_required_fields": [
+      "position",
+      "coefficient",
+      "kind",
+      "glyph"
+    ],
+    "glyph_only_inversion": "noninjective; position tags or canonical decimal value required"
+  },
+  "state_types": {
+    "sifr": [
+      "gap",
+      "numeric_zero",
+      "unbound_operand",
+      "pending_operator",
+      "reserved_argument"
+    ],
+    "control": [
+      "ALIF-LIFF",
+      "GHAYN-RETURN",
+      "QITT-BOUNDARY",
+      "CARRY",
+      "BORROW",
+      "FLIP",
+      "BIND",
+      "RELEASE"
+    ],
+    "word_profiles": [
+      "bare_graphemes",
+      "diacritics_preserved",
+      "shadda_expanded_opt_in"
+    ],
+    "epistemic": [
+      "owner_axiom",
+      "defined_here",
+      "derived",
+      "open"
+    ]
+  },
+  "operator_contracts": {
+    "LIFF": {
+      "input": "canonical finite decimal digit tape",
+      "guard": "selected digit==9 for a carry step",
+      "effect": "set the digit to 0 and carry 1 into next position; if needed create a new leading place; numeric value increments by 1 over the whole tape",
+      "not": "not a statement about historical Arabic letter etymology"
+    },
+    "GHAYN_RETURN": {
+      "input": "position p >=3 and p mod 3==0 with coefficient 1",
+      "effect": "output Ghayn glyph with position tag; keep p and cycle identity"
+    },
+    "FLIP": {
+      "input": "control bit in {0,1}",
+      "effect": "toggle bit; do not equate XOR with decimal carry"
+    },
+    "QITT_BOUNDARY": {
+      "input": "profiled Arabic word ق ط or frame QAF:[SIFR]:TTA",
+      "effect": "recognize hundred-start + absent-ten + unit-terminal with numeric 109 in grapheme-additive profile",
+      "not": "not a default arithmetic halting operation for arbitrary lexemes"
+    }
+  },
+  "bit_motif": {
+    "initial": "0000",
+    "states": [
+      "0000",
+      "1000",
+      "1100",
+      "1110",
+      "1000"
+    ],
+    "meaning": "separate finite control path; leading bit retained by RETURN; not binary increment",
+    "terminal": "RETURN_TO_ONE",
+    "cycles_from": "1000"
+  },
+  "word_examples": [
+    {
+      "glyphs": "قط",
+      "segmentation": [
+        "ق",
+        "ط"
+      ],
+      "value": 109,
+      "profile": "bare_graphemes",
+      "note": "qitṭ word example; shadda not counted as extra letter in this profile"
+    },
+    {
+      "glyphs": "قص",
+      "segmentation": [
+        "ق",
+        "ص"
+      ],
+      "value": 190,
+      "profile": "bare_graphemes"
+    },
+    {
+      "glyphs": "قصقص",
+      "segmentation": [
+        "ق",
+        "ص",
+        "ق",
+        "ص"
+      ],
+      "value": 380,
+      "profile": "bare_graphemes",
+      "note": "two QṢ segments; not the same written word as قصص"
+    },
+    {
+      "glyphs": "قصص",
+      "segmentation": [
+        "ق",
+        "ص",
+        "ص"
+      ],
+      "value": 280,
+      "profile": "bare_graphemes",
+      "note": "distinguish the three-letter word from two QṢ segments"
+    },
+    {
+      "glyphs": "قطّ",
+      "segmentation": [
+        "ق",
+        "ط",
+        "ط"
+      ],
+      "value": 118,
+      "profile": "shadda_expanded_opt_in",
+      "note": "alternative reading if shadda expansion doubles the numeral Ṭāʾ"
+    }
+  ],
+  "numeral_fixtures": [
+    {
+      "n": 0,
+      "slots_high_to_low": [
+        {
+          "position": 0,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        }
+      ],
+      "glyph_projection": null
+    },
+    {
+      "n": 1,
+      "slots_high_to_low": [
+        {
+          "position": 0,
+          "coefficient": 1,
+          "kind": "letter",
+          "glyph": "ا"
+        }
+      ],
+      "glyph_projection": "ا"
+    },
+    {
+      "n": 9,
+      "slots_high_to_low": [
+        {
+          "position": 0,
+          "coefficient": 9,
+          "kind": "letter",
+          "glyph": "ط"
+        }
+      ],
+      "glyph_projection": "ط"
+    },
+    {
+      "n": 10,
+      "slots_high_to_low": [
+        {
+          "position": 1,
+          "coefficient": 1,
+          "kind": "letter",
+          "glyph": "ي"
+        },
+        {
+          "position": 0,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        }
+      ],
+      "glyph_projection": "ي"
+    },
+    {
+      "n": 90,
+      "slots_high_to_low": [
+        {
+          "position": 1,
+          "coefficient": 9,
+          "kind": "letter",
+          "glyph": "ص"
+        },
+        {
+          "position": 0,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        }
+      ],
+      "glyph_projection": "ص"
+    },
+    {
+      "n": 100,
+      "slots_high_to_low": [
+        {
+          "position": 2,
+          "coefficient": 1,
+          "kind": "letter",
+          "glyph": "ق"
+        },
+        {
+          "position": 1,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 0,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        }
+      ],
+      "glyph_projection": "ق"
+    },
+    {
+      "n": 109,
+      "slots_high_to_low": [
+        {
+          "position": 2,
+          "coefficient": 1,
+          "kind": "letter",
+          "glyph": "ق"
+        },
+        {
+          "position": 1,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 0,
+          "coefficient": 9,
+          "kind": "letter",
+          "glyph": "ط"
+        }
+      ],
+      "glyph_projection": "قط"
+    },
+    {
+      "n": 190,
+      "slots_high_to_low": [
+        {
+          "position": 2,
+          "coefficient": 1,
+          "kind": "letter",
+          "glyph": "ق"
+        },
+        {
+          "position": 1,
+          "coefficient": 9,
+          "kind": "letter",
+          "glyph": "ص"
+        },
+        {
+          "position": 0,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        }
+      ],
+      "glyph_projection": "قص"
+    },
+    {
+      "n": 280,
+      "slots_high_to_low": [
+        {
+          "position": 2,
+          "coefficient": 2,
+          "kind": "letter",
+          "glyph": "ر"
+        },
+        {
+          "position": 1,
+          "coefficient": 8,
+          "kind": "letter",
+          "glyph": "ف"
+        },
+        {
+          "position": 0,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        }
+      ],
+      "glyph_projection": "رف"
+    },
+    {
+      "n": 380,
+      "slots_high_to_low": [
+        {
+          "position": 2,
+          "coefficient": 3,
+          "kind": "letter",
+          "glyph": "ش"
+        },
+        {
+          "position": 1,
+          "coefficient": 8,
+          "kind": "letter",
+          "glyph": "ف"
+        },
+        {
+          "position": 0,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        }
+      ],
+      "glyph_projection": "شف"
+    },
+    {
+      "n": 900,
+      "slots_high_to_low": [
+        {
+          "position": 2,
+          "coefficient": 9,
+          "kind": "letter",
+          "glyph": "ظ"
+        },
+        {
+          "position": 1,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 0,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        }
+      ],
+      "glyph_projection": "ظ"
+    },
+    {
+      "n": 999,
+      "slots_high_to_low": [
+        {
+          "position": 2,
+          "coefficient": 9,
+          "kind": "letter",
+          "glyph": "ظ"
+        },
+        {
+          "position": 1,
+          "coefficient": 9,
+          "kind": "letter",
+          "glyph": "ص"
+        },
+        {
+          "position": 0,
+          "coefficient": 9,
+          "kind": "letter",
+          "glyph": "ط"
+        }
+      ],
+      "glyph_projection": "ظصط"
+    },
+    {
+      "n": 1000,
+      "slots_high_to_low": [
+        {
+          "position": 3,
+          "coefficient": 1,
+          "kind": "letter",
+          "glyph": "غ"
+        },
+        {
+          "position": 2,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 1,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 0,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        }
+      ],
+      "glyph_projection": "غ"
+    },
+    {
+      "n": 1009,
+      "slots_high_to_low": [
+        {
+          "position": 3,
+          "coefficient": 1,
+          "kind": "letter",
+          "glyph": "غ"
+        },
+        {
+          "position": 2,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 1,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 0,
+          "coefficient": 9,
+          "kind": "letter",
+          "glyph": "ط"
+        }
+      ],
+      "glyph_projection": "غط"
+    },
+    {
+      "n": 1999,
+      "slots_high_to_low": [
+        {
+          "position": 3,
+          "coefficient": 1,
+          "kind": "letter",
+          "glyph": "غ"
+        },
+        {
+          "position": 2,
+          "coefficient": 9,
+          "kind": "letter",
+          "glyph": "ظ"
+        },
+        {
+          "position": 1,
+          "coefficient": 9,
+          "kind": "letter",
+          "glyph": "ص"
+        },
+        {
+          "position": 0,
+          "coefficient": 9,
+          "kind": "letter",
+          "glyph": "ط"
+        }
+      ],
+      "glyph_projection": "غظصط"
+    },
+    {
+      "n": 2000,
+      "slots_high_to_low": [
+        {
+          "position": 3,
+          "coefficient": 2,
+          "kind": "letter",
+          "glyph": "ب"
+        },
+        {
+          "position": 2,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 1,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 0,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        }
+      ],
+      "glyph_projection": "ب"
+    },
+    {
+      "n": 9000,
+      "slots_high_to_low": [
+        {
+          "position": 3,
+          "coefficient": 9,
+          "kind": "letter",
+          "glyph": "ط"
+        },
+        {
+          "position": 2,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 1,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 0,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        }
+      ],
+      "glyph_projection": "ط"
+    },
+    {
+      "n": 10000,
+      "slots_high_to_low": [
+        {
+          "position": 4,
+          "coefficient": 1,
+          "kind": "letter",
+          "glyph": "ي"
+        },
+        {
+          "position": 3,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 2,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 1,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 0,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        }
+      ],
+      "glyph_projection": "ي"
+    },
+    {
+      "n": 90000,
+      "slots_high_to_low": [
+        {
+          "position": 4,
+          "coefficient": 9,
+          "kind": "letter",
+          "glyph": "ص"
+        },
+        {
+          "position": 3,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 2,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 1,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 0,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        }
+      ],
+      "glyph_projection": "ص"
+    },
+    {
+      "n": 100000,
+      "slots_high_to_low": [
+        {
+          "position": 5,
+          "coefficient": 1,
+          "kind": "letter",
+          "glyph": "ق"
+        },
+        {
+          "position": 4,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 3,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 2,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 1,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 0,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        }
+      ],
+      "glyph_projection": "ق"
+    },
+    {
+      "n": 900000,
+      "slots_high_to_low": [
+        {
+          "position": 5,
+          "coefficient": 9,
+          "kind": "letter",
+          "glyph": "ظ"
+        },
+        {
+          "position": 4,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 3,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 2,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 1,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 0,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        }
+      ],
+      "glyph_projection": "ظ"
+    },
+    {
+      "n": 1000000,
+      "slots_high_to_low": [
+        {
+          "position": 6,
+          "coefficient": 1,
+          "kind": "letter",
+          "glyph": "غ"
+        },
+        {
+          "position": 5,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 4,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 3,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 2,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 1,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 0,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        }
+      ],
+      "glyph_projection": "غ"
+    },
+    {
+      "n": 10000000,
+      "slots_high_to_low": [
+        {
+          "position": 7,
+          "coefficient": 1,
+          "kind": "letter",
+          "glyph": "ي"
+        },
+        {
+          "position": 6,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 5,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 4,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 3,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 2,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 1,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 0,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        }
+      ],
+      "glyph_projection": "ي"
+    },
+    {
+      "n": 100000000,
+      "slots_high_to_low": [
+        {
+          "position": 8,
+          "coefficient": 1,
+          "kind": "letter",
+          "glyph": "ق"
+        },
+        {
+          "position": 7,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 6,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 5,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 4,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 3,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 2,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 1,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        },
+        {
+          "position": 0,
+          "coefficient": 0,
+          "kind": "sifr-gap",
+          "glyph": null
+        }
+      ],
+      "glyph_projection": "ق"
+    }
+  ],
+  "unproved_claims": [
+    "Any asserted premodern origin or historically intended mechanism",
+    "Any natural-language meaning inferred from numeric value alone",
+    "Any equivalence between a control-bit trace and a quantum measurement",
+    "Any invertibility after dropping positional/source tags"
+  ],
+  "resource_contract": {
+    "max_decimal_positions": 1024,
+    "max_word_letters": 9,
+    "max_operator_trace_events": 4096,
+    "exact_nonnegative_integers": true
+  },
+  "source_contracts": [
+    {
+      "repo": "akadaan310/GLASS",
+      "path": "atlas/contracts.json"
+    },
+    {
+      "repo": "akadaan310/PolyIA",
+      "path": "polyia/forms.py",
+      "ref": "bb6319acb88467b618f5a6f673f1867768223ce6"
+    },
+    {
+      "repo": "akadaan310/grammarinnumbers",
+      "path": "NUMBER_GRAMMAR.md"
+    },
+    {
+      "repo": "akadaan310/computationalgrammartheory",
+      "path": "DEFINITIONS.md"
+    }
+  ]
+}

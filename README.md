@@ -304,3 +304,20 @@ QAARI_ACCEPTANCE=1 pytest tests/test_benchmarks.py # the spec's acceptance crite
   - Tablawi, Ayyoub, Budair, Matroud and Al-Muaiqly are not in Quran-MD and need an EveryAyah run.
 - **Jawaz al-wajhayn** reports the realised variant and always passes. Madd ʿArid and Leen stay on textbook limits, because 2/4/6 counts is the reciter's free choice.
 - **Educational aid.** This does not replace a qualified teacher (*mujawwid*).
+
+
+## UNISON/0.1 — GLASS × MUQRI × SURFACE (opt-in)
+
+A reversible, source-preserving modular-monolith research layer has been added on branch `main` without changing existing tajwīd scoring. **Legacy MUQRI remains the default.** Read [UNISON science](docs/unison/SCIENCE.md), [commission intent](docs/unison/INTENT.md), the [pinned GLASS register](unison/data/qitt_registry_v0_1.json), and [the focused tests](tests/test_unison.py).
+
+The stdlib-only `unison/` package provides QITṬ typed address calculus, a loss-preserving indexed AST, the fourteen disconnected-letter identities, Muʿjam value/root/sense indexes, explicit multilingual speech UNKNOWN states, grammar paradigms, scoped tensor sorting, classical-bit/quantum-reference separation, SURFACE scene records, finite narrative statecharts, and opt-in legacy/shadow/unison routing.
+
+Source-only examples (requires Python 3.11+):
+```sh
+python -m unison address 1000000
+python -m unison word "الرقيم"
+python -m unison ast "قال قائل" --language ar
+python -m unison quran 2 1 "الم" --edition declared-source-edition --initials --output quran.scene.json
+python -m unison sort-plan '[[4,1],[3,2]]' --axis 1 --commit
+```
+These are deterministic source/math facilities, **not a certified recitation interpreter or shipped native SURFACE rendering**. The SURFACE preview and native scene contract are linked from [SURFACE Qur'an renderer notes](https://github.com/akadaan310/SURFACE/blob/main/docs/UNISON_QURAN_RENDERER.md). No heavy build or new audio inference was conducted for this commission.

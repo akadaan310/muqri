@@ -1,0 +1,11 @@
+{
+  "schema": "unison.source-lock/0.1",
+  "path": "unison/data/qitt_registry_v0_1.json",
+  "upstream_repo": "akadaan310/GLASS",
+  "upstream_path": "atlas/qitt-register-v0.1.json",
+  "upstream_blob_sha": "4c7d31da46bf77786cbdeeccf8f1f2742f455651",
+  "upstream_ref": "main",
+  "scientific_status": "owner-proposed calculation; not a verified historical or linguistic interpretation",
+  "policy": "vendored exact source content; check drift against pin before accepting update",
+  "no_implicit_orthographic_aliases": true
+}

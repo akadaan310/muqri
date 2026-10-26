@@ -15,6 +15,7 @@ from unison.address_ops import CollectionStore, CollectionError
 from unison.speech import LanguagePack, plan_speech, QawlEvent, qawl_transition
 from unison.surface_scene import quran_surface_scene, oscillator_samples, LogicalClock, HyperRuler
 from unison.host import UnisonHost
+from unison.ast import build_indexed_ast
 
 
 class RegistryTests(unittest.TestCase):
@@ -85,6 +86,23 @@ class QuranSyntaxTests(unittest.TestCase):
         self.assertFalse(classify_initials("الم", role="ordinary_word").recognized_sequence)
         self.assertFalse(classify_initials("الرقيم", role="verse_initial_candidate").recognized_sequence)
         self.assertEqual(classify_initials("حم", role="verse_initial_candidate").qitt_native_value, 48)
+
+
+    def test_indexed_hierarchical_ast_spans(self):
+        content = "قال قائل منهم، الم"
+        tree = build_indexed_ast(content, language="ar")
+        self.assertEqual(tree.reconstruct(), content)
+        self.assertEqual(tree.get(tree.root_id).kind, "document")
+        self.assertEqual(tree.get(tree.root_id).source_span_bytes[1], len(content.encode()))
+        for word in tree.children_of(tree.root_id):
+            if word.kind == "word":
+                self.assertEqual("".join(n.original for n in tree.children_of(word.node_id)),
+                                 word.original)
+
+    def test_existing_muqri_initials_inventory_parity(self):
+        from app.tajweed_rules.parser import MUQATTAAT as original, _LETTER_NAMES
+        self.assertEqual(MUQATTAAT, original)
+        self.assertEqual(INITIAL_LETTERS, frozenset(_LETTER_NAMES))
 
     def test_quran_verse_source_no_basmala_mutation(self):
         r = quran_scene_source(27, 30, "إِنَّهُ بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",

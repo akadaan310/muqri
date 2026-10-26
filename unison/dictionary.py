@@ -112,8 +112,8 @@ class MuajamIndex:
         lo = bisect_left(self._value_order, (low, ""))
         hi = bisect_right(self._value_order, (high, "\U0010ffff"))
         return Lookup(f"{low}..{high}", "QITT_interval",
-                      self._collect(e for _, e in self._value_order[lo:hi]),
-                      "O(log n + k) ordered index", "bounded interval of native values, not birth years")
+                      tuple(self._ids[entry_id] for _, entry_id in self._value_order[lo:hi]),
+                      "O(log n + k) ordered index", "ascending native-value order, not meaning or birth years")
 
     def polyglot(self, sense_id: str) -> Lookup:
         """Cross-language links require curated SAME-SENSE identifiers."""

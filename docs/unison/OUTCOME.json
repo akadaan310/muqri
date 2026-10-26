@@ -1,0 +1,78 @@
+{
+  "schema": "unison.commission.outcome/0.1",
+  "commission": "2026-10-26-unison",
+  "repo": "akadaan310/muqri",
+  "branch": "main",
+  "sources": {
+    "muqri_baseline_commit": "40a18f6a6d9dac7f71856b32afd7f2e182bd09c6",
+    "muqri_original_default": "claude/qaari-eval-engine-btwkjt",
+    "glass_registry_blob": "4c7d31da46bf77786cbdeeccf8f1f2742f455651",
+    "source_theory_search": "none: owner prohibits Google / external theory-check",
+    "source_read": [
+      "app/quran_text.py",
+      "app/tajweed_rules/parser.py",
+      "app/engine.py",
+      "app/letters.py",
+      "app/measurements.py",
+      "research_agency_lab/substrate_library/julia/calculus.jl",
+      "docs/synthesis-engine.md",
+      "GRAPH.md",
+      "GLASS/docs/QITT_CYCLIC_ARABIC_REGISTER_CALCULUS.md",
+      "SURFACE/docs/ARCHITECTURE_AND_HARNESSES.md"
+    ]
+  },
+  "artifact_paths": [
+    "docs/unison/INTENT.md",
+    "docs/unison/SCIENCE.md",
+    "unison/__init__.py",
+    "unison/__main__.py",
+    "unison/data/SOURCE.json",
+    "unison/data/qitt_registry_v0_1.json",
+    "unison/registry.py",
+    "unison/text.py",
+    "unison/ast.py",
+    "unison/quran.py",
+    "unison/dictionary.py",
+    "unison/address_ops.py",
+    "unison/speech.py",
+    "unison/surface_scene.py",
+    "unison/host.py",
+    "unison/morphology.py",
+    "unison/polyglot.py",
+    "unison/story.py",
+    "unison/substrate_io.py",
+    "tests/test_unison.py",
+    "README.md"
+  ],
+  "actual_results": {
+    "engine_legacy": "unchanged source files; default execution path remains legacy",
+    "unison_layer": "additive standard-library research package and CLI",
+    "quran": "14 initial-letter identities and 14 sequence forms, source-spanned text and research native weights",
+    "dictionary": "materialized lemma/root/number/interval/sense indexes, heat UNKNOWN without statistics",
+    "multilingual": "declarative language packs and up to 70 sourced language lanes",
+    "ast": "Document→Word→GraphemeCluster, stable byte/node indexes",
+    "data_ops": "scoped opaque handles, shape and axis sorting, cost options, previous-handle restoration",
+    "surface": "read-only scene v0.1 and independent research overlay contract",
+    "quantum": "classical mask transitions and distinct ideal state-vector reference, no physical quantum experiment",
+    "narrative": "finite controlled fictional story actions",
+    "routing": "legacy/shadow/unison with pure-only shadow; dispatch rollback",
+    "repository_publication": "connected GitHub create/update methods returned main commit receipts"
+  },
+  "verified_source_only": "repository file listings and exact persisted content were read back through GitHub",
+  "not_performed": [
+    "Python tests were authored but not executed",
+    "No Android build, launch, screenshots or native Arabic shaping run",
+    "No production audio or model inference",
+    "No real-time star-catalog ingest or astronomical measurements",
+    "No external linguistic/historical proof of QITṬ",
+    "No default-branch settings mutation"
+  ],
+  "next_acceptance": [
+    "bounded unit tests in isolated environment when authorized",
+    "parser/scene source and muqattaat parity under installed MUQRI dependencies",
+    "native Surface Android text shaping and hit-test binding",
+    "actual corpus-backed indexed Mu'jam senses and multilingual pronunciation",
+    "signed scene artifacts and cryptographic source verification in native importer"
+  ],
+  "status": "published_source_specification; not production/device verified"
+}
